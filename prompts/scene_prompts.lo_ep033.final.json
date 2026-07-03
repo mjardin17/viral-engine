@@ -1,0 +1,83 @@
+{
+  "channel": "Little Olympus",
+  "episode_number": 33,
+  "episode_id": "LO_EP033",
+  "season": 2,
+  "title": "Achilles Runs a Drill",
+  "tagline": "Achilles designs and runs the team's first proper coordination drill. It works almost exactly as planned. The one thing that doesn't is the most useful part.",
+  "hook_line": "Achilles has been building the coordination system for weeks: the flag sequence, the relay positions, the reaction time records. Today he runs the first full team drill. He designed it himself. Athena has her scroll. Artemis has her notebook. Zeus has agreed to participate but has not been told what participating involves.",
+  "characters": ["Achilles", "Zeus", "Hercules", "Perseus", "Athena", "Artemis", "Poseidon", "Archie"],
+  "scenes": [
+    {
+      "scene_number": 1,
+      "type": "hook",
+      "title": "The Drill Brief",
+      "narration": "Achilles briefed the team at the coordination post. He had written the drill plan on three boards — the layout, the timing, the flag sequence. He presented it with the specific economy of someone who has thought about this enough to say only what's necessary. 'Three teams of two. Flag sequence: north, east, south, west. Relay at the center post. Total time target: under ninety seconds. Questions.' Hercules raised his hand. 'Who are the teams?' 'Hercules and Perseus. Poseidon and Artemis. Zeus and me.' Poseidon looked at Artemis. Artemis did not look back. She had already written something in her notebook. Poseidon leaned to see it. She turned the page. 'Questions about the drill,' Achilles said.",
+      "visual_prompt": "Achilles at the three boards, the drill plan laid out — the specific efficiency of his briefing: only necessary information — 'three teams of two. Flag sequence. Relay. Under ninety seconds. Questions.' — Hercules's hand raised, the team assignment answer — Poseidon looking at Artemis, Artemis already writing in her notebook, not making eye contact — Poseidon trying to see what she wrote, her turning the page — 'questions about the drill' — the boards behind Achilles showing the layout: positions, flag sequence, timing marks — Athena with her scroll off to the side, not participating, documenting — Archie on the center post, already in position — Zeus's crown listing left slightly: he doesn't know what participating involves — #FFD700 and coordination post morning, the three boards the key visual",
+      "bg_colors": ["#FFD700", "#87CEEB", "#FFF5C0"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 2,
+      "type": "development",
+      "title": "The Drill Runs",
+      "narration": "The drill ran. Hercules and Perseus took north and east — clean transitions, relay at center at 31 seconds. Poseidon and Artemis took south — Artemis hit the south flag post exactly, Poseidon arrived 4 seconds later having taken the scenic route via the fountain. 'The direct path was an option,' Artemis said when he arrived. Poseidon noted this in his log. Zeus and Achilles took west — Zeus took the flag fine, brought it to center with the specific dignity of someone doing something athletic for the first time in a while. Achilles was already there. Total time: 94 seconds. Four seconds over target. Achilles looked at the time. He looked at Poseidon.",
+      "visual_prompt": "The drill in action — split positions: Hercules/Perseus (north/east, clean), Poseidon/Artemis (south — Artemis exact, Poseidon scenic route via fountain), Zeus/Achilles (west, Zeus with athletic dignity) — the relay at center: all teams arriving sequentially — Athena timing, writing — Artemis to Poseidon at the relay: 'the direct path was an option' — Poseidon noting this in his log, sardine on the note — Zeus arriving at center with his flag, crown still left — Achilles already there, looking at the time: 94 seconds — looking at Poseidon — Archie having watched the entire drill from the center post — #FFD700 and morning drill energy, the timing visible on Athena's board",
+      "bg_colors": ["#FFD700", "#87CEEB", "#FFF5C0"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 3,
+      "type": "challenge",
+      "title": "The Four Seconds",
+      "narration": "Achilles said: 'Four seconds over target. The margin is Poseidon's path.' Poseidon said: 'The fountain is on the south route.' 'It is on a south route,' Achilles said. 'Not the direct south route.' Poseidon considered this. 'I thought the scenic route would be motivating.' 'For whom?' Poseidon thought about this for longer than expected. 'For the fountain,' he said. 'It likes to be included.' Achilles looked at Athena. Athena was writing. She did not look up. She had an expression that indicated she was writing something specific and had been expecting this. Hercules said: 'The fountain is not part of the drill.' 'It was not informed of that,' Poseidon said.",
+      "visual_prompt": "The debrief — Achilles identifying the four-second margin: Poseidon's path — 'the fountain is on the south route' / 'a south route. Not the direct south route.' — Poseidon's reasoning: 'I thought the scenic route would be motivating. For the fountain. It likes to be included.' — Achilles looking at Athena, who is writing without looking up, with the expression of someone who anticipated this — Hercules: 'the fountain is not part of the drill.' / Poseidon: 'it was not informed of that.' — the team's collective response: the mixture of genuine appreciation for Poseidon's consistency and the problem this creates for a ninety-second drill — Archie on the center post watching Poseidon with what might be solidarity — #FFD700 and debrief warmth, the debate over the fountain route",
+      "bg_colors": ["#FFD700", "#FFF5C0", "#87CEEB"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 4,
+      "type": "development",
+      "title": "Zeus's Notes",
+      "narration": "Zeus said: 'I have a note.' Everyone looked at him. This was unusual. Zeus rarely had notes in drills. He had opinions, certainly, but notes implied he'd written something down. He had, in fact, written something down. He pulled a small piece of paper from somewhere in his robes. It was not a scroll. Just paper. He read from it: 'On the west relay — the flag post on the west is twelve degrees north of where the map says it is. The target time assumes running directly west. If the flag post is twelve degrees north, the target time should account for the additional angle.' He folded the paper. 'That is my note.' Achilles was quiet for a moment. 'You measured this?' 'I walked it this morning,' Zeus said. 'Before the drill.' Achilles looked at the board. Then at Zeus. 'The target time should be 97 seconds.'",
+      "visual_prompt": "Zeus producing a small piece of paper (not a scroll, just paper) — 'I have a note' causing everyone to pay attention — Zeus reading: 'the west flag post is twelve degrees north of where the map says. The target time assumes direct west. The additional angle should be accounted for.' — folding the paper — 'I walked it this morning. Before the drill.' — Achilles's pause: Zeus walked the course before the drill and took a measurement — 'the target time should be 97 seconds' — not 90 — the team absorbing this: Zeus came in three seconds early, not four seconds late — Athena already revising her board — Artemis looking at Zeus with something close to respect but choosing not to express it — Zeus's crown perfectly straight, briefly — #FFD700 and the piece of paper as the central prop, Zeus's small revelation",
+      "bg_colors": ["#FFD700", "#FFF5C0", "#C8A951"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 5,
+      "type": "development",
+      "title": "What Achilles Does with This",
+      "narration": "Achilles walked the west route himself, immediately, with everyone watching. He measured from center post to flag post. He came back. 'Eleven point seven degrees north,' he said. 'Zeus had it at twelve.' Zeus said: 'I did not have precise instruments.' 'You were close,' Achilles said. He corrected the board. He corrected the target time to 97 seconds. He corrected the route diagram. He looked at the drill plan — his own, which he had designed — and he said: 'Run it again.' Athena looked up from her scroll for the first time in the debrief. Artemis closed her notebook. Perseus and Hercules moved to their starting positions. Poseidon looked at the fountain. The fountain did not respond. 'Direct south,' Achilles said to Poseidon. Poseidon sighed. 'Very well.'",
+      "visual_prompt": "Achilles walking the west route immediately with everyone watching — coming back: 'eleven point seven degrees north' — Zeus: 'I did not have precise instruments' / Achilles: 'you were close' — Achilles correcting the board, the target time, the diagram — and then: 'run it again' — Athena looking up from the scroll for the first time in the debrief: this is the real version of the drill — Artemis closing her notebook: fully focused — the team moving to positions — Poseidon looking at the fountain, the fountain not responding — 'direct south' / 'very well' — the drill resetting, the corrected board behind Achilles, the team in position — #FFD700 and the energy shift: the corrected drill is actually the interesting one — Archie back at center post, ready",
+      "bg_colors": ["#FFD700", "#87CEEB", "#FFF5C0"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 6,
+      "type": "resolution",
+      "title": "93 Seconds",
+      "narration": "The second drill ran. Hercules and Perseus: north and east, clean. Poseidon and Artemis: direct south, 2 seconds faster. Artemis had already adjusted for the corrected relay position — she adjusted faster than she'd been told to. Zeus and Achilles: west, corrected course, Zeus managing the angle with more grace than the first run. Total: 93 seconds. Four seconds under the corrected target. Achilles looked at the board. Athena showed him her two columns: drill one, drill two. The gap. He nodded. 'The drill works,' he said. 'The drill was wrong,' Poseidon said, somewhat cheerfully. 'And then it was right.' 'Yes,' Achilles said. He wrote something in the margin of his plan. Zeus looked at what he wrote. It said: MEASURE THE WEST POST FIRST NEXT TIME.",
+      "visual_prompt": "Second drill running — clean: Hercules/Perseus, Poseidon direct south (2 seconds faster), Artemis already-adjusted relay, Zeus taking the corrected angle with more grace — total: 93 seconds — Athena showing the two columns: drill one vs drill two — Achilles: 'the drill works' — Poseidon: 'the drill was wrong and then it was right' — Achilles writing in the margin of his own plan: MEASURE THE WEST POST FIRST NEXT TIME — Zeus leaning to see what he wrote — Zeus's crown: straight for a moment as he reads it — the specific moment of a coordinator writing down what he learned from the thing that didn't work — Archie watching from the center post, same position for both drills — #FFD700 and satisfaction, the two-column comparison the key visual",
+      "bg_colors": ["#FFD700", "#FFF5C0", "#87CEEB"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 7,
+      "type": "tag",
+      "title": "Artemis's Notebook",
+      "narration": "After the drill, Poseidon managed to see what Artemis had written in her notebook in scene one — the thing she'd turned the page on. It was a diagram of the south route with two paths marked: DIRECT and FOUNTAIN. Next to FOUNTAIN she had written: +4.2 SECONDS (ESTIMATED). Poseidon looked at this. 'You knew,' he said. 'I estimated,' Artemis said. 'Estimated and correct,' Poseidon said. 'Those are different things,' Artemis said. But she didn't turn the page. Poseidon read her estimate: 4.2 seconds. Actual: 4. He pointed at the 0.2 difference. Artemis looked at it. 'Poseidon moves faster past fountains than I modeled,' she said. 'He had enthusiasm.' Poseidon was very pleased by this.",
+      "visual_prompt": "Poseidon finally seeing Artemis's notebook page — the diagram she drew before the drill: DIRECT and FOUNTAIN routes marked, +4.2 SECONDS (ESTIMATED) next to the fountain route — 'you knew' / 'I estimated' — Poseidon pointing at the 0.2-second difference between estimate (4.2) and actual (4) — Artemis: 'you move faster past fountains than I modeled. He had enthusiasm.' — Poseidon being very pleased by 'he had enthusiasm' as a scientific observation — Artemis allowing the notebook to stay open for this exchange, not turning the page — the warmth of this specific dynamic: Artemis prepared for the fountain route, Poseidon charmed by being modeled as enthusiastic — #FFD700 and post-drill warmth, the notebook open between them",
+      "bg_colors": ["#FFD700", "#FFF5C0", "#C8A951"],
+      "duration_sec": 9
+    }
+  ],
+  "viral_hook": "Zeus measured the west flag post before the drill and didn't tell anyone until the debrief. It was in the wrong position. The whole target time was off. They ran the drill again with the correct math and hit 93 seconds. Achilles wrote in the margin of his own plan: MEASURE THE WEST POST FIRST NEXT TIME. Also Artemis had already calculated the fountain route would cost Poseidon 4.2 seconds before the drill started.",
+  "highlight_scene": 4,
+  "highlight_note": "Zeus producing a small piece of paper (not a scroll) from his robes: 'I walked the west route this morning. The flag post is twelve degrees north of where the map says.' He came prepared to the drill that he wasn't told the details of. Crown straight briefly.",
+  "short_title": "Zeus Measured the Course Before the Drill and Didn't Tell Anyone Until It Mattered",
+  "rewatch_bait": "Scene 1 — Zeus's crown lists left when Achilles says 'Zeus and me' as a team. By scene 4 he's produced a measurement he took before the drill. He's been paying more attention than his crown angle suggests.",
+  "youtube_title": "The drill was four seconds over. Then Zeus pulled out a piece of paper. He'd measured the course that morning. | Little Olympus S2 EP13",
+  "lesson": "The most useful thing someone brings to your plan might be the thing they noticed that you didn't design around. Zeus's measurement wasn't part of the drill. It was just something he did because he walked the course. The plan wasn't wrong — it was incomplete. Achilles corrected it and ran it again.",
+  "arc_notes": "Achilles coordinator arc — first team drill, first correction, first plan revision. The margin notation 'MEASURE THE WEST POST FIRST NEXT TIME' is his character in miniature: absorb, adjust, go again. Zeus: brought a piece of paper, not a scroll — he took this seriously in his own way. Artemis's +4.2 second fountain estimate: she prepared for Poseidon's choices. Poseidon's delight at 'he had enthusiasm' as a modeling term. The drill works: coordination is being built. Achilles's heel is not referenced this episode — he's just good at this part of the job."
+}

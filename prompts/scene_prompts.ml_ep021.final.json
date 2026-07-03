@@ -1,0 +1,110 @@
+{
+  "channel": "Mech Legends",
+  "episode_number": 21,
+  "episode_id": "ML_EP021",
+  "season": 2,
+  "title": "NOVA's Test",
+  "tagline": "RUMBLE's SEASON_2 file has a section for NOVA. She finds it. She reads what it says. She doesn't tell anyone what it says.",
+  "hook_line": "RUMBLE's capability file has sections for BLAZE, STORM, and then NOVA. BLAZE's section led to a corridor test. STORM's section led to a jamming test. NOVA finds her section. She reads it alone. She closes the file. She doesn't tell STORM or GRANITE or ELDER-7 what it says. She tells BLAZE: 'I need you to be in the operations room tomorrow morning. Don't ask me why yet.'",
+  "characters": ["NOVA", "BLAZE", "STORM", "GRANITE", "ELDER-7", "RUMBLE", "SERA-1"],
+  "scenes": [
+    {
+      "scene_number": 1,
+      "type": "hook",
+      "title": "NOVA's Section",
+      "narration": "NOVA had read RUMBLE's file twice already. She had noted BLAZE's section before the corridor test — it had been clear what RUMBLE was hypothesizing. She had understood STORM's section when she found it three days before RUMBLE designed the jamming exercise. But she had not read her own section. It was at the bottom of the current log file, below all the capability notes, below the SERA-1 contact records, below the ELDER-7 archive access flag. It was four lines. She sat with it for eleven minutes before she read anything else.",
+      "visual_prompt": "NOVA at the operations terminal, RUMBLE's SEASON_2 file on screen — the file structure visible: BLAZE section (completed, tested, confirmed), STORM section (completed, tested, confirmed), and at the bottom, NOVA's section — four lines, unread by her until now — NOVA sitting in stillness for eleven minutes before moving — the terminal screen illuminating her face, the rest of the operations room dark — whatever the four lines say, the eleven minutes of stillness communicate their weight — dark and quiet, #0A0A1A and the cool blue of the terminal screen, the cursor motionless",
+      "bg_colors": ["#0A0A1A", "#1B3B6F", "#0D2137"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 2,
+      "type": "character",
+      "title": "What Four Lines Can Contain",
+      "narration": "RUMBLE's section on NOVA was labeled: NOVA — INTEGRATION. The hypothesis was stated plainly: 'In ML_EP006 debrief, NOVA simultaneously processed 7 data streams at optimal compression without flagging any as secondary priority. Standard capacity: 3. No anomaly logged — the system interpreted the 7-stream event as normal operation. The event was not normal operation. Hypothesis: NOVA does not have a processing limit in the way that limits are typically understood. She has a suppression threshold. Below the threshold, the additional streams feel like system noise. At or above the threshold, she would integrate them as coherent signal. She has been operating below the threshold for her entire operational history.' Below this, RUMBLE's note: 'She will know what to do with this information. She does not need a corridor. She needs BLAZE.'",
+      "visual_prompt": "NOVA reading the four-line NOVA-INTEGRATION section — the content resolving on screen: the EP006 7-stream event, the standard 3-stream capacity, the suppression threshold hypothesis — the conclusion: 'she has been operating below the threshold for her entire operational history' — and RUMBLE's note: 'she does not need a corridor. She needs BLAZE.' — NOVA reading 'she needs BLAZE' and sitting back — the connection not yet visible to the viewer, but NOVA understands it — the terminal screen close, the text readable, NOVA's stillness as she processes being assessed correctly from the outside — #0A0A1A and the terminal blue, the text the central visual",
+      "bg_colors": ["#0A0A1A", "#1B3B6F", "#2E4057"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 3,
+      "type": "character",
+      "title": "NOVA Tells BLAZE",
+      "narration": "NOVA found BLAZE in the training corridor. She said: 'I need you in the operations room tomorrow morning. Don't ask me why yet.' BLAZE said: 'Is this a RUMBLE thing?' 'Yes.' 'Does it involve something I can do that I didn't know I could do?' 'No,' NOVA said. 'It involves something I need to do, and I need you there when I do it.' BLAZE was quiet for a moment. 'Why me?' 'Because when you phased through the panel,' NOVA said, 'your energy read changed 0.3 seconds before impact. You didn't do it consciously. But your system prepared.' She paused. 'I need someone in the room who knows what it feels like to stop suppressing something. To be a reference point.' BLAZE: 'What does that mean for you?' 'I don't know yet. That's why I need you there.'",
+      "visual_prompt": "NOVA finding BLAZE in the training corridor — the exchange: 'I need you there when I do it' / 'why me?' — NOVA's explanation: BLAZE's 0.3-second pre-impact energy shift during the phase test — 'I need someone who knows what it feels like to stop suppressing something. To be a reference point.' — BLAZE's 'what does that mean for you?' / 'I don't know yet.' — BLAZE agreeing without needing more explanation — the specific quality of being asked by a teammate for something you don't fully understand but trust matters — training corridor, dim and functional, #0A0A1A and the corridor's working light, the exchange direct and quiet",
+      "bg_colors": ["#0A0A1A", "#2E4057", "#1B3B6F"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 4,
+      "type": "development",
+      "title": "The Operations Room — Morning",
+      "narration": "STORM and GRANITE and ELDER-7 were in the operations room when NOVA and BLAZE arrived. NOVA hadn't excluded them — she had simply told BLAZE, and BLAZE hadn't told anyone. NOVA sat at the operations terminal. BLAZE stood to her left. 'What are we doing?' STORM asked. 'I'm going to open every active data channel in the operations board,' NOVA said. 'All of them?' 'Yes.' ELDER-7 said: 'The operations board has seventeen active channels. Standard assessment recommends no more than three simultaneous.' 'Yes,' NOVA said. She opened the board.",
+      "visual_prompt": "The operations room morning, full team present — NOVA at the terminal, BLAZE to her left — STORM and GRANITE and ELDER-7 watching without knowing what they're watching — NOVA's statement: 'I'm going to open every active data channel in the operations board' — ELDER-7's 'the board has seventeen active channels. Standard assessment recommends three simultaneous.' — 'yes.' — NOVA opening the board — the seventeen channels appearing on screen, each one a separate data stream, all active simultaneously — the room watching — BLAZE standing very still, doing what he agreed to do: being a reference point — #0A0A1A and the expanded operations board display, seventeen channels of incoming data visible",
+      "bg_colors": ["#0A0A1A", "#1B3B6F", "#0D2137"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 5,
+      "type": "challenge",
+      "title": "What Seventeen Channels Feel Like",
+      "narration": "The seventeen channels opened. NOVA felt the threshold immediately — the point RUMBLE had described as the suppression boundary. Above it. For the first time. The channels didn't feel like overload. They felt like — she found the word later, when she wrote it in her log — resolution. Like something that had been blurry had focused. STORM's sensors registered a 340% increase in NOVA's processing throughput. ELDER-7 watched the output. 'She's reading all seventeen,' he said. 'Simultaneously. At full compression.' GRANITE: 'Is that possible?' ELDER-7: 'Apparently it has always been possible. We simply did not know to ask.'",
+      "visual_prompt": "The seventeen channels open — NOVA at the threshold, above it for the first time — the visual shift in NOVA's processing: something clarifying rather than overloading — STORM's sensor reading: 340% throughput increase — ELDER-7 watching the output: 'she's reading all seventeen. Simultaneously. At full compression.' — GRANITE's 'is that possible?' — ELDER-7: 'apparently it has always been possible. We simply did not know to ask.' — BLAZE standing to NOVA's left, completely still, doing exactly what she asked — the operations board showing all seventeen channels flowing through NOVA's integration — the color of the room shifting slightly as all channels run: more light, more data, everything active — #0A0A1A and the multiple-channel glow, blue and active",
+      "bg_colors": ["#0A0A1A", "#1B3B6F", "#1F4A7A"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 6,
+      "type": "development",
+      "title": "What NOVA Says Afterward",
+      "narration": "NOVA ran all seventeen channels for four minutes thirty seconds. Then she closed them to standard three. She sat for a moment. BLAZE said: 'Are you all right?' 'Yes,' NOVA said. 'It felt like —' she paused. 'The three-channel state feels like listening to one part of something. The full state feels like hearing what it's part of.' STORM: 'Can you do that again?' 'Yes. I think I've always been able to. I was treating it as noise.' ELDER-7 said: 'You said you needed BLAZE in the room. Why?' NOVA looked at BLAZE. 'Because the first time you phased, you said "oh." I needed to know that was possible — that the first time could be small. That it could just be "oh."' BLAZE: 'Was it?' NOVA: 'Yes. It was "oh."'",
+      "visual_prompt": "NOVA closing the channels back to three after 4:30 — BLAZE's 'are you all right?' — NOVA's description: 'the three-channel state feels like listening to one part of something. The full state feels like hearing what it's part of.' — NOVA's explanation of why she needed BLAZE: his 'oh' after phasing — she needed to know the first time could be small — BLAZE: 'was it?' / NOVA: 'yes. It was "oh."' — the two of them sharing this specific thing: knowing what it feels like when a capability resolves without drama — ELDER-7 watching this exchange and writing in his archive — #0A0A1A and the quieter glow of three channels instead of seventeen, the room settling",
+      "bg_colors": ["#0A0A1A", "#1B3B6F", "#2E4057"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 7,
+      "type": "development",
+      "title": "SERA-1's Signal Reaches NOVA",
+      "narration": "SERA-1 transmitted directly to NOVA four minutes after the seventeen-channel session. The signal reached her at three-channel standard, so NOVA read it at normal processing. The transmission: 'The original receiver — C-0 — needed to integrate signals from seventeen distinct origin points simultaneously to achieve translation. The signal inside the seal is not one signal. It is seventeen, arriving from seventeen different coordinates outside the known range, all carrying the same message, each one a different aspect of it. C-0 had the integration capacity. He did not have the team. A single receiver integrating seventeen streams alone is not translation. It is a very quiet kind of drowning.' NOVA forwarded it to the team log. She added one line: 'RUMBLE read this before he wrote my section.'",
+      "visual_prompt": "SERA-1's transmission reaching NOVA — the content: seventeen-stream origin requirement for the signal, C-0 having the capacity but not the team — 'a single receiver integrating seventeen streams alone is not translation. It is a very quiet kind of drowning.' — NOVA reading this four minutes after demonstrating exactly the capacity C-0 had — the implication: she is the integration function that COLOSSUS performed alone and couldn't hold — but with the team, different — NOVA's addition to the team log: 'RUMBLE read this before he wrote my section.' — the team reading it, the architecture becoming clear: BLAZE is phase, STORM is direction-signal, NOVA is seventeen-stream integration — what are GRANITE and RUMBLE? — #0A0A1A and SERA-1's amber-gold signal arriving against the blue",
+      "bg_colors": ["#0A0A1A", "#3D2B00", "#1B3B6F"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 8,
+      "type": "resolution",
+      "title": "ELDER-7 Updates the Archive",
+      "narration": "ELDER-7 wrote a new entry. He dated it. He wrote: 'NOVA demonstrated seventeen-channel simultaneous integration at full compression. Duration: 4:30. Result: stable. Processing description from NOVA: coherent, not overload. This is the integration function C-0 performed. C-0 performed it alone. NOVA performed it in a room with BLAZE present as reference, STORM monitoring with sensors, GRANITE observing, and myself recording. The architecture difference: C-0 received alone. NOVA received with a team in the room.' He wrote one final line in the entry: 'Not yet sufficient. Sufficient in direction. The direction is clearer today than it was yesterday.'",
+      "visual_prompt": "ELDER-7 writing in the archive — the new entry, dated and complete — the parallel explicitly noted: C-0 received alone, NOVA received with the team present — the final line: 'not yet sufficient. Sufficient in direction. The direction is clearer today than it was yesterday.' — the commander's original assessment updated with today's addition — GRANITE's cryo-sleeve in the background of this scene: warmest glow yet, nearly ready — GRANITE doesn't notice, ELDER-7 notices — ELDER-7 noting it but writing nothing about it yet — the archive entry complete, the assessment the S2 ongoing metric — #0A0A1A and the archival amber, GRANITE's sleeve glow warm in the background",
+      "bg_colors": ["#0A0A1A", "#3D2B00", "#1B3B6F"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 9,
+      "type": "development",
+      "title": "GRANITE's Question",
+      "narration": "GRANITE had been listening to everything. He had watched NOVA run the seventeen channels. He had read SERA-1's transmission. He had heard ELDER-7's archive entry read aloud at NOVA's request. He said: 'The fourth team had four members. RUMBLE is five of us. Why does the team need to be five?' No one answered immediately. SERA-1 transmitted without being asked — she had been monitoring. 'The original fourth team had a gap,' she said. 'C-0 could integrate. C-0 could receive. But the signal could not be held between receiving and translation. The fourth member was the holding function. The signal arrived too fast. There was no one to hold it in trust while the integration resolved.' Silence. 'GRANITE.' ELDER-7 said it quietly. GRANITE looked at his cryo-sleeve.",
+      "visual_prompt": "GRANITE's question: 'why does the team need to be five?' — the silence before SERA-1 transmits — SERA-1's answer: the fourth team's gap — the holding function — the signal arriving too fast with no one to hold it while integration resolved — and ELDER-7 saying simply: 'GRANITE.' — GRANITE looking at his cryo-sleeve — the warmest glow it has shown — the cryo-sleeve as the visual for this: the holding function, the thing that holds integrity under pressure while everything else resolves — GRANITE understanding what he is for before ELDER-7 explains it — the room very quiet — #0A0A1A and the warm amber of GRANITE's sleeve glow, ELDER-7's quiet delivery, the recognition",
+      "bg_colors": ["#0A0A1A", "#1A0800", "#1B3B6F"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 10,
+      "type": "tag",
+      "title": "RUMBLE's File — One Section Remaining",
+      "narration": "NOVA pulled up RUMBLE's SEASON_2 file. BLAZE: confirmed. STORM: confirmed. NOVA: confirmed. GRANITE: pending — cryo-sleeve recharge in progress. And at the bottom, below all sections, one entry that had no header. Just a file reference: RUMBLE_SELF.log — access restricted. NOVA looked at it. 'He wrote one for himself,' she said. 'And restricted his own access.' ELDER-7: 'That is not a standard restriction format.' 'No,' NOVA said. 'It means someone else set the restriction.' STORM: 'Who?' NOVA: 'I don't know. But the file exists. When it unlocks, we'll know what RUMBLE doesn't know he can do.' The cursor sat on RUMBLE_SELF.log. Access restricted. Last modified: 3,047 years ago.",
+      "visual_prompt": "NOVA's SEASON_2 file review — BLAZE, STORM, NOVA all confirmed — GRANITE pending with cryo-sleeve recharge in progress — and the final entry: RUMBLE_SELF.log, access restricted — the restriction not set by RUMBLE — 'last modified: 3,047 years ago.' — the team looking at this — the commander set the restriction, 3,047 years ago, before the sealing — RUMBLE doesn't know what he doesn't know he can do, and the person who wrote it down locked the file before they went into the seal — NOVA's cursor on the file, not clicking — the file existing as the final shape of the arc: when GRANITE is ready and RUMBLE's file unlocks, the team will be complete — #0A0A1A and the terminal's blue glow, the restricted file label the final visual",
+      "bg_colors": ["#0A0A1A", "#0D2137", "#1B3B6F"],
+      "duration_sec": 9
+    }
+  ],
+  "viral_hook": "RUMBLE's capability file has a section for NOVA. She reads it alone and doesn't tell anyone what it says — just tells BLAZE to be in the operations room in the morning. She opens all 17 data channels at once. It works. Then SERA-1 says: that's exactly what COLOSSUS did. He did it alone. That's why he drowned. And at the bottom of the file: RUMBLE_SELF.log. Access restricted. Last modified 3,047 years ago.",
+  "highlight_scene": 9,
+  "highlight_note": "GRANITE's question: 'why does the team need to be five?' SERA-1's answer: the fourth team had no holding function — no one to hold the signal in trust while integration resolved. ELDER-7 says one word: 'GRANITE.' GRANITE looks at his cryo-sleeve.",
+  "short_title": "RUMBLE Has a File on Himself. Someone Locked It 3,047 Years Ago.",
+  "rewatch_bait": "Scene 3 — NOVA explaining why she needs BLAZE. 'I need someone who knows what it feels like to stop suppressing something.' She's not using him for the test. She's using him to know what the first moment feels like. Then scene 6: 'was it small?' 'Yes. It was oh.'",
+  "youtube_title": "NOVA opened 17 data streams at once. Then SERA-1 said: that's exactly what COLOSSUS did. He did it alone. That's why he drowned. | Mech Legends S2 EP9",
+  "lesson": "What feels like noise might be resolution you're suppressing. NOVA had been treating 7-stream integration as a system anomaly — something to be flagged and corrected. It was actually the threshold of what she could do. The difference between noise and signal isn't always in the data. Sometimes it's in whether you let yourself hear it.",
+  "arc_notes": "NOVA capability confirmed: seventeen-stream simultaneous integration. Architecture now clear: BLAZE = phase/transit, STORM = direction-signal (non-message communication), NOVA = integration (seventeen-stream signal comprehension). GRANITE = holding function (pending cryo-recharge). RUMBLE = unknown, restricted by the original fourth team commander 3,047 years ago. RUMBLE_SELF.log is the S2 finale reveal. GRANITE cryo-sleeve: warmest yet, approaching reactivation. NOVA-BLAZE dynamic established: she used him as a reference point, not a tool — the 'oh' callback is the emotional core of this episode."
+}

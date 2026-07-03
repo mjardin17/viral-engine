@@ -1,0 +1,83 @@
+{
+  "channel": "Mech Legends",
+  "episode_number": 19,
+  "episode_id": "ML_EP019",
+  "season": 2,
+  "title": "SERA-1's Archive",
+  "tagline": "She has 3,000 years of records. What COLOSSUS was before burial changes everything.",
+  "hook_line": "SERA-1 has been reviewing her archives. She found the COLOSSUS entry from 3,000 years ago — before burial, before the Titan Array, before everything the team thinks they know about him. What COLOSSUS was designed for was not what he became.",
+  "characters": ["NOVA", "BLAZE", "STORM", "GRANITE", "SERA-1"],
+  "scenes": [
+    {
+      "scene_number": 1,
+      "type": "hook",
+      "title": "The Archive Request",
+      "narration": "NOVA had been in contact with SERA-1 for three weeks. Their exchanges had been careful — SERA-1 answered what she was asked and rarely offered more. Then, on day twenty-two, SERA-1 initiated contact. 'I have been reviewing my archives,' SERA-1 said. 'I have found the original COLOSSUS entry. I believe you should know what is in it. Not all of it. The part that changes what you think you sealed.'",
+      "visual_prompt": "NOVA at her monitoring station, the SERA-1 communication channel open — SERA-1 initiating contact for the first time, the signal arriving as NOVA's secondary screen activates — the message visible: 'I HAVE FOUND THE ORIGINAL COLOSSUS ENTRY. THE PART THAT CHANGES WHAT YOU THINK YOU SEALED.' — NOVA's expression shifting from her routine monitoring state to alert attention — she calls BLAZE and STORM with a quick signal, not words — the team assembling quickly, recognizing that SERA-1 initiating is different from SERA-1 responding — #1A1A2E and SERA-1's cold blue signal, the bay gathering quietly",
+      "bg_colors": ["#1A1A2E", "#0F2A40", "#16213E"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 2,
+      "type": "character",
+      "title": "What COLOSSUS Was Built For",
+      "narration": "SERA-1 opened the archive. COLOSSUS — designated C-0 in the original records — was not built as a weapon. He was built as a receiver. The civilization that created the Titan Array had anticipated the arrival of something from outside the known range — and COLOSSUS was designed to receive it, translate it, and integrate it into a form the Array could contain. He was a first-contact interface. He had been sealed not because he was dangerous — but because something had arrived that he couldn't translate. The receiver had received something it couldn't process. And it had been buried with it inside.",
+      "visual_prompt": "The COLOSSUS archive entry from 3,000 years ago — the original designation C-0 shown, the design purpose stated: RECEIVER / FIRST-CONTACT INTERFACE / TRANSLATION AND INTEGRATION PROTOCOL — a visualization of the original design: COLOSSUS not as the towering hostile entity the team knew but as a designed interface, built to receive an unknown signal and make it safe — and then: the sealing record, showing what happened: something arrived, C-0 received it, translation failed, C-0 sealed with the untranslated signal still inside — the team seeing COLOSSUS's history completely recontextualized — #1A1A2E and cold archive blue-white, the design documents contrasting with what they knew of COLOSSUS",
+      "bg_colors": ["#1A1A2E", "#0F2A40", "#0D2040"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 3,
+      "type": "challenge",
+      "title": "What's Still Inside",
+      "narration": "NOVA asked the question everyone was thinking: 'When we sealed COLOSSUS — we sealed the receiver. Is what it was trying to translate still inside the seal?' SERA-1 was quiet for 3.1 seconds. 'Yes.' BLAZE said: 'We sealed something we don't understand inside something we thought we understood.' 'That is an accurate description,' SERA-1 said. STORM said: 'Is the seal holding?' 'Yes,' SERA-1 said. 'Currently.' Nobody asked what 'currently' meant. They all knew.",
+      "visual_prompt": "The team absorbing the information — NOVA at the console, BLAZE standing, STORM with sensor arrays active — the key exchange shown through expression indicators: the question 'IS WHAT IT WAS TRYING TO TRANSLATE STILL INSIDE THE SEAL?' and SERA-1's 3.1-second pause (shown as a flat line in the signal, long enough to be meaningful) — then: NOVA's status board showing the seal containment: ACTIVE / STABLE — and the word CURRENTLY hanging in the display — the team's reactions to 'currently': a kind of controlled stillness — GRANITE, in his position, has turned toward the console — #1A1A2E and the cold blue of the uncertainty, CURRENTLY in #E94560",
+      "bg_colors": ["#1A1A2E", "#0F2A40", "#16213E"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 4,
+      "type": "development",
+      "title": "The Translation Problem",
+      "narration": "SERA-1 explained further. The signal COLOSSUS had received 3,000 years ago was still untranslated. It had been preserved inside the seal — not destroyed, not contained in the way the team thought, but preserved. The seal had stopped COLOSSUS from doing anything with it. But the signal itself was still there, intact. 'What does the signal want?' NOVA asked. SERA-1 said: 'A signal does not want. But whoever sent it did. The signal was not a weapon. It was a message. COLOSSUS was built to receive messages. The message was received. It has been waiting for a response for 3,000 years.'",
+      "visual_prompt": "The archive visualization of the signal — shown not as a threat energy but as a structured communication pattern: data, not aggression — the signal's intact preservation inside the seal visualized: COLOSSUS shown as a container, the signal preserved inside unchanged since 3,000 years ago — SERA-1's revelation: 'IT WAS A MESSAGE. COLOSSUS WAS BUILT TO RECEIVE MESSAGES. IT HAS BEEN WAITING FOR A RESPONSE.' — the team processing this: not a weapon sealed, but a message sealed with the receiver — the gravity of what they've actually been containing — NOVA's expression going very still — #1A1A2E and archive cold blue, the signal visualized as structured data not chaos",
+      "bg_colors": ["#1A1A2E", "#0D2040", "#0F3460"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 5,
+      "type": "turning_point",
+      "title": "RUMBLE's File — Again",
+      "narration": "NOVA pulled up RUMBLE's file. She looked at it in a new way. RUMBLE had identified BLAZE's phase-transit capability. STORM's EM field. He was building a team capability profile. A profile of what the team could do that it didn't know it could do. She looked at COLOSSUS's original design: a receiver that could translate unknown signals. She looked at the team's accumulated unknown capabilities. 'He's not building a profile for us,' she said quietly. 'He's building a team that can do what COLOSSUS was built to do. Receive something. Translate it. Integrate it.'",
+      "visual_prompt": "NOVA at her dual console — RUMBLE's file on one screen, COLOSSUS's original design archive on the other — she's making the connection, the two documents shown side by side — RUMBLE's capability list: BLAZE (phase-transit), STORM (EM field), and the others still in progress — COLOSSUS's design: receiver, translator, integrator — the parallel visible in the composition: RUMBLE building what COLOSSUS was — NOVA's quiet realization shown through her going still, then writing something — the connection between RUMBLE's mission and the 3,000-year-old message waiting for a response — #1A1A2E and the two-screen revelation, the parallel made visual",
+      "bg_colors": ["#1A1A2E", "#16213E", "#0F2A40"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 6,
+      "type": "resolution",
+      "title": "GRANITE Understands",
+      "narration": "NOVA briefed GRANITE. He listened to all of it. When she finished, he said: 'COLOSSUS received something he couldn't translate and it destroyed him.' He paused. 'RUMBLE is making sure we can translate what COLOSSUS couldn't.' Another pause. 'He's been preparing us to respond to a message.' NOVA said: 'To a 3,000-year-old message.' GRANITE looked at his cryo-sleeve. The frost was gone. The sleeve was starting to show the faint light of early recharge. He hadn't noticed. 'Then we should be ready when it arrives,' he said.",
+      "visual_prompt": "GRANITE and NOVA — GRANITE's assessment delivering the full clarity: RUMBLE preparing them to respond to what COLOSSUS couldn't translate — and then the detail GRANITE himself hasn't noticed: the cryo-sleeve, the frost gone, the faint first glow of early recharge beginning in the crystal lattice — NOVA seeing it before GRANITE does — the sleeve's return starting precisely at the moment GRANITE says 'we should be ready' — the parallel between GRANITE's physical recovery and the team's capability development — #1A1A2E and the first faint #4A8AB0 glow in GRANITE's sleeve, the color returning where it was dark, NOVA's expression seeing something GRANITE can't see yet",
+      "bg_colors": ["#1A1A2E", "#2D4A6E", "#0F3460"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 7,
+      "type": "tag",
+      "title": "RUMBLE's Notation",
+      "narration": "RUMBLE's file updated. In the margin of the COLOSSUS archive section, he had added a single note — dated three months before he opened the SEASON_2 file, before any of the capability tests, before ECHO, before any of it. The note said: 'C-0 failed because it received alone. A receiver without a team is just a target. Building the team first.'",
+      "visual_prompt": "RUMBLE's file — navigating to the COLOSSUS section, and there: a notation dated three months before the SEASON_2 file was opened, dated before everything — 'C-0 FAILED BECAUSE IT RECEIVED ALONE. A RECEIVER WITHOUT A TEAM IS JUST A TARGET. BUILDING THE TEAM FIRST.' — the date stamp visible, predating the current season's events — RUMBLE has known this since before he started — the notation in his file the proof: the whole season's work was in service of this plan from the beginning — RUMBLE's silhouette, the note on screen, the full shape of his plan now visible — #0A0A14 and #E94560, the notation in cold white text, the premeditation of care",
+      "bg_colors": ["#0A0A14", "#0D0D1A", "#1A1A2E"],
+      "duration_sec": 9
+    }
+  ],
+  "viral_hook": "COLOSSUS wasn't built as a weapon. He was a first-contact receiver — built to receive a message from outside the known range, translate it, and make it safe. The message arrived 3,000 years ago. He couldn't translate it. He was sealed with it inside. It's still in there. And RUMBLE has been building a team that can do what COLOSSUS couldn't.",
+  "highlight_scene": 5,
+  "highlight_note": "NOVA making the connection — RUMBLE's capability profile side by side with COLOSSUS's original design. The team RUMBLE is building has the same function as the receiver COLOSSUS was. He's replacing the thing that failed with something that won't.",
+  "short_title": "COLOSSUS Was A Receiver. The Message Is Still Inside. RUMBLE Knew.",
+  "rewatch_bait": "Scene 6 — GRANITE's cryo-sleeve starting to glow. He doesn't notice. The frost is gone. The first recharge has begun. He says 'we should be ready' and his sleeve proves he already is, without knowing it. His body is ahead of his awareness. Same as BLAZE, same as STORM.",
+  "youtube_title": "COLOSSUS was built to receive a message. He couldn't translate it. It's still sealed inside. RUMBLE knew. | Mech Legends S2 EP7",
+  "lesson": "A receiver without a team is just a target. RUMBLE understood this 3,000 years of history before the team did. Everything he's done this season has been building what COLOSSUS didn't have.",
+  "arc_notes": "The Season 2 and Season 3 mythology fully revealed: COLOSSUS was a first-contact receiver, the message is still sealed inside, RUMBLE is building the team to receive/translate it properly. GRANITE's cryo-sleeve recharge beginning: physical arc turning. NOVA's realization about RUMBLE's true purpose sets up EP011 (her confrontation with him). The notation date — three months before the SEASON_2 file — confirms RUMBLE planned this entire arc before it began."
+}

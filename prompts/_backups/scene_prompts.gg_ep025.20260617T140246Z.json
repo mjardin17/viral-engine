@@ -1,0 +1,110 @@
+{
+  "channel": "Gods & Glory",
+  "episode_number": 25,
+  "episode_id": "GG_EP025",
+  "season": 2,
+  "title": "Battle of Inchon",
+  "tagline": "MacArthur said it was impossible. The Joint Chiefs agreed. He did it anyway. It worked.",
+  "hook_line": "September 1950. The United Nations forces are trapped in a tiny corner of Korea. MacArthur wants to land at Inchon — a port with 30-foot tides, sea walls instead of beaches, and a harbor mined by the North Koreans. Every military expert says it can't be done. MacArthur says: 'The very arguments you have made as to the impracticability of the operation will tend to ensure for me the element of surprise.'",
+  "characters": ["General Douglas MacArthur", "General Omar Bradley", "Kim Il-sung", "The Joint Chiefs of Staff"],
+  "scenes": [
+    {
+      "scene_number": 1,
+      "type": "hook",
+      "title": "The Pusan Perimeter",
+      "narration": "By August 1950, the North Korean People's Army had overrun almost all of South Korea. United Nations forces — primarily American — were compressed into the Pusan Perimeter: a 140-by-50 mile rectangle in the southeast corner of the peninsula. Outside the perimeter, North Korean forces controlled everything. Inside, 95,000 men held against repeated assault. General MacArthur, commanding UN forces, looked at a map of Korea, looked at the North Korean supply lines stretching hundreds of miles south from the Chinese border, and identified a single point that, if cut, would reverse everything: Inchon.",
+      "visual_prompt": "Map of Korea in August 1950 — North Korean advance shown in deep red covering almost the entire peninsula, the Pusan Perimeter marked in the southeast corner: a small rectangle, the last UN foothold — North Korean supply lines stretching south visible — and then: MacArthur looking at the map, his finger moving to Inchon on the west coast, halfway up the peninsula — the strategic logic shown: cut the supply lines at Inchon, and the North Korean army attacking Pusan is cut off — the map communicating both the desperation of the current situation and the elegance of the proposed solution — #2C1810 and Korean conflict palette, deep red NKPA advance, #C9A227 for MacArthur's strategic vision",
+      "bg_colors": ["#2C1810", "#8B1A1A", "#1A1A4A"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 2,
+      "type": "villain",
+      "title": "The Problem With Inchon",
+      "narration": "The Joint Chiefs of Staff, the Army, the Navy, the Marine Corps all studied Inchon and returned the same verdict: impossible. The tides at Inchon rose and fell 30 feet — among the largest tidal ranges in the world. The landing window was 2-3 hours, twice a day. Outside the window, the mud flats stretched for miles and any landing craft would be stuck. The harbor approaches were mined. There were no beaches — only 16-foot sea walls that troops would have to scale under fire. The North Koreans knew Inchon was the obvious point and had prepared it accordingly. MacArthur was told: find another landing site.",
+      "visual_prompt": "The problems of Inchon visualized — a tactical breakdown diagram: the 30-foot tidal range shown (low tide: miles of mud flat, high tide: 16-foot sea walls at the landing zone) — the narrow 2-3 hour window twice daily marked on a tide chart — the mined harbor approaches shown from above — the sea walls at scale: 16 feet of vertical concrete that assault troops would need to scale under fire while the tide window closed — North Korean defensive positions shown covering all approaches — and the Joint Chiefs' verdict: NOT RECOMMENDED in clear text — the genuine tactical obstacles making the case against Inchon seem obviously correct — #2C1810 and the specific geography of Inchon harbor, the tide chart a central visual element",
+      "bg_colors": ["#2C1810", "#1A1A4A", "#4A3020"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 3,
+      "type": "character",
+      "title": "MacArthur's Argument",
+      "narration": "MacArthur presented his plan to the Joint Chiefs on August 23, 1950. For 45 minutes he spoke, without notes. He addressed every objection. Then he said: 'The very arguments you have made as to the impracticability of the operation will tend to ensure for me the element of surprise. For the enemy commander will reason that no one would be so brash as to make such an attempt.' He paused. 'I can almost hear the ticking of the second hand of destiny.' General Bradley, who had opposed the plan, later wrote: 'I doubt that MacArthur's statement moved the Joint Chiefs. But it moved me.'",
+      "visual_prompt": "MacArthur at the briefing on August 23 — standing before the Joint Chiefs without notes, the 45-minute speech captured in a dramatic portrait-style composition — his argument shown in key phrases: 'THE VERY ARGUMENTS MADE AGAINST IT ENSURE SURPRISE' — the Joint Chiefs visible around the table: Bradley, Collins, Sherman — their expressions shifting during the speech — and then Bradley's later reflection shown as a quote: 'I doubt that MacArthur's statement moved the Joint Chiefs. But it moved me.' — the particular quality of persuasion through confidence and logic simultaneously — #2C1810 and the formal briefing room, MacArthur's presence commanding the space, #C9A227",
+      "bg_colors": ["#2C1810", "#1A0D08", "#C9A227"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 4,
+      "type": "challenge",
+      "title": "Wolmi-do",
+      "narration": "Before the main landing at Inchon, MacArthur needed to take Wolmi-do — a small island guarding the harbor entrance, connected to Inchon by a causeway. If Wolmi-do's defenders survived to fire on the landing fleet in the narrow channel, the operation would fail. The island had been heavily bombed for days before the landing. On the morning of September 15, 1950, the 3rd Battalion 5th Marine Regiment landed on Wolmi-do. The island was secured in 45 minutes. 136 North Korean defenders killed or captured. The causeway was taken. The harbor entrance was open.",
+      "visual_prompt": "Wolmi-do operation — the small fortified island in Inchon harbor shown from above, its strategic position controlling the harbor entrance and channel — the pre-landing bombing shown: air strikes pounding the island for days — then the morning of September 15: Marine landing craft approaching in the narrow channel, the causeway visible — Marines landing and moving quickly across the island — 45-minute battle shown as a rapid sequence — 136 NKPA defenders overwhelmed — the causeway taken, the harbor entrance opened — the Marines looking back across the channel toward Inchon: the main landing was coming at high tide, hours away — #2C1810 and Marine green, harbor blue, the tactical precision of the sub-operation",
+      "bg_colors": ["#2C1810", "#1A4A3A", "#1A1A4A"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 5,
+      "type": "turning_point",
+      "title": "The Ladders",
+      "narration": "The evening tide of September 15, 1950. The Marines went up the sea walls on aluminum ladders. The landing craft held their position in the 2-hour window, bow against the 16-foot sea wall. Marines climbed under fire. The scaling of Inchon's sea walls is one of the most operationally audacious moments in American military history. By midnight, Inchon had been taken. The 'impossible' landing had been executed in one tide window. The North Korean command structure, having dismissed Inchon as impossible, had not prepared a counterattack plan for the first night.",
+      "visual_prompt": "THE LADDER ASSAULT — Marines climbing aluminum ladders against the 16-foot Inchon sea walls, landing craft held against the concrete at high tide, the 2-hour window shown in the urgency of every movement — Marines going up the ladders under fire, the ones above pulling up the ones below, the scaling of the 'impossible' obstacle in real time — the top of the sea wall: Marines establishing position, Inchon visible behind the walls — the composition showing the audacity of the physical act: climbing a wall on a ladder from a boat under fire — and then: the city taken by midnight, the tide already receding, the landing craft in mud that wasn't there an hour ago — #2C1810 and Marine green, the sea wall as the central structural element, cinematic",
+      "bg_colors": ["#2C1810", "#1A4A3A", "#1A1A4A"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 6,
+      "type": "climax",
+      "title": "Seoul and the Reversal",
+      "narration": "Two weeks after Inchon, UN forces had recaptured Seoul — the South Korean capital. The North Korean supply lines were cut. The North Korean People's Army attacking the Pusan Perimeter, 200 miles away, found itself cut off, attacked from the rear, and collapsing. Within three weeks of Inchon, the NKPA had gone from controlling 95% of the Korean peninsula to being encircled and destroyed. 125,000 North Korean soldiers were killed or captured in the pursuit. MacArthur had reversed the entire Korean War in thirty days.",
+      "visual_prompt": "The strategic reversal shown on the Korea map — before Inchon: North Korea controlling everything except the Pusan box — then: the Inchon landing marked, Seoul recaptured two weeks later, supply lines cut — and then: the NKPA collapse, the pursuing UN forces, the encirclement of North Korean units that had been attacking Pusan — the arrows on the map reversing, the North Korean army that had been winning now cut off and collapsing — 125,000 NKPA killed or captured shown in the final count — the full peninsula with UN forces advancing north — all of it in thirty days from one 'impossible' landing — #2C1810 and the reversal from red to UN forces advancing, #C9A227, the thirty-day transformation marked on a timeline",
+      "bg_colors": ["#2C1810", "#C9A227", "#1A1A4A"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 7,
+      "type": "aftermath",
+      "title": "The Line MacArthur Crossed",
+      "narration": "After Inchon, MacArthur pushed north — past the 38th parallel, past Pyongyang, toward the Chinese border at the Yalu River. He dismissed warnings about Chinese intervention. In November 1950, 300,000 Chinese soldiers crossed the Yalu and drove UN forces back in the largest retreat in American military history. MacArthur demanded authority to bomb China and use nuclear weapons. President Truman removed him from command in April 1951. The man who had won the most brilliant victory of the Korean War had also extended it by three more years. Inchon worked perfectly. What came after Inchon did not.",
+      "visual_prompt": "MacArthur at his farthest advance — near the Yalu River, the Chinese border, the position that felt like final victory — and then: the Chinese crossing, 300,000 soldiers in November 1950, shown as the massive force materializing across the Yalu — UN forces in retreat, the longest retreat in American military history — MacArthur demanding nuclear authorization — Truman's dismissal letter shown — and finally: the contrast, the split image: the brilliant general who won Inchon on the left, the same man dismissed for insubordination on the right — the full scope of MacArthur: the victory and the overreach — #2C1810 and the Korean winter, the Yalu River as the boundary crossed both militarily and symbolically",
+      "bg_colors": ["#2C1810", "#1A1A4A", "#4A4A5A"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 8,
+      "type": "scale",
+      "title": "What Inchon Proved",
+      "narration": "The military consensus before Inchon was that the landing was impossible. The consensus had specific, well-reasoned, tactically sound arguments. Those arguments were correct about the obstacles. They were wrong about the conclusion. MacArthur understood that when something is universally considered impossible, the psychological benefit of attempting it successfully is multiplied — the surprise is total because everyone, including the enemy, agreed it couldn't be done. Inchon is studied in military academies worldwide not just as a tactical operation but as a lesson in the relationship between impossibility and surprise.",
+      "visual_prompt": "Inchon as a teaching case — a modern military academy classroom shown, the Inchon operation displayed on the board — the original Joint Chiefs objections listed alongside MacArthur's counterargument: 'THE VERY ARGUMENTS AGAINST IT ENSURE SURPRISE' — the key insight visualized: when universal consensus says impossible, attempting it creates total surprise — the gap between 'the obstacles were real' and 'the conclusion was wrong' shown as the central lesson — military students studying the tide charts, the sea walls, the tidal window — the same charts the Joint Chiefs used to say no — #2C1810 and #C9A227, the teaching context adding the present-day frame to the historical operation",
+      "bg_colors": ["#2C1810", "#C9A227", "#3D2A10"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 9,
+      "type": "villain_response",
+      "title": "Korea After Inchon",
+      "narration": "The Korean War ended in an armistice in July 1953 — three years after it began, with the front roughly where it started, near the 38th parallel. No peace treaty was ever signed. Technically, the Korean War has never officially ended. The armistice line has been guarded continuously for 71 years. The Demilitarized Zone between North and South Korea is one of the most heavily fortified borders in the world. Inchon changed everything in September 1950 and by July 1953 the front was back where it began. The war that was nearly won twice — by North Korea in August, by the UN in October — was eventually neither won nor lost.",
+      "visual_prompt": "The Korean War armistice — the DMZ marked on the map, the armistice line running roughly at the 38th parallel where the war began — the 71-year guard of the armistice line shown: the continuously manned border, the most fortified stretch of land in the world — North and South Korea shown separated but unresolved — the lack of a peace treaty noted — and then: the human dimension: families separated by the DMZ for 71 years — the scale of the unresolved conflict still present — Inchon's brilliant reversal shown against the larger arc that continued past it — the war that changed direction at Inchon and still hasn't formally ended — #2C1810 and the specific gray-green of the DMZ, historical weight without resolution",
+      "bg_colors": ["#2C1810", "#4A4A4A", "#1A4A3A"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 10,
+      "type": "tag",
+      "title": "The Second Hand of Destiny",
+      "narration": "MacArthur said at the briefing: 'I can almost hear the ticking of the second hand of destiny.' He was not wrong. At Inchon, on the evening of September 15, 1950, in a two-hour tidal window, Marines climbed 16-foot sea walls on ladders from the bows of landing craft, and took a city that the entire professional military establishment had assessed as impossible to take. MacArthur had gambled everything — his career, the operation, potentially the Korean War — on the fact that if everyone thought it was impossible, no one would be ready for it. He was right. He had heard the second hand. He had moved before it stopped.",
+      "visual_prompt": "The final image — a return to the Inchon sea walls at the moment of scaling, now shown as the iconic image it became: Marines with ladders against the 16-foot walls, the tide at its peak, the 2-hour window — MacArthur's quote visible: 'I CAN ALMOST HEAR THE TICKING OF THE SECOND HAND OF DESTINY' — and then: a clock face visible in the composition, the second hand at the position of the landing, the tide window shown as the arc it sweeps — the moment of action inside the window that everyone said was impossible — cinematic, historical, the composition carrying both the audacity and the precision — #2C1810 and the harbor water, #C9A227 for the dawn of September 15, the ladders as the defining visual of the season finale",
+      "bg_colors": ["#2C1810", "#C9A227", "#1A4A3A"],
+      "duration_sec": 9
+    }
+  ],
+  "viral_hook": "MacArthur said: 'The very arguments you have made against the operation will ensure for me the element of surprise.' He was told Inchon was impossible. He landed there anyway. Marines climbed 16-foot walls on ladders from boats. He reversed the entire Korean War in 30 days. Then he pushed too far and got fired.",
+  "highlight_scene": 5,
+  "highlight_note": "The ladder assault — Marines climbing 16-foot sea walls from landing craft bows in the 2-hour tide window that everyone said was too dangerous to attempt. The visual of 'impossible' being executed.",
+  "short_title": "He Did The Impossible And Then Got Fired For Going Too Far",
+  "rewatch_bait": "Scene 2 — the Inchon problem diagram. Every single objection is correct. The tides, the walls, the mines, the mud flats. Watch scene 5 immediately after. Every objection shown in scene 2 is overcome in scene 5, exactly as MacArthur predicted they would be. The obstacles were real. The conclusion was wrong.",
+  "youtube_title": "The landing they said was impossible. Marines climbed walls on ladders to prove them wrong. | Gods & Glory S2 EP10",
+  "lesson": "When everyone agrees something can't be done, the person who does it doesn't just win — they achieve total surprise. The obstacle is the advantage. MacArthur understood this better than his enemies, his allies, and his own Joint Chiefs.",
+  "arc_notes": "GG S2 FINALE (EP025). The full season arc: Marathon (outrun the arrows), Agincourt (mud chose a side), Tours (terrain choice), Hastings (one arrow), Mongols/Japan (weather), Vienna (cavalry from wrong direction), Midway (broken code), Stalingrad (refused to leave), D-Day (two-year deception), Inchon (everyone agreed impossible). Season 2 theme: 'When Everything Changed.' Every episode shows a single day or decision that permanently reshuffled world power. MacArthur's overreach in scene 7 maintains the GG season tradition of not presenting any victory as clean."
+}

@@ -1,0 +1,140 @@
+{
+  "brand": "LEGEND EMPIRE",
+  "brand_bible_version": "1.0",
+  "channel_id": "CH02",
+  "channel_name": "Iron Legends",
+  "channel_tagline": "Roll Out. Transform. Remember Everything.",
+  "category": "Nostalgia / Animation",
+  "status": "active",
+
+  "concept": "The 90s cartoon universe reborn with AI. Original Transformers energy, G.I. Joe, He-Man, Thundercats — original stories, new AI-cinematic animation. Two audiences locked in: the nostalgic millennial parent (35–45) who grew up on these shows AND their kids discovering it fresh. The dual-audience lock is the financial moat. Millennials trust YouTube more than any other generation and are now the ones putting cartoons on for their kids.",
+
+  "audience": {
+    "primary": "Millennials age 30–45 (nostalgia)",
+    "secondary": "Kids age 6–12 (discovery)",
+    "dual_audience_advantage": "Reboots of 80s/90s properties are hitting airwaves in 2026 — Transformers, GI Joe, Thundercats, He-Man, SWAT Kats are all coming back. The nostalgia wave for Gen X and Millennials is at peak. We ride that wave with original AI-generated content — no licensing fees, no IP battles, pure original universe inspired by the golden era. Same energy. New world."
+  },
+
+  "content_specs": {
+    "video_length_minutes": "8–15",
+    "ad_rpm_estimate": "$8–15",
+    "competition_level": "Low (Original IP)",
+    "ai_visual_style": "Cinematic Action / Anime",
+    "viral_shorts_potential": "5/5 stars",
+    "long_term_ip_value": "5/5 stars (Original IP)",
+    "content_is_evergreen": true,
+    "evergreen_reason": "Nostalgia grows",
+    "merch_potential": "5/5 stars",
+    "production_tools": ["Higgsfield", "Claude"]
+  },
+
+  "tags": ["Millennials 30–45", "Kids 6–12", "Nostalgia", "Action", "AI Animation", "Original IP"],
+
+  "year_2_revenue_target": "$35,000/month",
+
+  "revenue_streams": [
+    { "name": "YouTube Ad Revenue", "rate": "$8–15 RPM" },
+    { "name": "Sponsor Deals", "rate": "$3K–15K/video" },
+    { "name": "Channel Membership", "rate": "Recurring" },
+    { "name": "Original IP Merch", "rate": "High Margin" },
+    { "name": "TikTok / Reels Clips", "rate": "Viral Feed" }
+  ],
+
+  "episode_plan": [
+    { "ep": 1, "title": "Origin: The First Transformer Wakes Up", "emoji": "🤖" },
+    { "ep": 2, "title": "Autobots vs. Decepticons: Round One", "emoji": "⚔️" },
+    { "ep": 3, "title": "How Robots Came to Earth", "emoji": "🌍" },
+    { "ep": 4, "title": "The Iron Lion — Original Beast Wars", "emoji": "🦁" },
+    { "ep": 5, "title": "Space Battle for Cybertron", "emoji": "🚀" },
+    { "ep": 6, "title": "Rise of the Iron Guard (GI Joe energy)", "emoji": "🛡️" },
+    { "ep": 7, "title": "He-Bot: Master of the Machine Universe", "emoji": "⚡" },
+    { "ep": 8, "title": "Thunder Mechs — Lost in Time", "emoji": "🌩️" },
+    { "ep": 9, "title": "The Last Autobot Standing", "emoji": "🔩" },
+    { "ep": 10, "title": "Galactic War: The Final Transform", "emoji": "🌌" }
+  ],
+
+  "creative_direction": {
+    "visual_tone": "Cinematic Action / Anime — heavy shadow, dynamic angles, machine aesthetics",
+    "villain_philosophy": "OVERWHELMING antagonists — Decepticons and enemy forces must feel utterly dominant; every victory must feel against-impossible-odds",
+    "energy": "Original 80s/90s cartoon universe — same spirit, new original IP, zero licensing conflict",
+    "ip_note": "All characters are ORIGINAL creations inspired by the golden era. Not Hasbro IP. Not licensed content."
+  },
+
+  "legend_empire_umbrella": {
+    "parent_brand": "LEGEND EMPIRE",
+    "tagline": "Three Channels · One Machine · Infinite Revenue",
+    "description": "A multi-channel AI content empire spanning mythology, nostalgia, and epic history — engineered from research, built by machines, designed to dominate.",
+    "channels": [
+      { "id": "CH01", "name": "Little Olympus", "category": "Kids / Animation", "year2_target": "$50K/month" },
+      { "id": "CH02", "name": "Iron Legends", "category": "Nostalgia / Animation", "year2_target": "$35K/month" },
+      { "id": "CH03", "name": "Empire Decoded", "category": "Documentary / History", "year2_target": "$80K/month" }
+    ],
+    "combined_year2_target": "$165K/month",
+    "market_intelligence": {
+      "youtube_2025_revenue": "$62B",
+      "monthly_active_users": "2.85B",
+      "cocomellon_sold_for": "$3B",
+      "top_history_channel_monthly": "$80K",
+      "good_myth_kids_channels_existing": 0,
+      "channels_launching_simultaneously": 3
+    }
+  },
+
+  "content_factory": {
+    "pipeline": [
+      { "agent": "Scout Agent", "role": "Scans trending topics across YouTube, TikTok, Reddit for each niche" },
+      { "agent": "Analyst Agent", "role": "Scores trends for viral potential, competition, RPM value, keyword demand" },
+      { "agent": "Script Agent", "role": "Claude writes full episode script — hook, story arc, CTA — optimized for retention" },
+      { "agent": "Director Agent", "role": "Converts script into shot-by-shot visual prompts for Higgsfield" },
+      { "agent": "Higgsfield", "role": "Generates all AI video — animation, cinematic scenes, transitions" },
+      { "agent": "Voice Agent", "role": "AI voiceover — Bold & dramatic for Iron Legends" },
+      { "agent": "Music Agent", "role": "AI-generated royalty-free scoring — synth-action for robots" },
+      { "agent": "Launch Agent", "role": "Packages final video, writes SEO title/description/tags, generates thumbnail prompt, queues for all platforms" }
+    ]
+  },
+
+  "launch_roadmap": {
+    "phase_1_build": {
+      "timeline": "Months 1–2",
+      "milestones": [
+        "Name & brand all 3 channels",
+        "Build the AI content factory",
+        "Connect Higgsfield pipeline",
+        "Wire Gemini for trend research",
+        "Produce first 5 episodes per channel",
+        "Design channel art & thumbnails",
+        "Set up HeyGen avatar (optional host)",
+        "Launch all 3 channels simultaneously"
+      ]
+    },
+    "phase_2_grow": {
+      "timeline": "Months 3–8",
+      "milestones": [
+        "2–3 videos per channel per week",
+        "Shorts clips from every episode",
+        "Cross-post to TikTok, Reels, Pinterest",
+        "Hit YouTube Partner Program (1K subs)",
+        "Optimize thumbnails via A/B testing",
+        "Build email list from video CTAs",
+        "First sponsorship outreach at 10K",
+        "License pitches to Amazon Kids+"
+      ]
+    },
+    "phase_3_scale": {
+      "timeline": "Months 9–18",
+      "milestones": [
+        "100K subscribers across channels",
+        "$10K–$50K/month ad revenue",
+        "Sponsorship deals locked",
+        "Merchandise launch (Little Olympus)",
+        "4th & 5th channels in pipeline",
+        "IP portfolio value building",
+        "Licensing deal conversations",
+        "Potential acquisition positioning"
+      ]
+    }
+  },
+
+  "next_episode_number": 1,
+  "saved_utc": "2026-06-16T00:00:00Z"
+}

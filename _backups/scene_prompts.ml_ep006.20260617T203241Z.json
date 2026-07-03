@@ -1,0 +1,110 @@
+{
+  "channel": "ML",
+  "episode_number": 6,
+  "episode_id": "ML_EP006",
+  "season": 1,
+  "title": "The Line",
+  "tagline": "He didn't retreat. That was his function.",
+  "hook_line": "GRANITE doesn't retreat. It isn't stubbornness. It's physics.",
+  "characters": ["GRANITE", "BLAZE", "ELDER-7", "NOVA", "STORM", "RUMBLE"],
+  "scenes": [
+    {
+      "scene_number": 1,
+      "type": "hook",
+      "title": "His Function",
+      "narration": "GRANITE doesn't retreat. It isn't philosophy. It isn't stubbornness. It is his function. He was built to hold.",
+      "visual_prompt": "Slate blue-grey mech GRANITE 12 meters in immovable stance, geological strata armor detail, cryo-sleeve on left arm beginning to frost, planted in the earth like he grew there, dark cinematic wide shot from low angle making him imposing, 1080x1920 vertical",
+      "bg_colors": ["#4A6B8A", "#0D1520"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 2,
+      "type": "action",
+      "title": "Rear Guard",
+      "narration": "The team pulled back to regroup. Someone had to hold the rear. GRANITE didn't wait to be asked. He was already there.",
+      "visual_prompt": "Wide shot, the mech team retreating in background as small silhouettes, GRANITE massive and alone in foreground facing the approaching dark horizon, deliberate rear-guard positioning, cryo-sleeve frost building, lonely but certain, cinematic, 1080x1920 vertical",
+      "bg_colors": ["#2A4A6A", "#080D14"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 3,
+      "type": "action",
+      "title": "First Wave",
+      "narration": "Xerxes's advance force arrived. Thousands. GRANITE's cryo-sleeve frosted solid. He braced. The first wave broke against him.",
+      "visual_prompt": "Dynamic action shot, GRANITE slate blue-grey mech with cryo-sleeve blazing frost white, first Persian advance force crashing against him like a wave against a cliff, units deflecting off his armor, immovable, shockwave rippling outward from impact point, cinematic, 1080x1920 vertical",
+      "bg_colors": ["#4A6B8A", "#1A2A3A"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 4,
+      "type": "action",
+      "title": "Second Wave",
+      "narration": "The second wave came. GRANITE held. The cryo-sleeve at sixty percent capacity. He didn't move an inch.",
+      "visual_prompt": "GRANITE under pressure from second wave, cryo-sleeve glowing intensely at partial capacity readout visible, Persian formations pressing from multiple angles, GRANITE's geological strata armor showing impact marks but holding, ground around him scarred and cracked, he has not moved, cinematic, 1080x1920 vertical",
+      "bg_colors": ["#3A5A7A", "#0A1525"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 5,
+      "type": "emotional",
+      "title": "Fall Back",
+      "narration": "BLAZE on comms, urgency breaking through: 'GRANITE — we're clear. Fall back.' A long silence. 'Not yet.'",
+      "visual_prompt": "GRANITE face plate close-up, slate blue-grey with cold amber core visible underneath through chest plate, comms indicator showing BLAZE's signal, expression conveying absolute calm and purpose, cryo-sleeve frost at 60%, enemy formations still visible on all sides, cinematic, 1080x1920 vertical",
+      "bg_colors": ["#4A6B8A", "#0A1520"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 6,
+      "type": "climax",
+      "title": "95 Percent",
+      "narration": "Third wave. The cryo-sleeve at ninety-five percent capacity — the threshold where it had always failed before. The line held.",
+      "visual_prompt": "GRANITE at maximum capacity, cryo-sleeve blazing bright frost white almost to overload, cracking frost patterns spreading from the sleeve up his arm, third Persian wave pressing in, but the line is still exactly where GRANITE is standing, readout showing 95% in warning amber, cinematic peak tension, 1080x1920 vertical",
+      "bg_colors": ["#6B8FAA", "#1A2A3A"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 7,
+      "type": "reveal",
+      "title": "The Archive: SIEGE-3",
+      "narration": "ELDER-7 on the data pad. Quietly. SIEGE-3. 1,200 years ago. Held for eleven hours. Then Xerxes sent more.",
+      "visual_prompt": "ELDER-7's data pad close-up, archive entry SIEGE-3 in amber text, 1200 year old timestamp, battle record showing 11 hours held, result field reading FALLEN, beneath it the phrase 'additional forces deployed' in ancient notation, amber glow on dark metal surface, cinematic, 1080x1920 vertical",
+      "bg_colors": ["#8B6914", "#0A0A0A"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 8,
+      "type": "action",
+      "title": "Xerxes Sends More",
+      "narration": "Xerxes sent more. The reinforcement wave hit with force that would have shattered mountains. GRANITE moved back. One step. Then a second.",
+      "visual_prompt": "Massive reinforcement wave arriving behind the existing Persian force, scale enormously larger, GRANITE for the first time being pushed back, first step backward visible, cryo-sleeve at critical capacity, ground cracking beneath him, but still standing, retreating toward team position, cinematic wide, 1080x1920 vertical",
+      "bg_colors": ["#2A1A0A", "#050A15"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 9,
+      "type": "action",
+      "title": "He Waited Until They Were Safe",
+      "narration": "He fell back. But only when the team was clear. Every step calculated. Every second spent was a second the team used to regroup.",
+      "visual_prompt": "GRANITE backing toward team position in controlled tactical withdrawal, the team visible as dark silhouettes regrouping behind him in safety, GRANITE's cryo-sleeve still blazing even in retreat, face plate never turning away from the enemy, cinematic, 1080x1920 vertical",
+      "bg_colors": ["#3A5A7A", "#080D14"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 10,
+      "type": "resolution",
+      "title": "The Crack",
+      "narration": "The cryo-sleeve cracked. First time in recorded history. ELDER-7 looked at it for a long moment. Said nothing. Updated the archive.",
+      "visual_prompt": "Close-up of GRANITE's cryo-sleeve, a hairline crack running through the frost mechanism for the first time, cold light leaking from the fracture point, ELDER-7's hand entering frame briefly touching the crack with one ancient bronze finger, then withdrawing to write in the archive, cinematic intimacy, 1080x1920 vertical",
+      "bg_colors": ["#4A6B8A", "#0A0A0A"],
+      "duration_sec": 9
+    }
+  ],
+  "viral_hook": "The cryo-sleeve cracked. It had never cracked before. ELDER-7 said nothing. Just updated the archive.",
+  "highlight_scene": 10,
+  "highlight_note": "The crack in the cryo-sleeve is the visual payoff — GRANITE held past every recorded limit. ELDER-7's silent update of the archive lands like a eulogy and a medal at the same time.",
+  "short_title": "The Cryo-Sleeve Cracked",
+  "rewatch_bait": "ELDER-7's expression watching the crack — and then immediately writing in the archive — rewards rewatchers. What did he write?",
+  "youtube_title": "He Held Three Waves Alone — Then His Armor Cracked for the First Time | Mech Legends S1 EP006",
+  "lesson": "Holding isn't passive. Holding is the hardest thing you can do when everything is pushing you back.",
+  "arc_notes": "EP006 is GRANITE's individual test episode. His cryo-sleeve crack is season-long arc material — in EP012 when he holds all flanks simultaneously, that crack is still there. Sets up SIEGE-3 archive parallel. The 'not yet' character beat defines GRANITE permanently."
+}

@@ -1,0 +1,228 @@
+{
+  "channel": "Mech Legends",
+  "episode_number": 1,
+  "episode_id": "ML_EP001",
+  "title": "Origin: The Day BLAZE Woke Up",
+  "tagline": "Every legend has a beginning. Every hero has a first transformation.",
+  "duration_target_min": 10,
+  "aesthetic": {
+    "color_grade": "cinematic_action_anime",
+    "primary_colors": [
+      "#FF3300",
+      "#0099FF",
+      "#00FF88",
+      "#FFD700"
+    ],
+    "font_style": "bold_industrial",
+    "music_style": "synth_action_epic",
+    "narrator_tone": "bold_dramatic_commanding"
+  },
+  "characters": {
+    "hero": {
+      "name": "BLAZE",
+      "vehicle": "Red fire truck that transforms into a race car",
+      "role": "Brave leader of the Mech Legends",
+      "visual": "Brilliant red robot, flames on shoulders, bold chest insignia, fearless expression, transforms from fire truck to race car"
+    },
+    "hero2": {
+      "name": "STORM",
+      "vehicle": "Blue helicopter",
+      "role": "The brains \u2014 fast, smart, strategic",
+      "visual": "Sleek blue robot with rotor blades folded on back, sharp angular design, tactical visor"
+    },
+    "hero3": {
+      "name": "GRANITE",
+      "vehicle": "Green bulldozer",
+      "role": "The muscle \u2014 massive strength, gentle giant",
+      "visual": "Enormous green robot, thick armour plating, bulldozer scoop on one arm, kind eyes despite the size"
+    },
+    "villain": {
+      "name": "RUMBLE",
+      "vehicle": "Dark purple crusher machine",
+      "role": "Supreme villain \u2014 wants to crush everything. OVERWHELMING.",
+      "visual": "Colossal dark purple and black robot, twice the size of any hero, four crushing arms, eyes like red searchlights, sheer mass makes heroes look tiny",
+      "power_level": "OVERWHELMING \u2014 every hero together has almost zero chance"
+    },
+    "villain2": {
+      "name": "BOLT",
+      "vehicle": "Black lightning bolt vehicle",
+      "role": "Rumble's fast sneaky sidekick \u2014 small and dangerous",
+      "visual": "Thin black robot crackles with electricity, lightning bolt markings, always moving, never still"
+    }
+  },
+  "scenes": [
+    {
+      "scene_number": 1,
+      "type": "cold_open",
+      "title": "Before the Machines",
+      "narration": "Long before your city had roads. Long before the first siren wailed. Long before any machine had ever transformed into anything \u2014 there was a signal. A signal from deep space. And it was looking for something specific. It was looking for vehicles. Because vehicles... were about to become something much, much more.",
+      "visual_prompt": "Mech Legends channel, cinematic anime style. Deep space \u2014 a brilliant pulse of energy shoots toward Earth like a comet, leaving a trail of multicoloured transformation energy. Below, a modern city at night, vehicles moving on highways. The signal is aimed right at them. Epic, mysterious, cinematic. 16:9.",
+      "bg_colors": [
+        "#050510",
+        "#0A0A20",
+        "#080818"
+      ],
+      "accent": "#FF3300",
+      "camera": "pull_back",
+      "duration_sec": 9,
+      "higgsfield_prompt": "Cinematic anime sci-fi, brilliant energy pulse shooting from deep space toward Earth at night, transformation energy trail, city below with moving vehicles, mysterious and epic, dramatic space lighting, 16:9"
+    },
+    {
+      "scene_number": 2,
+      "type": "hero_intro",
+      "title": "BLAZE Transforms for the First Time",
+      "narration": "Fire Station Seven. Engine One. A red fire truck \u2014 the fastest, most powerful in the city. When the signal hit \u2014 it changed everything. The truck shook. The metal moved. Panels folded. Wheels transformed. And for the first time in history \u2014 a machine opened its eyes. His name was BLAZE. And he had no idea what he was.",
+      "visual_prompt": "Mech Legends channel, cinematic anime style. Dramatic first transformation sequence \u2014 a brilliant red fire truck in a fire station is struck by transformation energy. The truck's panels fly apart and reassemble into a powerful red robot, BLAZE, standing upright for the first time. He looks at his hands in awe. Dramatic lighting, energy sparks, heroic moment. His chest has a flame insignia. 16:9.",
+      "bg_colors": [
+        "#1A0800",
+        "#2D1000",
+        "#0A0500"
+      ],
+      "accent": "#FF3300",
+      "camera": "push_in",
+      "duration_sec": 9,
+      "higgsfield_prompt": "Cinematic anime style, red fire truck transforming into red robot hero for the first time, transformation energy and sparks, robot standing and looking at its hands in awe, dramatic fire station setting, heroic moment, flame insignia on chest, 16:9"
+    },
+    {
+      "scene_number": 3,
+      "type": "team_intro",
+      "title": "The Others Wake Up",
+      "narration": "BLAZE wasn't alone. Across the city \u2014 in a traffic control tower, a helicopter began to transform. STORM. In a construction yard \u2014 the largest bulldozer anyone had ever seen became GRANITE. They didn't know each other yet. But the signal had found them all. For the same reason.",
+      "visual_prompt": "Mech Legends channel, cinematic anime style. Split sequence \u2014 three simultaneous transformations across the city. Blue helicopter becomes the sleek strategic STORM on a rooftop. Massive green bulldozer becomes the enormous GRANITE in a construction yard. All three newly transformed Mech Legends stand in their separate locations looking up at the sky. Dynamic split composition, energy everywhere. 16:9.",
+      "bg_colors": [
+        "#050A15",
+        "#0A1520",
+        "#05100A"
+      ],
+      "accent": "#0099FF",
+      "camera": "pull_back",
+      "duration_sec": 9,
+      "higgsfield_prompt": "Cinematic anime style, split scene three simultaneous robot transformations across a city, blue helicopter becomes blue robot on rooftop, green bulldozer becomes massive green robot in construction yard, transformation energy, newly awakened machines looking up, 16:9"
+    },
+    {
+      "scene_number": 4,
+      "type": "villain_intro",
+      "title": "RUMBLE Arrives",
+      "narration": "The signal had another purpose. One the heroes didn't know about. Because the same energy that created them \u2014 had been intercepted. Twisted. Used. RUMBLE came from the dark side of the signal. He didn't transform from a vehicle. He tore his way into existence. And when he stood up \u2014 he was bigger than a building. And he had one goal: CRUSH everything the heroes would try to build.",
+      "visual_prompt": "Mech Legends channel, cinematic anime style. From a tear in reality \u2014 dark corrupted energy \u2014 RUMBLE erupts into existence. Colossal. Dark purple and black. Four crushing arms. Eyes blazing red like furnaces. He towers over every building in the city skyline. BOLT crackles beside him, tiny but vicious. The sheer scale of RUMBLE against the city is terrifying. OVERWHELMING. 16:9.",
+      "bg_colors": [
+        "#1A0020",
+        "#2D0035",
+        "#0D0015"
+      ],
+      "accent": "#CC00FF",
+      "camera": "pull_back",
+      "duration_sec": 9,
+      "higgsfield_prompt": "Cinematic anime style, colossal dark purple and black four-armed villain robot tearing into existence from corrupted energy rift, towers over city buildings, blazing red eyes, small black electric sidekick beside him, overwhelming scale, terrifying, 16:9"
+    },
+    {
+      "scene_number": 5,
+      "type": "villain_dominance",
+      "title": "Nothing Can Stop Him",
+      "narration": "RUMBLE's first move was to test his power. He chose the largest bridge in the city. He walked up to it. And he crushed it. With one hand. The army came. RUMBLE looked at the army. He picked up three tanks. And he threw them. Not because he was angry. Just to show that he could. This was a problem that had never existed before. And there was no plan for it.",
+      "visual_prompt": "Mech Legends channel, cinematic anime style. RUMBLE stands on a destroyed bridge, enormous, barely scratched. Military vehicles are scattered like toys around his feet. His four massive arms are spread wide. The city burns in the background. He is completely, utterly dominant \u2014 a force of nature that nothing built by humans can even slow down. Raw overwhelming power. 16:9.",
+      "bg_colors": [
+        "#100005",
+        "#1F0008",
+        "#0A0003"
+      ],
+      "accent": "#CC0033",
+      "camera": "battlefield_drift",
+      "duration_sec": 9,
+      "higgsfield_prompt": "Cinematic anime, colossal dark purple four-armed villain robot standing triumphant on destroyed bridge, military vehicles scattered like toys, city burning in background, completely dominant, nothing can stop him, overwhelming power, dark dramatic lighting, 16:9"
+    },
+    {
+      "scene_number": 6,
+      "type": "crisis",
+      "title": "The First Battle \u2014 and the First Defeat",
+      "narration": "BLAZE found RUMBLE first. He did the bravest thing a brand-new hero could do. He charged. And RUMBLE \u2014 without even turning around \u2014 caught BLAZE in one hand. Held him up. Looked at him. And said: 'You're the best they have?' BLAZE had no answer. Because RUMBLE was right. He was the best they had. And it wasn't nearly enough.",
+      "visual_prompt": "Mech Legends channel, cinematic anime style. RUMBLE holds BLAZE in one enormous hand, lifting him off the ground. BLAZE struggles but can barely move. RUMBLE's scale dwarfs him completely \u2014 BLAZE looks like a toy in RUMBLE's grip. STORM and GRANITE are in the background, frozen in shock at RUMBLE's power. The darkest moment for our heroes. 16:9.",
+      "bg_colors": [
+        "#0D0015",
+        "#1A0025",
+        "#080010"
+      ],
+      "accent": "#8800FF",
+      "camera": "push_in",
+      "duration_sec": 9,
+      "higgsfield_prompt": "Cinematic anime, colossal dark villain robot holding small red hero robot in one enormous fist, hero struggling but powerless, two other hero robots frozen in background in shock, overwhelming size difference, dark dramatic lighting, 16:9"
+    },
+    {
+      "scene_number": 7,
+      "type": "darkest_moment",
+      "title": "RUMBLE Wins Round One",
+      "narration": "RUMBLE threw BLAZE across the city. Then he turned to STORM and GRANITE. It wasn't even a fight. In sixty seconds \u2014 all three Mech Legends were down. BOLT danced around them laughing. And RUMBLE began his march on the city. Three heroes. Defeated. First day. First battle. Total failure. This was what they were up against.",
+      "visual_prompt": "Mech Legends channel, cinematic anime style. Three defeated heroes \u2014 BLAZE, STORM, and GRANITE \u2014 lie scattered across a destroyed street. BLAZE has cracks across his chest plate. GRANITE has a dent in his massive frame. STORM's rotor blades are bent. BOLT crackles and laughs around them. In the distance, RUMBLE's massive silhouette marches toward the city. Darkest moment. 16:9.",
+      "bg_colors": [
+        "#060010",
+        "#100020",
+        "#08001A"
+      ],
+      "accent": "#8800FF",
+      "camera": "pull_back",
+      "duration_sec": 9,
+      "higgsfield_prompt": "Cinematic anime, three defeated hero robots lying on destroyed street, red robot cracked, blue robot with bent rotors, green robot dented, small black electric villain dancing around them, massive dark villain silhouette marching in distance, darkest moment, 16:9"
+    },
+    {
+      "scene_number": 8,
+      "type": "turning_point",
+      "title": "BLAZE Remembers Why He Transformed",
+      "narration": "BLAZE lay in the rubble. He could see the city. The people running. He thought about the fire truck he used to be. The things that vehicle was built for. Rescue. Protection. The signal hadn't given him these powers to WIN fights. It had given him these powers to PROTECT. And protect he would. Even against something that couldn't be beaten. Especially then.",
+      "visual_prompt": "Mech Legends channel, cinematic anime style. BLAZE, cracked and damaged, slowly pushes himself up from the rubble. His chest insignia glows brighter. He can see civilians running below. His eyes shift from defeated to determined. Red energy pulses through his frame \u2014 the transformation energy reactivating at full power. He is not done. He was BUILT for this. Rising. 16:9.",
+      "bg_colors": [
+        "#1A0500",
+        "#2D0800",
+        "#0A0300"
+      ],
+      "accent": "#FF3300",
+      "camera": "push_in",
+      "duration_sec": 9,
+      "higgsfield_prompt": "Cinematic anime, damaged red hero robot slowly rising from rubble with renewed determination, chest flame insignia glowing brighter, red energy pulsing through cracked frame, city and fleeing people visible below, from defeated to determined, heroic rising moment, 16:9"
+    },
+    {
+      "scene_number": 9,
+      "type": "hero_reveal",
+      "title": "Three Mechs. One Team.",
+      "narration": "STORM and GRANITE saw BLAZE stand up. So they stood up. Nobody told them to. Nobody gave an order. They just understood \u2014 if BLAZE was getting back up, then so were they. Three machines that hadn't existed twenty-four hours ago. Standing together. Battered. Outmatched. Completely outmatched. Moving forward anyway. That's what Mech Legends do.",
+      "visual_prompt": "Mech Legends channel, cinematic anime style. All three Mech Legends stand together \u2014 BLAZE, STORM, GRANITE \u2014 damaged but upright, facing toward RUMBLE's direction. They stand shoulder to shoulder for the first time as a team. Red, blue, and green energy pulses from each of them. Behind them, the city. Ahead \u2014 RUMBLE. Against-impossible-odds heroism. 16:9.",
+      "bg_colors": [
+        "#0A0510",
+        "#150A20",
+        "#0A1520"
+      ],
+      "accent": "#FFD700",
+      "camera": "pull_back",
+      "duration_sec": 9,
+      "higgsfield_prompt": "Cinematic anime, three hero robots standing together for first time as a team \u2014 red, blue and green \u2014 damaged but upright and determined, coloured energy pulses from each, city behind them, facing toward danger, against-impossible-odds moment, iconic teamwork shot, 16:9"
+    },
+    {
+      "scene_number": 10,
+      "type": "cliffhanger",
+      "title": "Round Two Starts Now",
+      "narration": "RUMBLE turned. He saw them standing. All three. He actually laughed. Because he was still bigger. Still stronger. Still the most powerful thing that had ever walked on this planet. And he was right. But here's what RUMBLE didn't understand about Mech Legends: they don't need to win the first fight. They just need to survive it. Because they're just getting started.",
+      "visual_prompt": "Mech Legends channel, cinematic anime style. Epic standoff \u2014 BLAZE, STORM, and GRANITE face RUMBLE across a ruined city block. RUMBLE is colossal, all four arms raised, laughing. BOLT crackles at his side. The three Mech Legends are smaller, damaged, but standing firm. The city blazes behind both sides. This is where the series BEGINS. Title card energy. 16:9.",
+      "bg_colors": [
+        "#0A0A1F",
+        "#101030",
+        "#0D1545"
+      ],
+      "accent": "#FF3300",
+      "camera": "pull_back",
+      "duration_sec": 9,
+      "higgsfield_prompt": "Cinematic anime, epic standoff \u2014 three hero robots facing one colossal villain robot across burning city ruins, villain laughing with all four arms raised, heroes damaged but standing firm, electric sidekick crackles beside villain, series title card energy, dramatic and iconic, 16:9"
+    }
+  ],
+  "music": {
+    "style": "synth_action_epic",
+    "notes": "Heavy synth bass, orchestral hits, electric guitar riffs, Transformers-era energy. Rise on BLAZE's standing-up moment. Full swell on three heroes together."
+  },
+  "voice_style": {
+    "tone": "bold_dramatic_commanding",
+    "pacing": "deliberate with hard punches on key words",
+    "character": "movie trailer narrator meets action cartoon announcer"
+  },
+  "youtube_title": "BLAZE Transforms for the FIRST TIME! \u26a1 | Mech Legends Episode 1 | Origin",
+  "youtube_description": "The day everything changed.\n\nA signal from deep space hits Earth \u2014 and ordinary vehicles transform into the most powerful machines ever built. BLAZE. STORM. GRANITE. The Mech Legends are born.\n\nBut so is RUMBLE. And RUMBLE doesn't play fair.\n\n\ud83d\udd34 BLAZE \u2014 brave leader, red fire truck\n\ud83d\udd35 STORM \u2014 the brains, blue helicopter\n\ud83d\udfe2 GRANITE \u2014 the muscle, green bulldozer\n\ud83d\udfe3 RUMBLE \u2014 the villain who can't be stopped (or can he?)\n\n\ud83d\udcfa Watch the full Mech Legends series: [playlist link]\n\ud83d\udd14 SUBSCRIBE \u2014 new episode every week!\n\n#MechLegends #Transformers #RobotHeroes #KidsCartoon #KidsYouTube",
+  "next_episode_preview": "Episode 2 \u2014 BLAZE's Secret Weapon. What happens when a fire truck learns to fight back?",
+  "higgsfield_style_notes": "Cinematic anime action style. NOT photorealistic. Vehicle-transformer aesthetic \u2014 heroes are toyetic, colorful, clearly identifiable by color. RUMBLE must feel OVERWHELMING in every shot. 16:9 widescreen."
+}

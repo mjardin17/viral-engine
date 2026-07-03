@@ -1,0 +1,234 @@
+{
+  "episode_id": "GG_EP007",
+  "channel": "GG",
+  "title": "D-Day: The Day That Decided Europe",
+  "tagline": "Five beaches. 156,000 men. One single sunrise.",
+  "duration_target_min": 20,
+  "aesthetic": {
+    "color_grade": "cinematic_pacific_dawn",
+    "primary_colors": ["#1C2B3A", "#6E7B5A", "#8B1A1A", "#C9A84C"],
+    "font_style": "serif_documentary_bold",
+    "music_style": "hans_zimmer_conquest_epic",
+    "narrator_tone": "authoritative_punchy_dramatic"
+  },
+  "music": {
+    "style": "hans_zimmer_conquest_epic",
+    "notes": "Opening: tense, quiet strings over dark water at night. The deception: playful, deceptive woodwinds undercut with menace. Crossing the channel: building low drone, anticipation. Ramps drop on Omaha: the music drops out almost entirely, just percussion and chaos. The cliffs at Pointe du Hoc: relentless climbing string motif. Breaking through: the theme finally resolves into full, hard-won brass triumph. Legacy: solemn, measured, the theme returning warm and grateful."
+  },
+  "voice_style": {
+    "tone": "authoritative_punchy_dramatic",
+    "pacing": "controlled and ominous before the landing, urgent and broken during Omaha, steady and resolute in the aftermath",
+    "character": "documentary narrator who respects how close this actually came to failing"
+  },
+  "youtube_title": "D-Day: How 156,000 Men Took Five Beaches in One Morning | Gods & Glory EP7",
+  "youtube_description": "On June 6, 1944, the Allies launched the largest amphibious invasion in human history onto five beaches in Normandy, France.\n\nThis is the real story — the deception that fooled Hitler for weeks, the disaster at Omaha Beach, and the single morning that decided whether Nazi-occupied Europe would ever be free.\n\nGods & Glory — history's turning points, explained properly.",
+  "scenes": [
+    {
+      "scene_number": 1,
+      "type": "cold_open",
+      "title": "The Largest Invasion in History",
+      "narration": "June 6th, 1944. Before dawn, the largest invasion fleet ever assembled moved through darkness toward the coast of Normandy, France. Nearly seven thousand vessels. Over eleven thousand aircraft. By the time the sun rose, 156,000 Allied soldiers would be fighting their way onto five beaches against an enemy that had spent four years fortifying every inch of that coastline. This is the story of the day that decided whether Nazi-occupied Europe would ever be free.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Vast naval invasion fleet crossing the English Channel in pre-dawn darkness, thousands of ships silhouetted against a darkening sky, landing craft full of soldiers. Epic scale, tense atmosphere. 16:9.",
+      "bg_colors": ["#1C2B3A", "#C9A84C", "#8B1A1A"],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 2,
+      "type": "context",
+      "title": "Four Years of Occupation",
+      "narration": "By 1944, Nazi Germany had occupied France for four years. The Allies — the United States, Britain, Canada, and exile forces from occupied nations — had been planning a return to the European mainland since the disastrous British evacuation at Dunkirk in 1940. Stalin had been demanding a second front for years to relieve pressure on the Soviet Union, which was absorbing the overwhelming majority of German military deaths on the Eastern Front. By 1944, the Allies were finally ready.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Occupied Paris under Nazi control, German soldiers patrolling French streets, oppressive atmosphere. Cut to Allied war room with generals planning around a large map table. 16:9.",
+      "bg_colors": ["#1C2B3A", "#6E7B5A", "#8B1A1A"],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 3,
+      "type": "anecdote",
+      "title": "The Ghost Army That Fooled Hitler",
+      "narration": "Before a single soldier landed, the Allies ran one of the most elaborate deception operations in military history. Codenamed Operation Fortitude, it convinced German intelligence that the real invasion would land far to the northeast, at Pas-de-Calais. The Allies built an entire fictional army for the deception — the First US Army Group, supposedly 150,000 men strong and commanded by General George Patton, the German military's most feared American commander. It existed almost entirely on paper: inflatable rubber tanks, plywood aircraft, and fake radio traffic designed to be intercepted. German reconnaissance photographed the dummy equipment from the air and reported it as real. Hitler kept entire panzer divisions waiting near Calais for weeks after the actual landings began at Normandy, convinced the real attack was still to come.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. A field full of inflatable rubber tanks and plywood dummy aircraft arranged to look like a real military buildup, soldiers carefully positioning decoys, a reconnaissance plane visible overhead. Clever, almost theatrical staging. 16:9.",
+      "bg_colors": ["#6E7B5A", "#1C2B3A", "#C9A84C"],
+      "duration_sec": 54
+    },
+    {
+      "scene_number": 4,
+      "type": "context",
+      "title": "The Atlantic Wall",
+      "narration": "Germany had spent years building the Atlantic Wall, a network of bunkers, gun emplacements, mines, and obstacles stretching along the entire coast of occupied Europe. Field Marshal Erwin Rommel, tasked with defending against the expected invasion, had reinforced the beaches with millions of mines and underwater obstacles designed to shred landing craft at high tide. He believed, correctly, that the invasion had to be stopped on the beaches themselves — once Allied troops established a foothold inland, Germany would struggle to dislodge them.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. German coastal bunkers and gun emplacements along a cliff-lined beach, rows of underwater obstacles and barbed wire visible at low tide, Rommel inspecting fortifications. Foreboding, methodical defense. 16:9.",
+      "bg_colors": ["#1C2B3A", "#8B1A1A", "#6E7B5A"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 5,
+      "type": "context",
+      "title": "Five Beaches, Five Armies",
+      "narration": "The invasion targeted five beaches along sixty miles of Normandy coastline, each codenamed and assigned to different forces. American troops landed at Utah and Omaha. British forces landed at Gold and Sword. Canadian troops landed at Juno. Behind them, over thirteen thousand paratroopers had already dropped inland overnight, tasked with securing bridges and roads to prevent German reinforcements from reaching the beaches before the main landing force could get ashore.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Map-style cinematic visualization of the five Normandy beaches along the coastline, paratroopers descending inland under moonlight in the background. Strategic overview, epic scale. 16:9.",
+      "bg_colors": ["#1C2B3A", "#6E7B5A", "#C9A84C"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 6,
+      "type": "battle",
+      "title": "6:30 AM — The Landings Begin",
+      "narration": "At 6:30 AM, the first landing craft ramps dropped on the beaches of Normandy. At Utah Beach, currents had pushed the landing force slightly off-target, accidentally putting them ashore at a less heavily defended stretch of coast — a navigational mistake that, for once, worked in the Allies' favor. At Gold, Juno, and Sword, British and Canadian forces fought through tough resistance but made steady progress inland by midday. At Omaha Beach, nothing went as planned.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Landing craft ramps dropping on a beach at dawn, soldiers wading through surf under fire, smoke and chaos. Wide shot establishing multiple beach landings simultaneously. 16:9.",
+      "bg_colors": ["#8B1A1A", "#1C2B3A", "#6E7B5A"],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 7,
+      "type": "battle",
+      "title": "Omaha Beach — The Disaster",
+      "narration": "Pre-landing bombing and naval bombardment at Omaha Beach had largely missed the German defenses, leaving fortified positions on the bluffs above the beach almost entirely intact. American troops waded ashore into a kill zone of machine gun and artillery fire with almost no cover. Many landing craft were sunk or disabled before reaching the sand. Entire companies were pinned down on the open beach, unable to advance or retreat, taking catastrophic casualties in the first hour. For a period that morning, American commanders seriously considered whether Omaha Beach would have to be abandoned entirely.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Omaha Beach under heavy fire, soldiers pinned down behind beach obstacles, explosions and machine gun fire from fortified bluffs above. Chaotic, desperate, historically grounded intensity. 16:9.",
+      "bg_colors": ["#8B1A1A", "#1C2B3A", "#6E7B5A"],
+      "duration_sec": 52
+    },
+    {
+      "scene_number": 8,
+      "type": "human_interest",
+      "title": "The Men Who Broke the Deadlock",
+      "narration": "Omaha Beach was eventually broken open not by a single grand maneuver but by small groups of soldiers and junior officers improvising under fire — finding gaps in the wire, working their way up the bluffs in small teams, and taking out individual machine gun positions one at a time. Naval destroyers moved dangerously close to shore, risking running aground, to provide direct fire support against the bunkers. By the end of the day, at terrible cost, American forces held the beach.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Small group of American soldiers climbing a bluff under fire, working together to flank a German machine gun position, destroyer firing from close offshore in the background. Gritty, determined. 16:9.",
+      "bg_colors": ["#6E7B5A", "#8B1A1A", "#1C2B3A"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 9,
+      "type": "battle",
+      "title": "Pointe du Hoc",
+      "narration": "At Pointe du Hoc, a clifftop position between Utah and Omaha, US Army Rangers carried out one of the most physically demanding assaults of the entire invasion: scaling sheer hundred-foot cliffs under direct enemy fire using ropes and ladders, to destroy what intelligence believed was a battery of heavy guns capable of hitting both beaches. When they reached the top, they discovered the guns had already been moved inland — but they pressed on, found them in a nearby orchard, and destroyed them anyway, fulfilling the mission despite the original target having been relocated.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. US Army Rangers scaling a sheer cliff face using ropes and grappling hooks under enemy fire from above, dramatic vertical action against the chalky cliffs of Pointe du Hoc. 16:9.",
+      "bg_colors": ["#1C2B3A", "#6E7B5A", "#C9A84C"],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 10,
+      "type": "anecdote",
+      "title": "The 320th — An Untold Unit",
+      "narration": "Among the units that landed on D-Day was the 320th Barrage Balloon Battalion — the only all-Black combat unit to land on Omaha and Utah Beaches that day. Their job was to operate barrage balloons that deterred low-flying German aircraft from strafing the beaches, working in the open under the same artillery and small-arms fire as every other unit on the sand. Like most Black servicemen in the segregated US military of 1944, their contributions went largely unrecognized for decades afterward, mentioned in few histories of the invasion despite serving directly in the most dangerous sector of the entire landing.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Black American soldiers of the 320th Battalion operating barrage balloon equipment on a chaotic beach under fire, balloons rising overhead to deter aircraft. Respectful, historically accurate. 16:9.",
+      "bg_colors": ["#C9A84C", "#1C2B3A", "#6E7B5A"],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 11,
+      "type": "context",
+      "title": "The Paratroopers Inland",
+      "narration": "Overnight, American and British paratroopers had dropped behind German lines, tasked with securing key bridges, crossroads, and causeways. High winds and poor visibility scattered many drops far from their intended landing zones — some American paratroopers landed many miles off target, in some cases alone. Despite the chaos, scattered small groups improvised, linked up with whoever they could find, and accomplished many of their objectives anyway, disrupting German communication and troop movement throughout the day.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Paratroopers descending through night sky lit by anti-aircraft tracer fire, scattered landings in dark fields and hedgerows, small groups regrouping by moonlight. Tense, chaotic night action. 16:9.",
+      "bg_colors": ["#1C2B3A", "#6E7B5A", "#8B1A1A"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 12,
+      "type": "analysis",
+      "title": "The Numbers",
+      "narration": "By the end of June 6th, approximately 4,414 Allied soldiers were confirmed dead, with total casualties — killed, wounded, and missing — estimated above 10,000. German casualties that day are estimated between 4,000 and 9,000. Despite the catastrophic losses at Omaha, all five beachheads had been secured by nightfall, and 156,000 Allied troops were ashore in France.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Somber wide shot of Omaha Beach at dusk on D-Day, debris and equipment scattered across the sand, medics tending wounded, the human cost made visible without graphic detail. 16:9.",
+      "bg_colors": ["#1C2B3A", "#8B1A1A", "#6E7B5A"],
+      "duration_sec": 44
+    },
+    {
+      "scene_number": 13,
+      "type": "analysis",
+      "title": "How Close It Came to Failing",
+      "narration": "D-Day is often remembered as an inevitable Allied success, but at multiple points on June 6th, the operation came close to disaster. Had Omaha Beach actually been abandoned, as some commanders briefly considered, the entire invasion's timetable and cohesion would have been thrown into serious doubt. Eisenhower, the Allied supreme commander, had written a note to be released in the event of failure, taking full personal responsibility — a draft historians have pointed to ever since as evidence of how genuinely uncertain the outcome felt beforehand, even to the man in charge.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. General Eisenhower alone in a tent or command post, writing by lamplight, the weight of command visible on his face. A handwritten note on the table. Quiet, human, historically grounded. 16:9.",
+      "bg_colors": ["#1C2B3A", "#6E7B5A", "#C9A84C"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 14,
+      "type": "context",
+      "title": "The Weather Gamble",
+      "narration": "The invasion had originally been scheduled for June 5th, but rough seas and poor weather forced a one-day postponement — a decision Eisenhower made on limited and uncertain forecasting, knowing that further delay risked losing the narrow window of tide and moonlight conditions the invasion required, possibly for weeks. Allied meteorologists identified a brief gap in the storm pattern on June 6th. German meteorologists, working with less data, predicted the bad weather would continue and concluded an invasion was unlikely in the immediate days ahead — which is part of why many senior German commanders, including Rommel, were away from their posts when the attack came.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Allied meteorologists studying weather charts and forecasts in a briefing room, Eisenhower listening intently, storm clouds visible through a window. Tense decision-making atmosphere. 16:9.",
+      "bg_colors": ["#1C2B3A", "#6E7B5A", "#8B1A1A"],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 15,
+      "type": "analysis",
+      "title": "Breaking Out of Normandy",
+      "narration": "Securing the beaches was only the first step. Allied forces spent the following weeks fighting through the dense hedgerows of the Normandy countryside, terrain perfectly suited to defense, in some of the bloodiest fighting of the entire Western European campaign. It wasn't until late July, during Operation Cobra, that American forces finally broke out of Normandy and began the rapid advance across France that would liberate Paris by the end of August.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. American tanks and infantry fighting through dense Normandy hedgerow terrain, close brutal combat in tight farmland corridors. Grinding, attritional warfare. 16:9.",
+      "bg_colors": ["#6E7B5A", "#1C2B3A", "#8B1A1A"],
+      "duration_sec": 46
+    },
+    {
+      "scene_number": 16,
+      "type": "human_interest",
+      "title": "Liberation",
+      "narration": "As Allied forces moved through Normandy and beyond, French civilians who had lived under occupation for four years came out to greet their liberators, even as fighting continued nearby. Photos and film from the period show French villagers offering food, flowers, and wine to exhausted soldiers passing through towns still partially in ruins. For many soldiers who had landed in the chaos of June 6th, it was the first tangible proof of what the invasion had actually been for.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. French villagers greeting Allied soldiers passing through a liberated town, flowers and embraces, joyful but weary atmosphere amid war-damaged buildings. Warm, human, hopeful. 16:9.",
+      "bg_colors": ["#C9A84C", "#1C2B3A", "#6E7B5A"],
+      "duration_sec": 44
+    },
+    {
+      "scene_number": 17,
+      "type": "analysis",
+      "title": "Why D-Day Worked Despite Omaha",
+      "narration": "Military historians point to several reasons the invasion succeeded despite the disaster at Omaha: total Allied air superiority that prevented German reinforcements from reaching the coast quickly, the deception operation that kept German reserves pinned near Calais for weeks, and overwhelming numerical and material advantage at the point of contact, even where individual units suffered devastating losses. No single factor decided it — it was the accumulation of years of planning meeting a German defense that, despite its strength, could not be everywhere at once.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Allied fighter aircraft patrolling overhead unopposed while ground forces advance below, German reinforcement columns stalled on roads far from the coast. Strategic overview visualization. 16:9.",
+      "bg_colors": ["#1C2B3A", "#6E7B5A", "#C9A84C"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 18,
+      "type": "analysis",
+      "title": "The Cost in Context",
+      "narration": "D-Day's casualties, while severe, were lower than many Allied planners had feared going in — some pre-invasion estimates had projected far higher losses, particularly among the airborne forces. That doesn't diminish what happened at Omaha Beach or among the scattered paratroopers, but it is part of why D-Day is remembered as a victory bought at acceptable, if brutal, cost rather than the catastrophic bloodbath some had feared and planned around.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Quiet, respectful shot of a field hospital tent on the Normandy coast in the days after the landing, medics working, wounded soldiers receiving care. Measured, non-graphic, dignified. 16:9.",
+      "bg_colors": ["#1C2B3A", "#8B1A1A", "#6E7B5A"],
+      "duration_sec": 44
+    },
+    {
+      "scene_number": 19,
+      "type": "legacy",
+      "title": "The Beaches Today",
+      "narration": "Today, the beaches of Normandy are quiet — Omaha Beach is a public beach where families spend summer afternoons, a short walk from the American Cemetery where 9,388 American service members are buried beneath rows of white crosses and Stars of David overlooking the water. Pointe du Hoc's cratered, bomb-scarred ground remains largely as it was left in 1944, preserved as a memorial to the Rangers who scaled it.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Wide aerial view of the Normandy American Cemetery, rows of white crosses overlooking Omaha Beach below, peaceful and solemn present-day scene. Respectful, elegiac. 16:9.",
+      "bg_colors": ["#C9A84C", "#1C2B3A", "#6E7B5A"],
+      "duration_sec": 46
+    },
+    {
+      "scene_number": 20,
+      "type": "analysis",
+      "title": "Why This Still Matters",
+      "narration": "D-Day is studied not just as a feat of logistics and courage, but as the largest example in history of how deception, weather, and sheer human improvisation under fire can decide an outcome that planning alone cannot guarantee. The operation succeeded not because everything went according to plan — almost nothing did — but because the men on the ground kept adapting when the plan collapsed around them. That, as much as the scale of the fleet or the brilliance of the deception, is the actual lesson militaries still draw from it today.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Modern military historians and officers studying D-Day maps and after-action reports in a contemporary setting, the lesson translated into present-day military education. Thoughtful tone. 16:9.",
+      "bg_colors": ["#1C2B3A", "#6E7B5A", "#C9A84C"],
+      "duration_sec": 46
+    },
+    {
+      "scene_number": 21,
+      "type": "analysis",
+      "title": "What D-Day Actually Was",
+      "narration": "D-Day was not a single clean victory. It was five separate, wildly different battles happening simultaneously, one of which very nearly failed outright, glued together by deception, air superiority, and thousands of individual acts of improvisation under fire. The version where everything goes smoothly according to a brilliant plan is the comfortable myth. The version where a beach nearly gets abandoned, paratroopers land miles off target and fight on anyway, and a Black battalion holds the line on the most dangerous stretch of sand in Europe with almost no historical recognition — that version is the real one, and it's the more remarkable story.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Composite cinematic shot blending the five beaches into one continuous coastline view at dusk on D-Day, smoke rising from multiple points along the shore. Reflective, summarizing tone. 16:9.",
+      "bg_colors": ["#1C2B3A", "#8B1A1A", "#6E7B5A"],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 22,
+      "type": "summary",
+      "title": "What Happened — The Summary",
+      "narration": "June 6th, 1944. The Allies launch the largest amphibious invasion in history across five beaches in Normandy. Utah, Gold, Juno, and Sword fall with manageable resistance. Omaha Beach nearly fails, broken open only by desperate small-unit action under devastating fire. By nightfall, 156,000 troops are ashore. Within three months, Paris is liberated. Within eleven months, the war in Europe is over.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Summary title card sequence: key D-Day moments in bold text over historical imagery — the landings, Pointe du Hoc, the cemetery today. Final shot: the beaches at peaceful sunset in the present day. 16:9.",
+      "bg_colors": ["#1C2B3A", "#C9A84C", "#8B1A1A"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 23,
+      "type": "next_episode",
+      "title": "Next Episode — Stalingrad",
+      "narration": "Next episode on Gods and Glory: while the Western Allies were still years from landing in France, the Eastern Front was already deciding the war. In the ruins of a single Russian city, the German army would suffer the defeat that broke its momentum for good. Stalingrad — the battle that turned the tide of the entire Second World War.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Teaser shot: the bombed-out ruins of Stalingrad in winter, Soviet and German soldiers fighting amid rubble, snow falling. Bleak, epic anticipation. 16:9.",
+      "bg_colors": ["#1C2B3A", "#6E7B5A", "#8B1A1A"],
+      "duration_sec": 40
+    }
+  ]
+}

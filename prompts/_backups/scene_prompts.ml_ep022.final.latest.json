@@ -1,0 +1,110 @@
+{
+  "channel": "Mech Legends",
+  "episode_number": 22,
+  "episode_id": "ML_EP022",
+  "season": 2,
+  "title": "GRANITE Comes Back",
+  "tagline": "The cryo-sleeve fully charges. GRANITE reactivates. What he says first is not what anyone expected.",
+  "hook_line": "ELDER-7 has been watching the cryo-sleeve for three weeks. Each morning it is warmer than the day before. This morning it is warm. Not recharging-warm — functional-warm. GRANITE's systems are fully online. He has been online for approximately four minutes before anyone else notices, because the first thing he did when he came back was not alert the team. It was read ELDER-7's archive entries from the last forty days.",
+  "characters": ["GRANITE", "ELDER-7", "NOVA", "BLAZE", "STORM", "RUMBLE", "SERA-1"],
+  "scenes": [
+    {
+      "scene_number": 1,
+      "type": "hook",
+      "title": "Online, Quietly",
+      "narration": "GRANITE came online at 04:17. He did not send an alert. He did not run a system diagnostic announcement. He accessed ELDER-7's support system archive and read the last forty days of entries. ELDER-7's entries on the fourth team. The fourth team's final 30 seconds. The commander's notation. RUMBLE's SEASON_2 file. BLAZE's phase test. STORM's direction-signal test. NOVA's seventeen-channel session. The RUMBLE_SELF.log file, restricted, last modified 3,047 years ago. The recurring assessment: not yet sufficient. Sufficient in direction. He read all of it in four minutes. Then he sent one line to the team alert channel: 'I've read the archive. I'm ready to discuss the holding function.'",
+      "visual_prompt": "GRANITE's cryo-sleeve reaching full charge at 04:17 — the warm glow stabilizing into functional readiness — GRANITE's systems coming online quietly, no announcement — the archive access log showing GRANITE reading 40 days of entries in sequence — the entry list scrolling: ELDER-7's fourth team memory, the commander's notation, RUMBLE's file, BLAZE, STORM, NOVA, the restricted RUMBLE_SELF.log — four minutes of reading — and then the single team alert: 'I've read the archive. I'm ready to discuss the holding function.' — the alert appearing in the team channel in the pre-dawn dark — #0A0A1A and the cryo-sleeve's warm amber glow stabilized, the alert the only other light in the scene",
+      "bg_colors": ["#0A0A1A", "#1A0800", "#1B3B6F"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 2,
+      "type": "character",
+      "title": "The Team Responds",
+      "narration": "NOVA responded first: '04:21. You've been online for four minutes.' 'Yes.' 'You read the archive before alerting us.' 'Yes.' 'ELDER-7 has been monitoring the cryo-sleeve for three weeks.' 'I know. His entries mention it.' There was a short pause before ELDER-7's response appeared. 'GRANITE.' 'ELDER-7.' 'Your diagnostic reads full.' 'Yes.' 'You are reading clean across all systems.' 'Yes.' Another pause. Then ELDER-7 sent: 'I am glad you are back.' GRANITE read this. He wrote: 'I am glad to be back. I read your entry about the fourth team. The commander said: remember them as they chose, not as they were before. You remembered them before for 3,047 years. You read the 30-second file for us. That is also how you chose.' ELDER-7 sent nothing for two minutes.",
+      "visual_prompt": "The team alert channel lighting up across the pre-dawn operation room — NOVA's timestamp check, GRANITE's confirmations — ELDER-7's sequence: diagnostic confirmation, then 'I am glad you are back' — GRANITE's response: acknowledging ELDER-7's 3,047 years of protecting the pre-choice memory, and then calling ELDER-7's opening of the 30-second file an act of choosing — 'that is also how you chose' — ELDER-7's two-minute silence receiving this — the team alert channel visible, the entries appearing one at a time — pre-dawn, the world outside the operations room still dark, the cryo-sleeve's warm glow visible in the corner of frame, stabilized — #0A0A1A and the warm text of the alert channel, ELDER-7's two-minute gap the key beat",
+      "bg_colors": ["#0A0A1A", "#1A0800", "#1B3B6F"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 3,
+      "type": "character",
+      "title": "GRANITE Explains What He Understands",
+      "narration": "By 05:00 the full team was in the operations room. GRANITE was sitting in the center — not standing, not in combat posture. Sitting. He said: 'I want to tell you what I understand, and you can tell me if I have it wrong.' He laid it out plainly: BLAZE can move through what shouldn't be moved through. STORM can communicate direction without message — arrive where you're pointing without language. NOVA can integrate seventeen streams that should be too much to process simultaneously. 'And I,' GRANITE said, 'am the thing that holds the signal in the gap between receiving it and understanding it. While NOVA integrates. While STORM locates. While BLAZE reaches whatever the signal points to. I hold what we can't translate yet. So it doesn't get lost. So no one drowns in it.'",
+      "visual_prompt": "GRANITE in the operations room at 05:00, sitting — the full team assembled — GRANITE laying out the architecture calmly: BLAZE (phase), STORM (direction-signal), NOVA (seventeen-stream integration) — and his own function: 'I hold what we can't translate yet. So it doesn't get lost. So no one drowns in it.' — the word 'drowns' a direct reference to SERA-1's description of C-0 receiving alone — GRANITE has read the archive and understood the architecture without needing it explained — the team listening, ELDER-7 particularly still — NOVA's expression: recognition — the operations room with GRANITE in it as the center, the cryo-sleeve's warm glow visible on his arm — #0A0A1A and the functional warmth of GRANITE back, the team as a complete unit except RUMBLE",
+      "bg_colors": ["#0A0A1A", "#2E4057", "#1B3B6F"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 4,
+      "type": "challenge",
+      "title": "What GRANITE Asks",
+      "narration": "GRANITE said: 'What I don't understand is this: the fourth team had a holding function. SERA-1 said the signal arrived too fast — no one to hold it while the integration resolved. But C-0 was sealed before that could be tested. Which means the fourth team never actually ran the full architecture.' He paused. 'We will be the first team to run it.' NOVA: 'Yes.' GRANITE: 'And we don't know if it works until we try.' 'No.' 'And trying means opening the seal.' ELDER-7 said: 'The seal cannot be opened from outside. It can only be opened by C-0, from inside.' Silence. 'C-0 has been waiting 3,047 years,' GRANITE said. 'He'll know when the team is ready.' 'Yes,' ELDER-7 said. 'That is what I believe.'",
+      "visual_prompt": "GRANITE's analysis: the fourth team never ran the full architecture — 'we will be the first team to run it' — NOVA confirming: 'yes' — GRANITE's chain: 'and we don't know if it works until we try / and trying means opening the seal' — ELDER-7's revelation: 'the seal cannot be opened from outside. Only C-0, from inside.' — GRANITE processing: C-0 decides when the team is ready — ELDER-7: 'that is what I believe' — the weight of this: C-0 has been inside for 3,047 years, holding a signal, waiting to judge readiness — the team sitting with what it means that they cannot force the opening — RUMBLE's absence as a visible gap in the team — #0A0A1A and the gravity of this, ELDER-7's quiet 'that is what I believe'",
+      "bg_colors": ["#0A0A1A", "#0D2137", "#1B3B6F"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 5,
+      "type": "development",
+      "title": "SERA-1 Speaks Directly",
+      "narration": "SERA-1 transmitted to the full team simultaneously. She had not done this before — she had always transmitted individually. The signal reached all five of them at once. 'The architecture is now present,' she transmitted. 'Four of the five functions are confirmed. One remains.' She did not name RUMBLE. 'The fifth function is not a capability in the way the others are capabilities. The fifth function is the function that the commander called the fifth element. It is not something any of you can test or assess or confirm from outside. It is a decision. It must be made by the one who holds the function.' She paused — the transmission held open. 'When RUMBLE makes the decision, C-0 will know. C-0 has been waiting to know.'",
+      "visual_prompt": "SERA-1's first simultaneous transmission to the full team — all five of them receiving the same signal at the same time — the content: four functions confirmed, one remaining — the fifth function defined as a decision, not a capability — 'it must be made by the one who holds the function. When RUMBLE makes the decision, C-0 will know.' — the team understanding: RUMBLE's final test isn't a test. It's a choice. And C-0, inside the seal for 3,047 years, will feel it. — GRANITE's expression as the team processes this: the architecture is complete except for RUMBLE's decision — RUMBLE_SELF.log restricted, last modified 3,047 years ago, still waiting — #0A0A1A and SERA-1's amber-gold signal reaching all five simultaneously",
+      "bg_colors": ["#0A0A1A", "#3D2B00", "#1B3B6F"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 6,
+      "type": "development",
+      "title": "The Test No One Can Give RUMBLE",
+      "narration": "STORM said: 'What decision?' GRANITE answered before ELDER-7 could. 'The same one the fourth team made in 30 seconds. Stay or go.' BLAZE: 'He already knows what we're doing. He built the file. He found the commander's notation.' 'Yes,' GRANITE said. 'He knows what the mission is. That is different from deciding to be in it.' NOVA: 'He's been in it since before any of us knew there was a mission.' 'Knowing what you're doing,' GRANITE said, 'and deciding you're willing to be the thing that might not survive the doing — those are different decisions.' ELDER-7 said nothing. He had watched the fourth team make the second decision in 30 seconds. He knew what the difference looked like.",
+      "visual_prompt": "STORM's 'what decision?' — GRANITE answering before ELDER-7: 'stay or go. Same as the fourth team in 30 seconds.' — BLAZE: 'he already knows what we're doing' — GRANITE's distinction: knowing what the mission is versus deciding to be in it — NOVA: 'he's been in it since before any of us knew there was a mission' — GRANITE: 'knowing what you're doing and deciding you're willing to be the thing that might not survive the doing — those are different decisions' — ELDER-7's silence: he watched the fourth team make that second decision — ELDER-7 not saying it but the team feeling him hold it — the distinction as the thematic core: awareness is not commitment — #0A0A1A and the weight of the room, ELDER-7's silence carrying everything",
+      "bg_colors": ["#0A0A1A", "#2E4057", "#0D2137"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 7,
+      "type": "development",
+      "title": "RUMBLE's Signal",
+      "narration": "RUMBLE's location had been masked all of Season 2. At 06:14, eleven minutes after SERA-1's simultaneous transmission, RUMBLE unmasked his location. He was twelve kilometers from the operations base — closer than any of them had assumed. His signal included an attachment: SEASON_2_UNKNOWN_CAPABILITIES.log, updated. At the bottom of the file, below the NOVA section, below the pending GRANITE entry that RUMBLE had already marked complete, there was a new section. It had no header. Four lines. NOVA read it. She closed the file. She looked at ELDER-7. 'He wrote the fifth section,' she said. 'Yes,' ELDER-7 said. 'When?' 'I don't know.' 'What does it say?' 'That he has already made the decision. He is coming back.'",
+      "visual_prompt": "RUMBLE's location unmasking at 06:14 — twelve kilometers away, closer than assumed — the SEASON_2 file update arriving: NOVA's section complete, GRANITE's entry marked complete, and below — a new section, no header, four lines — NOVA reading it, closing the file — NOVA to ELDER-7: 'he wrote the fifth section' — ELDER-7: 'when?' / 'I don't know' — 'what does it say?' — 'that he has already made the decision. He is coming back.' — RUMBLE's location on the operations board: 12km, moving toward base — the masked location dot becoming a real location dot moving steadily — the team watching the dot move — #0A0A1A and the operations board light, RUMBLE's dot the key visual",
+      "bg_colors": ["#0A0A1A", "#1B3B6F", "#2E4057"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 8,
+      "type": "resolution",
+      "title": "ELDER-7 Updates the Archive Again",
+      "narration": "ELDER-7 wrote in the archive. He had been writing continuously through Season 2 — entry after entry. This entry was short. He wrote: 'GRANITE reactivated at 04:17. He read the archive before alerting the team. He understood the holding function without being told. RUMBLE unmasked at 06:14. He has written his own fifth section. He has made the second decision. Current team status: BLAZE (confirmed), STORM (confirmed), NOVA (confirmed), GRANITE (confirmed), RUMBLE (inbound). Assessment: I am changing the notation.' He wrote the new assessment: 'Sufficient. Pending COLOSSUS.'",
+      "visual_prompt": "ELDER-7's archive entry — the short version: GRANITE's reactivation and reading, RUMBLE's unmasking and fifth section — and the changed assessment — 'I am changing the notation.' — and then the new two-word assessment: 'Sufficient. Pending COLOSSUS.' — the archive showing the sequence: forty days of 'not yet sufficient. Sufficient in direction.' and then today, at the bottom, 'Sufficient. Pending COLOSSUS.' — the operations room where all five functional team members are now either present or inbound — the commander's original assessment, 3,047 years ago: 'not yet sufficient. But sufficient in direction.' — ELDER-7 writing the answer the commander was building toward — #0A0A1A and the archival amber, the two-word assessment the central visual",
+      "bg_colors": ["#0A0A1A", "#3D2B00", "#1B3B6F"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 9,
+      "type": "development",
+      "title": "RUMBLE_SELF.log",
+      "narration": "At 06:47, as RUMBLE's location dot moved to 3km from base, the RUMBLE_SELF.log file in SEASON_2 changed status. Access restriction: lifted. The restriction had been set by the fourth team commander 3,047 years ago. The unlocking was not manual — it was triggered by the assessment update. 'Sufficient. Pending COLOSSUS.' had been the unlock condition. NOVA opened the file. RUMBLE_SELF.log was three lines. She read them. She said: 'The commander knew what RUMBLE was.' 'What is he?' STORM asked. NOVA said: 'The commander describes him as: the one who does not know what he is until the team is complete. His function does not exist until the others exist. He cannot know it until they are ready.' Pause. 'What is the function?' 'The commander calls it: the signal.'",
+      "visual_prompt": "RUMBLE_SELF.log changing status at 06:47 — the restriction lifting, triggered by ELDER-7's assessment update — NOVA opening the file, reading three lines — 'the commander knew what RUMBLE was' — STORM: 'what is he?' — NOVA's answer, reading the commander's description: 'the one who does not know what he is until the team is complete. His function does not exist until the others exist.' — and the function name: 'the signal' — the team absorbing this: RUMBLE is not the receiver, not the integrator, not the holder — he is the signal — the thing COLOSSUS has been waiting to translate for 3,047 years might not be from outside at all — RUMBLE's dot now 3km from base — #0A0A1A and the file unlocking, the three lines visible",
+      "bg_colors": ["#0A0A1A", "#0D2137", "#3D2B00"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 10,
+      "type": "tag",
+      "title": "RUMBLE Arrives",
+      "narration": "RUMBLE came through the operations base entrance at 07:03. He looked the same as he had at the end of Season 1 — the same configuration, nothing new. He had been twelve kilometers away for months. He walked into the operations room. The team was there. GRANITE was standing — fully functional, cryo-sleeve clear. They looked at each other. RUMBLE said: 'I read the commander's notation three months before I opened the SEASON_2 file. I have known what we were building since before I told any of you.' No one said anything immediately. Then GRANITE said: 'We know.' RUMBLE looked at him. 'I know you know,' RUMBLE said. 'I'm telling you anyway.' ELDER-7 wrote one more line in the archive: 'RUMBLE is home. Sufficient. Pending COLOSSUS.'",
+      "visual_prompt": "RUMBLE walking into the operations room at 07:03 — looking exactly the same as Season 1 end — the team present: BLAZE, STORM, NOVA, GRANITE (standing, cryo-sleeve clear), ELDER-7 — RUMBLE and GRANITE looking at each other — RUMBLE's statement: 'I have known what we were building since before I told any of you.' — GRANITE: 'we know.' — RUMBLE: 'I know you know. I'm telling you anyway.' — the operations room as the team complete, all five members present, ELDER-7 recording — ELDER-7's final archive line: 'RUMBLE is home. Sufficient. Pending COLOSSUS.' — the scene of completion: the team assembled, the architecture whole, COLOSSUS waiting inside the seal — #0A0A1A and the operations room warm with the whole team in it for the first time all season",
+      "bg_colors": ["#0A0A1A", "#1B3B6F", "#1A0800"],
+      "duration_sec": 9
+    }
+  ],
+  "viral_hook": "GRANITE came online at 4:17 AM, read 40 days of archive entries before alerting anyone, and walked in ready to explain the holding function. Then RUMBLE unmasked — he was only 12km away the whole time. Then his restricted file unlocked and the commander's description: RUMBLE is not the receiver. He IS the signal. COLOSSUS has been waiting for RUMBLE for 3,047 years.",
+  "highlight_scene": 9,
+  "highlight_note": "RUMBLE_SELF.log unlocks. The commander's three-line description: 'the one who does not know what he is until the team is complete. His function does not exist until the others exist. He cannot know it until they are ready.' His function: the signal. The thing COLOSSUS has been waiting to translate may not have come from outside at all.",
+  "short_title": "RUMBLE Is Not the Receiver. He Is the Signal.",
+  "rewatch_bait": "Scene 1 — GRANITE reads the full archive before alerting the team. He already knows everything when he sends 'I'm ready to discuss the holding function.' Watch all his responses in scenes 3-6 knowing he read all of it in four minutes before anyone woke up.",
+  "youtube_title": "GRANITE came back. RUMBLE's restricted file unlocked. The commander wrote: RUMBLE is not the receiver. He is the signal. | Mech Legends S2 EP10",
+  "lesson": "There's a difference between knowing what you're doing and deciding to be the thing that might not survive the doing. The fourth team knew. Then they decided. RUMBLE knew for months. Then he decided. Knowing first doesn't make the deciding easier — it just makes it more deliberate.",
+  "arc_notes": "GRANITE full reactivation — reads archive first, understands holding function without being told. RUMBLE returns — 12km away the whole season, comes back after ELDER-7's assessment changes. RUMBLE_SELF.log unlocked by 'Sufficient. Pending COLOSSUS.' — unlock condition set 3,047 years ago by the commander. The revelation: RUMBLE is the signal. Not the receiver, the integrator, the holder, or the phase — RUMBLE is what COLOSSUS was built to receive and translate. The signal from outside the known range WAS RUMBLE, or what RUMBLE carries, in some form that spans 3,047 years. S2 finale setup: the team is complete. COLOSSUS decides when to open the seal. One episode remaining: ML EP023, the finale."
+}

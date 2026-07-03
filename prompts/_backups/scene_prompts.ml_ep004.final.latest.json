@@ -1,0 +1,187 @@
+{
+  "channel": "Mech Legends",
+  "episode_number": 4,
+  "episode_id": "ML_EP004",
+  "title": "NOVA Arrives",
+  "tagline": "RUMBLE has a counter for everything. NOVA builds things RUMBLE has never seen before.",
+  "duration_target_min": 6,
+  "aesthetic": {
+    "color_grade": "cinematic_action_anime",
+    "primary_colors": ["#C0C0C0", "#1A1A2E", "#8B008B", "#00BFFF"],
+    "font_style": "bold_angular_impact",
+    "music_style": "140bpm_action_synth",
+    "narrator_tone": "urgent_epic_cinematic"
+  },
+  "villain_mandate": "RUMBLE sends BOLT as a probe this episode — he's gathering intel on NOVA, not trying to win. BOLT is genuinely rattled by NOVA's technology. When BOLT reports back, RUMBLE's expression shifts. For the first time: something he doesn't immediately have a counter for. He's not scared. But he's recalculating.",
+  "characters": {
+    "new_hero": {
+      "name": "NOVA",
+      "role": "Fourth Mech Legend. Silver rocket mech. The scientist. Arrives alone. Has been watching RUMBLE from a distance for weeks.",
+      "visual": "Silver mech, rocket booster pack on back, visor is white-blue (different from the others), chest panel has visible tech readouts and indicators, smaller and faster than BLAZE but not as fast as STORM",
+      "personality": "Precise, speaks in observations not opinions, deeply analytical, slightly awkward socially — hasn't had a team before. Carries blueprints she's already made of RUMBLE's weaknesses."
+    },
+    "hero": {
+      "name": "BLAZE",
+      "role": "Cautious about NOVA at first. Trusts slowly after EP003. GRANITE's situation changed him.",
+      "visual": "Red fire truck mech, orange visor — visor slightly dimmer than usual, he's still processing EP003"
+    },
+    "team_1": {
+      "name": "STORM",
+      "role": "Immediately sees NOVA's value. Fastest to trust her — he's the strategist too.",
+      "visual": "Blue helicopter mech, yellow visor"
+    },
+    "team_2": {
+      "name": "GRANITE",
+      "role": "Present but limited — still recovering from EP003. His presence is important: he's the reason BLAZE is open to new help.",
+      "visual": "Green bulldozer mech, visor slightly dimmed, moving carefully — not at full capacity"
+    },
+    "villain_probe": {
+      "name": "BOLT",
+      "role": "Sent by RUMBLE to test NOVA. Gets more than he bargained for.",
+      "visual": "Small black lightning mech"
+    },
+    "villain": {
+      "name": "RUMBLE",
+      "role": "Observing. Not present in person — appears in cold open and final scene. What matters: his reaction to NOVA's tech.",
+      "visual": "Massive dark purple mech, four arms, crown spikes, red eyes"
+    }
+  },
+  "scenes": [
+    {
+      "scene_number": 1,
+      "type": "cold_open",
+      "title": "Someone Has Been Watching RUMBLE",
+      "narration": "While RUMBLE had been studying the Mech Legends, someone had been studying RUMBLE. For eleven weeks. From orbit. She'd mapped his attack patterns, his response times, his blind spots, and the one structural weakness in his left upper chassis that he didn't know existed. Her name was NOVA. And she'd decided it was time to stop watching.",
+      "visual_prompt": "Cinematic action anime style. Space. A silver rocket — NOVA — in low orbit, viewing port aimed at the planet below. Inside the cockpit: data streaming, overlays mapping RUMBLE's movements in recorded battle footage, a structural diagram of RUMBLE's chassis with one section marked in red. NOVA's white-blue visor reflects the data. She studies it one more time. Then she closes the screens. Her rocket burns toward the planet. This is her choice to enter the fight. 16:9.",
+      "bg_colors": ["#0A0510", "#1A1A2E", "#C0C0C0"],
+      "accent": "#00BFFF",
+      "camera": "push_in",
+      "duration_sec": 9,
+      "higgsfield_prompt": "Cinematic action anime style, silver rocket in low orbit with viewpoint showing planet below, inside cockpit data streaming and mapping villain's movements with structural diagram showing weakness marked in red, silver mech's white-blue visor reflecting data readouts, rocket burning toward planet, deliberate choice to enter conflict, cold space backdrop, 16:9"
+    },
+    {
+      "scene_number": 2,
+      "type": "hero_intro",
+      "title": "NOVA Lands",
+      "narration": "NOVA landed three hundred meters from the Mech Legends' position. She walked toward them with a data pad and no introduction. She said: 'GRANITE's break-out punch in the canyon — northeast wall, stress fracture grid seven. He found it correctly. He had two other options that would have cost him less. I can show you.' BLAZE stared at her. STORM said: 'Show us.'",
+      "visual_prompt": "Cinematic action anime style. NOVA lands from rocket descent — controlled, precise, silver armor catching the light. She walks directly toward BLAZE, STORM, and damaged GRANITE without hesitation, holding a data pad already displaying the canyon wall diagram. No pleasantries. She shows the diagram — two marked alternative points that GRANITE didn't use. GRANITE looks at the data with complicated feelings. BLAZE is guarded. STORM leans in immediately. 16:9.",
+      "bg_colors": ["#C0C0C0", "#1A1A2E", "#228B22"],
+      "accent": "#00BFFF",
+      "camera": "pull_back",
+      "duration_sec": 9,
+      "higgsfield_prompt": "Cinematic action anime style, silver mech landing from rocket descent and walking directly toward red green and blue mechs holding data pad showing canyon wall diagram with alternative marked points, damaged green mech looking at data with complicated feelings, red mech guarded, blue mech immediately leaning in interested, no-nonsense first meeting, 16:9"
+    },
+    {
+      "scene_number": 3,
+      "type": "team_intro",
+      "title": "What NOVA Built",
+      "narration": "NOVA had spent eleven weeks building something besides data. She'd built three devices — one for each of them. A resonance disruptor for BLAZE that could scramble RUMBLE's targeting systems for four seconds. An altitude enhancer for STORM that doubled his ceiling. And for GRANITE — a structural reinforcement sleeve that would let him hit harder and take more damage before shutting down. She handed GRANITE's device over first.",
+      "visual_prompt": "Cinematic action anime style. NOVA's rocket interior revealed — a small but incredibly organized workshop space. Three devices laid out, each clearly matched to a different mech. She presents them in order. When she holds out GRANITE's reinforcement sleeve, GRANITE takes it slowly. His visor brightens slightly — the first time since EP003. BLAZE watches. Something shifts in his posture. STORM is already fitting his altitude enhancer. 16:9.",
+      "bg_colors": ["#C0C0C0", "#00BFFF", "#228B22"],
+      "accent": "#C0C0C0",
+      "camera": "push_in",
+      "duration_sec": 9,
+      "higgsfield_prompt": "Cinematic action anime style, silver mech presenting three custom-built devices to team — showing rocket workshop interior with organized tech workspace, holding out green mech's device first, green mech taking it as visor brightens slightly for first time since injury, red mech's posture shifting, blue mech already fitting his device, meaningful gift exchange, 16:9"
+    },
+    {
+      "scene_number": 4,
+      "type": "villain_dominance",
+      "title": "BOLT Tests NOVA",
+      "narration": "BOLT arrived twenty minutes later — sent by RUMBLE to probe the newcomer. He was fast. NOVA was ready. She'd mapped BOLT's speed pattern from orbital observation. She knew he used the same approach vector every time. She was standing exactly where he'd emerge. When BOLT appeared, she was already pointing the resonance disruptor at him.",
+      "visual_prompt": "Cinematic action anime style. BOLT bursts from shadow at maximum speed on his known approach vector — and NOVA is already there, already pointing the resonance disruptor directly at him before he fully materializes. BOLT freezes mid-burst. His lightning crackles and dies out — the disruptor is already scrambling his systems. BOLT stares at NOVA. NOVA stares back. Completely calm. 'You always use the same entry point,' she says. 'RUMBLE should know that.' 16:9.",
+      "bg_colors": ["#0A0510", "#1A1A2E", "#C0C0C0"],
+      "accent": "#00BFFF",
+      "camera": "push_in",
+      "duration_sec": 9,
+      "higgsfield_prompt": "Cinematic action anime style, small black lightning mech bursting from shadow at full speed finding silver mech already standing there pointing device directly at him before he arrives, black mech freezing as lightning crackles and dies, both facing each other, silver mech completely calm, tense standoff with clear power reversal, 16:9"
+    },
+    {
+      "scene_number": 5,
+      "type": "battle_attempt",
+      "title": "BOLT Calls for Backup — It Doesn't Come",
+      "narration": "BOLT called for RUMBLE. RUMBLE didn't respond. RUMBLE was watching. BOLT tried to break free — NOVA's disruptor held him for exactly four seconds, then released. Four seconds was enough. BLAZE had him contained. STORM had the exit blocked. GRANITE — moving carefully but moving — had the third angle covered. BOLT looked at all four of them. He'd been sent to test NOVA. Test complete.",
+      "visual_prompt": "Cinematic action anime style. BOLT trapped — the four Mech Legends have positioned perfectly around him. BLAZE containing directly, STORM blocking the air exit, GRANITE (moving carefully, reinforcement sleeve glowing) covering the third angle. NOVA stands back, data pad recording everything. BOLT looks in each direction — no way out. His expression isn't scared: it's calculating. He's a probe, and his job just finished. In the far distance: a small red glow. RUMBLE watching from somewhere high. 16:9.",
+      "bg_colors": ["#1A1A2E", "#C0C0C0", "#CC0000"],
+      "accent": "#8B008B",
+      "camera": "pull_back",
+      "duration_sec": 9,
+      "higgsfield_prompt": "Cinematic action anime style, four mechs perfectly positioned around trapped small black mech — red blocking directly, blue blocking air exit, green with glowing sleeve covering third angle, silver recording with data pad, black mech looking in each direction calculating not scared, far distant small red glow showing massive purple villain watching from high point, 16:9"
+    },
+    {
+      "scene_number": 6,
+      "type": "turning_point",
+      "title": "BOLT's Report",
+      "narration": "BOLT transmitted everything to RUMBLE — the devices, the positioning, the orbital data. Everything NOVA had done. Then he broke free and ran. RUMBLE let him go. He was still watching. Analyzing. NOVA's technology was new. Not just new to RUMBLE — new to this planet. It hadn't come from here. He pulled up his schematics. He began recalculating. For the first time in three episodes, RUMBLE didn't have an immediate answer.",
+      "visual_prompt": "Cinematic action anime style. DRAMATIC SPLIT — left side: BOLT running, transmission burst leaving his antenna as he flees. Right side: RUMBLE alone receiving the data, four arms lowering slowly one at a time as he processes it. His schematics appear but they're missing responses to half of what NOVA built. For the first time, a schematic has blank sections. RUMBLE stares at the blanks. His expression is unreadable. Not afraid. Recalculating. 16:9.",
+      "bg_colors": ["#0A0510", "#4A0040", "#00BFFF"],
+      "accent": "#8B008B",
+      "camera": "push_in",
+      "duration_sec": 9,
+      "higgsfield_prompt": "Cinematic action anime style, dramatic split composition, left side small black mech fleeing with data transmission burst, right side massive purple villain receiving data with four arms lowering slowly one by one, villain's holographic schematics showing blank sections he doesn't have answers for, unreadable expression neither angry nor afraid but recalculating, first time he has been uncertain, 16:9"
+    },
+    {
+      "scene_number": 7,
+      "type": "hero_reveal",
+      "title": "NOVA Joins the Team",
+      "narration": "BLAZE found NOVA after BOLT had left. She was already updating her files. He asked why she'd come. She said: because RUMBLE wins when he's the only one prepared. She had eleven weeks of preparation. She didn't think that was enough. She thought two minds were better than one. She looked at GRANITE when she said it. He nodded. BLAZE held out his fist. NOVA looked at it for a moment. Then bumped it.",
+      "visual_prompt": "Cinematic action anime style. EARNED TEAM MOMENT — NOVA updating data files, BLAZE approaching her. The conversation is quiet. When she looks at GRANITE and he gives a slow nod, there's weight to it — he understands what preparation costs. BLAZE holds out his fist. NOVA looks at it — she's not sure what this means for a moment. Then she bumps it. The others are in the background, watching. GRANITE's reinforcement sleeve is still glowing slightly. This is the four of them now. 16:9.",
+      "bg_colors": ["#CC0000", "#C0C0C0", "#228B22"],
+      "accent": "#C0C0C0",
+      "camera": "push_in",
+      "duration_sec": 9,
+      "higgsfield_prompt": "Cinematic action anime style, silver mech and red mech quiet conversation, silver looking at damaged green mech who gives slow nod with weight behind it, red mech holding out fist, silver mech looking at it uncertain then bumping it, other mechs watching in background, green mech's device still glowing, earned team acceptance moment, warm despite cinematic style, 16:9"
+    },
+    {
+      "scene_number": 8,
+      "type": "crisis",
+      "title": "What NOVA Found in the Data",
+      "narration": "That night, NOVA showed them what else she'd found in eleven weeks of watching. RUMBLE wasn't just building weapons. He was building something larger — something that required a power source he didn't have yet. And he was three weeks away from having it. Whatever he was building, it was the biggest thing he'd ever attempted. NOVA had a theory about what it was. Nobody liked the theory.",
+      "visual_prompt": "Cinematic action anime style. Night. The four Mech Legends gathered around NOVA's data projection — a massive holographic display showing RUMBLE's construction project. It dwarfs everything he's built before. Power requirement calculations scrolling alongside it. A timeline: three weeks. BLAZE's orange visor reflects the scale of the projection. STORM's expression is tight. GRANITE is very still. NOVA points to her theory overlay — what this thing could become. The mood is cold and serious. 16:9.",
+      "bg_colors": ["#0A0510", "#1A1A2E", "#4A0040"],
+      "accent": "#8B008B",
+      "camera": "pull_back",
+      "duration_sec": 9,
+      "higgsfield_prompt": "Cinematic action anime style, four mechs gathered around massive holographic projection showing enormous construction project with power calculations and three week timeline, red mech's visor reflecting scale, blue mech's expression tight, green mech very still, silver mech pointing to theory overlay, cold serious war council energy at night, 16:9"
+    },
+    {
+      "scene_number": 9,
+      "type": "hero_action",
+      "title": "Three Weeks",
+      "narration": "Three weeks. NOVA had given them three weeks of warning. That was more than anyone had ever had before RUMBLE acted. BLAZE looked at his team — STORM, GRANITE, NOVA. Different than they were a day ago. He said: we use every day. NOVA was already pulling up her blueprints. She had more devices to build.",
+      "visual_prompt": "Cinematic action anime style. RESOLVE MOMENT — BLAZE standing facing his team of four. The hologram is still behind them, but his focus is on them. STORM nods — sharp, ready. GRANITE stands straighter than he has since EP003, reinforcement sleeve active. NOVA already has her data pad open, blueprints loading. BLAZE's visor burns full orange — back to full intensity. The four of them together for the first time as a complete team. 16:9.",
+      "bg_colors": ["#CC0000", "#228B22", "#0044AA"],
+      "accent": "#CC0000",
+      "camera": "pull_back",
+      "duration_sec": 9,
+      "higgsfield_prompt": "Cinematic action anime style, red mech facing team of four — blue, green, silver — in resolve moment, blue mech sharp nod, green mech standing straighter with device active, silver mech already opening blueprints, red mech's visor burning full intensity, four heroes together as complete team for first time, hologram threat visible behind them but their focus forward, 16:9"
+    },
+    {
+      "scene_number": 10,
+      "type": "cliffhanger",
+      "title": "RUMBLE Finds the Power Source",
+      "narration": "Two days later, RUMBLE found the power source he needed. He hadn't expected it to take two days. He'd planned for two weeks. NOVA's interference had accelerated his timeline. Because now he knew she was coming. Now he had a reason to hurry. The construction project began immediately. Whatever the Mech Legends were preparing — they had less time than they thought.",
+      "visual_prompt": "Cinematic action anime style. COLD CLIFFHANGER. RUMBLE stands before an enormous crackling energy source — something natural and massive, now contained by his machinery. Four arms raised, absorbing the power reading. Behind him: the construction project begins — massive dark machinery rising from the ground. His crown spikes glow brighter than we've seen. He looks directly at something in the distance — in the direction of the Mech Legends. He smiles. He's not afraid of NOVA. He's motivated by her. 16:9.",
+      "bg_colors": ["#0A0510", "#4A0040", "#8B0000"],
+      "accent": "#8B008B",
+      "camera": "pull_back",
+      "duration_sec": 9,
+      "higgsfield_prompt": "Cinematic action anime style, massive purple four-armed villain standing before enormous crackling energy source with four arms raised absorbing power reading, behind him enormous dark construction project beginning to rise, crown spikes glowing brighter than ever, villain looking toward camera with motivated smile not afraid but accelerated, dark energy and purple power, chilling acceleration, 16:9"
+    }
+  ],
+  "music": {
+    "style": "140bpm_action_synth",
+    "notes": "Scene 1: cold, sparse, space-like — new theme (silver/high-frequency synth for NOVA). Scene 3: warmer when NOVA hands GRANITE his device. Scene 4-5: tension + NOVA's precise counter-rhythm theme over BOLT's frantic lightning sounds. Scene 6: slow heavy beat when RUMBLE's schematics show blanks. Scenes 7-9: building toward full team theme, all four colors. Scene 10: low drone, then RUMBLE's theme kicks in hard as construction begins. End unresolved."
+  },
+  "voice_style": {
+    "tone": "urgent_epic_cinematic",
+    "pacing": "NOVA's intro scenes: slightly cooler, more measured. 'She didn't think that was enough' — slow down, let it land. The three-weeks reveal: matter-of-fact delivery makes it MORE chilling than dramatic delivery would.",
+    "character": "A narrator who is glad NOVA arrived and worried it still might not be enough"
+  },
+  "lesson": "One person prepared is strong. Four people prepared together are something RUMBLE hasn't encountered before.",
+  "standing_rule_check": "RUMBLE accelerated his timeline — he didn't retreat. BOLT completed his mission as a probe. NOVA's arrival is a genuine threat to RUMBLE's plan, not a defeat. The construction begins anyway — faster. Villain is getting stronger.",
+  "nova_intro_note": "NOVA is not a warm character. She is precise and slightly awkward with people. Her warmth appears in the objects she builds — she built GRANITE's device first. That's the detail that matters.",
+  "youtube_title": "NOVA JOINS THE MECH LEGENDS! ⚡🚀 | Mech Legends Episode 4",
+  "youtube_description": "After GRANITE's sacrifice, the Mech Legends need an edge.\n\nNOVA has been watching RUMBLE from SPACE for 11 weeks. She's built devices for each of them. She knows RUMBLE's weaknesses.\n\nBut RUMBLE just found his power source. And now he's in a hurry.\n\n🚀 NOVA arrives with technology nobody's seen before\n💚 GRANITE gets something that changes everything for him\n🟣 BOLT gets more than he bargained for\n🟣 RUMBLE recalculates — and accelerates\n\n⏱️ Three weeks. That's all they have.\n\n📺 Full Mech Legends series: [playlist link]\n🔔 SUBSCRIBE — new episode every week!\n\n#MechLegends #NOVA #RUMBLE #RobotHeroes #KidsCartoon #KidsYouTube",
+  "next_episode_preview": "Episode 5 — RUMBLE's Weapon. It's bigger than anything he's built before. And it's almost ready.",
+  "higgsfield_style_notes": "NOVA's silver armor should look distinctly different from the other mechs — more technical, more precise. Her white-blue visor separates her visually. The data projections and tech interfaces she uses should look genuinely advanced. When GRANITE's reinforcement sleeve glows, it's a warm green — a small hopeful color in dark scenes."
+}

@@ -1,0 +1,117 @@
+{
+  "channel": "GG",
+  "episode_id": "GG_GRAND_OPENING_TRAILER",
+  "title": "Gods & Glory \u2014 Grand Opening Trailer",
+  "format": "channel_trailer",
+  "aspect_ratio": "16:9",
+  "duration_target_sec": 150,
+  "platform": [
+    "YouTube"
+  ],
+  "scenes": [
+    {
+      "scene_number": 1,
+      "type": "cold_open",
+      "title": "The Question",
+      "duration_sec": 20,
+      "narration": "Every battle in history was, at some point, just a decision. A king deciding to march. A general deciding to charge. A soldier deciding not to run. The history books tell you what happened. They rarely tell you what it felt like to be the person deciding. That's what we're here for.",
+      "visual_prompt": "Gods & Glory cinematic documentary. A lone figure on a dark battlefield at dawn \u2014 a general on horseback silhouetted against a burning horizon. The weight of decision visible. Epic, dark, cinematic. 16:9.",
+      "bg_colors": [
+        "#1A1A2E",
+        "#8B1A1A",
+        "#C9A227"
+      ]
+    },
+    {
+      "scene_number": 2,
+      "type": "brand_intro",
+      "title": "Gods and Glory",
+      "duration_sec": 18,
+      "narration": "Welcome to Gods and Glory. This channel is built on one idea: history's greatest battles deserve to be told the way they actually were \u2014 not as footnotes, not as dates on a page, but as the most dramatic, consequential, human stories ever lived.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The channel logo: gold on black, cinematic glow. Behind it, epic imagery of ancient and modern warfare blending \u2014 Greek hoplites, medieval knights, WWII soldiers. The full sweep of human history at war. 16:9.",
+      "bg_colors": [
+        "#1A1A2E",
+        "#C9A227",
+        "#4A3728"
+      ]
+    },
+    {
+      "scene_number": 3,
+      "type": "content_showcase_1",
+      "title": "Ancient World",
+      "duration_sec": 18,
+      "narration": "From the plain of Marathon \u2014 where ten thousand Athenians ran at a full sprint into the Persian Empire and saved democracy before it was fifty years old \u2014 to the ridge at Thermopylae, where three hundred men bought time for a civilization they would never see survive.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Ancient Greek warfare: hoplites charging at Marathon, the narrow pass at Thermopylae, the clash of spear and shield. Bronze and blood. The ancient world at its most decisive. 16:9.",
+      "bg_colors": [
+        "#8B4500",
+        "#C9A227",
+        "#1A1A2E"
+      ]
+    },
+    {
+      "scene_number": 4,
+      "type": "content_showcase_2",
+      "title": "Medieval and Early Modern",
+      "duration_sec": 18,
+      "narration": "From Agincourt \u2014 where six thousand English longbowmen turned the sky black with arrows and destroyed the flower of French chivalry in an afternoon \u2014 to Vienna 1683, where eighteen thousand winged hussars came down a ridge and stopped the Ottoman Empire's three-hundred-year expansion in three hours.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Medieval warfare montage: English longbowmen at Agincourt, Polish winged hussars charging at Vienna, Norman knights at Hastings. The medieval world's most cinematic moments. 16:9.",
+      "bg_colors": [
+        "#8B1A1A",
+        "#C9A227",
+        "#4A3728"
+      ]
+    },
+    {
+      "scene_number": 5,
+      "type": "content_showcase_3",
+      "title": "Modern History",
+      "duration_sec": 18,
+      "narration": "From Pearl Harbor \u2014 a Sunday morning that became the most consequential day in twentieth-century American history \u2014 to Waterloo, where one morning's delay and nine hours of battle ended the most extraordinary military career in modern history. These stories are about us. About what humans do when everything is on the line.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Modern warfare montage: Pearl Harbor attack from the air, Waterloo battlefield smoke and cavalry, WWII Pacific theater. The modern era's defining military moments. Cinematic and dramatic. 16:9.",
+      "bg_colors": [
+        "#1A1A2E",
+        "#8B1A1A",
+        "#C9A227"
+      ]
+    },
+    {
+      "scene_number": 6,
+      "type": "value_proposition",
+      "title": "Why This Channel",
+      "duration_sec": 20,
+      "narration": "We go deep. Full episodes, eighteen to twenty minutes, built scene by scene from the historical record. Not summaries. Not listicles. The story of what happened, why it happened, and what it changed \u2014 told the way a great film tells a story: with characters, stakes, drama, and truth. If you've ever wanted history to feel the way it actually felt, this is your channel.",
+      "visual_prompt": "Gods & Glory cinematic documentary. A visual of the channel's production quality: detailed battle scenes, character portraits, maps and strategy, the depth of research made visible. The difference between a Wikipedia summary and a real documentary. 16:9.",
+      "bg_colors": [
+        "#1A1A2E",
+        "#C9A227",
+        "#2C3E1A"
+      ]
+    },
+    {
+      "scene_number": 7,
+      "type": "upcoming_episodes",
+      "title": "What's Dropping",
+      "duration_sec": 18,
+      "narration": "Season One is live now. Season Two is coming. Over twenty episodes planned for Season Three alone. Battles from every era, every continent, every kind of war. New episodes every week. And if you subscribe today, you'll never miss the moment history changes.",
+      "visual_prompt": "Gods & Glory cinematic documentary. A visual of the episode lineup \u2014 the season one titles appearing one by one. The promise of content stretching into the future. The scale of the project made visible. 16:9.",
+      "bg_colors": [
+        "#C9A227",
+        "#1A1A2E",
+        "#8B4500"
+      ]
+    },
+    {
+      "scene_number": 8,
+      "type": "cta",
+      "title": "Subscribe",
+      "duration_sec": 20,
+      "narration": "Subscribe to Gods and Glory. Hit the notification bell. Leave a comment on the first episode that hits you. This channel is built for people who want to understand the world by understanding how it got here. History is not the past. It's the explanation of right now. Let's go find it together.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The channel logo glowing gold. A final collage of the most dramatic images from across the episodes \u2014 faces, battles, turning points. Then darkness. Then the logo. Subscribe. 16:9.",
+      "bg_colors": [
+        "#C9A227",
+        "#1A1A2E",
+        "#8B1A1A"
+      ]
+    }
+  ]
+}

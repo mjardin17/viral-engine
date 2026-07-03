@@ -1,0 +1,81 @@
+{
+  "channel": "LO",
+  "episode_number": 0,
+  "episode_id": "LO_OPENER",
+  "title": "Little Olympus — Channel Opener",
+  "tagline": "Big Gods. Little Heroes. Epic Adventures.",
+  "duration_target_min": 0.5,
+  "aesthetic": {
+    "color_grade": "bright_saturated_pixar",
+    "primary_colors": ["#FFD700", "#1A1060", "#00B4E6", "#FF6B35"],
+    "font_style": "rounded_chunky_bold",
+    "music_style": "upbeat_kids_adventure_fanfare",
+    "narrator_tone": "warm_playful_encouraging"
+  },
+  "characters": {
+    "hero": { "name": "Little Zeus", "visual": "Pixar 3D toddler aged 2-3, chubby round face, oversized blue eyes 40% of face, tiny button nose, rosy cheeks, wild curly white-blonde hair, tiny tilted golden crown, white toga with gold trim, holds a small glowing golden thunderbolt" },
+    "sidekick": { "name": "Baby Hercules", "visual": "Pixar 3D toddler aged 2, chubby baby body with comically oversized round arms, warm brown oversized eyes 40% of face, tiny button nose, rosy cheeks, short dark curls, tiny lion-skin cape, honey smear on cheek" },
+    "mentor": { "name": "Athena", "visual": "Pixar 3D toddler girl aged 2-3, chubby round face, oversized grey eyes 40% of face, tiny button nose, rosy cheeks, silver-streaked dark hair in a braid, tiny round glasses, small grey owl on her shoulder, scroll tucked under arm" },
+    "speedster": { "name": "Young Achilles", "visual": "Pixar 3D toddler aged 2-3, chubby round face, oversized amber eyes 40% of face, tiny button nose, rosy cheeks, golden blonde windswept hair, sky-blue tunic, tiny sandals with little wing embellishments" },
+    "funny_adult": { "name": "Uncle Hades", "visual": "Pixar 3D style adult, tall thin slightly translucent figure, black hair slicked back, deep purple oversized eyes, black robes with subtle skull patterns, always holding a steaming cup of tea" }
+  },
+  "scenes": [
+    {
+      "scene_number": 1,
+      "type": "logo_sting",
+      "title": "Little Olympus",
+      "narration": "Little Olympus!",
+      "visual_prompt": "Pixar 3D animation style title card. The words LITTLE OLYMPUS in enormous chunky rounded 3D golden letters, soft warm glow, slight drop shadow, letters gently different sizes. A small glowing lightning bolt replaces the I in LITTLE. Background: Mount Olympus floating above fluffy soft 3D clouds at golden hour, deep blue sky fading to warm gold, tiny rainbow arcing across. Simple clean background. Stars twinkling softly. Bright saturated colors. NOT comic book style. NOT flat illustration. Warm render lighting. 16:9.",
+      "bg_colors": ["#1A1060", "#FFD700", "#00B4E6"],
+      "duration_sec": 4
+    },
+    {
+      "scene_number": 2,
+      "type": "cold_open",
+      "title": "BOOM — Zeus Lost His Thunderbolt Again",
+      "narration": "BOOM! That's Little Zeus — and he just lost his thunderbolt AGAIN.",
+      "visual_prompt": "Pixar 3D animation style. Little Zeus as a Pixar toddler aged 2-3 — chubby round face, oversized bright blue eyes taking up 40% of face, tiny button nose, rosy cheeks, wild curly white-blonde hair, tiny tilted golden crown. He stands center frame with the most dramatically shocked expression — eyes comically wide, tiny mouth open in an O, small chubby hands outstretched and empty. Behind him the golden thunderbolt arcs away trailing sparkles. Simple clean sky-blue background with a few soft white 3D clouds. Bright saturated colors. Soft rounded everything. NOT comic book style. Warm Pixar render lighting. 16:9.",
+      "bg_colors": ["#87CEEB", "#FFD700", "#FF6B35"],
+      "duration_sec": 7
+    },
+    {
+      "scene_number": 3,
+      "type": "welcome",
+      "title": "Welcome to Little Olympus",
+      "narration": "Welcome to Little Olympus — where the gods are little, the adventures are BIG, and Baby Hercules breaks EVERYTHING.",
+      "visual_prompt": "Pixar 3D animation style. Full group shot of five adorable Pixar toddlers aged 2-3 on Mount Olympus. Center: Little Zeus toddler with white-blonde curls, tiny golden crown, glowing thunderbolt, waving with chubby arm — chubby round face, huge blue eyes 40% of face, tiny button nose, rosy cheeks. Left: Baby Hercules toddler with comically oversized round arms, dark curls, lion-skin cape, grinning hugely, accidentally gripping a cracked marble column — he hasn't noticed. Right: Athena toddler with silver-streaked braid, tiny round glasses, small owl on shoulder, patient smile. Far left: Achilles toddler with golden hair, mid-wave. Simple clean background: warm golden Olympus sky, soft 3D clouds, glowing temple silhouettes. Bright saturated colors. Soft rounded everything. NOT comic book style. Warm Pixar render lighting. 16:9.",
+      "bg_colors": ["#87CEEB", "#FFD700", "#98FB98"],
+      "duration_sec": 8
+    },
+    {
+      "scene_number": 4,
+      "type": "show_preview",
+      "title": "Adventures Every Week",
+      "narration": "Every week we've got new stories — Perseus fights monsters, Athena comes up with a plan, and Uncle Hades is being weird again.",
+      "visual_prompt": "Pixar 3D animation style. Three fun moments shown together. LEFT: Little Perseus as a Pixar toddler aged 2-3 — chubby round face, oversized green eyes 40% of face, tiny button nose, rosy cheeks, dark shaggy hair, tiny bronze shield raised — facing a comically round friendly-looking cartoon monster. CENTER: Athena toddler with silver-streaked braid, tiny glasses, owl on shoulder, unrolling an enormous color-coded plan scroll twice her size, looking very pleased with herself. RIGHT: Uncle Hades tall thin Pixar adult in black robes holding a steaming tea cup, offering it to Cerberus — three-headed puppy with three sets of enormous adorable eyes, all staring at the tea hopefully. Simple clean bright backgrounds. Bright saturated colors. Soft rounded everything. NOT comic book style. Warm Pixar render lighting. 16:9.",
+      "bg_colors": ["#1A1060", "#FF6B35", "#4A4A8A"],
+      "duration_sec": 11
+    },
+    {
+      "scene_number": 5,
+      "type": "subscribe_cta",
+      "title": "See You on Mount Olympus!",
+      "narration": "Subscribe now — new adventure every week! See you on Mount Olympus!",
+      "visual_prompt": "Pixar 3D animation style. All five characters face the viewer, waving cheerfully. Front center: Little Zeus toddler — chubby round face, huge blue eyes 40% of face, tiny button nose, rosy cheeks, white-blonde curls, tiny golden crown, raises glowing thunderbolt with small chubby arm. Left: Baby Hercules toddler with oversized round arms, double thumbs-up, toga strap has popped, enormous grin. Right: Athena toddler with tiny round glasses, silver-streaked braid, owl doing a dignified wing-wave. Far left: Achilles toddler golden hair mid-salute. Far right: Uncle Hades tall thin adult waving with one hand, tea cup in the other. A big round red SUBSCRIBE button glows softly in the foreground. Simple clean background: golden Olympus sky, soft clouds, rainbow. Bright saturated colors. Soft rounded everything. NOT comic book style. Warm Pixar render lighting. 16:9.",
+      "bg_colors": ["#1A1060", "#FFD700", "#00B4E6"],
+      "duration_sec": 10
+    }
+  ],
+  "music": {
+    "style": "upbeat_kids_adventure_fanfare",
+    "notes": "Opens with a bright brass fanfare sting (1s), then launches into bouncy xylophone + percussion for the character intro. Energy builds each scene. Final scene gets a punchy triumphant swell. Total 30 seconds. CoComelon energy but more adventurous and mythological."
+  },
+  "voice_style": {
+    "tone": "warm_playful_encouraging",
+    "pacing": "punchy and quick — this is a trailer, every second counts",
+    "character": "excited kids show host who genuinely loves this show"
+  },
+  "lesson": null,
+  "youtube_title": "Welcome to Little Olympus! ⚡ Big Gods. Little Heroes. Epic Adventures.",
+  "youtube_description": "🏛️ Welcome to LITTLE OLYMPUS — Greek mythology for kids!\n\nJoin Little Zeus, Baby Hercules, Athena, Little Perseus, Young Achilles, and all your favourite gods on EPIC adventures through ancient Greece!\n\n⚡ New episode every week!\n🦁 Baby Hercules breaks EVERYTHING\n🏛️ Perfect for ages 3–10\n\nSubscribe now — and we'll see you on Mount Olympus!\n\n#LittleOlympus #KidsCartoon #GreekMythology #LittleZeus #BabyHercules #KidsYouTube"
+}

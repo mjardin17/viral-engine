@@ -1,0 +1,251 @@
+{
+  "channel": "GG",
+  "episode_number": 6,
+  "episode_id": "GG_EP006",
+  "series_name": "Gods & Glory",
+  "topic": "Salamis and Plataea: How Greece Won the War",
+  "title": "Salamis and Plataea: How Greece Won the War",
+  "tagline": "One man's lie. Two battles. The entire future of Western civilization.",
+  "duration_target_min": 17,
+  "aesthetic": {
+    "color_grade": "cinematic_golden_epic",
+    "primary_colors": ["#8B6914", "#1A0A00", "#C0392B", "#2E4A7A"],
+    "font_style": "serif_documentary_bold",
+    "music_style": "hans_zimmer_historical_epic",
+    "narrator_tone": "authoritative_engaging_dramatic"
+  },
+  "characters": {
+    "protagonist": { "name": "Themistocles", "visual": "Athenian general, bronze muscle-cuirass, deep crimson cloak, Corinthian helmet pushed back, sharp calculating eyes, square jaw — the most dangerous political mind in Greece" },
+    "antagonist": { "name": "Xerxes", "visual": "King of Kings, ornate purple-gold Achaemenid robes, jeweled tiara, long black beard, golden throne — absolute power personified" },
+    "supporting": { "name": "Pausanias", "visual": "Spartan regent, blood-red cloak over bronze laminar armor, plumed helmet, cold commanding expression — the iron fist at Plataea" }
+  },
+  "scenes": [
+    {
+      "scene_number": 1,
+      "type": "cold_open",
+      "title": "Athens Is Burning",
+      "narration": "Athens is burning. The city that invented democracy — that produced Socrates, Sophocles, and the very concept of the citizen-state — is burning. Persian soldiers move through the streets. The Acropolis, the most sacred site in the Greek world, is on fire. And on a golden throne above the sea, the King of Kings sits watching. He has two million soldiers, twelve hundred warships, and the entire might of the largest empire the world has ever seen. He has just destroyed the most famous city in Greece. And he is absolutely certain that the war is already won. He is about to be wrong. This is the story of how it happened.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Sweeping aerial shot of ancient Athens in flames — the Acropolis burning against a smoke-filled orange sky, Persian soldiers silhouetted in the streets below. On a cliff above the sea, King Xerxes on an ornate golden throne watches, surrounded by attendants in gold and purple, the vast Persian fleet visible in the strait beyond. Photoreal historical detail, dramatic golden-hour lighting, film-grade cinematic composition, 16:9. Epic, grave, cinematic.",
+      "bg_colors": ["#8B0000", "#2A1A00", "#FF8C00"],
+      "duration_sec": 52
+    },
+    {
+      "scene_number": 2,
+      "type": "context",
+      "title": "How We Got Here",
+      "narration": "To understand why Salamis mattered, you need to understand what had already happened. Two years earlier, a small Persian invasion force had been stopped at Marathon by the Athenians alone. It was a miracle, and everyone knew it. So Xerxes — son of Darius, the King of Kings, ruler of an empire stretching from Egypt to India — decided to finish the job personally. He spent four years building the largest military force ever assembled. Historians ancient and modern have debated the numbers. The lowest credible estimate: two hundred thousand soldiers and six hundred warships. The highest: two million men and twelve hundred ships. Whichever number is right, it was the most terrifying army a Greek city-state had ever faced. And it was coming for them.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Illustrated map animation: the Persian Empire highlighted in gold across the Middle East, North Africa, and Central Asia. Arrows showing Xerxes's invasion route from Persia across the Hellespont bridge into Greece. Cutaway to a massive Persian army marching — cavalry, infantry, elephant corps, supply trains stretching to the horizon. Scale reference: tiny Greek city-states shown against the enormous Persian territory. Epic scope, warm documentary map style, authoritative. 16:9.",
+      "bg_colors": ["#2E4A7A", "#8B6914", "#1A0A00"],
+      "duration_sec": 52
+    },
+    {
+      "scene_number": 3,
+      "type": "character_intro",
+      "title": "The Man With the Plan",
+      "narration": "Themistocles. Remember that name. Born around 524 BC, he was an Athenian politician who had been warning about Persia for a decade. When Athens discovered a rich silver vein at Laurion in 483 BC — a windfall that most politicians wanted to distribute as cash payments to citizens — Themistocles did something extraordinary: he convinced the Athenian assembly to spend it on warships instead. Two hundred triremes. The Athenians didn't want to do it. Themistocles told them they needed a fleet to fight the pirates of Aegina. He was lying. He was building the fleet he knew they'd need for Persia. He was right. And that fleet would save civilization.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Character introduction: THEMISTOCLES at center frame, bronze armor and crimson cloak, sharp intelligent eyes, in the Athenian agora addressing a crowd of citizens. Behind him: rows of freshly built triremes in a harbor. Documentary-style visual — close on his face, then wide to show the assembly he's addressing. Silver coins are briefly shown before cutting to warships under construction. Cinematic portraiture, strong dramatic lighting. 16:9.",
+      "bg_colors": ["#2E4A7A", "#8B6914", "#C0392B"],
+      "duration_sec": 52
+    },
+    {
+      "scene_number": 4,
+      "type": "historical",
+      "title": "Thermopylae — The Price Already Paid",
+      "narration": "By August of 480 BC, the Persian army had already crossed the Hellespont on a bridge of boats — seven hundred ships lashed together, wide enough for an army to march across. The pass of Thermopylae, the narrow mountain gateway into central Greece, had been defended by three hundred Spartans and seven thousand allied Greeks for three days. They had killed tens of thousands of Persians. And then a Greek traitor named Ephialtes showed the Persians a mountain path around the pass. The three hundred were surrounded and killed to the last man. King Leonidas died at the front of his guard. The road to Athens was open. Within weeks, the Persians were in the city. And it was empty.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. THERMOPYLAE sequence: narrow mountain pass with rocky cliffs, Spartan warriors in red cloaks and bronze armor defending a tight bottleneck against Persian waves. Extreme heroic composition. Then: a mountain path, a Greek figure pointing — the betrayal. Final shot: the Acropolis of Athens silent and empty, fires being lit by Persian soldiers. Somber, epic, tragic tone. Accurate period detail. 16:9.",
+      "bg_colors": ["#1A0A00", "#C0392B", "#4A4A4A"],
+      "duration_sec": 52
+    },
+    {
+      "scene_number": 5,
+      "type": "historical",
+      "title": "The Evacuation of Athens",
+      "narration": "What happened next was one of the most extraordinary decisions in ancient history. The Athenians — all of them — left. The oracle at Delphi had told them to trust in their 'wooden walls.' Themistocles interpreted this to mean their fleet. So one hundred thousand Athenian citizens — men, women, children, the elderly — boarded ships and boats and crossed to the island of Salamis, the coast of Megara, anywhere they could reach. They watched from a distance as their city burned. They had abandoned everything they owned, everything they had built. But they had taken their fleet. And Themistocles had already decided how he was going to use it.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. EVACUATION sequence: wide shot of thousands of Athenian citizens — families with bundles, elderly on carts, children — streaming toward the harbor where hundreds of ships wait. Poignant, historical, human. Then cut to the fleet at sea — one hundred triremes with Athenian insignia, the city burning visible on the horizon behind them. The people watching from the ships. An entire civilization in transit. 16:9.",
+      "bg_colors": ["#2E4A7A", "#8B6914", "#1A0A00"],
+      "duration_sec": 52
+    },
+    {
+      "scene_number": 6,
+      "type": "setup",
+      "title": "The Allied Council — And the Problem",
+      "narration": "The Greek alliance was falling apart. At the island of Salamis, the allied Greek commanders met in council. There were thirty-one Greek city-states present, and they agreed on almost nothing. The Spartans and Corinthians wanted to abandon Salamis and retreat to the Isthmus of Corinth — the narrow land bridge at the bottom of mainland Greece — and build a wall. Themistocles argued furiously that this was suicidal. A wall at the Isthmus meant abandoning Athens, Megara, and Aegina. It meant the fleet would scatter. It meant Greece would be picked apart city by city. The council was ready to vote against him. So Themistocles did what he did best. He cheated.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Interior of a Greek council tent or ship — commanders of various city-states in a heated debate. Themistocles stands arguing, crimson cloak, bronze armor, against Spartan and Corinthian commanders in opposing positions. Tension visible. Maps on a table showing the Isthmus position. Torch-lit atmosphere, night, urgency. Political drama, accurate to period. Wide then close on Themistocles's calculating expression. 16:9.",
+      "bg_colors": ["#1A0A00", "#8B6914", "#2E4A7A"],
+      "duration_sec": 52
+    },
+    {
+      "scene_number": 7,
+      "type": "pivotal_action",
+      "title": "Themistocles's Gambit",
+      "narration": "Themistocles sent a secret message to Xerxes. The messenger was named Sicinnus, his children's tutor — one of the most consequential messengers in history. The message said, essentially: I am secretly on your side. The Greek fleet is demoralized. They are going to flee from Salamis tonight. Move your fleet now and block both exits, and you will trap them. Everything in that message was false. The Greeks were not fleeing. Themistocles had no intention of defecting. But he was betting — with the fate of all of Greece as the stakes — that Xerxes's arrogance would make him believe it. Xerxes believed it. He ordered the Persian fleet to move.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. NIGHT SCENE. A lone figure — Sicinnus — rows silently in a small boat toward the massive torchlit Persian fleet anchored in the dark bay. The Persian warships are enormous, their torches reflecting in the water. Sicinnus is tiny against them. Cut to: Xerxes receiving the message, reading by torchlight, his expression shifting from skepticism to agreement. He raises his hand to give the order. Epic night photography, tension, dramatic torch lighting. 16:9.",
+      "bg_colors": ["#1A0A00", "#2E4A7A", "#8B6914"],
+      "duration_sec": 52
+    },
+    {
+      "scene_number": 8,
+      "type": "historical",
+      "title": "Xerxes's Mistake",
+      "narration": "Xerxes ordered his fleet to move at midnight. The western exit of the Salamis strait was blocked by the Egyptian squadron — three hundred ships. The main Persian fleet moved to block the eastern entrance and waited for dawn. The Persian sailors rowed all night, maintaining their positions. By dawn, they were tired. They had been awake for most of twelve hours. And they had done exactly what Themistocles needed them to do. They had committed themselves entirely to a narrow strait, in a position where the size of their fleet was not an advantage — it was a liability. The trap was set. Themistocles had not told the Greek commanders yet. He let them find out at dawn.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. MAP ANIMATION showing Persian fleet movements overnight — Egyptian squadron blocking the west exit, main fleet blocking east. Then: aerial shot of the Salamis strait at predawn — the waters completely filled with Persian ships, wall to wall, hundreds and hundreds of them, their torches a constellation on the water. The strait's narrowness becomes visible. This is wrong for the Persians. The geography is wrong for them. Dawn beginning. 16:9.",
+      "bg_colors": ["#1A0A00", "#2E4A7A", "#8B6914"],
+      "duration_sec": 52
+    },
+    {
+      "scene_number": 9,
+      "type": "dramatic",
+      "title": "Dawn at Salamis — September 480 BC",
+      "narration": "Dawn broke on September 25th, 480 BC. On the cliffs above the strait, King Xerxes took his position on the golden throne, surrounded by scribes ready to record the names of Persian commanders who would distinguish themselves in the victory. He was expecting to watch a rout. In the strait below, the Greek commanders — who had spent the previous night arguing — now saw what Themistocles had done. The Persian fleet was everywhere. There was no escape route. Which meant there was no reason not to fight. Themistocles stood at the prow of the Athenian flagship and gave the order. Three hundred and seventy-one Greek triremes backed their oars and waited. The Persian fleet came forward.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. DAWN SEQUENCE. Golden dawn light over the Salamis strait — Persian ships filling it completely. On the cliff: Xerxes on his golden throne, scribes ready. In the strait: the Greek fleet — smaller but ready, oars out. THEMISTOCLES on the prow of the lead trireme, crimson cloak in the dawn wind, face resolute. Both sides watching each other across the water. The silence before. Epic cinematic composition, Hans Zimmer energy, the moment before everything changes. 16:9.",
+      "bg_colors": ["#8B6914", "#C0392B", "#2E4A7A"],
+      "duration_sec": 52
+    },
+    {
+      "scene_number": 10,
+      "type": "battle",
+      "title": "The Ram",
+      "narration": "The Greek trireme was one of the most lethal weapons systems the ancient world ever produced. One hundred and seventy rowers, three banks of oars, a bronze ram at the prow weighing between two hundred and five hundred kilograms. At full speed — about twelve knots — the impact of a trireme's ram against a ship's side was equivalent to a modern collision between two vehicles at motorway speed, but delivered by one hundred and seventy tons of ship. In the open ocean, the Persian fleet could maneuver around such attacks. In the Salamis strait, they could not. Ships were packed too tightly. The Persians could not turn. They could not reverse. They could barely see what was happening three ships ahead of them.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. TECHNICAL CUTAWAY: detailed schematic of a Greek trireme — three banks of oars, one hundred and seventy rowers shown in diagram, bronze ram at the prow. Then: aerial view of the Salamis strait showing how TIGHT the Persian ships are packed — no room to maneuver, ships overlapping, oars clashing. Then: the ram in action — a Greek trireme at speed driving its bronze prow into a Persian ship's hull at waterline, explosive impact, water rushing in. Visceral but documentary-accurate. 16:9.",
+      "bg_colors": ["#2E4A7A", "#1A0A00", "#C0392B"],
+      "duration_sec": 52
+    },
+    {
+      "scene_number": 11,
+      "type": "battle",
+      "title": "The Battle of Salamis",
+      "narration": "The battle lasted eight hours. In those eight hours, the Salamis strait became the site of the most decisive naval engagement in ancient history. Persian ships rammed each other trying to turn. Greek triremes picked their targets methodically, struck, reversed, repositioned, struck again. Persian sailors who could not swim — and many could not — drowned in their armor. Xerxes watched from his throne as commanders he had expected to promote were killed in front of him. He sent his scribes away. There was nothing to record that he wanted recorded. By midday, the engagement was effectively over. Estimates vary, but between two hundred and three hundred Persian warships were lost at Salamis. The Greeks lost approximately forty.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. FULL BATTLE SEQUENCE. The Salamis strait in chaos — Persian ships tangled together, Greek triremes striking precisely and withdrawing. Fire on the water from burning ships. Bodies floating. A Persian galley capsizes in slow motion as water floods in through a ram hole. From the cliff: Xerxes watching, his expression progressively darkening. Scribes around him — he dismisses them with a gesture. Smoke fills the air. Greek ships moving through the wreckage. The numbers shift visibly. 16:9.",
+      "bg_colors": ["#8B0000", "#1A0A00", "#2E4A7A"],
+      "duration_sec": 52
+    },
+    {
+      "scene_number": 12,
+      "type": "turning_point",
+      "title": "Xerxes Retreats",
+      "narration": "The story of Xerxes after Salamis is the story of a man recalculating in real time. He had one immediate problem: his supply line. The Persian army in Greece was massive. It could not live off the land indefinitely. The fleet had been supplying it by sea. With the fleet in tatters, that supply line was dangerously exposed. Worse, Themistocles — having just demonstrated that he was willing to do anything — sent another message to Xerxes, saying he had convinced the Greeks not to destroy the Hellespont bridge. Whether Xerxes believed him or not, Xerxes left. He took a large portion of his army and marched back to Asia, leaving his general Mardonius behind with an elite force of approximately three hundred thousand to finish the conquest of Greece. It wasn't over. It was just about to change shape.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Xerxes and his entourage on a road moving NORTH — retreating, though in great dignity, with cavalry escort. Behind him: the remains of the Persian fleet. Map animation showing his route of retreat. Then: Mardonius — a Persian general in gold-trimmed armor, battle-hardened face — watching Xerxes leave, then turning back toward Greece with three hundred thousand soldiers behind him. Two problems: one solved, one remaining. Cinematic, epic, historically accurate. 16:9.",
+      "bg_colors": ["#8B6914", "#1A0A00", "#2E4A7A"],
+      "duration_sec": 52
+    },
+    {
+      "scene_number": 13,
+      "type": "interlude",
+      "title": "The Year Between",
+      "narration": "The year 479 BC saw something extraordinary: the Greek city-states cooperated. This was not normal. Greek city-states spent most of their time fighting each other, not Persia. But with Mardonius and a three-hundred-thousand-man army still occupying northern Greece and threatening to march south at any moment, mutual survival concentrated the mind. Athens and Sparta — rivals in almost every other context — agreed to fight together. Sparta would contribute its legendary infantry. Athens would contribute its fleet, which had just saved Greece at sea and now needed to protect it on land. They set a rendezvous near the ancient town of Plataea in Boeotia. Mardonius marched to meet them.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. MAP ANIMATION: The year between Salamis and Plataea. Persian army under Mardonius shown occupying northern Greece. Greek alliance forming — Athens and Sparta marked with their symbols, allied contingents assembling. The Plataea battlefield location highlighted in Boeotia. Then: two great armies on a plain, both enormous, both preparing. Athenian triremes in the background, Spartan red cloaks in the foreground. The convergence of two armies toward one field. 16:9.",
+      "bg_colors": ["#2E4A7A", "#8B6914", "#C0392B"],
+      "duration_sec": 52
+    },
+    {
+      "scene_number": 14,
+      "type": "character_intro",
+      "title": "Pausanias — The Spartan General",
+      "narration": "At Plataea, the Greek forces were commanded by a Spartan regent named Pausanias. He was the nephew of King Leonidas — the man who had died at Thermopylae. He was also, by most accounts, one of the finest tactical commanders in the ancient Greek world. Mardonius — the Persian general — had chosen his ground carefully. He positioned his forces near the Asopus River with the high ground to his back, forcing the Greeks to fight uphill or find another approach. Pausanias spent eleven days refusing to advance, trying to force Mardonius to make the first mistake. It was a stare-down between two professionals. One of them eventually blinked.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. PAUSANIAS character introduction: a Spartan general in full crimson cloak and Corinthian helmet, scarred, composed, standing at the head of the Spartan phalanx on a hillside. His expression: cold, calculating, absolutely unafraid. Behind him: the ranked shields of the Spartan line, perfectly dressed. Across the plain: the Persian camp. Both sides watching each other. An eleven-day standoff — visually suggested by the stillness, the tension, the professional patience. 16:9.",
+      "bg_colors": ["#C0392B", "#1A0A00", "#4A4A4A"],
+      "duration_sec": 52
+    },
+    {
+      "scene_number": 15,
+      "type": "historical",
+      "title": "Eleven Days — The Standoff at Plataea",
+      "narration": "For eleven days, the two armies maneuvered around each other, neither willing to commit to a full engagement on unfavorable ground. The Persians had cavalry — excellent cavalry — that harassed the Greek supply lines constantly. On the ninth day, the Persian cavalry caught the Greek supply train and destroyed a major convoy. On the tenth day, they poisoned the main Greek water source. The Greek position was becoming untenable. Pausanias decided to pull back to better ground. That night, under cover of darkness, the Greek army began to move. And things went wrong almost immediately.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. STANDOFF SEQUENCE. Days-long standoff shown through time-lapse visual language — sun moving, camps burning at night, cavalry skirmishes in between. Persian cavalry in armored splendor harassing supply routes. A Greek water source being poisoned — dramatic detail. Then: night. The Greek army beginning a complex night withdrawal — thousands of soldiers moving in the dark, some units getting lost, disorder creeping in. The risk of the retreat. 16:9.",
+      "bg_colors": ["#1A0A00", "#4A4A4A", "#8B6914"],
+      "duration_sec": 52
+    },
+    {
+      "scene_number": 16,
+      "type": "battle",
+      "title": "The Battle of Plataea — Chaos and Order",
+      "narration": "The night withdrawal failed. The Athenian contingent went the wrong way. The Spartan contingent stopped where Pausanias thought was untenable ground — because one of his officers refused to move, thinking it was dishonorable to retreat. The Greek army was scattered and disorganized at dawn. Mardonius saw this. He attacked immediately, his cavalry and infantry pouring across the plain. And here is where the story takes the turn that changes everything. The Spartans, outnumbered and caught in poor position, held. Not because of luck. Because of training. Three hundred Spartans had held the pass of Thermopylae for three days. Eight thousand Spartans, plus allied forces, stood on the plain at Plataea. Mardonius attacked. The Spartans did not break.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. PLATAEA BATTLE. Dawn chaos — Greek units scattered, Athenian contingent in wrong position, Spartan line forming in a dangerous location. Then: Persian cavalry charge, thundering across the plain. The Spartan phalanx locks shields. The charge hits like a wall against stone. The line doesn't break. Greeks pushing back, steadying. Mardonius visible on horseback directing the attack personally. Epic cinematic battle composition, accurate to ancient warfare, intense. 16:9.",
+      "bg_colors": ["#C0392B", "#8B6914", "#1A0A00"],
+      "duration_sec": 52
+    },
+    {
+      "scene_number": 17,
+      "type": "battle_climax",
+      "title": "Mardonius Falls",
+      "narration": "The turning point came when Mardonius was killed. He was leading a cavalry charge personally — unusual for a commander of his seniority — when a Spartan threw a stone that unseated him and he was subsequently killed in the melee. The Persians did not panic immediately. They were professionals. But without their commander, the coordination that had held the army together began to unravel. The Athenians finally arrived on the battlefield from the wrong direction and hit the Persian flank. The allied Greek contingents filled the gaps. And the Persian line, which had fought brilliantly, began to collapse. Within hours, the Persian camp was taken. The invasion was over.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. CLIMACTIC SEQUENCE: Mardonius on horseback leading a charge — then a stone strikes him, he falls, chaos around the commander's position. Persian soldiers hesitating. Then: Athenians arriving from the flank — fresh, organized, hitting the exposed Persian side. The Persian line beginning to fold — first one point, then another. The Persian camp overrun. Greek soldiers raising weapons in victory. The field at Plataea full of the debris of a broken army. 16:9.",
+      "bg_colors": ["#C0392B", "#8B0000", "#8B6914"],
+      "duration_sec": 52
+    },
+    {
+      "scene_number": 18,
+      "type": "aftermath",
+      "title": "The Scale of the Victory",
+      "narration": "The Persian losses at Plataea were catastrophic. Ancient sources claim the Greek alliance took enormous quantities of gold, silver, weapons, and equipment from the Persian camp. The treasury of the Persian field army — assembled to finance the conquest of Greece — fell into Greek hands. Mardonius's body was never found, or if it was, the Greeks chose not to record it. The remaining Persian forces in Greece were gone within a year. Critically, on the same day as Plataea — the exact same day, according to Herodotus, though this may be literary coincidence — the Greek fleet destroyed what remained of the Persian fleet at the Battle of Mycale on the Turkish coast. In one day, the last Persian forces in Europe were broken on land and at sea.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. AFTERMATH SEQUENCE: Greek soldiers moving through the enormous Persian camp — tents of silk, chests of gold, exotic weapons, horses, supplies on an epic scale. Illustrated scale graphic: the Persian camp's contents visualized as historical record. Then: MAP showing Mycale on the Turkish coast, same day, Greek fleet attacking remaining Persian ships. A double victory on one day. Epic historical documentation. 16:9.",
+      "bg_colors": ["#8B6914", "#1A0A00", "#2E4A7A"],
+      "duration_sec": 52
+    },
+    {
+      "scene_number": 19,
+      "type": "analysis",
+      "title": "Why Greece Won — The Real Answer",
+      "narration": "Historians have spent two and a half thousand years analyzing why Greece won. The geography argument: the narrow straits and mountain passes neutralized Persian numbers. The technology argument: the Greek trireme and the hoplite phalanx were tactically superior in their respective domains. The motivation argument: men fighting for their homes fight harder than men fighting for their emperor's pay. All of these are true. But the most honest answer might be simpler: Themistocles. One man who saw the threat clearly, built the fleet, chose the battlefield, set the trap, and gambled everything on a lie. Without Themistocles, there is a strong argument that Athens falls permanently. And without Athens — without the city that gave us democracy, philosophy, drama, and the scientific method — the world looks very different.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. ANALYSIS SEQUENCE. Split illustrations: Greek trireme technical diagram vs Persian galley. Hoplite phalanx vs Persian infantry formation. Narrow Salamis strait geography vs Persian advantages in open water. Then: THEMISTOCLES portrait — documentary-style close-up, the face of the man who made the decision. Quote overlay: 'Themistocles — the man who most deserved to be called the savior of Greece.' — Thucydides. Scholarly and cinematic simultaneously. 16:9.",
+      "bg_colors": ["#2E4A7A", "#8B6914", "#1A0A00"],
+      "duration_sec": 52
+    },
+    {
+      "scene_number": 20,
+      "type": "irony",
+      "title": "What Happened to Themistocles",
+      "narration": "Here is the cruelest footnote in Greek history. Themistocles — the man who saved Greece — was exiled by Athens within ten years of Salamis. Greek politics being what they were, he made too many enemies. He was ostracized, the Athenian process of voting to banish someone simply for being too powerful or popular. He wandered for years. Eventually, he made his way to Persia. To the court of Artaxerxes — son of Xerxes, the king his trick had beaten at Salamis. Artaxerxes, rather than executing him, gave him estates and a pension. The man who saved Greece lived out his days on Persian money. History, as always, had opinions.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. IRONY SEQUENCE: Themistocles being escorted OUT of Athens — ostracism shown literally, pottery shards with his name. He walks away from the city. Then: Themistocles arriving at a Persian court — gold, silk, columns — being received by a young Persian king. His expression: tired, philosophical, sardonic. The savior of Greece in the enemy's palace. A quiet, pointed, historically accurate irony. Documentary-style, thoughtful framing. 16:9.",
+      "bg_colors": ["#8B6914", "#2E4A7A", "#1A0A00"],
+      "duration_sec": 52
+    },
+    {
+      "scene_number": 21,
+      "type": "legacy",
+      "title": "The Golden Age Begins",
+      "narration": "Greece after Plataea and Salamis looked nothing like Greece before. Athens, re-occupied and rebuilt, entered a period of extraordinary cultural explosion. The Parthenon was built. Sophocles wrote his tragedies. Pericles reformed democracy. Socrates walked the agora asking questions that philosophers are still arguing about. The money and confidence that flowed from defeating the largest empire in the world powered an intellectual revolution whose effects we still live with every day. Trial by jury. Democratic government. Scientific inquiry. Theater. The modern concept of the individual citizen with rights. All of it grew, at least partly, from the seed planted at Salamis and Plataea. Two battles that saved a handful of city-states created the foundations of Western civilization.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. GOLDEN AGE SEQUENCE. The Parthenon under construction — gleaming white marble against a blue sky. Athenian citizens in the agora — philosophers debating, citizens voting, theater performances. Pericles addressing the assembly. Socrates in conversation. All of it bright, alive, confident. Time-lapse of the Acropolis rising from ruins to its classical glory. Then: the global reach — these ideas spreading westward across time. Hopeful, golden, epic in scope. 16:9.",
+      "bg_colors": ["#8B6914", "#2E4A7A", "#87CEEB"],
+      "duration_sec": 52
+    },
+    {
+      "scene_number": 22,
+      "type": "modern_connection",
+      "title": "Why This Matters Right Now",
+      "narration": "You are watching this on a device that exists because of ideas invented in Athens after Salamis. Democracy. The idea that individuals have rights that governments cannot simply take away. The rule of law rather than the rule of a king. The philosophical tradition that led to the scientific method, which led to everything else. None of this was inevitable. In 480 BC, the largest empire in the world tried to end an experiment in democracy before it had really begun. It failed because of geography, tactics, and the intelligence of one man willing to stake everything on a lie. The world we live in is, at least in part, the world Themistocles made.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. MODERN CONNECTION SEQUENCE. Ancient Athens to modern world visual bridge — the Parthenon, then a modern parliament building, then courts of law, then the concept of the individual citizen. Quick visual essay: democratic symbols, courts, science, modern institutions — all traced back to their Greek origins. Then: return to the Salamis strait — calm, blue, ordinary — and the weight of what happened there. Historical, cinematic, resonant. 16:9.",
+      "bg_colors": ["#2E4A7A", "#8B6914", "#87CEEB"],
+      "duration_sec": 52
+    },
+    {
+      "scene_number": 23,
+      "type": "summary",
+      "title": "Salamis and Plataea — The Summary",
+      "narration": "So. September 480 BC: Battle of Salamis. Themistocles tricks Xerxes into a narrow strait. Three hundred and seventy-one Greek ships defeat six hundred Persian ships. Xerxes retreats. August 479 BC: Battle of Plataea. Pausanias commands the largest Greek army ever assembled. Persian general Mardonius is killed. Persian army collapses. Persian invasion of Greece: permanently ended. Legacy: the Athenian golden age, democracy, philosophy, science, theater. Two battles. One war. The future of Western civilization, decided in eight hours at sea and one morning on a plain in Boeotia. Remember these names: Themistocles. Pausanias. Salamis. Plataea.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. SUMMARY SEQUENCE. Clean documentary title-card style: key facts appearing as bold text against the historical imagery. Salamis map — 480 BC. Plataea map — 479 BC. Then: the faces of Themistocles and Pausanias in portrait. The Parthenon. The final image: the Salamis strait, calm and blue. Then the text: 'Western civilization survived by two battles and one lie.' Authoritative, conclusive, visually clean. 16:9.",
+      "bg_colors": ["#1A0A00", "#8B6914", "#2E4A7A"],
+      "duration_sec": 52
+    },
+    {
+      "scene_number": 24,
+      "type": "outro_cta",
+      "title": "Next Episode and Subscribe",
+      "narration": "Next episode on Gods and Glory: the empire that Salamis saved didn't stay united for long. Within thirty years of defeating Persia, Athens and Sparta were at war with each other — a twenty-seven-year catastrophe called the Peloponnesian War that would undo everything the golden age built. Why did Greece destroy itself after saving itself? That story next. Subscribe now so you don't miss it. And if you found this useful, share it with someone who should know why the world is the way it is. This has been Gods and Glory.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. OUTRO sequence: brief teaser shot of Athens and Sparta on opposite sides of a map with arrows pointing at each other — the coming Peloponnesian War. Then: Gods and Glory channel card — the logo, gold and bronze, dramatic serif title treatment, over a dark background with the Parthenon silhouetted. Subscribe call-to-action integrated cleanly. Authoritative, documentary-finishing energy. Cinematic fade out. 16:9.",
+      "bg_colors": ["#1A0A00", "#8B6914", "#C0392B"],
+      "duration_sec": 35
+    }
+  ],
+  "music": {
+    "style": "hans_zimmer_historical_epic",
+    "notes": "Opening: low strings, ominous brass, fire sound underneath. Themistocles intro: tense political thriller score. Salamis battle: explosive orchestral, percussion-heavy, chaos. Post-Salamis: brief triumphant resolve, then tension returns. Plataea: driving military percussion. Golden age finale: full choir and strings, hopeful and enormous. Outro: measured, authoritative, resonant."
+  },
+  "voice_style": {
+    "tone": "authoritative_engaging_dramatic",
+    "pacing": "measured but dynamic — controlled on historical setup, urgent on action, thoughtful on legacy",
+    "character": "Kings & Generals meets Oversimplified — the facts are exact, but they land like a punch"
+  },
+  "youtube_title": "How ONE LIE Saved Western Civilization | Salamis & Plataea | Gods & Glory",
+  "youtube_description": "In 480 BC, Athens was burning. The largest fleet ever assembled — over 1,200 ships — was ready to destroy what remained of Greece. One man, one lie, and two battles later, the world was different.\n\nThe story of Salamis and Plataea — two battles that saved democracy, philosophy, and the foundations of Western civilization.\n\n📍 What this episode covers:\n→ Themistocles's secret message to Xerxes\n→ Why the Salamis strait made Persian numbers irrelevant\n→ The 11-day standoff at Plataea\n→ Why the man who saved Greece died on Persian money\n→ What all of this built — and why it still matters\n\n🎬 Subscribe for new history every week\n#GodsAndGlory #Salamis #AncientGreece #Thermopylae #HistoryDocumentary"
+}

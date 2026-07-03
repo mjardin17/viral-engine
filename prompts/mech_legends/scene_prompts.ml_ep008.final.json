@@ -1,0 +1,110 @@
+{
+  "channel": "ML",
+  "episode_number": 8,
+  "episode_id": "ML_EP008",
+  "season": 1,
+  "title": "The Advance",
+  "tagline": "When he's done learning, he moves.",
+  "hook_line": "There is a sound 2.5 million soldiers make when they move together. You don't hear it. You feel it.",
+  "characters": ["RUMBLE", "NOVA", "STORM", "GRANITE", "BLAZE", "ELDER-7"],
+  "scenes": [
+    {
+      "scene_number": 1,
+      "type": "hook",
+      "title": "The Sound of Mass",
+      "narration": "There is a sound two and a half million soldiers make when they move together. You don't hear it with your ears. You feel it in the ground.",
+      "visual_prompt": "Ground-level shot, earth vibrating and cracking as the massive Persian army begins to move in the distance, dust rising on the horizon in an enormous cloud, the ground itself registering the mass movement, dark sky above, scale incomprehensible, cinematic wide, 1080x1920 vertical",
+      "bg_colors": ["#8B4513", "#0A0508"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 2,
+      "type": "reveal",
+      "title": "RUMBLE's Sensors",
+      "narration": "RUMBLE's ground sensors registered it first. 0.3 Hz. Mass movement frequency. He ran the calculation twice. 'That's... all of them.'",
+      "visual_prompt": "RUMBLE crimson red and black 28-meter bruiser mech, sensor display embedded in forearm showing seismic frequency readout at 0.3 Hz, data pad visible with mass movement calculations, RUMBLE's face visor showing the weight of the number, other team members visible behind him beginning to register the information, cinematic, 1080x1920 vertical",
+      "bg_colors": ["#8B0000", "#1A1A0A"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 3,
+      "type": "reveal",
+      "title": "The Horizon Changes",
+      "narration": "The horizon changed. What had been distant became close. The army advanced. Not scouts. Not a test force. Everything Xerxes had.",
+      "visual_prompt": "Wide dramatic shot, previously still horizon now filling with the advancing Persian army, the scale filling the entire frame edge to edge, golden torchlight reflecting off hundreds of thousands of shields and spears, dust cloud consuming the sky, the team as tiny silhouettes watching, cinematic epic, 1080x1920 vertical",
+      "bg_colors": ["#4A2000", "#050A15"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 4,
+      "type": "emotional",
+      "title": "NOVA's Numbers",
+      "narration": "NOVA ran the calculations. She didn't share them. The team already knew. Some numbers are not information. They are just weight.",
+      "visual_prompt": "NOVA cold cyan mech, four remaining active panels displaying tactical calculations — casualty projections, force ratios, hold time estimates — all deeply unfavorable, her visor showing the numbers, her posture showing the decision to not speak them aloud, the team around her, cinematic, 1080x1920 vertical",
+      "bg_colors": ["#0077B6", "#0A0A0A"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 5,
+      "type": "action",
+      "title": "STORM at the Edges",
+      "narration": "STORM struck at the outer formation edges. Supply junctions. Command relays. Twelve precision hits. She was working faster than any sensor could track.",
+      "visual_prompt": "STORM electric purple mech nearly invisible in stealth mode, multiple simultaneous strike points visible as brief purple flashes at the outer edges of the advancing Persian formation, precision and impossible speed, she appears and disappears faster than the eye can follow, cinematic action, 1080x1920 vertical",
+      "bg_colors": ["#4B0082", "#0A0A0A"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 6,
+      "type": "action",
+      "title": "Water Around Stone",
+      "narration": "The formation adjusted around her strikes like water around a stone. Every gap she made closed before she could exploit it. It didn't slow. It adapted.",
+      "visual_prompt": "Time-lapse style visualization, Persian formation showing the fluid adaptation to STORM's strikes — gaps opening and immediately closing as the army flows around the disruption, organism-like self-repair of formation, STORM's strike points visible but absorbed, cinematic, 1080x1920 vertical",
+      "bg_colors": ["#2A0A4A", "#0A0A15"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 7,
+      "type": "emotional",
+      "title": "Not Curious Anymore",
+      "narration": "BLAZE, watching the advance: 'He's not curious anymore.' A pause. ELDER-7: 'No. He is not.'",
+      "visual_prompt": "BLAZE and ELDER-7 side by side watching the advancing army, BLAZE small at 8 meters beside ELDER-7 at 40 meters, the advance filling the entire horizon, BLAZE's posture showing the recognition, ELDER-7 at his observing angle, the amber glow of his data pad dim now — he's not recording, just watching, cinematic, 1080x1920 vertical",
+      "bg_colors": ["#3A2000", "#080810"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 8,
+      "type": "reveal",
+      "title": "Absolute Certainty",
+      "narration": "From Xerxes's position — absolute calm. He had seen this before. Different mechs, different functions. The result was always the same.",
+      "visual_prompt": "Xerxes commanding presence viewed from distance — overwhelming scale, amber and gold Persian commander coloring, calm and absolutely certain posture, the advancing army behind him dwarfing everything, looking toward the team's position with the composure of someone who has made decisions that ended civilizations, cinematic, 1080x1920 vertical",
+      "bg_colors": ["#8B6914", "#0A0A00"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 9,
+      "type": "action",
+      "title": "GRANITE Takes Position",
+      "narration": "GRANITE moved to the front position. The cryo-sleeve was repaired but not at full capacity. He braced anyway. The line had to be somewhere.",
+      "visual_prompt": "GRANITE massive slate blue-grey mech moving deliberately to front position, cryo-sleeve showing repair seam where it cracked in EP006, frost beginning to form on it again, planting in the earth in defensive stance, the advancing army visible ahead, the team positioning behind him, cinematic, 1080x1920 vertical",
+      "bg_colors": ["#4A6B8A", "#0A1520"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 10,
+      "type": "resolution",
+      "title": "Buy What Time You Can",
+      "narration": "ELDER-7, watching the army approach: 'Hold what you can. Buy what time you can. We will know more by morning.' Nobody said what they were all thinking. There might not be a morning.",
+      "visual_prompt": "ELDER-7 from below, 40 meters of ancient bronze and war knowledge, looking toward the advancing army, data pad still for once in his hand rather than open, the full team arrayed behind him in battle positions, the sky behind filling with the dust cloud of the army's advance, cinematic epic, 1080x1920 vertical",
+      "bg_colors": ["#8B6914", "#060606"],
+      "duration_sec": 9
+    }
+  ],
+  "viral_hook": "He's not curious anymore. When Xerxes stops studying you — the advance begins.",
+  "highlight_scene": 7,
+  "highlight_note": "BLAZE's line 'He's not curious anymore' — and ELDER-7's single-word confirmation — lands harder than any battle sequence. Viewers understand what is coming.",
+  "short_title": "He's Not Curious Anymore",
+  "rewatch_bait": "NOVA's panels show the calculations in scene 4. Pause to read them. She was right not to say them aloud.",
+  "youtube_title": "When Xerxes Stops Watching — He Advances With Everything | Mech Legends S1 EP008",
+  "lesson": "The most dangerous moment isn't when the enemy attacks. It's when they stop studying you.",
+  "arc_notes": "EP008 is the dread episode — the full advance begins. No combat this episode; it's all about the weight of what's coming. GRANITE's cryo-sleeve repair visible for the first time (sets up EP012). ELDER-7's unusual stillness (data pad closed) signals something different from his normal archive mode."
+}

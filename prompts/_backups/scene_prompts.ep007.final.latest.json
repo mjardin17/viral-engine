@@ -1,0 +1,112 @@
+{
+  "episode_number": 7,
+  "series_name": "Empire Decoded",
+  "topic": "Alexander's Gamble: The Battle of Gaugamela",
+  "title": "Alexander's Gamble: The Battle of Gaugamela",
+  "rendered": false,
+  "generation": {
+    "gemini_source": "claude-direct (pre-generated ahead of Higgsfield credits)",
+    "chatgpt_source": "claude-direct"
+  },
+  "qa_notes": [
+    "Scene count: 6; total runtime ~55s of narration audio (estimate).",
+    "Villain-strength check: Persian army framed as the largest force ever fielded against a Western army, with scythed chariots and war elephants — entirely new horrors the Macedonians had never faced. Pass."
+  ],
+  "scenes": [
+    {
+      "scene_number": 1,
+      "title": "Cold Open",
+      "description": "On a vast, leveled plain in Mesopotamia, an army of a quarter of a million men — with war elephants and blade-wheeled chariots — waits for a force one-fifth its size. At its head, a 25-year-old king is about to bet everything.",
+      "narration": "On a plain so vast the Persians had leveled it themselves for their chariots, a quarter of a million soldiers waited — backed by scythed chariots and war elephants, weapons no Greek army had ever faced. Against them: a force one-fifth their size, led by a twenty-five-year-old king about to make the boldest gamble in military history.",
+      "video_prompt": "Cinematic historical documentary style, Empire Decoded. Vast aerial shot of a flat desert plain in Mesopotamia at dawn, an enormous Persian army stretching to the horizon — infantry, cavalry, war elephants, and chariots with scythe blades on their wheels. In the foreground on a low ridge, a much smaller Macedonian army in bronze and crimson stands in disciplined formation, led by a young king on a black horse. Photoreal detail, dramatic dawn lighting, accurate period costumes and armor, film-grade composition, 16:9.",
+      "duration_sec": 10
+    },
+    {
+      "scene_number": 2,
+      "title": "Setting the Stage",
+      "description": "King Darius III of Persia has rebuilt his shattered army into the largest force ever assembled against a Western enemy — reinforced with elite cavalry from the eastern provinces, two hundred scythed chariots, and fifteen war elephants. He has chosen this ground himself.",
+      "narration": "After losing twice to Alexander, King Darius the Third rebuilt his empire's army into something unprecedented — reinforced with elite cavalry from his eastern provinces, two hundred chariots fitted with spinning blades, and fifteen war elephants. He chose this battlefield himself, and leveled it, to give his chariots and numbers room to do what they do best: overwhelm.",
+      "video_prompt": "Cinematic historical documentary style, Empire Decoded. Wide shot of King Darius III, in ornate purple and gold Persian royal armor atop a high chariot, reviewing endless ranks of diverse cavalry and infantry from across his empire, war elephants being positioned at the flanks, workers leveling rocky ground in the distance. Photoreal detail, dramatic golden lighting, accurate Achaemenid Persian costumes and architecture, film-grade composition, 16:9.",
+      "duration_sec": 10
+    },
+    {
+      "scene_number": 3,
+      "title": "Rising Tension",
+      "description": "Alexander refuses to take the bait of a night attack his generals urge. Instead, at dawn, he marches his army diagonally across the Persian front — daring Darius's flanks to overextend and open a gap in the center.",
+      "narration": "Alexander's generals begged him to attack at night, while the Persians were still forming up. He refused — a night battle would hide Persia's weaknesses, not expose them. At dawn, he did something stranger still: he marched his entire army diagonally across the Persian line, daring Darius's massive flanks to chase him and tear open a gap in the center.",
+      "video_prompt": "Cinematic historical documentary style, Empire Decoded. Wide battlefield shot at dawn, a disciplined Macedonian army marching at an angle across the front of a vastly larger Persian force, Persian cavalry on the flanks beginning to wheel and stretch outward in pursuit, creating a visible gap forming in the center of the Persian line. Photoreal detail, tense atmosphere, dramatic lighting, film-grade composition, 16:9.",
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 4,
+      "title": "The Clash",
+      "description": "The scythed chariots charge — and are cut apart by javelins and gaps in the Macedonian line before they arrive. As the Persian flanks overextend, Alexander leads his elite cavalry straight through the gap in the center, aimed directly at Darius.",
+      "narration": "Darius unleashed his scythed chariots — and the Macedonians simply opened lanes and let them through, javelins cutting down drivers before the blades reached anyone. As the overstretched Persian flanks left a hole in the center, Alexander turned his companion cavalry into a spearhead and drove it straight through the gap — aimed like an arrow at Darius himself.",
+      "video_prompt": "Cinematic historical documentary style, Empire Decoded. Dynamic action shot, scythed war chariots charging at full speed toward a line of Macedonian infantry, soldiers stepping aside to open lanes as javelins strike the chariot drivers. In a parallel shot, Alexander at the head of an elite wedge-formation cavalry charge bursts through a gap in the Persian line, dust and chaos all around, golden afternoon light, photoreal detail, film-grade composition, 16:9.",
+      "duration_sec": 11
+    },
+    {
+      "scene_number": 5,
+      "title": "Turning Point",
+      "description": "With Alexander's cavalry crashing toward his position and his center collapsing, Darius makes the same choice he made once before: he flees the battlefield, abandoning his army — and, within months, his empire.",
+      "narration": "With Macedonian cavalry cutting toward his own position and his center collapsing into chaos, Darius made the same choice he'd made once before — he turned and fled, abandoning the largest army ever assembled to its fate. Within months, his empire would follow him into collapse.",
+      "video_prompt": "Cinematic historical documentary style, Empire Decoded. Close-up tracking shot of King Darius III's chariot turning and racing away from the battlefield in a cloud of dust, his royal guard scattering in panic behind him, while in the background the Persian center disintegrates under a Macedonian cavalry charge. Dramatic late-afternoon lighting, photoreal detail, film-grade composition, 16:9.",
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 6,
+      "title": "Legacy",
+      "description": "Gaugamela broke the back of the Persian Empire for good. Within a year, Alexander would control Babylon, Susa, and Persepolis — the wealthiest empire on Earth, conquered by a king barely out of his twenties. The age of the Hellenistic world had begun.",
+      "narration": "Gaugamela was the end of the Persian Empire as a fighting power. Within a year, Alexander walked into Babylon, Susa, and Persepolis — the richest cities on Earth — without another major battle. A king not yet thirty had toppled the largest empire the world had ever known, and opened the door to three centuries of Greek influence across Asia. Subscribe to Empire Decoded for the next chapter.",
+      "video_prompt": "Cinematic historical documentary style, Empire Decoded. Sweeping shot of Alexander's army entering the golden gates of Babylon, vast crowds and treasures visible, sunlight gleaming off gold and bronze. Final shot transitions to a map-style overlay showing the Macedonian empire's borders expanding across Asia, epic and triumphant tone, photoreal detail, film-grade composition, 16:9.",
+      "duration_sec": 9
+    }
+  ],
+  "music": {
+    "prompt": "Epic historical documentary score, cinematic orchestral, ancient battle theme with Eastern-influenced instrumentation (duduk, frame drums) blended with Western orchestral strings and brass. Begins with a tense, exotic ostinato representing overwhelming numbers, builds through a galloping action theme for the cavalry charge, peaks with a chaotic percussive climax, then resolves into a grand, imperial, triumphant finale. Instrumental only, optional wordless choir. Style reference: Hans Zimmer historical trailer score.",
+    "duration_sec": 300
+  },
+  "sound_effects": [
+    {
+      "label": "vast_army_ambience",
+      "prompt": "Massive army camp ambience at dawn, hundreds of thousands of soldiers, distant murmurs, armor clinking, war elephants trumpeting occasionally, vast scale"
+    },
+    {
+      "label": "chariot_charge",
+      "prompt": "Scythed war chariots charging at full speed across hard ground, wheels rattling, horses galloping, spinning blades whirring, war cries"
+    },
+    {
+      "label": "javelin_volley",
+      "prompt": "Volley of javelins thrown in unison, whooshing through air, impacts on wood and flesh, brief shouts"
+    },
+    {
+      "label": "cavalry_wedge_charge",
+      "prompt": "Heavy cavalry charging in tight formation, thunderous hooves, armor and weapons clattering, rising battle cry, dust and impact"
+    },
+    {
+      "label": "collapse_and_retreat",
+      "prompt": "Chaotic retreat ambience, panicked shouting, chariot wheels skidding, distant collapsing battle lines, dust storm wind"
+    },
+    {
+      "label": "imperial_arrival",
+      "prompt": "Triumphant city gate ambience, large cheering crowd, distant fanfare horns, footsteps echoing on stone, grand and golden atmosphere"
+    }
+  ],
+  "character_images": [
+    {
+      "label": "alexander_reference",
+      "prompt": "Cinematic realistic character design, Alexander the Great, young Macedonian king, ornate bronze muscle-cuirass armor with lion motif, crimson cloak, plumed Boeotian helmet held at side, archaeology-based proportions, full body standing pose, neutral grey studio background, soft even lighting, character reference sheet, front view, no text, no logos, no watermark",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "label": "darius_iii_reference",
+      "prompt": "Cinematic realistic character design, King Darius III of Persia, elaborate Achaemenid royal robes in deep purple and gold, ornate tiara, dark beard, standing pose on a chariot platform reference, archaeology-based Persian proportions and dress, neutral grey studio background, soft even lighting, character reference sheet, front view, no text, no logos, no watermark",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "label": "war_elephant_reference",
+      "prompt": "Cinematic realistic design reference, ancient war elephant equipped with ornate Persian armor plating and a small fighting platform on its back, full body side profile, neutral grey studio background, soft even lighting, photoreal detail, no text, no logos, no watermark",
+      "aspect_ratio": "4:3"
+    }
+  ]
+}

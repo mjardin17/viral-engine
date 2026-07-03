@@ -1,0 +1,111 @@
+{
+  "channel": "GG",
+  "track": "historical",
+  "episode_number": 7,
+  "episode_id": "GG_HIST_EP007",
+  "season": 1,
+  "title": "The Betrayal",
+  "tagline": "His name has meant traitor in Greece for 2,500 years. Xerxes listened to him for one hour. That was enough.",
+  "hook_line": "Ephialtes of Malis wanted a reward from Xerxes. He knew a path. It took one night to change everything.",
+  "characters": ["XERXES", "LEONIDAS"],
+  "scenes": [
+    {
+      "scene_number": 1,
+      "type": "hook",
+      "title": "His Name",
+      "narration": "His name is Ephialtes. In modern Greek, the word 'ephialtes' means nightmare. His name became the word. He earned it in one night.",
+      "visual_prompt": "Epic oil painting, Ephialtes the betrayer in dramatic portraiture — a Greek local farmer-type figure, furtive and desperate, meeting with Persian soldiers under cover of darkness, the mountains of Thermopylae visible behind him, his name carved into history by the weight of what he is about to do, dramatic chiaroscuro, 1080x1920 vertical",
+      "bg_colors": ["#0A0A1A", "#1A0500"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 2,
+      "type": "reveal",
+      "title": "The Path",
+      "narration": "Ephialtes knew a mountain path called the Anopaia — running over the mountains and coming out behind the Greek position. It was known to locals. The Greeks had posted a guard there. Phocians. 1,000 of them.",
+      "visual_prompt": "Epic oil painting, the Anopaia mountain path shown in dramatic aerial — winding over the mountain heights above Thermopylae, the pass visible below, the path emerging behind the Greek position, the Phocian guard visible as a small force at the top of the path, the strategic flaw in the defense made visible, dramatic, 1080x1920 vertical",
+      "bg_colors": ["#2A3A2A", "#0A0A0A"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 3,
+      "type": "reveal",
+      "title": "Xerxes Listens",
+      "narration": "Xerxes received Ephialtes that night. He listened without expression. He asked questions. He sent the Immortals up the mountain path before dawn.",
+      "visual_prompt": "Epic oil painting, the late-night council — Xerxes on his throne in lamplight, Ephialtes before him explaining the path, Xerxes listening with the absolute composure of someone receiving information he intended to use, generals being dispatched as the meeting concludes, urgency contained within perfect control, dramatic, 1080x1920 vertical",
+      "bg_colors": ["#4A3000", "#080808"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 4,
+      "type": "action",
+      "title": "The Night March",
+      "narration": "The Immortals moved through the night. 10,000 warriors, silent, climbing the mountain paths in the dark. At dawn they reached the summit — and found the Phocian guard.",
+      "visual_prompt": "Epic oil painting, 10,000 Immortals moving in silence through the dark mountain path, torches shielded, the scale of this night movement extraordinary, the column winding up the mountain in darkness, dawn beginning to show on the peaks ahead of them, the moment of contact approaching, dramatic, 1080x1920 vertical",
+      "bg_colors": ["#0A0A1A", "#1A1A1A"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 5,
+      "type": "action",
+      "title": "The Phocians",
+      "narration": "The Phocians heard them coming — the sound of feet on the mountain gravel, the rustle of 10,000 sets of equipment. They grabbed their weapons. They were too late to matter.",
+      "visual_prompt": "Epic oil painting, the Phocian guards at their mountain post suddenly aware of the approaching Immortals — the sound reaching them just before the force does, warriors grabbing spears and shields from sleep positions, but the massive Immortal column already cresting the ridge, the mathematics of the encounter immediate and decisive, dramatic, 1080x1920 vertical",
+      "bg_colors": ["#2A3A2A", "#0A0808"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 6,
+      "type": "reveal",
+      "title": "The Runner",
+      "narration": "A runner reached Leonidas before dawn. The path had been taken. The Immortals were coming from behind. The position was compromised.",
+      "visual_prompt": "Epic oil painting, a Greek runner arriving breathless at Leonidas's position in the pre-dawn dark, the news being delivered, Leonidas receiving it with complete composure — not surprise, the expression of a man who has prepared for this moment — his 300 assembled around him, dramatic, 1080x1920 vertical",
+      "bg_colors": ["#8B0000", "#0A0808"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 7,
+      "type": "emotional",
+      "title": "The Oracle Was Right",
+      "narration": "Leonidas had known this might come. The Oracle had said a king of Sparta must die. He sent the allied Greek forces away. All of them except 300 Spartans and 700 Thespians who refused to leave.",
+      "visual_prompt": "Epic oil painting, the dawn dismissal — Leonidas sending the allied Greek contingents away down the pass, units of Theban and Corinthian and Athenian soldiers moving southward, the 300 Spartans remaining in position, and beside them 700 Thespians who have not moved, Leonidas watching the allies depart, cinematic, 1080x1920 vertical",
+      "bg_colors": ["#8B0000", "#0A0A0A"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 8,
+      "type": "emotional",
+      "title": "What Leonidas Said",
+      "narration": "'Go eat breakfast, for tonight we dine in Hades.' Plutarch records these as Leonidas's final words to his men. The Spartans prepared for the last battle.",
+      "visual_prompt": "Epic oil painting, Leonidas addressing his 300 Spartans in the dawn before the final battle — the light catching crimson cloaks, the men listening with absolute composure matching his own, preparing equipment with the calm of men who have already made their decision about what this day means, dramatic, 1080x1920 vertical",
+      "bg_colors": ["#8B0000", "#0A0808"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 9,
+      "type": "reveal",
+      "title": "The Thespians",
+      "narration": "The 700 Thespians are history's forgotten heroes. They stayed by choice. They had no Oracle. No destiny. They stayed because the Spartans stayed.",
+      "visual_prompt": "Epic oil painting, the 700 Thespians — ordinary Greeks, not professional warriors, in mixed and less perfect equipment than the Spartans — standing in formation alongside the 300 Spartans, their choice visible in their posture, choosing to die in good company, the weight of their voluntary sacrifice, dramatic, 1080x1920 vertical",
+      "bg_colors": ["#2A3A5A", "#0A0A0A"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 10,
+      "type": "resolution",
+      "title": "The Third Day Begins",
+      "narration": "Xerxes waited for the Immortals to be in position behind the Greeks. Then he ordered the full frontal assault. The third day began. The last day.",
+      "visual_prompt": "Epic oil painting, the dawn of the third day — the Persian army advancing from the south into the pass while behind the Greek position the Immortals are descending the mountain to cut off retreat, the 1000 remaining defenders surrounded for the first time, Leonidas visible at the front of his men, facing the advancing Persians, dramatic, 1080x1920 vertical",
+      "bg_colors": ["#8B4513", "#0A0808"],
+      "duration_sec": 9
+    }
+  ],
+  "viral_hook": "In Greece, the word 'ephialtes' means nightmare. Ephialtes earned his name in one night. By selling a path to Xerxes.",
+  "highlight_scene": 9,
+  "highlight_note": "The 700 Thespians — history's forgotten heroes who stayed by choice without any oracle or destiny — are the emotional anchor of this episode. Their choice to die in good company is more moving than any professional warrior's duty.",
+  "short_title": "Ephialtes",
+  "rewatch_bait": "Leonidas sending the allies away — he's not giving them an escape. He's clearing the stage. He knew what this day was always going to be.",
+  "youtube_title": "One Man. One Path. One Night. His Name Became the Greek Word for Nightmare. | Gods & Glory",
+  "lesson": "History is changed more often by betrayal than by force. The greatest defense in the world still needs someone to guard the back door.",
+  "arc_notes": "EP007 is the tragic turn. The betrayal is the pivot of the entire arc. The Thespians are the emotional surprise — unexpected heroism from unnamed people is more powerful than expected heroism from legends."
+}

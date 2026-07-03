@@ -1,0 +1,83 @@
+{
+  "channel": "Little Olympus",
+  "episode_number": 24,
+  "episode_id": "LO_EP024",
+  "season": 2,
+  "title": "Perseus and the West Garden",
+  "tagline": "She made him a sculpture of a place he described. She got it right.",
+  "hook_line": "Perseus is going to visit Medusa in the west garden. He's been thinking about it since she mentioned it at the end of Season 1. She made him something. She didn't tell him she was making it.",
+  "characters": ["Perseus", "Medusa", "Athena", "Archie"],
+  "scenes": [
+    {
+      "scene_number": 1,
+      "type": "hook",
+      "title": "The Walk to the West Garden",
+      "narration": "Perseus had been to the west garden twice before — both times during the Titan situation, both times with other people. This was the first time he was going alone. He'd told Athena where he was going. She'd said: 'Take Archie.' Archie had already been heading west. He'd known before anyone told him.",
+      "visual_prompt": "Perseus walking along the western path of Little Olympus, morning light, the path winding through olive trees toward the west garden visible in the distance — simple cartoon style, Perseus carrying nothing, his winged sandals visible, walking at a steady determined pace — Archie the owl flying a few steps ahead of him (not beside, ahead) as if leading the way — the western garden visible in the distance: stone walls, green space, the sense of somewhere separate and quieter — #FFD700 and soft olive green, warm morning, gentle atmosphere",
+      "bg_colors": ["#87CEEB", "#7CB87C", "#FFD700"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 2,
+      "type": "character",
+      "title": "The West Garden",
+      "narration": "The west garden was walled. The entrance had no door — just an archway. Perseus stopped at the archway. Inside, everything was green and still. And there was no one visible. 'Medusa?' he said. From somewhere to the left: 'I'm here. Don't look left yet. Give me a moment.' Perseus looked right. There was a stone sculpture on a low platform. He hadn't seen it before.",
+      "visual_prompt": "The west garden — walled, green, stone paths, olive trees and flowering vines, a sense of quiet and privacy — the archway entrance with Perseus and Archie at the threshold — inside: a stone sculpture visible on a low platform in the right of the frame, Medusa NOT visible (she's left, out of frame) — Perseus's body language showing the particular care of someone navigating a situation with specific rules — his eyes going right to the sculpture instinctively — warm green and stone, #7CB87C and soft stone gray, gentle light filtering through leaves",
+      "bg_colors": ["#7CB87C", "#8FBC8F", "#87CEEB"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 3,
+      "type": "character",
+      "title": "The Sculpture",
+      "narration": "The sculpture was of the eastern valley — the view from the edge of Little Olympus where the path curves and you can see three mountains and the sea. It was made of stone. It was exactly right. Perseus had described that view to Medusa during the Titan situation — once, briefly, in passing, as something he liked to look at. He had not thought she was listening carefully. She had been listening carefully.",
+      "visual_prompt": "Close-up of the stone sculpture — carefully carved, showing three mountains and a sea view, the exact perspective of the eastern valley as you would see it from the path curve at Little Olympus — delicate and precise stone carving work, the detail remarkable — Perseus standing in front of it, looking at it with an expression of quiet recognition — the stone is beautifully worked, the view immediately identifiable to anyone who knows that spot — Archie landing on the sculpture platform and looking at it from the same angle Perseus described, #7CB87C and stone gray, detail-focused warm light",
+      "bg_colors": ["#7CB87C", "#D4C5A0", "#87CEEB"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 4,
+      "type": "character",
+      "title": "Medusa Arrives",
+      "narration": "Perseus heard her move before she spoke. He kept his eyes on the sculpture. 'You mentioned it once,' Medusa said. 'In passing.' 'I know,' Perseus said. 'I was listening,' she said. 'I know,' he said again. There was a pause. 'Do I have it right?' 'Yes,' Perseus said. 'You have it right.'",
+      "visual_prompt": "Side-by-side composition showing careful proximity — Perseus standing before the sculpture, eyes on the sculpture, his reflection or position showing someone choosing where to look with care — Medusa visible in peripheral composition, not full-face, the visual framing protecting both of them in the way they've worked out — green garden light, the space between them comfortable rather than tense — the conversation happening without eye contact but without awkwardness, the particular ease of two people who have figured out how to be in the same space — warm garden light, #7CB87C and stone, gentle",
+      "bg_colors": ["#7CB87C", "#87CEEB", "#D4C5A0"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 5,
+      "type": "development",
+      "title": "The West Garden",
+      "narration": "They walked the garden for a while. Perseus looked at the plants. Medusa told him she'd planted most of them herself, since moving here. Some of them she'd had to research — what grows where, what light they need. 'This one,' she said, pointing to a vine, 'I got wrong four times before it worked.' Perseus looked at the vine. It looked good. 'What changed?' 'I stopped trying to force it,' she said. 'I just gave it what it needed and waited.' Archie looked at the vine for a long moment. Then he looked at Medusa.",
+      "visual_prompt": "Garden walk scene — Perseus and Medusa moving through the garden, Medusa indicating plants along the path, Perseus listening — the particular vine she mentions shown in detail: flowering and healthy now, training along a stone wall, evidence of its previous attempts visible in the wall (old stems, new growth) — Medusa's gardening work evident throughout: the garden is cared for and growing well — Archie looking from the vine to Medusa with a very deliberate expression — warm garden greens, #7CB87C and #87CEEB, sunlight through leaves dappled effect",
+      "bg_colors": ["#7CB87C", "#5A9A5A", "#FFD700"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 6,
+      "type": "resolution",
+      "title": "Before He Leaves",
+      "narration": "Before Perseus left, he turned back at the archway. 'I'll describe another view next time,' he said. 'If you want.' Medusa was quiet for a moment. 'I'd like that,' she said. 'I'm running out of the eastern valley. I've made it four times now.' Perseus turned to look at the garden. There were three more eastern valley sculptures visible now that he was looking. Four, counting the one on the platform. He hadn't noticed them when he arrived. 'They're all slightly different,' Medusa said. 'I was trying to get the light right.'",
+      "visual_prompt": "Perseus at the archway turning back — and now the garden visible with four eastern valley sculptures at different spots, different sizes and angles of the same view — each slightly different, experiments in stone, the same view from Perseus's description captured four different ways — Perseus seeing them for the first time, the realization that she's been working on this — Medusa visible in the garden among her sculptures, not dramatic, just present — the archway framing Perseus's exit with the garden visible behind him, warm light, #7CB87C and golden afternoon, the sculptures in stone gray",
+      "bg_colors": ["#7CB87C", "#87CEEB", "#D4C5A0"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 7,
+      "type": "tag",
+      "title": "What Athena Writes",
+      "narration": "Perseus told Athena about the visit at dinner. Briefly. He said the garden was good and the sculpture was accurate and they had talked about plants. Athena wrote: 'He said: the garden was good. The sculpture was accurate. They talked about plants.' She underlined 'accurate.' Then she added: 'He's been to the east path three times since they spoke about it at the Titan battle. He goes there at sunset. He has been remembering what she remembered.'",
+      "visual_prompt": "Athena at her desk writing the visit notes — the scroll showing: 'He said: the garden was good. The sculpture was accurate. They talked about plants.' with 'accurate' underlined — then her second note about the east path, the times visible: three visits since the Titan battle, each at sunset — Athena pausing after writing this, looking at the words — the sense of her understanding something about both of them — Archie on the desk corner, having been at both the garden and this desk today, looking at the scroll with calm attention — warm lamplight, #C8A951 and amber",
+      "bg_colors": ["#3D2B00", "#C8A951", "#8B6914"],
+      "duration_sec": 9
+    }
+  ],
+  "viral_hook": "Medusa made Perseus a sculpture of a view he described once, briefly, in passing. She made four versions. She's been trying to get the light right. He goes to that spot at sunset. He's been remembering what she remembered.",
+  "highlight_scene": 6,
+  "highlight_note": "Perseus seeing the four sculptures — the reveal that she's made the same view four times trying to get it right. The garden full of her attempts. The moment he realizes how much she was listening.",
+  "short_title": "She Made Four Versions Because She Wanted To Get It Right",
+  "rewatch_bait": "Scene 2 — first look at the west garden. One of the eastern valley sculptures is visible in the background on the left side. Easy to miss when you're watching Perseus's face. It was there before she showed him.",
+  "youtube_title": "She made him a sculpture of a view he mentioned once. Then made it four more times. | Little Olympus S2 EP4",
+  "lesson": "Being listened to carefully is one of the rarest things. Medusa was listening when Perseus didn't know anyone was.",
+  "arc_notes": "Medusa arc S2 E01 (EP024). Perseus visiting the west garden. The four sculptures establish Medusa's care and attention in a concrete, visual way. Medusa-Perseus dynamic deepens without resolving — this is building toward her message about visiting Olympus (EP010) and her visit (EP016). The vine line — 'I stopped trying to force it, I just gave it what it needed and waited' — is the season 2 thematic statement about all the arcs (Achilles, GRANITE, ELDER-7). Archie's look at the vine and then Medusa: he understands."
+}

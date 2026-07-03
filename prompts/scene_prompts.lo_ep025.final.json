@@ -1,0 +1,83 @@
+{
+  "channel": "Little Olympus",
+  "episode_number": 25,
+  "episode_id": "LO_EP025",
+  "season": 2,
+  "title": "Apollo Visits",
+  "tagline": "He explained everything perfectly. It took three times as long as just saying the thing.",
+  "hook_line": "Apollo arrived at Little Olympus today. He explained his arrival in song. The song was accurate. It was also four minutes long. Artemis did not look up from her bow.",
+  "characters": ["Apollo", "Artemis", "Zeus", "Athena", "Hercules", "Achilles", "Perseus", "Archie"],
+  "scenes": [
+    {
+      "scene_number": 1,
+      "type": "hook",
+      "title": "The Arrival Song",
+      "narration": "Apollo arrived at sunrise. He arrived in the way that Apollo arrives: with a song. The song explained that he was Apollo, that he was visiting, that the weather was good, that he had traveled from the east, that he had noticed several interesting things on the way, and that he was very pleased to be here. The song was factually correct in every detail. It was also four minutes and seventeen seconds long. Artemis, who had been expecting him, did not look up from her bow maintenance.",
+      "visual_prompt": "Little Olympus gate at sunrise — Apollo arriving, cartoon style, golden hair and robes, lyre in hand, clearly mid-song, musical notes visible floating from the lyre — the ensemble at the gate watching him arrive: Zeus with a polite but frozen smile, Athena already writing something on a scroll (timing him), Hercules genuinely delighted, Achilles arms crossed trying to be patient, Perseus fascinated, Archie doing an extremely slow blink — and Artemis, visible at the back doing bow maintenance, not looking up at all — the four-minute-seventeen-second song implied by everyone's posture, #FFD700 and golden sunrise palette, warm and absurdly bright",
+      "bg_colors": ["#FFD700", "#FF8C42", "#87CEEB"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 2,
+      "type": "character",
+      "title": "What Apollo Is Like",
+      "narration": "Apollo was warm. Apollo was theatrical. Apollo was genuinely, sincerely, accurately helpful in a way that took much longer than it needed to. He asked Athena about her research — and then sang her findings back to her in a different order that was, objectively, a better organizational structure. Athena stared at him. 'That's... correct,' she said slowly. 'I know,' Apollo said. 'Would you like it in verse or in prose? I can do either. The verse version has a very good second verse.'",
+      "visual_prompt": "Apollo at the study with Athena, gesturing expressively, the lyre tucked under one arm, the other hand making a helpful organizational chart gesture in the air — Athena looking at her scroll and then at Apollo with an expression of someone who is being correctly annoyed — the organizational insight he's giving her is shown via a small visual: Athena's current note structure on her scroll, and then Apollo's proposed reorganization floating above it in song notation — both clearly visible, the reorganization genuinely better — Athena's expression: precise mixture of impressed and exhausted — #FFD700 and study lamplight, Archie watching Apollo with an expression of professional evaluation",
+      "bg_colors": ["#FFD700", "#FFF5C0", "#C8A951"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 3,
+      "type": "character",
+      "title": "Artemis and Apollo",
+      "narration": "Apollo found Artemis at the training ground and sat beside her while she worked on her bow. 'You didn't listen to the arrival song,' he said. 'I know everything in the arrival song,' Artemis said. 'You were supposed to listen to it anyway,' he said. 'It was accurate,' Artemis said. 'That's not the point.' 'Then what is the point?' Apollo looked at her. 'The point is that I missed you.' Artemis looked at her bow for a long time. 'The song was four minutes long,' she said. 'I know,' Apollo said. 'I miss you a lot.'",
+      "visual_prompt": "Training ground, Artemis sitting cross-legged working on her bow — Apollo sitting beside her, lyre propped against his knee, not performing, just present — the sibling dynamic clear and warm: two people who know each other completely, the bantering that is actually affection — Artemis's expression going from focused bow maintenance to something quieter at 'I missed you' — the exchange of four minutes / I miss you a lot shown as a beat between two people who communicate in specific shorthand — soft afternoon light, #87CEEB and #FFD700, warm sibling scene",
+      "bg_colors": ["#87CEEB", "#FFD700", "#FFF5C0"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 4,
+      "type": "development",
+      "title": "Apollo and Zeus",
+      "narration": "Zeus asked Apollo for advice. Apollo considered it carefully, then explained the situation back to Zeus in accurate detail, identified the three most important factors, explained each factor in full, ranked them by priority, and offered two possible courses of action with the tradeoffs of each clearly outlined. Zeus listened to all of it. When Apollo finished, Zeus said: 'So... the second one?' Apollo said: 'Yes. I said that at the beginning.' Zeus's crown listed left.",
+      "visual_prompt": "Zeus and Apollo in conversation, Zeus seated with his attention clearly engaged but increasingly glassy — Apollo standing and gesturing, the full organized explanation happening — a small visual sidebar showing what Apollo has covered: THREE FACTORS (all checked), TWO OPTIONS (both shown) — Zeus's expression going from attentive to politely overwhelmed — and then Zeus at the end: 'So... the second one?' — Apollo's reaction: gentle, accurate, slightly resigned — 'Yes. I said that at the beginning' — Zeus's crown listing left exactly as it always does — Archie visible, having fallen asleep at the start of the explanation and now awake again at the conclusion, timing perfect — #FFD700 and warm afternoon, cartoon ensemble timing",
+      "bg_colors": ["#FFD700", "#FFF5C0", "#87CEEB"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 5,
+      "type": "development",
+      "title": "Apollo and Achilles",
+      "narration": "Apollo watched Achilles do his coordination drills. Achilles waited for Apollo to say something. Apollo didn't say anything for a while. Then he played three notes on the lyre. Achilles stopped. The three notes had a rhythm. He tried the next drill sequence to that rhythm. It was faster. 'How did you do that?' Achilles said. 'Music is time,' Apollo said. 'Coordination is time. They're the same thing.' He played the three notes again. Achilles ran the sequence again. Faster again. 'I'll write it down for you,' Apollo said. 'It'll be a short song.'",
+      "visual_prompt": "Training ground, Achilles mid-coordination drill — Apollo watching, then playing three specific notes on the lyre — Achilles pausing, listening, then running the drill sequence to the rhythm of the notes — a visual rhythm indicator showing the timing relationship between the music and the drill, the coordination improving measurably — Achilles's expression: skeptical then genuinely engaged — Apollo's expression: warm and focused, actually useful — the three-note motif shown as a simple musical notation floating in the air — Archie watching with the expression of someone who has understood something about both music and coordination — #FFD700 and silver-gold afternoon",
+      "bg_colors": ["#FFD700", "#FFF5C0", "#87CEEB"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 6,
+      "type": "resolution",
+      "title": "The Short Song",
+      "narration": "Apollo kept his promise. He wrote Achilles a short song — twelve notes, a specific rhythm for the coordination sequence. He performed it once. It was thirty seconds long. 'That's short?' Achilles said. 'For me, yes,' Apollo said. Achilles looked at the notation. He practiced it. It worked exactly as Apollo said it would. 'Thank you,' Achilles said. Apollo smiled. 'You're welcome. Would you like the extended version? It has a bridge section that—' 'No,' Achilles said. 'This is the right amount of song,' Apollo said. 'Yes,' said Achilles. 'This is the right amount of song.'",
+      "visual_prompt": "Apollo handing Achilles a small scroll with the twelve-note musical notation — the scroll visibly short, Achilles looking at it with relief — then Achilles practicing with the rhythm, the coordination improvement visible — then the exchange: 'Thank you' / 'Would you like the extended version' / 'No' — both of them settling on 'this is the right amount of song' — Apollo genuinely pleased to have helped in precisely the right measure — Archie on Achilles's shoulder looking at the notation scroll with something that might be approval — warm afternoon, #FFD700 and gold, the twelve notes visible on the scroll, a gentle moment",
+      "bg_colors": ["#FFD700", "#C8A951", "#87CEEB"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 7,
+      "type": "tag",
+      "title": "The Departure Song",
+      "narration": "Apollo left the next morning. With a song. The departure song explained that he was leaving, that the visit had been good, that he would return, that the weather was still good, and that he had noticed several interesting things he hadn't mentioned yet but would cover on his next visit. It was five minutes and forty-two seconds long. Artemis, from her window, smiled for exactly the duration of the song. She didn't think anyone noticed. Archie noticed.",
+      "visual_prompt": "Apollo at the gate departing at sunrise — song in full performance, musical notes trailing — the ensemble watching: Zeus with the frozen smile again, Athena timing him on a new scroll (five minutes forty-two seconds visible), Hercules waving enthusiastically — Achilles in the back with his twelve-note notation scroll, the small smile of someone who has the one useful thing from this — and then: Artemis visible at her window high above, genuinely smiling for the full duration of the five-minutes-forty-two, a private smile she thinks no one can see — and Archie on the windowsill beside her, looking up at her, then back at Apollo, then back at her — #FFD700 and sunrise gold, warm departure",
+      "bg_colors": ["#FFD700", "#FF8C42", "#87CEEB"],
+      "duration_sec": 9
+    }
+  ],
+  "viral_hook": "Apollo arrived at Little Olympus with a four-minute song explaining he was visiting. Then gave Zeus a perfect two-option decision framework. Zeus picked the one Apollo mentioned first. Then Apollo wrote Achilles a thirty-second song that actually helps his coordination. Apollo is genuinely useful. It just takes a while.",
+  "highlight_scene": 3,
+  "highlight_note": "Artemis and Apollo — 'I missed you' / 'The song was four minutes long' / 'I miss you a lot.' The twins communicating in shorthand. The warmth in the specific.",
+  "short_title": "Apollo Is Genuinely Helpful. It Just Takes A While.",
+  "rewatch_bait": "Scene 7 — Artemis smiling the full five minutes forty-two seconds. The smile appears exactly when Apollo begins. It doesn't waver once. She has the best posture in Little Olympus and she held that smile without moving for the entire duration.",
+  "youtube_title": "The new god explains everything perfectly. It just takes five minutes longer than it needs to. | Little Olympus S2 EP5",
+  "lesson": "Being genuinely helpful and being concise are different skills. Apollo has the first one completely. He's working on the second.",
+  "arc_notes": "Apollo introduced. Running joke established: everything he says is accurate, everything takes three times as long as just saying it. Apollo-Achilles coordination music planted — the twelve-note rhythm will recur in training scenes going forward. Artemis-Apollo twin dynamic established — her smile in scene 7 is the warmth under her precision. The 'right amount of song' line is the episode's emotional resolution and a character thesis for Apollo: he can calibrate when he tries. Zeus crown still listing left."
+}

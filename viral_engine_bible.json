@@ -1,0 +1,153 @@
+{
+  "brand": "VIRAL ENGINE",
+  "subtitle": "AI Content Empire — 3 Channels · One Factory",
+  "bible_version": "1.0",
+  "created": "June 2026",
+  "tagline": "Three Channels. One Empire. Original mythology for kids. Epic history for adults. Original robot heroes for the next generation.",
+
+  "channels": {
+    "CH01": {
+      "name": "Little Olympus",
+      "emoji": "🏛️",
+      "category": "Kids · Ages 3–10",
+      "tagline": "Big Gods. Little Heroes. Epic Adventures.",
+      "concept": "Greek & Roman mythology retold as a kids animated universe. Think CoComelon meets Clash of the Titans. The gap nobody else is filling.",
+      "target_age": "3–10",
+      "platform": "YouTube Kids",
+      "strategic_gap": "Zero kids mythology channels at this quality level",
+      "comps": "CoComelon ($3B exit), Blippi",
+      "market_proof": "CoComelon switched to 3D 2017 → 2B monthly views 2018 → $3B sale",
+      "characters": [
+        {"name": "Little Zeus",    "emoji": "⚡", "role": "Energetic leader. Lightning bolt obsessed. Brave but reckless."},
+        {"name": "Baby Hercules",  "emoji": "💪", "role": "Doesn't know his own strength. Comic relief. Heart of gold."},
+        {"name": "Athena",         "emoji": "🦉", "role": "The strategist. Always has a plan. Educational voice of the group."},
+        {"name": "Little Perseus", "emoji": "🛡️", "role": "The brave kid hero. Audience surrogate. Never gives up."},
+        {"name": "Young Achilles", "emoji": "🏃", "role": "Fastest warrior kid. Fearless. Has a soft spot for his heel."},
+        {"name": "Mini Medusa",    "emoji": "🐍", "role": "Misunderstood villain. Recurring character. Kids love her."},
+        {"name": "Uncle Hades",    "emoji": "💀", "role": "Spooky but funny. The underworld uncle. Secretly helpful."}
+      ],
+      "episode_pipeline": [
+        {"ep": 1,  "title": "Little Zeus Gets His Thunderbolt",      "theme": "Origin · Adventure"},
+        {"ep": 2,  "title": "Baby Hercules and the Giant Snake",      "theme": "Strength · Comedy"},
+        {"ep": 3,  "title": "Perseus and the Tiny Medusa",           "theme": "Bravery · Adventure"},
+        {"ep": 4,  "title": "Athena's Big Idea",                     "theme": "Problem Solving · Education"},
+        {"ep": 5,  "title": "The First Olympic Games",               "theme": "Teamwork · Competition"},
+        {"ep": 6,  "title": "Achilles and His Magic Heel",           "theme": "Vulnerability · Courage"},
+        {"ep": 7,  "title": "Pandora's Curious Box",                 "theme": "Curiosity · Consequences"},
+        {"ep": 8,  "title": "Icarus Flies Too High",                 "theme": "Listening · Safety"},
+        {"ep": 9,  "title": "The Trojan Horse Trick",                "theme": "Cleverness · Strategy"},
+        {"ep": 10, "title": "Poseidon's Big Wave",                   "theme": "Nature · Respect"},
+        {"ep": 11, "title": "Little Hercules vs. the Hydra",         "theme": "Persistence · Teamwork"},
+        {"ep": 12, "title": "Prometheus Steals the Fire",            "theme": "Sacrifice · Kindness"},
+        {"ep": 13, "title": "Apollo's Golden Chariot Race",          "theme": "Speed · Responsibility"},
+        {"ep": 14, "title": "The Minotaur's Maze",                   "theme": "Fear · Friendship"},
+        {"ep": 15, "title": "Artemis and the Magic Bow",             "theme": "Focus · Independence"},
+        {"ep": 16, "title": "Orpheus and the Magic Song",            "theme": "Music · Love"},
+        {"ep": 17, "title": "The Cyclops Cave",                      "theme": "Wits · Escape"},
+        {"ep": 18, "title": "Ares Starts a Fight (And Loses)",       "theme": "Conflict Resolution"},
+        {"ep": 19, "title": "Little Odysseus Gets Lost",             "theme": "Navigation · Home"},
+        {"ep": 20, "title": "Zeus vs. the Titans — The Final Battle","theme": "Season Finale · Epic"}
+      ],
+      "revenue_streams": [
+        {"stream": "YouTube AdSense",    "timeline": "Month 3+",   "est_monthly": "$500–$8,000",     "notes": "Scales with views, evergreen RPM"},
+        {"stream": "Amazon Kids+",       "timeline": "Month 12+",  "est_monthly": "$2,000–$10,000",  "notes": "Flat fee or revenue share"},
+        {"stream": "Merchandise",        "timeline": "Month 18+",  "est_monthly": "$3,000–$30,000",  "notes": "Plush toys, apparel, bedding"},
+        {"stream": "Brand Sponsorships", "timeline": "Month 8+",   "est_monthly": "$1,000–$15,000",  "notes": "STEM toys, learning apps"},
+        {"stream": "IP Acquisition",     "timeline": "Year 3–5",   "est_monthly": "$10M–$100M+ exit","notes": "Build to sell like CoComelon"}
+      ]
+    },
+
+    "CH02": {
+      "name": "Gods & Glory",
+      "emoji": "⚔️",
+      "category": "Teens & Adults · Epic History",
+      "tagline": "Cinematic AI documentaries on Greek mythology, Roman Empire, Spartan warriors, Norse gods.",
+      "concept": "The History Channel meets 300 meets YouTube. Premium cinematic documentary. High RPM, sponsorship goldmine.",
+      "target_age": "Teens & Adults",
+      "platform": "Main YouTube",
+      "ad_rpm": "$8–15",
+      "comp_monthly": "$80K+ (Fern TV comparable)",
+      "note": "Previously named Empire Decoded — same concept, elevated brand",
+      "content_pillars": [
+        {"name": "Greek Mythology",   "emoji": "🏛️", "desc": "Zeus, Hercules, Perseus, Medusa, Titans, Olympus. The original cinematic universe."},
+        {"name": "Roman Empire",      "emoji": "🦅", "desc": "Caesar, Augustus, gladiators, legions. Rise and fall. Cinematic gold."},
+        {"name": "Spartan Warriors",  "emoji": "🛡️", "desc": "300 energy. Thermopylae. Spartan culture. Proven viral category."},
+        {"name": "Norse Mythology",   "emoji": "⚡", "desc": "Thor, Odin, Ragnarok, Vikings. Massive Marvel crossover audience."},
+        {"name": "Lost Civilizations","emoji": "🏺", "desc": "Troy, Atlantis, Carthage. Mystery angle drives massive click rates."},
+        {"name": "Epic Battles",      "emoji": "⚔️", "desc": "Thermopylae, Cannae, Marathon, Actium. Higgsfield renders them all."}
+      ],
+      "sponsorship_targets": [
+        {"brand": "Audible",         "rate": "$15K–$30K/episode"},
+        {"brand": "NordVPN",         "rate": "History niche staple"},
+        {"brand": "Curiosity Stream","rate": "Perfect audience match"},
+        {"brand": "Squarespace",     "rate": "History channel standard"},
+        {"brand": "Brilliant.org",   "rate": "Education + history overlap"},
+        {"brand": "MasterClass",     "rate": "Premium audience match"}
+      ]
+    },
+
+    "CH03": {
+      "name": "Mech Legends",
+      "emoji": "🤖",
+      "category": "Kids · Ages 4–12 · Original IP",
+      "tagline": "Original robot heroes. 90s Transformers energy for the next generation.",
+      "concept": "100% owned IP — no licensing risk, full merchandise rights, acquisition potential. Transforming vehicles, epic battles, toyetic characters.",
+      "target_age": "4–12",
+      "platform": "YouTube Kids",
+      "ip_ownership": "100% original — no Hasbro, no licensing",
+      "note": "Previously named Iron Legends — characters updated to toyetic vehicle-transformers",
+      "market_proof": "Hasbro launched Transformers: Cyberworld July 2025. Hasbro Legends nostalgia service projecting 70M homes. He-Man movie 2026.",
+      "comp_monthly": "$1.3M (DaFuq Boom comparable)",
+      "exit_potential": "$500M+ robot IP acquisition",
+      "characters": {
+        "heroes": [
+          {"name": "BLAZE",   "emoji": "🔴", "vehicle": "Red fire truck → race car", "role": "Brave leader. Never backs down."},
+          {"name": "STORM",   "emoji": "🔵", "vehicle": "Blue helicopter",            "role": "Fast, smart, strategic. The brains."},
+          {"name": "GRANITE", "emoji": "🟢", "vehicle": "Green bulldozer",            "role": "Massive strength. Gentle giant. Funny one."},
+          {"name": "NOVA",    "emoji": "⚪", "vehicle": "Silver rocket",              "role": "The scientist. Builds gadgets. Solves problems."}
+        ],
+        "villains": [
+          {"name": "RUMBLE", "emoji": "🟣", "vehicle": "Dark purple crusher", "role": "Wants to rule everything. DRAMATIC. OVERWHELMING."},
+          {"name": "BOLT",   "emoji": "⚫", "vehicle": "Black lightning bolt",  "role": "Rumble's sneaky sidekick. Small, fast, always causing trouble."}
+        ]
+      },
+      "ip_roadmap": [
+        {"phase": 1, "action": "Launch channel, build audience, establish characters", "timeline": "Month 1–6",   "value": "Ad revenue + brand building"},
+        {"phase": 2, "action": "Design toy prototypes — characters built toyetically",  "timeline": "Month 6–12",  "value": "Licensing prep"},
+        {"phase": 3, "action": "Approach toy manufacturers / Amazon seller launch",     "timeline": "Month 12–18", "value": "$10K–$100K/month merch"},
+        {"phase": 4, "action": "License to streaming platforms (Amazon Kids+, Kidoodle)","timeline": "Month 18–24","value": "$50K–$200K deals"},
+        {"phase": 5, "action": "IP acquisition by Hasbro, Moonbug, or private equity",  "timeline": "Year 3–5",   "value": "$50M–$500M+ exit"}
+      ]
+    }
+  },
+
+  "ai_factory": {
+    "agents": [
+      {"name": "Scout Agent",     "role": "Trend research — scans YouTube, TikTok, social every Monday", "tool": "Claude + Web Search",    "status": "ready"},
+      {"name": "Script Agent",    "role": "Episode scripts, hooks, SEO copy for all 3 channels",          "tool": "Claude API",             "status": "ready"},
+      {"name": "Director Agent",  "role": "Shot-by-shot visual briefs formatted for Higgsfield",          "tool": "Claude API + Higgsfield","status": "connected"},
+      {"name": "Voice Agent",     "role": "AI narration per channel tone",                                "tool": "ElevenLabs",             "status": "setup_needed"},
+      {"name": "Crosspost Agent", "role": "12-platform simultaneous publishing",                          "tool": "CrossPost AI",           "status": "in_development"},
+      {"name": "Analytics Agent", "role": "Performance tracking + learning loop",                         "tool": "Viral Engine Dashboard",  "status": "in_development"}
+    ],
+    "tech_stack": [
+      {"layer": "Research",     "tool": "Claude + Web Search", "status": "ready"},
+      {"layer": "Scripting",    "tool": "Claude API",          "status": "ready"},
+      {"layer": "Visuals",      "tool": "Higgsfield AI",       "status": "connected"},
+      {"layer": "Voice",        "tool": "ElevenLabs",          "status": "setup_needed"},
+      {"layer": "Avatar",       "tool": "HeyGen",              "status": "api_key_needed"},
+      {"layer": "Distribution", "tool": "CrossPost AI",        "status": "in_development"},
+      {"layer": "Analytics",    "tool": "Viral Engine App",    "status": "in_development"},
+      {"layer": "AI Intel",     "tool": "Gemini API",          "status": "api_key_needed"}
+    ]
+  },
+
+  "revenue_projections": {
+    "month_6":  {"range": "$2K–$7K/month",    "source": "All 3 channels"},
+    "month_12": {"range": "$11K–$31K/month",  "source": "Ads + licensing"},
+    "month_24": {"range": "$50K–$150K/month", "source": "Full stack"},
+    "exit":     {"range": "$25M–$630M",       "timeline": "Year 3–5", "source": "IP acquisition"}
+  },
+
+  "saved_utc": "2026-06-16T00:00:00Z"
+}

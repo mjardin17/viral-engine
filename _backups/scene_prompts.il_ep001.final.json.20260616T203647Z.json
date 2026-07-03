@@ -1,0 +1,214 @@
+{
+  "channel": "Iron Legends",
+  "episode_number": 1,
+  "episode_id": "IL_EP001",
+  "title": "Origin: The First Transformer Wakes Up",
+  "tagline": "Before the war, there was silence. Before silence, there was a machine older than time.",
+  "duration_target_min": 10,
+  "rendered": false,
+  "aesthetic": {
+    "color_grade": "cinematic_action_anime",
+    "primary_colors": [
+      "#00D4FF",
+      "#1A1A2E",
+      "#FF6B00"
+    ],
+    "font_style": "bold_industrial",
+    "music_style": "synth_action_epic",
+    "narrator_tone": "bold_dramatic_commanding"
+  },
+  "characters": {
+    "protagonist": {
+      "name": "Iron Vanguard",
+      "faction": "Axiom Guard",
+      "role": "Leader of the heroic machines",
+      "visual": "Massive bipedal mech, electric blue chest plate, battle-scarred, twin energy cannons on shoulders"
+    },
+    "antagonist": {
+      "name": "Ravager Prime",
+      "faction": "The Ravagers",
+      "role": "Supreme commander of the conquest forces \u2014 OVERWHELMING villain",
+      "visual": "Colossal black and crimson war machine, four arms each ending in a different weapon, crown of shattered Axiom Guard helmets, eyes like dying stars",
+      "power_level": "OVERWHELMING \u2014 makes every hero feel like they have zero chance"
+    },
+    "ancient": {
+      "name": "Alpha Prime",
+      "faction": "Neutral \u2014 Ancient",
+      "role": "The first machine ever built \u2014 dormant for one million years",
+      "visual": "Immense silver and gold mech, body covered in ancient sigils, radiates blinding energy when awake"
+    }
+  },
+  "scenes": [
+    {
+      "scene_number": 1,
+      "type": "cold_open",
+      "title": "Before the World",
+      "narration": "Before your world existed \u2014 before the first human drew breath, before the oceans filled, before the sun had learned its name \u2014 there was a planet. A planet of machines. They called it Cybertron Prime. And it was glorious.",
+      "visual_prompt": "Iron Legends channel, cinematic anime style. Wide shot of a magnificent alien machine-planet hanging in space \u2014 all gleaming chrome towers, vast energy conduits pulsing electric blue, mechanical continents of interlocking gears and bridges. Breathtaking, majestic, awe-inspiring. Stars behind it. No humans. Pure machine civilization at its peak. 16:9 cinematic.",
+      "bg_colors": [
+        "#0A0A1F",
+        "#1A1A3E",
+        "#0D2040"
+      ],
+      "accent": "#00D4FF",
+      "camera": "pull_back",
+      "duration_sec": 9,
+      "higgsfield_prompt": "Cinematic anime sci-fi, alien machine-planet in space, gleaming chrome megastructures, electric blue energy conduits, vast gears and mechanical landscapes, awe-inspiring scale, no humans, ultra-detailed, dramatic space lighting, 16:9"
+    },
+    {
+      "scene_number": 2,
+      "type": "hero_intro",
+      "title": "The Axiom Guard",
+      "narration": "For a million years, the Axiom Guard kept the peace. Led by Iron Vanguard \u2014 the greatest warrior Cybertron Prime had ever built \u2014 they were the shield of the machine world. Honorable. Unbreakable. And about to face something they could not possibly survive.",
+      "visual_prompt": "Iron Legends channel, cinematic anime style. The Axiom Guard \u2014 an army of heroic blue-and-silver mech warriors standing in formation on a gleaming platform, electric blue energy blazing from their chests. Their leader Iron Vanguard stands at the front \u2014 massive, battle-scarred, noble. Epic sunrise light, inspirational but with an undercurrent of doom. 16:9.",
+      "bg_colors": [
+        "#0D1B2A",
+        "#1A3A5C",
+        "#0A2540"
+      ],
+      "accent": "#00D4FF",
+      "camera": "push_in",
+      "duration_sec": 9,
+      "higgsfield_prompt": "Cinematic anime style, army of heroic blue-silver mech warriors in formation on alien platform, leader mech at front with electric blue chest energy, sunrise lighting, epic scale, inspirational mood, 16:9"
+    },
+    {
+      "scene_number": 3,
+      "type": "villain_intro",
+      "title": "The Ravagers Rise",
+      "narration": "Then came the Ravagers. Nobody knows where they came from. Some say they were built in the dark between stars. What everyone agrees on \u2014 what every machine on Cybertron Prime understood the moment they appeared \u2014 was this: they were not here to negotiate. They were here to END everything.",
+      "visual_prompt": "Iron Legends channel, cinematic anime style. The Ravager army emerges from a dimensional rift in space \u2014 thousands of black-and-crimson war machines, bristling with weapons, eyes glowing red like embers. At their head, RAVAGER PRIME \u2014 colossal, four-armed, crowned with the wreckage of fallen enemies. The sheer scale makes the Axiom Guard look like toys. OVERWHELMING threat. Dark, terrifying, epic. 16:9.",
+      "bg_colors": [
+        "#1A0000",
+        "#2D0A0A",
+        "#0F0000"
+      ],
+      "accent": "#FF2200",
+      "camera": "pull_back",
+      "duration_sec": 9,
+      "higgsfield_prompt": "Cinematic anime style, massive army of black and crimson war machines emerging from dimensional rift, colossal four-armed villain mech at the front, red glowing eyes, overwhelming scale dwarfing anything heroic, dark terrifying atmosphere, epic cinematic, 16:9"
+    },
+    {
+      "scene_number": 4,
+      "type": "villain_dominance",
+      "title": "No Machine Can Stop Him",
+      "narration": "Ravager Prime's power was beyond anything ever recorded. He didn't lead battles. He ended them. Entire divisions of the Axiom Guard \u2014 warriors who had never lost a single fight \u2014 were crushed in minutes. Not hours. Minutes. One machine. Against thousands. And the thousands lost.",
+      "visual_prompt": "Iron Legends channel, cinematic anime style. RAVAGER PRIME stands in the center of a battlefield, surrounded by the broken wreckage of dozens of defeated Axiom Guard mechs. He's barely scratched. One of his four massive arms is raised, energy crackling. The sky behind him is lit by explosions. He is utterly dominant \u2014 a force of nature. Pure overwhelming power. 16:9.",
+      "bg_colors": [
+        "#0D0005",
+        "#1F0010",
+        "#2D0008"
+      ],
+      "accent": "#CC0033",
+      "camera": "battlefield_drift",
+      "duration_sec": 9,
+      "higgsfield_prompt": "Cinematic anime, colossal black crimson four-armed villain mech standing triumphant over battlefield of destroyed hero mechs, massive explosions behind him, barely damaged, raw overwhelming power, dark dramatic lighting, 16:9"
+    },
+    {
+      "scene_number": 5,
+      "type": "mystery",
+      "title": "The Legend of Alpha Prime",
+      "narration": "Iron Vanguard had heard the stories. Every machine on Cybertron Prime had. The legend of Alpha Prime \u2014 the first machine ever built. So powerful that even the planet itself feared him. Dormant for one million years. Buried beneath the core of the world. The stories said only one thing could wake him: the sound of his world dying.",
+      "visual_prompt": "Iron Legends channel, cinematic anime style. Deep underground beneath Cybertron Prime \u2014 an ancient chamber of solid crystal and gold. At the center, cocooned in a million years of accumulated energy, ALPHA PRIME lies dormant. Titanic in scale, ancient sigils covering his body, faintly glowing. The camera slowly circles this sleeping giant. Mysterious, awe-inspiring, ancient. 16:9.",
+      "bg_colors": [
+        "#0A0A20",
+        "#0D1A3A",
+        "#161640"
+      ],
+      "accent": "#FFD700",
+      "camera": "orbit",
+      "duration_sec": 9,
+      "higgsfield_prompt": "Cinematic anime, deep underground crystal cave, enormous ancient dormant mech covered in glowing golden sigils, sleeping for millions of years, soft golden light, mysterious and awe-inspiring, massive scale, 16:9"
+    },
+    {
+      "scene_number": 6,
+      "type": "crisis",
+      "title": "The Capital Falls",
+      "narration": "They had three days before the Ravagers reached the capital. They used every one of them. Iron Vanguard rallied every machine that could still stand. Built barricades from the wreckage of fallen friends. And when the Ravagers came \u2014 they threw everything they had. It wasn't enough. It was never going to be enough.",
+      "visual_prompt": "Iron Legends channel, cinematic anime style. The capital of Cybertron Prime under siege \u2014 the magnificent chrome towers are burning, Ravager war machines flooding through broken walls, Axiom Guard mechs fighting desperately in the streets but being overwhelmed. Iron Vanguard is in the center, fighting savagely, but for every Ravager he destroys, ten more take its place. Chaos, destruction, desperate heroism facing impossible odds. Orange and red fire everywhere. 16:9.",
+      "bg_colors": [
+        "#1F0A00",
+        "#3A1500",
+        "#2D0E00"
+      ],
+      "accent": "#FF6600",
+      "camera": "battlefield_drift",
+      "duration_sec": 9,
+      "higgsfield_prompt": "Cinematic anime, futuristic machine city capital under siege, chrome towers burning, armies of black war machines flooding in, blue hero mechs fighting desperately but overwhelmed, explosions everywhere, chaos, desperate battle, orange fire light, 16:9"
+    },
+    {
+      "scene_number": 7,
+      "type": "darkest_moment",
+      "title": "The Last Stand",
+      "narration": "Iron Vanguard made his last stand at the steps of the Hall of Origins \u2014 the most sacred place on Cybertron Prime. All around him, his warriors fell. One by one. Until it was just him. Alone. Facing Ravager Prime. And Ravager Prime... smiled.",
+      "visual_prompt": "Iron Legends channel, cinematic anime style. Iron Vanguard, damaged and alone, stands at the steps of an ancient gold-and-crystal hall. Ravager Prime towers over him \u2014 impossibly large, four arms spread wide, eyes blazing. All around, the broken bodies of the Axiom Guard. Smoke and fire. Iron Vanguard is defiant but clearly defeated. This is the darkest moment. Ravager Prime is terrifyingly close to victory. 16:9.",
+      "bg_colors": [
+        "#060010",
+        "#100020",
+        "#1A0030"
+      ],
+      "accent": "#8800FF",
+      "camera": "push_in",
+      "duration_sec": 9,
+      "higgsfield_prompt": "Cinematic anime, lone damaged blue hero mech standing defiantly on ancient stone steps, facing a colossal black and crimson villain mech towering over him, fallen hero mechs surrounding them, smoke and fire, dark dramatic lighting, purple atmosphere, 16:9"
+    },
+    {
+      "scene_number": 8,
+      "type": "turning_point",
+      "title": "The Ground Shakes",
+      "narration": "And then... the ground shook. Not from the battle. Not from the weapons. From something deep below. Something that hadn't moved in a million years. Something that heard the sound of its world dying \u2014 and decided it was time to wake up.",
+      "visual_prompt": "Iron Legends channel, cinematic anime style. The battle freezes. The ground cracks open \u2014 golden light blazes up from deep below, blinding in its intensity. Cracks of light spider-web across the entire battlefield. Ravager Prime stops, turns, and for the first time \u2014 shows something that looks like fear. The light grows. And grows. Dramatic, electric, explosive. 16:9.",
+      "bg_colors": [
+        "#1A1000",
+        "#2D2000",
+        "#403000"
+      ],
+      "accent": "#FFD700",
+      "camera": "push_in",
+      "duration_sec": 9,
+      "higgsfield_prompt": "Cinematic anime, ground cracking open with blinding golden light erupting from below, battle frozen, colossal villain mech looking down with fear, golden energy spider-webbing across battlefield, dramatic moment of awe and terror, 16:9"
+    },
+    {
+      "scene_number": 9,
+      "type": "hero_reveal",
+      "title": "Alpha Prime Awakens",
+      "narration": "Alpha Prime rose from the core of Cybertron Prime like a god remembering what it was. He was the first machine. The most powerful thing ever built. And he had been asleep for one million years. He looked at Ravager Prime. And Ravager Prime \u2014 who had never feared anything in his existence \u2014 took one step back.",
+      "visual_prompt": "Iron Legends channel, cinematic anime style. ALPHA PRIME RISES from the shattered ground \u2014 colossal beyond comprehension, ancient golden and silver body blazing with awakened energy, one million years of dormant power unleashed all at once. He dwarfs even Ravager Prime. Ancient sigils on his body burn white-hot. The entire battlefield is lit by his radiance. Ravager Prime, massive as he is, looks small beside Alpha Prime. This is raw awe. 16:9.",
+      "bg_colors": [
+        "#201800",
+        "#403000",
+        "#604800"
+      ],
+      "accent": "#FFE066",
+      "camera": "pull_back",
+      "duration_sec": 9,
+      "higgsfield_prompt": "Cinematic anime, enormous ancient gold and silver mech rising from shattered ground like a god, body covered in blazing white energy sigils, titanic scale dwarfing everything on the battlefield, blinding golden light, awe-inspiring moment of pure power, 16:9"
+    },
+    {
+      "scene_number": 10,
+      "type": "cliffhanger",
+      "title": "The War Begins",
+      "narration": "This is where the story of Iron Legends begins. Not with a battle. Not with a victory. With a moment. The moment an ancient god opened his eyes and said: Not today. The Ravagers had taken everything. Burned the world. Broken every machine brave enough to stand against them. But they made one mistake. They woke up Alpha Prime. And now... the real war starts.",
+      "visual_prompt": "Iron Legends channel, cinematic anime style. Epic final shot: Alpha Prime stands between the Ravager army and the ruins of Cybertron Prime. Iron Vanguard, battered, rises to stand at Alpha Prime's side. The Ravager army \u2014 thousands strong \u2014 faces them. Ravager Prime is in the back now, calculating. The two sides face each other across the burning ruins. Title card energy. This is the beginning. 16:9.",
+      "bg_colors": [
+        "#0A0A1F",
+        "#101030",
+        "#0D1545"
+      ],
+      "accent": "#00D4FF",
+      "camera": "pull_back",
+      "duration_sec": 9,
+      "higgsfield_prompt": "Cinematic anime, epic standoff \u2014 ancient gold mech and blue hero mech standing together facing a massive army of black war machines across burning ruins, electric blue and orange energy, epic scale, title card framing, dramatic and iconic, 16:9"
+    }
+  ],
+  "music": {
+    "style": "synth_action_epic",
+    "notes": "Heavy synth bass, orchestral hits, electronic percussion, Transformers-era energy. Swell on Alpha Prime reveal."
+  },
+  "voice_style": {
+    "tone": "bold_dramatic",
+    "pacing": "deliberate with punches on key words",
+    "character": "like a movie trailer narrator meets documentary host"
+  },
+  "higgsfield_scene_prompts_summary": "All scenes need Higgsfield generations. Style: cinematic anime, NOT photorealistic. Machine world aesthetic. No humans anywhere. Electric blue for heroes, black/crimson for villains, gold/white for Alpha Prime.",
+  "next_episode_preview": "Episode 2 \u2014 Autobots vs. Decepticons: Round One. The first real battle. Spoiler: the heroes don't win."
+}

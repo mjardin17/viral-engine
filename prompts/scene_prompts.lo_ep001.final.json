@@ -1,0 +1,251 @@
+{
+  "channel": "LO",
+  "episode_number": 1,
+  "episode_id": "LO_EP001",
+  "title": "Little Zeus Gets His Thunderbolt",
+  "tagline": "Every hero needs their first adventure. Even the king of the gods.",
+  "duration_target_min": 17,
+  "aesthetic": {
+    "color_grade": "bright_kids_cartoon",
+    "primary_colors": ["#FFD700", "#1A1060", "#00B4E6", "#FF6B35"],
+    "font_style": "rounded_chunky_bold",
+    "music_style": "upbeat_kids_adventure",
+    "narrator_tone": "warm_playful_encouraging"
+  },
+  "characters": {
+    "hero": { "name": "Little Zeus", "visual": "Small boy with wild curly white hair, tiny golden crown, big bright blue eyes, white toga with gold trim" },
+    "sidekick": { "name": "Baby Hercules", "visual": "Chubby toddler with enormous arms, tiny lion-skin cape, confused happy expression, always accidentally breaking things" },
+    "mentor": { "name": "Athena", "visual": "Girl with grey-streaked hair, tiny owl on shoulder, big glasses, holding a scroll, always three steps ahead" },
+    "villain": { "name": "Stormy the Storm Cloud", "visual": "Big dark grey cartoon cloud with a grumpy but secretly sad face, lightning crackling around it" }
+  },
+  "scenes": [
+    {
+      "scene_number": 1,
+      "type": "cold_open",
+      "title": "Welcome to Mount Olympus",
+      "narration": "Way up above the clouds — higher than birds, higher than kites, higher than even the tallest mountain — there is a place called Mount Olympus. And on Mount Olympus, the gods live. Now, most people think the gods are very serious, very powerful, and very grown-up. Most people have never met Little Zeus. Because Little Zeus is eight years old. And he is about to have the WORST morning of his entire life.",
+      "visual_prompt": "Little Olympus kids cartoon style. Sweeping aerial view of magical Mount Olympus at sunrise — fluffy white clouds, gleaming golden temples, rainbow bridges, tiny waterfalls, flowers blooming on impossible cliff edges. Everything is bright, colorful, and impossibly beautiful. A tiny golden palace sits at the very top. Big expressive cartoon style. Warm sunrise colors. Epic but cute. 16:9.",
+      "bg_colors": ["#87CEEB", "#FFD700", "#FF6B35"],
+      "duration_sec": 45
+    },
+    {
+      "scene_number": 2,
+      "type": "setup",
+      "title": "Zeus's Perfect Morning Routine",
+      "narration": "Every single morning, Little Zeus did the exact same thing. First, he jumped out of bed. Then he ate twelve breakfast olives — don't judge him, that's normal on Olympus. Then he put on his tiny golden crown — which always went on sideways no matter what he did. And then, finally, he checked on his thunderbolt. The thunderbolt was his most prized possession. His dad had given it to him. It lived on a special golden stand right next to his bed. It was always there. Always. Until today.",
+      "visual_prompt": "Little Olympus kids cartoon style. Montage of Zeus's morning routine in a bright cartoon bedroom on Olympus. Panel 1: Zeus jumping energetically out of fluffy cloud-bed. Panel 2: Zeus eating olives with maximum enthusiasm. Panel 3: Zeus trying to straighten his crooked tiny golden crown (it goes sideways again). Panel 4: Zeus walking toward a glowing golden thunderbolt stand. Big expressive faces. Warm cozy colors. Super fun cartoon style. 16:9.",
+      "bg_colors": ["#FFF8DC", "#FFD700", "#87CEEB"],
+      "duration_sec": 45
+    },
+    {
+      "scene_number": 3,
+      "type": "hook",
+      "title": "THE THUNDERBOLT IS GONE",
+      "narration": "The stand was empty. Little Zeus stared at it. He blinked. He rubbed his eyes. He looked behind the stand. He looked UNDER the stand. He looked inside his pillow. He looked inside his twelve breakfast olives. The thunderbolt was GONE. Not misplaced. Not hiding. Gone. And here is the thing you need to understand about a thunderbolt: it is not just a cool glowing stick. It controls all the lightning in the world. Without it, no storms. No lightning. No electricity. Which means — no toasted olives. This was a crisis.",
+      "visual_prompt": "Little Olympus kids cartoon style. Little Zeus stares at an EMPTY golden thunderbolt stand with the most dramatic shocked expression ever seen on a child. Eyes wide as dinner plates. Mouth hanging open. He dramatically searches under pillows, behind curtains, inside his breakfast bowl. Each search gets more frantic and silly. Big cartoon expressions. Bright bedroom light making the empty stand look extra tragic. 16:9.",
+      "bg_colors": ["#FFE4B5", "#FF6B35", "#FFD700"],
+      "duration_sec": 45
+    },
+    {
+      "scene_number": 4,
+      "type": "action",
+      "title": "The Great Search Begins",
+      "narration": "Little Zeus searched every single corner of his palace. He checked the throne room. He checked the kitchen. He checked the room where they kept all the clouds. He even checked the room that nobody was supposed to go in — the one with the label that said 'ABSOLUTELY NO THUNDERBOLTS IN HERE, WE MEAN IT.' It was not there either. He was running out of places to look. And he was running out of ideas. Which meant it was time to do the one thing every hero does when they run out of ideas: go find their friends.",
+      "visual_prompt": "Little Olympus kids cartoon style. Zeus frantically searching through a series of increasingly ridiculous palace rooms. He searches an enormous throne room, a kitchen full of magical food, a room stuffed wall to wall with clouds, and finally a room with a very suspicious sign on the door. Each room he bursts into and searches with maximum dramatic energy. Cartoon style, bright colors, exaggerated expressions. 16:9.",
+      "bg_colors": ["#87CEEB", "#FFD700", "#98FB98"],
+      "duration_sec": 45
+    },
+    {
+      "scene_number": 5,
+      "type": "comedy",
+      "title": "Hephaestus Has No Idea",
+      "narration": "Zeus's first stop was the workshop of Hephaestus — the god of the forge, and the person who had actually built the thunderbolt in the first place. Hephaestus was very busy. He was building something extremely large that appeared to be on fire, which was normal for his workshop. He listened very carefully to Zeus's problem. Then he said, very helpfully: 'Have you checked behind the sofa?' Zeus had not checked behind the sofa. He went back and checked behind the sofa. It was not there. He had also found three drachmas and a very old sandwich. Not helpful.",
+      "visual_prompt": "Little Olympus kids cartoon style. Zeus visits a spectacular magical forge workshop, fire and sparks everywhere, giant glowing inventions in progress. Hephaestus, a stocky god in a leather apron with a big friendly face, listens to Zeus with flour on his hands (from what, nobody knows). He points thoughtfully to the side with his hammer. Next panel: Zeus looking extremely disappointed behind a sofa, holding a very old sandwich. Bright cartoon colors. 16:9.",
+      "bg_colors": ["#FF6B35", "#8B4513", "#FFD700"],
+      "duration_sec": 45
+    },
+    {
+      "scene_number": 6,
+      "type": "comedy",
+      "title": "Poseidon Is Not Helpful",
+      "narration": "Zeus's next stop was the ocean palace of his uncle Poseidon — god of the sea. Poseidon was also very busy. He was reorganizing which direction all the waves went, which apparently takes enormous concentration. Zeus explained the situation about the missing thunderbolt. Poseidon scratched his enormous beard thoughtfully. Then he said: 'I once lost my trident for three whole weeks. It was inside a whale the whole time. Have you checked inside a whale?' Zeus had not checked inside a whale. Zeus was not going to check inside a whale. This was not the help he needed.",
+      "visual_prompt": "Little Olympus kids cartoon style. Zeus visits a spectacular underwater-looking palace with glowing sea light and bubble decorations. Poseidon, a big jolly god with an enormous blue beard and a massive trident, listens to Zeus and then points knowingly toward the ocean horizon with a very proud expression. Zeus stares at him with a flat, unamused expression. Background whale in the distance looks suspiciously guilty. Cartoon style, ocean colors, very funny. 16:9.",
+      "bg_colors": ["#00B4E6", "#1A1060", "#87CEEB"],
+      "duration_sec": 45
+    },
+    {
+      "scene_number": 7,
+      "type": "action",
+      "title": "Baby Hercules to the Rescue (Sort Of)",
+      "narration": "There was one more friend to try: Baby Hercules. Zeus found him in the garden. Baby Hercules was the strongest child who had ever lived or would ever live. He was so strong that by accident, before breakfast, he had already picked up a very large boulder, thrown it into the sea, and accidentally given three dolphins a very exciting morning. When Zeus told him about the missing thunderbolt, Hercules's face lit up. He loved solving problems. He was absolutely terrible at solving problems. But he loved it. He cracked his enormous little knuckles. 'I'll help,' he said. Zeus immediately felt both better and worse.",
+      "visual_prompt": "Little Olympus kids cartoon style. Bright sunny garden on Mount Olympus. Baby Hercules, an incredibly muscular toddler in a tiny lion cape, stands happily next to a hole in the garden where a boulder used to be. Three distant dolphins in the sea jump in the background. Zeus runs up looking desperate. Hercules hears the problem, cracks his knuckles with a determined grin. Zeus's expression is hopeful and terrified at the same time. Cartoon style, bright garden colors. 16:9.",
+      "bg_colors": ["#98FB98", "#87CEEB", "#FFD700"],
+      "duration_sec": 45
+    },
+    {
+      "scene_number": 8,
+      "type": "comedy",
+      "title": "Hercules Helps (Incorrectly)",
+      "narration": "Hercules's idea was to search the whole garden by picking up everything in it and shaking it, to see if the thunderbolt fell out. This worked in the sense that they found seven lost sandals, a map nobody recognized, and something that turned out to be a very confused hedgehog. It did not work in the sense of finding the thunderbolt. It did work in the sense of rearranging the entire garden into a completely different shape, which the garden had opinions about. There was a lot of yelling, mostly from the flowers. This is why Baby Hercules always needs supervision. Unfortunately, he had none.",
+      "visual_prompt": "Little Olympus kids cartoon style. Baby Hercules, extremely enthusiastic and thoroughly unsupervised, picks up various large garden objects — a stone fountain, a row of topiaries, an entire flower bed — and shakes them vigorously looking for the thunderbolt. Objects fly in all directions. Lost sandals rain from the sky. A confused hedgehog blinks. Flowers appear to be yelling. Zeus stands to one side watching with wide horrified eyes. Extremely chaotic and funny. Bright garden colors. 16:9.",
+      "bg_colors": ["#98FB98", "#FF6B35", "#FFD700"],
+      "duration_sec": 45
+    },
+    {
+      "scene_number": 9,
+      "type": "pivot",
+      "title": "Athena Already Knows",
+      "narration": "Zeus and Hercules found Athena sitting calmly on the steps of the library, reading a scroll. She did not look up when they arrived. She did not look up when Hercules tripped over a step and fell down with a noise like a thousand pots falling down a staircase. She simply said, turning a page: 'I know about the thunderbolt. I've been watching the storm clouds since dawn. Sit down. Both of you. There's something you need to see.' Zeus sat down immediately. Hercules sat down so hard the steps cracked a little. Athena finally looked up. She pointed at the sky. And there — in the middle of an enormous dark storm cloud — was a golden glow.",
+      "visual_prompt": "Little Olympus kids cartoon style. Athena, smart girl with grey-streaked hair, owl on shoulder, sits calmly on library steps reading a scroll as Zeus and Hercules crash up chaotically behind her. She doesn't flinch. She closes the scroll with a satisfied click, turns, and points upward with one finger. Both boys follow her gaze to the sky where a large grumpy storm cloud glows golden from within. Athena's expression: completely unsurprised. Boys: completely surprised. 16:9.",
+      "bg_colors": ["#B0C4DE", "#1A1060", "#FFD700"],
+      "duration_sec": 45
+    },
+    {
+      "scene_number": 10,
+      "type": "reveal",
+      "title": "Meet Stormy the Storm Cloud",
+      "narration": "The cloud's name was Stormy. Athena had already looked him up in her encyclopedia of weather phenomena, which she carried everywhere, because of course she did. Stormy was one of the oldest storm clouds on Olympus. He had been making lightning and rain for two hundred years. He knew every part of the sky. He had seen every season. And lately, nobody had noticed him at all. Not the gods. Not the people below. Nobody looked up anymore. Nobody thanked him for the rain. Nobody jumped in his puddles. So Stormy had done something drastic. He had borrowed the one thing guaranteed to make everyone pay attention.",
+      "visual_prompt": "Little Olympus kids cartoon style. Close-up on the enormous grumpy storm cloud Stormy, high in the sky above Olympus. His face is a masterpiece of dramatic grumpy emotion — furrowed brow, pouty mouth, crackling lightning eyebrows. He holds the tiny golden thunderbolt in one wispy cloud-arm. Behind him, the sky is dark purple and dramatic. But if you look carefully at his eyes, he looks a little bit sad, not just angry. Cartoon style, very expressive. 16:9.",
+      "bg_colors": ["#4A4A8A", "#2A2A6A", "#FFD700"],
+      "duration_sec": 45
+    },
+    {
+      "scene_number": 11,
+      "type": "action",
+      "title": "First Attempt: Zeus Flies Up",
+      "narration": "Zeus had a plan. It was a very straightforward plan. He would fly up to the cloud, ask for the thunderbolt back nicely, and that would be that. He took a running start. He jumped. He flew upward with great confidence and excellent hair. He reached Stormy. He said, in his most kingly voice: 'Please give it back.' Stormy stared at him for three full seconds. Then Stormy breathed in. And blew Zeus all the way back to the ground with a gust of wind so powerful it rearranged his curls in a direction they had never been in before. So that plan didn't work.",
+      "visual_prompt": "Little Olympus kids cartoon style. Zeus takes a heroic running start and leaps into the sky, flying upward with great confidence. He reaches the enormous grumpy storm cloud and says something with his most commanding expression. The cloud inhales dramatically. Next panel: Zeus is flying horizontally backward through the air at tremendous speed, his curly hair completely flat and pointing backward. He lands with a cartoon poof in the distance. Athena and Hercules watch from below. 16:9.",
+      "bg_colors": ["#87CEEB", "#4A4A8A", "#B0C4DE"],
+      "duration_sec": 45
+    },
+    {
+      "scene_number": 12,
+      "type": "comedy",
+      "title": "Hercules Tries His Way",
+      "narration": "Baby Hercules had a different approach. His approach was: if the cloud won't come to you, you climb to the cloud. He found the tallest tree on Olympus. It was five hundred meters tall. He climbed to the top. He reached up. He was still very far from the cloud. He stretched. He stretched some more. His arm made a very concerning noise. He almost touched it. Almost. And then the tree, which had been extremely patient up to this point, decided it had had enough, and very slowly leaned him sideways until he fell off. He was fine. He broke a medium-sized hill. The hill was also fine. Mostly.",
+      "visual_prompt": "Little Olympus kids cartoon style. Baby Hercules stands at the base of an impossibly tall cartoon tree, looks up with determination. Cut to: Hercules at the very very top of the tree, straining upward toward the distant storm cloud, arm stretching cartoon-style way beyond its normal length. The tree begins to lean dramatically sideways. Hercules rides it down in slow motion with a surprised expression. Lands. Breaks a small hill. Stands up perfectly fine, covered in dirt. 16:9.",
+      "bg_colors": ["#228B22", "#87CEEB", "#98FB98"],
+      "duration_sec": 45
+    },
+    {
+      "scene_number": 13,
+      "type": "problem",
+      "title": "The Problem Is Bigger Than They Thought",
+      "narration": "Zeus and Hercules sat on what was left of the hill and thought about this. Without the thunderbolt, the storms wouldn't come. Without storms, there'd be no rain. Without rain, the crops wouldn't grow. The rivers would start to slow. The flowers would start to droop. All of Greece would look up and wonder what had happened to the sky. This wasn't just Zeus's problem anymore. This was everybody's problem. And the more Zeus thought about it, the more he realized something: he'd been thinking about the thunderbolt like it was his thing. But really, it belonged to everyone. He just carried it.",
+      "visual_prompt": "Little Olympus kids cartoon style. Zeus and Hercules sit together on the remains of a slightly squashed hill, both thinking hard. In the background, illustrated consequences: flowers beginning to droop, a river running a little low, a farmer looking up at a dry sky. Zeus has a genuine thinking face — not panicking, actually working it out. Hercules is also thinking, though his thinking face looks very similar to his regular face. Athena watches them both, waiting. 16:9.",
+      "bg_colors": ["#90EE90", "#87CEEB", "#B8860B"],
+      "duration_sec": 45
+    },
+    {
+      "scene_number": 14,
+      "type": "insight",
+      "title": "Athena's Key Question",
+      "narration": "Athena sat down with them. She didn't say 'I told you so,' which was very restrained of her. Instead she asked a question: 'Why do you think Stormy took it?' Zeus said because Stormy was mean. Hercules said because clouds are bad. Athena shook her head. She pointed to her scroll. In her two hundred years of observation, she said, Stormy had never done anything like this before. Not once. That meant something had changed. Something had upset him. And things that upset people — or clouds — don't get fixed by force or by shouting. They get fixed by listening. Zeus felt something uncomfortable happen in his chest. It was called understanding someone else's feelings. It was new for him.",
+      "visual_prompt": "Little Olympus kids cartoon style. Athena sits with Zeus and Hercules in a small circle, speaking seriously but kindly. She holds open a large illustrated scroll showing weather records and Stormy's history — all perfectly peaceful until a recent gap in the records. She taps the gap. Zeus looks at the scroll with a slowly dawning expression of realization. Hercules looks at the scroll too, nods very seriously, then looks at Athena to check if he's nodding correctly. 16:9.",
+      "bg_colors": ["#B0C4DE", "#FFD700", "#1A1060"],
+      "duration_sec": 45
+    },
+    {
+      "scene_number": 15,
+      "type": "emotional",
+      "title": "Zeus Remembers Something",
+      "narration": "Zeus went quiet for a moment. He remembered his first week on Olympus. He was the new king. Everyone knew who he was. But knowing who someone is isn't the same as knowing them. He remembered eating his olives alone for three days before Hercules came and sat down next to him without asking. He remembered how much that had mattered. The thunderbolt was powerful. But the thing that had actually made Olympus feel like home — that was something else. Maybe Stormy just needed someone to come and sit down next to him. Even if he was a cloud. Even if he was a grumpy one.",
+      "visual_prompt": "Little Olympus kids cartoon style. Zeus sits quietly, looking thoughtful and a little emotional, remembering. Soft illustrated flashback: a smaller, lonelier-looking Zeus sitting alone at a big empty table with his olives, and then Baby Hercules suddenly plopping down next to him with the biggest friendliest grin and immediately knocking over the olive bowl. Zeus in the present smiles at the memory. It's warm, real, and very funny at the same time. Gentle soft colors for the memory. 16:9.",
+      "bg_colors": ["#FFE4B5", "#FFD700", "#87CEEB"],
+      "duration_sec": 45
+    },
+    {
+      "scene_number": 16,
+      "type": "plan",
+      "title": "The Real Plan",
+      "narration": "The new plan was completely different. No more flying up and demanding. No more trying to pull the cloud down. This time, they were going to go up together. All three of them. And they were going to ask Stormy — really ask him — what was wrong. Athena had prepared a small speech. Hercules had prepared a wave. Zeus had prepared to actually listen, which for him was genuinely the hardest thing on the list. They borrowed three small personal clouds from the cloud storage room — which still had the sign saying no thunderbolts, which in hindsight was quite ironic — and they floated up.",
+      "visual_prompt": "Little Olympus kids cartoon style. The three friends prepare for their new mission. Athena reviews a scroll with bullet points. Hercules practices waving and keeps knocking things over with his enormous arms. Zeus looks determined and also a little nervous. Then: all three standing on their own small fluffy personal clouds, rising slowly upward toward the enormous dark storm cloud above. Rising angle shot, sky getting darker above them, the golden glow still visible inside Stormy. 16:9.",
+      "bg_colors": ["#87CEEB", "#4A4A8A", "#FFFFFF"],
+      "duration_sec": 45
+    },
+    {
+      "scene_number": 17,
+      "type": "confrontation",
+      "title": "Reaching Stormy",
+      "narration": "Stormy saw them coming. He pulled himself together — which for a storm cloud means getting bigger and darker and crackle-ier. He was ready to blow them away again. He was ready to be absolutely impossible about this. But then something unexpected happened. Instead of demanding, instead of threatening, Little Zeus held up his hand and said just four words: 'We want to talk.' And then he waited. He didn't push forward. He didn't shout. He just waited. Stormy had been expecting a fight. He had not been expecting patience. He didn't know what to do with patience. His lightning dimmed. Just a little.",
+      "visual_prompt": "Little Olympus kids cartoon style. Zeus, Hercules, and Athena float toward Stormy on their small clouds. Stormy puffs up big and dark, lightning crackling aggressively. Zeus raises his hand in a peaceful gesture and says something simple. Stormy is completely ready to attack — then slowly, slowly deflates just a little, his expression shifting from angry to confused to something approaching uncertain. His lightning dims slightly. Small moment of stillness. Dramatically charged. 16:9.",
+      "bg_colors": ["#4A4A8A", "#2A2A6A", "#6A6AAA"],
+      "duration_sec": 45
+    },
+    {
+      "scene_number": 18,
+      "type": "emotional",
+      "title": "Stormy's Story",
+      "narration": "Stormy talked for a long time. It came out a bit like a storm — big and loud and a little chaotic. He talked about two hundred years of making rain that nobody thanked. He talked about farmers who used to look up and wave at the sky, and how they'd stopped. He talked about children who used to run outside when it rained and jump in puddles, and how now they stayed inside. He talked about being replaced in everyone's mind with sunshine, as if rain wasn't just as important, as if he didn't matter. His lightning crackled the whole time, but quieter. Not angry lightning. Sad lightning. There is a difference.",
+      "visual_prompt": "Little Olympus kids cartoon style. Stormy the storm cloud speaks — his face going through a whole range of emotions: frustrated, then sad, then wistful, then just tired. Illustrated memories float around him: farmers waving up at rain long ago, children jumping in puddles, then the same scenes with empty skies. His lightning goes from bright and angry to soft and flickery. Zeus, Hercules, and Athena listen with full attention — no phone-checking on Olympus. Quiet, genuine moment. 16:9.",
+      "bg_colors": ["#4A4A8A", "#708090", "#B0C4DE"],
+      "duration_sec": 45
+    },
+    {
+      "scene_number": 19,
+      "type": "turning_point",
+      "title": "Zeus Actually Listens",
+      "narration": "Zeus had never listened to a cloud before. He wasn't totally sure he knew how. But he listened. He heard the part about the farmers stopping waving. He heard the part about the puddles. He heard the part about being invisible even though you're enormous and right there in the sky. And he realized something: he had a thunderbolt that made everyone pay attention to him wherever he went. He had never had to wonder if anyone noticed him. Stormy had never had that. Not once. For two hundred years. Zeus put his crown on the railing of his little cloud. He said, very quietly: 'I'm sorry. That sounds really lonely.'",
+      "visual_prompt": "Little Olympus kids cartoon style. Zeus listens with genuine concentration — not fidgeting, not looking away. His expression shifts slowly from polite listening to real understanding to something genuinely moved. He takes his tiny crown off and holds it in both hands, looking at it for a moment. Then he looks back at Stormy and says something quiet and sincere. Stormy's lightning stills completely for the first time. The cloud's grumpy expression softens into pure surprise. Very quiet, very real. 16:9.",
+      "bg_colors": ["#4A4A8A", "#708090", "#FFD700"],
+      "duration_sec": 45
+    },
+    {
+      "scene_number": 20,
+      "type": "resolution",
+      "title": "The Deal",
+      "narration": "Zeus had an idea. Not a kingly idea. A friend idea. He asked Stormy: what if, every Tuesday, it rained on Olympus? Not a little drizzle. Proper rain. The kind with puddles. The kind that farmers look up and cheer about. The kind that children run outside for. He would make sure everyone on Olympus knew that Tuesday rain came from Stormy. That Stormy was important. Not invisible. Important. Stormy looked at him for a long time. His lightning completely stopped. And then Stormy said, in a voice like distant thunder: 'Can the puddles be really big ones?' Zeus said absolutely yes. Hercules said he would personally jump in every single one. Stormy said okay. The thunderbolt floated down into Zeus's hands.",
+      "visual_prompt": "Little Olympus kids cartoon style. Zeus floats on his little cloud at eye level with Stormy, speaking earnestly and gesturing. He holds up one finger — one day a week. He points at Olympus below, miming farmers, children, people looking up appreciatively. Stormy listens. His lightning goes completely still. Then slowly, the golden thunderbolt slides out from inside the cloud and floats gently into Zeus's outstretched hands. Stormy's expression: still grumpy, but the grumpy face of someone who has been genuinely understood. 16:9.",
+      "bg_colors": ["#4A4A8A", "#FFD700", "#FFFFFF"],
+      "duration_sec": 45
+    },
+    {
+      "scene_number": 21,
+      "type": "celebration",
+      "title": "Tuesday Rain — The Best Rain",
+      "narration": "Stormy kept his promise immediately. Right there. Right then. He opened up and let it pour. And it was the absolute best rain that had ever fallen on Mount Olympus in two hundred years. The kind of rain that smells like the world getting clean. The kind of rain that turns a whole mountain into one giant puddle opportunity. Baby Hercules jumped into the first puddle so hard the splash went all the way to Athens, where three very confused citizens looked up and got completely soaked and had absolutely no idea why. Athena's owl got wet and became extremely thin and extremely grumpy, which was funny to everyone except the owl.",
+      "visual_prompt": "Little Olympus kids cartoon style. SPECTACULAR rain on Mount Olympus — beautiful, joyful, enormous puddles everywhere. Zeus holds his glowing thunderbolt triumphantly in the rain, crown on sideways. Baby Hercules leaps into the biggest puddle with both feet, creating a splash so enormous it arcs off the mountain. In a tiny inset: three confused Athenian citizens getting randomly soaked in what is clearly sunny weather everywhere else. Athena's owl is soaked flat and furious. Rainbow everywhere. Pure celebration. 16:9.",
+      "bg_colors": ["#87CEEB", "#98FB98", "#FFD700"],
+      "duration_sec": 45
+    },
+    {
+      "scene_number": 22,
+      "type": "epilogue",
+      "title": "Stormy Becomes Part of the Team",
+      "narration": "From that day on, Stormy was an official part of the Olympus crew. He got his own spot in the sky, right above the garden, where everyone could see him. Every Tuesday it rained. Every Tuesday, the farmers waved up at the sky. Every Tuesday, children ran outside for puddles. Every Tuesday, Stormy glowed just a little less grey and just a little more silver-blue — the color clouds turn when they're actually happy, if you know what to look for. And Hercules, true to his word, jumped in every single puddle. Every one. Even the tiny ones. Especially the tiny ones.",
+      "visual_prompt": "Little Olympus kids cartoon style. Stormy the cloud has a new spot in the sky above the Olympus garden — he looks proud and slightly less grumpy, which for him is basically beaming. Below, farmers wave up at the rain. Children jump in puddles. Baby Hercules jumps in an absolutely tiny puddle with maximum commitment. Stormy's coloring has shifted slightly — less dark grey, a little silver and blue at the edges. The whole scene glows warmly. Like a found family. 16:9.",
+      "bg_colors": ["#87CEEB", "#708090", "#98FB98"],
+      "duration_sec": 45
+    },
+    {
+      "scene_number": 23,
+      "type": "lesson",
+      "title": "What Zeus Learned",
+      "narration": "And here is what Little Zeus learned that day. He had the most powerful weapon in the entire world. And the thing that actually solved the problem was putting it down and listening. Being the king of the gods doesn't mean you never need to understand how someone else feels. It means you do it first. The strongest thing you can do is sometimes the quietest one. Not bad for a morning that started with twelve olives and a missing thunderbolt. Not bad at all.",
+      "visual_prompt": "Little Olympus kids cartoon style. Zeus stands with his thunderbolt, looking thoughtful and slightly older somehow — not older in age, older in understanding. Hercules stands next to him, arm around his shoulder (gently, for Hercules). Athena nods with the expression of someone whose plan worked exactly as intended. Stormy floats above them. The four of them together, in a warm golden late afternoon, Olympus looking beautiful behind them. Peaceful and earned. 16:9.",
+      "bg_colors": ["#FFD700", "#FF8C00", "#87CEEB"],
+      "duration_sec": 45
+    },
+    {
+      "scene_number": 24,
+      "type": "outro_cta",
+      "title": "See You Next Time!",
+      "narration": "That's it for today's adventure on Little Olympus! Next time — Baby Hercules meets a GIANT SNAKE. Which sounds dangerous. And it is. But Baby Hercules has the opposite problem of what you'd expect, because Baby Hercules always does. Subscribe so you don't miss it! And if you have a friend who might need someone to sit with them at lunch — maybe do that today. Zeus would. He learned. See you next time on Little Olympus!",
+      "visual_prompt": "Little Olympus kids cartoon style. Final title card energy — all four characters together facing the viewer. Zeus waves with thunderbolt. Hercules gives biggest double thumbs up. Athena and her owl do a dignified bow. Stormy the cloud does something that might be a wave — hard to tell with clouds. Behind them: Mount Olympus in golden late light, rainbows from the earlier rain still visible. Bright fun channel-branding energy. Big smiles. Subscribe button energy. 16:9.",
+      "bg_colors": ["#1A1060", "#FFD700", "#00B4E6"],
+      "duration_sec": 30
+    }
+  ],
+  "music": {
+    "style": "upbeat_kids_adventure",
+    "notes": "Light xylophone melody, bouncy percussion, warm brass. CoComelon energy but more adventurous. Happy resolution swell at end."
+  },
+  "voice_style": {
+    "tone": "warm_playful_encouraging",
+    "pacing": "punchy — keeps kids engaged, quick on comedy beats",
+    "character": "fun storyteller reading a picture book, with real reactions"
+  },
+  "lesson": "The strongest thing you can do is sometimes the quietest one.",
+  "youtube_title": "Little Zeus Lost His Thunderbolt! ⚡ | Little Olympus Episode 1",
+  "youtube_description": "Little Zeus wakes up and his thunderbolt is GONE! 😱\n\nJoin Little Zeus, Baby Hercules, and Athena as they track down the missing thunderbolt — and make a surprising new friend along the way!\n\n📺 Subscribe for new episodes every week!\n#LittleOlympus #LittleZeus #BabyHercules #KidsCartoon #GreekMythology"
+}

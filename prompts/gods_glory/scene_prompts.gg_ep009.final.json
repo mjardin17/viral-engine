@@ -1,0 +1,198 @@
+{
+  "episode_id": "GG_EP009",
+  "channel": "GG",
+  "title": "Iwo Jima: The Island That Wouldn't Fall",
+  "tagline": "36 days. 8 square miles. The bloodiest ground the Marines ever took.",
+  "duration_target_min": 19,
+  "aesthetic": {
+    "color_grade": "cinematic_pacific_volcanic",
+    "primary_colors": ["#1A1815", "#5C5247", "#8B1A1A", "#C9A84C"],
+    "font_style": "serif_documentary_bold",
+    "music_style": "hans_zimmer_conquest_epic",
+    "narrator_tone": "authoritative_punchy_dramatic"
+  },
+  "music": {
+    "style": "hans_zimmer_conquest_epic",
+    "notes": "Opening: low ominous drone over black volcanic sand, dread building. The landing: heavy percussion, chaos. Discovering the tunnels: eerie, sparse, unsettling silence punctuated by single notes. Suribachi climb: rising, determined string motif. The flag raising: the theme breaks into solemn, swelling brass — restrained, not triumphant. The grinding final weeks: exhausted, repetitive low strings. Legacy: heavy, resolute, the theme settling into quiet remembrance."
+  },
+  "voice_style": {
+    "tone": "authoritative_punchy_dramatic",
+    "pacing": "tense through the landing, eerie and methodical describing the tunnels, restrained and respectful at the flag raising",
+    "character": "documentary narrator who treats the island's defenders with the same seriousness as the Marines who took it"
+  },
+  "youtube_title": "Iwo Jima: 8 Square Miles, 26,000 Casualties | Gods & Glory EP9",
+  "youtube_description": "In February 1945, US Marines landed on a tiny volcanic island called Iwo Jima, expecting a quick fight. They got 36 days of the bloodiest combat in Marine Corps history.\n\nThis is the real story — General Kuribayashi's 11 miles of tunnels, why he banned the suicidal banzai charge, and the truth behind the most famous photograph of the war.\n\nGods & Glory — history's turning points, explained properly.",
+  "scenes": [
+    {
+      "scene_number": 1,
+      "type": "cold_open",
+      "title": "Eight Square Miles",
+      "narration": "Iwo Jima is a volcanic island roughly eight square miles in size — smaller than most American towns. In February 1945, US military planners expected Marines to secure it within a few days. Instead, it took thirty-six days of the most brutal fighting the Marine Corps had ever experienced, and produced more American casualties than Japanese ones — the only major battle of the entire Pacific war where that happened.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Aerial view of the small volcanic island of Iwo Jima, black sand beaches, Mount Suribachi rising at one end, naval bombardment lighting up the coastline. Stark, ominous scale. 16:9.",
+      "bg_colors": ["#1A1815", "#8B1A1A", "#5C5247"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 2,
+      "type": "context",
+      "title": "Why a Tiny Island Mattered",
+      "narration": "Iwo Jima sat almost exactly halfway between American bomber bases in the Mariana Islands and Tokyo. American B-29 bombers flying raids on the Japanese mainland had no fighter escort capable of making the full round trip, and damaged bombers had nowhere to land if they couldn't make it home. Capturing Iwo Jima would give American fighters a base close enough to escort the bombers all the way and provide an emergency landing strip for crippled aircraft. For Japan, the same airfields made the island a forward outpost defending the home islands themselves.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. American B-29 bombers in formation flying toward Japan, map-style visualization showing Iwo Jima's strategic position between the Marianas and Tokyo. Strategic, methodical tone. 16:9.",
+      "bg_colors": ["#1A1815", "#5C5247", "#C9A84C"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 3,
+      "type": "context",
+      "title": "Kuribayashi's Strategy",
+      "narration": "Japanese General Tadamichi Kuribayashi, given command of the island's defense, made a decision that broke sharply from standard Japanese military doctrine of the time. Rather than meet the invasion at the beach or order the suicidal mass banzai charges that had characterized earlier Pacific battles, Kuribayashi planned a defense in depth: dig in, go underground, and bleed the attacking force for every yard of ground, for as long as possible, without ever risking his own troops in a single decisive — and futile — confrontation.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. General Kuribayashi inspecting fortified tunnel entrances and gun positions carved into volcanic rock, studying maps with his staff. Calculating, methodical commander. 16:9.",
+      "bg_colors": ["#5C5247", "#1A1815", "#8B1A1A"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 4,
+      "type": "anecdote",
+      "title": "Eleven Miles of Tunnels",
+      "narration": "Under Kuribayashi's direction, Japanese forces carved more than eleven miles of interconnected tunnels into the island's volcanic rock, linking gun positions, command posts, hospitals, ammunition stores, and troop quarters. Some caves held just a handful of men; others held three or four hundred. Entrances were positioned so that naval gunfire and aerial bombing couldn't hit them directly, and many positions had multiple exits so defenders could pop up, fire, and vanish back underground before American troops could pinpoint where the shots had come from. American forces would discover, to their horror, that days of pre-invasion bombardment had done almost nothing to the defenses hidden beneath the surface.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Cross-section style cinematic visualization of an extensive underground tunnel network beneath the island's surface, Japanese soldiers moving through connected chambers and gun positions carved into rock. Eerie, methodical engineering. 16:9.",
+      "bg_colors": ["#1A1815", "#5C5247", "#8B1A1A"],
+      "duration_sec": 52
+    },
+    {
+      "scene_number": 5,
+      "type": "battle",
+      "title": "February 19th — The Landing",
+      "narration": "On February 19th, 1945, after days of naval and aerial bombardment, the first wave of Marines hit the black volcanic sand beaches of Iwo Jima. The soft, ash-like sand made movement exhausting and bogged down vehicles immediately. For the first several minutes, Japanese defenders held their fire entirely, letting the beach fill with men and equipment. Then, with the beach packed and no cover available, they opened up from concealed positions on higher ground. It became one of the deadliest opening hours any American amphibious landing experienced in the entire war.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Marines struggling through deep black volcanic sand on the beach, equipment bogged down, then sudden devastating fire erupting from hidden positions on the high ground above. Brutal, chaotic landing. 16:9.",
+      "bg_colors": ["#8B1A1A", "#1A1815", "#5C5247"],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 6,
+      "type": "battle",
+      "title": "The Fight for Suribachi",
+      "narration": "Mount Suribachi, the dormant volcano dominating the island's southern tip, was honeycombed with Japanese gun positions that could fire down on the beaches below. Marines fought their way up its slopes over four days of brutal close combat against an enemy they often couldn't even see, clearing bunkers and cave entrances with flamethrowers and grenades. On February 23rd, a patrol reached the summit.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Marines climbing the volcanic slopes of Mount Suribachi under fire, clearing bunker entrances with flamethrowers, smoke and ash swirling around them. Grueling, determined ascent. 16:9.",
+      "bg_colors": ["#1A1815", "#8B1A1A", "#5C5247"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 7,
+      "type": "anecdote",
+      "title": "The Flag, Twice",
+      "narration": "When the patrol reached Suribachi's summit, they raised a small American flag — a moment some witnesses below cheered for, but no photographer captured. Later that day, a larger flag was brought up to replace it, and it was this second flag-raising that Associated Press photographer Joe Rosenthal captured in a single frame, almost by chance, as six men wrestled a heavy pole upright against the wind. The photograph became arguably the most reproduced image of the entire war, used on postage stamps, war bond posters, and eventually cast in bronze as the Marine Corps War Memorial in Arlington, Virginia.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Recreation of the iconic Iwo Jima flag-raising on Mount Suribachi's summit, six Marines straining to plant a large flagpole against strong wind, smoke from ongoing battle visible below. Iconic, restrained composition. 16:9.",
+      "bg_colors": ["#C9A84C", "#1A1815", "#5C5247"],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 8,
+      "type": "anecdote",
+      "title": "The Men in the Photo",
+      "narration": "Of the six men in Rosenthal's photograph, three were killed in the fighting that continued on Iwo Jima after the picture was taken — they never lived to learn how famous the image would become. Decades later, after careful study by amateur historians and eventual Marine Corps investigations in 2016 and 2019, two of the men long identified in the photograph were found to have been misidentified entirely. The actual identities of everyone in one of the most famous photographs in American history were only fully corrected more than seventy years after it was taken.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Side-by-side style cinematic comparison: young Marines in 1945 and the historians decades later poring over the photograph with magnifying glasses and reference images. Investigative, respectful tone. 16:9.",
+      "bg_colors": ["#5C5247", "#1A1815", "#C9A84C"],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 9,
+      "type": "battle",
+      "title": "The Island Wasn't Secure",
+      "narration": "Raising the flag on Suribachi did not mean the battle was over — it meant roughly one-fifth of the fighting was finished. Most of the island's defenders and tunnel network lay in the rougher terrain to the north, and the brutal, grinding fight to clear it continued for another month. Japanese resistance, fighting from a network of caves and bunkers that had to be cleared one at a time, often to the last man inside, made every subsequent yard as costly as the beach landing had been.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Marines advancing cautiously through a cratered, ash-grey northern landscape of the island, clearing bunkers and cave mouths one by one under continued fire. Grinding, exhausting combat. 16:9.",
+      "bg_colors": ["#1A1815", "#5C5247", "#8B1A1A"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 10,
+      "type": "analysis",
+      "title": "No Surrender",
+      "narration": "Kuribayashi's ban on banzai charges meant Japanese resistance on Iwo Jima was unusually disciplined and sustained compared to earlier Pacific battles, but it also meant almost no Japanese soldiers surrendered. Of roughly 21,000 Japanese defenders, only a few hundred were taken prisoner; the rest died in the fighting, including Kuribayashi himself, whose final fate and exact death were never definitively confirmed — he is believed to have died in the island's final defensive positions in late March, likely by his own hand rather than be captured.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. The final defensive positions in the island's northern caves, the last defenders making their stand, somber and resolute. Restrained, dignified depiction of the end of the defense. 16:9.",
+      "bg_colors": ["#1A1815", "#8B1A1A", "#5C5247"],
+      "duration_sec": 46
+    },
+    {
+      "scene_number": 11,
+      "type": "analysis",
+      "title": "The Numbers",
+      "narration": "By the time the island was declared secure on March 26th, 1945, nearly 7,000 US Marines and sailors had been killed and roughly 20,000 wounded — out of about 70,000 American troops who fought there. Japanese deaths are estimated above 21,000 out of approximately 18,000 to 21,000 defenders, with only a few hundred taken alive. It remains the only major Pacific battle in which American casualties outnumbered Japanese ones, even though Japanese deaths were proportionally far higher.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Somber wide shot of the island after the battle, wreckage and graves markers across the ash-grey landscape, the human cost made visible. Documentary gravitas. 16:9.",
+      "bg_colors": ["#1A1815", "#5C5247", "#8B1A1A"],
+      "duration_sec": 46
+    },
+    {
+      "scene_number": 12,
+      "type": "context",
+      "title": "Island Hopping",
+      "narration": "Iwo Jima was one stop in a much larger American strategy known as island hopping — bypassing heavily fortified Japanese-held islands where possible and seizing a chain of strategically located ones instead, each providing airfields and bases to support the next advance toward Japan itself. Earlier stops in the campaign, including Tarawa, Saipan, and Peleliu, had already taught American commanders that Japanese island garrisons would fight to near-total destruction rather than surrender, a pattern Iwo Jima would repeat at even greater cost.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Map-style cinematic visualization of the Pacific island-hopping campaign, a chain of island battles connecting toward Japan, naval task forces moving between them. Strategic overview. 16:9.",
+      "bg_colors": ["#5C5247", "#1A1815", "#C9A84C"],
+      "duration_sec": 46
+    },
+    {
+      "scene_number": 13,
+      "type": "analysis",
+      "title": "Did It Achieve Its Purpose?",
+      "narration": "The airfields on Iwo Jima did go on to serve their intended purpose — providing emergency landing strips for crippled B-29 bombers and a base for fighter escorts over Japan in the final months of the war. Historians have debated for decades, however, whether the actual strategic value gained was proportionate to the staggering cost of taking it, with some arguing the island's usefulness, while real, never fully justified nearly 26,000 American casualties for eight square miles of volcanic rock.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. A damaged B-29 bomber making an emergency landing on the newly captured Iwo Jima airstrip, ground crews rushing to assist. The strategic payoff made visual, balanced against the visible cost around the airfield. 16:9.",
+      "bg_colors": ["#1A1815", "#5C5247", "#8B1A1A"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 14,
+      "type": "human_interest",
+      "title": "The War Bond Tour",
+      "narration": "Three of the surviving men identified in Rosenthal's photograph were brought home and sent on a nationwide tour to sell war bonds, their faces and the photograph plastered across posters and newsreels. For men who had just witnessed some of the worst combat of the Pacific war, the sudden transition to celebrity and public appearances was its own kind of disorienting burden — several of them struggled for years afterward with what they had survived, even as the country celebrated the image they had become symbols of.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Young Marines in dress uniform on a war bond rally stage, large crowds and the famous photograph displayed behind them, an uneasy contrast between public celebration and private trauma. Bittersweet tone. 16:9.",
+      "bg_colors": ["#C9A84C", "#1A1815", "#5C5247"],
+      "duration_sec": 46
+    },
+    {
+      "scene_number": 15,
+      "type": "legacy",
+      "title": "The Memorial",
+      "narration": "The Marine Corps War Memorial in Arlington, Virginia, cast in bronze from Rosenthal's photograph, was dedicated in 1954 and stands today as a memorial to every Marine who has died in service since 1775, not just those who fought on Iwo Jima specifically. It remains one of the most visited and recognizable war memorials in the United States, an image of a single moment on a single island standing in for the sacrifice of an entire branch of the military across two and a half centuries.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. The bronze Marine Corps War Memorial in Arlington, Virginia, visitors paying respects, the iconic flag-raising sculpture against a clear sky. Monumental, present-day reverence. 16:9.",
+      "bg_colors": ["#C9A84C", "#5C5247", "#1A1815"],
+      "duration_sec": 44
+    },
+    {
+      "scene_number": 16,
+      "type": "analysis",
+      "title": "Why This Still Matters",
+      "narration": "Iwo Jima is studied today as a case study in how a heavily outnumbered, technologically inferior defending force can inflict disproportionate casualties on a stronger attacker simply by changing doctrine — trading the symbolic, often-suicidal banzai charge for disciplined, dug-in attrition warfare. Kuribayashi's approach, however grim its ultimate outcome for his own men, is still referenced in military studies of asymmetric defense and fortified-position warfare. The lesson outlived the defenders who paid for it.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Modern military historians studying Kuribayashi's tunnel network diagrams and tactical decisions in a contemporary academic setting, the lesson translated into present-day strategic study. Thoughtful, analytical. 16:9.",
+      "bg_colors": ["#1A1815", "#5C5247", "#C9A84C"],
+      "duration_sec": 46
+    },
+    {
+      "scene_number": 17,
+      "type": "analysis",
+      "title": "What Iwo Jima Actually Was",
+      "narration": "Iwo Jima was not a single dramatic flag-raising moment — that photograph captured roughly the first fifth of a thirty-six-day battle that ground on for weeks afterward through tunnels and caves most Americans never see depicted at all. It was a defending general who deliberately rejected his own military's culture of glorious, futile death in favor of cold attrition, and an island whose strategic value, while real, will always be debated against the staggering cost extracted to take it. The photograph is iconic. The battle behind it was longer, stranger, and grimmer than the image alone suggests.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Final reflective wide shot of the island today, peaceful and overgrown where tunnels and battle lines once were, Mount Suribachi calm in the distance. Contemplative, summarizing tone. 16:9.",
+      "bg_colors": ["#1A1815", "#8B1A1A", "#5C5247"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 18,
+      "type": "summary",
+      "title": "What Happened — The Summary",
+      "narration": "February 19th, 1945. US Marines land on the volcanic island of Iwo Jima, expecting a quick fight. General Kuribayashi's eleven miles of tunnels and his ban on suicidal banzai charges turn it into thirty-six days of the bloodiest combat the Marine Corps had ever experienced. Mount Suribachi falls on day four, producing the most famous photograph of the war. The rest of the island takes another month. Nearly 7,000 Marines die. Over 21,000 Japanese defenders die. The airfields go on to serve exactly the purpose they were built for — and historians still debate if that purpose was worth the cost.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Summary title card sequence: key moments in bold text over historical imagery — the landing, the tunnels, the flag-raising, the memorial today. Final shot: Mount Suribachi peaceful at sunset. 16:9.",
+      "bg_colors": ["#1A1815", "#C9A84C", "#8B1A1A"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 19,
+      "type": "next_episode",
+      "title": "Next Episode — The Vietnam War",
+      "narration": "Next episode on Gods and Glory: two decades after the guns fell silent in the Pacific, the United States found itself in a different kind of war entirely — one without clear front lines, against an enemy that blended into the population, in a conflict that would divide the American public like nothing since the Civil War. The Vietnam War — how it started, how it was fought, and why it still shapes how America thinks about war today.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Teaser shot: American helicopters flying low over dense Vietnamese jungle at dusk, soldiers visible inside, a sense of a very different kind of war. Epic anticipation. 16:9.",
+      "bg_colors": ["#1A1815", "#5C5247", "#8B1A1A"],
+      "duration_sec": 40
+    }
+  ]
+}

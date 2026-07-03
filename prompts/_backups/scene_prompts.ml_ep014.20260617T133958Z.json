@@ -1,0 +1,83 @@
+{
+  "channel": "Mech Legends",
+  "episode_number": 14,
+  "episode_id": "ML_EP014",
+  "season": 2,
+  "title": "RUMBLE's New File",
+  "tagline": "He's not attacking. He's studying. That's worse.",
+  "hook_line": "RUMBLE just opened a new file. It's not a weapons manifest. It's not an attack plan. It says: 'What can they do that they don't know they can do?' And the first name on the list is BLAZE.",
+  "characters": ["BLAZE", "NOVA", "STORM", "GRANITE", "RUMBLE"],
+  "scenes": [
+    {
+      "scene_number": 1,
+      "type": "hook",
+      "title": "The File",
+      "narration": "NOVA found it first. Not because she was looking — because RUMBLE let her find it. A single data packet, unencrypted, transmitted from an unknown location. File name: SEASON_2_UNKNOWN_CAPABILITIES.log. She opened it. The first line read: 'Subject 1: BLAZE. Hypothesis: Phase-transit capability, unactivated. Test design: in progress.' She read it three times. Then she called BLAZE.",
+      "visual_prompt": "NOVA at her monitoring station, the incoming data packet visible on her main screen — the file name SEASON_2_UNKNOWN_CAPABILITIES.log in clear text, NOVA opening it, the first entry visible: 'Subject 1: BLAZE. Hypothesis: Phase-transit capability, unactivated. Test design: in progress.' — her expression shifting from confusion to alarm, the transmission source showing UNKNOWN/MASKED, the deliberate nature of the transmission visible — it was meant to be found, cinematic #1A1A2E and #E94560 palette",
+      "bg_colors": ["#1A1A2E", "#16213E", "#2A1A2E"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 2,
+      "type": "character",
+      "title": "What BLAZE Says",
+      "narration": "BLAZE read the file. Then he read it again. 'Phase-transit,' he said. 'That's passing through solid material.' He paused. 'I can't do that.' NOVA said: 'RUMBLE says you can and you don't know it.' There was a long silence. 'RUMBLE has been wrong before,' BLAZE said. He didn't say it like he believed it.",
+      "visual_prompt": "BLAZE reading the file on a secondary interface — his energy lines in their usual red-orange (#E94560) but slightly flickering, expression indicators showing skepticism that doesn't quite land, NOVA in the background with a calm expression that communicates she thinks RUMBLE might be right, the specific line 'Phase-transit capability, unactivated' highlighted on the screen, BLAZE's hand against the wall behind him — the wall is solid — no phase, cinematic close-up, #1A1A2E and #E94560",
+      "bg_colors": ["#1A1A2E", "#2A0D0D", "#16213E"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 3,
+      "type": "character",
+      "title": "GRANITE Weighs In",
+      "narration": "GRANITE had been listening from across the bay. He hadn't moved from his position in six days, but his acoustic receptors were fully operational. 'If RUMBLE says you have a capability you haven't used,' he said slowly, 'it is because he has seen evidence of it somewhere.' He paused. 'RUMBLE doesn't theorize. He observes.' Another pause. 'That is both reassuring and concerning.'",
+      "visual_prompt": "GRANITE still in his position against the bay wall, cryo-sleeve dark and drained, but head turned toward BLAZE and NOVA — the first time in days he's engaged with the conversation — his expression indicators showing careful deliberation, his voice coming from across the room — the sense of someone whose stillness is about recovery not absence, the other team members registering that he spoke, #1A1A2E and #2D4A6E blue-gray GRANITE palette, ice crystal frost details",
+      "bg_colors": ["#1A1A2E", "#2D4A6E", "#0F3460"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 4,
+      "type": "villain",
+      "title": "Where RUMBLE Is",
+      "narration": "RUMBLE was operating from a location the team's sensors couldn't reach — not because his signal was scrambled, but because the location didn't exist in any map the team had access to. He was watching three feeds simultaneously: BLAZE's historical combat logs, a structural analysis of COLOSSUS's material phase-states during the sealing event, and a single anomaly flagged from BLAZE's battle record in Season 1 — episode nine, scene four, frame 0.3 seconds. Something happened that BLAZE himself had never noticed.",
+      "visual_prompt": "RUMBLE in his unknown location — dark, industrial, unmapped — three holographic displays active simultaneously: left: BLAZE combat logs timeline, right: COLOSSUS material phase-state analysis from the sealing event, center: a single frame frozen from BLAZE's Season 1 battle record, zoomed in to 0.3 seconds — something in BLAZE's energy signature at that frame is different, a slight distortion in the solid material behind him — RUMBLE's eyes focused on the center screen, his posture is analytical not aggressive, cinematic dark #0A0A14 environment, #E94560 screens",
+      "bg_colors": ["#0A0A14", "#0D0D1A", "#1A1A2E"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 5,
+      "type": "challenge",
+      "title": "The Frame BLAZE Never Noticed",
+      "narration": "NOVA pulled the frame RUMBLE had identified. Episode nine. Scene four. 0.3 seconds into BLAZE's lateral charge. She enhanced it. At that exact moment, BLAZE's right shoulder had passed through the corner of a structural column. Not past it. Through it. The column was still fully intact. So was BLAZE. Neither of them knew it had happened.",
+      "visual_prompt": "Screen analysis shot — NOVA's monitoring station showing the enhanced, slowed frame from BLAZE S1E09: BLAZE mid-charge, and at the highlighted 0.3-second mark — his shoulder is inside the structural column, ghost-overlay showing both BLAZE's shoulder and the solid column occupying the same space simultaneously, both intact, an overlap that should be impossible — analytical enhancement lines showing the material density and BLAZE's energy signature overlapping, BLAZE standing beside NOVA watching the screen with a very particular expression, #1A1A2E and cold forensic blue tones, #E94560 energy highlight",
+      "bg_colors": ["#1A1A2E", "#0F2A40", "#16213E"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 6,
+      "type": "development",
+      "title": "RUMBLE's Test Design",
+      "narration": "The second half of RUMBLE's file had been transmitted six hours after the first. NOVA had been waiting for it. The test was elegant: a narrow corridor, BLAZE moving at full combat speed, a solid panel dropped to block his path 0.2 seconds before impact. Too fast to stop. Too solid to break. RUMBLE's hypothesis: BLAZE would phase through. NOVA stared at it for a long time. 'He doesn't want to harm BLAZE,' she said finally. 'He wants to teach him.' STORM said: 'The distinction matters.'",
+      "visual_prompt": "NOVA reading the second file transmission — a technical test diagram showing a narrow corridor with a solid panel dropper mechanism, BLAZE's projected path going directly through the panel — the test design shown as clean and precise engineering, not a trap — NOVA's expression shifting from alarm to something more complicated: recognition that this is genuinely designed to unlock not destroy — STORM visible in the background, his expression indicators showing careful consideration, #1A1A2E, the test diagram in cool clinical blue-white",
+      "bg_colors": ["#1A1A2E", "#16213E", "#0D1A2A"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 7,
+      "type": "tag",
+      "title": "RUMBLE Adds the Second Entry",
+      "narration": "After transmitting the test design, RUMBLE updated his file. Below BLAZE's entry, he added a second line. 'Subject 2: STORM. Hypothesis: Localized electromagnetic field generation. Unactivated. Test design: to follow.' He paused, then added one more line at the bottom of the file — not a subject entry. Just a note. It said: 'Something is coming. They need to know what they can do before it arrives. I will not have time to explain why.'",
+      "visual_prompt": "RUMBLE's screen in his unmapped location — the file being updated: below BLAZE's entry, STORM's entry being typed in real time: 'Subject 2: STORM. Hypothesis: Localized electromagnetic field generation. Unactivated.' — and then the final note being added at the bottom: 'Something is coming. They need to know what they can do before it arrives. I will not have time to explain why.' — RUMBLE's silhouette visible in the dark behind the screen, the final note glowing #E94560 against the dark, gravity of the message communicated through typography and silence",
+      "bg_colors": ["#0A0A14", "#0D0D1A", "#1A1A2E"],
+      "duration_sec": 9
+    }
+  ],
+  "viral_hook": "RUMBLE sent the team a file. It wasn't an attack plan. It said: here's a capability you have that you don't know about. I'm going to make you discover it. And I'm doing this for all of you. Because something is coming.",
+  "highlight_scene": 5,
+  "highlight_note": "NOVA enhancing the frame where BLAZE's shoulder passes through a solid column without either being damaged — the moment BLAZE sees himself do something impossible that he never knew he did.",
+  "short_title": "RUMBLE Found Something In The Old Footage",
+  "rewatch_bait": "Scene 4 — RUMBLE's three screens. The COLOSSUS phase-state analysis on the right screen. COLOSSUS had a phase capability too. That's why the sealing worked the way it did. RUMBLE has understood something about the Titan Array that the team hasn't connected yet.",
+  "youtube_title": "RUMBLE found a hidden ability in BLAZE's old footage 📹 | Mech Legends S2 EP2",
+  "lesson": "Sometimes someone else can see what you're capable of before you can. The hardest part is believing them.",
+  "arc_notes": "RUMBLE's Season 2 mission established. Phase-transit capability planted for BLAZE (demonstrated EP003). STORM's EM field capability seeded for EP007. RUMBLE's final note — 'Something is coming' — is the Season 3 plant. GRANITE's contribution: 'RUMBLE doesn't theorize. He observes.' — critical for NOVA's EP011 realization. The COLOSSUS phase-state connection in RUMBLE's analysis is a deep rewatch detail that recontextualizes the Season 1 finale."
+}

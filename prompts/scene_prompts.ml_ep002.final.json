@@ -1,0 +1,184 @@
+{
+  "channel": "Mech Legends",
+  "episode_number": 2,
+  "episode_id": "ML_EP002",
+  "title": "BLAZE's Secret Weapon",
+  "tagline": "RUMBLE has an army. BLAZE has a secret. And a secret changes everything.",
+  "duration_target_min": 6,
+  "aesthetic": {
+    "color_grade": "cinematic_action_anime",
+    "primary_colors": ["#CC0000", "#1A1A2E", "#8B008B", "#FF6B00"],
+    "font_style": "bold_angular_impact",
+    "music_style": "140bpm_action_synth",
+    "narrator_tone": "urgent_epic_cinematic"
+  },
+  "villain_mandate": "RUMBLE must feel IMPOSSIBLE TO BEAT at all times until the climax. 4 arms. Twice the size of BLAZE. Every time BLAZE thinks he has an advantage, RUMBLE counters it instantly. Victory must feel like it comes from nowhere and costs everything.",
+  "characters": {
+    "hero": {
+      "name": "BLAZE",
+      "role": "The leader. Red fire truck → battle mech. Brave to the point of recklessness.",
+      "visual": "Red mech, fire truck chassis, shoulder-mounted water cannons repurposed as energy blasters, visor glows orange, chest insignia: flame crest",
+      "personality": "Charges first, plans later. Loyal. Has never backed down from anything. His secret weapon: he never fights alone."
+    },
+    "team": [
+      {
+        "name": "STORM",
+        "role": "Blue helicopter mech. The strategist.",
+        "visual": "Blue mech, rotor-blade shoulder wings, yellow visor, sleek build"
+      },
+      {
+        "name": "GRANITE",
+        "role": "Green bulldozer mech. The muscle. The funny one.",
+        "visual": "Green mech, bulldozer blade chest plate, massive arms, warm expression despite size"
+      }
+    ],
+    "villain": {
+      "name": "RUMBLE",
+      "role": "The crusher. Purple. Four arms. Wants total control of everything.",
+      "visual": "Massive dark purple mech, 1.6x the size of BLAZE, four arms each capable of independent combat, crown spikes on helmet, red eyes that glow brighter when winning",
+      "mandate": "RUMBLE is WINNING for the first 8 scenes. His attacks are countered but not stopped. He adapts instantly. He has never lost."
+    },
+    "sidekick_villain": {
+      "name": "BOLT",
+      "role": "RUMBLE's sneaky fast sidekick. Black lightning bolt mech. Ambushes from blind spots.",
+      "visual": "Small black mech, lightning bolt markings, moves in bursts of speed, cackling energy"
+    }
+  },
+  "scenes": [
+    {
+      "scene_number": 1,
+      "type": "cold_open",
+      "title": "RUMBLE Has Built Something",
+      "narration": "Last time, BLAZE and the Mech Legends stopped RUMBLE's first attack. RUMBLE didn't care. Because while they were celebrating — RUMBLE was building. And what he built... changed everything.",
+      "visual_prompt": "Cinematic action anime style. Dark industrial wasteland at night. RUMBLE — massive dark purple mech with four arms and crown spikes — stands before a towering structure of crushed and salvaged mech parts. It's a CRUSHER ARRAY — five enormous mechanical fists mounted on towers, all controlled by RUMBLE. Red eyes glow as he surveys his creation. BOLT stands nearby looking gleeful. Epic villain establishing shot. Dark purples, red highlights. 16:9.",
+      "bg_colors": ["#1A1A2E", "#4A0040", "#CC0000"],
+      "accent": "#8B008B",
+      "camera": "pull_back",
+      "duration_sec": 9,
+      "higgsfield_prompt": "Cinematic action anime style, massive dark purple mech with four arms and crown spikes surveying enormous mechanical structure of salvaged parts, smaller black lightning mech nearby, dark industrial wasteland, red glowing eyes, dramatic villain shot, dark purples and reds, 16:9"
+    },
+    {
+      "scene_number": 2,
+      "type": "hero_intro",
+      "title": "BLAZE Gets the Warning",
+      "narration": "STORM picked up the signal first. Something massive was powering up in the eastern zone. BLAZE didn't hesitate. He was already moving before STORM finished the sentence.",
+      "visual_prompt": "Cinematic action anime style. BLAZE — red fire truck mech — sprints across a ruined cityscape at full speed, orange visor blazing, red energy trail behind him. STORM flies above as a helicopter, rotors cutting through smoke. GRANITE rumbles behind them. Action motion blur. Heroic warm red-orange colors against dark industrial backdrop. Dynamic angle — low, looking up. 16:9.",
+      "bg_colors": ["#1A1A2E", "#CC0000", "#FF6B00"],
+      "accent": "#CC0000",
+      "camera": "push_in",
+      "duration_sec": 9,
+      "higgsfield_prompt": "Cinematic action anime style, red fire truck mech sprinting through ruined city at full speed with orange visor blazing and red energy trail, blue helicopter mech flying above, green bulldozer mech following, dramatic low angle shot, dark city warm hero colors, 16:9"
+    },
+    {
+      "scene_number": 3,
+      "type": "villain_dominance",
+      "title": "RUMBLE Activates the Array",
+      "narration": "They were too late. The Crusher Array came online and the first mechanical fist slammed into the ground like a meteor. The shockwave knocked all three Mech Legends off their feet. RUMBLE hadn't even looked at them yet.",
+      "visual_prompt": "Cinematic action anime style. EXTREME ACTION — one of the Crusher Array's massive mechanical fists SLAMS into the ground creating a shockwave explosion crater. BLAZE, STORM, and GRANITE are thrown backward through the air. RUMBLE in the background activating more towers, four arms moving simultaneously, utterly unconcerned. Epic destruction, shockwave debris. Dark purple villain energy vs red blue green heroes. 16:9.",
+      "bg_colors": ["#0A0510", "#4A0040", "#8B0000"],
+      "accent": "#FF6B00",
+      "camera": "pull_back",
+      "duration_sec": 9,
+      "higgsfield_prompt": "Cinematic action anime style, enormous mechanical fist slamming into ground creating massive shockwave crater, three mechs thrown backward through air, massive purple mech with four arms in background activating towers unconcerned, epic destruction, dark purples and explosive oranges, 16:9"
+    },
+    {
+      "scene_number": 4,
+      "type": "battle_attempt",
+      "title": "Every Attack Fails",
+      "narration": "BLAZE fired everything. STORM hit the towers from above. GRANITE charged the base. RUMBLE deflected BLAZE with two arms, caught STORM mid-flight with a third, and pinned GRANITE to the ground with his fourth — all at the same time. It wasn't a fight. It was a lesson.",
+      "visual_prompt": "Cinematic action anime style. Split composition — RUMBLE's four arms each engaged in a different action simultaneously: left arms deflecting BLAZE's energy blasts, upper right arm grabbing STORM out of the air, lower right arm pinning GRANITE to the ground. RUMBLE's face: bored. His red eyes barely register the effort. The three heroes are straining. RUMBLE is not. Dark power vs desperate effort. 16:9.",
+      "bg_colors": ["#0A0510", "#1A1A2E", "#4A0040"],
+      "accent": "#CC0000",
+      "camera": "push_in",
+      "duration_sec": 9,
+      "higgsfield_prompt": "Cinematic action anime style, massive purple mech with four arms simultaneously deflecting red mech blasts, catching blue flying mech, pinning green mech to ground, all with bored expression, three heroes straining and losing, dark vs desperate action, 16:9"
+    },
+    {
+      "scene_number": 5,
+      "type": "darkest_moment",
+      "title": "RUMBLE Makes His Offer",
+      "narration": "RUMBLE dropped all three of them. He could have ended it. He didn't. He wanted them to know they'd already lost. 'You can't stop this,' he said. 'Walk away, and I'll let you.' BOLT laughed. BLAZE didn't answer. He was thinking.",
+      "visual_prompt": "Cinematic action anime style. Dark, still moment. BLAZE, STORM, and GRANITE are on one knee — damaged, sparking, exhausted. RUMBLE stands over them, four arms folded, towering. His red eyes glow with cold certainty. BOLT dances in the background. Behind RUMBLE, the Crusher Array hums with building power. Everything feels lost. The sky is dark red and purple. 16:9.",
+      "bg_colors": ["#0A0510", "#2A0020", "#8B0000"],
+      "accent": "#8B008B",
+      "camera": "push_in",
+      "duration_sec": 9,
+      "higgsfield_prompt": "Cinematic action anime style, three damaged sparking mechs on one knee, massive four-armed purple villain standing over them with all arms folded in contempt, small black mech dancing in background, enormous powered structure behind villain, dark red and purple sky, defeated heroes, 16:9"
+    },
+    {
+      "scene_number": 6,
+      "type": "crisis",
+      "title": "The Array Fires — and Hits the City",
+      "narration": "Then the Array fired. Not at them. At the city behind them. RUMBLE wasn't there to beat the Mech Legends. He was there to destroy everything behind them while they were busy fighting him. BOLT had already gone around.",
+      "visual_prompt": "Cinematic action anime style. HORROR BEAT — the Crusher Array unleashes a beam of mechanical energy that slams into city infrastructure in the background — towers crumbling, energy eruptions. BLAZE turns and sees it happening BEHIND him. BOLT is visible in the background near the city, laughing. RUMBLE watches with satisfaction. The real plan revealed. Catastrophic scale. 16:9.",
+      "bg_colors": ["#8B0000", "#1A1A2E", "#FF6B00"],
+      "accent": "#FF6B00",
+      "camera": "pull_back",
+      "duration_sec": 9,
+      "higgsfield_prompt": "Cinematic action anime style, mechanical energy beam hitting city infrastructure causing massive destruction in background, red mech hero turning around in horror to see it happening, small black mech visible near city laughing, massive purple villain watching with satisfaction, catastrophic revelation moment, 16:9"
+    },
+    {
+      "scene_number": 7,
+      "type": "turning_point",
+      "title": "BLAZE Reveals the Secret Weapon",
+      "narration": "BLAZE had one shot. He could go after BOLT — or he could go after the Array's power core. Not both. He'd been watching RUMBLE's pattern. Every time the Array fired, for exactly one second, RUMBLE looked at it. Not at the Mech Legends. One second. That was enough.",
+      "visual_prompt": "Cinematic action anime style. INTENSE CLOSE-UP on BLAZE's visor — orange glow, eyes locked and calculating. Behind his visor reflection we see what he's tracking: RUMBLE's gaze shifting toward the Array. BLAZE's chest insignia pulses with building energy. His fists lock. One frame shows STORM and GRANITE watching him, trusting him. The next: BLAZE is already moving. Decisive hero energy. 16:9.",
+      "bg_colors": ["#CC0000", "#1A1A2E", "#FF6B00"],
+      "accent": "#FF6B00",
+      "camera": "push_in",
+      "duration_sec": 9,
+      "higgsfield_prompt": "Cinematic action anime style, extreme close up on red mech hero's glowing orange visor, eyes tracking and calculating, chest insignia pulsing with energy, reflection of massive purple villain in visor, decisive moment before action, intense focus energy, dark background with orange highlight, 16:9"
+    },
+    {
+      "scene_number": 8,
+      "type": "hero_action",
+      "title": "Three Mechs, One Window",
+      "narration": "STORM hit BOLT from above — took him out of the fight in one move. GRANITE took the impact from RUMBLE's counter-swing — held the line so BLAZE could get through. And BLAZE ran. Faster than he'd ever run. Right at the power core.",
+      "visual_prompt": "Cinematic action anime style. Three-panel action composition — TOP: STORM diving down striking BOLT in a burst of blue lightning. MIDDLE: GRANITE taking a massive hit from RUMBLE's arm, holding position, feet digging into the ground, NOT falling. BOTTOM: BLAZE at full sprint directly toward camera, red energy blazing, a single target locked — the glowing power core of the Array behind RUMBLE. Epic teamwork moment. 16:9.",
+      "bg_colors": ["#CC0000", "#0044AA", "#228B22"],
+      "accent": "#FF6B00",
+      "camera": "pull_back",
+      "duration_sec": 9,
+      "higgsfield_prompt": "Cinematic action anime style, dynamic three-part action composition showing blue mech striking black mech from above, green mech taking massive hit and holding position, red mech sprinting at full speed toward glowing power core, epic coordinated teamwork, red blue green hero colors vs dark villain energy, 16:9"
+    },
+    {
+      "scene_number": 9,
+      "type": "climax",
+      "title": "BLAZE Destroys the Array",
+      "narration": "BLAZE hit the power core at full speed — and the Crusher Array came down. Every tower. Every mechanical fist. All of it. RUMBLE spun around. For the first time, something crossed his face that wasn't contempt. BLAZE looked back at him. 'We'll stop it every time,' he said. 'That's what we do.'",
+      "visual_prompt": "Cinematic action anime style. EPIC CLIMAX — BLAZE's fist connects with the glowing power core in a massive explosion of red-orange energy. The Crusher Array towers collapse in sequence behind him — massive mechanical destruction, chain reaction. RUMBLE's four arms go wide, his expression shifting — not defeat exactly, but something he hasn't felt before. BLAZE stands in the explosion light, damaged but standing, visor blazing. 16:9.",
+      "bg_colors": ["#FF6B00", "#CC0000", "#FFD700"],
+      "accent": "#FFD700",
+      "camera": "pull_back",
+      "duration_sec": 9,
+      "higgsfield_prompt": "Cinematic action anime style, red mech fist connecting with glowing power core in massive explosion, enormous mechanical tower structure collapsing in chain reaction, massive purple four-armed villain looking at explosion with unreadable expression for first time, red hero standing in explosion light damaged but standing, visor blazing, epic victory moment, 16:9"
+    },
+    {
+      "scene_number": 10,
+      "type": "cliffhanger",
+      "title": "RUMBLE Retreats — But Smiles",
+      "narration": "RUMBLE left. He didn't run. He walked. Slowly. And just before he disappeared into the dark — he smiled. He'd learned something today. About how the Mech Legends worked. About BLAZE. And a villain who's learning... is a villain getting stronger. Next time would be different.",
+      "visual_prompt": "Cinematic action anime style. CHILLING CLIFFHANGER. RUMBLE walks away slowly into darkness, three of his four arms at his sides. His fourth arm raised in a slow departing gesture — not a wave, not a threat. Just acknowledgment. And on his face: a small, calculating smile. His red eyes glowing in the dark as he disappears. BLAZE and the team watch from behind. Something about this feels worse than losing. 16:9.",
+      "bg_colors": ["#0A0510", "#1A1A2E", "#2A0020"],
+      "accent": "#8B008B",
+      "camera": "push_in",
+      "duration_sec": 9,
+      "higgsfield_prompt": "Cinematic action anime style, massive purple four-armed villain walking slowly into darkness with calculating smile and red eyes glowing, one arm raised in slow departure gesture, three damaged hero mechs watching from behind, chilling villain exit, ominous dark purples, something feels worse than defeat, 16:9"
+    }
+  ],
+  "music": {
+    "style": "140bpm_action_synth",
+    "notes": "Cold open: low drone. Scenes 2–4: rising tension, sawtooth bass. Scene 5 (darkest moment): music drops to near silence. Scene 6 (array fires): sudden impact crash. Scenes 7–9: full intensity, kick drum every beat. Scene 10: slow, heavy single notes — something is wrong. End on unresolved chord."
+  },
+  "voice_style": {
+    "tone": "urgent_epic_cinematic",
+    "pacing": "measured in quiet scenes, rapid-fire in action — pause before BLAZE's final line to let it land",
+    "character": "a narrator who knows these kids are in real danger and respects them enough not to sugarcoat it"
+  },
+  "lesson": "The secret weapon was never a gadget. It was trust — knowing your team well enough to give them the moment they need.",
+  "standing_rule_check": "RUMBLE dominates scenes 1–6 completely. Heroes win by exploiting one specific gap — not by overpowering him. RUMBLE leaves more dangerous than he arrived. Victory feels earned but precarious.",
+  "youtube_title": "BLAZE's SECRET WEAPON vs RUMBLE! ⚡ | Mech Legends Episode 2",
+  "youtube_description": "RUMBLE has built something new. Something MASSIVE. And this time, he's not just fighting the Mech Legends — he has a plan for the whole city.\n\nBLAZE has one shot. One second. Everything depends on it.\n\n💥 RUMBLE's Crusher Array vs the Mech Legends\n🔴 BLAZE's most dangerous run yet\n🔵 STORM takes out BOLT in one move\n🟢 GRANITE holds the line\n🟣 RUMBLE learns something... and that's terrifying\n\n📺 Full Mech Legends series: [playlist link]\n🔔 SUBSCRIBE — new episode every week!\n\n#MechLegends #BLAZE #RUMBLE #RobotHeroes #KidsCartoon #KidsYouTube",
+  "next_episode_preview": "Episode 3 — GRANITE's Sacrifice. RUMBLE knows the pattern now. And he's coming for GRANITE first.",
+  "higgsfield_style_notes": "Cinematic action anime style throughout. RUMBLE must look genuinely threatening in every scene — no softening. Hero colors (red/blue/green) against dark backgrounds. Explosion scenes should feel big-budget. This is NOT a kids cartoon in aesthetic — it targets 4–12 but looks like adult anime."
+}

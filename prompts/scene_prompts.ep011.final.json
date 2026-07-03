@@ -1,0 +1,112 @@
+{
+  "episode_number": 11,
+  "series_name": "Empire Decoded",
+  "topic": "The Fall of Constantinople: End of an Empire",
+  "title": "The Fall of Constantinople: End of an Empire",
+  "rendered": false,
+  "generation": {
+    "gemini_source": "claude-direct (pre-generated ahead of Higgsfield credits)",
+    "chatgpt_source": "claude-direct"
+  },
+  "qa_notes": [
+    "Scene count: 6; total runtime ~55s of narration audio (estimate).",
+    "Villain-strength check: Ottoman force framed as a young, ambitious sultan commanding an army over ten times the size of the defenders, wielding the largest cannon ever built, against walls that had stood for eleven centuries without falling. Pass."
+  ],
+  "scenes": [
+    {
+      "scene_number": 1,
+      "title": "Cold Open",
+      "description": "For eleven hundred years, a triple ring of walls has never been breached by a hostile army. Inside, fewer than ten thousand defenders guard a city that is the last fragment of an empire that once ruled from Britain to Persia. Outside, a twenty-one-year-old sultan has brought the largest cannon ever built — and an army more than ten times the size of the garrison.",
+      "narration": "For eleven hundred years, the triple walls of Constantinople had never been breached by a hostile army. Inside those walls, fewer than ten thousand defenders guarded the last fragment of an empire that had once stretched from Britain to Persia. Outside, a twenty-one-year-old sultan had brought an army more than ten times their number — and a cannon so massive, it took sixty oxen just to drag it into place.",
+      "video_prompt": "Cinematic historical documentary style, Empire Decoded. Vast aerial shot of the massive triple land walls of Constantinople stretching for miles, ancient and imposing. Outside the walls, an enormous Ottoman army camp stretches to the horizon, with a colossal bronze cannon being hauled into position by dozens of oxen. Photoreal detail, dramatic dawn lighting, accurate 15th century architecture and costumes, film-grade composition, 16:9.",
+      "duration_sec": 10
+    },
+    {
+      "scene_number": 2,
+      "title": "Setting the Stage",
+      "description": "Sultan Mehmed II commands an Ottoman army of roughly eighty thousand men, including the elite Janissary corps — Europe's most feared professional soldiers — backed by a navy of over a hundred ships and the largest siege cannon in history, the 'Basilica', cast specifically to bring down Constantinople's walls.",
+      "narration": "Sultan Mehmed the Second commanded roughly eighty thousand soldiers, including the Janissaries — elite professional troops feared across Europe as the deadliest infantry of their age — backed by a fleet of over a hundred ships. He had also commissioned something unprecedented: a cannon called the Basilica, the largest ever built, cast for one purpose alone — to bring down walls that had never fallen.",
+      "video_prompt": "Cinematic historical documentary style, Empire Decoded. Wide shot of Sultan Mehmed II, young and richly dressed in Ottoman royal armor and turban, reviewing ranks of elite Janissary soldiers in distinctive tall white headgear, an enormous bronze siege cannon being positioned in the foreground by engineers. Ottoman fleet visible in the bay behind. Photoreal detail, dramatic golden lighting, accurate Ottoman period costumes and architecture, film-grade composition, 16:9.",
+      "duration_sec": 10
+    },
+    {
+      "scene_number": 3,
+      "title": "Rising Tension",
+      "description": "Emperor Constantine XI rallies his tiny garrison — a mix of Byzantine soldiers and foreign volunteers — and orders a massive chain stretched across the harbor to block the Ottoman fleet. For weeks, the Basilica pounds the walls day and night, but the defenders rebuild the breaches each night with whatever they can find.",
+      "narration": "Emperor Constantine the Eleventh rallied his tiny garrison — Byzantine soldiers alongside foreign volunteers who had come to fight for a dying empire — and stretched a massive chain across the harbor entrance to keep the Ottoman fleet out. For weeks, the great cannon pounded the walls day and night, blasting huge gaps in stone that had stood for a thousand years. And every single night, the defenders rebuilt the breaches with rubble, wood, and whatever they could carry.",
+      "video_prompt": "Cinematic historical documentary style, Empire Decoded. Night scene at the city walls, defenders working frantically by torchlight to repair a massive breach in the stone walls using rubble, timber, and barrels, while in the background the silhouette of the great cannon looms across the field, smoke still rising from its last shot. Emperor Constantine XI in Byzantine imperial armor directs the work. Photoreal detail, dramatic torchlit lighting, film-grade composition, 16:9.",
+      "duration_sec": 10
+    },
+    {
+      "scene_number": 4,
+      "title": "The Clash",
+      "description": "When the harbor chain blocks his fleet, Mehmed orders an impossible feat: dragging seventy ships overland on greased logs, over a hill, to bypass the chain entirely. After weeks of bombardment, a final all-out assault sends waves of Ottoman troops — including the Janissaries — against the breached walls.",
+      "narration": "When the chain blocked his fleet from entering the harbor, Mehmed ordered something no one expected — dragging seventy warships overland, on greased logs, over a hill, to launch them directly into the harbor behind the chain. Weeks later, with the walls battered into rubble in three places, Mehmed unleashed a final assault: wave after wave of troops, and finally the Janissaries themselves, surging toward the breaches in the dead of night.",
+      "video_prompt": "Cinematic historical documentary style, Empire Decoded. Dramatic night scene, dozens of Ottoman warships being hauled overland on wooden rollers up a hillside by thousands of soldiers and oxen, torches lighting the way. Cut to a chaotic assault scene at a breached section of wall, waves of Ottoman soldiers and Janissaries charging through rubble and smoke as exhausted defenders fight desperately to hold the line. Photoreal detail, dramatic firelit lighting, film-grade composition, 16:9.",
+      "duration_sec": 11
+    },
+    {
+      "scene_number": 5,
+      "title": "Turning Point",
+      "description": "A small postern gate is left unlocked in the chaos, and Ottoman troops slip through, raising their banners on the inner walls. Seeing the city breached, Emperor Constantine XI removes his imperial regalia and charges into the fighting alongside his soldiers, vanishing into history.",
+      "narration": "In the chaos, a small side gate was found unlocked, and Ottoman troops slipped through, raising their banners on the inner walls. When Emperor Constantine saw the banners flying over his city, he tore off his imperial regalia so he wouldn't be recognized, and charged into the fighting alongside his soldiers. He was never seen again.",
+      "video_prompt": "Cinematic historical documentary style, Empire Decoded. Dramatic shot of Ottoman soldiers pouring through a small unlocked postern gate and raising a crescent banner on an inner wall tower, visible from across the city. In the foreground, Emperor Constantine XI removes his purple and gold imperial cloak and crown, drawing his sword, and charges into a chaotic melee of soldiers, disappearing into the smoke and dust. Photoreal detail, dramatic dawn lighting, film-grade composition, 16:9.",
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 6,
+      "title": "Legacy",
+      "description": "After eleven hundred years, the Roman Empire's last remnant fell in a single morning. Constantinople became Istanbul, the new capital of the Ottoman Empire, and the event sent shockwaves across Europe — reshaping trade routes and, indirectly, helping push the Age of Exploration toward new horizons.",
+      "narration": "After eleven hundred years, the Roman Empire's final remnant fell in a single morning. Constantinople became Istanbul, the new capital of a rapidly expanding Ottoman Empire. The shockwaves reached every court in Europe — disrupting trade routes to Asia so badly that, within decades, European sailors would go looking for an entirely new way to reach the East. Subscribe to Empire Decoded for the next chapter.",
+      "video_prompt": "Cinematic historical documentary style, Empire Decoded. Sweeping shot of Sultan Mehmed II riding through the gates of the conquered city on a white horse, surrounded by his army, the Hagia Sophia visible in the background with workers beginning to add Islamic elements to its exterior. Final shot transitions to a map overlay showing trade routes shifting and European ships setting out across the Atlantic. Photoreal detail, epic and transitional tone, film-grade composition, 16:9.",
+      "duration_sec": 9
+    }
+  ],
+  "music": {
+    "prompt": "Epic historical documentary score, cinematic orchestral with Ottoman-influenced instrumentation (ney flute, mehter-style drums and zurna accents) blended with Byzantine choral textures. Begins with a tense, ancient, reverent motif representing the eternal walls, builds into a relentless siege theme with heavy percussion for the bombardment, peaks with a chaotic, desperate climax for the final assault, and resolves into a vast, transitional theme blending Byzantine and Ottoman musical motifs representing an empire's end and another's rise. Instrumental only, optional wordless choir. Style reference: Hans Zimmer historical trailer score.",
+    "duration_sec": 300
+  },
+  "sound_effects": [
+    {
+      "label": "ancient_walls_ambience",
+      "prompt": "Vast ancient stone city wall ambience, wind across battlements, distant church bells, soldiers' footsteps on stone walkways, eleven centuries of weight in the atmosphere"
+    },
+    {
+      "label": "ottoman_camp_and_cannon",
+      "prompt": "Massive military camp ambience, thousands of soldiers, oxen lowing, a colossal bronze cannon being loaded and fired with an enormous deep boom and rolling echo"
+    },
+    {
+      "label": "night_wall_repair",
+      "prompt": "Night-time frantic repair ambience, rubble and timber being dragged and stacked, urgent whispered commands, distant cannon fire rumbling, torches crackling"
+    },
+    {
+      "label": "ships_overland",
+      "prompt": "Massive overland ship-hauling ambience, wooden rollers grinding, ropes straining, thousands of men chanting in unison effort, creaking ship hulls"
+    },
+    {
+      "label": "final_assault_chaos",
+      "prompt": "Intense night battle ambience, war cries in Turkish and Greek, clashing weapons, collapsing rubble, distant horns and drums, chaotic and overwhelming"
+    },
+    {
+      "label": "city_transition",
+      "prompt": "Triumphant entry ambience, large army marching through city gates, echoing call to prayer beginning, crowd murmurs shifting from fear to a new order, bell tolling once and fading"
+    }
+  ],
+  "character_images": [
+    {
+      "label": "mehmed_ii_reference",
+      "prompt": "Cinematic realistic character design, Sultan Mehmed II, young Ottoman ruler in his early twenties, ornate royal Ottoman armor and turban with jeweled aigrette, sharp intelligent expression, archaeology-based 15th century Ottoman proportions and dress, full body standing pose, neutral grey studio background, soft even lighting, character reference sheet, front view, no text, no logos, no watermark",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "label": "constantine_xi_reference",
+      "prompt": "Cinematic realistic character design, Emperor Constantine XI Palaiologos, Byzantine imperial armor with purple and gold accents, ornate crown, dignified weary middle-aged face, archaeology-based late Byzantine proportions and dress, full body standing pose, neutral grey studio background, soft even lighting, character reference sheet, front view, no text, no logos, no watermark",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "label": "basilica_cannon_reference",
+      "prompt": "Cinematic realistic design reference, an enormous 15th century bronze siege cannon known as the Basilica, mounted on a massive wooden carriage, surrounded by Ottoman engineers and oxen teams, full body side profile, neutral grey studio background, soft even lighting, photoreal detail, no text, no logos, no watermark",
+      "aspect_ratio": "4:3"
+    }
+  ]
+}

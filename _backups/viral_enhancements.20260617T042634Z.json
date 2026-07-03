@@ -1,0 +1,238 @@
+{
+  "version": "1.0",
+  "purpose": "Per-episode viral layer: hook line, highlight scene, short-form title, rewatch bait. Apply at render/publish time.",
+  "format_note": "hook_line = spoken before scene 1 narration. highlight_scene = scene number to cut as standalone Short. short_title = Shorts-optimized title for cold discovery. rewatch_bait = background detail that pays off later.",
+  "episodes": {
+    "LO_EP001": {
+      "hook_line": "Little Zeus just got his first thunderbolt. He has no idea how to use it. This is going to be a problem.",
+      "highlight_scene": 3,
+      "highlight_note": "Scene 3 — first misfire. The look on everyone's faces.",
+      "short_title": "Baby Zeus Got a Thunderbolt and Immediately Destroyed Something ⚡😂 #LittleOlympus",
+      "rewatch_bait": "Archie is already looking at the camera in scene 1, frame 2. He knew."
+    },
+    "LO_EP002": {
+      "hook_line": "There is a giant snake wrapped around Mount Olympus. Baby Hercules thinks he can fix it. He cannot fix it.",
+      "highlight_scene": 4,
+      "highlight_note": "Scene 4 — Hercules vs snake, the reversal moment.",
+      "short_title": "Baby Hercules vs a Giant Snake (He Made It Worse) 💪😬 #LittleOlympus",
+      "rewatch_bait": "Archie is on a high ledge in scene 1 — he moved there before the snake arrived."
+    },
+    "LO_EP003": {
+      "hook_line": "Everything at the Olympus fountain turned to stone overnight. Perseus has a mirror. Medusa has opinions about this.",
+      "highlight_scene": 3,
+      "highlight_note": "Scene 3 — first mirror moment, stone fish reaction.",
+      "short_title": "Perseus Tries to Fix the Stone Fish Problem (It Gets Worse) 🪨😂 #LittleOlympus",
+      "rewatch_bait": "One fish in the background was already stone in scene 1 — before anyone noticed."
+    },
+    "LO_EP004": {
+      "hook_line": "Athena had a perfect plan for the Olympic Games. Then Baby Hercules offered to help.",
+      "highlight_scene": 4,
+      "highlight_note": "Scene 4 — Hercules 'helps', the column moment.",
+      "short_title": "Athena Had a Perfect Plan Until Hercules Helped 📜💥 #LittleOlympus",
+      "rewatch_bait": "Athena's three chin taps appear for the first time in scene 2 — plant for the whole series."
+    },
+    "LO_EP005": {
+      "hook_line": "The fastest kid on Olympus just entered his first race. He's never lost anything in his life. Watch his heel.",
+      "highlight_scene": 3,
+      "highlight_note": "Scene 3 — race start, Achilles's confidence, the strap moment.",
+      "short_title": "The Fastest Kid on Olympus Just Had a Wardrobe Malfunction 🏃⚡ #LittleOlympus",
+      "rewatch_bait": "The loose strap is visible on Achilles's heel in scene 1 before anyone mentions it."
+    },
+    "LO_EP006": {
+      "hook_line": "Everyone on Olympus keeps staring at Achilles's heel. He is completely fine. His heel is fine. Please stop looking at his heel.",
+      "highlight_scene": 2,
+      "highlight_note": "Scene 2 — the running joke debuts. 'It's fine. I'm fine. Everyone stop looking at my heel.'",
+      "short_title": "Why Does Everyone Keep Staring at Achilles's Heel?? 👀 #LittleOlympus",
+      "rewatch_bait": "Archie stares at the heel in every single scene he appears in. Nobody else notices Archie doing this."
+    },
+    "LO_EP007": {
+      "hook_line": "Uncle Poseidon is visiting. He brought a gift. The gift is the entire ocean.",
+      "highlight_scene": 4,
+      "highlight_note": "Scene 4 — Poseidon swimming through the living room with six dolphins.",
+      "short_title": "Uncle Poseidon Accidentally Brought the ENTIRE Ocean to Olympus 🌊😭 #LittleOlympus",
+      "rewatch_bait": "One dolphin appears in the background of scene 1 — before Poseidon officially arrives."
+    },
+    "LO_EP008": {
+      "hook_line": "Athena just found out her owl has never been trained a single day in his life. He has been doing all of this on pure instinct.",
+      "highlight_scene": 5,
+      "highlight_note": "Scene 5 — Archie's 11-second fix vs Athena's 45-second protocol. The wing gesture.",
+      "short_title": "This Owl Has Never Been Trained. He Just Fixed a Crisis in 11 Seconds. 🦉 #LittleOlympus",
+      "rewatch_bait": "In scene 1, Archie's head tilts are LEFT for 'no training' and RIGHT for 'I know what you're about to find.' He's answering a different question than she's asking."
+    },
+    "LO_EP009": {
+      "hook_line": "Uncle Hades has never seen sunlight. He arrived at dawn. He brought the Underworld fog. By accident.",
+      "highlight_scene": 3,
+      "highlight_note": "Scene 3 — Zeus names the three-headed puppy Fluffy. The puppy's three reactions.",
+      "short_title": "Uncle Hades Brought His Dog. Zeus Named It Fluffy. Hades Didn't Object. 🐾 #LittleOlympus",
+      "rewatch_bait": "Hades's glasses prescription is shown in scene 1 — three different strengths. One pair for each head of the dog, confirmed in scene 3."
+    },
+    "LO_EP010": {
+      "hook_line": "The ground is shaking again. It's not Hercules this time. Zeus knows exactly what it is, and he's not saying.",
+      "highlight_scene": 6,
+      "highlight_note": "Scene 6 — Zeus and Achilles at the mountaintop. Athena opens WHAT LIVES BELOW. The weight of it.",
+      "short_title": "Something Under Olympus Just Moved. Zeus Knows What It Is. 🌍 #LittleOlympus",
+      "rewatch_bait": "The Olympus Sea wave in scene 1 goes slightly the wrong direction. It's barely noticeable. It matters."
+    },
+    "LO_EP011": {
+      "hook_line": "Hermes delivered every message this week. Fast. Perfect. Wrong address. All of them.",
+      "highlight_scene": 3,
+      "highlight_note": "Scene 3 — Zeus using an architecture textbook as a thunderbolt manual. It works.",
+      "short_title": "Hermes Delivered Every Message to the Wrong Person and Nobody Can Stop Him 📬😂 #LittleOlympus",
+      "rewatch_bait": "The dolphins in Athena's library (from Hermes's mix-up) are reading the scrolls. Background, scene 4."
+    },
+    "LO_EP012": {
+      "hook_line": "Perseus went back to Medusa's garden. She remembered him. She had been counting the days.",
+      "highlight_scene": 5,
+      "highlight_note": "Scene 5 — Medusa asks Perseus to describe the eastern valley. She can't go there. He becomes her eyes.",
+      "short_title": "Medusa Asked Perseus to Describe Something She Can Never See 🪨💙 #LittleOlympus",
+      "rewatch_bait": "The stone owl on the better pedestal — Medusa placed it there between EP003 and EP012. She expected him to notice. He does."
+    },
+    "LO_EP013": {
+      "hook_line": "Achilles won the championship by 60 meters. His stride shortened at 200 meters. He knows why. He's not saying.",
+      "highlight_scene": 5,
+      "highlight_note": "Scene 5 — 'I won, didn't I?' The running joke goes defensive. First time it's not a joke.",
+      "short_title": "Achilles Won By 60 Meters But Athena's Face Says Something Else 📊 #LittleOlympus",
+      "rewatch_bait": "Athena's chin taps happen twice during the race — at 200m mark. She already knows."
+    },
+    "LO_EP014": {
+      "hook_line": "Baby Hercules has been lost for four hours. Someone found him. Someone nobody expected.",
+      "highlight_scene": 4,
+      "highlight_note": "Scene 4 — Medusa leads Hercules out by voice alone. No mirrors. She's helping.",
+      "short_title": "Baby Hercules Was Lost for 4 Hours. Guess Who Found Him. 🗺️ #LittleOlympus",
+      "rewatch_bait": "In scene 1, Medusa's garden has a path worn toward the east canyon edge. She knew this canyon long before Hercules showed up."
+    },
+    "LO_EP015": {
+      "hook_line": "The ground has been shaking for three days. Zeus's father wrote back. The letter said: he knows. It's not time yet.",
+      "highlight_scene": 6,
+      "highlight_note": "Scene 6 — Zeus's father's reply. 'He knows. It's not time yet, but it will be. We'll know when.' The scroll closes.",
+      "short_title": "Zeus's Father Knows About the Titan. His Reply Has 7 Words. 📜 #LittleOlympus",
+      "rewatch_bait": "Athena's scroll goes from 5 pages to 7 pages in this episode. The last entry — WE WON'T FACE IT ALONE — is visible if you pause at the right moment."
+    },
+    "LO_EP016": {
+      "hook_line": "Hercules just solved an engineering crisis perfectly, on the first try, with no explanation. It turns out he's been reading scrolls upside-down for 18 months.",
+      "highlight_scene": 2,
+      "highlight_note": "Scene 2 — 'I read it upside down.' Athena's face. The recalibration.",
+      "short_title": "Hercules Has Been Learning Engineering Upside-Down For 18 Months 📖🔄 #LittleOlympus",
+      "rewatch_bait": "In earlier episodes (EP004, EP008), Hercules is visible behind Athena, facing the wrong way. He was reading the whole time."
+    },
+    "LO_EP017": {
+      "hook_line": "Zeus has entered every competition on Olympus and never won once. Today he decided that's not good enough anymore.",
+      "highlight_scene": 5,
+      "highlight_note": "Scene 5 — 'I want to be useful. Not entered. Useful.' One final perfect throw. He leaves.",
+      "short_title": "Zeus Stopped Entering Things for Fun. He Wants to Be Ready for Something. ⚡ #LittleOlympus",
+      "rewatch_bait": "Zeus's crown is straighter in every scene this episode. By scene 7 it's almost perfectly level. He's focused."
+    },
+    "LO_EP018": {
+      "hook_line": "Athena was up for 36 hours. She found the final piece. She called everyone together. They'd all been preparing for this without knowing.",
+      "highlight_scene": 3,
+      "highlight_note": "Scene 3 — each person's role revealed. The realization that every episode this season was preparation.",
+      "short_title": "Athena Stayed Up 36 Hours and Found Out They Were Ready All Along 📜✨ #LittleOlympus",
+      "rewatch_bait": "The plan Athena shows uses each person's specific skills from specific earlier episodes. Every skill listed has an episode number attached to when they learned it."
+    },
+    "LO_EP019": {
+      "hook_line": "Full moon is tomorrow. The plan is ready. But Achilles just told Zeus his heel is worse than he's been saying.",
+      "highlight_scene": 4,
+      "highlight_note": "Scene 4 — 'My heel is bad tonight.' Not 'I'm fine.' Zeus: 'How bad?' Achilles: 'Bad enough to tell you.'",
+      "short_title": "Achilles Stopped Saying He Was Fine. Zeus Listened. 💛 #LittleOlympus",
+      "rewatch_bait": "Every previous episode Achilles said 'I'm fine' — this is the ONLY episode he doesn't. Viewers who caught the running joke will notice immediately."
+    },
+    "LO_EP020": {
+      "hook_line": "The full moon rose. The ground shook. And then — from the east valley — someone showed up that nobody had called.",
+      "highlight_scene": 6,
+      "highlight_note": "Scene 6 — Medusa seals the cracks. 'I said I would.' The invitation to the west garden.",
+      "short_title": "The Season Finale Everyone Was Ready For (And One Person Nobody Expected) 🌕 #LittleOlympus",
+      "rewatch_bait": "Archie's final camera look is the slowest blink in the entire series. Count the frames — it's three times longer than any previous blink. He's been waiting for this."
+    },
+    "ML_EP001": {
+      "hook_line": "Before the war, there was silence. Before silence, there was one machine older than the city. This is the moment it woke up.",
+      "highlight_scene": 4,
+      "highlight_note": "Scene 4 — first transformation sequence. BLAZE becomes something nobody expected.",
+      "short_title": "A Machine Older Than the City Just Woke Up. Nothing Is the Same. 🤖⚡ #MechLegends",
+      "rewatch_bait": "RUMBLE's observation drone is visible in scene 1, upper right corner. He was there from the beginning."
+    },
+    "ML_EP002": {
+      "hook_line": "RUMBLE studied BLAZE for weeks looking for his weakness. He found it. BLAZE has one move left.",
+      "highlight_scene": 5,
+      "highlight_note": "Scene 5 — the secret weapon reveal. The moment RUMBLE's face changes.",
+      "short_title": "RUMBLE Found BLAZE's Weakness. BLAZE's Response Changes Everything. ⚔️ #MechLegends",
+      "rewatch_bait": "RUMBLE's data screen in scene 2 shows BLAZE's weakness before it's named — visible if you pause."
+    },
+    "ML_EP003": {
+      "hook_line": "RUMBLE studied one thing about BLAZE: he never leaves anyone behind. So RUMBLE used it as a trap.",
+      "highlight_scene": 4,
+      "highlight_note": "Scene 4 — GRANITE in danger, BLAZE's code activated against him, the impossible choice.",
+      "short_title": "RUMBLE Turned BLAZE's Best Quality Into a Weapon Against Him 🔴 #MechLegends",
+      "rewatch_bait": "GRANITE's sleeve first shows stress fractures in scene 2. Nobody mentions it. It matters in EP010."
+    },
+    "ML_EP004": {
+      "hook_line": "While RUMBLE was studying the team, someone else was studying RUMBLE. From orbit. For eleven weeks.",
+      "highlight_scene": 3,
+      "highlight_note": "Scene 3 — NOVA's full analysis of RUMBLE revealed. She knows things they don't.",
+      "short_title": "Someone Was Watching RUMBLE the Entire Time and He Didn't Know 🛸 #MechLegends",
+      "rewatch_bait": "NOVA's ship appears as a moving dot in the sky of EP001 and EP003. She was already there."
+    },
+    "ML_EP005": {
+      "hook_line": "NOVA said three weeks. RUMBLE built it in five days. This is what it does to a city.",
+      "highlight_scene": 4,
+      "highlight_note": "Scene 4 — Gravity Anchor deploys. The city-scale effect. RUMBLE says 'NOVA was right.' and walks away.",
+      "short_title": "RUMBLE Built His Weapon in 5 Days Instead of 3 Weeks. Then He Said One Thing. 🔴 #MechLegends",
+      "rewatch_bait": "RUMBLE walks away after getting the power grid map — his actual goal. The Gravity Anchor was cover."
+    },
+    "ML_EP006": {
+      "hook_line": "NOVA saw the full weapon design before she came down. She didn't tell them everything. She had a reason.",
+      "highlight_scene": 5,
+      "highlight_note": "Scene 5 — RUMBLE planted a decoy schematic. NOVA knew. She used it. 12-hour margin.",
+      "short_title": "NOVA Knew About the Fake Plans the Whole Time. Here's Why She Didn't Say. 🔵 #MechLegends",
+      "rewatch_bait": "NOVA's first appearance in EP004 — her ship's approach angle matched the Resonance Tower's location exactly. She was already calculating."
+    },
+    "ML_EP007": {
+      "hook_line": "Four components. Four locations. RUMBLE had proxy units at three of them and was at the fourth himself.",
+      "highlight_scene": 6,
+      "highlight_note": "Scene 6 — BLAZE powers down his jets and walks to the component. RUMBLE's line: 'Now I know you'll walk into a room I own if the component matters enough.'",
+      "short_title": "BLAZE Powered Down His Weapons and Walked Into RUMBLE's Room Anyway 🔥 #MechLegends",
+      "rewatch_bait": "RUMBLE's three proxy units are at the three hardest locations. He chose the fourth site — the easiest one — for himself. He was watching BLAZE the whole time."
+    },
+    "ML_EP008": {
+      "hook_line": "RUMBLE designed the 14-hour window himself. He wanted to see exactly what they would do with it.",
+      "highlight_scene": 7,
+      "highlight_note": "Scene 7 — all engagement locations form a Titan Summoning Array symbol. NOVA sees it. The cliffhanger.",
+      "short_title": "RUMBLE Let Them Win on Purpose. The Map of Where They Fought Just Revealed Why. 🗺️🔴 #MechLegends",
+      "rewatch_bait": "The engagement locations appear in the background of NOVA's screens throughout EP005-EP008. The symbol was always there."
+    },
+    "ML_EP009": {
+      "hook_line": "12 weeks of battle locations. Connected as dots. It's not random. NOVA decodes it at 3am. RUMBLE is already at the last point.",
+      "highlight_scene": 5,
+      "highlight_note": "Scene 5 — RUMBLE activates the 12th point. COLOSSUS stirs. 31-hour countdown.",
+      "short_title": "NOVA Decoded RUMBLE's Map at 3AM. He Was Already at the Last Point. 🗺️⚠️ #MechLegends",
+      "rewatch_bait": "COLOSSUS's outline is visible in the city's oldest geological survey map — shown briefly in scene 2. Nobody's looking at it."
+    },
+    "ML_EP010": {
+      "hook_line": "Something has been under the city for 3,000 years. Tonight it wakes up. RUMBLE knew it was there the whole time.",
+      "highlight_scene": 4,
+      "highlight_note": "Scene 4 — COLOSSUS emerges. Its face. It hasn't seen sky in 3,000 years. The expression is wonder, not rage.",
+      "short_title": "A 3,000-Year-Old Titan Just Emerged Under the City. Its First Expression Was Wonder. 🌍 #MechLegends",
+      "rewatch_bait": "ELDER-7's first arrival in scene 3 — the city's oldest mech, 2,800 years old — he recognizes COLOSSUS. He's seen this before."
+    },
+    "ML_EP011": {
+      "hook_line": "RUMBLE left one node active on purpose. ELDER-7 — a mech older than the city — knows exactly why that's catastrophic.",
+      "highlight_scene": 7,
+      "highlight_note": "Scene 7 — RUMBLE's final direct message: 'I'll be watching. Good luck.' ELDER-7: 'In 3,000 years I have never heard a villain say good luck.'",
+      "short_title": "The Villain Said Good Luck. A 2,800-Year-Old Mech Had Thoughts About That. 🤖 #MechLegends",
+      "rewatch_bait": "ELDER-7's battle damage from 3,000 years ago matches the pattern of the original failed sealing attempt. He was there. He failed once. He knows what that felt like."
+    },
+    "ML_EP012": {
+      "hook_line": "Four positions. One attempt. GRANITE's sleeve hits zero at 3 hours 38 minutes. The seal completed at 3 hours 37 minutes. One minute. That was the margin.",
+      "highlight_scene": 6,
+      "highlight_note": "Scene 6 — ELDER-7: 'It's done.' 3,000-year task complete. Then RUMBLE opens SEASON 2.",
+      "short_title": "The Seal Finished at 3:37. GRANITE's Sleeve Hit Zero at 3:38. One Minute. 🔒 #MechLegends",
+      "rewatch_bait": "RUMBLE's SEASON 2 document's first question: 'What can they do that they don't know they can do yet?' — this is the answer to every fight he's had with them all season. He wasn't trying to win. He was learning what their ceiling was."
+    }
+  },
+  "global_rules": {
+    "hook_delivery": "Spoken before scene 1 narration. Also used as thumbnail text overlay and first-frame Short caption.",
+    "highlight_clip_length": "15-30 seconds. Ends WITHOUT resolution — cut on the 'wait what' moment, not after the answer.",
+    "highlight_upload_timing": "2-3 days after full episode upload. Rides the algorithm momentum.",
+    "short_title_formula": "[Character] [did/is/has] [absurd situation] [emoji] [channel hashtag]",
+    "rewatch_bait_placement": "Scene 2 or 3. Payoff in scene 6 or 7. Never in scene 1 (too obvious) or the final scene (too late)."
+  }
+}

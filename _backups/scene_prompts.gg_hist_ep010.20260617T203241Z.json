@@ -1,0 +1,111 @@
+{
+  "channel": "GG",
+  "track": "historical",
+  "episode_number": 10,
+  "episode_id": "GG_HIST_EP010",
+  "season": 1,
+  "title": "The Immortal King",
+  "tagline": "He is not remembered for what stopped him. He is remembered for what he was.",
+  "hook_line": "He burned Athens. He bridged the Hellespont. He assembled the largest army in history. He is remembered as a god.",
+  "characters": ["XERXES"],
+  "scenes": [
+    {
+      "scene_number": 1,
+      "type": "hook",
+      "title": "What He Was",
+      "narration": "Xerxes was not stopped by men. He was stopped by weather, by narrow straits, by the mathematics of geography. No man or army stopped him. Not one.",
+      "visual_prompt": "Epic oil painting, Xerxes in full Persian royal regalia — crown, robes, the absolute weight of empire — standing above the landscape of his conquests, the map of the Persian Empire visible behind him as a mural, the vastness of what he ruled tangible, dramatic, 1080x1920 vertical",
+      "bg_colors": ["#8B6914", "#0A0808"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 2,
+      "type": "reveal",
+      "title": "What He Ruled",
+      "narration": "At its peak, the Persian Empire under Xerxes covered 5.5 million square kilometers. It held roughly 50 million people — nearly half the world's population at the time.",
+      "visual_prompt": "Epic oil painting, the Persian Empire at full extent visualized as a glowing map — from the Indus River to the Aegean, from the Caucasus to the Nile, 5.5 million square kilometers, the largest empire in human history to that point, Xerxes's domain rendered in gold against the dark world, cinematic, 1080x1920 vertical",
+      "bg_colors": ["#8B6914", "#0A0508"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 3,
+      "type": "emotional",
+      "title": "The Title",
+      "narration": "He held the title 'King of Kings.' In Persian: Shahanshah. Not king of a country. King of kings. The ruler of rulers. He did not take this title for vanity. He took it because it was accurate.",
+      "visual_prompt": "Epic oil painting, the Persepolis ceremonial inscriptions — the title Shahanshah visible in ancient Persian script, Xerxes receiving tribute from tributary kings kneeling before him, the kings of Egypt and Babylon and other nations acknowledging his supremacy, the title made visible in the act, dramatic, 1080x1920 vertical",
+      "bg_colors": ["#8B6914", "#0A0A00"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 4,
+      "type": "reveal",
+      "title": "Persepolis",
+      "narration": "He built Persepolis — the greatest ceremonial capital the ancient world had ever produced. Its construction took decades. Its scale was designed to communicate one message: this is what power looks like.",
+      "visual_prompt": "Epic oil painting, Persepolis at its height — the great Apadana columns rising 20 meters, the Gate of All Nations, the grand staircases with relief sculptures of tribute processions from 50 nations, the city-complex at sunset in gold and shadow, the greatest architectural statement of power in the ancient world, dramatic epic, 1080x1920 vertical",
+      "bg_colors": ["#8B6914", "#1A0A00"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 5,
+      "type": "reveal",
+      "title": "What He Was Stopped By",
+      "narration": "He was stopped by a narrow sea strait at Salamis. By the winter of the Greek mountains. By supply lines stretched too far. He was not stopped by courage. His enemies had courage. So did his dead soldiers.",
+      "visual_prompt": "Epic oil painting, the elements that stopped Xerxes visualized — stormy sea at Salamis, mountain winter, the long supply lines — the impersonal forces of weather and geography that accomplished what no army could, Xerxes looking at these forces as he did everything: with composure, not defeat, dramatic, 1080x1920 vertical",
+      "bg_colors": ["#0A2A4A", "#4A2000"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 6,
+      "type": "emotional",
+      "title": "The Spartans Remember Him",
+      "narration": "In Sparta, a tradition was recorded. When Spartan mothers sent their sons to war, they said: 'With your shield or on it.' The shield they were most afraid to lose at Thermopylae — was not a shield at all.",
+      "visual_prompt": "Epic oil painting, Spartan warriors preparing to depart, mothers holding shields — the cultural weight of the tradition visible in posture and expression, the 300 departing with the full knowledge that what they carried was the survival of Greece, the fear in the mothers' eyes and the absence of it in the warriors', dramatic, 1080x1920 vertical",
+      "bg_colors": ["#8B0000", "#0A0808"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 7,
+      "type": "reveal",
+      "title": "The Greek Memory",
+      "narration": "Greece remembered Xerxes not as the king who was stopped. They remembered him as the king who came. As the tide that rose to its highest point. The tide they held — barely — before it receded.",
+      "visual_prompt": "Epic oil painting, the Greek cultural memory of Xerxes — depicted in the ancient pottery and sculpture that followed the war, as an overwhelming force barely held by human courage, not reduced or minimized but shown at his actual scale, the honest Greek recounting of how close it had been, dramatic, 1080x1920 vertical",
+      "bg_colors": ["#2A3A5A", "#0A0808"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 8,
+      "type": "emotional",
+      "title": "The Tears at the Crossing",
+      "narration": "He wept at the crossing of the Hellespont. He wept when he reviewed his army. The most powerful man alive, weeping at power. He told his advisor: 'I was overcome with pity for the brevity of all human life.'",
+      "visual_prompt": "Epic oil painting revisiting the tears at the Hellespont — Xerxes on the marble throne with tears, but now with the full weight of the season behind the image — this is a man who understood mortality while commanding immortality, who knew that even 2.5 million lives were brief, dramatic and profound, 1080x1920 vertical",
+      "bg_colors": ["#4A3000", "#0A1525"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 9,
+      "type": "reveal",
+      "title": "His Legacy",
+      "narration": "He ruled for twenty more years after the Greek campaign. He built. He governed. He administered half the world. He was not defined by what he didn't conquer. He was defined by what he was.",
+      "visual_prompt": "Epic oil painting, the final years of Xerxes's reign — governing Persepolis, receiving ambassadors, building monuments, the empire functioning under his absolute and considered rule, the 20 years of continued power after Greece showing that Greece was one campaign in a reign of incomparable scope, dramatic, 1080x1920 vertical",
+      "bg_colors": ["#8B6914", "#0A0808"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 10,
+      "type": "resolution",
+      "title": "The Immortal King",
+      "narration": "Xerxes of Persia. The King of Kings. The man who whipped the sea. Who bridged the Hellespont. Who burned the Acropolis. Who assembled the largest army in history. He is not remembered for what stopped him. He is remembered for what he was.",
+      "visual_prompt": "Epic oil painting final portrait, Xerxes of Persia in full royal magnificence — crown, gold robes, absolute composure, looking directly into the frame for the first time in the entire series — not observing, not calculating, simply present — the Immortal King, the King of Kings, GODS AND GLORY title treatment, dramatic and definitive, 1080x1920 vertical",
+      "bg_colors": ["#8B6914", "#0A0A00"],
+      "duration_sec": 9
+    }
+  ],
+  "viral_hook": "He assembled the largest army in history. He burned Athens. He bridged the sea. He is not remembered for what stopped him. He is remembered for what he was.",
+  "highlight_scene": 10,
+  "highlight_note": "Xerxes looking directly into the camera for the first time — direct eye contact with the viewer. After ten episodes of seeing him always from a distance or in profile, the direct look lands with enormous force.",
+  "short_title": "The Immortal King",
+  "rewatch_bait": "His tears at the crossing. At the time they seemed like weakness. Now, at the end of the season, they read as the most profound thing he said — he understood mortality while holding more power than any man alive. Rewatch EP002.",
+  "youtube_title": "He Is Not Remembered for What Stopped Him. He Is Remembered for What He Was. | Gods & Glory Season 1 Finale",
+  "lesson": "The measure of a conqueror is not the one thing they couldn't do. It's the scope of everything they could.",
+  "arc_notes": "GG Historical S1 finale. The direct eye contact in scene 10 is the season's visual payoff. Cross-feeds ML: after watching this full season, the ELDER-7 archive entry for Xerxes in ML S1 carries the full weight of everything viewers have just seen. The GG historical audience becomes the ML audience."
+}

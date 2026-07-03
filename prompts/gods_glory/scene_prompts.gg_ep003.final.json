@@ -1,0 +1,271 @@
+{
+  "episode_id": "GG_EP003",
+  "channel": "GG",
+  "title": "Cannae: The Perfect Battle",
+  "scenes": [
+    {
+      "scene_number": 1,
+      "title": "70,000 Dead in One Afternoon",
+      "narration": "On the second day of August, 216 BC, the largest army Rome had ever assembled marched out to fight a Carthaginian force half its size. By sundown, somewhere between sixty and seventy thousand Roman soldiers were dead. Not in a war. Not in a campaign. In a single afternoon. The Battle of Cannae lasted perhaps six hours. More Romans died that day than the United States lost in all of Vietnam. And almost every one of those men died not because they were outfought — but because they were outthought. By one man. With a plan that was already complete before the battle began.",
+      "visual_prompt": "Cinematic aerial wide shot over the flat Apulian plain at golden hour, hundreds of thousands of soldiers clashing across a vast field. The camera slowly descends through the chaos — dust, shields, falling men — into the heart of the Roman mass, compressed from all sides. Bodies in Roman legionary armor, red cloaks in the dust. A lone figure on a ridge watches through the carnage with cold precision. Epic documentary tone, hyperrealistic detail, shallow depth of field pulling focus through the carnage. Desaturated ochre and blood-red palette.",
+      "bg_colors": [
+        "#8B1A1A",
+        "#2C1810"
+      ],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 2,
+      "title": "Who Was Hannibal Barca",
+      "narration": "Hannibal Barca was born in 247 BC in Carthage — the great mercantile empire of North Africa that had spent generations competing with Rome for dominance of the Mediterranean. His father was Hamilcar Barca, a brilliant Carthaginian general who had fought Rome to a tactical standoff in Sicily and never forgiven them for the peace terms. The story goes that young Hannibal begged to join his father on campaign. Hamilcar agreed on one condition: Hannibal swore an oath of eternal enmity to Rome. He was nine years old. Whether the story is literally true or not, the hatred it describes was real. Hannibal spent his entire adult life making it operational.",
+      "visual_prompt": "Portrait shot of young Hannibal in a Carthaginian noble household — North African architecture, ornate columns, Mediterranean light. A boy of nine kneeling before an altar, right hand raised in an oath, his father Hamilcar Barca standing over him in military dress, expression severe and satisfied. The Carthaginian city of ancient North Africa visible through arched windows — white buildings, harbor ships, palm trees. Gold and deep purple Carthaginian color palette. Cinematic chiaroscuro lighting, dramatic shadow.",
+      "bg_colors": [
+        "#4A2C0A",
+        "#1C1C3A"
+      ],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 3,
+      "title": "Carthage vs Rome — The World in 216 BC",
+      "narration": "By 216 BC, the First Punic War had already been fought and settled — badly, from Carthage's point of view. Rome had seized Sicily, Sardinia, and Corsica. Carthage had been humiliated and pushed back. The Second Punic War began in 218 BC when Hannibal besieged Saguntum — a Roman ally in Spain. Rome declared war. The Roman Republic in 216 BC was at its absolute height — a citizen army forged over centuries, the most effective fighting force in the western Mediterranean. They had the numbers, the resources, the discipline. What they did not have was anyone who understood what Hannibal was about to do to them.",
+      "visual_prompt": "Animated map of the Mediterranean, circa 216 BC — Carthaginian territories in deep purple, Roman territories in deep red, contested regions in amber. The camera sweeps across the map showing the scale of both empires. Cut to Rome itself: the Forum, crowds, senators in togas, the disciplined columns of legionaries marching through the streets. The power and confidence of a Republic at its peak. Then Carthage across the sea — exotic, wealthy, determined. Two civilizations on a collision course. Cinematic documentary map-and-cityscape hybrid style.",
+      "bg_colors": [
+        "#1C1C3A",
+        "#5C1A1A"
+      ],
+      "duration_sec": 49
+    },
+    {
+      "scene_number": 4,
+      "title": "The Alps — The Impossible Crossing",
+      "narration": "Hannibal did not sail to Italy. He marched there. In spring 218 BC, he led an army of roughly fifty thousand infantry, nine thousand cavalry, and thirty-seven war elephants out of Spain, across the Pyrenees, through southern Gaul, and then — in November, in winter — over the Alps. The crossing took fifteen days and was catastrophic. He lost perhaps half his army to cold, altitude, landslides, and hostile mountain tribes. Most of his elephants died. By the time he descended into northern Italy, he had perhaps twenty thousand infantry left. But he had surprised everyone. No one believed he would do it. That was the point.",
+      "visual_prompt": "Epic mountain crossing sequence — Carthaginian army and war elephants on narrow Alpine passes, snow falling, sheer drops on either side. Soldiers in North African and Iberian armor struggling through deep snow, carrying shields and spears. An elephant slipping on ice, handlers desperately steadying it. Above them, Gallic tribesmen rolling boulders from cliff ledges. Hannibal at the front, wrapped in a heavy cloak, one eye damaged from infection (he lost an eye during the Italian campaign), surveying the crossing. Brutal, beautiful, impossible. Steel-blue and white color palette with flashes of fire.",
+      "bg_colors": [
+        "#1A2A3A",
+        "#3A3A3A"
+      ],
+      "duration_sec": 51
+    },
+    {
+      "scene_number": 5,
+      "title": "Two Years of Roman Defeats",
+      "narration": "Hannibal descended into Italy and immediately began winning. At the Trebia River in December 218, he destroyed a Roman army. At Lake Trasimene in 217, he ambushed thirty thousand Romans in morning fog — fifteen thousand killed in three hours, the consul Flaminius among the dead. Roman confidence shattered. The Senate appointed a dictator, Quintus Fabius Maximus, who understood that Hannibal could not be beaten in open battle. Fabius refused to engage — shadowing Hannibal, cutting foraging parties, waiting. The Romans called this cautious. The people called it cowardice. They named him Cunctator — the Delayer — as an insult. History would eventually reconsider.",
+      "visual_prompt": "Battle montage — the Trebia River in winter, Romans fleeing into icy water, Carthaginian cavalry cutting them down. Then Lake Trasimene: morning fog over the lake, Romans marching through a gorge, suddenly arrows and javelins raining from both hillsides simultaneously. Roman legions in chaos, the consul Flaminius falling from his horse. Then: Fabius Maximus — older, cautious, watching Hannibal's army from a distant hilltop, deliberately not engaging. His face: the wisdom of restraint. Map showing Hannibal's path of destruction through Italy. Dark amber and blood-red tones.",
+      "bg_colors": [
+        "#2C1000",
+        "#1A1A2E"
+      ],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 6,
+      "title": "Rome Elects Two Consuls — and Picks a Fight",
+      "narration": "By 216 BC, Rome had had enough of waiting. They elected two consuls to command jointly: Gaius Terentius Varro and Lucius Aemilius Paullus. The men were nearly opposite. Paullus was an experienced aristocrat — cautious, well-connected, a commander who had led armies before. Varro was a populist, aggressive, politically ambitious, convinced that Roman courage and numbers were all they needed to destroy Hannibal. Rome assembled eight legions — roughly eighty thousand men, the largest army in its history. Paullus was nervous. Varro was not. By Roman tradition, they alternated command daily. On the day of Cannae, it was Varro's turn.",
+      "visual_prompt": "Roman Senate interior, torchlit marble halls, senators in white togas arguing fiercely. Two men brought forward for the vote: PAULLUS — older, weathered, aristocratic, expression guarded and calculating. VARRO — younger in bearing, confident to the point of arrogance, speaking passionately, crowd behind him cheering. The vote: hands raised. Both elected. Then: the two consuls meeting privately, their body language showing tension and fundamental disagreement. Roman eagle standards behind them. Stone and marble palette, torchlight, deep shadows.",
+      "bg_colors": [
+        "#1C1C1C",
+        "#8B6914"
+      ],
+      "duration_sec": 49
+    },
+    {
+      "scene_number": 7,
+      "title": "Hannibal's Army — What Rome Was Actually Facing",
+      "narration": "Hannibal's army at Cannae was roughly forty thousand infantry and ten thousand cavalry — outnumbered nearly two to one in foot soldiers. What the numbers didn't capture was quality. His Numidian cavalry from North Africa were the finest light horsemen in the ancient world. His Iberian and Gallic infantry were experienced fighters who had been campaigning and winning for two years. His Spanish heavy cavalry were the shock arm of the force. And Hannibal had been planning this battle, probably, since Trebia. He had chosen the ground carefully, thought through exactly what Rome would do. He just needed them to do it.",
+      "visual_prompt": "Inventory of Hannibal's diverse army — each unit type shown with documentary precision. The Numidian cavalry: lean North African horsemen on small fast horses, no saddles, throwing javelins, hair braided, light shields. The Iberian infantry: fighters in white tunics with red borders, short curved falcata swords. Gallic warriors: bare-chested, long swords, wild hair, fearless. The Spanish heavy cavalry in chainmail. And Hannibal at the center — surveying all of them, his damaged eye visible, his expression the quiet confidence of a man with a completed plan. Warm earth tones, dust, late afternoon light.",
+      "bg_colors": [
+        "#3A2000",
+        "#1A3A1A"
+      ],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 8,
+      "title": "The Battlefield — Hannibal Chooses His Ground",
+      "narration": "The plain near Cannae in Apulia was not chosen randomly. Hannibal selected it deliberately. The terrain was flat — no hills, no forests, nothing that would reduce his cavalry's advantage. The Aufidus River anchored one flank. The open ground gave his superior horsemen room to operate. The wind that day blew from the south, driving dust into Roman eyes. Whether every detail ancient sources record is precise or not, the point is clear: Hannibal was thinking about everything. He had rehearsed this battlefield in his mind dozens of times before he ever set foot on it.",
+      "visual_prompt": "Cinematic aerial survey of the Cannae battlefield — flat Apulian plain, the Aufidus River glinting to one side, low dusty terrain stretching in every direction. The camera shows why the flat ground matters: no cover, no flanks to anchor on, cavalry has full freedom of movement. Wind picks up dust from the south, visualized as golden haze moving toward where the Roman position will be. Then: Hannibal standing at the battlefield edge the evening before, alone, studying it like an architect studying a blueprint. His generals around him, listening. Dusk light, long shadows.",
+      "bg_colors": [
+        "#4A3A00",
+        "#1A1A1A"
+      ],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 9,
+      "title": "The Roman Formation — How They Fought",
+      "narration": "The Roman legion at Cannae fought in three lines: the hastati up front, the principes behind them, veteran triarii in reserve. This system, developed over centuries, maintained pressure while committing reserves at the decisive moment. It was enormously effective — it had made Rome the dominant military power in the Mediterranean. The problem, on this day, was that it required something Hannibal was not going to give them: an enemy who fought in a line. Roman tactical thinking was built around breaking through a center and winning by mass and discipline. Hannibal knew exactly how they thought. He had watched them for two years. He built his plan entirely around that knowledge.",
+      "visual_prompt": "Detailed military diagram brought to life — the Roman triple-line formation shown from above, then at ground level. The hastati in front: younger soldiers with javelins and short swords. Principes behind: more experienced, heavier armor. Triarii at the rear: veterans with long spears, the last reserve. The formation is impressive, disciplined, precise. Then the camera pulls back to show the full Roman army — eighty thousand men in formation, standards rising, eagles gleaming, the sheer mass of organized military force. Crimson and bronze color palette. Morning light on polished metal.",
+      "bg_colors": [
+        "#8B0000",
+        "#1A1A3A"
+      ],
+      "duration_sec": 49
+    },
+    {
+      "scene_number": 10,
+      "title": "Hannibal's Plan — The Deliberate Weak Center",
+      "narration": "Hannibal arranged his army in a convex arc bowing out toward the Romans. In the center he placed his weakest troops — the Gauls and Iberians — positioned to absorb the Roman charge and bend. On each end of the center, he placed his best African infantry in reserve, facing inward. His cavalry held both flanks. The design was a trap. When Rome pushed against the center with its mass — which Roman tactics demanded — the Carthaginian center would bend inward, not break. The Romans would push forward, crowding together, drawn deeper into what was about to become a closing pocket. The geometry was perfect.",
+      "visual_prompt": "Top-down tactical diagram animated with documentary realism — the Carthaginian formation shown as a convex bow, the weak Gallic and Iberian center highlighted in amber, the veteran African infantry on both flanks shown as anchored wings in dark iron. The Roman mass in red approaching head-on, pressing into the center. Animation shows the center beginning to bow backward, the Roman mass compressing, the African flanks pivoting inward. A genius trap made visible. Clean diagram aesthetic with cinematic lighting, dust and smoke as atmosphere. The geometry of death illustrated with precision.",
+      "bg_colors": [
+        "#1A1A2E",
+        "#4A2C0A"
+      ],
+      "duration_sec": 51
+    },
+    {
+      "scene_number": 11,
+      "title": "The Battle Begins — Cavalry on the Flanks",
+      "narration": "The battle opened on the flanks. On Hannibal's left, his Spanish and Gallic heavy cavalry crashed into the Roman horsemen opposite them. The Romans were outnumbered and beaten quickly — methodically destroyed, not routed into flight. Hasdrubal then did something disciplined and devastating: he stopped. He reformed his cavalry instead of pursuing. Then he rode the entire length of the battlefield behind the Roman army to hit the allied Italian cavalry on the opposite flank from the rear. The Italian horsemen, attacked front and rear simultaneously, collapsed. Rome had no cavalry left on either flank. The outer walls of the trap were in place.",
+      "visual_prompt": "Cavalry clash sequence — Spanish and Gallic heavy horsemen thundering into Roman cavalry in a massive collision of horses and men. Lances shattering, swords drawn, horses screaming. The Roman cavalry crushed between superior numbers. Then: Hasdrubal raising his arm, stopping the pursuit — the discipline to not chase, but to reform. His cavalry pivoting, riding hard along the battlefield's far edge. The Italian allied cavalry on the opposite side, suddenly hammered from behind, shattering. Wide action shot capturing the full left-to-right sweep of Hasdrubal's decisive ride. Dust and blood, late morning light.",
+      "bg_colors": [
+        "#5C1A00",
+        "#2C1000"
+      ],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 12,
+      "title": "The Center Bends — Rome Pushes Forward",
+      "narration": "In the center, the battle went exactly as Hannibal planned. The Roman legions pushed into the Carthaginian center with their full mass — disciplined, relentless, exactly as their training demanded. The Gauls and Iberians fought back hard but bent. The Roman line advanced. The legionaries felt it as victory — the enemy falling back, ground being taken. Behind them, centurions urged more men forward. More men pushed in. The Roman formation — designed to fight in broad lines — began to compress. Men who should have been in reserve were pressing into the backs of those in front. The Roman army was crowding itself. Precisely what Hannibal needed.",
+      "visual_prompt": "Ground-level infantry combat in the Carthaginian center — Gallic warriors with long swords, Iberian fighters in white and red, fighting desperately but giving ground. Roman legionaries pressing forward, shields locked, gladii stabbing in short vicious strokes. The Roman centurions shouting, men from the second and third lines pushing into the backs of the first. From above, the formation visibly compresses — the broad three-line array shrinking, deepening, the men at the sides beginning to lose elbow room. The trap tightening without anyone inside it realizing. Chaos, noise, blood, dust. Visceral documentary realism.",
+      "bg_colors": [
+        "#3A1A00",
+        "#1A1A1A"
+      ],
+      "duration_sec": 51
+    },
+    {
+      "scene_number": 13,
+      "title": "The African Veterans Pivot — The Envelopment Begins",
+      "narration": "Now the critical moment. Hannibal had positioned his African veterans — equipped with captured Roman armor from Trebia and Trasimene — on both ends of his center, stationary while the Gauls and Iberians fought. They had been waiting. As the Roman center pushed deep into the bowing Carthaginian line, Hannibal gave the order. The African veterans on both flanks pivoted inward — ninety degrees — and began marching into the exposed Roman sides. The Romans at the edges of their mass, finding African spearmen on their flanks, had no room to respond. They could not turn their formation. They were already too compressed. The envelopment was closing.",
+      "visual_prompt": "The tactical pivot moment shown with military precision — the African veterans, standing in perfect formation on the flanks, receiving the order. Their commanders' arms drop in signal. In near-perfect unison, the African infantry pivot inward like doors closing, their faces grim and methodical. From above: the full geometry becomes visible — the Gallic-Iberian center now bowed far inward, the African wings pivoting in on both sides, the massive Roman mass caught in the center. The shape of a closing hand. The Roman flanks showing the first signs of awareness that something is catastrophically wrong. The envelopment is beginning.",
+      "bg_colors": [
+        "#1A2A00",
+        "#1A1A3A"
+      ],
+      "duration_sec": 52
+    },
+    {
+      "scene_number": 14,
+      "title": "The Cavalry Returns — The Trap Closes",
+      "narration": "Behind the Roman army, Hasdrubal's cavalry arrived. They had crushed the Roman cavalry, ridden across the entire battlefield, destroyed the Italian allied cavalry, and now drove into the Roman rear. The trap was complete. African veterans pressed in on both flanks. The Carthaginian center held in front. Cavalry cut off retreat behind. The double envelopment — what military historians call Vernichtungsschlacht, the battle of annihilation — was closed. Eighty thousand Roman soldiers had no room to fight, no room to maneuver, no direction to flee. They were packed so tightly that men at the interior could barely raise their weapons.",
+      "visual_prompt": "The catastrophic closing of the encirclement — Hasdrubal's cavalry crashing into the Roman rear, dust rising in enormous clouds as thousands of horses hit an army that cannot turn around. From above, the full encirclement visible: a great red Roman mass completely surrounded by Carthaginian forces on all sides. The Roman formation is so compressed it loses its shape — no longer three disciplined lines but a single crushing mass of men pressed together, unable to fight effectively. Terror visible on the faces at the edges. The most perfect military trap ever set, now completely closed. Epic scope, late morning light turning harsh.",
+      "bg_colors": [
+        "#2C0000",
+        "#1A1A1A"
+      ],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 15,
+      "title": "Inside the Killing Ground",
+      "narration": "What happened next lasted hours. Inside the encirclement, the Romans were so densely packed that some men died from suffocation — crushed against companions with no room to fall. Those at the edges fought desperately against the closing Carthaginian lines, but the Carthaginians had space and could rotate fresh fighters in. Roman centurions tried to organize resistance, tried to punch through the perimeter. A few small groups broke out. The vast majority could not. Ancient sources describe the ground becoming saturated with blood. Polybius, writing decades later from eyewitness accounts, records details that read like a description of industrial slaughter. Six hours. Seventy thousand dead.",
+      "visual_prompt": "The interior of the killing ground — claustrophobic, terrifying, inescapable. Roman soldiers so tightly packed they cannot lift shields or draw swords properly. The faces: not battle rage, but the specific terror of men who understand they are going to die and cannot prevent it. At the edges, Carthaginian soldiers methodically working through the perimeter, stabbing into the packed mass. A Roman centurion, blood on his face, still trying to organize his men, screaming orders no one can follow. Ground soaked dark. Sunlight blocked by the press of bodies. Dust turning to red mud. The worst place in the ancient world, that afternoon.",
+      "bg_colors": [
+        "#1A0000",
+        "#0A0A0A"
+      ],
+      "duration_sec": 52
+    },
+    {
+      "scene_number": 16,
+      "title": "The Death of Paullus — Roman Command Collapses",
+      "narration": "Consul Lucius Aemilius Paullus died at Cannae. He had warned against the battle, but it was Varro's day of command. Paullus fought himself — wounded early by a slingstone, continuing on foot after his horse was killed. A senator named Lentulus reportedly found him sitting wounded near the battle's end and offered his horse for escape. Paullus refused. He sent the horse to carry news to Rome, asked Lentulus to tell the Senate to fortify the city, and remained where he sat. He died there. Varro escaped — riding to Venusia with approximately seventy horsemen. He was the only consul to survive the day.",
+      "visual_prompt": "Two parallel portraits of Roman command at Cannae's end. PAULLUS: sitting on a blood-soaked rock amid the carnage, armor dented, face pale from blood loss, a wound visible at his temple. Senator Lentulus kneeling before him, holding the bridle of a horse, pleading. Paullus's face: the absolute calm of a man who has made his final decision. He gestures away. Then: VARRO fleeing — galloping hard through the dust, looking back at the disaster he commanded, survival written on his face rather than honor. The contrast deliberate, stark, devastating. Late afternoon light. The battle still raging behind them.",
+      "bg_colors": [
+        "#1A1A1A",
+        "#3A1A00"
+      ],
+      "duration_sec": 49
+    },
+    {
+      "scene_number": 17,
+      "title": "The Count of the Dead",
+      "narration": "When it was over, Carthaginian soldiers moved through the field collecting the dead. Ancient sources record Maharbal, Hannibal's cavalry commander, ordering soldiers to remove gold rings from the fingers of the Roman dead — the rings that equestrians and senators wore as marks of class. He filled three bushels with them. Three bushels of gold rings: Rome's officer class and upper citizenship, dead on one field. Polybius estimates forty-seven thousand Roman dead. Livy says seventy thousand. Modern historians accept somewhere between fifty and seventy thousand. Additionally, roughly three thousand five hundred Romans were taken prisoner. Varro's seventy survivors were all that remained of eighty thousand.",
+      "visual_prompt": "The aftermath — Carthaginian soldiers moving methodically through an enormous field of Roman dead, thousands of bodies in legionary armor carpeting the plain as far as the eye can see. Close on Maharbal watching as soldiers remove gold rings from fallen Romans, piling them into a large wooden vessel — filling it, the gold glinting obscenely in the afternoon sun. The scale of death shown without sensationalism: the visual weight of thousands of identical red Roman cloaks spread across the Apulian plain. Ravens circling above. The Aufidus River visible at the field's edge. Golden hour light on the greatest military catastrophe in Rome's history.",
+      "bg_colors": [
+        "#2C1800",
+        "#0A0A0A"
+      ],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 18,
+      "title": "Why Didn't Hannibal March on Rome?",
+      "narration": "After Cannae, Hannibal's cavalry commander Maharbal reportedly urged him to march immediately on Rome — promising that Hannibal would dine in triumph on the Capitol within five days. Hannibal declined. Maharbal's response echoes through history: 'Hannibal, you know how to gain a victory; you do not know how to use one.' The truth was more complex. Hannibal had no siege equipment. Rome's walls were formidable. His strategy was not to destroy Rome militarily — it was to shatter Rome's Italian alliances, peel away her subject cities, and destroy the political system that made Rome powerful. Cannae was supposed to trigger mass defections. It didn't work out that way.",
+      "visual_prompt": "Hannibal standing on a rise above the Cannae battlefield at dusk, Rome's direction implied in the distance. Maharbal beside him, gesturing urgently toward the horizon, passionate and certain. Hannibal's face: not hesitation, but calculation — a man running through scenarios, probabilities, logistics. He shakes his head. Maharbal's expression: disbelief, frustration, the weight of a moment that would be debated forever. Cut to a map: the road to Rome, 250 miles away, Hannibal's army between here and there, siege equipment notably absent. The strategy Hannibal was actually executing laid out visually. Dusk light, the battle smoke still visible behind them.",
+      "bg_colors": [
+        "#2C2000",
+        "#1A1A3A"
+      ],
+      "duration_sec": 51
+    },
+    {
+      "scene_number": 19,
+      "title": "Rome's Response — The City That Did Not Break",
+      "narration": "In Rome, the news arrived by degrees, each report worse than the last. The Senate gathered in a city expecting to be sacked. The Senate banned public mourning — they needed the city functional. They sent envoys to collect Varro and formally thanked him for not despairing of the Republic. This was not sarcasm. It was Roman institutional psychology — the acknowledgment that the state endured. They raised new legions. They freed slaves to fight. They melted temple offerings for war funds. They refused to ransom prisoners Hannibal offered back. Rome had lost seventy thousand men in one afternoon. Their response was to recruit more.",
+      "visual_prompt": "Rome in crisis — the Forum crowded with grieving citizens, messengers arriving on exhausted horses, women weeping on the steps of temples. The Senate in emergency session: older men, faces grim but controlled, voices steady. A senator standing and delivering the motion to raise new legions — hands raised in vote. Then: former slaves being formally freed and handed swords, their expressions ranging from stunned to determined. The city's temples visible, priests carefully removing gold votive offerings. Rome mobilizing with the specific trauma-discipline of a civilization that will not accept defeat. Dramatic torchlight interior, marble and shadow.",
+      "bg_colors": [
+        "#1A1A2E",
+        "#5C3A00"
+      ],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 20,
+      "title": "Hannibal's Italian Campaign Stalls",
+      "narration": "Some of Rome's Italian allies did defect after Cannae. Capua — the second largest city in Italy — went over to Hannibal. Several Samnite tribes joined him. But the mass defections Hannibal had counted on never materialized. Most of Rome's Latin allies held. The Roman system — bound by citizenship grants, mutual interests, and genuine integration — proved more resilient than Hannibal calculated. Carthage sent only limited reinforcements. Hannibal would fight in Italy for thirteen more years without achieving his strategic objective. He was never beaten in open battle. But he never broke Rome's alliance network either. The genius of Cannae slowly became the tragedy of a campaign with nowhere left to go.",
+      "visual_prompt": "Map animation showing Hannibal's Italian campaign — his territory of influence expanding briefly after Cannae, then stalling. Capua shown defecting (highlighted), then Rome's tight alliance network holding firm — arrows showing loyalty rather than defection for most of Italy. Hannibal's army shown diminishing over years, reinforcements from Carthage minimal. Then Hannibal himself: camped in the Italian countryside, years after Cannae, still undefeated in the field, still waiting for a breakthrough that never came. His face older, more weathered, the brilliant certainty of Cannae replaced by the patient frustration of strategic stalemate. Fading amber light.",
+      "bg_colors": [
+        "#2C2C00",
+        "#1A1A1A"
+      ],
+      "duration_sec": 49
+    },
+    {
+      "scene_number": 21,
+      "title": "Scipio Africanus and the End of Hannibal",
+      "narration": "Rome's answer to Hannibal was Publius Cornelius Scipio — a young general who had survived Cannae as a junior officer. Scipio studied Hannibal, understood exactly what happened at Cannae and why, then took Rome's war to North Africa itself — forcing Hannibal to be recalled from Italy to defend Carthage. At Zama in 202 BC, Scipio faced Hannibal directly and used Hannibal's own tactical principles against him. He won. The Second Punic War ended. Hannibal spent his remaining years in exile, pursued by Roman demands for extradition. He poisoned himself around 183 BC rather than surrender. The greatest general of the ancient world was never captured.",
+      "visual_prompt": "SCIPIO AFRICANUS — young, sharp-eyed, studying a tactical diagram that is recognizably the Cannae formation. A Roman officer learning from defeat with methodical intensity. Then the Battle of Zama: the two great commanders finally facing each other across a North African plain. Scipio's formation, deliberately spacing his maniples to let Hannibal's war elephants pass through harmlessly. Then Scipio's cavalry sweeping the Carthaginian flanks — the student using the master's lessons. Finally: Hannibal in exile, aged, in eastern dress, the last proud defiance before the small vial of poison. Two men whose fates were permanently intertwined. Cinematic and elegiac in tone.",
+      "bg_colors": [
+        "#1A2A3A",
+        "#3A1A00"
+      ],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 22,
+      "title": "Why Every General Since Has Studied Cannae",
+      "narration": "Military academies have studied Cannae for two thousand years. Not because encirclement was new — it wasn't. But because no one before or since has executed the double envelopment with such precision, against such odds, with such complete results. What Hannibal understood — and what makes Cannae still taught at West Point, Sandhurst, and the German Kriegsakademie — is that the objective of battle is not to push the enemy back, but to destroy them utterly. The double envelopment transforms tactical engagement into annihilation. And it requires something that cannot be improvised: a commander who has thought through every movement, every reaction, every contingency — before the first sword is drawn.",
+      "visual_prompt": "Montage of military study across the centuries — medieval strategists with scrolls, Napoleonic officers hunched over maps, World War One generals in their headquarters with Cannae diagrams on the walls, modern military academy classrooms with the Cannae formation on a whiteboard. The double envelopment diagram appearing in each context, recognizable across centuries. Then back to the original: the clean geometry of Hannibal's design shown in pure tactical form — the arc, the pivot, the closing wings, the cavalry sweep. The most studied battle in military history reduced to its essential elements: one man's complete idea, executed perfectly. Timeless documentary aesthetic.",
+      "bg_colors": [
+        "#1A1A2E",
+        "#2C2C2C"
+      ],
+      "duration_sec": 51
+    },
+    {
+      "scene_number": 23,
+      "title": "The Schlieffen Plan — Cannae's Shadow in 1914",
+      "narration": "In 1905, German Field Marshal Alfred von Schlieffen wrote his infamous plan for a two-front war. Its stated objective was explicit: a modern Cannae. Germany would swing through Belgium with its right wing, envelop the French army from the north, compress it against the German left and the Swiss border — the double envelopment updated for railways and modern armies. Schlieffen reportedly said on his deathbed: 'Keep the right wing strong.' His successors weakened it. The plan failed. But the vision — Cannae in 1914, France as the trapped Roman army — is historically documented. Hannibal's afternoon in 216 BC shaped the strategic thinking of the twentieth century's bloodiest conflict.",
+      "visual_prompt": "1905 Germany — Kaiser Wilhelm's military staff room, uniformed German officers with the Schlieffen Plan spread across a massive table. The plan's arrows sweep through Belgium in a great arc, explicitly labeled with 'Cannae' in the German general's handwriting. Split screen: the Cannae tactical map on one side, the Schlieffen Plan map on the other — the shapes identical in principle. Then August 1914: German troops marching through Belgium, the plan in motion. A German general studying the map with the ghost of Cannae visible behind him. The weight of two thousand years of military thought pressing on one decision. Dark steel-blue and iron-grey palette.",
+      "bg_colors": [
+        "#1A1A2E",
+        "#2C2C1A"
+      ],
+      "duration_sec": 49
+    },
+    {
+      "scene_number": 24,
+      "title": "Cannae's Legacy — The Perfect Battle",
+      "narration": "Hannibal died in exile, poisoned by his own hand, the strategic war lost. Rome endured. Carthage was eventually razed to the ground in 146 BC, its site reportedly salted so nothing would grow. In one sense, Hannibal lost. In every other sense, his afternoon at Cannae is immortal. The perfect battle. The most complete tactical victory in recorded history. Studied, attempted, never fully replicated in two thousand years. Napoleon studied it. Patton quoted it. The double envelopment remains the dream of every general who has drawn troops on a map. Hannibal showed them it was possible. Once. In one afternoon. On a dusty plain in southern Italy.",
+      "visual_prompt": "Final elegiac sequence — the Apulian plain today, empty and golden in late afternoon light, the same flat terrain where seventy thousand men died. A wide slow aerial shot, no armies, only the landscape. The wind moves through dry grass. The Aufidus River, renamed the Ofanto, glinting in the distance. Then: a ghost image layered over the present — the armies at their peak, the arc of the Carthaginian formation, the pivot of the African veterans, the closing envelopment — all rendered in luminous translucent overlay over the modern empty field. The perfect plan, complete in the air above an empty plain. Hannibal's face, one last time: the satisfaction of a man whose idea was perfect. Fade to the channel logo. The Gods and Glory title card. Cinematic and timeless.",
+      "bg_colors": [
+        "#4A3A00",
+        "#1A1A1A"
+      ],
+      "duration_sec": 52
+    }
+  ]
+}

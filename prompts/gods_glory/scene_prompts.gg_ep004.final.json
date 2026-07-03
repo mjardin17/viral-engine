@@ -1,0 +1,199 @@
+{
+  "episode_id": "GG_EP004",
+  "channel": "GG",
+  "title": "The Mongol War Machine: How 100,000 Men Conquered the World",
+  "scenes": [
+    {
+      "scene_number": 1,
+      "title": "The Largest Empire in Human History",
+      "narration": "At its peak, the Mongol Empire covered twelve million square miles — roughly one quarter of all the land on Earth. It stretched from the Pacific coast of China to the gates of Vienna, from the frozen forests of Siberia to the Persian Gulf. No empire before it had ever come close. No empire after it would match it in contiguous territory. It was built not over centuries of slow expansion, but in less than eighty years. And at the beginning, there was nothing. No cities. No navy. No siege weapons. No treasury. Just a boy with no father, starving on the Mongolian steppe, learning to survive.",
+      "visual_prompt": "Epic cinematic aerial pullback from a single Mongol rider on the steppe, slowly revealing the scale of the empire — an animated map overlay spreads like fire across Eurasia, consuming China, Central Asia, Persia, Russia, the Middle East, Eastern Europe. The camera keeps pulling back until the landmass of the entire known world is visible. The rider is tiny against the vast emptiness. Sweeping golden hour light across endless grassland. Dramatic orchestral mood. Golden-brown and deep crimson color palette, dust particles in the air.",
+      "bg_colors": ["#5C3A00", "#1A0A00"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 2,
+      "title": "The Steppe — A World That Made Killers",
+      "narration": "To understand the Mongols, you must first understand the steppe. The Eurasian steppe is a vast corridor of grassland four thousand miles long and nearly impassable in winter. No agriculture. No permanent settlements. Almost nothing grows there but grass — and what grass grows, horses eat. For the nomadic tribes who lived there, survival was a constant, merciless competition. You raided or you starved. You rode or you died. Every man was a hunter. Every man was a soldier. Children learned to ride before they could walk and shot arrows from horseback before they could read. The steppe did not produce an army. It produced a people for whom war was simply another season.",
+      "visual_prompt": "Wide establishing shot of the Mongolian steppe in harsh winter — an endless flat expanse of brown grass under a steel-grey sky, wind driving snow horizontally. Small felt ger tents clustered against the cold, horses tethered outside. A Mongol boy of six or seven shooting a small bow at a target from horseback, his form already precise. In the distance, a rival clan's campfires. The landscape dwarfs every human presence — this is a world that filters for toughness. Desaturated cold palette: grey, brown, pale gold.",
+      "bg_colors": ["#2A2A1A", "#1A1A0A"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 3,
+      "title": "Temujin — The Boy Who Should Have Died",
+      "narration": "Around 1162 AD, a boy named Temujin was born into the Borjigin clan on the Mongolian steppe. His father, Yesugei, was a minor chieftain of no great power. When Temujin was nine, Yesugei was poisoned by a rival Tatar clan at a feast. His own tribe abandoned his widow and children — left them on the steppe to die. They nearly did. For years, Temujin's family survived on roots, berries, and whatever small animals they could catch. He was once captured by a rival clan and enslaved with a wooden collar around his neck. He escaped. None of this broke him. All of it educated him. The man who would conquer the world began as a refugee child, learning which humans could be trusted and which could not.",
+      "visual_prompt": "Close portrait shot of a young Mongol boy — Temujin, around ten years old — gaunt and determined, wearing worn animal-skin clothing, holding a crude bow. His face shows hardship but not defeat. Behind him: a sparse, windswept landscape, the remains of a meager camp. Then: a later scene, the teenage Temujin with a wooden prisoner's collar around his neck, wrists bound, being marched by members of a rival clan through the snow. His eyes — still calculating, never broken. Raw, gritty cinematic realism. Cold blue and brown tones.",
+      "bg_colors": ["#1A1A2A", "#2A1A00"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 4,
+      "title": "Building the Coalition — Uniting the Tribes",
+      "narration": "What made Temujin extraordinary was not simply that he was violent — the steppe was full of violent men. What made him exceptional was that he understood alliance. He forged a blood brotherhood with a childhood friend named Jamukha, then leveraged that connection to build a network of loyalties. He rescued his wife Borte from kidnappers with an army he'd borrowed from allies, then used that victory to recruit more. One by one, he absorbed rival clans — sometimes by conquest, sometimes by offering defeated enemies a place in his own hierarchy based on merit rather than bloodline. That last part was radical. In Mongol society, birth determined rank. Temujin said ability would. Warriors who demonstrated loyalty and skill rose regardless of their clan. It was, in the twelfth century, a revolutionary idea.",
+      "visual_prompt": "Nighttime scene around a massive Mongol council fire — dozens of tribal leaders from different clans gathered, some skeptical, some loyal, all watching Temujin as he stands and addresses them. He is now in his thirties, powerfully built, commanding, with penetrating eyes. Warriors with different tribal markings sit around the fire. Some raise weapons in oath. A wide shot shows hundreds of campfires across the dark steppe — an army forming. The mood is charged, historic, electric. Deep amber firelight against the vast darkness of the steppe night.",
+      "bg_colors": ["#3A1A00", "#0A0A0A"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 5,
+      "title": "Genghis Khan — The Universal Ruler",
+      "narration": "In 1206, at a great assembly called the Kurultai, the united tribes of Mongolia acclaimed Temujin with a title no one had ever held before: Genghis Khan — 'Universal Ruler.' He was perhaps in his mid-forties. He had spent those decades fighting to survive, then fighting to unite, and now he stood at the head of something entirely new: a unified Mongol nation. He immediately set about converting it into a war machine. He reorganized the army on a decimal system — units of ten, one hundred, one thousand, and ten thousand. He appointed commanders by merit. He issued a law code, the Yasa. He created a postal relay system across the steppe. And then he turned outward — toward the settled world that had always looked down on his people as savages.",
+      "visual_prompt": "Grand ceremonial scene on the open Mongolian steppe — Genghis Khan enthroned on a wooden platform atop a white felt carpet, surrounded by hundreds of tribal leaders who prostrate themselves before him. Nine white yak-tail banners stand in the ground around him — the symbol of Mongol sovereignty. He wears simple but distinguished robes, his expression serene and absolute. Behind him, rank after rank of Mongol cavalry stretches to the horizon. Eagles circle overhead. The moment feels epochal, the birth of an empire. Golden hour light, sweeping wide shot transitioning to a close portrait of Genghis Khan's face — calm, total certainty.",
+      "bg_colors": ["#5C3A00", "#2A1A00"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 6,
+      "title": "The Mongol Horse Archer — The Ultimate Weapon",
+      "narration": "The foundation of Mongol military power was the horse archer. Every Mongol warrior rode — typically maintaining three to five horses and rotating between them so no animal was exhausted. They used a composite recurve bow, roughly four feet long when unstrung, engineered from bone, wood, and sinew into one of the most powerful short-range bows ever made. At full draw, it could punch through armor at one hundred and sixty yards. From horseback at full gallop, a trained Mongol archer could fire ten to twelve aimed shots per minute, loose an arrow backward while retreating — the famous Parthian shot — and hit a moving target from horseback with reliability that would astonish a modern marksman. This was not talent. It was ten thousand hours, beginning at age three.",
+      "visual_prompt": "Slow-motion cinematic sequence: a Mongol horse archer at full gallop across the steppe, his horse's hooves barely touching the ground. He draws his composite bow to full extension — sinew and horn bending under massive tension — and releases. The arrow blurs into the distance. He immediately nocks another. Then the reverse angle: looking down the arrow's path toward a distant target. Another shot: the archer twisting backward over his horse's rump to loose a Parthian shot at pursuers while galloping away. Technical, beautiful, devastating. Dusty golden steppe light, ultra-slow-motion detail of the bow mechanics.",
+      "bg_colors": ["#4A3A00", "#1A0A00"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 7,
+      "title": "The Art of the Feigned Retreat",
+      "narration": "The feigned retreat was the Mongols' signature tactic — and the most consistently lethal maneuver in medieval warfare. A Mongol force would engage an enemy, exchange missiles, then appear to break and flee in apparent disorder. Enemy cavalry, trained to pursue a broken foe, would give chase. What they were riding into was a trap. The retreating Mongols would draw the pursuers across miles of open ground, separating them from their infantry and stretching their formation thin. Then, at a prearranged signal — horns, flags, smoke — the wings would close. The 'fleeing' cavalry would wheel and charge back. Encirclement was complete in minutes. Entire armies evaporated this way. The problem was that it required extraordinary discipline — the discipline to flee convincingly and trust the plan. Most armies could not fake a retreat without it becoming a real one. The Mongols did it routinely.",
+      "visual_prompt": "Bird's-eye tactical sequence: a smaller Mongol force engages a larger enemy army on open steppe. Then the Mongols appear to break — galloping away in apparent chaos. The enemy cavalry charges in pursuit, jubilant, disorganized. The camera pulls back to reveal the geometry: two massive hidden Mongol wings waiting in ravines on either side. As the pursuers ride forward, the wings emerge at full gallop — closing like jaws. The trapped enemy cavalry realizes the trap a second too late. Dust, screaming horses, arrows raining from all directions. The trap snaps shut. Documentary tactical overlay map aesthetic blending with cinematic action.",
+      "bg_colors": ["#2A1A00", "#1A0A00"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 8,
+      "title": "Psychological Warfare — Surrender or Be Erased",
+      "narration": "Before the Mongols arrived at your city, they sent messengers. The message was always the same: surrender and be spared. Pay tribute, open your gates, and your people live. Your property is protected. Your government may even be left in place. Refuse, and what follows will be total. The Mongols understood that terror was a force multiplier — that a hundred cities that surrendered without a fight were worth more than ten cities taken by siege. They deliberately cultivated a reputation for absolute annihilation against those who resisted, and demonstrated conspicuous mercy toward those who did not. Survivors from destroyed cities were often deliberately released and sent ahead to the next target as walking advertisements. The calculation was rational: make the cost of resistance so visible, so horrifying, that submission becomes the obvious choice.",
+      "visual_prompt": "Split-screen diptych: on the left, a city that surrendered — its gates open wide, Mongol riders entering peacefully, citizens watching from doorways with relief, merchants continuing to trade, a city that survives. On the right, a city that refused — black smoke billowing from every quarter, the walls breached and burning, the streets empty. Between the two images, a lone Mongol messenger on horseback before a city gate, holding a letter, his expression utterly calm. The choice — and its consequences — perfectly illustrated in one frame. Stark tonal contrast between the two halves.",
+      "bg_colors": ["#1A1A1A", "#3A0A00"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 9,
+      "title": "Siege Warfare — The Nomads Who Took Cities",
+      "narration": "Settled peoples assumed nomads could not take walled cities. They were wrong, and learning that lesson was fatal. The Mongols had no native tradition of siege warfare — but they solved that problem the way they solved every problem: they recruited experts. From conquered Chinese and Persian engineers they acquired catapults, trebuchets, battering rams, and naphtha fire projectors. They built dams to flood fortifications. They diverted rivers. They cut off food and water supplies and simply waited. When they did assault walls directly, they drove captured civilians ahead of their troops as human shields, forcing defenders to slaughter their own people. City after city, considered impregnable for centuries, fell within days or weeks. The nomads had become the finest siege engineers in the medieval world.",
+      "visual_prompt": "Cinematic siege sequence: a massive Central Asian city with high mud-brick walls, surrounded by a Mongol army that appears to stretch endlessly across the plain. Dozens of massive trebuchets are constructed simultaneously — Chinese engineers directing Mongol workers. Stones and burning projectiles arc through the sky, slamming into towers. Battering rams swing at gates. Smoke and dust everywhere. Then an overhead shot: the scale of the besieging force versus the city — like a tide surrounding an island. The walls begin to crack. The gates splinter. The end is never in doubt.",
+      "bg_colors": ["#3A1A00", "#1A0A10"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 10,
+      "title": "The Xi Xia and Jin Dynasty — China Falls",
+      "narration": "Genghis Khan's first major campaigns were not west — they were south, into China. The Xi Xia kingdom in northwestern China fell after two campaigns. Then the great Jin Dynasty, which ruled northern China with tens of millions of subjects and the most sophisticated military establishment in Asia. The Jin had walls. They had gunpowder. They had armored cavalry and infantry in the hundreds of thousands. The Mongols defeated them anyway — not in a single battle, but in a grinding campaign across two decades that used everything the Mongols had learned: speed, encirclement, siege craft, and the willingness to destroy crops and divert water to starve cities into submission. Zhongdu — modern Beijing — fell in 1215. The Jin Dynasty never recovered. It would be finally extinguished in 1234.",
+      "visual_prompt": "Vast Chinese landscape: the Great Wall snaking across mountains, then breached by Mongol cavalry streaming through a captured gate. Below: the enormous Jin capital of Zhongdu, its sophisticated Chinese architecture — pagodas, tiled roofs, canals — surrounded by a Mongol army encampment that dwarfs it. Inside the city, Jin officials in formal robes watch from a tower as the fires start on the outskirts. Genghis Khan on horseback viewing the burning city from a ridge, his expression unreadable. Dramatic contrast between the refined, ancient Chinese civilization and the elemental force besieging it.",
+      "bg_colors": ["#2A1A00", "#0A1A2A"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 11,
+      "title": "The Khwarezmian Empire — Insult and Annihilation",
+      "narration": "In 1218, Genghis Khan made a diplomatic and commercial overture to the Khwarezmian Shah Muhammad II — the ruler of a prosperous empire encompassing modern Iran, Afghanistan, and Central Asia. He sent a trade caravan of four hundred and fifty merchants. The Shah had the entire caravan massacred and the Muslim merchants' goods seized. Genghis Khan sent three envoys to demand explanation. The Shah executed one and mutilated the other two, sending them back with their beards burned off. What followed was not a war. It was an erasure. The Mongols mobilized an army estimated at ninety thousand to two hundred thousand riders and systematically dismantled everything the Shah had built. Samarkand — one of the great cities of the medieval world. Bukhara. Urgench. Merv. Nishapur. Each fell. Each was destroyed.",
+      "visual_prompt": "Opulent Khwarezmian throne room — the Shah Muhammad II, arrogant and powerful, seated on an ornate throne surrounded by courtiers. A Mongol trade caravan being massacred at a border town: merchants fleeing, being cut down. Then the Mongol response — a vast army assembling on the horizon, dust rising from their approach visible from the city walls. The Shah's face in close-up: the moment he realizes the magnitude of his error. Cut to the burning skyline of Samarkand, one of the most beautiful cities in the world, reduced to embers. The human cost rendered in the faces of terrified civilians.",
+      "bg_colors": ["#3A1A00", "#2A0A00"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 12,
+      "title": "Samarkand and Merv — The Cities That Died",
+      "narration": "Merv, in modern Turkmenistan, was one of the largest cities on Earth in 1221 — possibly home to five hundred thousand people, a center of Islamic scholarship, trade, and architecture. When it fell to Tolui Khan, son of Genghis, the population was marched out into the surrounding plain. They were sorted. Artisans were taken for the empire's use. Soldiers were pressed into labor. Everyone else — the accounts vary but the numbers are catastrophic — was killed. Contemporary chronicles speak of millions of dead across the Khwarezmian campaign. Modern historians debate the figures, but the archaeological record is unambiguous: cities that had been inhabited continuously for thousands of years were simply abandoned after the Mongol passage. Merv did not recover for centuries.",
+      "visual_prompt": "Heart-stopping panoramic shot: the great oasis city of Merv at its height — domed mosques, libraries, gardens, caravanserais, minarets — a jewel of medieval civilization. Then the aftermath: aerial view of the same city as smoking ruins in a barren landscape. A vast population of civilians being marched out by Mongol cavalry onto the surrounding desert. The sorting: artisans pulled aside, soldiers separated, the remaining mass left in the open plain. The weight of the moment — a civilization's endpoint rendered visible. Documentary restraint, no melodrama, just scale and truth.",
+      "bg_colors": ["#1A0A00", "#2A1A1A"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 13,
+      "title": "Genghis Khan Dies — But the Empire Grows",
+      "narration": "Genghis Khan died in 1227, probably from injuries sustained in a fall from a horse while campaigning against the Xi Xia. He was somewhere between sixty and seventy years old. He did not live to see his empire reach its greatest extent. But he had already engineered its continuation. Before his death he divided his territories among his sons — Jochi, Chagatai, Ögedei, and Tolui — with Ögedei named Great Khan, supreme ruler. The system worked. Under Ögedei, the Mongol conquests accelerated rather than stalled. Russia fell. Poland and Hungary were devastated. The armies of Europe barely survived. The Song Dynasty in southern China was targeted. The machine Genghis built had its own momentum. It did not need him.",
+      "visual_prompt": "Somber cinematic scene: Genghis Khan on his deathbed in a campaign tent on the steppe, old but still formidable, surrounded by his sons and generals. He speaks to them — his lips moving but no sound — passing on the command. His sons in close-up: Ögedei, serious and capable; the others, calculating. Outside the tent, the vast Mongol army waits in silence, thousands of riders stretching to the horizon, their banners still. Then a map animation showing the empire continuing to expand after his death — like a fire that doesn't stop when the man who lit it dies. Muted gold and grey tones.",
+      "bg_colors": ["#2A1A00", "#1A1A1A"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 14,
+      "title": "Russia and Europe — The West Nearly Falls",
+      "narration": "Between 1237 and 1242, a Mongol force under Batu Khan and the general Subutai destroyed every major Russian principality. Vladimir. Ryazan. Kyiv — then the most magnificent city in Eastern Europe — was reduced to ashes and a handful of survivors. The Mongols crossed the frozen Volga in winter, moving faster than any European army thought possible in that season. Then they entered Poland and Hungary. At Legnica in 1241, a combined force of Polish knights and Teutonic Order crusaders was annihilated. At Mohi, the Hungarian king barely escaped with his life as his army was destroyed in a night attack. Western Europe stood open. Nothing remained between the Mongols and the Atlantic. Then Ögedei Khan died in Mongolia, and Batu Khan withdrew to attend the succession. Europe's survival was administrative, not military.",
+      "visual_prompt": "Stunning nighttime scene: the destruction of Kyiv — a beautiful Rus city of golden domes and wooden churches burning spectacularly against a winter sky. Then the charge at Legnica: Polish knights in full heraldic armor charging Mongol cavalry, a moment of medieval splendor meeting steppe terror. The Mongols feign retreat, the Polish charge breaks formation, and then the encirclement. A European knight on a hillside watching the trap close below him. Finally: the Adriatic coast — Mongol scouts at the sea's edge, looking west. A door that was open. Then closed. The most consequential administrative decision in European history.",
+      "bg_colors": ["#1A0A00", "#0A0A2A"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 15,
+      "title": "Baghdad 1258 — The End of the Abbasid Caliphate",
+      "narration": "Baghdad in 1258 was the center of the Islamic world. For five centuries, the Abbasid Caliphate had made it a capital of science, philosophy, medicine, and trade. Its libraries held perhaps a million manuscripts. Its scholars had preserved and advanced Greek knowledge that Europe had lost. It had a population of perhaps eight hundred thousand people. In January 1258, Hulagu Khan's army of approximately one hundred and fifty thousand surrounded the city. The Caliph Al-Musta'sim refused to surrender, convinced that divine intervention would save Islam's holy city. It did not. The walls were breached on February 10th. What followed lasted seventeen days. When it was over, Baghdad would not be a major city again for centuries.",
+      "visual_prompt": "Sweeping cinematic view of Baghdad at its zenith — the Abbasid capital in its glory, the Round City, the House of Wisdom, minarets reflected in the Tigris, bustling markets, scholars in robes carrying manuscripts, an urban paradise of medieval civilization. Then the siege: Mongol catapults and siege engines surrounding the massive walls, the bombardment beginning. The walls cracking. Then inside the city as chaos erupts — scholars desperately carrying manuscripts, crowds in the streets. And finally, from above: the city burning, the Tigris dark with ink from thousands of manuscripts thrown into it. One of history's great losses, rendered with the weight it deserves.",
+      "bg_colors": ["#1A0A00", "#0A0A1A"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 16,
+      "title": "The House of Wisdom — Knowledge That Was Lost",
+      "narration": "The story told about Baghdad's fall — that the Tigris ran black with ink from the destroyed books of the House of Wisdom — may be apocryphal in its details but true in its meaning. The Mongol destruction of Baghdad ended a period of Islamic intellectual dominance that had been unbroken for five hundred years. Works of astronomy, medicine, mathematics, philosophy, and literature that existed in no other copies anywhere on Earth disappeared. How much was truly lost cannot be known, because what is lost cannot be catalogued. What can be measured is the before and after: Baghdad as a living center of human knowledge, and Baghdad as a depopulated ruin. The event is still commemorated in the Islamic world as one of history's defining catastrophes. The Mongols did not set out to destroy knowledge. They simply didn't value it above their strategic objectives.",
+      "visual_prompt": "Interior of the House of Wisdom at its height — enormous vaulted library, scholars working at long tables, astronomical instruments, maps of the world spread across desks, shelves of manuscripts reaching to vaulted ceilings. Beautiful, warm light. A civilization at intellectual peak. Then the same space, destroyed — books burning, shelves collapsed, the manuscripts curling into ash. The contrast is devastating and simple. One scholar, the last to leave, carrying a single armful of books toward the door, surrounded by the destruction. Warm amber turning to grey ash. No melodrama — just the before and after.",
+      "bg_colors": ["#2A1A00", "#0A0A0A"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 17,
+      "title": "Ain Jalut 1260 — The Battle That Stopped the World",
+      "narration": "By 1260, the Mongols appeared unstoppable. Hulagu Khan had destroyed the Assassins in Persia, obliterated Baghdad, taken Damascus and Aleppo, and was moving toward Egypt — the last major Islamic power. Then several things happened at once. Möngke Khan, the Great Khan, died. Hulagu withdrew most of his army north to position himself for the succession dispute. He left his general Kitbuqa with perhaps ten thousand to eighteen thousand men to hold Syria. Facing them was the Mamluk Sultanate of Egypt — slave soldiers, themselves superb cavalry fighters, under Sultan Qutuz and his general Baybars. On September 3rd, 1260, at Ain Jalut — the Springs of Goliath — in Palestine, the Mamluks met Kitbuqa's force. They used the feigned retreat against the Mongols. And it worked.",
+      "visual_prompt": "The Jezreel Valley in Palestine: heat haze over rocky terrain dotted with scrub. Two professional armies facing each other — the Mongol cavalry under Kitbuqa, disciplined and experienced; the Mamluk cavalry under Baybars, equally professional, equally mounted. The battle begins: Mamluk forces feign a break and retreat — leading the Mongols into hidden Mamluk wings in the hills. The same tactic the Mongols had used against a hundred armies, now turned against them. Kitbuqa's expression as he realizes. The Mamluk encirclement completing. The Mongol force destroyed. Kitbuqa captured. A world-historical moment in a small valley in Palestine. Dry, harsh Mediterranean light.",
+      "bg_colors": ["#2A1A00", "#1A1A0A"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 18,
+      "title": "Why the Mongols Lost at Ain Jalut",
+      "narration": "Ain Jalut is sometimes overstated as the battle that saved Western civilization — in reality, the Mongol force was well below its maximum strength. A full Mongol army might never have been stopped there. But the battle matters for a different reason: it established that the Mongols could lose. That they could be outmaneuvered by cavalry that had studied their tactics. The Mamluks won not by being braver but by being smarter — they had absorbed Mongol methods and used them better than the depleted Mongol force could counter. Ain Jalut also exposed the empire's structural weakness: it was too large to sustain unified command. After Möngke's death, the Mongol successor states — the Ilkhanate, the Golden Horde, the Chagatai Khanate, and the Yuan Dynasty — began fighting each other. The empire fractured from within.",
+      "visual_prompt": "Post-battle scene at Ain Jalut: the body of Mongol general Kitbuqa brought before Sultan Qutuz, the Mamluk court assembled in a field, the scale of Mongol defeat evident in captured banners and horses. Then: a map animation showing the Mongol Empire splintering into four successor khanates, with borders highlighted and arrows showing intra-Mongol conflicts. The visual metaphor of a great thing cracking apart under its own weight. Then: a quiet moment — a lone Mongol horseman at the edge of the desert, looking south toward Egypt he will never reach. The end of expansion.",
+      "bg_colors": ["#1A1A0A", "#0A1A1A"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 19,
+      "title": "Kublai Khan and China — The Empire That Became Civilized",
+      "narration": "Not all the Mongol khanates destroyed what they conquered. Kublai Khan, grandson of Genghis, completed the conquest of southern China's Song Dynasty by 1279 and established the Yuan Dynasty — not as a steppe empire governing a subject population, but as a Chinese imperial dynasty. Kublai adopted Chinese administrative methods, wore Chinese imperial dress, and ruled from Beijing. He was still Mongol in outlook — he attempted invasions of Japan, Vietnam, and Java, all catastrophically unsuccessful — but he also presided over a period of relative stability in China and patronized arts, trade, and scholarship. When Marco Polo arrived at his court in 1275, he found not a barbarian warlord but a sophisticated emperor running one of the world's most complex administrative systems.",
+      "visual_prompt": "The magnificent court of Kublai Khan at Xanadu — a vast throne room blending Mongol and Chinese imperial aesthetics: felt hangings alongside lacquered pillars, Mongol hunting scenes beside Chinese silk paintings, the Great Khan in Chinese imperial yellow robes but still seated in the Mongol style, cross-legged. Courtiers from every corner of the empire: Chinese officials, Persian merchants, Tibetan monks. Marco Polo being presented — a young Italian standing wide-eyed before the most powerful ruler on Earth. Then: an exterior view of Khanbaliq (Beijing), a vast organized metropolis. The steppe conqueror transformed into emperor. Rich gold and crimson tones.",
+      "bg_colors": ["#3A1A00", "#0A1A0A"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 20,
+      "title": "Pax Mongolica — When the World Was One Road",
+      "narration": "For roughly a century, between approximately 1250 and 1350, something unprecedented happened: a traveler could journey from the Pacific coast of China to the Mediterranean coast of Europe without crossing a hostile border. The Pax Mongolica — the Mongol Peace — was not peace in any moral sense. It was built on conquest and sustained by the credible threat of annihilation. But within the empire, trade flowed as it never had before. The Silk Road reached its maximum operation. Chinese technology — printing, gunpowder, the compass — moved west. Islamic mathematics and astronomy moved east. Ideas, goods, diseases, and peoples circulated across Eurasia at a scale and speed that the ancient world had never approached. The Mongols didn't plan to connect the world. They just accidentally became the infrastructure for it.",
+      "visual_prompt": "Sweeping Silk Road panorama: a great trade caravan — hundreds of camels, wagons, merchants from China, Persia, Arabia, Europe — moving through the landscape in full operation. A relay station with fresh horses, Mongol guards ensuring safe passage. Cut to the goods: Chinese silk, Persian glass, Indian spice, European silver, changing hands across a market table with different currencies and languages all in motion. Then: an annotated map showing the trade routes in their full extent, lighting up like a nervous system across Eurasia. A world more connected than it had ever been. Warm golden trade-route tones, amber and saffron.",
+      "bg_colors": ["#4A2A00", "#1A0A2A"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 21,
+      "title": "The Black Death — The Mongols' Deadliest Export",
+      "narration": "The Silk Road carried more than silk. In the 1340s, the bubonic plague — Yersinia pestis — erupted in Central Asia, almost certainly in the trade corridors the Mongols had built and maintained. It moved west with the speed of commerce. By 1346, it had reached the Mongol Golden Horde besieging the Crimean trading post of Kaffa. A besieging Mongol force dying of plague began catapulting their dead over the city walls — possibly the first documented instance of biological warfare. Genoese merchants fled by ship, carrying the disease to Sicily, and then to all of Europe. Within four years, the Black Death killed between thirty and sixty percent of Europe's population. Perhaps seventy-five million people died across Eurasia. The infrastructure the Mongols built to connect the world also connected its pathogens.",
+      "visual_prompt": "Eerie, atmospheric sequence: the Crimean coast at Kaffa, a Mongol siege army camped outside a walled trading city on the Black Sea. Mongol soldiers visibly sick — plague symptoms — bodies being loaded into catapults and hurled over the walls in a horrifying close-up. Inside the city: terror. Genoese merchants loading ships in desperate haste. Then: a ship entering the harbor of Messina, Sicily — the crew dead or dying at the oars, rats running down the mooring ropes to the dock. And then the map: black spreading across Europe like a stain, city after city falling. The unintended consequence of connectivity. Sickly green and grey tones.",
+      "bg_colors": ["#0A1A0A", "#1A1A1A"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 22,
+      "title": "The Collapse — How the Empire Fell",
+      "narration": "The Mongol Empire did not fall to a single great defeat. It dissolved — slowly, unevenly, under the weight of its own contradictions. The successor khanates had always competed with each other, but after the Black Death ravaged their populations and disrupted the trade networks they taxed, their economic foundations eroded. In China, the Yuan Dynasty fell in 1368 to a Chinese peasant rebellion that founded the Ming Dynasty. The Golden Horde in Russia fractured into competing khanates, each gradually absorbed or defeated by the rising principality of Muscovy. The Ilkhanate in Persia simply collapsed from within after its last rulers converted to Islam and lost the loyalty of their Mongol military base. By 1400, the empire that had once stretched across a quarter of the Earth was a memory and a set of ruins.",
+      "visual_prompt": "Montage of collapse: the Yuan Dynasty's last emperor fleeing Beijing in 1368 as Ming rebels storm the gates. The Golden Horde's last khan retreating east before the armies of Moscow. The ruins of once-great Mongol administrative centers — crumbling walls, abandoned trade routes, empty relay stations. Then a map animation showing the empire contracting, the khanates shrinking and disappearing one by one. Finally: the steppe itself, empty and wind-swept as before, as if the empire had been a dream the grassland had briefly dreamed. The vastness of the steppe absorbing the history back into itself. Fading gold tones becoming grey.",
+      "bg_colors": ["#1A1A1A", "#0A0A0A"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 23,
+      "title": "How Many People Did They Kill?",
+      "narration": "The question that haunts the Mongol legacy is the one that has no comfortable answer. Estimates of the total death toll from Mongol conquests — in battle, in siege, in subsequent famine and disease — range from thirty to forty million people. Some historians place the figure higher. The world's population in 1200 was roughly four hundred million people. Some regions lost up to three-quarters of their population. DNA studies of modern Central Asian populations show genetic bottlenecks from this period. Archaeology shows settlements abandoned and never reoccupied. Climate data shows the rewilding of once-cultivated land, as carbon dioxide levels measurably dropped when the human population fell. The Mongol conquests are among the largest demographic catastrophes in human history. And they were deliberate. The terror was the strategy.",
+      "visual_prompt": "Haunting sequence: a bird's-eye view of a great city — Merv, or Nishapur, or Zhongdu — populated and thriving. Then the same city, from the same angle, empty and ruined. Then: a vast plain with the marks of abandoned agriculture — irrigation channels dry and silting up, terraced fields reverting to grassland. Archaeological evidence rendered cinematically. Then DNA helix imagery transitioning to modern Central Asian faces — the genetic traces of what was lost. A timeline visualization of global population 1200-1300, the visible dip. Documentary gravitas, no sensationalism. The weight of historical fact.",
+      "bg_colors": ["#0A0A0A", "#1A0A00"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 24,
+      "title": "The Modern World the Mongols Made",
+      "narration": "Genghis Khan has more living descendants than any human being in recorded history — roughly sixteen million men alive today carry his Y-chromosome, according to a landmark 2003 genetic study. The borders of modern Russia, China, Iran, and much of Central Asia were shaped in part by where the Mongols conquered and where they stopped. The concept of universal religious tolerance in governance — the Mongols taxed every religion equally and persecuted none — was radical in the thirteenth century and remains contested today. Russian national identity was forged partly in resistance to Mongol rule. China's relationship with its northern borders is still shaped by the Yuan Dynasty's memory. And the Silk Road, which the Mongols built into its greatest incarnation, has a direct descendant: China's twenty-first century Belt and Road Initiative traces the same ancient paths. The steppe boy who should have died at nine years old remade the world so thoroughly that we are still living inside the consequences.",
+      "visual_prompt": "Sweeping final montage: the modern skylines of Beijing, Moscow, Tehran, and Istanbul — cities shaped by Mongol conquest and survival — intercut with the original steppe landscape. A genetic visualization map showing the spread of Genghis Khan's Y-chromosome across modern Asia. The ancient Silk Road overlaid with the modern Belt and Road. Then: back to the beginning — the Mongolian steppe at sunrise, a lone horseman silhouetted against the dawn, small against the infinite landscape, the same image as it was a thousand years ago. The last shot: Genghis Khan's face, reconstructed from historical descriptions and sculpture, looking directly into the camera. Quiet, enormous, unforgettable. Golden dawn light on the steppe.",
+      "bg_colors": ["#3A2A00", "#0A0A1A"],
+      "duration_sec": 48
+    }
+  ]
+}

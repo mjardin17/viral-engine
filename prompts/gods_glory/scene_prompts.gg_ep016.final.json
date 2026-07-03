@@ -1,0 +1,327 @@
+{
+  "channel": "GG",
+  "episode_number": 16,
+  "episode_id": "GG_EP016",
+  "title": "Agincourt: How Mud and Arrows Beat the Flower of French Chivalry",
+  "subtitle": "October 25, 1415 \u2014 Five Thousand English vs Twenty-Five Thousand French",
+  "tagline": "The greatest knights in Europe. Twelve thousand horses. A narrow field in France. And six thousand English longbowmen who had been practicing since age seven.",
+  "duration_target_sec": 1120,
+  "viral_hook": "The French knights wore 60 lbs of armor. The English arrows went through it. 6,000 arrows per second.",
+  "youtube_title": "Agincourt 1415: English Longbowmen vs. The Flower of French Chivalry",
+  "lesson": "Technology advantage held by determined men beats traditional power. But the men have to know how to use it.",
+  "highlight_scene": 10,
+  "scenes": [
+    {
+      "scene_number": 1,
+      "type": "cold_open",
+      "title": "The Night Before",
+      "duration_sec": 47,
+      "narration": "October 24, 1415. The English army camps in the fields near the village of Agincourt in northern France. It has been raining for weeks. Henry V's men are exhausted, sick with dysentery, and outnumbered at least five to one. They have marched nearly three hundred miles in the past month, raiding French territory, and now a French army has blocked their path home to Calais. Henry walks among his men at night, disguised, listening to what they say. What they say is that they wish they were home. Henry spends the night before the battle on his knees. In the morning, he gives a speech that Shakespeare will make immortal six hundred years later. Then he does something no one expects: he attacks.",
+      "visual_prompt": "Gods & Glory cinematic documentary. English camp the night before Agincourt \u2014 sick, exhausted soldiers in the rain, campfires, mud. Henry V walking among them in disguise. His face: composed, determined, hiding whatever fear he feels. The prayer vigil at night. Then dawn coming up cold and grey. 16:9.",
+      "bg_colors": [
+        "#1A1A2E",
+        "#4A3728",
+        "#8B8B6B"
+      ]
+    },
+    {
+      "scene_number": 2,
+      "type": "context",
+      "title": "The Hundred Years' War",
+      "duration_sec": 46,
+      "narration": "The Hundred Years' War between England and France had been going on, intermittently, since 1337. At its root was a dispute about who ruled France: the French royal house of Valois, or the English Plantagenet kings who claimed the French throne through their descent from Edward III. There had been famous English victories \u2014 Cr\u00e9cy in 1346, Poitiers in 1356 \u2014 where English longbowmen had shattered French cavalry. But those victories had not settled the war. France remained contested. Henry V, crowned in 1413, was young, ambitious, and short on money. He revived the English claim to France and launched an invasion in 1415. His first target was the fortress of Harfleur, which fell after a siege that took longer than expected and cost him a third of his army to dysentery and disease.",
+      "visual_prompt": "Gods & Glory cinematic documentary. A map of the Hundred Years' War \u2014 English and French territories contested across decades. Henry V, young and fierce, planning his French campaign. The siege of Harfleur: English artillery battering the walls, disease cutting through the besieging army. The exhausted victors turning north toward Calais. 16:9.",
+      "bg_colors": [
+        "#8B1A1A",
+        "#C9A227",
+        "#1A1A2E"
+      ]
+    },
+    {
+      "scene_number": 3,
+      "type": "character_intro",
+      "title": "Henry V: The Warrior King",
+      "duration_sec": 46,
+      "narration": "Henry V was twenty-seven years old at Agincourt. As Prince of Wales, he had fought in Wales and been wounded in the face by an arrow at the Battle of Shrewsbury at age sixteen \u2014 and finished the battle. He had deposed his own father's ministers and spent his adolescence learning war, law, and administration. When he became king, he was the most competent English monarch of his generation. He was pious, disciplined, and ruthless \u2014 he had ordered the execution of his own close friend Lord Scrope for treason. At Agincourt, he would lead from the front, fighting hand to hand in the m\u00eal\u00e9e with his own axe. Several knights were killed trying to take his crown.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Henry V \u2014 young, lean, scarred from the arrow wound at Shrewsbury. His face set with determination. In his royal surcoat over armor, addressing his army before the battle. His military bearing: someone who has been fighting since age sixteen and takes it seriously. 16:9.",
+      "bg_colors": [
+        "#1A1A2E",
+        "#C9A227",
+        "#8B4500"
+      ]
+    },
+    {
+      "scene_number": 4,
+      "type": "character_intro",
+      "title": "The Constable of France",
+      "duration_sec": 45,
+      "narration": "Charles d'Albret, Constable of France, commanded the French army at Agincourt. He is not remembered well. He had a force estimated at between twelve thousand and thirty-six thousand men \u2014 most estimates settle around twenty thousand \u2014 including the finest heavy cavalry in Europe. French chivalric culture held that knights, not archers or infantry, won battles. The disaster at Cr\u00e9cy and Poitiers had been blamed on disorder and lack of coordination, not on the inherent superiority of the longbow. D'Albret believed that disciplined heavy cavalry would overrun the English. He was wrong. He died in the battle, and history has not been kind to him.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The French army before Agincourt \u2014 a vast host of knights in brilliant armor, banners flying, the flower of French chivalry assembled. D'Albret surveying his force with confidence: more men, better equipped, defending their own country. The French camp vibrant with the certainty of victory. 16:9.",
+      "bg_colors": [
+        "#1A1A2E",
+        "#C9A227",
+        "#8B1A1A"
+      ]
+    },
+    {
+      "scene_number": 5,
+      "type": "historical",
+      "title": "The Field and the Stakes",
+      "duration_sec": 47,
+      "narration": "The battlefield was a narrow field between the woods of Agincourt and Tramecourt \u2014 perhaps a kilometer wide. Henry had chosen his ground deliberately. The narrow field negated French numerical advantage: they couldn't deploy their full force in line. The field had been plowed for winter planting, and weeks of rain had turned it into mud six inches deep. Henry's English longbowmen drove sharpened stakes into the ground in front of their positions \u2014 each stake at an angle to impale charging horses. They had done this at Cr\u00e9cy. The French commanders knew this and did not adequately plan for it. The field, the mud, and the stakes were going to do much of Henry's work for him.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The narrow field at Agincourt \u2014 the woods pressing in on both sides. English longbowmen driving stakes into the muddy earth. The plowed field churned to mud by rain. A birds-eye view showing the tactical advantage: the French can't outflank, can't deploy their full numbers. 16:9.",
+      "bg_colors": [
+        "#4A3728",
+        "#8B8B6B",
+        "#1A1A2E"
+      ]
+    },
+    {
+      "scene_number": 6,
+      "type": "historical",
+      "title": "The English Longbow",
+      "duration_sec": 47,
+      "narration": "The English longbow was made of yew, six feet long, and required a draw weight of around one hundred to one hundred fifty pounds. Drawing it required strength that deformed the archer's body: skeletons of medieval English archers show enlarged left arms, overdeveloped chest and shoulder muscles, and stress fractures in the drawing arm from training that began in childhood. English law required men to practice archery on Sundays. An experienced longbowman could shoot ten to twelve arrows per minute accurately at two hundred meters. Six thousand English archers at Agincourt could loose sixty thousand arrows per minute. The French knights were riding into a storm that the Middle Ages had no answer for.",
+      "visual_prompt": "Gods & Glory cinematic documentary. An English longbowman drawing his bow \u2014 the six-foot yew bow, the physical effort of the draw. Close-up of the archer's deformed, overdeveloped left arm from a lifetime of practice. Then the formation of six thousand archers. The mathematical reality: sixty thousand arrows per minute. 16:9.",
+      "bg_colors": [
+        "#4A3728",
+        "#2C3E1A",
+        "#C9A227"
+      ]
+    },
+    {
+      "scene_number": 7,
+      "type": "battle",
+      "title": "Henry Advances",
+      "duration_sec": 46,
+      "narration": "The armies faced each other for hours without either attacking. Henry needed the French to come to him \u2014 he had ground, stakes, and flanking archers. The French had time: every hour Henry waited was another hour closer to starvation and exhaustion for the English. So Henry did the unexpected again. He ordered the English army forward. They pulled up their stakes, advanced to within longbow range \u2014 about two hundred fifty meters \u2014 hammered the stakes back in, and the archers opened fire. The French crossbowmen were outranged. The first volleys hit the horses. Wounded horses panicked and bolted, crashing into the men around them. The carefully marshaled French cavalry charge became chaos before it started.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The English army advancing \u2014 pulling up stakes, moving forward, replanting them. The longbowmen drawing. The first volley: thousands of arrows rising in an arc and falling on the French formations. Horses hit, rearing, throwing riders, crashing into each other. The charge disordered before it begins. 16:9.",
+      "bg_colors": [
+        "#8B1A1A",
+        "#C9A227",
+        "#4A3728"
+      ]
+    },
+    {
+      "scene_number": 8,
+      "type": "battle",
+      "title": "The French Cavalry Charge",
+      "duration_sec": 48,
+      "narration": "The French cavalry charged \u2014 but the field was narrow, and the mud was knee-deep on the horses. What should have been a thundering line became a struggling mass. Horses impaled themselves on stakes. Fallen horses tripped those behind them. The archers on the flanks shot into the mass from the sides. Knights who made it through the stakes found themselves facing English men-at-arms \u2014 and their armor, despite its quality, was not arrow-proof. Arrows found the gaps. Knights went down. Those who reached the English line were exhausted from struggling through the mud and were met by English soldiers who had been waiting, not marching. The first French charge was shattered.",
+      "visual_prompt": "Gods & Glory cinematic documentary. French knights charging through deep mud \u2014 horses struggling, men straining. Stakes impaling horses. Arrows striking from both flanks. The narrow field channeling thousands of knights into a killing ground. Knights in brilliant armor going down in the mud. The charge becoming a disaster. 16:9.",
+      "bg_colors": [
+        "#8B1A1A",
+        "#8B4500",
+        "#C9A227"
+      ]
+    },
+    {
+      "scene_number": 9,
+      "type": "battle",
+      "title": "The M\u00eal\u00e9e",
+      "duration_sec": 47,
+      "narration": "The French infantry \u2014 thousands of men-at-arms on foot \u2014 pushed through the bodies of the cavalry and reached the English line. The fighting was brutal and close \u2014 axes, mallets, swords, and daggers in a press so tight that men fell and couldn't get up. The weight of the press drove fallen men into the mud where they drowned in their own armor. Henry himself fought in the front rank; his crown was cut during the fighting, and knights died around him trying to keep him alive. The English archers, having exhausted their arrows, drew their weapons and joined the fight. Three French commanders \u2014 including d'Albret \u2014 died in the m\u00eal\u00e9e.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Hand-to-hand combat in the m\u00eal\u00e9e at Agincourt \u2014 the press of bodies, axes and swords in close quarters. Knights drowning in mud under the weight of their armor. Henry V fighting personally in his royal surcoat. Archers throwing down bows and joining with mallets and daggers. 16:9.",
+      "bg_colors": [
+        "#8B1A1A",
+        "#4A3728",
+        "#2C1A00"
+      ]
+    },
+    {
+      "scene_number": 10,
+      "type": "pivotal_action",
+      "title": "The Prisoners",
+      "duration_sec": 48,
+      "narration": "After the main battle, the English held several thousand French prisoners \u2014 knights who had surrendered expecting ransom, as chivalric tradition required. Then a French force was spotted attacking the English baggage train from the rear. Henry made a decision that has been debated and condemned for six centuries: he ordered the prisoners killed. Most of his knights refused \u2014 killing prisoners violated everything chivalry stood for, and the ransom value was enormous. Henry ordered his own archers to do it. When the French baggage raid turned out to be minor and leaderless, the massacre continued anyway. Hundreds or thousands of prisoners were killed. Henry VI later excused it as military necessity. History has not entirely agreed.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The French prisoners \u2014 knights in damaged armor, disarmed, expecting ransom. Henry V's face as he gives the order. English archers executing prisoners. The moral complexity: military necessity versus chivalric tradition. The act that shadows the victory. Henry's expression showing that he knows what he is doing and does it anyway. 16:9.",
+      "bg_colors": [
+        "#8B1A1A",
+        "#1A1A2E",
+        "#4A3728"
+      ]
+    },
+    {
+      "scene_number": 11,
+      "type": "aftermath",
+      "title": "The Count of the Dead",
+      "duration_sec": 46,
+      "narration": "When the fighting ended, the field at Agincourt held a staggering asymmetry of dead. English losses: approximately one hundred to five hundred killed. French losses: between four thousand and ten thousand dead, including three dukes, eight counts, ninety lords, and at least fifteen hundred knights. The flower of French chivalry lay face-down in the mud of a plowed field in Normandy. The French prisoners who had been killed added to the toll. Henry V knelt to give thanks. It was Saint Crispin's Day \u2014 October 25 \u2014 the feast day he would promise his men they would remember, and they did, and Shakespeare made sure we did too.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The battlefield after Agincourt \u2014 French dead across the muddy field. Heralds identifying the fallen by their heraldry: three dukes, eight counts, fifteen hundred knights. Henry V kneeling in prayer amid the carnage. The extraordinary disproportion of losses: hundreds English, thousands French. 16:9.",
+      "bg_colors": [
+        "#4A3728",
+        "#8B8B6B",
+        "#1A1A2E"
+      ]
+    },
+    {
+      "scene_number": 12,
+      "type": "historical",
+      "title": "Henry's Return to London",
+      "duration_sec": 45,
+      "narration": "Henry V returned to London in November 1415 to a reception that no English king had received in living memory. The city turned out in its thousands. Henry reportedly asked for a modest procession \u2014 according to contemporaries, he wanted to give credit to God, not display his own triumph. The procession he got was anything but modest. London staged elaborate pageants. He was celebrated as a second Alexander, a new Caesar. Agincourt had transformed him from a competent but untested young king into a legendary warrior monarch. The French would not forget it either.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Henry V's triumphal return to London \u2014 the city thronged with people. Pageants and celebrations. Henry riding through the streets in his armor, reportedly trying to be modest, the crowds refusing to let him. The transformation of a young king into a legend. London celebrating. 16:9.",
+      "bg_colors": [
+        "#C9A227",
+        "#8B4500",
+        "#1A1A2E"
+      ]
+    },
+    {
+      "scene_number": 13,
+      "type": "historical",
+      "title": "The Treaty of Troyes",
+      "duration_sec": 46,
+      "narration": "Agincourt was not the end of the war. Henry continued his French campaigns, taking Normandy piece by piece. In 1420, the Treaty of Troyes made Henry V heir to the French throne and gave him Catherine of Valois in marriage. He was effectively king of France \u2014 the first English monarch since Edward III to genuinely threaten French sovereignty. Then, in 1422, Henry V died of dysentery at age thirty-five. His heir was nine months old. The French, under the leadership of Joan of Arc and later Charles VII, eventually reversed everything Henry had won. Agincourt's military legacy lasted exactly as long as its architect lived.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The Treaty of Troyes \u2014 Henry V and the French court. His marriage to Catherine of Valois. Then the sudden death of Henry at thirty-five: his body lying in state, his nine-month-old heir. And the reversal: Joan of Arc leading the French reconquest. The fragility of military empire without its maker. 16:9.",
+      "bg_colors": [
+        "#1A1A2E",
+        "#C9A227",
+        "#8B1A1A"
+      ]
+    },
+    {
+      "scene_number": 14,
+      "type": "analysis",
+      "title": "Why the Longbow Won",
+      "duration_sec": 47,
+      "narration": "Agincourt was not the last battle of the Hundred Years' War, and the longbow did not make English armies invincible. The French learned. At Patay in 1429, French cavalry caught English archers before they could plant their stakes and destroyed them. The longbow was decisive only when archers had time to prepare their position, when terrain funneled the enemy into their killing zone, and when the enemy attacked them rather than the other way around. What Agincourt showed was that missile weapons \u2014 given the right conditions \u2014 could neutralize the most expensive military force in the medieval world. The lesson would eventually become the machine gun.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The tactical analysis of Agincourt: the stakes, the funnel, the mud, the arrow storm. Then Patay \u2014 the French victory when the same archers were caught in the open. The conditional nature of the longbow's advantage. Finally, a conceptual bridge to modern missile weapons and the same principle. 16:9.",
+      "bg_colors": [
+        "#1A1A2E",
+        "#C9A227",
+        "#4A3728"
+      ]
+    },
+    {
+      "scene_number": 15,
+      "type": "historical",
+      "title": "Joan of Arc and the Reversal",
+      "duration_sec": 46,
+      "narration": "Joan of Arc appeared in 1429, fourteen years after Agincourt. She was seventeen. She claimed to hear voices from God directing her to drive the English from France. What she actually did was provide the demoralized French army with a symbolic focus that transformed its fighting spirit. She led the relief of Orl\u00e9ans, turned the war around, and was captured by the Burgundians the following year and burned by the English in 1431. She was nineteen when she died. The French did not stop after her death. Under Charles VII, they developed artillery and professional armies that systematically eliminated English advantages. By 1453, the English were gone from France except for Calais.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Joan of Arc \u2014 armor, banner, young face \u2014 leading French troops at Orl\u00e9ans. The relief of the siege. Her capture and burning at Rouen: the fire, the crowd, the girl in armor reduced to ash. Then the French recovery: artillery, professional armies, the systematic reversal of Agincourt's gains. 16:9.",
+      "bg_colors": [
+        "#8B1A1A",
+        "#C9A227",
+        "#1A3E2E"
+      ]
+    },
+    {
+      "scene_number": 16,
+      "type": "legacy",
+      "title": "Shakespeare's Agincourt",
+      "duration_sec": 46,
+      "narration": "Henry V speaks to his men before the battle in Shakespeare's play, written in 1599: 'We few, we happy few, we band of brothers. For he today that sheds his blood with me shall be my brother.' The speech is almost certainly invented \u2014 no one wrote down what Henry actually said. But Shakespeare's version has entered the language so completely that most people encounter it before they encounter the history. The phrase 'band of brothers' has named a book, a television series, and a concept of military fellowship that Henry's actual words \u2014 whatever they were \u2014 would not have survived to provide.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Shakespeare's 'Henry V' \u2014 the St. Crispin's Day speech performed. The words 'We few, we happy few, we band of brothers' visible. Then the legacy: the phrase appearing in modern war films, books, TV series. The gap between what Henry actually said and what Shakespeare made the world remember. 16:9.",
+      "bg_colors": [
+        "#C9A227",
+        "#1A1A2E",
+        "#4A3728"
+      ]
+    },
+    {
+      "scene_number": 17,
+      "type": "historical",
+      "title": "The End of Chivalric Warfare",
+      "duration_sec": 45,
+      "narration": "Agincourt is often cited as one of the final nails in the coffin of medieval chivalric warfare \u2014 the idea that wars were won by the best knights in the best armor. That model had already been challenged at Cr\u00e9cy and Poitiers. After Agincourt, it was increasingly untenable. The development of artillery in the late fifteenth century finished what the longbow started. Castles fell. Plate armor became obsolete. The professional trained infantry \u2014 with pike, crossbow, and eventually musket \u2014 replaced the mounted knight as the decisive military force. Agincourt was not the end, but it was a visible demonstration that the age of the armored knight was running out.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The end of the knight's era visualized: Agincourt's fallen knights in the mud, then early cannon blasting apart castle walls, then pike squares and early firearms replacing cavalry. The chain from longbow to musket to the death of mounted chivalric warfare. 16:9.",
+      "bg_colors": [
+        "#4A3728",
+        "#8B8B6B",
+        "#1A1A2E"
+      ]
+    },
+    {
+      "scene_number": 18,
+      "type": "modern_connection",
+      "title": "Agincourt and the Band of Brothers",
+      "duration_sec": 45,
+      "narration": "The term 'band of brothers' from Shakespeare's Agincourt speech became the title of Stephen Ambrose's history of the 101st Airborne Division in World War Two. Band of Brothers became an HBO miniseries directed by Steven Spielberg and Tom Hanks that won six Emmy awards. The American paratroopers dropping into Normandy in 1944 and the English archers driving stakes into a muddy French field in 1415 have more in common than the language suggests: small units of trained men, facing superior numbers, relying on each other. Henry V understood that the bond between soldiers was the real weapon. Everything else was just hardware.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The 101st Airborne in World War Two \u2014 paratroopers, Normandy, the band of brothers concept. A visual bridge between Henry V's speech and the American paratroopers who lived the same idea five centuries later. The timeless military truth that Shakespeare captured and Ambrose rediscovered. 16:9.",
+      "bg_colors": [
+        "#1A1A2E",
+        "#C9A227",
+        "#2C3E1A"
+      ]
+    },
+    {
+      "scene_number": 19,
+      "type": "historical",
+      "title": "The Battlefield Today",
+      "duration_sec": 44,
+      "narration": "The battlefield of Agincourt \u2014 Azincourt in French \u2014 is in the Pas-de-Calais department of northern France, between the villages of Azincourt and Tramecourt. The field itself has changed little since 1415 \u2014 it is still agricultural land, still planted with crops, still flanked by remnants of the forests that shaped the battle. A modern museum \u2014 the Azincourt Medieval Centre \u2014 opened in 2001. Archaeologists have struggled to find the physical evidence of the battle: very few artifacts, limited skeletal remains. The mud of Agincourt, which killed thousands of men, may have preserved very little for us to find.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The Azincourt battlefield today \u2014 quiet agricultural fields in northern France. The forests still framing the site. The modern museum. The absence of physical evidence: the mud that killed men also swallowed them. The peaceful ordinariness of a place where extraordinary violence happened. 16:9.",
+      "bg_colors": [
+        "#1A3E2E",
+        "#8B8B6B",
+        "#4A3728"
+      ]
+    },
+    {
+      "scene_number": 20,
+      "type": "analysis",
+      "title": "The Numbers Debate",
+      "duration_sec": 46,
+      "narration": "Historians have debated Agincourt's numbers for decades. Contemporary French sources claimed enormous French armies to explain the humiliation of defeat. Modern historians using pay records and logistical analysis believe the French had between twelve and twenty-four thousand men, the English between six and nine thousand \u2014 a ratio of two or three to one, not five to one. Even at two to one, the English victory is extraordinary. The adjusted numbers don't diminish Agincourt; they make it more explicable. Henry's tactics, the ground, the stakes, and the mud account for the result even without the most extreme numerical claims.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Historical documents showing wildly varying army size estimates. Modern historians analyzing pay records and logistics. A chart showing the range of estimates. The conclusion: even the conservative numbers represent an extraordinary English victory. History adjusting its own legends. 16:9.",
+      "bg_colors": [
+        "#1A1A2E",
+        "#C9A227",
+        "#4A3728"
+      ]
+    },
+    {
+      "scene_number": 21,
+      "type": "legacy",
+      "title": "Saint Crispin's Day",
+      "duration_sec": 46,
+      "narration": "Every October 25, veterans' groups, theater companies, and history enthusiasts observe Saint Crispin's Day with readings of Shakespeare's Henry V. The Royal Shakespeare Company performs the speech. Military units that trace their lineage to Agincourt observe the anniversary. The day has outlasted the Hundred Years' War, the Plantagenet dynasty, the English claim to France, and the world in which longbowmen were the decisive arm of war. What has not outlasted Agincourt is the speech \u2014 or rather the speech Shakespeare invented for it, which has proven more durable than the battle that inspired it.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Saint Crispin's Day observed \u2014 the Royal Shakespeare Company performing Henry V. Veterans listening to the speech. Military units marking the anniversary. The words crossing six centuries still carrying the same charge. History kept alive by theater. 16:9.",
+      "bg_colors": [
+        "#C9A227",
+        "#1A1A2E",
+        "#8B4500"
+      ]
+    },
+    {
+      "scene_number": 22,
+      "type": "analysis",
+      "title": "Henry V's Greatness",
+      "duration_sec": 46,
+      "narration": "Henry V died at thirty-five having arguably achieved more in nine years of kingship than any English monarch in centuries. He suppressed rebellion at home, reformed the administration of the Church in England, won the most famous English battlefield victory since Cr\u00e9cy, conquered Normandy, and was recognized as heir to the French throne. He led from the front, earned his men's personal loyalty, and died of the same disease that killed ordinary soldiers. What he did not do was survive long enough to consolidate what he had won. History gave him one of its most enduring legends. It also gave him nine months as the effective king of France, which is all he got.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Henry V at the height of his power \u2014 king of England, effective ruler of France, acknowledged as heir to the greatest kingdom in medieval Europe. Then the disease taking him: the young king dying at thirty-five, everything he built starting to unravel. Achievement and fragility in the same life. 16:9.",
+      "bg_colors": [
+        "#C9A227",
+        "#8B4500",
+        "#1A1A2E"
+      ]
+    },
+    {
+      "scene_number": 23,
+      "type": "summary",
+      "title": "Six Thousand Arrows",
+      "duration_sec": 46,
+      "narration": "At Agincourt on October 25, 1415, between five and nine thousand English soldiers defeated an army two to five times their size, killed thousands of the finest knights in Europe, and lost fewer than five hundred men doing it. The weapon that made the difference \u2014 the English longbow, requiring a lifetime of training to master \u2014 was made obsolete by gunpowder within a generation. The man who used it best \u2014 Henry V \u2014 died before he was forty. The victory that made him legendary was undone by disease and time. What remains is the legend, and the speech Shakespeare gave him, and the field in Normandy where the mud of a rainy October swallowed an army.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The field at Agincourt in late October light \u2014 cold, grey, quiet. The longbowmen in their positions. The arrows rising. The knights falling in the mud. Then the modern field: empty, agricultural, holding its dead somewhere beneath the crops. The weight of what happened here. 16:9.",
+      "bg_colors": [
+        "#1A1A2E",
+        "#4A3728",
+        "#8B8B6B"
+      ]
+    },
+    {
+      "scene_number": 24,
+      "type": "outro_cta",
+      "title": "The Happy Few",
+      "duration_sec": 44,
+      "narration": "We few, we happy few. Subscribe to Gods and Glory \u2014 history's most decisive moments, told the way they actually felt, from inside them. Next episode: The Battle of Tours \u2014 the morning in 732 AD when Charles Martel and the Franks stopped the Islamic expansion into Western Europe, and changed the map of civilization.",
+      "visual_prompt": "Gods & Glory cinematic documentary. A final image: the English longbowmen at Agincourt, arrows nocked, the French army approaching in the distance. The few against the many. The moment before the storm. Channel logo. Subscribe prompt. 16:9.",
+      "bg_colors": [
+        "#1A1A2E",
+        "#C9A227",
+        "#4A3728"
+      ]
+    }
+  ]
+}

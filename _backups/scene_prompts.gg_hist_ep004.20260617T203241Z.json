@@ -1,0 +1,111 @@
+{
+  "channel": "GG",
+  "track": "historical",
+  "episode_number": 4,
+  "episode_id": "GG_HIST_EP004",
+  "season": 1,
+  "title": "The Immortals",
+  "tagline": "10,000 warriors whose number never changed. Any soldier who fell was immediately replaced. They could not be reduced.",
+  "hook_line": "They were called the Immortals because their number never changed. 10,000. Always exactly 10,000.",
+  "characters": ["XERXES"],
+  "scenes": [
+    {
+      "scene_number": 1,
+      "type": "hook",
+      "title": "The Name",
+      "narration": "They were called the Immortals. Not because they couldn't die. Because their number never changed. Every man who fell was replaced before his body was cold.",
+      "visual_prompt": "Epic oil painting, the Persian Immortals in perfect geometric formation, 10,000 warriors visible as a precise mass of identical gold-patterned armor and identical spears raised vertical, the number overwhelming and geometrically perfect, dramatic front view, dark background, gold and crimson, 1080x1920 vertical",
+      "bg_colors": ["#8B6914", "#0A0A00"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 2,
+      "type": "reveal",
+      "title": "The Selection",
+      "narration": "Only Persians and Medes were permitted in the Immortals. Chosen personally. Trained for years. Their equipment — wicker shields, spears tipped with pomegranate-shaped golden counterweights — was identical, to the last detail.",
+      "visual_prompt": "Epic oil painting close-up of an Immortal warrior's equipment — the famous wicker shield, the spear with distinctive gold pomegranate counterweight butt-cap, the patterned robe underneath scale armor, the felt cap, the combination ornate and functional, dramatic lighting, 1080x1920 vertical",
+      "bg_colors": ["#8B6914", "#1A0A00"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 3,
+      "type": "reveal",
+      "title": "What They Carried",
+      "narration": "The Immortals marched with their families' wagons following behind. They brought their own food. Their own servants. Their own comforts. Xerxes's elite were maintained as a separate civilization within the army.",
+      "visual_prompt": "Epic oil painting, the Immortals on the march with the supply column of their personal wagons, family members, servants and livestock following behind them in a train — the army within an army, the privilege of the elite visible in the contrast with the mass formations around them, dramatic wide, 1080x1920 vertical",
+      "bg_colors": ["#8B4513", "#0A0508"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 4,
+      "type": "action",
+      "title": "Their Combat Doctrine",
+      "narration": "In battle, the Immortals fought in rotating waves. Front rank engaged, fell back, second rank stepped through, engaged, fell back. The face of the formation never tired. The force was always fresh.",
+      "visual_prompt": "Epic oil painting tactical view of the Immortals' rotating wave formation in combat — front rank engaging, second rank stepping through in perfect coordination, the mechanics of the never-tiring force visible, arrows and shields in motion, the precision of their rotation as impressive as their power, dramatic, 1080x1920 vertical",
+      "bg_colors": ["#8B4513", "#1A0A0A"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 5,
+      "type": "emotional",
+      "title": "What Armies Felt",
+      "narration": "Opposing armies described fighting the Immortals as fighting smoke. You killed one. Another was already there. You killed ten. The line hadn't moved. The number had not changed.",
+      "visual_prompt": "Epic oil painting, opposing warriors' perspective facing the Immortals — one Immortal falling, a replacement instantly stepping into his position from behind the line before the gap can be exploited, the line unbroken, the number unchanged, the psychological impossibility of fighting something that cannot be diminished, dramatic, 1080x1920 vertical",
+      "bg_colors": ["#4A2000", "#0A0A0A"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 6,
+      "type": "reveal",
+      "title": "Xerxes's Personal Guard",
+      "narration": "Within the 10,000 Immortals, an inner circle of 1,000 guarded Xerxes personally. Their spear pomegranates were gold. The outer 9,000 had silver. The distinction meant everything.",
+      "visual_prompt": "Epic oil painting, Xerxes surrounded by his 1,000 personal guard Immortals — identical to the others but for the golden pomegranate spear tips gleaming in contrast to the silver of those around them, Xerxes at the center protected by this living wall, composure absolute, dramatic, 1080x1920 vertical",
+      "bg_colors": ["#8B6914", "#0A0A0A"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 7,
+      "type": "action",
+      "title": "Before Thermopylae",
+      "narration": "At Thermopylae, Xerxes waited four days before sending any forces. He sent spies first. The spy reported back: 300 Spartans were combing their hair and performing gymnastics. They were preparing to die.",
+      "visual_prompt": "Epic oil painting, Persian spy observing the Spartan position at Thermopylae from a distance — 300 Spartan warriors calmly combing their long hair and exercising with complete composure, no fear visible, the spy's expression showing confusion and fear at what he is witnessing, dramatic, 1080x1920 vertical",
+      "bg_colors": ["#2A3A5A", "#0A0808"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 8,
+      "type": "reveal",
+      "title": "Demaratus",
+      "narration": "Xerxes consulted Demaratus, a Spartan exile in his service. 'What does this mean?' Demaratus answered: 'It is their custom, when they prepare to risk their lives, to adorn their hair. These men have come to die.'",
+      "visual_prompt": "Epic oil painting, intimate council scene — Xerxes and Demaratus the Spartan exile facing each other, Demaratus explaining Spartan custom with the gravity of a man who knows exactly what is coming, Xerxes listening with unreadable composure, the intimacy of two men discussing what will be remembered for millennia, dramatic, 1080x1920 vertical",
+      "bg_colors": ["#4A3000", "#080808"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 9,
+      "type": "emotional",
+      "title": "Xerxes Laughed",
+      "narration": "Herodotus recorded that Xerxes laughed. He couldn't conceive that 300 men would choose to stand against his army. He waited four more days, expecting them to flee.",
+      "visual_prompt": "Epic oil painting, Xerxes on his throne laughing — a rare expression visible — the humor of a king who genuinely cannot process the calculation that three hundred men would stand against two and a half million, generals around him smiling cautiously, the scene of a man about to be astonished, 1080x1920 vertical",
+      "bg_colors": ["#8B4513", "#0A0A00"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 10,
+      "type": "resolution",
+      "title": "They Did Not Flee",
+      "narration": "They did not flee. On the fifth day Xerxes sent his first forces forward. They returned in pieces. And the Immortals — the force that could never be reduced — prepared to advance.",
+      "visual_prompt": "Epic oil painting, the aftermath of the first day at Thermopylae — Persian warriors falling back, some being carried, the narrow pass of Thermopylae visible with 300 Spartans still in position, Xerxes watching from his throne on the hillside, expression changing from laughter to calculation, the Immortals visible being mustered to the front, dramatic, 1080x1920 vertical",
+      "bg_colors": ["#8B4513", "#0A0A0A"],
+      "duration_sec": 9
+    }
+  ],
+  "viral_hook": "He sent a spy first. The spy reported: 300 Spartans were combing their hair. Xerxes laughed. They did not flee.",
+  "highlight_scene": 8,
+  "highlight_note": "Demaratus's explanation — 'these men have come to die' — and Xerxes laughing, is the hinge of the Thermopylae story. The most powerful man in the world couldn't process what he was looking at.",
+  "short_title": "They Could Not Be Reduced",
+  "rewatch_bait": "Xerxes laughing in scene 9. Come back to this after EP006 when the Immortals fail. The contrast is everything.",
+  "youtube_title": "10,000 Warriors Who Could Never Be Reduced. They Were Called the Immortals. | Gods & Glory",
+  "lesson": "The things built to be invincible are always the most interesting to watch when they meet something they weren't built for.",
+  "arc_notes": "EP004 sets up EP006 (the Immortals fail at Thermopylae) with maximum contrast. The laughter in scene 9 is the emotional peak — after watching it all fall apart in EP006, the laughter becomes devastating in retrospect."
+}

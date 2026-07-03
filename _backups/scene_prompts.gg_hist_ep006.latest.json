@@ -1,0 +1,111 @@
+{
+  "channel": "GG",
+  "track": "historical",
+  "episode_number": 6,
+  "episode_id": "GG_HIST_EP006",
+  "season": 1,
+  "title": "The Immortals Fail",
+  "tagline": "In 2,800 years of recorded conflict, no army had stopped the Immortals. Until three hundred men in a narrow pass.",
+  "hook_line": "The Immortals had never been stopped. No army in the ancient world had managed it. Then they entered the pass.",
+  "characters": ["XERXES", "LEONIDAS"],
+  "scenes": [
+    {
+      "scene_number": 1,
+      "type": "hook",
+      "title": "What Was Expected",
+      "narration": "The Immortals had never been stopped. Every army that faced them had broken. They entered the pass at Thermopylae expecting the same.",
+      "visual_prompt": "Epic oil painting, the Immortals entering the narrow pass at Thermopylae in perfect formation, their gold pomegranate spear tips catching the torchlight, absolute confidence in their posture and formation, the pass walls rising on both sides, the Spartan formation waiting ahead in the dark, dramatic, 1080x1920 vertical",
+      "bg_colors": ["#8B6914", "#0A0A0A"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 2,
+      "type": "action",
+      "title": "Contact",
+      "narration": "They met the Spartan phalanx. The initial impact was enormous. The Spartan shields held. The phalanx didn't move.",
+      "visual_prompt": "Epic oil painting, the collision between the Immortals and the Spartan phalanx in the narrow pass — the impact visible as a shockwave, Spartan shields locked in an impenetrable wall, the Immortals' first attack absorbed without movement, the narrow walls of the pass preventing any flanking, the mathematics of the position working against Persia, dramatic, 1080x1920 vertical",
+      "bg_colors": ["#8B6914", "#8B0000"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 3,
+      "type": "action",
+      "title": "The Problem of the Pass",
+      "narration": "The Immortals' rotating wave tactic — their greatest weapon — was useless in the pass. There was no room to rotate. Every advantage of their training and size disappeared in fifteen meters of width.",
+      "visual_prompt": "Epic oil painting tactical view, showing the Immortals' rotating wave formation completely unable to function in the narrow pass — warriors pressing against the walls, unable to step aside, the rear ranks unable to pass through the front, the tactic that had broken every army compressed into uselessness, dramatic, 1080x1920 vertical",
+      "bg_colors": ["#8B4513", "#0A0A0A"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 4,
+      "type": "reveal",
+      "title": "The Longer Spears",
+      "narration": "The Spartan spears were longer than Persian spears. In the pass, this meant the Spartans could strike the Immortals before the Immortals could reach them.",
+      "visual_prompt": "Epic oil painting close-up of the tactical advantage — Spartan dory spears at 9 feet reaching past the shorter Persian akontion spears, the Spartans striking the Immortals before they can make contact, the simple geometry of weapon reach reversed by the pass conditions, blood and bronze in dramatic lighting, 1080x1920 vertical",
+      "bg_colors": ["#8B0000", "#0A0A0A"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 5,
+      "type": "emotional",
+      "title": "The Immortals Fell Back",
+      "narration": "The Immortals fell back. They had been pressed back by 300 men. Herodotus records this as one of the most astonishing things that happened in the entire war.",
+      "visual_prompt": "Epic oil painting, the Immortals retreating from the Spartan phalanx — not routed, not destroyed, but pushed back — the expression on the faces of the Spartan-adjacent Greek allies watching this with wide eyes, the Immortals who had never retreated, retreating, dramatic and historic, 1080x1920 vertical",
+      "bg_colors": ["#8B6914", "#1A0A0A"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 6,
+      "type": "reveal",
+      "title": "Xerxes Watches",
+      "narration": "Xerxes watched from his throne as his Immortals were pushed out of the pass. He had stood three times for the regular waves. For the Immortals' failure, he did not stand. He sat very still.",
+      "visual_prompt": "Epic oil painting, Xerxes on his throne watching the Immortals emerge from the pass defeated — unlike his earlier alarm, he is now completely still, expression controlled but something different underneath, generals afraid to speak, the entire court in silence, the stillness of a king recalculating, dramatic, 1080x1920 vertical",
+      "bg_colors": ["#4A2000", "#080808"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 7,
+      "type": "action",
+      "title": "They Went In Again",
+      "narration": "The Immortals went back in. They fought for hours. The result was the same. The Spartans simply could not be moved by force.",
+      "visual_prompt": "Epic oil painting, the Immortals in the pass again, multiple engagements compressed into one image — the fight going on through hours and the Spartan phalanx still holding, the pass at night with torches, the relentless engagement that achieved nothing against the geometric perfection of the Spartan position, dramatic, 1080x1920 vertical",
+      "bg_colors": ["#8B4513", "#0A0A0A"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 8,
+      "type": "emotional",
+      "title": "Two Days",
+      "narration": "Two days. The largest army in history. The finest warriors in that army. Against 300 Spartans and their allies. Two days. The line had not moved.",
+      "visual_prompt": "Epic oil painting wide overhead, the pass at the end of day two — Spartan formation unchanged in position, Persian dead visible in the pass, the sun setting on the second day, Xerxes's army filling the horizon beyond the pass still without having moved the Spartan line, the stillness of military stalemate at impossible odds, dramatic, 1080x1920 vertical",
+      "bg_colors": ["#CC5500", "#0A0808"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 9,
+      "type": "reveal",
+      "title": "The Calculation",
+      "narration": "Xerxes could not starve them out — he didn't have years. He couldn't outflank them — the mountain blocked him and the sea blocked him. He needed another way.",
+      "visual_prompt": "Epic oil painting, Xerxes studying a map showing the Thermopylae position — mountain blocking north, sea blocking south, the pass the only route, his generals showing him the impossible geometry of direct assault and the blocked flanks, the king calculating without panic, cinematic war council, dramatic, 1080x1920 vertical",
+      "bg_colors": ["#4A3000", "#080808"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 10,
+      "type": "resolution",
+      "title": "Another Way",
+      "narration": "On the night of the second day, a man came to him. A Greek. A local. He knew a path through the mountains that came out behind the Spartan position. His name was Ephialtes.",
+      "visual_prompt": "Epic oil painting, night scene — a single local Greek figure being brought before Xerxes's throne, guards on both sides, Ephialtes the betrayer small and nervous before the Immortal King, Xerxes leaning forward slightly — the first time we see him lean forward — listening, the beginning of the end for Leonidas visible in this meeting, dramatic, 1080x1920 vertical",
+      "bg_colors": ["#0A0A1A", "#1A0500"],
+      "duration_sec": 9
+    }
+  ],
+  "viral_hook": "The Immortals — the force that had never been stopped by any army in the ancient world — were pushed back by 300 Spartans in a narrow pass. Xerxes sat very still.",
+  "highlight_scene": 6,
+  "highlight_note": "Xerxes sitting very still — in contrast to jumping from his throne three times before — is the most significant reaction he shows in the entire war. He doesn't panic. He recalculates.",
+  "short_title": "The Immortals Were Pushed Back",
+  "rewatch_bait": "Ephialtes appearing at the end of scene 10. His name will be remembered for 2,500 years. Not the way he hoped.",
+  "youtube_title": "The Force That Had Never Been Stopped. Was Stopped. By 300 Men. | Gods & Glory",
+  "lesson": "Every force built to be unstoppable has a geometry it wasn't designed for. The Spartans didn't beat the Immortals. They chose the shape of the fight.",
+  "arc_notes": "EP006 is the peak of Thermopylae resistance. The Immortals failing is the emotional high before the inevitable betrayal. Sets up EP007 (Ephialtes) and EP008 (final stand) for maximum emotional impact."
+}

@@ -1,0 +1,67 @@
+{
+  "channel": "Mech Legends",
+  "episode_number": 9,
+  "episode_id": "ML_EP009",
+  "title": "The Symbol",
+  "tagline": "11 points drawn over 12 weeks. One point remaining. RUMBLE picks the location. The team has 11 hours.",
+  "duration_target_min": 6,
+  "villain_mandate": "RUMBLE COMPLETES THE ARRAY THIS EPISODE. The team tries to stop him and fails — he is at the final location first, the final point is activated before they can prevent it. The array activates at end of episode. Season finale stakes established.",
+  "characters": {
+    "villain": "RUMBLE — positioning the final point deliberately in a location the team must come to. He wants them present when it activates. This is intentional.",
+    "heroes": ["BLAZE", "STORM", "NOVA orbital", "GRANITE absent — sleeve still recovering"]
+  },
+  "scenes": [
+    {
+      "scene_number": 1, "type": "analysis", "title": "Decoding the Shape",
+      "narration": "NOVA worked through the night. Twelve weeks of RUMBLE's movements, connected as points, forming a symbol. She cross-referenced every mythological database she had access to. At 06:00 she said: 'I know what it is.' It was a Titan Summoning Array — a design from pre-Olympus mythology, used once in recorded history to call a Titan back to the surface. RUMBLE had built eleven of twelve points. The twelfth point determined what specifically was summoned. She showed them the map. The twelfth point: Metron City's central plaza.",
+      "visual_prompt": "Mech Legends dramatic kids action style. NOVA's display at dawn — the symbol fully decoded, labeled TITAN SUMMONING ARRAY. Eleven points marked complete. The twelfth point shown on the city map: central plaza, the most visible location in Metron City. BLAZE and STORM staring at the display. The symbol looks ancient, significant, deliberate. 16:9.",
+      "bg_colors": ["#1A1A2E", "#E94560", "#0F3460"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 2, "type": "race", "title": "They're Too Late",
+      "narration": "They reached the central plaza in four minutes. RUMBLE was already there. He had arrived at 05:47 — thirteen minutes before NOVA decoded the symbol. He had known she would decode it. He had been at the twelfth point while she was still working. The final array node was already installed in the plaza foundation. He looked at them arrive. He said: 'Right on time.'",
+      "visual_prompt": "Mech Legends dramatic kids action style. BLAZE and STORM arriving at Metron City central plaza to find RUMBLE already there — the final array node embedded in the plaza foundation, glowing. Eleven other points across the city visible on NOVA's display, all now active. RUMBLE turns to face them as they arrive. His expression: exactly this. He planned this arrival. 16:9.",
+      "bg_colors": ["#E94560", "#1A1A2E", "#FFD700"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 3, "type": "villain_explains", "title": "What RUMBLE Wants",
+      "narration": "BLAZE demanded to know what he was summoning. RUMBLE said: 'One Titan. Specifically the one buried under this city's foundation for three thousand years. I found it in year one of construction. Every building in Metron City was built over it. The city is its cage. I am opening the cage.' STORM said: 'Why?' RUMBLE said: 'Because it will take all of you to stop it. And I want to see what all of you looks like.'",
+      "visual_prompt": "Mech Legends dramatic kids action style. RUMBLE explaining calmly — his display shows a geological scan of Metron City's foundation, an ancient shape visible deep beneath. The city built unknowingly over a sealed Titan. BLAZE processing this. STORM: 'Why?' RUMBLE's expression: genuine, almost curious. He wants to see the team's ceiling. He's been building to this question. 16:9.",
+      "bg_colors": ["#1A1A2E", "#E94560", "#0F3460"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 4, "type": "fight_attempt", "title": "Stopping the Array",
+      "narration": "BLAZE moved for the node. RUMBLE stepped aside — not blocking him. The node was accessible. BLAZE reached it. He couldn't deactivate it — it was already live, drawing from all eleven points simultaneously. NOVA said: 'Destroying it won't stop the summoning. All eleven points are already feeding the array. The twelfth just completed the circuit.' RUMBLE said: 'Yes.' He stepped back. He was finished here.",
+      "visual_prompt": "Mech Legends dramatic kids action style. BLAZE at the node — touching it, trying to override. NOVA's warning: eleven simultaneous feeds, the circuit already complete. RUMBLE standing back, arms at his sides, done. The array is unstoppable now. The twelve points on the city map all pulse in sequence. Deep underground, something stirs. The ground vibrates once. 16:9.",
+      "bg_colors": ["#E94560", "#FFD700", "#1A1A2E"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 5, "type": "activation", "title": "The Array Activates",
+      "narration": "The twelve points fired in sequence — a visible pulse traveling along the ground between them, completing the symbol. The central plaza cracked. Not collapsed — cracked, precisely, along lines that hadn't existed before. Something below the city shifted. NOVA's seismic sensors: a mass the size of a city block, forty meters down, beginning to move for the first time in three thousand years. RUMBLE watched. He looked satisfied in a way that made everything worse.",
+      "visual_prompt": "Mech Legends dramatic kids action style. CLIMAX MOMENT — the twelve array points pulse in sequence across the city, the symbol completing visibly. The central plaza cracks along precise geometric lines. Deep rumbling. NOVA's seismic display showing a massive shape moving underground — enormous, slow, waking. RUMBLE watching with complete focus. BLAZE and STORM looking at each other. 16:9.",
+      "bg_colors": ["#E94560", "#1A1A2E", "#FFD700"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 6, "type": "rumble_departs", "title": "RUMBLE Leaves",
+      "narration": "RUMBLE turned to leave. BLAZE said: 'You're not going to fight us?' RUMBLE said: 'I didn't summon it to fight you. I summoned it so you would have to fight something that can't be reasoned with, can't be predicted, and has been contained for three thousand years because that's how dangerous it is. I want to see what you learn.' He walked away. 'You have until it reaches the surface. Based on my calculations: thirty-one hours.' He was gone.",
+      "visual_prompt": "Mech Legends dramatic kids action style. RUMBLE walking away from the cracked plaza, unhurried. BLAZE calling after him. RUMBLE's final statement delivered over his shoulder, then he's gone. The plaza continuing to crack. NOVA's countdown: 31:00:00. The scale of what's coming filling the screen. 16:9.",
+      "bg_colors": ["#1A1A2E", "#0F3460", "#E94560"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 7, "type": "team_response", "title": "What They Have",
+      "narration": "BLAZE looked at NOVA's display: the Titan's size, depth, movement rate. He looked at STORM. He looked at the message he'd send GRANITE — reinforcement sleeve or not, they needed him. He sent it. Then he looked at the countdown. Thirty-one hours. He said: 'NOVA — what do we know about stopping a Titan?' NOVA said: 'Very little. But I know someone who was awake when the last one was sealed.' She pulled up the contact. BLAZE looked at the name. He said: 'You're serious.' Episode 10.",
+      "visual_prompt": "Mech Legends dramatic kids action style. BLAZE, STORM, and NOVA's feed looking at the countdown and Titan data. BLAZE sends GRANITE a message — we see it transmit. Then NOVA pulls up a contact on her display. BLAZE's reaction: surprise, then resolve. The name on the contact visible but slightly obscured — someone ancient, someone who was there. Countdown: 31:00:00. 16:9.",
+      "bg_colors": ["#0F3460", "#1A1A2E", "#FFD700"],
+      "duration_sec": 9
+    }
+  ],
+  "lesson_for_arc": "RUMBLE wins this episode completely. He activated the array, explained his true purpose (studying the team at maximum effort), and left them with a 31-hour countdown against an entity that's been sealed for 3,000 years. Every battle was a test. This is the exam.",
+  "youtube_title": "RUMBLE Activates the TITAN ARRAY! 😱 | Mech Legends Episode 9",
+  "next_episode_preview": "Episode 10 — The Titan Rises. 31 hours. GRANITE answers. And NOVA's contact is older than the city."
+}

@@ -1,0 +1,151 @@
+{
+  "channel": "Little Olympus",
+  "episode_number": 7,
+  "episode_id": "LO_EP007",
+  "title": "Poseidon's Big Wave",
+  "tagline": "Uncle Poseidon is visiting. He brought a gift. The gift is the ocean. The whole ocean.",
+  "duration_target_min": 5,
+  "aesthetic": {
+    "color_grade": "bright_kids_cartoon",
+    "primary_colors": ["#00BFFF", "#FFD700", "#1E90FF", "#7FFF00"],
+    "font_style": "rounded_chunky_bold",
+    "music_style": "upbeat_kids_adventure",
+    "narrator_tone": "warm_playful_encouraging"
+  },
+  "characters": {
+    "guest": {
+      "name": "Uncle Poseidon",
+      "role": "Zeus's uncle. Massive. Well-meaning. Has no concept of scale. Genuinely delighted to visit Olympus for the first time in decades. His relationship to water is instinctive — he doesn't summon waves intentionally; waves just follow him because they love him.",
+      "visual": "Enormous blue-green god, white-streaked beard with sea glass beads, green-blue toga soaked at the hem, enormous golden trident, sea salt spray permanently around him. When he gets excited, waves appear nearby. When he laughs, dolphins appear. He is approximately three times the height of Zeus.",
+      "personality": "Booming voice, enthusiastic hugs, genuinely oblivious to his effect on the environment. Loves his nephew Zeus. Has brought 'just a small ocean' as a housewarming gift. Cannot understand why this is a problem."
+    },
+    "focus": {
+      "name": "Little Zeus",
+      "role": "His uncle is visiting. He loves his uncle. His uncle has flooded the lower half of Olympus. Both of these things are true simultaneously.",
+      "visual": "Curly white hair, bent crown, white toga — currently soaking wet, crown drooping"
+    },
+    "support_1": {
+      "name": "Baby Hercules",
+      "role": "Thriving. Has discovered he can surf. Is currently surfing on waves inside the Olympus dining hall.",
+      "visual": "Chubby toddler, lion cape somehow still dry, using a shield as a surfboard"
+    },
+    "support_2": {
+      "name": "Little Perseus",
+      "role": "His winged sandals activated in the water. He is now doing something between swimming and flying three feet above the flood. He does not know how to stop.",
+      "visual": "Dark shaggy hair, green tunic, sputtering — winged sandals flapping frantically in half-flight above the water"
+    },
+    "support_3": {
+      "name": "Athena",
+      "role": "Has climbed to a high bookshelf. Is watching all of this with her scroll. Is taking notes. Archie is dry.",
+      "visual": "Grey-streaked braid, glasses, Archie on shoulder — perched on highest bookshelf above the floodline, completely dry"
+    },
+    "achilles_cameo": {
+      "name": "Young Achilles",
+      "role": "Brief appearance: tried to outrun the wave. For the first time in recorded Olympus history, he could not outrun something. He is on the roof. His heel is fine. He said so.",
+      "visual": "Soaking wet, golden hair matted, sitting on rooftop — still says he is fine"
+    }
+  },
+  "scenes": [
+    {
+      "scene_number": 1,
+      "type": "hook",
+      "title": "The Arrival",
+      "narration": "Zeus had mentioned that Uncle Poseidon might be visiting. He had not mentioned when. He had not mentioned that Poseidon's idea of a greeting was a wave. A very large wave. The wave arrived approximately four seconds before Poseidon did. The lower third of Olympus was underwater before anyone had finished their breakfast.",
+      "visual_prompt": "Little Olympus kids cartoon style. OPENING CHAOS — A massive wave surges through the lower streets of Olympus, sweeping past breakfast tables, sending dishes flying, fish appearing in impossible places. Just behind the wave: UNCLE POSEIDON, enormous, delighted, arms wide open, soaked toga, golden trident raised, sea glass beads in beard glittering. He looks genuinely thrilled to be here. He is approximately as tall as a small building. Zeus, soaked and crown drooping, stares at him from halfway up a pillar. 16:9.",
+      "bg_colors": ["#00BFFF", "#1E90FF", "#FFD700"],
+      "accent": "#FFD700",
+      "camera": "pull_back",
+      "duration_sec": 9,
+      "higgsfield_prompt": "Cute kids cartoon style, massive wave surging through lower Olympus streets sweeping dishes and furniture, enormous blue-green god with white-streaked beard and golden trident arriving right behind the wave with arms wide open and genuinely thrilled expression, approximately as tall as a small building, small curly-haired boy soaking wet with drooping crown staring at him from halfway up a pillar, 16:9"
+    },
+    {
+      "scene_number": 2,
+      "type": "setup",
+      "title": "The Gift",
+      "narration": "Poseidon wrapped Zeus in a hug that picked him up three feet off the ground and explained that he had brought a gift. He reached behind him — into the water that was following him — and produced a small glowing bottle. He said: 'Just a little piece of my ocean! For you to keep! So you always feel connected to the sea!' Zeus, dripping, held the bottle. The ocean continued arriving. Poseidon said: 'I may have brought more than the bottle.'",
+      "visual_prompt": "Little Olympus kids cartoon style. COMEDY BEAT — Poseidon wrapping tiny Zeus in an enormous bear hug, lifting him completely off the ground, Zeus's crown spinning. Poseidon presents the glowing bottle with enormous pride. Zeus holds it, soaking wet, looking at it. In the background, visible through the window: the ocean level is still rising. Whole fish are swimming past the window. Poseidon has a slightly sheepish expression about that last part. 16:9.",
+      "bg_colors": ["#00BFFF", "#FFD700", "#1E90FF"],
+      "accent": "#FFD700",
+      "camera": "pull_back",
+      "duration_sec": 9,
+      "higgsfield_prompt": "Cute kids cartoon style, enormous blue-green god in bear hug lifting tiny curly-haired boy completely off ground presenting glowing ocean bottle with pride, boy soaking wet holding bottle with dripping crown, ocean level still rising visibly through background windows with whole fish swimming past, enormous god looking slightly sheepish about that last part, 16:9"
+    },
+    {
+      "scene_number": 3,
+      "type": "chaos_montage",
+      "title": "How Everyone Is Handling It",
+      "narration": "Athena had climbed to the highest bookshelf and was completely dry. She was taking notes. Baby Hercules had found a shield and was surfing across the dining hall on a wave Poseidon hadn't noticed he'd made. Perseus's winged sandals had activated in the water and he was now hovering three feet above the flood, flapping frantically. Achilles had tried to outrun the initial wave. He was on the roof. He said he was fine.",
+      "visual_prompt": "Little Olympus kids cartoon style. FOUR-PANEL CHAOS MONTAGE — TOP LEFT: Athena on highest bookshelf, completely dry, scroll open, Archie dry on her shoulder, watching everything below with analytical calm. TOP RIGHT: Baby Hercules surfing a dining hall wave on a shield, lion cape somehow dry, enormous grin. BOTTOM LEFT: Perseus hovering 3 feet above the water in panicked half-flight, winged sandals flapping both up and forward, not sure how to land. BOTTOM RIGHT: Achilles on the roof, soaking wet, golden hair matted flat, arms crossed, clearly saying 'I'm fine.' 16:9.",
+      "bg_colors": ["#00BFFF", "#7FFF00", "#1E90FF", "#FFD700"],
+      "accent": "#FFD700",
+      "camera": "pull_back",
+      "duration_sec": 9,
+      "higgsfield_prompt": "Cute kids cartoon style, four-panel chaos montage: smart girl completely dry on highest bookshelf taking notes with dry owl, chubby toddler surfing on shield with massive grin through flooded dining hall, dark-haired boy hovering frantically three feet above water with activated winged sandals not knowing how to land, golden-haired boy on rooftop soaking wet arms crossed clearly saying he is fine, Olympus flooded, 16:9"
+    },
+    {
+      "scene_number": 4,
+      "type": "problem",
+      "title": "Poseidon Doesn't Understand the Problem",
+      "narration": "Zeus tried to explain that having the ocean in the house was a problem. Poseidon could not understand this. He said: 'But you can swim! Anywhere!' He demonstrated by swimming through the living room. 'And look — dolphins!' Six dolphins appeared from nowhere and swam a cheerful lap around the furniture. 'And the water temperature is perfect!' Zeus said: 'My scrolls are wet.' Poseidon looked at the scrolls. 'You could waterproof them.' Zeus said: 'They are already wet.' Poseidon said: 'Ah.'",
+      "visual_prompt": "Little Olympus kids cartoon style. POSEIDON swims enthusiastically through the flooded living room like this is perfectly normal, demonstrating the joy of indoor ocean. Six dolphins appear and swim cheerfully around the furniture. Zeus floats on a piece of driftwood, pointing to a pile of completely soaked scrolls with a patient but deeply exhausted expression. Poseidon looks at the scrolls. Has clearly just understood there might be a problem. Very large, very gentle 'Ah.' 16:9.",
+      "bg_colors": ["#1E90FF", "#00BFFF", "#FFD700"],
+      "accent": "#FFD700",
+      "camera": "pull_back",
+      "duration_sec": 9,
+      "higgsfield_prompt": "Cute kids cartoon style, enormous blue-green god swimming enthusiastically through flooded living room pointing at six cheerful dolphins swimming around furniture, small curly-haired boy floating on driftwood pointing exhaustedly at pile of completely soaked scrolls, enormous god looking at scrolls with dawning understanding and gentle 'oh' expression, indoor ocean totally normal to him, 16:9"
+    },
+    {
+      "scene_number": 5,
+      "type": "solution",
+      "title": "Athena's Bookshelf Solution",
+      "narration": "Athena called down from the bookshelf. She had been taking notes this whole time. She had a plan. She said: 'Poseidon — if you direct the water toward the Olympus valley, the lower garden becomes a proper sea. The house clears. You have a permanent ocean here without the scrolls problem.' Poseidon looked at the valley. He looked at the house. He stroked his beard. He said: 'That is actually much better than my original plan.' Zeus said: 'What was your original plan?' Poseidon said: 'This.'",
+      "visual_prompt": "Little Olympus kids cartoon style. ATHENA on her bookshelf, completely dry, holding up her scroll with the solution plan. She gestures toward the window — visible in the distance is the Olympus valley, which would make a perfect natural harbor. Poseidon, enormous, actually looks thoughtful and impressed. He strokes his beard. Zeus looks up at Athena. Archie on her shoulder looks satisfied. In the background, Hercules is still surfing. 16:9.",
+      "bg_colors": ["#B0C4DE", "#00BFFF", "#FFD700"],
+      "accent": "#FFD700",
+      "camera": "push_in",
+      "duration_sec": 9,
+      "higgsfield_prompt": "Cute kids cartoon style, smart girl completely dry on bookshelf presenting solution with scroll and gesturing toward visible valley in distance that would make perfect natural harbor, enormous blue-green god actually looking thoughtful and impressed stroking beard, small curly-haired boy looking up at her, small owl looking satisfied, chubby toddler still surfing in background, 16:9"
+    },
+    {
+      "scene_number": 6,
+      "type": "resolution",
+      "title": "The Olympus Sea",
+      "narration": "Poseidon redirected the ocean. It took approximately four seconds. The house drained. The valley filled. It was beautiful — an actual sparkling sea below Olympus, with dolphins visible from the balcony. Poseidon was thrilled. He said this was much better than what the humans had done with the Mediterranean. Zeus got a dry scroll. Perseus finally landed. Baby Hercules was slightly disappointed the surfing was over. He found a new wave in the sea and was fine.",
+      "visual_prompt": "Little Olympus kids cartoon style. TRIUMPHANT RESOLUTION — The house is cleared, everyone standing dry (mostly) on the Olympus balcony looking out at the beautiful new Olympus Sea filling the valley below — sparkling blue, dolphins leaping, genuinely stunning. Poseidon stands VERY proudly, arm around tiny Zeus. Perseus is standing on solid ground looking relieved. Baby Hercules has spotted the actual sea waves and is already heading toward them. Athena has finally descended from the bookshelf. Achilles has come down from the roof. His hair is drying. 16:9.",
+      "bg_colors": ["#00BFFF", "#FFD700", "#7FFF00"],
+      "accent": "#FFD700",
+      "camera": "pull_back",
+      "duration_sec": 9,
+      "higgsfield_prompt": "Cute kids cartoon style, triumphant view from Olympus balcony — beautiful new sparkling sea fills valley below with leaping dolphins, enormous blue-green god arm around tiny dry curly-haired boy looking enormously proud, dark-haired boy standing on solid ground relieved, chubby toddler already heading toward real sea waves, smart girl finally descended from bookshelf, golden-haired boy with drying matted hair, magnificent accidental creation, 16:9"
+    },
+    {
+      "scene_number": 7,
+      "type": "lesson_and_cta",
+      "title": "What Did We Learn?",
+      "narration": "And that's how the Olympus Sea came to exist. Uncle Poseidon did not mean to flood the house. He just got excited. And it turned out that when you help someone who didn't mean to cause a problem find a better place for their enthusiasm — everyone gets something beautiful out of it. Poseidon left the dolphins. They live there now. Zeus said goodbye to his uncle from the balcony. His crown was finally dry. See you next time on Little Olympus!",
+      "visual_prompt": "Little Olympus kids cartoon style. Final card — the whole group on the balcony waving at Poseidon, who is already halfway into the sea below, trident raised, enormous and happy. The Olympus Sea sparkles behind him. Zeus waves with genuine warmth. Baby Hercules is already in the water. Athena's scroll has a new entry: OLYMPUS SEA — ESTABLISHED. Archie on her shoulder looks at the camera with the specific expression of an owl who has seen everything. Golden light. 16:9.",
+      "bg_colors": ["#1A1060", "#00BFFF", "#FFD700"],
+      "accent": "#FFD700",
+      "camera": "pull_back",
+      "duration_sec": 9,
+      "higgsfield_prompt": "Cute kids cartoon style, group waving from Olympus balcony at enormous blue-green god already halfway into sparkling sea below with trident raised happily, curly-haired boy waving warmly, chubby toddler already in water, smart girl's scroll showing new entry, small owl looking at viewer with expression of having seen everything, golden late afternoon light, perfect warm ending, 16:9"
+    }
+  ],
+  "music": {
+    "style": "upbeat_kids_adventure",
+    "notes": "Scene 1: BIG wave entrance music — oceanic, large, comedic. Scene 2: warm family music for the hug, then the ocean-still-arriving background joke. Scene 3: playful chaos montage — four distinct musical snippets for each character. Scene 4: Poseidon's cheerful obliviousness theme. Scene 5: Athena's solution music — orderly, sensible. Scene 6: triumphant and oceanic — genuinely beautiful. Scene 7: warm and sunny, dolphin-friendly ending."
+  },
+  "voice_style": {
+    "tone": "warm_playful_encouraging",
+    "pacing": "Scene 4 — the scroll exchange is comedy timing, each line gets a beat: 'My scrolls are wet.' / beat / 'You could waterproof them.' / beat / 'They are already wet.' / beat / 'Ah.' Scene 1: fast and immediate — no warning, the wave just arrives.",
+    "character": "A narrator who finds Poseidon genuinely lovable and the flooding genuinely funny — not a disaster narrator, a family comedy narrator"
+  },
+  "lesson": "Sometimes when someone causes a problem out of enthusiasm, the answer isn't to stop their enthusiasm — it's to find the right place for it.",
+  "poseidon_note": "Poseidon debuts here as a recurring character. He visits whenever Zeus needs backup, parental figures are relevant, or the team needs an ocean. He is always well-meaning. He always brings at least one dolphin.",
+  "olympus_sea_canon": "The Olympus Sea is now a permanent setting. Established EP007. It appears in backgrounds from here forward.",
+  "bible_reference": "Little_Olympus_Master_Bible.md — Zeus: family warmth, enters everything enthusiastically. Athena: solution-oriented, stays dry, Archie camera look. Hercules: thriving in chaos, 'I helped!'. Perseus: winged sandals activate randomly. Achilles: 'I'm fine.' (heel running joke, roof edition).",
+  "youtube_title": "Uncle Poseidon Accidentally Floods ALL of Olympus! 🌊😂 | Little Olympus Episode 7",
+  "youtube_description": "Zeus's Uncle Poseidon is visiting for the first time in DECADES!\n\nHe's very excited. He brought a gift.\n\nThe gift is the ocean. The WHOLE ocean.\n\nIn today's adventure:\n🌊 Poseidon arrives (so does the Atlantic Ocean)\n🏄 Baby Hercules discovers indoor surfing\n✈️ Perseus's sandals activate in the water and he can't land\n⚡ Achilles tries to outrun a wave — and FAILS for the first time ever\n📚 Athena watches from the bookshelf and has a plan\n🐬 The dolphins are staying. They live here now.\n\n📺 Watch ALL our adventures: [playlist link]\n🔔 SUBSCRIBE for new episodes every week!\n\n#LittleOlympus #Poseidon #KidsCartoon #GreekMythology #KidsYouTube",
+  "next_episode_preview": "Episode 8 — Athena's Owl School! Archie has never once been officially trained. He's been doing this on instinct. This episode, that becomes everyone's problem.",
+  "higgsfield_style_notes": "Poseidon must feel LARGE — he should tower over the other characters and make the spaces feel small when he's in them. The Olympus Sea in scenes 6 and 7 should be genuinely beautiful — sparkling water, dolphins, golden light — not just resolved, actually an upgrade. The chaos montage in scene 3 should have each panel with its own distinct color tone: cool blue for Athena's shelf, wave blue-green for Hercules, sky blue for Perseus, rooftop warm orange for Achilles."
+}

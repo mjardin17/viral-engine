@@ -1,0 +1,328 @@
+{
+  "channel": "GG",
+  "episode_number": 13,
+  "episode_id": "GG_EP013",
+  "title": "The Crusader Kingdoms: How Europe Built an Empire in the Holy Land \u2014 and Lost It",
+  "subtitle": "1096\u20131291 AD \u2014 Two Hundred Years of Faith, Blood, and Sand",
+  "tagline": "They marched two thousand miles to reclaim a city. They held it for two hundred years. Then Saladin came.",
+  "villain_mandate": "Saladin \u2014 the Kurdish general who reunited Islam and shattered the Crusader dream",
+  "duration_target_sec": 1150,
+  "viral_hook": "For 200 years, French knights ruled Jerusalem. Then one man took it back in a single battle.",
+  "youtube_title": "The Crusader Kingdoms: How Europe Built an Empire in the Holy Land (1096-1291)",
+  "lesson": "You can conquer almost anything. Keeping it requires something conquest can't give you.",
+  "highlight_scene": 10,
+  "scenes": [
+    {
+      "scene_number": 1,
+      "type": "cold_open",
+      "title": "Jerusalem Falls",
+      "duration_sec": 48,
+      "narration": "July 15, 1099. After a five-week siege, the Crusader army breaks through Jerusalem's walls. What follows is one of the most documented massacres of the medieval world. The Crusaders kill nearly every Muslim and Jewish inhabitant of the city. The streets, by multiple accounts, run with blood knee-deep. And then, standing in the wreckage of the holiest city in three religions, the Crusade leaders do something remarkable: they argue about who gets to be king. Within days of the bloodbath, they have created a government. They intend to stay. For the next two hundred years, they do.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Jerusalem 1099 \u2014 Crusader knights breaking through the walls, banners flying. The city smoking, chaos below. Then the aftermath: Crusader leaders standing in the Holy Sepulchre, arguing quietly over a crown. The contrast between the violence of conquest and the bureaucracy of occupation. 16:9.",
+      "bg_colors": [
+        "#8B1A1A",
+        "#C9A227",
+        "#2C1A00"
+      ]
+    },
+    {
+      "scene_number": 2,
+      "type": "context",
+      "title": "Why They Came",
+      "duration_sec": 47,
+      "narration": "In 1095, Pope Urban II gave a sermon at Clermont, France. He called on Christians to take back Jerusalem from Muslim rule. He promised that those who died on the journey would have their sins forgiven \u2014 a spiritual reward that was, for medieval people, literally life-changing. The response was overwhelming. Hundreds of thousands of people across Europe volunteered: knights looking for land and glory, peasants looking for adventure or salvation, merchants looking for trade routes. The First Crusade was part religious movement, part land grab, part the medieval equivalent of a gold rush. They called it the Pilgrimage. History calls it the beginning of two hundred years of war.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Pope Urban II at Clermont \u2014 crowd of thousands responding to his sermon, crosses sewn onto their clothing, weapons raised. Knights kneeling. Peasants weeping with religious fervor. The massive scale of the First Crusade's mobilization \u2014 an army of believers setting out from every corner of Europe. 16:9.",
+      "bg_colors": [
+        "#1A1A2E",
+        "#C9A227",
+        "#8B4500"
+      ]
+    },
+    {
+      "scene_number": 3,
+      "type": "historical",
+      "title": "The March to Jerusalem",
+      "duration_sec": 46,
+      "narration": "The journey to Jerusalem nearly destroyed the Crusade before it started. Sixty thousand soldiers \u2014 nobles, knights, and common people \u2014 marched from Constantinople through Anatolia in summer heat with inadequate food and water. Thousands died of hunger, thirst, and disease. The People's Crusade \u2014 a chaotic mass movement that preceded the main army \u2014 was almost entirely destroyed by Seljuk Turks in Anatolia. The main army survived by brutal discipline and desperation. They besieged Nicaea, Dorylaeum, Antioch. At Antioch, they were themselves besieged and nearly starved. One of the great military campaigns in history was also one of the most chaotic.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Crusader army marching through the brutal Anatolian landscape \u2014 summer heat, dust, exhausted soldiers, dead horses on the road. The scale of the army visible: thousands stretching to the horizon. Sieges of walled cities. The terrible cost of the journey before Jerusalem was ever reached. 16:9.",
+      "bg_colors": [
+        "#C9A227",
+        "#8B4500",
+        "#2C1A00"
+      ]
+    },
+    {
+      "scene_number": 4,
+      "type": "historical",
+      "title": "The Kingdom of Jerusalem",
+      "duration_sec": 47,
+      "narration": "After taking Jerusalem, the Crusaders built a feudal state \u2014 the Kingdom of Jerusalem \u2014 modeled on European medieval kingdoms. It was surrounded by other Crusader states: the County of Edessa in the north, the Principality of Antioch, the County of Tripoli. Together these were called Outremer \u2014 French for 'Beyond the Sea.' At its height, Outremer stretched from southern Turkey to the Sinai Peninsula. The Crusader lords built magnificent castles \u2014 Krak des Chevaliers, Belvoir, Kerak \u2014 that still stand today. They created a hybrid culture: French lords ruling Arab peasants, trading with Muslim merchants, fighting with Byzantine allies.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Map of Outremer \u2014 the Crusader states along the Levantine coast. The magnificent castle Krak des Chevaliers on its hilltop. A Crusader lord in his court \u2014 European armor alongside Arab servants, local merchants trading, Byzantine emissaries. The strange hybrid civilization of the Holy Land Crusaders. 16:9.",
+      "bg_colors": [
+        "#1A2E3E",
+        "#C9A227",
+        "#4A3728"
+      ]
+    },
+    {
+      "scene_number": 5,
+      "type": "character_intro",
+      "title": "Saladin Rises",
+      "duration_sec": 46,
+      "narration": "Salah ad-Din Yusuf ibn Ayyub \u2014 Saladin \u2014 was born in Tikrit in 1137, the son of a Kurdish military commander. He was not supposed to be a soldier. His father wanted him to be a scholar. But he was recruited into the service of Nur ad-Din, the powerful ruler of Syria, and revealed a gift for military command that no one had anticipated. By 1169, through a combination of battlefield brilliance, political acumen, and reputation for personal honesty, he had become Sultan of Egypt. By 1174, he controlled Syria as well. For the first time in nearly a century, the Islamic world around the Crusader states had a single, unified leader. And he had one goal.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Saladin \u2014 Kurdish warrior-statesman, intense eyes, serious bearing \u2014 in his court in Cairo. Maps of the Islamic world spread before him, the Crusader states visible as a wedge dividing it. He studies them with calm, strategic focus. The man who would reunify Islam and destroy the Crusader dream. 16:9.",
+      "bg_colors": [
+        "#2C3E1A",
+        "#8B6914",
+        "#1A1A2E"
+      ]
+    },
+    {
+      "scene_number": 6,
+      "type": "historical",
+      "title": "The Leper King",
+      "duration_sec": 47,
+      "narration": "Against Saladin stood one of history's most remarkable figures: Baldwin IV, King of Jerusalem, diagnosed with leprosy as a child. He was losing his fingers, his face, his sight \u2014 progressively, unstoppably \u2014 and he ruled one of the most contested kingdoms on Earth while doing it. In 1177, at the Battle of Montgisard, Baldwin led his army personally despite being partially paralyzed, and dealt Saladin his most humiliating defeat. A leper king on a horse routing the most powerful Muslim force in the world. Baldwin died at twenty-four, having held Jerusalem together by sheer will. When he died, the kingdom he'd preserved began to crack almost immediately.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Baldwin IV \u2014 the Leper King \u2014 riding into battle at Montgisard, his face wrapped, hands damaged, but his presence commanding. His knights charging with him against Saladin's army. The miraculous victory. Then the quiet tragedy of his death at twenty-four. A king consumed by disease who never surrendered his crown. 16:9.",
+      "bg_colors": [
+        "#8B1A1A",
+        "#C9A227",
+        "#1A1A2E"
+      ]
+    },
+    {
+      "scene_number": 7,
+      "type": "historical",
+      "title": "The Fatal Mistake at Hattin",
+      "duration_sec": 48,
+      "narration": "After Baldwin's death, the Kingdom of Jerusalem tore itself apart with factional politics. Guy of Lusignan \u2014 widely considered weak and incompetent \u2014 became king. Reynald of Chatillon, a lord with a talent for provoking enemies, broke a peace treaty with Saladin by attacking a Muslim caravan. Saladin declared jihad. In July 1187, he maneuvered the Crusader army onto the waterless plateau near the Horns of Hattin, cut off their water supply, and surrounded them. On July 4, 1187, the Crusader army \u2014 nearly every knight in the kingdom \u2014 was annihilated or captured. The True Cross was seized. King Guy was taken prisoner. Jerusalem had no army left.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Battle of Hattin \u2014 the Crusader army surrounded on a waterless plateau, smoke from burning grass cutting off escape, Saladin's forces closing in. The True Cross visible above the doomed Crusader formations. The scale of the catastrophe: an entire kingdom's military destroyed in a single afternoon. 16:9.",
+      "bg_colors": [
+        "#8B1A1A",
+        "#C9A227",
+        "#2C1A00"
+      ]
+    },
+    {
+      "scene_number": 8,
+      "type": "pivotal_action",
+      "title": "Jerusalem Falls Again",
+      "duration_sec": 47,
+      "narration": "With no army to defend it, Jerusalem was open. Saladin besieged the city in September 1187. The contrast with 1099 was deliberate and striking. Where the Crusaders had massacred the population, Saladin negotiated a ransom \u2014 sixty dinars per noble, thirty per burgess, one dinar per poor person. Those who couldn't pay were allowed to leave freely. Saladin personally paid the ransom for thousands of poor people from his own treasury. The Muslim historian Ibn Shaddad wrote that Saladin wept for the poor he couldn't ransom. Jerusalem fell on October 2, 1187, eighty-eight years after the First Crusade had taken it. Saladin's reputation for mercy in victory was established forever.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Saladin at the gates of Jerusalem \u2014 not a conqueror burning and killing but a general accepting surrender with dignity. Crusader families filing out peacefully. Saladin paying ransoms from his own treasury. The muezzin call to prayer rising over the city for the first time in 88 years. 16:9.",
+      "bg_colors": [
+        "#1A2E3E",
+        "#C9A227",
+        "#2C3E1A"
+      ]
+    },
+    {
+      "scene_number": 9,
+      "type": "historical",
+      "title": "Richard and the Third Crusade",
+      "duration_sec": 47,
+      "narration": "The fall of Jerusalem shocked Europe. Pope Gregory VIII declared a new Crusade. Three of the most powerful kings in Europe answered: Philip II of France, Frederick Barbarossa of Germany, and Richard I of England \u2014 Richard the Lionheart. Frederick drowned crossing a river in Anatolia before reaching the Holy Land. Philip arrived but quickly left after political quarrels. Richard stayed. He won the Battle of Arsuf. He won the Siege of Acre. He marched to within twelve miles of Jerusalem. And then he stopped. Twice he reached striking distance of the city. Twice he turned back. He knew he could take Jerusalem. He also knew he couldn't keep it.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Richard the Lionheart on his horse, looking toward Jerusalem on the horizon \u2014 twelve miles away. He can see the city. His army waits behind him. His face is conflicted. He knows what he knows. He turns the horse around. The moment that defined the Third Crusade. 16:9.",
+      "bg_colors": [
+        "#C9A227",
+        "#1A1A2E",
+        "#8B4500"
+      ]
+    },
+    {
+      "scene_number": 10,
+      "type": "battle",
+      "title": "The Duel That Never Was",
+      "duration_sec": 48,
+      "narration": "Richard and Saladin never met face to face. But they communicated through messengers, negotiated through intermediaries, and admired each other across enemy lines. When Richard fell ill, Saladin sent him fresh fruit and ice from the mountains. When Richard's horse was killed in battle, Saladin sent him a replacement. They are the great rivals of the Crusades \u2014 the English king who was history's greatest battlefield commander of the era, and the Kurdish sultan who was history's most successful military-political strategist. Their Treaty of Jaffa in 1192 ended the Third Crusade: Crusaders kept the coast, Muslims kept Jerusalem, Christian pilgrims could visit freely. Neither man was satisfied. Both accepted reality.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Symbolic encounter: Richard and Saladin facing each other across a table with messengers, translators, and maps between them. Never meeting in battle, but visible to each other across the landscape of war. The fruit that Saladin sent. The horse. Two great men shaped by mutual respect and permanent conflict. 16:9.",
+      "bg_colors": [
+        "#C9A227",
+        "#2C3E1A",
+        "#1A1A2E"
+      ]
+    },
+    {
+      "scene_number": 11,
+      "type": "historical",
+      "title": "Two More Centuries",
+      "duration_sec": 46,
+      "narration": "The Third Crusade didn't end the Crusader presence. Outremer continued for another century, clinging to the coastal cities. The Fourth Crusade \u2014 launched to retake Jerusalem \u2014 instead sacked Constantinople, the Christian capital of the Eastern Empire, in one of history's most spectacular misdirections. The Fifth, Sixth, Seventh, and Eighth Crusades came and went, each with diminishing results. The Crusader states contracted slowly: Acre, Tyre, Sidon \u2014 coastal cities held by military orders of crusading monks, the Knights Templar and Hospitallers. They became trading posts as much as fortresses, building an unlikely Mediterranean commercial network.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The shrinking Crusader states over time \u2014 a map contracting decade by decade. The great military orders: Templars and Hospitallers in their black and white robes, guarding fortress ports. The Fourth Crusade sacking Constantinople in catastrophic irony \u2014 Crusaders burning a Christian city. 16:9.",
+      "bg_colors": [
+        "#1A1A2E",
+        "#8B1A1A",
+        "#4A3728"
+      ]
+    },
+    {
+      "scene_number": 12,
+      "type": "historical",
+      "title": "The Mongol Wild Card",
+      "duration_sec": 46,
+      "narration": "In the 1250s, the Crusaders faced a decision that could have changed history. The Mongol Empire \u2014 which had already destroyed Baghdad and killed the Caliph \u2014 was moving west. The Mongols offered an alliance against the Muslim powers. The Crusaders hesitated, negotiated, and ultimately refused to commit. Without Crusader support, the Mongols were stopped at the Battle of Ain Jalut in 1260 by the Mamluks \u2014 the new military rulers of Egypt. The Mamluks were exactly the force that would eventually end the Crusader states entirely. The Crusaders' failure to ally with the Mongols may be one of history's great missed opportunities.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Mongol envoys at a Crusader castle \u2014 extraordinary visual contrast of Mongol steppe warriors and European Crusader knights in negotiation. The missed alliance visualized. Then the Battle of Ain Jalut \u2014 Mamluk cavalry crushing the Mongol army. The Mamluks turning south to face the Crusaders next. 16:9.",
+      "bg_colors": [
+        "#2C3E1A",
+        "#8B4500",
+        "#1A2E3E"
+      ]
+    },
+    {
+      "scene_number": 13,
+      "type": "battle",
+      "title": "The Mamluks End It",
+      "duration_sec": 47,
+      "narration": "Sultan Baybars of Egypt \u2014 former slave turned military genius \u2014 systematically dismantled the Crusader states through the 1260s and 70s. He took Caesarea, Arsuf, Safed, Jaffa, and Antioch. When Antioch fell in 1268, the entire population was enslaved or killed \u2014 perhaps seventeen thousand people. Antioch had been a Crusader state for 170 years. It was gone in a day. Baybars wrote a gleeful letter to the last Crusader lord of Antioch, who wasn't even there when the city fell, describing the massacre in precise detail. The Mamluk campaign was deliberate, methodical, and brutal. The Crusader states had met their final enemy.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Baybars \u2014 powerful Mamluk sultan, one eye damaged in battle \u2014 directing the siege and sack of Antioch. The city falling, its 170 years of Crusader history ending in fire and violence. His brutal letter being written and dispatched. The Mamluk war machine at work. 16:9.",
+      "bg_colors": [
+        "#8B1A1A",
+        "#2C1A00",
+        "#4A3728"
+      ]
+    },
+    {
+      "scene_number": 14,
+      "type": "dramatic",
+      "title": "The Fall of Acre",
+      "duration_sec": 48,
+      "narration": "The final act came at Acre in 1291. Acre was the last major Crusader city \u2014 a fortified port, crammed with refugees from fallen Crusader territories, defended by Knights Templar and Hospitaller, Genoese and Venetian merchants, and whatever crusaders had answered the latest call. The Mamluk Sultan al-Ashraf Khalil arrived with a force that may have numbered a hundred thousand men and the most advanced siege engines in the world. The city held for seven weeks. On May 18, 1291, the walls were breached. The fighting went street by street, building by building. The last Crusaders made their final stand at the Templar fortress at the harbor. When it fell, the Crusader presence in the Holy Land ended.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The siege and fall of Acre 1291 \u2014 massive Mamluk army surrounding the city walls, siege towers and catapults launching rocks and fire. Inside: desperate defenders, civilians fleeing to the harbor, ships taking on refugees. The final Templar fortress falling, its garrison making a last stand. 16:9.",
+      "bg_colors": [
+        "#8B1A1A",
+        "#1A1A2E",
+        "#C9A227"
+      ]
+    },
+    {
+      "scene_number": 15,
+      "type": "aftermath",
+      "title": "The Last Ships Leave",
+      "duration_sec": 46,
+      "narration": "As Acre burned, ships in the harbor took on refugees \u2014 nobles, merchants, priests, women and children. Many more were left behind and enslaved. The Templar Grand Master William of Beaujeu was killed in the fighting. The last Crusader defenders drowned or burned in the fortress collapse. The Knights Templar and Hospitaller retreated to Cyprus, then eventually to Rhodes and Malta, where the Hospitallers survived as the Knights of Malta until Napoleon dissolved them in 1798. The last organized military orders of the Crusades outlasted the Crusader states by five hundred years, fighting pirates in the Mediterranean long after Jerusalem was memory.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Ships leaving the burning harbor of Acre \u2014 refugees crowding the decks, looking back at the city in flames. The Templar banner lowered for the last time. The harbor receding. Two hundred years of Crusader presence in the Holy Land ending in smoke and departure. 16:9.",
+      "bg_colors": [
+        "#1A2E3E",
+        "#8B1A1A",
+        "#4A6878"
+      ]
+    },
+    {
+      "scene_number": 16,
+      "type": "analysis",
+      "title": "Why Did They Fail?",
+      "duration_sec": 47,
+      "narration": "The Crusader states lasted two hundred years \u2014 longer than the United States has existed. Why did they fail? Historians point to structural problems: they never had enough settlers to fill the land they conquered. They depended on military reinforcements from Europe that came in waves, won battles, then left. They were surrounded on all sides by populations that never accepted their rule. They feuded internally at critical moments \u2014 like after Baldwin IV died. They made strategic errors \u2014 like refusing the Mongol alliance. But most fundamentally, they were a colony sustained by a mission that Europe eventually stopped believing in urgently enough to keep funding.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Visual analysis of Crusader weakness: the thin strip of coastal Crusader territory surrounded by Muslim lands. Ships arriving from Europe with reinforcements then sailing away. Internal feuding visualized as Crusader lords arguing while the enemy gathers outside the walls. The structural fragility of a colony sustained by faith. 16:9.",
+      "bg_colors": [
+        "#2C1A00",
+        "#1A1A2E",
+        "#8B8B6B"
+      ]
+    },
+    {
+      "scene_number": 17,
+      "type": "historical",
+      "title": "What the Crusades Started",
+      "duration_sec": 46,
+      "narration": "The Crusades shaped the modern world in ways that are still playing out. They introduced Europe to Arabic mathematics, science, medicine, and philosophy \u2014 the great Islamic civilization that had preserved and advanced Greek learning while Europe was in the Dark Ages. The returning Crusaders brought spices, textiles, and ideas that fed the Renaissance. They also created wounds between Christianity and Islam that have never fully healed. Every time a Western politician uses the word 'crusade,' it is heard in the Muslim world with a specific historical memory. The Crusades ended in 1291. Their echoes did not.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The cultural exchange of the Crusades visualized \u2014 Arabic manuscripts arriving in European monasteries, spices and silks in European markets, mathematical notation, medical texts. But also: the violence and resentment visualized. The word 'crusade' floating above modern political speeches and medieval battlefields simultaneously. 16:9.",
+      "bg_colors": [
+        "#C9A227",
+        "#1A1A2E",
+        "#2C3E1A"
+      ]
+    },
+    {
+      "scene_number": 18,
+      "type": "legacy",
+      "title": "The Templar Mystery",
+      "duration_sec": 45,
+      "narration": "No institution from the Crusades has captured more popular imagination than the Knights Templar. Founded in 1119 to protect pilgrims, they became a multinational banking organization \u2014 inventing many concepts of modern finance, including letters of credit. At their height they owned hundreds of properties across Europe, fielded their own army, and answered only to the Pope. In 1307, King Philip IV of France \u2014 who owed them enormous debts \u2014 had them arrested, tortured into confessions of heresy, and burned at the stake. Their last Grand Master, Jacques de Molay, reportedly cursed Philip and the Pope as he burned. Both died within a year. The Templars became legend.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Knights Templar \u2014 white mantles, red crosses \u2014 at their height: banking, military power, European estates. Then their arrest in 1307 at dawn across France simultaneously. The burning of Jacques de Molay, his defiant curse. The legend of the Templars born in flames. 16:9.",
+      "bg_colors": [
+        "#8B1A1A",
+        "#C9A227",
+        "#1A1A2E"
+      ]
+    },
+    {
+      "scene_number": 19,
+      "type": "legacy",
+      "title": "The Architecture Remains",
+      "duration_sec": 46,
+      "narration": "Krak des Chevaliers, the great Hospitaller castle in Syria, is considered by many architects to be the finest example of military architecture in history. T.E. Lawrence \u2014 Lawrence of Arabia \u2014 called it the most wholly admirable castle in the world. It has stood for nine hundred years. Crusader architecture across Israel, Jordan, and Lebanon is among the best-preserved medieval construction anywhere on Earth. The Crusaders built to last \u2014 stone fortresses, massive walls, underground cisterns. Their engineering was extraordinary. Walk through the old city of Acre today and you walk on Crusader foundations. The states are gone. The stones remain.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Krak des Chevaliers \u2014 the great Crusader castle \u2014 from the air and at ground level. Massive walls, towers, the scale of the engineering achievement. The old city of Acre \u2014 modern streets above Crusader tunnels and halls. Crusader architecture surviving nine centuries in the Middle East. 16:9.",
+      "bg_colors": [
+        "#4A3728",
+        "#8B8B6B",
+        "#1A3E2E"
+      ]
+    },
+    {
+      "scene_number": 20,
+      "type": "historical",
+      "title": "Saladin's Reputation",
+      "duration_sec": 47,
+      "narration": "Saladin died in 1193, a year after the Third Crusade ended. When his treasury was opened, it contained a single gold piece and forty silver dirhams \u2014 not enough to pay for his own funeral. He had given everything away. In the centuries after his death, he became a legend not just in the Muslim world but in Christian Europe, where writers praised his chivalry, his mercy, and his honor. Dante placed him in Limbo alongside the virtuous pagans \u2014 the highest honor a medieval Catholic could give a Muslim enemy. He is still the most admired figure of the Crusading era in both traditions. Enemies wrote his eulogy.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Saladin's death \u2014 his nearly empty treasury, his servants and advisors mourning. His funeral procession through Damascus. Then cut to medieval European manuscripts praising him \u2014 a Muslim sultan honored by Christian writers. His face in stained glass and manuscript illustrations made by his enemies. 16:9.",
+      "bg_colors": [
+        "#1A2E3E",
+        "#C9A227",
+        "#2C3E1A"
+      ]
+    },
+    {
+      "scene_number": 21,
+      "type": "modern_connection",
+      "title": "Jerusalem Today",
+      "duration_sec": 47,
+      "narration": "Jerusalem is still contested. The city that Crusaders bled for, that Saladin recaptured with mercy, that has been fought over by dozens of civilizations is still, in 2024, at the center of one of the world's most intractable conflicts. Three of the world's great religions claim it as their holiest city. The Church of the Holy Sepulchre, the Dome of the Rock, and the Western Wall stand within a few hundred meters of each other \u2014 monuments of faiths that have fought over the ground beneath them for three thousand years. The Crusader walls are still visible in Jerusalem's old city. History is not behind us here. It is underfoot.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Jerusalem today \u2014 the Dome of the Rock gleaming gold, the Church of the Holy Sepulchre, the Western Wall with worshippers. The ancient stones of three faiths coexisting in tension. Crusader-era walls still visible in the city fabric. The weight of history visible in every stone. 16:9.",
+      "bg_colors": [
+        "#C9A227",
+        "#1A1A2E",
+        "#8B4500"
+      ]
+    },
+    {
+      "scene_number": 22,
+      "type": "analysis",
+      "title": "What the Crusaders Believed",
+      "duration_sec": 46,
+      "narration": "It is easy, looking back, to see the Crusaders as cynical \u2014 land-hungry lords using religion as cover for conquest. Some were. But many genuinely believed they were doing God's work. The medieval worldview was not our worldview. Heaven and hell were as real as France and Jerusalem. Dying for Jerusalem meant dying for something as concrete and important as dying for your country today. The Crusaders who walked into battle at Hattin, who drowned at Acre, who starved on the march through Anatolia \u2014 many of them genuinely believed they were on the right side of history. That belief, right or wrong, is what made them capable of what they did.",
+      "visual_prompt": "Gods & Glory cinematic documentary. A Crusader knight kneeling in prayer before battle, his faith genuine and visible. The mix of devotion and violence: the same hands that pray also fight. Medieval stained glass depicting crusading as holy. The sincerity of belief alongside the reality of conquest \u2014 both true at the same time. 16:9.",
+      "bg_colors": [
+        "#1A1A2E",
+        "#C9A227",
+        "#4A3728"
+      ]
+    },
+    {
+      "scene_number": 23,
+      "type": "summary",
+      "title": "Two Hundred Years",
+      "duration_sec": 46,
+      "narration": "The Crusader kingdoms lasted two centuries. They produced extraordinary architecture, remarkable cultural exchange, the banking system of the Knights Templar, and permanent wounds in the relationship between civilizations. They produced Saladin's chivalry and Baybars's brutality. They produced the Leper King of Jerusalem and Richard the Lionheart stopping twelve miles from his goal. They produced one of history's great missed alliances with the Mongols and one of history's great acts of mercy at the fall of Jerusalem. History is rarely one thing. The Crusades were faith and greed, courage and atrocity, civilization and barbarism \u2014 usually at the same time.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Final montage: the journey from Clermont to Jerusalem, the kingdoms built and lost, Saladin and Richard, Hattin and Acre. Two hundred years compressed into images \u2014 the full arc of the Crusader experience. Faith, blood, sand, and the stones that remain. 16:9.",
+      "bg_colors": [
+        "#C9A227",
+        "#8B1A1A",
+        "#1A1A2E"
+      ]
+    },
+    {
+      "scene_number": 24,
+      "type": "outro_cta",
+      "title": "The Holy Land Calling",
+      "duration_sec": 44,
+      "narration": "The Crusader kingdoms are gone. But stand at Krak des Chevaliers and you stand where knights stood nine hundred years ago, looking out over the same landscape, wondering if what they'd built could last. It didn't. Nothing built on conquest alone ever does. Subscribe to Gods and Glory \u2014 every episode is a story about the gap between what people believed they were doing and what history records they actually did. Next episode: Waterloo \u2014 the day Napoleon's genius finally ran out of miracles.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Final shot: Krak des Chevaliers at sunset \u2014 the great Crusader castle silhouetted against an orange sky, nine centuries old, still standing. The channel logo appears. Subscribe prompt. The stones that outlasted everything. 16:9.",
+      "bg_colors": [
+        "#C9A227",
+        "#1A1A2E",
+        "#8B4500"
+      ]
+    }
+  ]
+}

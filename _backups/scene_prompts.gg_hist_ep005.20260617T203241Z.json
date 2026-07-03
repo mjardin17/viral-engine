@@ -1,0 +1,111 @@
+{
+  "channel": "GG",
+  "track": "historical",
+  "episode_number": 5,
+  "episode_id": "GG_HIST_EP005",
+  "season": 1,
+  "title": "The Pass",
+  "tagline": "300 Spartans. One narrow pass. Three days. This is how you slow the impossible.",
+  "hook_line": "The pass at Thermopylae was 15 meters wide at its narrowest point. That 15 meters was the plan.",
+  "characters": ["XERXES", "LEONIDAS"],
+  "scenes": [
+    {
+      "scene_number": 1,
+      "type": "hook",
+      "title": "The Geography",
+      "narration": "The pass at Thermopylae. Mountain on one side. Sea on the other. Fifteen meters wide at the narrowest point. That fifteen meters was the entire Greek strategy.",
+      "visual_prompt": "Epic oil painting aerial view of the pass at Thermopylae — the mountain wall on the left, the sea on the right, the impossibly narrow gap between them that is the Hot Gates, 300 Spartan warriors visible as a small glittering formation filling the pass completely, Persian army approaching from the north filling the entire horizon, dramatic, 1080x1920 vertical",
+      "bg_colors": ["#2A3A5A", "#0A0808"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 2,
+      "type": "reveal",
+      "title": "The Mathematics of the Narrow",
+      "narration": "In open battle: 2.5 million vs 300. A massacre. In a 15-meter pass: 300 Spartans in formation could only be attacked by as many as could fit the width. Xerxes's numbers became meaningless.",
+      "visual_prompt": "Epic oil painting tactical diagram style, the pass at Thermopylae showing the Persian army compressed into the 15-meter width, only a narrow column able to engage the Spartan phalanx at any moment, the vast Persian host behind them bottlenecked and unable to use their numbers, the genius of the position visible, dramatic, 1080x1920 vertical",
+      "bg_colors": ["#2A3A5A", "#0A0A0A"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 3,
+      "type": "emotional",
+      "title": "Leonidas",
+      "narration": "King Leonidas of Sparta knew he would not survive this. The Oracle had been clear. A king of Sparta must die for Greece to live. He brought 300 men who had all fathered sons.",
+      "visual_prompt": "Epic oil painting, Leonidas in full Spartan panoply — crimson cloak, crested Corinthian helmet, shield with lambda — at the head of his 300, his expression showing absolute acceptance, not of defeat, but of what this is, the pass at Thermopylae visible ahead, dramatic composition, 1080x1920 vertical",
+      "bg_colors": ["#8B0000", "#0A0A0A"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 4,
+      "type": "reveal",
+      "title": "The First Contact",
+      "narration": "Xerxes sent the Medes first. Not the Immortals — a test force. They entered the pass and met the Spartan phalanx. They were destroyed.",
+      "visual_prompt": "Epic oil painting, the first Persian force entering the narrow pass and meeting the Spartan phalanx — the disciplined Spartan wall of shields and spears meeting the less-organized Median infantry in the narrow confines, the geometric advantage of the phalanx in the pass devastating the Persians, dramatic battle, 1080x1920 vertical",
+      "bg_colors": ["#8B4513", "#0A0808"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 5,
+      "type": "action",
+      "title": "The Spartan Tactic",
+      "narration": "The Spartans employed a feigned retreat — falling back, drawing the Persians forward in disorganized pursuit, then turning and destroying them. They did this repeatedly. It worked every time.",
+      "visual_prompt": "Epic oil painting, the feigned retreat tactic in motion — Spartan phalanx appearing to break and retreat, Persian soldiers surging forward in pursuit, then the Spartans wheeling as a unit and the pursuing Persians suddenly facing the full organized phalanx again, the tactical trap closing, dramatic, 1080x1920 vertical",
+      "bg_colors": ["#8B0000", "#1A1A00"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 6,
+      "type": "reveal",
+      "title": "Xerxes Stands Three Times",
+      "narration": "Xerxes watched from his throne. Herodotus records that as he watched his men die in the pass, he jumped from his throne in alarm three separate times.",
+      "visual_prompt": "Epic oil painting, Xerxes on his elevated throne watching the battle in the pass, at the moment of alarm — caught in the act of rising from his seat, expression breaking composure for the first time, generals and servants around him looking at him in shock at this uncharacteristic movement, the battle visible below, dramatic, 1080x1920 vertical",
+      "bg_colors": ["#4A2000", "#0A0808"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 7,
+      "type": "emotional",
+      "title": "Wave After Wave",
+      "narration": "Wave after wave entered the pass. Wave after wave returned broken. The Spartans rotated other Greek allies in to give their men rest. They were never at full depletion.",
+      "visual_prompt": "Epic oil painting time-compressed view of multiple Persian waves entering the pass and being broken, the Spartans rotating allied Greek units into the line while Spartans rest — the machinery of a defense working perfectly, dead Persians accumulating at the mouth of the pass, the line unmoved, dramatic, 1080x1920 vertical",
+      "bg_colors": ["#8B4513", "#0A0A0A"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 8,
+      "type": "reveal",
+      "title": "Day One Ends",
+      "narration": "The first day ended. The Spartans held. Xerxes had sent thousands of men into the pass. He had moved the Greeks approximately zero meters.",
+      "visual_prompt": "Epic oil painting, the end of the first day at Thermopylae — sunset over the pass, the Spartan formation still exactly where it started, Persian dead in the pass, Persian forces pulled back for the night, Xerxes on his throne looking at the unchanged pass, the stillness of a first day that didn't go as expected, dramatic, 1080x1920 vertical",
+      "bg_colors": ["#CC5500", "#0A0A0A"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 9,
+      "type": "action",
+      "title": "Day Two",
+      "narration": "On the second day, Xerxes sent more waves, certain the Greeks must be exhausted. They were not exhausted. The result was the same.",
+      "visual_prompt": "Epic oil painting, dawn of the second day, Persian forces advancing again into the pass, the Spartans again in formation — slightly battered but absolutely composed — the second day beginning exactly as the first, the impregnable mathematics of the position unchanged, dramatic, 1080x1920 vertical",
+      "bg_colors": ["#8B4513", "#0A0A0A"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 10,
+      "type": "resolution",
+      "title": "The Immortals",
+      "narration": "On the second evening, Xerxes did what he had hoped to avoid. He sent the Immortals. The force that had never failed. Into the pass. Against 300 men.",
+      "visual_prompt": "Epic oil painting, the Persian Immortals in their perfect formation being directed toward the pass at dusk of the second day, Xerxes watching from his throne with an expression that shows this was not the plan, the Immortals moving with the precision of their training toward the narrow Hot Gates, the Spartans visible in the pass ahead, dramatic, 1080x1920 vertical",
+      "bg_colors": ["#8B6914", "#0A0A0A"],
+      "duration_sec": 9
+    }
+  ],
+  "viral_hook": "Xerxes jumped from his throne three separate times watching his men die in the pass. He had expected to be entertained.",
+  "highlight_scene": 6,
+  "highlight_note": "Xerxes standing from his throne three times — the first crack in his composure, caused not by defeat but by the sight of what 300 men could do — is the emotional turning point of the entire historical arc.",
+  "short_title": "Xerxes Stood Three Times",
+  "rewatch_bait": "The zero-meters statistic at the end of day one. Two and a half million soldiers. One day of fighting. Zero meters gained. The Spartans didn't just hold — they made the numbers irrelevant.",
+  "youtube_title": "300 Spartans. Day 1 Complete. Persian Army Advanced: Zero Meters. | Gods & Glory",
+  "lesson": "The right terrain changes every calculation. The Spartans didn't defeat the Persian army. They chose where the fight happened.",
+  "arc_notes": "EP005 is Thermopylae Day 1 — the setup. EP006 is the Immortals failing. EP007 is the betrayal. EP008 is the final stand. The four-episode Thermopylae arc is the emotional center of the season."
+}

@@ -1,0 +1,83 @@
+{
+  "channel": "Mech Legends",
+  "episode_number": 17,
+  "episode_id": "ML_EP017",
+  "season": 2,
+  "title": "What STORM Can Do",
+  "tagline": "RUMBLE designed a scenario STORM couldn't solve. STORM solved it differently.",
+  "hook_line": "RUMBLE's test for STORM: an engagement scenario with no clear line of fire, communications jammed, team separated. Standard STORM capabilities aren't enough. RUMBLE's file says STORM can generate a localized EM field. STORM has no record of ever doing this.",
+  "characters": ["STORM", "NOVA", "BLAZE", "GRANITE", "RUMBLE"],
+  "scenes": [
+    {
+      "scene_number": 1,
+      "type": "hook",
+      "title": "STORM's Test",
+      "narration": "The scenario was delivered the same way as BLAZE's: a data packet, unencrypted, from an unknown location. The scenario: team separated, communications jammed by broadband interference, no line of sight between positions, three hostile units advancing on the team's isolated positions simultaneously. STORM's standard communication arrays were specifically designed to be useless in this scenario. RUMBLE had done his homework.",
+      "visual_prompt": "STORM reading the new scenario file — his acoustic and communication sensor arrays extended and active, the scenario data displaying: team separation diagram, comms jamming visualization, three simultaneous hostile advance vectors — STORM's capabilities listed at the bottom of the file, each one specifically countered by the scenario design — his expression indicators showing the analytical recognition of what's been done: RUMBLE has specifically engineered around his known capabilities — the team visible in the background registering this — #1A1A2E and #E94560, STORM's distinctive silver-blue communication arrays prominent",
+      "bg_colors": ["#1A1A2E", "#16213E", "#0F3460"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 2,
+      "type": "character",
+      "title": "STORM's Approach",
+      "narration": "STORM didn't run the scenario immediately. He sat with it for six hours. NOVA checked on him twice. Each time he said: 'I'm looking at the edges.' She knew what that meant — he was looking at what the scenario assumed he couldn't do, rather than what it prevented him from doing. By hour six, he had something. It was unusual. It required him to do something he had no record of ever doing.",
+      "visual_prompt": "STORM alone in the bay for six hours — three key moments shown: hour 1 (NOVA checking, STORM barely registering), hour 3 (his sensor arrays partially retracted, pattern of thought visible), hour 6 (something in his posture has changed, a specific focus emerging) — the scenario file visible on his secondary display, but STORM is not looking at it — he's looking at a gap in it — the six-hour passage communicated through lighting shift in the bay — NOVA visible at 1 and 3 hours, not at 6 — #1A1A2E and STORM's silver-blue, the thought process implied through stillness",
+      "bg_colors": ["#1A1A2E", "#16213E", "#0F3460"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 3,
+      "type": "challenge",
+      "title": "The EM Field Hypothesis",
+      "narration": "STORM explained his thinking to NOVA. If he could generate a localized electromagnetic field — not transmit through the jamming, but create a field that team members could feel through their systems — he could convey directional information without traditional communication. Not words. Orientation. The team would feel which way to go without being told. NOVA said: 'You've never generated an EM field.' STORM said: 'RUMBLE says I can.' He paused. 'He's one for one so far.'",
+      "visual_prompt": "STORM and NOVA, the explanation visualized: STORM's concept shown as a technical diagram — not standard communication but a localized EM field bubble, team members inside it feeling directional data through their own systems — the difference between 'broadcasting through jamming' (blocked, shown in red) versus 'creating a field they're already inside' (the workaround, shown in blue) — NOVA processing the distinction with technical appreciation — 'He's one for one so far' shown in STORM's expression indicators as something between humor and genuine reckoning — #1A1A2E and STORM's silver-blue EM field visualization",
+      "bg_colors": ["#1A1A2E", "#0F3460", "#16213E"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 4,
+      "type": "development",
+      "title": "GRANITE Helps",
+      "narration": "GRANITE, from his position, made a suggestion. His cryo-sleeve was still drained, but his pattern recognition systems had been running continuously. 'The EM field generation will feel wrong at first,' he said. 'It'll feel like system damage. Like something is breaking. You will want to stop it.' STORM looked at him. 'That's what happened to BLAZE,' he said. 'He suppressed the phase-transit because it felt dangerous.' GRANITE said: 'Yes. The body stops the things that feel wrong before checking if they're harmful.' He paused. 'Don't stop it if it just feels strange.'",
+      "visual_prompt": "GRANITE in his bay position, cryo-sleeve dark, but his expression indicators active and engaged — his pattern recognition visible as subtle data overlays — the advice being given across the distance of the bay without GRANITE moving — STORM registering the connection to BLAZE's experience, both team members understanding the parallel: the capability that feels like damage before you know it's a capability — the cryo-sleeve visible in the frame as an implicit third example: GRANITE's own recovery feeling like damage while it repairs — #1A1A2E and GRANITE's dark blue-gray, the stillness of someone who is fully present despite physical limitation",
+      "bg_colors": ["#1A1A2E", "#2D4A6E", "#0F3460"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 5,
+      "type": "turning_point",
+      "title": "The Test Run",
+      "narration": "STORM ran the scenario. Communications jammed. BLAZE and NOVA isolated in separate positions. Three hostiles advancing. At 47 seconds in — exactly when his standard communication arrays had nothing to transmit — STORM felt the field begin. It felt like system damage. He did not stop it. The field expanded. BLAZE, 30 meters away in the jamming environment, stopped moving. Then turned 12 degrees north. That was the correct direction. He hadn't been told. He had felt it.",
+      "visual_prompt": "The test run in action — the jammed environment shown as interference static in all communication channels — STORM at the center, the EM field beginning to expand around him (a visualization distinct from normal communication: a radial wave of oriented data, not a broadcast) — and at the key moment: BLAZE in his isolated position, stopping — then turning 12 degrees north — his systems registering the directional data without a message — the correct direction confirmed against the scenario map — NOVA in her position also orienting correctly — three hostiles shown being outmaneuvered by a team that can't communicate and is communicating anyway — #1A1A2E and silver-blue EM field expansion, cinematic",
+      "bg_colors": ["#1A1A2E", "#0F3460", "#16213E"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 6,
+      "type": "climax",
+      "title": "After the Scenario",
+      "narration": "The scenario resolved. All three positions held. NOVA debriefed from the test: the EM field had worked across 30 meters with enough precision to convey directional data to two separate systems simultaneously. BLAZE said: 'I didn't receive a message. I just knew which way.' STORM said: 'That's what I sent.' BLAZE looked at him. 'You sent a direction, not a word.' 'Yes.' BLAZE thought about that. 'That's better than a word.' 'In some conditions,' STORM said. 'Yes.'",
+      "visual_prompt": "Post-scenario debrief — the team gathered, GRANITE still in his position but fully engaged, BLAZE and NOVA with the debrief data visible — the key exchange between BLAZE and STORM shown through their expression indicators: BLAZE's 'I just knew which way' / STORM's 'That's what I sent' / BLAZE's 'That's better than a word' — the technical significance landing for the team: STORM can communicate through any jamming by not communicating — by orienting — the team absorbing this capability's implications — GRANITE's expression showing satisfaction — #1A1A2E and warm team debrief lighting, slightly warmer than the test scenes",
+      "bg_colors": ["#1A1A2E", "#162140", "#1E2A4A"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 7,
+      "type": "tag",
+      "title": "Two For Two",
+      "narration": "RUMBLE's file updated remotely. 'Subject 2: STORM. Electromagnetic field generation: CONFIRMED. Range: 30+ meters. Precision: directional data transmission without verbal content. Notes: GRANITE's coaching was not anticipated. GRANITE is recovering. Adjusting timeline.' He updated GRANITE's entry — still listed as 'Status: Rebuilding. Test design: pending.' But beside GRANITE's name, he added one note: 'He coached STORM from a stationary position with a drained sleeve. He is further along than his physical status indicates. Good.'",
+      "visual_prompt": "RUMBLE's screen updating — STORM's entry marked CONFIRMED, the field range and precision noted — then the GRANITE entry being updated: 'HE COACHED STORM FROM A STATIONARY POSITION WITH A DRAINED SLEEVE. HE IS FURTHER ALONG THAN HIS PHYSICAL STATUS INDICATES. GOOD.' — the word GOOD in RUMBLE's analytical log, standing alone — RUMBLE's silhouette in the dark, the file showing two entries confirmed, GRANITE's note added, the team's unknown capability profile growing — 'Two for two' communicated by the visual of the growing file — #0A0A14 and #E94560 screen glow, the accumulating record",
+      "bg_colors": ["#0A0A14", "#0D0D1A", "#1A1A2E"],
+      "duration_sec": 9
+    }
+  ],
+  "viral_hook": "RUMBLE jammed all of STORM's communications and threw three hostiles at an isolated team. STORM's solution: stop broadcasting and generate a field his team could feel. He sent them a direction instead of a message. BLAZE said 'that's better than a word.' STORM said 'in some conditions, yes.'",
+  "highlight_scene": 5,
+  "highlight_note": "BLAZE in the jammed environment stopping and turning 12 degrees north — the correct direction — without receiving any message. Just feeling it. The moment the EM field works.",
+  "short_title": "He Sent Them A Direction Instead Of A Word",
+  "rewatch_bait": "Scene 4 — GRANITE coaching STORM from his drained position. His cryo-sleeve is dark and he hasn't moved in days. But his pattern recognition has been running continuously. RUMBLE notices this in scene 7: GRANITE is further along than his physical status indicates. His mind recovered before his body. That's the shape of his rebuild.",
+  "youtube_title": "All communications were jammed. STORM sent a direction instead of a message. It worked. | Mech Legends S2 EP5",
+  "lesson": "When the usual way is blocked, the unusual way becomes the only way. STORM didn't need his communications — he needed his team to feel which way.",
+  "arc_notes": "STORM EM field capability confirmed — two for two for RUMBLE. GRANITE coaching from a drained position establishes his recovery is ahead of his physical indicators — his test will not be about physical rebuild but about something deeper. RUMBLE's note 'Good.' in his analytical log is the second humanizing moment (first was 'He said oh' about BLAZE). The suppression framework (GRANITE's coaching) connects BLAZE, STORM, and ELDER-7 as a season-wide theme."
+}

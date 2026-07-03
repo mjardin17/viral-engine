@@ -1,0 +1,103 @@
+{
+  "project": "Viral Engine — Video Bot Pipeline",
+  "version": "production",
+  "capabilities": {
+    "script_management": {
+      "description": "Read, list, and validate episode JSON scripts",
+      "inputs": ["episode_id", "channel"],
+      "outputs": ["script JSON", "scene count", "total duration"],
+      "current_files": ["pipeline_mcp.py:list_episodes", "pipeline_mcp.py:get_episode"]
+    },
+    "image_generation": {
+      "description": "Generate 4 AI images per scene using Pollinations.ai (free, no key) with Gemini fallback",
+      "inputs": ["episode_id", "visual_prompt per scene"],
+      "outputs": ["PNG files in output/{EP_ID}/images/scene_NN_*.png"],
+      "providers": ["Pollinations.ai (FREE, primary)", "Gemini Imagen (free tier, fallback)"],
+      "current_files": ["auto_render.py", "pipeline_mcp.py:generate_images"]
+    },
+    "tts_narration": {
+      "description": "Generate MP3 narration for each scene",
+      "inputs": ["narration text per scene"],
+      "outputs": ["MP3 files in output/{EP_ID}/audio/scene_NN.mp3"],
+      "providers": ["edge-tts (FREE, Microsoft neural — primary)", "ElevenLabs (key set, not wired in)"],
+      "current_files": ["auto_render.py"]
+    },
+    "video_rendering": {
+      "description": "Ken Burns motion + audio + music → MP4 per scene, then concat to final",
+      "inputs": ["images dir", "audio dir", "music file"],
+      "outputs": [
+        "output/{EP_ID}/clips/scene_NN.mp4",
+        "renders/{EP_ID}_final.mp4"
+      ],
+      "engine": "FFmpeg",
+      "current_files": ["auto_render.py", "pipeline_mcp.py:render_episode"]
+    },
+    "pipeline_status": {
+      "description": "Check render progress: scene clip count, final file exists, file size",
+      "current_files": ["pipeline_mcp.py:get_output_status"]
+    },
+    "self_healing": {
+      "description": "9-bot council monitors pipeline health and auto-repairs common failures",
+      "bots": [
+        "bot_01_guardian — scans for broken/tiny clips",
+        "bot_02_script_guard — prevents stub downgrades",
+        "bot_03_image_healer — refetches fallback images <20KB",
+        "bot_04_clip_rebuilder — re-renders 0KB clips",
+        "bot_05_final_assembler — rebuilds broken final MP4s",
+        "bot_06_render_queue — tracks render queue",
+        "bot_07_stub_expander — tracks 84 stub episodes",
+        "bot_08_auto_renderer — renders 1 episode per council run",
+        "bot_09_quality_checker — ffprobe duration + audio RMS"
+      ],
+      "current_files": ["council/bots/*", "council_run.bat"]
+    },
+    "ai_research": {
+      "description": "Gemini-powered episode research and scene generation",
+      "current_files": ["bots/gemini_bot.py"],
+      "keys": "GEMINI_API_KEY — SET"
+    },
+    "ai_qa": {
+      "description": "QA pass on script quality",
+      "current_files": ["bots/chatgpt_bot.py"],
+      "note": "Uses OpenAI — replace with Ollama per audit recommendation"
+    },
+    "publishing_queue": {
+      "description": "File-drop queue for CrossPost to pick up",
+      "current_files": ["crosspost_bridge.py"],
+      "note": "Stub — awaiting CrossPost project to wire up properly"
+    },
+    "social_publishing": {
+      "description": "5-platform publishing system with per-channel councils",
+      "platforms": ["YouTube", "Instagram", "TikTok", "Twitter", "Facebook"],
+      "current_files": [
+        "social_machine/master.py",
+        "social_machine/councils/youtube/council.py",
+        "social_machine/councils/instagram/council.py",
+        "social_machine/councils/tiktok/council.py",
+        "social_machine/councils/twitter/council.py",
+        "social_machine/councils/facebook/council.py"
+      ],
+      "note": "MAY be the same as CrossPost — clarify with Josh"
+    },
+    "video_providers": {
+      "description": "Premium video generation (not used — keys empty)",
+      "providers": ["Higgsfield", "Kling AI", "Runway ML Gen-3", "Google Veo"],
+      "current_files": ["providers/"],
+      "keys_status": "ALL EMPTY — pipeline uses FFmpeg instead"
+    }
+  },
+  "missing_capabilities": {
+    "render_start_with_options": "pipeline_mcp.py lacks render_start(music, skip_images)",
+    "render_progress": "No scene-by-scene progress tool in pipeline_mcp.py",
+    "list_renders": "No tool to list completed finals in renders/",
+    "ollama_integration": "No local LLM path — chatgpt_bot.py uses OpenAI",
+    "empire_os_auth": "No auth layer — Empire OS calls are unauthenticated"
+  },
+  "episode_inventory": {
+    "GG_S1": {"episodes": "EP001-EP005", "status": "FINALS READY", "location": "renders/"},
+    "GG_S2": {"episodes": "EP006-EP011", "status": "EP006 BROKEN; EP007-011 finals (stub-length)", "location": "renders/"},
+    "GG_S3": {"episodes": "EP012-EP025", "status": "ALL 14 SCRIPTS WRITTEN — NOT YET RENDERED", "location": "prompts/gods_glory/"},
+    "ML_S1": {"episodes": "EP001", "status": "SCRIPTED ONLY"},
+    "LO_S1": {"episodes": "EP001", "status": "SCRIPTED ONLY"}
+  }
+}

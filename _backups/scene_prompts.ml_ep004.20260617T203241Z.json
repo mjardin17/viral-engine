@@ -1,0 +1,110 @@
+{
+  "channel": "ML",
+  "episode_number": 4,
+  "episode_id": "ML_EP004",
+  "season": 1,
+  "title": "17 Signals",
+  "tagline": "She mapped the entire army. Then he took it away.",
+  "hook_line": "NOVA deployed all 17 panels. This was what she was built for.",
+  "characters": ["NOVA", "ELDER-7", "BLAZE", "STORM"],
+  "scenes": [
+    {
+      "scene_number": 1,
+      "type": "hook",
+      "title": "Full State",
+      "narration": "NOVA deployed all seventeen panels. Every one. This was her true state. The full state. It felt like hearing what everything was part of.",
+      "visual_prompt": "Cold cyan blue mech NOVA 12 meters, seventeen holographic panels deployed from her forearms in a stunning circular array, each panel glowing with different data streams, blue-white light filling the dark air, beautiful and dangerous, cinematic wide shot, 1080x1920 vertical",
+      "bg_colors": ["#00B4D8", "#0D1B2A"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 2,
+      "type": "action",
+      "title": "The Map",
+      "narration": "Fleet positions. Formation density. Command layers. Supply chains. She could see all of it. Xerxes's army exposed, node by node.",
+      "visual_prompt": "NOVA's perspective, holographic battle map blooming across all 17 panels showing Persian army in perfect tactical detail, commander positions marked, formation vectors, cyan holographic readouts on dark background, data streaming faster than human eyes can read, cinematic, 1080x1920 vertical",
+      "bg_colors": ["#0077B6", "#070D15"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 3,
+      "type": "reveal",
+      "title": "One Organism",
+      "narration": "She had never processed a formation this large. It didn't move like an army. It moved like one mind.",
+      "visual_prompt": "Wide overhead holographic visualization, Persian army formation shown as a single organism on NOVA's display, units moving in perfect synchronization like cells in a body, cyan data overlay on dark tactical map, eerie beauty of coordinated mass movement, cinematic, 1080x1920 vertical",
+      "bg_colors": ["#023E8A", "#050B14"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 4,
+      "type": "reveal",
+      "title": "The First Dark",
+      "narration": "Panel eleven went dark. Then six. Then nine. Then three more in rapid succession. She stared at the gaps.",
+      "visual_prompt": "Close-up of NOVA's holographic panel array, panels going dark one by one in sequence, cyan light blinking out leaving black gaps in the array, NOVA's face visor registering the pattern, alarm readouts in remaining panels, cinematic close, 1080x1920 vertical",
+      "bg_colors": ["#0077B6", "#1A0A0A"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 5,
+      "type": "emotional",
+      "title": "He Noted Them",
+      "narration": "'He's jamming my channels. Systematically.' ELDER-7, without looking up: 'He noted your panel configuration. In the first contact.'",
+      "visual_prompt": "NOVA cold cyan mech turning to look at ELDER-7 ancient bronze sentinel, ELDER-7 at his characteristic observing angle never fully facing forward, data pad in hand, amber glow of the pad, the weight of foreknowledge in his posture, dark cinematic, 1080x1920 vertical",
+      "bg_colors": ["#003566", "#0D0D0D"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 6,
+      "type": "action",
+      "title": "The Frequency War",
+      "narration": "She scrambled. Shifted frequencies. He followed her. Panel seven. Panel twelve. Panel three. He was faster.",
+      "visual_prompt": "Dynamic sequence of NOVA's panels flickering and shifting frequency, cyan light pulsing and changing color in desperate counter-jamming, panels going dark as fast as she can activate new frequencies, urgency and precision, cinematic close-up, 1080x1920 vertical",
+      "bg_colors": ["#0096C7", "#200505"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 7,
+      "type": "climax",
+      "title": "Four Left",
+      "narration": "Down to four panels. She had a choice: hold position and lose everything, or pull back with what was left.",
+      "visual_prompt": "NOVA with only four remaining cyan holographic panels still active, thirteen dark gaps in her array, exposed and partially blind, the approaching horizon of the Persian army visible through the incomplete data map, decision moment, cinematic tension, 1080x1920 vertical",
+      "bg_colors": ["#0077B6", "#1A1A1A"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 8,
+      "type": "action",
+      "title": "She Pulled Back",
+      "narration": "She pulled back. But she had gotten enough. The army's command structure. Partially mapped. It would have to be enough.",
+      "visual_prompt": "NOVA retreating, cyan glow of four remaining panels, partial holographic battle map still displayed showing fragmented but valuable data about Persian command structure, BLAZE visible behind her holding a defensive position, cinematic, 1080x1920 vertical",
+      "bg_colors": ["#023E8A", "#0A0A1A"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 9,
+      "type": "reveal",
+      "title": "The Archive: ATLAS-9",
+      "narration": "ELDER-7 on the data pad: ATLAS-9. 1,800 years ago. Mapped everything. Xerxes learned her patterns in three days.",
+      "visual_prompt": "Close-up of ELDER-7's ancient data pad, archive entry for ATLAS-9 glowing in amber, record showing 1800 year old timestamp, tactical mapping designation, result field reading FALLEN, aged patina on the pad surface, ELDER-7's bronze hand visible, cinematic, 1080x1920 vertical",
+      "bg_colors": ["#8B6914", "#0A0A0A"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 10,
+      "type": "resolution",
+      "title": "He Is Faster Now",
+      "narration": "NOVA, staring at her four remaining panels: 'He learned me in one day.' ELDER-7: 'He is faster now. He has had 1,800 more years of practice.'",
+      "visual_prompt": "NOVA close-up, four cyan panels dimly active, her visor reflecting the amber glow of ELDER-7's data pad, the ATLAS-9 entry visible in reflection, exhaustion and calculation behind her eyes, ELDER-7 standing at his angle in background, dark cinematic, 1080x1920 vertical",
+      "bg_colors": ["#0077B6", "#0D0D0D"],
+      "duration_sec": 9
+    }
+  ],
+  "viral_hook": "She deployed all 17 panels to map his entire army. He took them down one by one. He had already planned this in episode 2.",
+  "highlight_scene": 4,
+  "highlight_note": "Panels going dark one by one in sequence — systematic, deliberate, pre-planned. Viewers feel Xerxes's intelligence as a presence even though he's offscreen.",
+  "short_title": "17 Panels → 4",
+  "rewatch_bait": "Rewatching EP002 — Xerxes's notation specifically marks NOVA's panel formation. That moment now carries enormous weight.",
+  "youtube_title": "She Mapped His Entire Army — He Took It Away One Panel at a Time | Mech Legends S1 EP004",
+  "lesson": "Intelligence without counter-intelligence is just data that the enemy can use against you.",
+  "arc_notes": "EP004 establishes NOVA's individual function as countable and vulnerable. Sets up EP005 (the counter deployed) and EP010 payoff (when she runs 17 panels in full team coordination, the contrast is everything)."
+}

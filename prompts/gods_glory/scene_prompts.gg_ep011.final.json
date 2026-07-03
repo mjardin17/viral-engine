@@ -1,0 +1,189 @@
+{
+  "episode_id": "GG_EP011",
+  "channel": "GG",
+  "title": "Ia Drang, Khe Sanh, and Tet: Vietnam's Defining Battles",
+  "tagline": "Three battles. One war that no single victory could ever fully win.",
+  "duration_target_min": 20,
+  "aesthetic": {
+    "color_grade": "cinematic_jungle_war",
+    "primary_colors": ["#1F2A1A", "#4A5C3A", "#8B1A1A", "#C9A84C"],
+    "font_style": "serif_documentary_bold",
+    "music_style": "hans_zimmer_conquest_epic",
+    "narrator_tone": "authoritative_punchy_dramatic"
+  },
+  "music": {
+    "style": "hans_zimmer_conquest_epic",
+    "notes": "Opening: helicopter rotor rhythm blended into the score, tense and propulsive. Ia Drang/LZ X-Ray: urgent percussion, building chaos. LZ Albany: the music drops to something colder and more devastating. Khe Sanh siege: a long, grinding, sustained low drone representing the months-long siege. Tet: sudden eruption breaking false calm. Legacy: heavy, unresolved, ending on a single sustained note rather than a clean resolution."
+  },
+  "voice_style": {
+    "tone": "authoritative_punchy_dramatic",
+    "pacing": "urgent and visceral through the battle sequences, measured and analytical in between",
+    "character": "documentary narrator who treats each of these three battles as proof that tactical American success didn't translate into strategic victory"
+  },
+  "youtube_title": "Ia Drang, Khe Sanh, Tet: The Battles That Defined Vietnam | Gods & Glory EP11",
+  "youtube_description": "Three battles. Three different years. One war that kept teaching the same brutal lesson: winning the fight on the ground didn't mean winning the war.\n\nThis episode goes deep on Ia Drang — the first major clash between US and North Vietnamese forces — the months-long siege at Khe Sanh, and the Tet Offensive that broke American confidence even in defeat.\n\nGods & Glory — history's turning points, explained properly.",
+  "scenes": [
+    {
+      "scene_number": 1,
+      "type": "cold_open",
+      "title": "Three Battles, One Lesson",
+      "narration": "Between 1965 and 1968, three battles in Vietnam taught the United States military the same brutal lesson three separate times: tactical victory and strategic victory are not the same thing. Ia Drang. Khe Sanh. Tet. Each one ended with American and South Vietnamese forces holding the ground. Each one pushed the war further from anything resembling an end.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Montage-style opening: helicopters over jungle, a besieged firebase under bombardment, urban combat during Tet — three battles suggested in rapid cinematic succession. Epic, weighty. 16:9.",
+      "bg_colors": ["#1F2A1A", "#8B1A1A", "#4A5C3A"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 2,
+      "type": "context",
+      "title": "Ia Drang — The First Real Test",
+      "narration": "In November 1965, just months after American combat troops officially entered the war, the 1st Cavalry Division — the Army's new airmobile unit, built entirely around helicopter transport — faced its first major battle against regular North Vietnamese Army forces, not just Viet Cong guerrillas. It happened in the Ia Drang Valley, near the Cambodian border, and it would become one of the most studied battles of the entire war.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Fleet of UH-1 Huey helicopters flying low over dense jungle valley terrain near the Cambodian border, soldiers preparing to land. Tense anticipation. 16:9.",
+      "bg_colors": ["#1F2A1A", "#4A5C3A", "#C9A84C"],
+      "duration_sec": 46
+    },
+    {
+      "scene_number": 3,
+      "type": "battle",
+      "title": "LZ X-Ray",
+      "narration": "On November 14th, 1965, the 1st Battalion, 7th Cavalry, under Lieutenant Colonel Hal Moore, landed by helicopter at a small clearing designated Landing Zone X-Ray. Within hours, they found themselves fighting a much larger force of North Vietnamese regulars who had been massing in the area. Outnumbered and surrounded on multiple sides, American forces held the landing zone over three days of intense combat, relying heavily on artillery and air support called in at devastatingly close range to their own positions. It became, narrowly, an American tactical victory — North Vietnamese losses were roughly ten times higher than American ones.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. American soldiers in a defensive perimeter at a jungle clearing landing zone, intense firefight, artillery support called in close to their own lines. Desperate, surrounded combat. 16:9.",
+      "bg_colors": ["#8B1A1A", "#1F2A1A", "#4A5C3A"],
+      "duration_sec": 52
+    },
+    {
+      "scene_number": 4,
+      "type": "battle",
+      "title": "LZ Albany — The Ambush",
+      "narration": "Days later, a different American column moving toward a second landing zone, Albany, marched into a devastating North Vietnamese ambush at extremely close range — too close for American forces to safely call in the artillery and air support that had saved them at X-Ray. More than half the American force at Albany became casualties. The 151 Americans killed there on November 18th made it the deadliest single day of the entire Vietnam War for American ground forces up to that point. Ia Drang taught the US military both what airmobile tactics could achieve and exactly how badly they could fail when an enemy closed the range.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. American infantry column ambushed at close range in dense jungle, chaotic close-quarters combat with no room for artillery support, devastating losses. Brutal, claustrophobic combat. 16:9.",
+      "bg_colors": ["#1F2A1A", "#8B1A1A", "#4A5C3A"],
+      "duration_sec": 52
+    },
+    {
+      "scene_number": 5,
+      "type": "analysis",
+      "title": "The Lesson Both Sides Learned",
+      "narration": "For the United States, Ia Drang validated the helicopter-borne airmobile concept and demonstrated that American firepower could inflict crushing casualty ratios on North Vietnamese forces in open engagement. For North Vietnam, the lesson was different but equally important: avoid open battle where American artillery and air power could be brought to bear, and instead draw American forces into close-range ambushes and protracted guerrilla engagements where that advantage disappeared. Both sides walked away from the same battle with a strategy that would define years of fighting to come.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Split visualization: American commanders studying the battle's lessons on a map, while North Vietnamese commanders separately study the same battle from their own strategic perspective. Analytical, dual viewpoint. 16:9.",
+      "bg_colors": ["#4A5C3A", "#1F2A1A", "#C9A84C"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 6,
+      "type": "context",
+      "title": "Khe Sanh — A Different Kind of Battle",
+      "narration": "By January 1968, the US Marine combat base at Khe Sanh, in a remote, strategically positioned valley near Laos, had become a key American outpost. On January 21st, North Vietnamese forces began a sustained artillery and infantry siege that would last for more than two months — the only major battle of the entire war in which North Vietnam committed to a prolonged, large-scale siege rather than relying on its usual hit-and-run tactics.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Aerial view of the remote Khe Sanh combat base nestled in a misty valley near the Laotian border, fortified perimeter and airstrip visible. Isolated, foreboding setting. 16:9.",
+      "bg_colors": ["#1F2A1A", "#4A5C3A", "#8B1A1A"],
+      "duration_sec": 46
+    },
+    {
+      "scene_number": 7,
+      "type": "battle",
+      "title": "The Siege",
+      "narration": "For seventy-seven days, Marines and South Vietnamese rangers at Khe Sanh endured sustained artillery, mortar, and rocket bombardment, at times receiving over a thousand rounds in a single day. Early in the siege, North Vietnamese shelling triggered a massive explosion in the base's main ammunition depot, destroying much of its stored munitions in a single catastrophic blast. Resupply depended almost entirely on aircraft willing to brave anti-aircraft fire to land on or air-drop supplies onto the besieged airstrip.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Marines in fortified bunkers at Khe Sanh enduring sustained artillery bombardment, a massive secondary explosion erupting from an ammunition depot in the background. Relentless, grinding siege warfare. 16:9.",
+      "bg_colors": ["#8B1A1A", "#1F2A1A", "#4A5C3A"],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 8,
+      "type": "analysis",
+      "title": "Why the Siege Ended",
+      "narration": "By April 1968, American relief operations and sustained air bombardment of the besieging North Vietnamese forces broke the siege, and the base was relieved. American forces had held Khe Sanh, but at a cost of nearly 300 killed and over 1,400 wounded, against estimated North Vietnamese losses far higher — somewhere between 10,000 and 15,000. Months later, US forces deliberately abandoned and demolished the base anyway, having concluded its strategic value no longer justified defending it — a decision that left many veterans of the siege feeling their sacrifice had been for a position the military didn't actually intend to keep.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. American relief forces breaking through to the besieged base, exhausted Marines greeting them, contrasted with a later somber scene of the base being demolished and abandoned. Bittersweet resolution. 16:9.",
+      "bg_colors": ["#4A5C3A", "#1F2A1A", "#8B1A1A"],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 9,
+      "type": "context",
+      "title": "Tet — Timed to the Day",
+      "narration": "The Khe Sanh siege began just over a week before the Tet Offensive, and many historians believe that timing was deliberate — a diversion meant to draw American attention and resources toward a remote outpost while North Vietnam prepared a far larger, coordinated surprise attack across dozens of cities in South Vietnam, timed to the Lunar New Year holiday when South Vietnamese forces traditionally stood at reduced readiness.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Split-screen style cinematic visualization: the remote siege at Khe Sanh on one side, coordinated North Vietnamese forces massing near cities across South Vietnam on the other. Strategic deception made visual. 16:9.",
+      "bg_colors": ["#1F2A1A", "#4A5C3A", "#C9A84C"],
+      "duration_sec": 46
+    },
+    {
+      "scene_number": 10,
+      "type": "battle",
+      "title": "The Embassy Attack",
+      "narration": "In the early hours of January 31st, 1968, a Viet Cong commando squad breached the outer wall of the US embassy compound in Saigon, supposedly one of the most secure American facilities in the country. The attackers were eventually killed or captured within hours, and the embassy itself was never actually overrun. But American television crews filmed the aftermath live, and the sight of American Military Police fighting an active battle inside the embassy compound walls landed in US living rooms as proof that the war was nowhere near as contained as officials had been claiming.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Chaotic firefight within the breached walls of the US embassy compound in Saigon, military police engaging remaining attackers, smoke and confusion. Shocking, symbolic violation. 16:9.",
+      "bg_colors": ["#8B1A1A", "#1F2A1A", "#4A5C3A"],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 11,
+      "type": "battle",
+      "title": "Cities Under Attack",
+      "narration": "Simultaneously, North Vietnamese and Viet Cong forces struck dozens of other cities and provincial capitals across South Vietnam, including a fierce, prolonged battle for the ancient city of Hue that would last nearly a month and involve some of the bloodiest urban combat of the entire war. Almost everywhere the offensive struck, American and South Vietnamese forces eventually regained control, often within days, inflicting catastrophic casualties on the attacking communist forces — by most estimates, tens of thousands killed across the offensive as a whole.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Urban combat in the ancient city of Hue, soldiers fighting through historic streets and damaged buildings, prolonged and bloody house-to-house fighting. Intense, sustained urban warfare. 16:9.",
+      "bg_colors": ["#1F2A1A", "#8B1A1A", "#4A5C3A"],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 12,
+      "type": "analysis",
+      "title": "A Military Defeat, A Political Earthquake",
+      "narration": "By any conventional military measure, the Tet Offensive was a severe defeat for North Vietnam and the Viet Cong — the Viet Cong's networks within South Vietnamese cities were devastated and never fully recovered their pre-Tet strength for the rest of the war. But the offensive's psychological and political impact in the United States ran in the opposite direction entirely. The sheer scale and reach of the attack, arriving just months after American officials had publicly insisted the war was being won, convinced a large and growing share of the American public and press that they had been misled about how the war was actually going.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. American television newsroom broadcasting live coverage of the offensive, contrasted with the devastated Viet Cong infrastructure being assessed by American intelligence officers. The dual reality of the offensive. 16:9.",
+      "bg_colors": ["#4A5C3A", "#1F2A1A", "#C9A84C"],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 13,
+      "type": "anecdote",
+      "title": "The Photograph and the Broadcast",
+      "narration": "Two pieces of media from Tet became lasting symbols of the offensive's impact at home. A photograph by Eddie Adams, capturing the moment a South Vietnamese police chief executed a captured Viet Cong officer on a Saigon street, shocked American audiences with its graphic immediacy. And one of America's most trusted television anchors, after touring the aftermath in Vietnam, broke from his usual neutral tone to tell viewers directly that the war appeared to have reached a stalemate — a verdict that reportedly affected President Johnson's own confidence in the war's trajectory.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. A photojournalist capturing a tense, consequential street scene in Saigon, and a television news anchor speaking gravely to camera from a desk overseas. Restrained, respectful depiction without graphic content. 16:9.",
+      "bg_colors": ["#1F2A1A", "#4A5C3A", "#8B1A1A"],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 14,
+      "type": "analysis",
+      "title": "Three Battles, One Pattern",
+      "narration": "Look at all three battles together and the same pattern repeats. Ia Drang: an American tactical victory and a devastating American ambush, in the same battle, days apart. Khe Sanh: a successfully defended position abandoned months later anyway. Tet: a catastrophic military defeat for the enemy that nonetheless broke American political will to continue the war on the same terms. In every case, winning the engagement and winning the war turned out to be two completely different problems — and American strategy never fully solved the second one.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Composite cinematic visualization layering all three battles together — jungle, siege base, urban combat — fading between them to suggest the repeating pattern. Reflective, analytical. 16:9.",
+      "bg_colors": ["#1F2A1A", "#8B1A1A", "#4A5C3A"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 15,
+      "type": "human_interest",
+      "title": "The Men Who Fought Them",
+      "narration": "Veterans of all three battles carried what they experienced for the rest of their lives. Lieutenant Colonel Hal Moore, who commanded at LZ X-Ray, stayed in close contact with his surviving soldiers for decades and co-wrote a memoir specifically to make sure the men who died at Ia Drang, particularly at Albany, weren't reduced to a footnote in a war most Americans remember through a handful of other names and places.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. An older veteran, decades later, looking through photographs and letters from his time in Vietnam, a quiet reflective moment. Respectful, human-scale, present-day. 16:9.",
+      "bg_colors": ["#C9A84C", "#1F2A1A", "#4A5C3A"],
+      "duration_sec": 44
+    },
+    {
+      "scene_number": 16,
+      "type": "analysis",
+      "title": "Why This Still Matters",
+      "narration": "Military academies still teach all three battles for different reasons: Ia Drang for the strengths and limits of airmobile tactics, Khe Sanh for the challenges of supplying and justifying a remote fixed position under siege, and Tet for the case study in how a battlefield defeat can still produce a strategic and political victory if it changes what the public and political leadership believe about a war's trajectory. Together, they form the clearest demonstration of why Vietnam became the war that taught the United States military to think differently about what victory actually requires.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Modern military students studying all three battles in a classroom setting, maps and case studies of each displayed side by side. Thoughtful, educational, present-day relevance. 16:9.",
+      "bg_colors": ["#4A5C3A", "#1F2A1A", "#C9A84C"],
+      "duration_sec": 46
+    },
+    {
+      "scene_number": 17,
+      "type": "summary",
+      "title": "What Happened — The Summary",
+      "narration": "November 1965: Ia Drang proves American airmobile tactics can work — and shows exactly how they can fail. January to April 1968: Khe Sanh survives a 77-day siege, then gets abandoned anyway. Late January 1968: the Tet Offensive devastates Viet Cong networks militarily while shattering American confidence that the war was being won. Three battles. Three tactical American successes. None of them brought the war meaningfully closer to ending on American terms.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Summary title card sequence: key moments from all three battles in bold text over historical imagery. Final shot: a quiet Vietnamese landscape today where the fighting once raged. 16:9.",
+      "bg_colors": ["#1F2A1A", "#C9A84C", "#8B1A1A"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 18,
+      "type": "next_episode",
+      "title": "Next Episode",
+      "narration": "That closes out this season of Gods and Glory. From Thermopylae to Vietnam, every episode in this run has asked the same question in a different century: what does it actually cost to win, and was it worth what it took? Thank you for watching all of it. The next season starts soon.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Montage-style closing shot blending imagery from across the entire season — ancient battlefields and modern ones — fading to the show's title card. Reflective, season-closing tone. 16:9.",
+      "bg_colors": ["#1F2A1A", "#C9A84C", "#4A5C3A"],
+      "duration_sec": 38
+    }
+  ]
+}

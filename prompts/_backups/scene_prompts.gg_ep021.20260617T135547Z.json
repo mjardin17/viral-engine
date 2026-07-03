@@ -1,0 +1,110 @@
+{
+  "channel": "Gods & Glory",
+  "episode_number": 21,
+  "episode_id": "GG_EP021",
+  "season": 2,
+  "title": "Siege of Vienna",
+  "tagline": "1683. The Ottoman Empire at the gates of Europe. One Polish king rode through the night with 80,000 men. History turned in an afternoon.",
+  "hook_line": "The Ottoman Grand Vizier Kara Mustafa has 140,000 soldiers surrounding Vienna. The walls are failing. The city has 11,000 defenders and enough food for two more weeks. Then Jan Sobieski arrives with 80,000 cavalry. He has never lost a battle.",
+  "characters": ["Kara Mustafa", "Jan Sobieski", "Emperor Leopold I", "The Defenders of Vienna"],
+  "scenes": [
+    {
+      "scene_number": 1,
+      "type": "hook",
+      "title": "The Gates of Europe",
+      "narration": "In the summer of 1683, the Ottoman Empire stood at the gates of Vienna — and Vienna was the gate of Europe. The Ottoman army of 140,000 soldiers, 300 cannons, and the full military power of the greatest empire in the eastern world had besieged the city since July. It was now September. The walls were failing. The city had been under siege for sixty days. The garrison of 11,000 was exhausted. The Grand Vizier Kara Mustafa was certain of victory. He had reason to be.",
+      "visual_prompt": "Epic aerial view of Vienna under siege in 1683 — the city's walls surrounded on three sides by the enormous Ottoman encampment: 140,000 soldiers, hundreds of cannon emplacements, the distinctive Ottoman tents spreading to the horizon, Ottoman banners (crescent moon on green and red) dominating the surrounding landscape — the city visible within the walls, visibly diminished after 60 days, smoke from artillery damage on the walls — the Danube River on one side providing partial protection — the scale of the Ottoman force compared to the besieged city communicating genuine overwhelming power — #2C1810 and Ottoman crimson and green, cinematic and crushing",
+      "bg_colors": ["#2C1810", "#8B1A1A", "#1A3A1A"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 2,
+      "type": "villain",
+      "title": "Kara Mustafa",
+      "narration": "Grand Vizier Kara Mustafa commanded the largest Ottoman military force deployed since Suleiman the Magnificent. He had 140,000 soldiers, a professional janissary corps, and siege engineers who had broken stronger walls than Vienna's. He had chosen a strategy of methodical tunneling — Ottoman sappers were undermining Vienna's walls with gunpowder mines, collapsing sections systematically. By September 12th, two major breaches had been created. The city had days, not weeks. Kara Mustafa had not hurried because he did not need to hurry.",
+      "visual_prompt": "Kara Mustafa in his command pavilion — the Grand Vizier in full Ottoman military magnificence: green and gold robes, elaborate turban, campaign tent decorated with the Ottoman crescent — maps of Vienna's walls spread before him, two breach points marked — his expression: controlled, certain, unhurried — outside his tent visible: the massive Ottoman encampment, the scale of his force — and underground: a visualization of the sappers' tunnels beneath Vienna's walls, gunpowder chambers at key structural points — the methodical nature of his victory plan communicated through the precision of the tunnel diagram — #2C1810 and Ottoman gold and green, commanding",
+      "bg_colors": ["#2C1810", "#1A3A1A", "#C9A227"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 3,
+      "type": "character",
+      "title": "The Relief Army",
+      "narration": "Jan III Sobieski, King of Poland, had assembled a relief army of 80,000 soldiers from Poland, the Holy Roman Empire, and German states. He had been moving toward Vienna for weeks — a logistical achievement as significant as the battle itself. He arrived at the hills above Vienna on the night of September 11th. His army had to descend through forested terrain in darkness, form up into battle order, and attack 140,000 entrenched defenders by morning. Sobieski had never lost a battle. He did not appear to consider this one an exception.",
+      "visual_prompt": "Jan Sobieski on horseback at the Kahlenberg heights above Vienna, night of September 11th — the relief army visible behind and below him, 80,000 soldiers descending through forested hills in torchlight — Vienna visible in the valley below, Ottoman encampment fires surrounding it — Sobieski surveying the field: the scale of what he's about to attack clearly visible from this vantage — his expression: assessment, not fear — the Polish hussar wings visible on his cavalry officers behind him, the distinctive wing frames catching the torchlight — a commander who has made his decision and is now executing it — #2C1810 and night lighting, torch warmth against dark, Vienna's siege fires visible in the valley below",
+      "bg_colors": ["#2C1810", "#1A0D08", "#C9A227"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 4,
+      "type": "challenge",
+      "title": "The Ottoman Tunnels",
+      "narration": "On the morning of September 12th, before the relief army could fully form up, the Ottoman sappers detonated their largest mine. A massive section of Vienna's wall collapsed. The breach was 12 meters wide. Janissary infantry poured through it. The Vienna garrison threw everything they had into plugging the breach — it held, barely, with hours to spare. The relief army was descending the hills. They needed the city to hold for three more hours.",
+      "visual_prompt": "The mine detonation — a section of Vienna's wall erupting upward, stone blocks flying, a 12-meter breach opening — janissary infantry (elite Ottoman soldiers in distinctive white caps) charging through the smoke and rubble of the breach — Vienna's garrison defenders rushing to meet them at the breach, outnumbered but fighting at close quarters for every meter of rubble — the desperate plugging of the breach shown: civilians, garrison soldiers, anyone available forming a human wall at the collapse point — and on the hills above: the relief army still descending, not yet arrived — three hours of this — #2C1810 and explosion orange, chaotic and desperate",
+      "bg_colors": ["#2C1810", "#4A1A0A", "#8B1A1A"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 5,
+      "type": "turning_point",
+      "title": "The Charge",
+      "narration": "At approximately 5:00 PM on September 12, 1683, Jan Sobieski ordered the charge. 20,000 Polish winged hussars — the elite heavy cavalry of the Polish-Lithuanian Commonwealth, wearing the distinctive wing frames that made a thunderous roar at full gallop — charged downhill into the Ottoman encampment. It remains the largest cavalry charge in history. The hussars hit the Ottoman rear lines at full speed. The Ottoman force — 140,000 soldiers — had been focused on the breached city walls. They were not prepared for 20,000 armored cavalry hitting them from behind.",
+      "visual_prompt": "THE CHARGE — the largest cavalry charge in history: 20,000 Polish winged hussars thundering downhill, the wing frames creating the visual roar, armor gleaming, lances forward — the downhill momentum shown in the composition's angle and energy — the Ottoman encampment below, the soldiers turning from the city walls to face the cavalry arriving from the rear — the scale of the charge against the scale of the Ottoman camp — Sobieski at the head visible — the collision of 20,000 cavalry with an encampment designed for siege not defense — cinematic maximum-scale battle composition, #2C1810 and the gold and crimson of the hussars, the wings catching afternoon light, genuine epic scale",
+      "bg_colors": ["#2C1810", "#8B1A1A", "#C9A227"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 6,
+      "type": "climax",
+      "title": "Three Hours",
+      "narration": "The Ottoman encampment collapsed in three hours. Kara Mustafa's command structure — built for siege, not for defending against cavalry from the rear — could not reorganize fast enough. Ottoman units broke and ran, spreading disorder through the camp. By 8:00 PM, the siege was over. 140,000 soldiers were in retreat. Vienna had held. Kara Mustafa fled east. He would be strangled on orders from the Sultan three months later for the failure. The Ottoman Empire would never again threaten the gates of Europe.",
+      "visual_prompt": "The aftermath of the charge — the Ottoman encampment in collapse, the organized siege force fragmenting into retreat, Ottoman banners being abandoned as the encampment empties — Vienna's gates opening for the first time in sixty days, the garrison and civilians emerging to the street — Sobieski entering Vienna, the city's population visible — and in the distance: Kara Mustafa in flight eastward, the retreat of 140,000 soldiers shown as a massive wave moving away from Vienna — the contrast between the morning (140,000 at the walls, victory certain) and the evening (retreat, sixty days ended in three hours) — #2C1810 and the specific quality of a lifted siege, light returning",
+      "bg_colors": ["#2C1810", "#C9A227", "#3D1C0A"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 7,
+      "type": "aftermath",
+      "title": "What Was Left Behind",
+      "narration": "When the Ottoman encampment was searched after the battle, the soldiers found extraordinary quantities of supplies: thousands of tents, livestock, gold, weapons, and something else — large sacks of a small dark bean the European soldiers had never seen before. The beans had been used by the Ottoman army to make a hot dark drink that kept soldiers alert through long sieges. Some historians believe that the sacks of coffee beans captured at Vienna in 1683 introduced coffee to Central Europe. Vienna's café culture — the Viennese coffeehouse — may have begun in an abandoned Ottoman supply tent.",
+      "visual_prompt": "The search of the abandoned Ottoman encampment — European soldiers going through the extraordinary supplies: tents, weapons, gold — and then: the discovery of the coffee sacks, large burlap bags of dark roasted beans, soldiers examining them with curiosity — a small campfire with a Turkish coffee pot visible, one soldier having figured out how to brew it, others gathering around — then: a jump forward to a Vienna coffeehouse interior, the iconic Viennese café atmosphere with coffee cups — the connection between the 1683 battlefield and the 350-year café culture shown as a single visual story — #2C1810 and warm coffee brown, #C9A227, a moment of unexpected consequence",
+      "bg_colors": ["#2C1810", "#6B3A1A", "#C9A227"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 8,
+      "type": "scale",
+      "title": "The Last Ottoman Advance",
+      "narration": "The Siege of Vienna in 1683 was the high-water mark of Ottoman expansion into Europe. After Vienna, the Ottoman Empire entered a long decline — losing territory steadily over the next two centuries. The battle that almost ended European Christian civilization also ended Ottoman expansion permanently. The Ottoman Empire that had threatened Vienna in 1683 would itself cease to exist in 1922, three hundred years later. Jan Sobieski was given the title 'Savior of Vienna and Western European Civilization' — not by historians, but by Pope Innocent XI, immediately after the battle.",
+      "visual_prompt": "Historical consequence map — before Vienna 1683: Ottoman Empire at maximum European extent, the advance toward Vienna shown as the leading edge of a centuries-long expansion — after Vienna 1683: the territory beginning to contract, the decline mapped over 200 years — the 1683 battle marked as the exact turning point — then: the 1922 dissolution of the Ottoman Empire marked — the 300-year arc from Vienna to dissolution — and Pope Innocent XI's papal recognition of Sobieski — the scale of the historical moment communicated through the map's shape shifting before and after September 12, 1683 — #2C1810 and #C9A227, the weight of an empire's turning point",
+      "bg_colors": ["#2C1810", "#1A0D08", "#C9A227"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 9,
+      "type": "villain_response",
+      "title": "The Ottoman Response",
+      "narration": "The Ottoman Empire did not collapse after Vienna. It contracted and reformed. Over the next century, it negotiated the Treaty of Karlowitz in 1699, ceding Hungary and other territories — the first major territorial loss in Ottoman history. It remained a significant power for another 200 years. The empire that Suleiman the Magnificent had built in the 1500s, that had taken Constantinople in 1453, that had threatened Vienna twice — once in 1529 and once in 1683 — adapted and continued. It took three centuries to finally end. The Ottoman Empire was many things. Easy to finish was not one of them.",
+      "visual_prompt": "The Ottoman Empire's adaptation after Vienna — the court of the Sultan, advisors presenting the Treaty of Karlowitz terms — the territorial losses mapped but the empire still vast — a timeline showing: 1453 (Constantinople), 1529 (first Vienna siege), 1683 (second Vienna siege, turned back), 1699 (Karlowitz), 1922 (dissolution) — 470 years from Constantinople to the end — the empire shown as something that bent but took 300 years to break — the dignity of the long decline shown without erasure of the Siege's significance — #2C1810 and Ottoman gold and green, historical respect",
+      "bg_colors": ["#2C1810", "#1A3A1A", "#C9A227"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 10,
+      "type": "tag",
+      "title": "The Croissant",
+      "narration": "One more thing. The croissant — the crescent-shaped pastry eaten at breakfast throughout the world — is also said to have origins at the Siege of Vienna. Viennese bakers, working through the night during the siege, reportedly heard the Ottoman sappers tunneling beneath the city and raised the alarm, saving the walls. After the victory, they baked a pastry in the shape of the Ottoman crescent moon — to celebrate eating the enemy's symbol. This story may be legend. The croissant exists. You are probably having one for breakfast somewhere. You are eating 1683.",
+      "visual_prompt": "The croissant origin visual — Vienna bakers in a cellar at night during the siege, hearing the faint sounds of tunneling beneath them, raising the alarm — then the post-victory celebration: bakers shaping the crescent pastry, the Ottoman crescent moon symbol visible as the inspiration — then: a modern breakfast table anywhere in the world, a croissant and coffee (the coffee also from the battle) on a plate — and then back to: the 1683 battlefield, the Ottoman crescent banners in retreat — the croissant and the coffee and the Viennese café as three things born from one afternoon in September 1683 — warm morning breakfast light contrasting with the battle scenes, #C9A227 and warm bread tones, the ending landing with warmth and wonder",
+      "bg_colors": ["#C9A227", "#8B6914", "#2C1810"],
+      "duration_sec": 9
+    }
+  ],
+  "viral_hook": "The Siege of Vienna in 1683 may have given Europe the croissant and the coffeehouse. The croissant's crescent shape mocks the Ottoman crescent moon. The coffee was in the abandoned Ottoman supply tents. You eat 1683 at breakfast. Jan Sobieski's cavalry charge stopped an empire in three hours.",
+  "highlight_scene": 5,
+  "highlight_note": "The largest cavalry charge in history — 20,000 winged hussars downhill into the Ottoman encampment, the wings roaring, hitting an army facing the wrong direction. The scale and the three-hour collapse.",
+  "short_title": "You Eat 1683 At Breakfast",
+  "rewatch_bait": "Scene 4 — the Ottoman tunnels detonating the mine and the breach opening. Three hours before the relief army arrives. The 12-meter breach that the garrison plugs with bodies. The city held. By three hours.",
+  "youtube_title": "The largest cavalry charge in history stopped an empire — and gave you the croissant ☕ | Gods & Glory S2 EP6",
+  "lesson": "History lives in ordinary things. The coffee you drink and the pastry you eat carry the weight of a battle fought 340 years ago by people who were trying to survive the night.",
+  "arc_notes": "GG S2 E06. Villain mandate: Kara Mustafa with 140,000 soldiers feels genuinely unstoppable — methodical, professional, two wall breaches created. Stopped by the largest cavalry charge in history arriving from an unexpected direction. The coffee and croissant hook in scenes 7 and 10 is the GG S2 present-day connection — the most immediate of the season (breakfast items). Kara Mustafa strangled by the Sultan after: the consequence of being the general who lost Vienna."
+}

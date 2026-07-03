@@ -1,0 +1,110 @@
+{
+  "channel": "ML",
+  "episode_number": 10,
+  "episode_id": "ML_EP010",
+  "season": 1,
+  "title": "What They Missed",
+  "tagline": "The answer was there the whole time.",
+  "hook_line": "Forty-seven teams. Forty-seven entries. Nobody read it right. Until now.",
+  "characters": ["BLAZE", "ELDER-7"],
+  "scenes": [
+    {
+      "scene_number": 1,
+      "type": "hook",
+      "title": "The Answer Was There",
+      "narration": "The answer was there the whole time. In the archive. In forty-seven entries. They just hadn't read it right.",
+      "visual_prompt": "ELDER-7's data pad displayed in full, all 47 archive entries visible simultaneously as a wall of amber text, every entry reading FALLEN at the end, the pattern overwhelming, then focus pulling to the blank TEAM SIX result field, cinematic close-up, 1080x1920 vertical",
+      "bg_colors": ["#8B6914", "#0A0808"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 2,
+      "type": "emotional",
+      "title": "Night",
+      "narration": "Night. The team was scattered across the recovery position. Quiet. BLAZE sat alone with the data pad, reading entry by entry. One by one. Starting from the beginning.",
+      "visual_prompt": "Night scene, team mechs in rest positions in background — GRANITE seated and still, NOVA's panels dim, STORM invisible, RUMBLE's hammer on the ground — BLAZE in foreground alone sitting with the data pad, amber glow illuminating his orange face plate, reading carefully, cinematic quiet, 1080x1920 vertical",
+      "bg_colors": ["#1A0A00", "#050508"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 3,
+      "type": "emotional",
+      "title": "ELDER-7 Appears",
+      "narration": "ELDER-7 appeared beside him. No sound — 40 meters of ancient mech, absolutely silent when he chose to be. He didn't speak. He waited.",
+      "visual_prompt": "BLAZE tiny at 8 meters beside ELDER-7 at 40 meters, both sitting in the dark, ELDER-7 in his characteristic observing angle, the amber data pad glow between them the only light, ELDER-7 patient and ancient and completely still, BLAZE reading, the vast scarred landscape and distant enemy encampment visible beyond, cinematic, 1080x1920 vertical",
+      "bg_colors": ["#8B6914", "#050505"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 4,
+      "type": "reveal",
+      "title": "Every Mech. Alone.",
+      "narration": "'Every mech in this archive.' BLAZE's voice quiet. Not a question. A realization. 'They all faced him alone.'",
+      "visual_prompt": "BLAZE close-up, amber visor lit by the data pad, the weight of the realization visibly landing in his posture — not devastation, not fear — clarity, the kind that comes just before everything changes, the 47 archive entries reflected small in his visor, cinematic, 1080x1920 vertical",
+      "bg_colors": ["#FF6B00", "#0A0808"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 5,
+      "type": "emotional",
+      "title": "Yes.",
+      "narration": "ELDER-7: 'Yes.'",
+      "visual_prompt": "ELDER-7 close-up, ancient bronze face at his permanent observing angle, the single word landing in the dark, data pad in hand, 2800 years of patience in one syllable, the amber glow illuminating just enough to see his expression — something changed there too, waiting for the next part, cinematic, 1080x1920 vertical",
+      "bg_colors": ["#8B6914", "#0A0808"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 6,
+      "type": "reveal",
+      "title": "The Pattern",
+      "narration": "'Xerxes has faced armies. But an army fights like one person — he's accounted for that. He's countered every individual function in this archive. Every strategy.'",
+      "visual_prompt": "BLAZE gesturing toward the archive display, the individual mech entries lit and highlighted as he speaks — TITAN-FOUR charged alone, ATLAS-9 mapped alone, SIEGE-3 held alone, SHADOW-1 struck alone — each entry showing an isolated function countered by Xerxes, the pattern explicit, cinematic, 1080x1920 vertical",
+      "bg_colors": ["#CC5500", "#0A0808"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 7,
+      "type": "reveal",
+      "title": "What He Has Never Faced",
+      "narration": "'But he has never fought six individuals who fight as a team. Not one organism. Six. Each one thinking. Each one choosing. Together.'",
+      "visual_prompt": "The data pad display showing all six team members — BLAZE GRANITE NOVA STORM ELDER-7 RUMBLE — as six separate active lights converging simultaneously on a point, not merging into one but remaining six distinct entities operating at the same moment, the visualization of the insight, cinematic, 1080x1920 vertical",
+      "bg_colors": ["#FF6B00", "#0A0A1A"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 8,
+      "type": "emotional",
+      "title": "Something Shifts",
+      "narration": "A pause. ELDER-7 looked at him. In 2,800 years of watching teams fall, something shifted in his expression. Something that hadn't moved in a very long time.",
+      "visual_prompt": "ELDER-7's face plate extreme close-up, ancient bronze patina, asymmetric features, and there — visible in his eyes behind the amber glow — something that hasn't been there in a very long time: the faintest trace of something that could be called hope, cinematic intimate, 1080x1920 vertical",
+      "bg_colors": ["#8B6914", "#080808"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 9,
+      "type": "climax",
+      "title": "No. He Has Not.",
+      "narration": "ELDER-7: 'No. He has not.'",
+      "visual_prompt": "ELDER-7 and BLAZE together, ELDER-7's confirmation landing like a door opening, BLAZE receiving it with the steadiness of someone who has just understood exactly what to do, the vast night sky above them and the enemy encampment glowing in the distance, two very different mechs who have just landed on the same ground, cinematic, 1080x1920 vertical",
+      "bg_colors": ["#8B6914", "#050510"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 10,
+      "type": "resolution",
+      "title": "Tomorrow We Show Him Something New",
+      "narration": "BLAZE looked at the blank result field next to TEAM SIX. Then at the team, one by one. 'Tomorrow. We show him something he has never seen.'",
+      "visual_prompt": "BLAZE looking at the data pad's TEAM SIX blank result field one last time, then turning to look at the team arrayed in the night — GRANITE's frost, NOVA's dim panels, STORM a purple shadow, RUMBLE massive and quiet, ELDER-7 ancient and present — then BLAZE's visor, amber and certain, cinematic, 1080x1920 vertical",
+      "bg_colors": ["#FF6B00", "#0A0808"],
+      "duration_sec": 9
+    }
+  ],
+  "viral_hook": "47 teams. All alone. All FALLEN. He's never fought six individuals who choose to fight together. Until tomorrow.",
+  "highlight_scene": 8,
+  "highlight_note": "ELDER-7's expression shifting — 2,800 years of recorded failure, and for the first time something moves in his face. The most important moment in the season.",
+  "short_title": "He Has Never Faced Six",
+  "rewatch_bait": "Every previous episode lands differently after this. ELDER-7 watching BLAZE charge alone in EP003. NOVA's panels being jammed in EP004. Each individual test is now retroactively about the same insight.",
+  "youtube_title": "He's Faced Every Army, Every Strategy, Every Mech — But Never Six Together | Mech Legends S1 EP010",
+  "lesson": "The answer to an impossible problem is rarely a better version of what failed. It's a different question entirely.",
+  "arc_notes": "EP010 is the most dialogue-heavy episode of the season, deliberately. Two characters. Quiet. The revelation must land without spectacle. ELDER-7's expression shift in scene 8 is the visual anchor of the entire season — worth the most screen time the animators can give it."
+}

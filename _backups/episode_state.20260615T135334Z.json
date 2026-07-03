@@ -1,0 +1,11 @@
+{
+  "series_name": "Empire Decoded",
+  "next_episode_number": 16,
+  "creative_brief": {
+    "villains": "Always portray the opposing empire/antagonist force as EXTREMELY STRONG — overwhelming numbers, elite reputation, top-tier equipment and leadership. The protagonists' achievement should feel impossible, not easy. (e.g. Thermopylae episode framed Persia as 'an empire of a million men' with the undefeated 'Immortals'.) Apply this villain-strength standard to every future episode's antagonist faction."
+  },
+  "topic_backlog": [],
+  "season_2_note": "topic_backlog is now empty — all 10 topics for season 1 (episodes 6-15) have been scripted. Before running pipeline.py --auto for episode 16, add new topics to topic_backlog, otherwise pick_topic() will wrap around and re-pick episode 6's topic (Salamis and Plataea). Suggested season 2 candidates: 'The Battle of Tours: Stopping an Empire's Advance', 'Agincourt: The Impossible Longbow Victory', 'The Sack of Rome: Fall of the Western Empire', 'Tenochtitlan: The Fall of the Aztec Empire', 'Midway: The Turning Point of the Pacific', 'Stalingrad: The Siege That Broke an Army'.",
+  "history": [
+    {
+      "note": "Episodes 1-4 are not present in this workspace and could not be recovered (built/saved in a separate session's temporary sandbox). Episode 5 (Battle of Thermopylae) WAS recovered: all of its generated assets live permanently on Higgsfield's cloud storage (not affected by sandbox cleanup) and are cataloged in assets/episode005_thermopylae_manifest.json. Numbering resumes at episode 6, continuing the story thread the ep5 nar

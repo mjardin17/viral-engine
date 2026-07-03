@@ -1,0 +1,142 @@
+{
+  "channel": "Little Olympus",
+  "episode_number": 2,
+  "episode_id": "LO_EP002",
+  "title": "Baby Hercules and the Giant Snake",
+  "tagline": "He's the strongest kid on Olympus. That's the problem.",
+  "duration_target_min": 5,
+  "aesthetic": {
+    "color_grade": "bright_kids_cartoon",
+    "primary_colors": ["#FFD700", "#228B22", "#FF6B35", "#00B4E6"],
+    "font_style": "rounded_chunky_bold",
+    "music_style": "upbeat_kids_adventure",
+    "narrator_tone": "warm_playful_encouraging"
+  },
+  "characters": {
+    "hero": {
+      "name": "Baby Hercules",
+      "role": "The strongest little kid on Olympus — who doesn't know how strong he is",
+      "visual": "Chubby toddler with enormous arms, tiny lion-skin cape, big warm brown eyes, always looks surprised when he breaks something",
+      "personality": "Sweet, loving, incredibly strong, zero awareness of his strength, food-motivated, genuinely tries to help"
+    },
+    "support_1": {
+      "name": "Little Zeus",
+      "role": "Best friend — gives Hercules a mission he immediately makes worse",
+      "visual": "Small curly white-haired boy with tiny golden crown, holding thunderbolt, electric blue eyes",
+      "personality": "Brave, impulsive, loyal, always has a plan (usually the wrong one)"
+    },
+    "support_2": {
+      "name": "Athena",
+      "role": "The one who sees the real solution",
+      "visual": "Girl with grey-streaked braided hair, tiny round glasses, small owl (Archie) on shoulder, scroll under arm",
+      "personality": "Calm, three steps ahead, patient — her solution always requires Hercules to be gentle"
+    },
+    "villain_of_the_week": {
+      "name": "Drako the Giant Snake",
+      "role": "An enormous serpent who has wrapped himself around the base of Mount Olympus and won't move",
+      "visual": "Massive green and gold snake, big grumpy yellow eyes, coiled around the mountain base, actually just COLD — snakes are cold-blooded",
+      "note": "Overwhelming at first — so big the kids can't see his head when they stand at his tail. Ultimately lonely and cold. NOT scary — comically huge."
+    }
+  },
+  "scenes": [
+    {
+      "scene_number": 1,
+      "type": "hook",
+      "title": "Something Has Wrapped Around the Mountain",
+      "narration": "One morning on Mount Olympus, everyone woke up to a very unusual problem. Something ENORMOUS had wrapped itself around the bottom of the mountain. Something green. Something scaly. Something that went on for MILES.",
+      "visual_prompt": "Little Olympus kids cartoon style. Wide shot of bright colorful Mount Olympus at sunrise. Around the base of the mountain, a massive green and gold snake is coiled — so huge you can only see his enormous scaly body, not his head. Little Zeus and Baby Hercules stand at the edge looking down at the giant snake coils with shocked expressions. Big expressive cartoon eyes. Bright warm morning colors. 16:9.",
+      "bg_colors": ["#87CEEB", "#90EE90", "#FFD700"],
+      "accent": "#228B22",
+      "camera": "pull_back",
+      "duration_sec": 9,
+      "higgsfield_prompt": "Cute kids cartoon style, colorful Mount Olympus at sunrise, enormous green and gold snake coiled around base of mountain, two small cartoon kids looking down shocked — one with curly white hair and crown, one chubby toddler, big expressive eyes, bright morning colors, 16:9"
+    },
+    {
+      "scene_number": 2,
+      "type": "setup",
+      "title": "Meet Drako",
+      "narration": "Baby Hercules walked all the way around the mountain to find the snake's head. It took a while. The snake's name was Drako. Drako was ENORMOUS. He was also, it turned out, not that scary. He was just very, very cold. And he'd found a mountain that was nice and warm.",
+      "visual_prompt": "Little Olympus kids cartoon style. Baby Hercules — chubby toddler with lion cape — stands face to face with DRAKO, a gigantic cartoon snake head with big yellow eyes and an unexpectedly grumpy but not scary expression. Drako's head alone is bigger than three Baby Hercules. Drako's expression is cold and huffy — he's shivering slightly. Baby Hercules looks curious and impressed. Bright cartoon colors. 16:9.",
+      "bg_colors": ["#228B22", "#90EE90", "#FFD700"],
+      "accent": "#FF6B35",
+      "camera": "push_in",
+      "duration_sec": 9,
+      "higgsfield_prompt": "Cute kids cartoon style, enormous cartoon snake head with yellow grumpy shivering eyes facing tiny chubby toddler with lion cape, snake head many times bigger than child, both have big expressive cartoon faces, bright cartoon colors, 16:9"
+    },
+    {
+      "scene_number": 3,
+      "type": "problem",
+      "title": "Zeus Has a Plan (Sort Of)",
+      "narration": "Little Zeus had a plan. He would zap Drako with lightning and make him go away. This did not work. Lightning just made Drako sneeze. Very loudly. Baby Hercules was launched into the clouds. He came back down immediately. He was fine. He's always fine.",
+      "visual_prompt": "Little Olympus kids cartoon style. Comic action scene — Little Zeus points his thunderbolt at the giant snake, there's a big cartoon ZAP, and Drako lets out an ENORMOUS cartoon sneeze. Baby Hercules has been launched upward and is in mid-air with a surprised expression, clouds around him. Little Zeus looks embarrassed. Athena watches from the side with a knowing look and a sigh. Very funny, cartoon slapstick. Bright colors. 16:9.",
+      "bg_colors": ["#4A4A8A", "#87CEEB", "#FFFFFF"],
+      "accent": "#FFD700",
+      "camera": "pull_back",
+      "duration_sec": 9,
+      "higgsfield_prompt": "Cute kids cartoon style, small boy with crown zapping giant snake with lightning, snake doing huge cartoon sneeze, chubby toddler launched into air looking surprised, smart girl watching with knowing expression, comic slapstick scene, bright cartoon colors, 16:9"
+    },
+    {
+      "scene_number": 4,
+      "type": "attempt",
+      "title": "Hercules Tries to Move the Snake",
+      "narration": "So Zeus had a new plan. Baby Hercules would just MOVE the snake. Baby Hercules grabbed Drako's tail and pulled. He pulled so hard that part of the mountain came with him. A little part. A medium part. Actually quite a large part. Drako was completely fine. The mountain was going to need some repairs.",
+      "visual_prompt": "Little Olympus kids cartoon style. Baby Hercules strains heroically with Drako's giant tail in both enormous arms, pulling with all his might. Behind him, a huge chunk of mountain is being pulled along with the snake — rocks, trees, a temple sliding out of place. Drako hasn't moved an inch and looks bored. Little Zeus and Athena watch in horror. Very funny, over-the-top cartoon destruction. Bright colors. 16:9.",
+      "bg_colors": ["#8B4513", "#90EE90", "#87CEEB"],
+      "accent": "#FF6B35",
+      "camera": "pull_back",
+      "duration_sec": 9,
+      "higgsfield_prompt": "Cute kids cartoon style, chubby toddler with enormous arms pulling giant snake tail with all his might, large chunk of mountain sliding along behind him, snake looking completely bored and unaffected, two kids watching in cartoon horror, funny destruction, bright colors, 16:9"
+    },
+    {
+      "scene_number": 5,
+      "type": "solution",
+      "title": "Athena's Idea",
+      "narration": "Athena had been thinking. She tapped her chin three times. Then she whispered something to Baby Hercules. Baby Hercules's face went from confused to very excited. He ran back to his garden — carefully, for once — and came back with the biggest, coziest pile of blankets you've ever seen.",
+      "visual_prompt": "Little Olympus kids cartoon style. Athena whispers to Baby Hercules — who has the most delighted expression — his eyes go wide and sparkly. Then: Baby Hercules carefully (tongue out with concentration) carries an ENORMOUS colorful pile of fluffy blankets, pillows, and quilts — bigger than he is — through the garden. He's being very gentle and careful which is clearly new for him. Bright warm colors, soft textures visible. 16:9.",
+      "bg_colors": ["#FFD700", "#FF69B4", "#FFA500"],
+      "accent": "#87CEEB",
+      "camera": "push_in",
+      "duration_sec": 9,
+      "higgsfield_prompt": "Cute kids cartoon style, smart girl with glasses and owl whispering to delighted chubby toddler, then toddler carefully carrying enormous colorful pile of soft blankets and pillows bigger than himself, tongue out in concentration, bright warm cozy colors, 16:9"
+    },
+    {
+      "scene_number": 6,
+      "type": "resolution",
+      "title": "The Warmest Snake on Olympus",
+      "narration": "Baby Hercules wrapped Drako in the warmest blanket nest you've ever seen. Every blanket on Olympus. Plus some pillows. Drako didn't say thank you. But his eyes went soft. And slowly, gently, he uncoiled himself from Mount Olympus — and slithered down to the valley below, where he curled up very cozily in a warm meadow. He would NOT be back.",
+      "visual_prompt": "Little Olympus kids cartoon style. Heartwarming resolution — enormous Drako the snake is wrapped in a giant colorful nest of blankets and pillows, looking completely cozy and relaxed, his grumpy eyes gone soft and sleepy. Baby Hercules watches proudly with arms crossed. Drako gently begins to uncoil from the mountain. Little Zeus cheers, Athena smiles, Archie the owl gives a single approving nod. Warm golden light. Rainbow in distance. 16:9.",
+      "bg_colors": ["#FFD700", "#90EE90", "#87CEEB"],
+      "accent": "#FF69B4",
+      "camera": "pull_back",
+      "duration_sec": 9,
+      "higgsfield_prompt": "Cute kids cartoon style, enormous snake wrapped in colorful cozy blanket nest looking relaxed and happy, chubby toddler watching proudly with arms crossed, small curly-haired boy cheering, smart girl with owl smiling, warm golden light, heartwarming scene, bright colors, 16:9"
+    },
+    {
+      "scene_number": 7,
+      "type": "lesson_and_cta",
+      "title": "What Did We Learn?",
+      "narration": "And that's what Baby Hercules learned that day. When you're the strongest kid on Olympus, the most powerful thing you can do is choose to be gentle. Baby Hercules was getting better at that. Most of the time. See you next time on Little Olympus!",
+      "visual_prompt": "Little Olympus kids cartoon style. Final group shot — Baby Hercules waves proudly at camera, one arm gently around Little Zeus (who is not being crushed for once). Athena and Archie the owl take a small bow. In the background the mountain is slightly lopsided from earlier but everyone is smiling. The sun is setting golden over Olympus. Fun title card energy. Bright warm colors. 16:9.",
+      "bg_colors": ["#1A1060", "#FFD700", "#FF6B35"],
+      "accent": "#FFD700",
+      "camera": "pull_back",
+      "duration_sec": 9,
+      "higgsfield_prompt": "Cute kids cartoon style, chubby toddler waving at camera with arm gently around small curly-haired boy, smart girl and owl bowing, lopsided mountain in background, golden sunset, all smiling, title card energy, warm bright colors, 16:9"
+    }
+  ],
+  "music": {
+    "style": "upbeat_kids_adventure",
+    "notes": "Playful bouncy base track. A comically deep THUD sound when Hercules pulls the mountain. Warm swell in scene 6 when Drako gets cozy. Triumphant but cute ending sting."
+  },
+  "voice_style": {
+    "tone": "warm_playful_encouraging",
+    "pacing": "punchy — but slow slightly on comedy beats to let jokes land",
+    "character": "storyteller who can barely keep a straight face during the mountain-breaking scenes"
+  },
+  "lesson": "Strength isn't just about power — knowing when to be gentle is the strongest thing you can do.",
+  "bible_reference": "Little_Olympus_Master_Bible.md — Baby Hercules section (accidental destruction, 'I HELPED!', food-motivated, gentle soul). Athena chin-tap (3x) appears in scene 5.",
+  "youtube_title": "Baby Hercules vs. the GIANT SNAKE! 🐍💪 | Little Olympus Episode 2",
+  "youtube_description": "Baby Hercules has a problem. A GIANT problem. A giant SNAKE problem. 😱\n\nDrako the enormous snake has wrapped himself all the way around Mount Olympus and won't budge! Can Baby Hercules use his incredible strength to move him?\n\nSpoiler: yes. But not how you'd expect. 😂\n\nIn today's adventure:\n💪 Baby Hercules tries to move a snake the size of a mountain\n⚡ Little Zeus makes things MUCH worse (as always)\n🦉 Athena figures out what's REALLY going on\n🐍 Drako just wants to be warm\n\n📺 Watch ALL our adventures: [playlist link]\n🔔 SUBSCRIBE for new episodes every week!\n\n#LittleOlympus #BabyHercules #KidsCartoon #GreekMythology #KidsYouTube",
+  "next_episode_preview": "Episode 3 — Perseus and the Tiny Medusa! Someone has turned the whole fountain PURPLE. And Mini Medusa may have had nothing to do with it. (She definitely had something to do with it.)",
+  "higgsfield_style_notes": "ALL scenes must be bright, colorful, cute cartoon style. Big expressive eyes on all characters. CoComelon × Greek mythology. NOT cinematic/dark. Drako is funny-big, not scary-big — his expressions should be grumpy-cute, not menacing."
+}

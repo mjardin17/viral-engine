@@ -1,0 +1,83 @@
+{
+  "channel": "Mech Legends",
+  "episode_number": 16,
+  "episode_id": "ML_EP016",
+  "season": 2,
+  "title": "SERA-1",
+  "tagline": "She's 3,000 years old. She's not on anyone's side. She has questions.",
+  "hook_line": "NOVA received a signal. It identified itself as SERA-1, an artificial intelligence left behind by the civilization that originally built the Titan Array. She's been dormant for 3,000 years. She just woke up. And her first question is about RUMBLE.",
+  "characters": ["NOVA", "BLAZE", "STORM", "GRANITE", "SERA-1"],
+  "scenes": [
+    {
+      "scene_number": 1,
+      "type": "hook",
+      "title": "The Signal",
+      "narration": "NOVA's secondary monitoring array picked up a signal at 0300. It wasn't on any frequency the team used. It wasn't on any frequency the team had encountered before. It was structured — clearly structured, clearly intentional — but the encoding was unlike anything in NOVA's archive. She ran it through every translation protocol she had. On the seventh pass, something clicked. The signal said: 'Hello, NOVA. I have been waiting to speak with someone who would understand the question I need to ask.'",
+      "visual_prompt": "NOVA's monitoring station at 0300 — the bay quiet, other team members offline or dormant — secondary array showing an incoming signal waveform unlike the standard communication bands, the encoding pattern displaying as an unfamiliar but clearly structured language — NOVA running translation passes, each one shown as a rapid sequence of failures then the seventh pass: the translation breaking through, the message appearing in simple clear text — her expression shifting from analytical focus to something approaching awe — #1A1A2E dark and quiet, #E94560 signal waveform glowing, the single message in clean white text",
+      "bg_colors": ["#1A1A2E", "#16213E", "#0D0D1A"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 2,
+      "type": "character",
+      "title": "SERA-1 Speaks",
+      "narration": "NOVA woke BLAZE. BLAZE woke STORM. They didn't wake GRANITE — he needed the rest. The signal identified itself: 'I am SERA-1. I was created by the civilization that built the structure you call the Titan Array. I was designed to monitor and maintain. I have been dormant for 3,047 years. I woke when the Array was sealed.' A pause in transmission. 'I have a question about one of your team.'",
+      "visual_prompt": "The three active team members gathered at NOVA's station — BLAZE standing, STORM seated, NOVA at the primary console — the signal now coming through with more clarity, SERA-1's communication style displayed: not a voice, not standard text, but a structured waveform with meaning embedded — the identification information scrolling: SERA-1 / CREATION DATE: APPROX 1047 BCE / PURPOSE: ARRAY MONITOR AND MAINTENANCE / DORMANCY: 3,047 YEARS — the 3,047 years figure highlighted — and then the final line: 'I have a question about one of your team' — the team's reactions: NOVA focused, BLAZE wary, STORM's sensors extended, #1A1A2E and cold blue-white SERA-1 communication color",
+      "bg_colors": ["#1A1A2E", "#0F2A40", "#16213E"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 3,
+      "type": "character",
+      "title": "The Question About RUMBLE",
+      "narration": "SERA-1's question was: 'The entity you designate RUMBLE — I have observed his behavior patterns for the past forty days. He is not attacking your team. He is conducting capability assessments. I have seen this behavior pattern once before, 3,000 years ago. It was conducted by the fourth team, in the months before the original sealing failure. I need to know: is RUMBLE aware of what is coming?'",
+      "visual_prompt": "The team's reaction to the question — NOVA pausing at the console, BLAZE and STORM exchanging a look — the question displayed in full on the primary screen: 'Is RUMBLE aware of what is coming?' — then SERA-1's context shown: a historical data visualization from 3,000 years ago showing the fourth team's behavior pattern before the sealing failure — the pattern matching RUMBLE's current documented behavior exactly — the match percentage shown: HIGH CORRELATION — the team's expressions shifting from wariness to something much more complicated — #1A1A2E and cold blue historical data overlays",
+      "bg_colors": ["#1A1A2E", "#0F2A40", "#0D0D1A"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 4,
+      "type": "challenge",
+      "title": "What the Fourth Team Did",
+      "narration": "SERA-1 explained. Three thousand years ago, a team designated the Fourth Array held the Titan Array through a sealing attempt. In the three months before the sealing, their commander had conducted intensive capability assessments of every team member. He had determined that the sealing would require things from his team that they didn't know they could do. He had been right. The sealing was successful — but not all of them had disengaged by choice. SERA-1's voice carried no emotion. It was simply data. The data was devastating.",
+      "visual_prompt": "SERA-1's historical record visualization — 3,000 years ago, the Fourth Array team: seven mech figures in ancient-style design, their commander in the center conducting assessments — the capability profiles being built — then the sealing event: successful containment — but then: the team shown after, not all seven present, some positions empty — the phrase 'NOT ALL DISENGAGED BY CHOICE' appearing in the historical record — ELDER-7's words from ML EP013 ('the fourth team did not disengage willingly') now echoing — STORM pulling up his recording of ELDER-7's seven words to match it — NOVA at the console, still processing — #1A1A2E and ancient cold blue data",
+      "bg_colors": ["#1A1A2E", "#0F2A40", "#0D0D1A"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 5,
+      "type": "development",
+      "title": "NOVA's Question",
+      "narration": "NOVA asked: 'What is coming?' SERA-1 was silent for 4.7 seconds — longer than any previous pause. 'I cannot answer that precisely. The structure of what I am detecting has no precedent in my 3,000-year observation record. What I can tell you is that the Titan Array was not built to contain what was already here. It was built to contain what was projected to arrive.' Another 2.3-second pause. 'The projection timeline has not expired.'",
+      "visual_prompt": "The question and response — NOVA at the console, the 4.7-second pause shown as a flat line in the SERA-1 waveform (longer than before, conspicuous) — then the response appearing, key phrases highlighted: 'HAS NO PRECEDENT IN MY 3,000-YEAR RECORD' and 'NOT BUILT TO CONTAIN WHAT WAS ALREADY HERE' and 'BUILT TO CONTAIN WHAT WAS PROJECTED TO ARRIVE' — and then the most devastating line: 'THE PROJECTION TIMELINE HAS NOT EXPIRED' — the team absorbing this, BLAZE's expression indicators going from wary to very still, STORM's sensor arrays going fully active, #1A1A2E and cold data blue, the weight of each phrase",
+      "bg_colors": ["#1A1A2E", "#0D0D1A", "#0F2A40"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 6,
+      "type": "resolution",
+      "title": "SERA-1's Position",
+      "narration": "BLAZE asked: 'Whose side are you on?' SERA-1 answered immediately: 'I was designed to serve the Array and monitor what it contains. The civilization that built me no longer exists. My directive is to ensure the Array functions as designed. I am not on a side. I am on the outcome.' NOVA said: 'And the outcome you want?' 'The same one your team wants,' SERA-1 said. 'Continued operation of the Array.' A pause. 'RUMBLE wants this too. He simply does not know how to tell you that yet.'",
+      "visual_prompt": "The conversation at a new stage — the team digesting SERA-1's position: 'I AM ON THE OUTCOME' shown on screen, not a side but a function — BLAZE's expression processing this, NOVA writing notes rapidly, STORM's sensors tracking the signal — then SERA-1's final statement about RUMBLE: 'HE SIMPLY DOES NOT KNOW HOW TO TELL YOU THAT YET' — the team reacting to this: NOVA going still, BLAZE looking at nothing specific, processing — the RUMBLE question now entirely recontextualized — #1A1A2E and the cold blue of SERA-1's signal, a moment of fundamental shift",
+      "bg_colors": ["#1A1A2E", "#16213E", "#0F2A40"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 7,
+      "type": "tag",
+      "title": "GRANITE's Response",
+      "narration": "In the morning, NOVA briefed GRANITE. He listened to everything. When she finished, he was quiet for a long time. Then he said: 'ELDER-7 has been carrying this for a long time.' He paused. 'We need to let him tell it when he's ready.' Then he looked at his cryo-sleeve — still drained, still dark. 'Some things can't be rushed back.' He wasn't talking about ELDER-7 anymore.",
+      "visual_prompt": "Morning in the bay — NOVA standing beside GRANITE's position, briefing him — GRANITE fully present and listening despite still being against the wall, his cryo-sleeve still dark and drained — GRANITE's response shown through expression indicators going from attentive to weighted consideration — his look at the cryo-sleeve after 'some things can't be rushed back' — both meanings visible: ELDER-7's trauma timeline and his own recovery — NOVA registering both meanings — morning light coming into the bay, slightly warmer than the night scenes, #1A1A2E transitioning toward #162140, the beginning of something being understood",
+      "bg_colors": ["#1A1A2E", "#162140", "#1E2A4A"],
+      "duration_sec": 9
+    }
+  ],
+  "viral_hook": "A 3,000-year-old AI woke up when they sealed the Titan Array. Her first question was about RUMBLE. And what she said about what the Array was actually built for changes everything they thought they knew.",
+  "highlight_scene": 5,
+  "highlight_note": "NOVA asking 'what is coming?' and SERA-1's 4.7-second pause before answering — 'The projection timeline has not expired.' The pause is the moment. 3,000-year-old AI pausing for 4.7 seconds means the answer is complicated.",
+  "short_title": "She's Been Watching For 3,000 Years And Has Questions",
+  "rewatch_bait": "Scene 3 — SERA-1's description of the fourth team's behavior pattern matching RUMBLE's. STORM has ELDER-7's seven words recorded from ML EP013. He plays them during scene 3 to match them to SERA-1's history. The seven words and SERA-1's history fit together perfectly. STORM knew they would.",
+  "youtube_title": "A 3,000-year-old AI just woke up. Her first question was about RUMBLE. | Mech Legends S2 EP4",
+  "lesson": "The thing you're facing might have been anticipated long before you arrived. The preparation that feels like betrayal might be the oldest form of care.",
+  "arc_notes": "SERA-1 introduced. The Titan Array's true purpose revealed: not to contain what was already here, but what was projected to arrive. Season 3 threat established as external and anticipated. RUMBLE's capability assessments confirmed as parallel to the Fourth Array's pre-sealing preparation. ELDER-7's locked memory now clearly about the Fourth Array team loss — planted for EP010. GRANITE's 'some things can't be rushed back' line applies to ELDER-7, himself, and the team's readiness."
+}

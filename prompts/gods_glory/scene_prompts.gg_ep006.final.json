@@ -1,0 +1,243 @@
+{
+  "episode_id": "GG_EP006",
+  "channel": "GG",
+  "title": "Pearl Harbor: The Attack That Woke a Sleeping Giant",
+  "tagline": "Two waves. Ninety minutes. A date that would live in infamy.",
+  "duration_target_min": 19,
+  "aesthetic": {
+    "color_grade": "cinematic_pacific_dawn",
+    "primary_colors": ["#0E1A2B", "#C9A84C", "#8B1A1A", "#2E4A3E"],
+    "font_style": "serif_documentary_bold",
+    "music_style": "hans_zimmer_conquest_epic",
+    "narrator_tone": "authoritative_punchy_dramatic"
+  },
+  "music": {
+    "style": "hans_zimmer_conquest_epic",
+    "notes": "Opening: calm Sunday-morning strings, almost peaceful, undercut with a single low ominous tone. First bombs: sudden percussive shock, brass stabs. Arizona's magazine explosion: the music drops out entirely for one beat, then returns devastating and low. Second wave: relentless, mechanical rhythm. Aftermath: mournful solo strings over silence. Roosevelt's speech: rising, resolute brass, the theme hardening into something unbreakable. Modern legacy/Black Tears: slow, elegiac, the theme returning one final time, quiet and heavy."
+  },
+  "voice_style": {
+    "tone": "authoritative_punchy_dramatic",
+    "pacing": "calm and measured early, sudden and urgent through the attack, slow and weighted in the aftermath",
+    "character": "documentary narrator who treats December 7, 1941 as a morning that genuinely changed the world, without ever reaching for melodrama the facts don't need"
+  },
+  "youtube_title": "Pearl Harbor: 90 Minutes That Changed the World | Gods & Glory EP6",
+  "youtube_description": "On the morning of December 7, 1941, the United States Pacific Fleet was at rest in Pearl Harbor. Within 90 minutes, over 2,400 Americans were dead, 21 ships were sunk or damaged, and the United States was at war.\n\nThis is the real story of Pearl Harbor — not the movie version. The actual timeline, the actual numbers, and the detail most people never learn: oil is still leaking from the USS Arizona today, more than 80 years later.\n\nGods & Glory — history's turning points, explained properly.",
+  "scenes": [
+    {
+      "scene_number": 1,
+      "type": "cold_open",
+      "title": "A Quiet Sunday Morning",
+      "narration": "December 7th, 1941. Sunday morning in Pearl Harbor, Hawaii. Sailors were sleeping in, eating breakfast, getting ready for church. The Pacific Fleet sat at anchor in neat rows, exactly as it had for months. At 7:48 AM, that calm ended. A formation of aircraft appeared over the island, and the pilot leading them radioed back to his carrier four words that would open the deadliest surprise attack in American history: Tora, Tora, Tora. Tiger, Tiger, Tiger. Total surprise achieved.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Peaceful dawn over Pearl Harbor, battleships at anchor in Battleship Row, sailors on deck in the calm morning light. Then a sudden cut: Japanese Zero fighters and dive bombers breaking through clouds against a brightening sky, the first wave of the attack beginning. 16:9, photorealistic, dramatic morning light.",
+      "bg_colors": ["#0E1A2B", "#C9A84C", "#8B1A1A"],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 2,
+      "type": "context",
+      "title": "Why Japan Attacked",
+      "narration": "This was not a random act of aggression. For years, Japan had been at war in China and expanding through Southeast Asia, and the United States had responded with economic pressure — culminating in an oil embargo that threatened to strangle the Japanese war machine within two years. Japan's military leadership concluded they had two choices: negotiate a withdrawal they considered humiliating, or strike first and seize the resources they needed before the embargo crippled them. Admiral Isoroku Yamamoto, who had studied at Harvard and traveled across America, personally doubted Japan could win a long war against US industrial capacity. He planned the attack anyway, hoping a knockout blow to the Pacific Fleet would buy Japan six months to a year of free conquest before America recovered.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Japanese naval command room, officers around a strategic map of the Pacific, tension and calculation. Admiral Yamamoto depicted in profile, contemplative. Cut to oil tankers and embargo imagery, the economic pressure made visual. 16:9, muted tones, serious tone.",
+      "bg_colors": ["#0E1A2B", "#2E4A3E", "#8B1A1A"],
+      "duration_sec": 52
+    },
+    {
+      "scene_number": 3,
+      "type": "context",
+      "title": "The Fleet That Was Sitting There",
+      "narration": "The US Pacific Fleet's home base at Pearl Harbor held the battleships that, in 1941, were still considered the measure of naval power. Eight of them sat in Battleship Row that morning: Arizona, Oklahoma, West Virginia, California, Nevada, Tennessee, Maryland, and Pennsylvania. Most of the fleet's sailors had no reason to expect an attack — Pearl Harbor was thousands of miles from Japan, and American intelligence believed any Japanese strike, if it came, would hit closer to home, in the Philippines or Southeast Asia. That assumption was wrong, and it was about to get a lot of people killed.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Wide aerial view of Battleship Row at Pearl Harbor, the massive grey battleships lined up at anchor, peaceful Sunday morning activity on deck. 16:9, documentary realism, calm before the storm.",
+      "bg_colors": ["#0E1A2B", "#C9A84C", "#2E4A3E"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 4,
+      "type": "context",
+      "title": "The Radar Warning Nobody Believed",
+      "narration": "At 7:02 AM, an Army radar station on Oahu picked up a large formation of aircraft approaching from the north. The two privates operating the station radioed it in. The officer who took the call, a lieutenant named Kermit Tyler, assumed it was a flight of American B-17 bombers expected that morning and told them, famously, 'don't worry about it.' Forty-six minutes later, the first bombs fell. It remains one of the most studied missed warnings in military history — not because anyone was incompetent, but because nobody in the chain of command was prepared to imagine what was actually happening.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Army radar station interior, two young soldiers at a radar scope watching a cluster of blips, one picking up a phone with a concerned expression. Tense, dim lighting, dramatic irony. 16:9.",
+      "bg_colors": ["#0E1A2B", "#2E4A3E", "#8B1A1A"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 5,
+      "type": "battle",
+      "title": "7:48 AM — The First Wave",
+      "narration": "183 Japanese aircraft, launched from six carriers sitting undetected 230 miles north of Oahu, struck in the first wave: dive bombers, torpedo bombers, and fighters. They hit the airfields first, destroying American planes before they could even take off — most US aircraft were parked wingtip to wingtip, an anti-sabotage precaution that made them perfect targets for strafing runs. Simultaneously, torpedo bombers swept in low over the harbor, releasing torpedoes specially modified with wooden fins to work in Pearl Harbor's shallow water. Within minutes, Battleship Row was burning.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Japanese torpedo bombers flying low over Pearl Harbor's water, torpedoes released, explosions beginning along Battleship Row. American aircraft burning on the ground at Hickam Field. Chaos and smoke. 16:9, intense action.",
+      "bg_colors": ["#8B1A1A", "#0E1A2B", "#C9A84C"],
+      "duration_sec": 52
+    },
+    {
+      "scene_number": 6,
+      "type": "battle",
+      "title": "The USS Arizona",
+      "narration": "At 8:06 AM, a Japanese armor-piercing bomb struck the USS Arizona near her forward ammunition magazine. The resulting explosion was catastrophic — it tore the bow of the ship apart and killed nearly half of everyone who died at Pearl Harbor that day in a single instant. Of the 1,177 sailors and Marines who died aboard the Arizona, many were never recovered. The ship sank in nine minutes.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. USS Arizona engulfed in a massive explosion, the forward section erupting in flame and black smoke, debris and water thrown skyward. Devastating, somber, historically accurate. 16:9.",
+      "bg_colors": ["#8B1A1A", "#0E1A2B", "#2E4A3E"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 7,
+      "type": "battle",
+      "title": "The USS Oklahoma Capsizes",
+      "narration": "The USS Oklahoma took multiple torpedo hits in the opening minutes and began rolling over almost immediately. Within twelve minutes she had capsized completely, trapping hundreds of men inside the hull below the waterline. For days afterward, rescue crews could hear the trapped men tapping on the steel from inside the overturned ship. Rescuers worked frantically, cutting through the hull with torches, and managed to save 32 men. Four hundred and twenty-nine sailors and Marines on the Oklahoma did not make it out.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. USS Oklahoma rolling over in the harbor, men jumping into burning oil-slicked water, rescue boats approaching. Desperate, chaotic, the human scale of the disaster. 16:9.",
+      "bg_colors": ["#0E1A2B", "#8B1A1A", "#2E4A3E"],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 8,
+      "type": "battle",
+      "title": "The Second Wave",
+      "narration": "At 8:54 AM, a second wave of 171 Japanese aircraft arrived, targeting ships that had survived the first strike and continuing the assault on the airfields. American resistance had organized in the chaos — sailors manned anti-aircraft guns, some still in their pajamas, and shot down several attacking planes. But the second wave inflicted further damage across the harbor before the Japanese aircraft withdrew around 9:45 AM. In under two hours, the attack was over.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. American sailors manning anti-aircraft guns on burning ship decks, firing into a sky full of Japanese planes, smoke and chaos everywhere. Determined resistance amid disaster. 16:9.",
+      "bg_colors": ["#8B1A1A", "#C9A84C", "#0E1A2B"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 9,
+      "type": "analysis",
+      "title": "The Numbers",
+      "narration": "When the smoke cleared: 2,403 Americans dead, 1,178 wounded. Twenty-one ships sunk or damaged. One hundred eighty-eight aircraft destroyed. On the Japanese side: 64 dead, 29 aircraft lost. It was, by any measure, a devastating tactical victory for Japan and one of the worst single days in American military history.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Somber aerial view of the harbor after the attack, multiple ships burning and listing, oil fires across the water, smoke columns rising into the sky. Documentary gravitas. 16:9.",
+      "bg_colors": ["#0E1A2B", "#8B1A1A", "#2E4A3E"],
+      "duration_sec": 44
+    },
+    {
+      "scene_number": 10,
+      "type": "analysis",
+      "title": "The Mistake Japan Made",
+      "narration": "Here is the detail that decided the rest of the Pacific War. All three of the Pacific Fleet's aircraft carriers — the ships that would actually win the war that followed — were out at sea on maneuvers and missed the attack entirely. Japanese commander Admiral Nagumo also chose not to launch a third wave to destroy Pearl Harbor's fuel depots, repair yards, and submarine base, judging the risk to his own carriers too high. Those facilities turned out to matter more than the battleships. Because they survived intact, the US Navy could repair and refuel ships immediately and kept fighting from Pearl Harbor for the rest of the war.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. US aircraft carrier at sea, untouched and powerful, juxtaposed against the burning harbor in the distance. The strategic irony made visual — the real weapon survived. 16:9.",
+      "bg_colors": ["#2E4A3E", "#0E1A2B", "#C9A84C"],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 11,
+      "type": "human_interest",
+      "title": "Doris Miller",
+      "narration": "Doris Miller was a mess attendant on the USS West Virginia — Black sailors in the segregated 1941 Navy were barred from combat roles and confined to jobs like cooking and laundry. When the attack began, Miller helped move wounded sailors to safety, then manned an anti-aircraft gun he had never been trained to use and fired on the attacking Japanese planes until he ran out of ammunition. He became the first Black American to receive the Navy Cross, the Navy's third-highest honor. He died two years later when his ship was torpedoed in the Pacific. The Navy commissioned an aircraft carrier in his name in 2020 — the first carrier ever named for a Black American and an enlisted sailor.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Doris Miller manning an anti-aircraft gun on the burning deck of the USS West Virginia, determined expression, smoke and chaos around him. Heroic, dignified, historically grounded. 16:9.",
+      "bg_colors": ["#C9A84C", "#0E1A2B", "#8B1A1A"],
+      "duration_sec": 52
+    },
+    {
+      "scene_number": 12,
+      "type": "human_interest",
+      "title": "The Men Trapped Inside",
+      "narration": "Not every story from that morning ended in rescue. Inside the capsized Oklahoma and the wrecked Arizona, men who survived the initial explosions were trapped in pockets of air with no way out. Some left messages scratched into the metal. Rescue crews worked for days, but for many trapped below the waterline, the air simply ran out before anyone could reach them. It is one of the grimmest, least-told parts of December 7th — that for some sailors, death wasn't instant. It came slowly, in the dark, waiting.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Somber, restrained depiction: the dark interior of an overturned ship hull, a faint shaft of light, the suggestion of trapped sailors without graphic detail. Respectful, heavy tone. 16:9.",
+      "bg_colors": ["#0E1A2B", "#2E4A3E", "#8B1A1A"],
+      "duration_sec": 46
+    },
+    {
+      "scene_number": 13,
+      "type": "context",
+      "title": "December 8th — A Date Which Will Live in Infamy",
+      "narration": "The next day, President Franklin Roosevelt addressed a joint session of Congress. His speech lasted just over seven minutes. The line everyone remembers is the opening: 'Yesterday, December 7th, 1941 — a date which will live in infamy — the United States of America was suddenly and deliberately attacked.' Congress declared war on Japan within an hour, with only one dissenting vote. Three days later, Germany and Italy declared war on the United States, and a conflict that had been raging in Europe and Asia for years became, for America, one single global war.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. President Roosevelt addressing a packed, solemn joint session of Congress, dramatic lighting, the weight of the moment. Newspaper headlines declaring war flashing past. 16:9, historic gravitas.",
+      "bg_colors": ["#0E1A2B", "#C9A84C", "#8B1A1A"],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 14,
+      "type": "analysis",
+      "title": "The Sleeping Giant",
+      "narration": "Admiral Yamamoto is often quoted as saying the attack had merely 'awakened a sleeping giant and filled him with a terrible resolve' — though historians have never confirmed he actually said it; the line first appeared in print decades later. Whether or not Yamamoto said those exact words, he understood the danger of what he'd done. Pearl Harbor didn't cripple America's ability to fight. It united a divided country that had spent two years arguing over whether to enter the war at all, and overnight ended that argument completely.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. American shipyards and factories shifting into wartime production, workers on assembly lines building ships and planes at massive scale. The industrial awakening made visual. 16:9.",
+      "bg_colors": ["#2E4A3E", "#0E1A2B", "#C9A84C"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 15,
+      "type": "analysis",
+      "title": "What Came Next",
+      "narration": "Within six months, the US Navy's surviving carriers won a decisive victory at Midway, sinking four Japanese fleet carriers and breaking Japan's naval initiative in the Pacific for good. American industrial capacity, which Yamamoto had feared all along, came online at a scale Japan could never match — by the end of the war, the US had built more aircraft carriers than Japan had built warships of any kind. Yamamoto's six-month window of free conquest had barely closed before the tide began turning against Japan permanently.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Montage of American naval and industrial buildup: shipyards launching new carriers, the Battle of Midway depicted with carrier aircraft, the scale of American war production. Triumphant but measured tone. 16:9.",
+      "bg_colors": ["#0E1A2B", "#C9A84C", "#2E4A3E"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 16,
+      "type": "human_interest",
+      "title": "The Survivors Who Came Home",
+      "narration": "Many sailors who survived Pearl Harbor went on to fight throughout the rest of the war. Some, like Doris Miller, did not survive to see it end. Others lived for decades afterward, and for the rest of their lives carried December 7th as the defining morning of their existence. Survivors' associations met annually at Pearl Harbor for reunions well into the 2010s, their numbers shrinking every year, until the very last verified USS Arizona survivors died in their late nineties and early hundreds in the years just before this episode was made.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Elderly Pearl Harbor survivors in dress uniform at a memorial reunion, saluting, the contrast between the young sailors of 1941 and the old men decades later. Respectful, elegiac. 16:9.",
+      "bg_colors": ["#C9A84C", "#0E1A2B", "#2E4A3E"],
+      "duration_sec": 46
+    },
+    {
+      "scene_number": 17,
+      "type": "anecdote",
+      "title": "The Black Tears of the Arizona",
+      "narration": "Here is the detail almost nobody learns in school. The USS Arizona was never raised. It still rests on the harbor floor exactly where it sank, and more than eighty years later, it is still leaking oil — roughly a quart a day, drop by drop, rising to the surface in a visible sheen that visitors to the memorial can see from above. Divers estimate as much as five hundred thousand gallons of fuel oil remain trapped inside the wreck. The Navy has deliberately chosen not to remove it: pumping it out risks structural collapse and a much larger environmental release, and the ship is also a designated war grave. Hawaiians call the slow seep of oil the Black Tears of the Arizona — the ship, they say, still mourning the men inside it.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Aerial view of the USS Arizona Memorial, the visible oil sheen rising and spreading on the water's surface above the sunken wreck below, somber and beautiful. Elegiac, contemplative. 16:9.",
+      "bg_colors": ["#0E1A2B", "#2E4A3E", "#8B1A1A"],
+      "duration_sec": 54
+    },
+    {
+      "scene_number": 18,
+      "type": "anecdote",
+      "title": "Buried at Sea, Decades Later",
+      "narration": "Since 1982, the Navy has allowed surviving crew members of the USS Arizona to choose, upon their deaths, to be interred inside the ship alongside the shipmates they lost in 1941. Navy divers carry an urn of cremated remains down to the wreck and place it inside one of the ship's gun turrets, reuniting each survivor with the crew they served beside for one morning in December, more than half a century before. More than forty men have chosen this. Roughly nine hundred of the original crew remain inside the ship to this day, never recovered, the wreck itself serving as their grave.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Navy divers in the dark water beside the submerged USS Arizona wreck, carefully placing an urn into the ship's structure, solemn underwater lighting filtering down from above. Reverent, quiet. 16:9.",
+      "bg_colors": ["#0E1A2B", "#2E4A3E", "#C9A84C"],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 19,
+      "type": "analysis",
+      "title": "Was It Really a Surprise?",
+      "narration": "For decades, a conspiracy theory has circulated claiming Roosevelt knew about the attack in advance and let it happen to justify entering the war. Declassified records and the consensus of professional historians do not support this. American codebreakers had cracked Japanese diplomatic codes and knew war was likely coming soon, but the specific target — Pearl Harbor itself — was not known in advance, and the failure was one of analysis and imagination, not a deliberate conspiracy. The honest version is less satisfying than the conspiracy: it was a colossal intelligence failure, not a secret plan.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Codebreakers in a dim intelligence office working over intercepted Japanese diplomatic cables, papers and decryption equipment, tense focused atmosphere. Historically grounded, not sensationalized. 16:9.",
+      "bg_colors": ["#2E4A3E", "#0E1A2B", "#8B1A1A"],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 20,
+      "type": "analysis",
+      "title": "What Pearl Harbor Actually Was",
+      "narration": "Pearl Harbor was a tactical masterpiece and a strategic catastrophe — for Japan. It achieved near-total surprise and devastated the battleships America had built its prewar naval doctrine around. But it missed the carriers, missed the fuel and repair infrastructure, and it guaranteed a war against an opponent with vastly greater industrial capacity, fighting on terms that opponent would ultimately dictate. Most attacks that look brilliant in the first ninety minutes are judged on what happens in the years that follow. By that standard, Pearl Harbor failed completely.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Split visual: the burning harbor in 1941 contrasted with the overwhelming scale of American wartime industrial production that followed. The strategic verdict made visual. 16:9.",
+      "bg_colors": ["#0E1A2B", "#C9A84C", "#8B1A1A"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 21,
+      "type": "analysis",
+      "title": "Why This Still Matters",
+      "narration": "Pearl Harbor is taught as the day America entered World War Two, but its deeper lesson is about the danger of assuming an enemy will act the way you expect them to. American commanders expected a different kind of attack, in a different place, and that assumption — not a lack of courage or resources — is what let the Japanese achieve total surprise. Military and intelligence services still study Pearl Harbor today as the textbook case of a failure of imagination, not a failure of information. The warning signs existed. Nobody connected them in time.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Modern military analysts and historians studying Pearl Harbor maps and documents, the lesson translated into a contemporary intelligence-briefing setting. Thoughtful, analytical tone. 16:9.",
+      "bg_colors": ["#2E4A3E", "#0E1A2B", "#C9A84C"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 22,
+      "type": "legacy",
+      "title": "The Memorial Today",
+      "narration": "Today, the USS Arizona Memorial sits directly above the wreck, a white structure spanning the sunken hull without touching it. Over a million visitors come each year. Names of the dead are inscribed on a marble wall. Below the water, the ship that once carried over a thousand men into battle still holds most of them, and still bleeds its slow black tears into the harbor it never left.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. The white USS Arizona Memorial structure spanning the water above the wreck, visitors walking through respectfully, the marble wall of names. Serene, dignified, present-day. 16:9.",
+      "bg_colors": ["#C9A84C", "#0E1A2B", "#2E4A3E"],
+      "duration_sec": 44
+    },
+    {
+      "scene_number": 23,
+      "type": "summary",
+      "title": "What Happened — The Summary",
+      "narration": "December 7th, 1941. Japan launches a surprise carrier strike on the US Pacific Fleet at Pearl Harbor. Two waves, ninety minutes, 2,403 Americans dead. The battleships are devastated — but the carriers, the fuel depots, and the repair yards survive untouched. The next day, America declares war. Within six months, the US Navy breaks Japanese naval power at Midway. The USS Arizona is never raised — it remains on the harbor floor today, still leaking oil, still holding most of its crew. A sleeping giant, woken with a terrible resolve.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Summary title card sequence: key moments in bold text over historical imagery — the attack, Roosevelt's speech, Midway, the memorial today. Then a final slow shot of the Arizona Memorial at sunset. 16:9.",
+      "bg_colors": ["#0E1A2B", "#C9A84C", "#8B1A1A"],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 24,
+      "type": "next_episode",
+      "title": "Next Episode — D-Day",
+      "narration": "Next episode on Gods and Glory: three years after Pearl Harbor, the United States and its allies launched the largest amphibious invasion in human history onto the beaches of Normandy. Five beaches. Thousands of ships. One single day that decided whether Nazi-occupied Europe would ever be free. D-Day — how the Allies pulled off the impossible, and what it actually cost.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Teaser shot: a vast Allied invasion fleet approaching a coastline at dawn, landing craft full of soldiers, the scale of D-Day suggested. Epic, anticipatory. 16:9.",
+      "bg_colors": ["#0E1A2B", "#2E4A3E", "#8B1A1A"],
+      "duration_sec": 40
+    }
+  ]
+}

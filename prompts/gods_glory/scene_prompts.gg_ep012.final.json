@@ -1,0 +1,328 @@
+{
+  "channel": "GG",
+  "episode_number": 12,
+  "episode_id": "GG_EP012",
+  "title": "The Last Emperor: How Rome Fell in a Single Day",
+  "subtitle": "476 AD \u2014 The End of a Thousand-Year Empire",
+  "tagline": "One boy emperor. One barbarian general. A thousand years of Rome \u2014 gone by sunset.",
+  "villain_mandate": "Odoacer \u2014 the barbarian who decided an empire wasn't worth keeping",
+  "duration_target_sec": 1140,
+  "viral_hook": "The Roman Empire didn't fall with a bang. It ended with a teenage boy handing over a crown.",
+  "youtube_title": "The Last Emperor: How Rome Fell in a Single Day (476 AD)",
+  "lesson": "Empires don't collapse \u2014 they are abandoned by the people who should have defended them.",
+  "highlight_scene": 8,
+  "scenes": [
+    {
+      "scene_number": 1,
+      "type": "cold_open",
+      "title": "The Boy on the Throne",
+      "duration_sec": 48,
+      "narration": "476 AD. The Roman Empire has lasted one thousand, two hundred and twenty-nine years. It has survived Hannibal, Nero, plague, civil war, and three centuries of barbarian raids. It has never been conquered. But tonight, in the city of Ravenna, a sixteen-year-old boy named Romulus sits on the throne of the Western Empire. He has no army. He has no money. And the man standing outside his palace is not coming to bow. He is coming to take the crown off the boy's head and end Rome forever. This is how the greatest empire in history died.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Teenage boy emperor Romulus Augustulus on an ornate Roman throne in a dimly lit palace, Ravenna, 476 AD. He looks frightened, young, overwhelmed. Outside the palace walls, barbarian soldiers with torches gather. The last flickering flame of Roman power. Gold mosaics, crumbling grandeur. 16:9 cinematic.",
+      "bg_colors": [
+        "#8B1A1A",
+        "#2C1A00",
+        "#C9A227"
+      ]
+    },
+    {
+      "scene_number": 2,
+      "type": "context",
+      "title": "A Ghost of an Empire",
+      "duration_sec": 47,
+      "narration": "By 476 AD, the Western Roman Empire was a ghost wearing the armor of a giant. Its territory had shrunk to Italy and scraps of Gaul. Britain was gone. Spain was Visigoth. North Africa belonged to the Vandals. The legions that had conquered the known world were now mostly barbarian mercenaries who hadn't been paid in months. The Senate still met in Rome, still wore their togas and debated policy, but they controlled nothing. Real power belonged to the generals \u2014 and in 476, the general who mattered most was a man named Odoacer.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Map of the collapsing Western Roman Empire, 476 AD \u2014 vast territories shaded in barbarian colors, only Italy remaining Roman. Roman senators in togas walking through a crumbling forum, marble stained and weeds growing between stones. Contrast between past glory and present decay. 16:9.",
+      "bg_colors": [
+        "#1A1A2E",
+        "#4A3728",
+        "#8B8B6B"
+      ]
+    },
+    {
+      "scene_number": 3,
+      "type": "character_intro",
+      "title": "The Man Who Ended Rome",
+      "duration_sec": 46,
+      "narration": "Odoacer was not supposed to be important. He was a Germanic chieftain \u2014 son of a minor tribal leader \u2014 who had risen through the Roman army as a mercenary. He was good with a sword, good with men, and completely without illusions about what Rome had become. In 476, he led a coalition of Germanic troops who had one simple demand: land. One third of Italy, to be exact. The Roman general Orestes \u2014 the man who had actually put Romulus on the throne \u2014 said no. That was the last serious mistake anyone in the Western Roman government ever made.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Odoacer \u2014 powerful Germanic warrior, commanding presence, weathered face \u2014 standing before Roman walls with his Germanic troops behind him. He is not barbaric but calculating, dressed in a mix of Roman and Germanic armor. He stares at the palace gates. Patient. Certain. 16:9.",
+      "bg_colors": [
+        "#2C3E1A",
+        "#8B6914",
+        "#4A2810"
+      ]
+    },
+    {
+      "scene_number": 4,
+      "type": "historical",
+      "title": "Orestes Makes His Last Mistake",
+      "duration_sec": 47,
+      "narration": "Orestes had a complicated relationship with the empire he served. He had once been a secretary to Attila the Hun. He had manipulated his way to the position of military commander of Rome and placed his own son \u2014 Romulus \u2014 on the throne as a puppet emperor. He was a skilled political operator. But when Odoacer's troops demanded their third of Italy, Orestes refused. He didn't have the military strength to back the refusal, and he knew it. But he refused anyway. Odoacer's response was immediate. He marched his forces south, crushed Orestes at the Battle of Placentia, and executed him personally.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Battle of Placentia \u2014 barbarian forces overwhelming outnumbered Roman troops in a valley, late summer light. Orestes, gray-haired Roman general, making a final stand. The moment the last effective Roman military commander falls. Dust, iron, the sound of an empire's final defense collapsing. 16:9.",
+      "bg_colors": [
+        "#8B1A1A",
+        "#4A2810",
+        "#2C1A00"
+      ]
+    },
+    {
+      "scene_number": 5,
+      "type": "historical",
+      "title": "The Siege of Ravenna",
+      "duration_sec": 45,
+      "narration": "Ravenna was almost impregnable. Surrounded by marshes and lagoons, it had served as the capital of the Western Empire since 402 AD precisely because it was so hard to attack. Romulus retreated there with whatever guards remained loyal. Odoacer surrounded the city but didn't need to storm it. He simply waited. There was no relief force coming. No Eastern emperor sending legions. The Eastern Empire \u2014 still powerful, still rich, still Roman in Constantinople \u2014 watched and did nothing. Ravenna held out for weeks. Then the food ran out and the gates opened.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Ravenna surrounded by marshes and lagoons, Germanic forces encircling the city walls. Young emperor Romulus watching from the ramparts, knowing no rescue is coming. The Eastern Empire visible only as a distant metaphor \u2014 rich cities behind the horizon, doing nothing. Autumn mist over the water. 16:9.",
+      "bg_colors": [
+        "#1A2E3E",
+        "#4A6878",
+        "#8B8B6B"
+      ]
+    },
+    {
+      "scene_number": 6,
+      "type": "pivotal_action",
+      "title": "The Crown Removed",
+      "duration_sec": 48,
+      "narration": "On September 4, 476 AD, Romulus Augustulus walked into a throne room for the last time. Odoacer stood before him. The ceremony that followed was brief and strangely undramatic. Romulus removed the imperial diadem \u2014 the crown of the Western Roman Empire \u2014 and placed it in Odoacer's hands. Odoacer did not put it on. He sent it to Constantinople instead, along with a letter to the Eastern Emperor Zeno. The letter said, in effect: there is only one Roman Emperor now, and he is you. The west doesn't need its own. This moment \u2014 a teenage boy handing over a jeweled headband \u2014 ended the Roman Empire in the west.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Romulus Augustulus removing the imperial diadem \u2014 jeweled, gold, ancient \u2014 and placing it in Odoacer's outstretched hands. The moment captured in extreme close-up: the crown transferring hands. Mosaic walls, torchlight, silence. The weight of a thousand years in that gesture. 16:9.",
+      "bg_colors": [
+        "#C9A227",
+        "#2C1A00",
+        "#8B1A1A"
+      ]
+    },
+    {
+      "scene_number": 7,
+      "type": "irony",
+      "title": "The Boy Who Lived",
+      "duration_sec": 46,
+      "narration": "Here is what made this moment strange: Odoacer let Romulus live. The boy was exiled to a castle in Campania \u2014 Castellum Lucullanum, a comfortable prison on the Bay of Naples \u2014 and given a pension. Odoacer even felt sorry for him. He wrote that the boy was too young and too innocent to blame for what his father had done. Romulus lived at least another decade after losing the throne. He may have lived into the sixth century. The last Western Roman Emperor died peacefully, probably old, looking out at the Mediterranean from a seaside fortress. History rarely offers such mercy.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Romulus Augustulus in exile at Castellum Lucullanum \u2014 a beautiful castle on the Bay of Naples. He stands on a terrace overlooking the sparkling sea, no longer emperor, just a young man. Peaceful, even beautiful. The irony of the last Roman emperor living comfortably while the empire he represented ceased to exist. 16:9.",
+      "bg_colors": [
+        "#1A3E2E",
+        "#4A7860",
+        "#C9A227"
+      ]
+    },
+    {
+      "scene_number": 8,
+      "type": "battle",
+      "title": "What Odoacer Built",
+      "duration_sec": 47,
+      "narration": "Odoacer didn't want to destroy Rome. He wanted to rule it. After deposing Romulus, he declared himself King of Italy \u2014 not Emperor, just King. He kept the Roman administrative system running. He kept Roman senators in their positions. He kept Roman law. He attended the games in Rome, maintained the aqueducts, preserved the monuments. From a distance, almost nothing changed. The people of Italy still lived under Roman law, administered by Roman institutions, in cities built by Roman engineers. The difference was simply who was in charge. And that difference, it turned out, changed everything downstream.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Odoacer in Rome \u2014 not destroying the city but walking through it as its ruler. Roman senators bow to him. Aqueducts still flow. The Colosseum still stands. He is Germanic but he rules Rome. The complicated reality of what 'the fall of Rome' actually looked like \u2014 not fire and ruin but a quiet transfer of power. 16:9.",
+      "bg_colors": [
+        "#2C3E1A",
+        "#8B6914",
+        "#4A2810"
+      ]
+    },
+    {
+      "scene_number": 9,
+      "type": "historical",
+      "title": "The East Watches",
+      "duration_sec": 46,
+      "narration": "Constantinople was the other Rome \u2014 and it never fell. While the west collapsed, the Eastern Roman Empire remained powerful, prosperous, and Greek-speaking, though it called itself Roman until 1453. Emperor Zeno received Odoacer's letter and the returned western crown with carefully calculated indifference. He acknowledged Odoacer as a patrician \u2014 a Roman noble rank \u2014 which technically made Odoacer's rule legitimate under Roman law. This was diplomatic genius. It meant Zeno didn't have to fight to reclaim the west, but it also meant he could reclaim that legitimacy later, if he chose. He filed it away and waited.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Constantinople \u2014 the Eastern Roman capital \u2014 gleaming and powerful. Emperor Zeno on his throne, reading the letter from Odoacer. The crown of the Western Empire sitting on a cushion before him. His expression: calculating, neither pleased nor distressed. He sets it aside. The East continues. 16:9.",
+      "bg_colors": [
+        "#1A1A2E",
+        "#C9A227",
+        "#4A6878"
+      ]
+    },
+    {
+      "scene_number": 10,
+      "type": "historical",
+      "title": "The Gothic Twist",
+      "duration_sec": 46,
+      "narration": "Odoacer ruled Italy for seventeen years. He was, by most accounts, a capable and reasonable ruler. And then Constantinople decided he was too comfortable. Emperor Zeno, looking for a way to deal with an inconvenient Gothic king named Theodoric who was causing problems in the Balkans, had an elegant solution: send Theodoric to Italy. Theodoric was Ostrogothic \u2014 from a different Germanic tribe \u2014 and Zeno granted him Italy as a prize if he could take it. Theodoric invaded in 488 AD. After four years of brutal war, he cornered Odoacer in Ravenna, negotiated a peace treaty, invited Odoacer to a banquet \u2014 and killed him personally at the dinner table.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The betrayal at Ravenna \u2014 Theodoric and Odoacer at a feast, apparently reconciled, and then the sudden violence. Theodoric kills Odoacer with his own hands. The new ruler of Italy rises, dripping, from the table. The cycle of power in the post-Roman west. 16:9.",
+      "bg_colors": [
+        "#8B1A1A",
+        "#2C1A00",
+        "#4A2810"
+      ]
+    },
+    {
+      "scene_number": 11,
+      "type": "analysis",
+      "title": "Was This Really the Fall?",
+      "duration_sec": 47,
+      "narration": "Historians have argued for centuries about whether 476 AD really marks the fall of Rome. The Eastern Empire continued until 1453. Roman law survived in European legal codes. The Catholic Church preserved Roman administrative structures. Latin evolved into French, Spanish, Italian, Portuguese. Many historians now say Rome didn't fall \u2014 it transformed. But something did end on September 4, 476. The unbroken line of Roman Emperors ruling the west. The political fiction that one unified government descended from Augustus controlled the Mediterranean world. That ended. Whether you call it a fall or a transformation depends on what you think Rome actually was.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Symbolic split-screen: on one side, the crumbling Western Empire \u2014 broken columns, overgrown forums; on the other side, Constantinople gleaming in gold, the Eastern Empire continuing. Then cut to medieval Europe \u2014 the world that came after Rome. The transformation visible across centuries. 16:9.",
+      "bg_colors": [
+        "#1A1A2E",
+        "#4A3728",
+        "#C9A227"
+      ]
+    },
+    {
+      "scene_number": 12,
+      "type": "historical",
+      "title": "The Barbarian Kingdoms Rise",
+      "duration_sec": 45,
+      "narration": "In the decades after 476, the old Roman west fractured into kingdoms. The Visigoths ruled Spain and southern Gaul. The Franks took northern Gaul \u2014 what became France. The Vandals held North Africa. The Ostrogoths claimed Italy. Anglo-Saxons settled Britain. Each of these kingdoms called itself Roman in some ways. Their kings issued coins with Roman imagery. Their laws borrowed Roman legal concepts. Their churches used Latin. They were not destroying Rome \u2014 they were competing to inherit it. The idea of Rome was so powerful that the people who ended it tried to wear its identity.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Map of post-Roman Europe \u2014 the barbarian kingdoms rising from the ruins of the Western Empire. Visigoth kings in Spain, Frankish warriors in Gaul, Vandal fleets in the Mediterranean. Each kingdom flying a different banner but all built on Roman foundations. 16:9.",
+      "bg_colors": [
+        "#2C3E1A",
+        "#8B6914",
+        "#1A1A2E"
+      ]
+    },
+    {
+      "scene_number": 13,
+      "type": "dramatic",
+      "title": "Rome the Eternal City",
+      "duration_sec": 46,
+      "narration": "Rome itself \u2014 the actual city \u2014 suffered. Its population, over a million at the height of the empire, collapsed to perhaps twenty or thirty thousand by the sixth century. The aqueducts fell into disrepair. The forums became cattle pastures. Marble was stripped from monuments to build medieval churches. Squatters moved into the Colosseum. The city that had ruled the world became a provincial backwater. But it never disappeared. Rome's bishops \u2014 the popes \u2014 remained. Its ruins remained. Its memory remained. And slowly, over centuries, the city began to rebuild itself around that memory, as it does still.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Rome in decline \u2014 the great forums as cattle pastures, the Colosseum with squatters' fires, marble stripped from temples. A few monks copying manuscripts in a cell beside crumbling monuments. The eternal city diminished but not dead, its ruins still enormous, its memory still alive. 16:9.",
+      "bg_colors": [
+        "#4A3728",
+        "#8B8B6B",
+        "#2C1A00"
+      ]
+    },
+    {
+      "scene_number": 14,
+      "type": "historical",
+      "title": "The Church Fills the Vacuum",
+      "duration_sec": 46,
+      "narration": "When the empire collapsed, something else was already in place to hold Europe together: the Christian Church. Roman bishops had built administrative networks across the western empire. They ran hospitals, schools, grain distribution. They preserved literacy when secular institutions collapsed. The Bishop of Rome \u2014 the Pope \u2014 stepped into the political vacuum left by the emperors, claiming spiritual authority over the whole Christian west. The Church kept Latin alive. It kept Roman law concepts alive. It kept the memory of Rome alive. In a real sense, the Church was the empire's ghost \u2014 inheriting its structure while transforming its purpose.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The Christian Church rising in Rome's ruins \u2014 a basilica being built from Roman marble, monks copying manuscripts, a bishop distributing bread to the poor. The administrative infrastructure of the Church filling the void left by imperial collapse. The cross rising where the eagle fell. 16:9.",
+      "bg_colors": [
+        "#1A2E3E",
+        "#C9A227",
+        "#2C1A00"
+      ]
+    },
+    {
+      "scene_number": 15,
+      "type": "historical",
+      "title": "Gibbon's Warning",
+      "duration_sec": 47,
+      "narration": "In 1776, Edward Gibbon published the first volume of The Decline and Fall of the Roman Empire \u2014 one of the most influential history books ever written. Gibbon argued that Rome fell because of Christianity, which redirected civic virtue toward the afterlife, and because of military overextension and political corruption. Two hundred and fifty years later, historians still argue with Gibbon. But his core insight stands: great powers don't collapse from external attack alone. They collapse when the internal will to maintain them disappears. Rome's soldiers stopped being Roman. Rome's senators stopped governing. Rome's emperors became teenagers in palaces. The will went first. The walls followed.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Visual montage of the factors of Roman decline \u2014 barbarian soldiers in Roman armor, corrupt officials, empty treasuries, senators doing nothing, a teenage emperor on a throne. Edward Gibbon's book visible as a historical cutaway. The question lingers: what caused this? 16:9.",
+      "bg_colors": [
+        "#2C1A00",
+        "#8B8B6B",
+        "#1A1A2E"
+      ]
+    },
+    {
+      "scene_number": 16,
+      "type": "battle",
+      "title": "The Last Legion",
+      "duration_sec": 45,
+      "narration": "There is a persistent romantic myth: the Last Legion \u2014 Roman soldiers who refused to accept the empire's end and kept fighting somewhere, somehow, as Rome itself dissolved. The myth captures something true, even if the specific story is fiction. There were Roman soldiers serving in the east as late as the sixth century, under Emperor Justinian's reconquest of Italy. There were soldiers in Roman forts in Britain who may not have received word of the empire's collapse for months or years. The legions didn't all get a letter saying it was over. Some of them just kept their posts until no one paid them or came to relieve them.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Roman soldiers \u2014 disciplined, in traditional armor \u2014 standing at a remote frontier post. No orders coming. No supplies. The empire that created them has dissolved but they don't know it yet. They keep their formation. They keep their watch. The last flicker of legion discipline in an empire that no longer exists. 16:9.",
+      "bg_colors": [
+        "#2C3E1A",
+        "#4A3728",
+        "#8B8B6B"
+      ]
+    },
+    {
+      "scene_number": 17,
+      "type": "turning_point",
+      "title": "Justinian's Dream",
+      "duration_sec": 46,
+      "narration": "Sixty years after 476, the Eastern Emperor Justinian tried to undo it all. From 535 to 554 AD, his brilliant general Belisarius fought the Gothic Wars \u2014 a brutal two-decade campaign to retake Italy for Constantinople. He succeeded. Italy became an Eastern Roman province again. But the victory was pyrrhic. The wars devastated Italy worse than the barbarian takeover had. Agriculture collapsed. Disease spread. Population plummeted. And within three years of Justinian's death in 565, the Lombards \u2014 another Germanic tribe \u2014 walked into a weakened Italy and took it. Justinian's reconquest lasted barely a generation. Rome could not be put back together.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Justinian's general Belisarius \u2014 brilliant, aging \u2014 standing in a recaptured Italy surrounded by devastation. He has won. But the land he won is ruined. Gothic War destruction visible everywhere. And in the background, the Lombards are already gathering on the northern horizon. Victory as tragedy. 16:9.",
+      "bg_colors": [
+        "#1A1A2E",
+        "#8B1A1A",
+        "#C9A227"
+      ]
+    },
+    {
+      "scene_number": 18,
+      "type": "historical",
+      "title": "The Roman Legacy in Law",
+      "duration_sec": 47,
+      "narration": "Rome died as a state. It did not die as a civilization. Roman law became the foundation of every major legal system in Europe. The Napoleonic Code, which spread across Europe in the nineteenth century and influenced legal systems worldwide, was built explicitly on Roman legal principles. The very concept of a corporation, of legal personhood, of contract law, of evidence and due process \u2014 all Roman. When lawyers today argue about legal precedent, they are participating in a tradition that Cicero would have recognized. The Roman courtroom never really closed. It just moved.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Roman law tablets and scrolls visible alongside modern legal documents \u2014 a visual line drawn from ancient Rome through medieval canon law to modern European legal codes. A courtroom today where Latin legal terms are still used. The unbroken thread. 16:9.",
+      "bg_colors": [
+        "#C9A227",
+        "#1A1A2E",
+        "#4A3728"
+      ]
+    },
+    {
+      "scene_number": 19,
+      "type": "legacy",
+      "title": "The Roman Roads Still Run",
+      "duration_sec": 45,
+      "narration": "Many Roman roads are still in use today. The Via Appia, built in 312 BC, is still driveable. Roman roads in Britain became the foundation for English roads \u2014 the A2, the A5, the Fosse Way \u2014 all follow Roman routes. Roman engineering built structures that have stood for two thousand years: the Pantheon still has its original dome. Roman aqueducts still carry water in France and Spain. Roman concrete \u2014 whose formula was lost and only recently rediscovered \u2014 is more durable than modern concrete. The physical infrastructure of Rome outlasted the political structure by millennia.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Roman roads stretching across Europe \u2014 ancient stone paving visible beneath modern asphalt. The Pantheon dome gleaming. A Roman aqueduct in France with water still flowing. The physical remains of Rome visible in the modern landscape \u2014 monuments of permanence built by a civilization that is gone. 16:9.",
+      "bg_colors": [
+        "#4A3728",
+        "#8B8B6B",
+        "#1A3E2E"
+      ]
+    },
+    {
+      "scene_number": 20,
+      "type": "legacy",
+      "title": "The Roman Language Lives",
+      "duration_sec": 46,
+      "narration": "Over one billion people today speak languages directly descended from Latin. French, Spanish, Portuguese, Italian, Romanian \u2014 all Romance languages, all Latin's children. English, though Germanic at its core, absorbed Latin vocabulary so heavily through French and the Church that roughly sixty percent of English words have Latin roots. When you say 'agenda,' 'exit,' 'video,' 'status,' 'data,' or 'campus,' you are speaking Latin. The language that Roman soldiers cursed in on Hadrian's Wall, that senators used in the Forum, that Julius Caesar wrote in \u2014 it never died. It just multiplied.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Latin text morphing visually into French, Spanish, Italian, Portuguese, English \u2014 the tree of Romance languages growing from one root. Maps of the world with the billion Latin-descended language speakers highlighted. Words flying through the air: agenda, video, exit, status \u2014 Latin alive in the modern world. 16:9.",
+      "bg_colors": [
+        "#1A2E3E",
+        "#C9A227",
+        "#4A6878"
+      ]
+    },
+    {
+      "scene_number": 21,
+      "type": "modern_connection",
+      "title": "The American Rome",
+      "duration_sec": 47,
+      "narration": "When America's founders designed their republic, they looked at Rome. The Senate. The concept of citizen-soldiers. The principle of checks and balances between executive, legislative, and judicial branches. The Roman fasces \u2014 the bundled rods symbolizing strength through unity \u2014 appear on the United States Mace of the House of Representatives, the Lincoln Memorial, and the back of the Mercury dime. Roman architecture dominates Washington DC: the Capitol dome, the Supreme Court, the Lincoln Memorial. America was built as a conscious successor to Rome. And the founders knew Rome's history well enough to fear they'd repeat it.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Split imagery: the Roman Senate and the United States Senate; the Pantheon and the US Capitol Building; Roman fasces symbols and their American counterparts. The founders consciously invoking Rome \u2014 Jefferson, Madison, Hamilton who called themselves Publius. The American republic as Rome's inheritor and student. 16:9.",
+      "bg_colors": [
+        "#1A1A2E",
+        "#C9A227",
+        "#8B1A1A"
+      ]
+    },
+    {
+      "scene_number": 22,
+      "type": "analysis",
+      "title": "Why Empires Fall",
+      "duration_sec": 48,
+      "narration": "The Roman Empire's fall has been attributed to over two hundred different causes by various historians. Climate change. Lead poisoning from pipes. The third century crisis. Soil exhaustion. Military overextension. Economic inequality. Political instability. Immigration. Christianity. The debasement of currency. Every generation finds in Rome's fall a mirror of its own anxieties. And that may be the deepest lesson: Rome fell not because of one catastrophic failure but because of accumulated small failures across generations \u2014 each one manageable alone, catastrophic in combination. Empires do not fall in a day. They fall over decades while people argue about whether they are really falling.",
+      "visual_prompt": "Gods & Glory cinematic documentary. A great structure \u2014 a Roman aqueduct, a forum, an arch \u2014 crumbling slowly. Not in one dramatic collapse but in stages: first a crack, then moss, then stones falling one by one over years. In the foreground, small figures going about their daily lives, not noticing. 16:9.",
+      "bg_colors": [
+        "#4A3728",
+        "#2C1A00",
+        "#8B8B6B"
+      ]
+    },
+    {
+      "scene_number": 23,
+      "type": "summary",
+      "title": "The Afternoon of September 4",
+      "duration_sec": 47,
+      "narration": "On September 4, 476 AD, as the sun set over Ravenna, a sixteen-year-old boy handed over a crown, and a thousand years of Roman imperial succession ended. Romulus Augustulus walked out of the throne room and into comfortable exile. Odoacer sent the diadem east and began governing Italy. In Constantinople, Zeno filed the letter away. In Rome, senators continued their meetings. In Britain and Gaul and Spain, people who called themselves Roman continued their lives. The world did not shake. No bell rang. The greatest empire in Western history ended on an ordinary afternoon, quietly, with paperwork.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Sunset over Ravenna \u2014 the palace in silhouette, the lagoons reflecting orange and gold. A teenage boy walking away from power, small against the sky. The world continuing around him: soldiers at their posts, merchants in markets, farmers in fields. History's most consequential afternoon looking completely ordinary. 16:9.",
+      "bg_colors": [
+        "#C9A227",
+        "#8B1A1A",
+        "#2C1A00"
+      ]
+    },
+    {
+      "scene_number": 24,
+      "type": "outro_cta",
+      "title": "The Empire That Never Really Ended",
+      "duration_sec": 44,
+      "narration": "Rome fell in 476. Or it didn't \u2014 depending on how you count. The Eastern Empire lasted another thousand years. The Holy Roman Empire claimed Rome's name until 1806. The Catholic Church still operates from Rome today. Latin is still taught in universities on every continent. Roman law is still practiced. Roman roads are still driven. Roman buildings are still standing. A teenage boy surrendered a crown fifteen centuries ago, and we are still living in the world that crown built. If you found this story worth sixteen minutes of your life, subscribe and stay with us. Next episode: the Crusades \u2014 and the kingdoms that rose and fell in the Holy Land.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Final montage \u2014 the Pantheon, the Vatican, the Roman roads of modern Europe, a modern senate chamber, Latin legal texts, the faces of people worldwide who inherited Rome's civilization. The channel logo appears. Subscribe prompt. The empire as living legacy. 16:9.",
+      "bg_colors": [
+        "#C9A227",
+        "#1A1A2E",
+        "#8B1A1A"
+      ]
+    }
+  ]
+}

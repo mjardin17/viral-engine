@@ -1,0 +1,77 @@
+# ============================================================
+# VIRAL ENGINE — .gitignore
+# Git tracks code, scripts, and prompts ONLY.
+# Generated media and secrets are NEVER committed.
+# ============================================================
+
+# --- SECRETS (NEVER commit) ---
+.env
+.env.local
+*.key
+*.token
+
+# --- GENERATED VIDEO/AUDIO (too large) ---
+renders/
+output/
+FINISHED_EPISODES/
+character_images/
+images/
+assets/sfx_cache/
+
+# --- MEDIA FILE EXTENSIONS ---
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.mp3
+*.wav
+*.aac
+*.m4a
+*.flac
+*.ogg
+*.wma
+
+# --- TEMP WORK DIRECTORIES ---
+_work_ep005/
+temp/
+tmp/
+
+# --- PYTHON ---
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pyw
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+*.whl
+venv/
+env/
+.venv/
+pip-log.txt
+
+# --- LOGS (regenerated at runtime) ---
+*.log
+patch_log.txt
+research_agent.log
+guardian_report.json
+
+# --- OS ---
+.DS_Store
+Thumbs.db
+desktop.ini
+*.lnk
+
+# --- EDITOR ---
+.vscode/settings.json
+.idea/
+*.swp
+*.swo
+*~
+
+# --- GIT LOCK FILES ---
+*.lock

@@ -1,0 +1,83 @@
+{
+  "channel": "Little Olympus",
+  "episode_number": 39,
+  "episode_id": "LO_EP039",
+  "season": 2,
+  "title": "What Archie Knows",
+  "tagline": "The OBSERVATIONS notebook ends with a space at the bottom of the last page. Athena fills it. She writes what she has been working toward the entire season. She talks to Archie about it first.",
+  "hook_line": "Athena has one entry left to write. She has been building to it since the first slow-blink. She knows what it says. She has known for a while. She sits with Archie and tells him what she is about to write before she writes it, because that is the honest thing to do.",
+  "characters": ["Athena", "Archie", "Zeus", "Poseidon", "Achilles"],
+  "scenes": [
+    {
+      "scene_number": 1,
+      "type": "hook",
+      "title": "The Last Entry",
+      "narration": "Athena had left space at the bottom of the OBSERVATIONS notebook's last page after the wing-spread entry. The space was not accidental. She had left it knowing she would need it. She had known, approximately, what the final entry would say since around EP026 — since the Titan's messages about the river that predated any written record. She had been waiting to confirm it. The confirmation had been arriving, piece by piece, through EP027, EP028, EP034, EP035, EP037, and now EP038. She sat at her desk with the notebook open to the last page. Archie was on the desk. 'I'm going to tell you what I'm about to write,' she said. 'Before I write it.' Archie looked at her. He did not slow-blink.",
+      "visual_prompt": "Athena at her desk, OBSERVATIONS notebook open to the last page — the space at the bottom, deliberately left — the previous entries above it — Archie on the desk, watching her — 'I'm going to tell you what I'm about to write. Before I write it.' — Archie looking at her without slow-blinking: this is a different kind of attention — the lamp warm, the five scrolls in the background, the notebook at center — the space at the bottom of the page as the visual focal point — the season's accumulation in Athena's expression: she's been building toward something all season — #FFD700 and Athena's study, the notebook open, the space waiting",
+      "bg_colors": ["#FFD700", "#C8A951", "#FFF5C0"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 2,
+      "type": "character",
+      "title": "What Athena Says to Archie",
+      "narration": "Athena said: 'The pattern I found in Season Two is people doing more than they need to. But I have been thinking about why. And I think the why is you.' She paused. 'Not you causing it. You demonstrating it. You have been on this desk since you arrived. You don't speak. You don't explain. You don't file documentation. But you were present for the first message that named Oceanus. You were at the dry channel. You were on the terrace when the Titan first looked. You spread your wings once, at dark, in the direction of the sea.' She looked at Archie. 'I think you do things that don't require doing. And I think the rest of us have been watching you do that, without knowing we were watching, and doing the same.'",
+      "visual_prompt": "Athena speaking directly to Archie — the observation building: the pattern is people doing more than they need to / the why is Archie / not causing it, demonstrating it — the evidence: present for Oceanus's first name, at the dry channel, on the terrace, the wing-spread — 'you do things that don't require doing. And the rest of us have been watching, without knowing, and doing the same.' — Archie receiving this with complete stillness — not the slow-blink, not looking away — the specific quality of being truly seen by someone who has been watching carefully all season — Athena's tone: not grand, just honest — the two of them in the lamplight, the observation said before it's written — #FFD700 and the intimacy of this specific conversation, Archie's stillness the visual response",
+      "bg_colors": ["#FFD700", "#C8A951", "#FFF5C0"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 3,
+      "type": "development",
+      "title": "Archie's Response",
+      "narration": "After a moment, Archie slow-blinked. Once. Then he looked at the space at the bottom of the page. Then he looked back at Athena. Athena understood this as: write it. She wrote it. The final entry in the OBSERVATIONS notebook read: 'The pattern of Season Two — people doing more than they need to — is not random and is not coincidental. It is learned. The way things are done is learned by watching how things are done. Archie does not know he is teaching. I am not certain he would agree that what he is doing is teaching. But the record is the record. He was there. We watched. We did the same. The season was made of that.' She closed the notebook. Archie slow-blinked again.",
+      "visual_prompt": "Archie's slow-blink — looking at the space on the page — looking back at Athena: the implicit 'write it' — Athena writing the final entry: the full observation, that the pattern was learned, that Archie was teaching without knowing it, that 'the record is the record. He was there. We watched. We did the same. The season was made of that.' — closing the notebook — Archie's second slow-blink — the closed notebook with the final entry inside it — Athena's expression: the satisfaction of having written what she's been building toward — the lamp warm, the desk, the closed notebook — #3D2B00 and warm lamp amber, the closing of the notebook the key action",
+      "bg_colors": ["#3D2B00", "#C8A951", "#8B6914"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 4,
+      "type": "development",
+      "title": "Zeus Hears the Final Entry",
+      "narration": "Athena found Zeus. She read him the final entry. He listened without interrupting — unusual for Zeus, who had opinions about most things. When she finished, he was quiet for a moment. Then he said: 'Archie arrived at Olympus in Season One. He has not spoken.' 'No.' 'He has been here the whole time.' 'Yes.' Zeus thought about this. 'He was here before the Titan.' 'Yes.' 'He was here before Artemis.' 'Yes.' 'He was here before the correspondence.' 'Yes.' Zeus looked at his crown. He didn't adjust it. It was listing left. He left it there. 'Sometimes,' he said, 'the thing that makes everything possible is just there. It doesn't announce itself.' He looked at Athena. 'Is that in the notebook?' 'It is now,' she said.",
+      "visual_prompt": "Athena reading the final entry to Zeus — Zeus listening without interrupting — Zeus's accounting: Archie before the Titan, before Artemis, before the correspondence — Zeus looking at his own listing crown and leaving it — 'sometimes the thing that makes everything possible is just there. It doesn't announce itself.' — 'is that in the notebook?' / 'it is now.' — Athena opening the notebook again to add this — Zeus's crown listed left and remaining there: the left-list as the honest position — Zeus's thought becoming part of the record — #FFD700 and the hallway where they're talking, Zeus's crown deliberately left",
+      "bg_colors": ["#FFD700", "#FFF5C0", "#C8A951"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 5,
+      "type": "development",
+      "title": "Achilles Asks About Next Season",
+      "narration": "Achilles found Athena in the late afternoon. He asked: 'Is there a Season Three plan?' 'An arc plan,' Athena said. 'Yes.' 'Is my heel arc in it?' Athena was quiet for a moment. 'Yes.' 'Is it resolved?' Another pause. 'No,' Athena said. 'I don't know that it will be. The data doesn't point toward resolution. It points toward management.' Achilles nodded. He had known this. He had known it since EP028 when she showed him the trend. 'The coordination role,' he said. 'It's working.' 'Yes,' Athena said. 'It's working very well.' He nodded again. 'Then that's the Season Three arc,' he said. 'Not the heel. The work.' Athena looked at him. She opened the OBSERVATIONS notebook. She wrote something. She showed him: ACHILLES (S3): HE NAMED HIS OWN ARC.",
+      "visual_prompt": "Achilles finding Athena — 'is there a Season Three plan?' — the heel arc conversation: not resolved, management — Achilles having known this — 'the coordination role. It's working.' / 'yes, very well.' — 'then that's the Season Three arc. Not the heel. The work.' — Athena looking at him and then opening the OBSERVATIONS notebook to write: ACHILLES (S3): HE NAMED HIS OWN ARC. — showing him — the notation as the honor it is: he understood his arc and claimed it — the OBSERVATIONS notebook now containing a Season 3 entry — one page into whatever comes next — #FFD700 and the late afternoon light, the notebook open to the new entry, Achilles's expression: certain",
+      "bg_colors": ["#FFD700", "#C8A951", "#FFF5C0"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 6,
+      "type": "resolution",
+      "title": "Poseidon's Final Log Entry",
+      "narration": "Poseidon made his final Season Two log entry at sunset. He read it aloud to Athena, who had asked to hear it. He wrote: 'Season Two log: Day final. The Titan has a name for all the dolphins. The river is still underground and the Titan can see it on the map now. The left-head of Hades's three-headed dog has a scheduled return visit. The eastern valley has seven named snake correspondents plus RIVER. The Titan watched Olympus at sunset. We watched it watch us. Hades can hear the river from the underworld and finds it encouraging.' He paused. 'That is the official record.' He looked at his notes. 'The sardines,' he said. 'I meant every one.' He added a sardine to the final entry. He closed the log.",
+      "visual_prompt": "Poseidon reading his final Season Two log entry at sunset — the full record: dolphin names, underground river, left-head scheduled return, seven snake correspondents plus RIVER, the Titan watching Olympus, Hades's encouragement — 'that is the official record.' — 'the sardines. I meant every one.' — adding a sardine to the final entry — closing the log — Athena present, listening — the sunset through the dock window — the log closed — the sardine in the final entry as the visual — Poseidon's expression: complete — the season as he has recorded it, official and accurate — #4DB6E8 and sunset dock light, the closed log with the sardine visible on the final page",
+      "bg_colors": ["#4DB6E8", "#FFD700", "#C8A951"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 7,
+      "type": "tag",
+      "title": "Archie at the Window",
+      "narration": "After everyone had done what they needed to do for the end of the season, Archie was at the window. Not his usual windowsill — the east window, the one that faced the sea. Athena found him there. She did not say anything. She stood beside him and looked east with him. The Titan was visible in the evening sea. The Titan's shape had become familiar — they knew which part was which, what direction the head usually faced, how it moved when the dolphins arrived. It was part of the view now. Athena and Archie looked at it for a while. Athena did not write anything. Some things were in the official record. Some things were in the OBSERVATIONS notebook. And some things were just the view from the east window at the end of a season, with an owl who understood everything and a person who had been writing it down.",
+      "visual_prompt": "Archie at the east window — not the usual west windowsill, but the east window facing the sea — Athena finding him there, standing beside him — both looking east at the Titan in the evening sea — the Titan familiar now: its shape known, its head direction known, its dolphin-arrival movements known — 'part of the view now' — Athena not writing — the OBSERVATIONS notebook not open — just the view — the east window as the closing frame: Archie and Athena, the Titan in the evening sea, the familiar shape — the season's accumulated knowing visible in how they look at it: not with the first-episode uncertainty, with the specific recognition of something known — #1A1A4E and evening sea light, the east window framing the Titan",
+      "bg_colors": ["#1A1A4E", "#4DB6E8", "#4D3B00"],
+      "duration_sec": 9
+    }
+  ],
+  "viral_hook": "Athena figured out the Season 2 pattern: people doing more than they need to. She traced it back to Archie. Then Achilles named his own Season 3 arc: 'not the heel. The work.' And Poseidon ended his Season 2 log: 'The sardines. I meant every one.' Then added one to the final entry.",
+  "highlight_scene": 5,
+  "highlight_note": "Achilles: 'the coordination role is working.' / 'yes, very well.' / 'then that's the Season Three arc. Not the heel. The work.' Athena writes in the OBSERVATIONS notebook: ACHILLES (S3): HE NAMED HIS OWN ARC.",
+  "short_title": "Achilles Named His Own Arc and Poseidon Meant Every Sardine",
+  "rewatch_bait": "Scene 2 — Athena's list of Archie's unrequired actions. Each one is traceable to a specific episode: Oceanus's name (EP021), dry channel (EP029), terrace (EP038), wing-spread (EP038). He was present for all of it. He didn't know he was teaching.",
+  "youtube_title": "Athena found the Season 2 pattern: people doing more than they needed to. She traced it back to Archie. | Little Olympus S2 EP19",
+  "lesson": "Teaching without knowing you're teaching is still teaching. Archie didn't set out to demonstrate anything. He was just present, doing what he did. But presence and action, over time, in front of people who are watching — that is how things spread. The season was made of that.",
+  "arc_notes": "Season 2 second-to-last episode. OBSERVATIONS notebook completed. Archie as the season's through-line confirmed in writing. Achilles names his S3 arc: the work, not the heel — this is the correct answer and the season's character achievement for him. Zeus: 'sometimes the thing that makes everything possible is just there' — the description of Archie and also of the quiet things in any system that function without announcing themselves. Poseidon's final log entry: the official record of the whole season in one paragraph. One episode remaining: the Season 2 finale."
+}

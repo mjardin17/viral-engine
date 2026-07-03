@@ -1,0 +1,110 @@
+{
+  "channel": "ML",
+  "episode_number": 3,
+  "episode_id": "ML_EP003",
+  "season": 1,
+  "title": "Alone Against an Empire",
+  "tagline": "One mech. Two and a half million soldiers.",
+  "hook_line": "BLAZE charged into the largest army ever assembled. Alone.",
+  "characters": ["BLAZE", "GRANITE", "NOVA", "STORM", "RUMBLE", "ELDER-7"],
+  "scenes": [
+    {
+      "scene_number": 1,
+      "type": "hook",
+      "title": "The Order Nobody Gave",
+      "narration": "BLAZE didn't wait for orders. He never did. That was his function. That was also the problem.",
+      "visual_prompt": "Cinematic wide shot, hot orange mech BLAZE 8 meters tall launching forward from a dark ridge line into an vast amber-lit horizon filled with an endless Persian army, forward-lean posture, amber energy core glowing, dramatic motion blur on his legs, dark cinematic, 1080x1920 vertical Shorts format, Higgsfield AI style",
+      "bg_colors": ["#FF6B00", "#1A1A2E"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 2,
+      "type": "action",
+      "title": "Cutting Through",
+      "narration": "He was fast. Precise. Effective. For every unit he neutralized, ten more appeared. Then a hundred.",
+      "visual_prompt": "Dynamic close-up of BLAZE hot orange mech in combat, amber energy core blazing, striking through Persian warrior units with speed and precision, motion lines, dramatic cinematic lighting, dark background, explosions of amber light, 1080x1920 vertical",
+      "bg_colors": ["#CC5500", "#0D0D1A"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 3,
+      "type": "reveal",
+      "title": "The Scale",
+      "narration": "He reached the interior. And for the first time in his operational history, BLAZE stopped moving.",
+      "visual_prompt": "Wide aerial establishing shot, hot orange mech BLAZE tiny against an incomprehensible sea of Persian warriors stretching to every horizon, golden torchlight on thousands of helmets and spears, overwhelming scale, sky dark with smoke, cinematic epic composition, 1080x1920 vertical",
+      "bg_colors": ["#8B4513", "#0A0A1A"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 4,
+      "type": "reveal",
+      "title": "0.0016%",
+      "narration": "NOVA's voice crackled through: 'BLAZE — you've neutralized four thousand units. That is 0.0016 percent of the current force.'",
+      "visual_prompt": "Close-up of BLAZE's face plate, hot orange with amber visor, expression readable — a rare moment of stillness, holographic display from NOVA showing numbers: 4,000 units vs 2,500,000 total, cyan holographic data panels floating in dark air, cinematic, 1080x1920 vertical",
+      "bg_colors": ["#FF6B00", "#003344"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 5,
+      "type": "emotional",
+      "title": "The Weight of Numbers",
+      "narration": "BLAZE had faced impossible things before. But he had always been able to see the end of them. There was no end here.",
+      "visual_prompt": "BLAZE hot orange mech standing completely still, surrounded on all sides by the advancing Persian army in perfect formation, golden torchlight creating a circle of light around him, army stretching infinitely in every direction, dark sky above, silhouetted and small, cinematic, 1080x1920 vertical",
+      "bg_colors": ["#4A2000", "#080815"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 6,
+      "type": "action",
+      "title": "The Encirclement",
+      "narration": "They didn't attack. They closed. Xerxes didn't need to defeat one mech. He just needed to contain it.",
+      "visual_prompt": "Top-down aerial view, hot orange BLAZE surrounded by a tightening circular formation of Persian forces, gap slowly narrowing, amber and gold against dark earth, cinematic tension, encirclement, 1080x1920 vertical",
+      "bg_colors": ["#2A1500", "#0A0A20"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 7,
+      "type": "action",
+      "title": "Extraction",
+      "narration": "GRANITE broke through the outer line like it wasn't there. 'You had a plan?' BLAZE: 'I had a direction.'",
+      "visual_prompt": "Explosive action shot, massive slate blue-grey mech GRANITE 12 meters smashing through Persian formation lines, cryo-sleeve glowing frost white, creating a corridor, hot orange BLAZE visible behind him, dynamic impact shockwave, cinematic, 1080x1920 vertical",
+      "bg_colors": ["#4A6B8A", "#1A1A2E"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 8,
+      "type": "reveal",
+      "title": "The Archive: TITAN-FOUR",
+      "narration": "ELDER-7 opened the data pad. The entry was 2,400 years old. TITAN-FOUR. Same charge. Same result.",
+      "visual_prompt": "Close-up of ancient bronze mech ELDER-7's data pad, glowing amber display showing archive entry TITAN-FOUR with date marking 2400 years prior, scarred battle record text, result field reading FALLEN in red, bronze and dark metal, ELDER-7 never fully facing camera — always at an observing angle, cinematic, 1080x1920 vertical",
+      "bg_colors": ["#8B6914", "#0D0D0D"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 9,
+      "type": "emotional",
+      "title": "He's Been Counting",
+      "narration": "GRANITE, staring at the entry: 'He's been counting. Every mech that ever charged alone.' Long silence. 'Every single one.'",
+      "visual_prompt": "Team gathered in shadow, five mechs — BLAZE GRANITE NOVA STORM RUMBLE — all looking at ELDER-7's glowing data pad, expressions readable through visors, the weight of history on each face, ELDER-7 standing apart slightly, ancient bronze, amber glow from the pad illuminating all, cinematic, 1080x1920 vertical",
+      "bg_colors": ["#1A1A2E", "#0A0508"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 10,
+      "type": "resolution",
+      "title": "He Is Waiting",
+      "narration": "ELDER-7 closed the pad. 'Xerxes knows what one looks like. He is waiting to learn what six look like.'",
+      "visual_prompt": "ELDER-7 ancient bronze sentinel mech 40 meters closing the data pad with deliberate slowness, amber glow fading, team behind him in silhouette against the distant glow of Xerxes's vast encampment on the horizon, scale overwhelming, cinematic wide shot from low angle, 1080x1920 vertical",
+      "bg_colors": ["#8B6914", "#080808"],
+      "duration_sec": 9
+    }
+  ],
+  "viral_hook": "He neutralized 4,000 of them. That was 0.0016% of the army.",
+  "highlight_scene": 4,
+  "highlight_note": "The NOVA callout — '0.0016%' — is the number that recontextualizes everything. Viewers rewatch to hear it again.",
+  "short_title": "0.0016%",
+  "rewatch_bait": "ELDER-7's data pad in scene 8 shows TITAN-FOUR — the same charge, same result. Watching EP001 again reveals ELDER-7 was already thinking about this.",
+  "youtube_title": "He Charged Into 2.5 Million Soldiers — Alone | Mech Legends S1 EP003",
+  "lesson": "Scale cannot be overcome by individual heroism. You have to change what the fight is.",
+  "arc_notes": "EP003 establishes the core problem: individual function is countable, containable, beatable. ELDER-7's archive hint deepens — he has seen this before. BLAZE's 'I had a direction' character beat is key for EP010 payoff."
+}

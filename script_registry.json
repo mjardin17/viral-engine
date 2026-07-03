@@ -1,0 +1,100 @@
+{
+  "GG_EP001": {
+    "filename": "scene_prompts.gg_ep001.final.json",
+    "scene_count": 24,
+    "total_duration_sec": 1255,
+    "title": "300 Spartans vs. The World",
+    "registered_at": "2026-06-27T17:14:50.166045"
+  },
+  "GG_EP002": {
+    "filename": "scene_prompts.gg_ep002.final.json",
+    "scene_count": 24,
+    "total_duration_sec": 1188,
+    "title": "Gaugamela: The Battle That Ended an Empire",
+    "registered_at": "2026-06-27T17:14:50.166048"
+  },
+  "GG_EP003": {
+    "filename": "scene_prompts.gg_ep003.final.json",
+    "scene_count": 24,
+    "total_duration_sec": 1201,
+    "title": "Cannae: The Perfect Battle",
+    "registered_at": "2026-06-27T17:14:50.166051"
+  },
+  "GG_EP004": {
+    "filename": "scene_prompts.gg_ep004.final.json",
+    "scene_count": 24,
+    "total_duration_sec": 1152,
+    "title": "The Mongol War Machine: How 100,000 Men Conquered the World",
+    "registered_at": "2026-06-27T17:14:50.166053"
+  },
+  "GG_EP005": {
+    "filename": "scene_prompts.gg_ep005.final.json",
+    "scene_count": 24,
+    "total_duration_sec": 1162,
+    "title": "Constantinople 1453: The End of an Age",
+    "registered_at": "2026-06-27T17:14:50.166055"
+  },
+  "GG_EP006": {
+    "filename": "scene_prompts.ep006.final.json",
+    "scene_count": 24,
+    "total_duration_sec": 1231,
+    "title": "Salamis and Plataea: How Greece Won the War",
+    "registered_at": "2026-06-27T17:14:50.166079"
+  },
+  "GG_EP007": {
+    "filename": "scene_prompts.gg_ep007.final.json",
+    "scene_count": 23,
+    "total_duration_sec": 1102,
+    "title": "D-Day: The Day That Decided Europe",
+    "registered_at": "2026-06-27T17:14:50.166059"
+  },
+  "GG_EP008": {
+    "filename": "scene_prompts.gg_ep008.final.json",
+    "scene_count": 22,
+    "total_duration_sec": 1050,
+    "title": "Stalingrad: The City That Broke an Empire",
+    "registered_at": "2026-06-27T17:14:50.166061"
+  },
+  "GG_EP009": {
+    "filename": "scene_prompts.gg_ep009.final.json",
+    "scene_count": 19,
+    "total_duration_sec": 900,
+    "title": "Iwo Jima: The Island That Wouldn't Fall",
+    "registered_at": "2026-06-27T17:14:50.166062"
+  },
+  "GG_EP010": {
+    "filename": "scene_prompts.gg_ep010.final.json",
+    "scene_count": 23,
+    "total_duration_sec": 1094,
+    "title": "The Vietnam War: America's Longest War",
+    "registered_at": "2026-06-27T17:14:50.166064"
+  },
+  "GG_EP011": {
+    "filename": "scene_prompts.gg_ep011.final.json",
+    "scene_count": 18,
+    "total_duration_sec": 862,
+    "title": "Ia Drang, Khe Sanh, and Tet: Vietnam's Defining Battles",
+    "registered_at": "2026-06-27T17:14:50.166066"
+  },
+  "GG_EP026": {
+    "filename": "scene_prompts.gg_ep026.final.json",
+    "scene_count": 14,
+    "total_duration_sec": 690,
+    "title": "King Caesar",
+    "registered_at": "2026-06-27T17:14:50.166068"
+  },
+  "ML_EP001": {
+    "filename": "scene_prompts.ml_ep001.final.json",
+    "scene_count": 24,
+    "total_duration_sec": 1158,
+    "title": "The Signal",
+    "registered_at": "2026-06-27T17:14:50.166071"
+  },
+  "LO_EP001": {
+    "filename": "scene_prompts.lo_ep001.final.json",
+    "scene_count": 24,
+    "total_duration_sec": 1065,
+    "title": "Little Zeus Gets His Thunderbolt",
+    "registered_at": "2026-06-27T17:14:50.166098"
+  }
+}

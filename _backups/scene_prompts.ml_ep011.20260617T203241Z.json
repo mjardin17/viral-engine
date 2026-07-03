@@ -1,0 +1,110 @@
+{
+  "channel": "ML",
+  "episode_number": 11,
+  "episode_id": "ML_EP011",
+  "season": 1,
+  "title": "Closer",
+  "tagline": "They got through. Briefly. That has never happened before.",
+  "hook_line": "They had a plan that required all six to be exactly right at exactly the same moment.",
+  "characters": ["BLAZE", "GRANITE", "NOVA", "STORM", "RUMBLE", "ELDER-7"],
+  "scenes": [
+    {
+      "scene_number": 1,
+      "type": "hook",
+      "title": "The First Plan",
+      "narration": "For the first time, they had a plan that required all six of them. Exactly right. At exactly the same moment. Together.",
+      "visual_prompt": "The team in formation huddle, all six mechs visible — BLAZE orange in center, GRANITE slate blue flanking, NOVA cyan elevated, STORM purple barely visible at edges, RUMBLE crimson large, ELDER-7 bronze above — in the pre-dawn dark, a new kind of formation, deliberate and connected, cinematic, 1080x1920 vertical",
+      "bg_colors": ["#1A1A2E", "#050508"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 2,
+      "type": "action",
+      "title": "Full Deployment",
+      "narration": "BLAZE at the front. GRANITE on both flanks. NOVA with fourteen active panels — the most since before the jamming. STORM at every shadow simultaneously.",
+      "visual_prompt": "Wide tactical shot, the six mechs deployed in coordinated formation — BLAZE forward, GRANITE arms wide covering flanks, NOVA's 14 cyan panels in active display bloom, STORM a purple presence at multiple edge positions, RUMBLE and ELDER-7 visible at rear, the formation unlike anything in the archive, cinematic, 1080x1920 vertical",
+      "bg_colors": ["#1A2E4A", "#050A14"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 3,
+      "type": "action",
+      "title": "RUMBLE and BLAZE — Same Point",
+      "narration": "RUMBLE and BLAZE hit the same formation point at exactly the same instant. The impact was exponentially greater. The archive had never recorded anything like it.",
+      "visual_prompt": "Explosive impact moment, BLAZE orange and RUMBLE crimson converging from opposite angles on the exact same Persian formation point simultaneously, the combined impact creating a shockwave multiple times the scale of either alone, Persian formation cracking at that precise point, cinematic, 1080x1920 vertical",
+      "bg_colors": ["#FF4400", "#1A0A00"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 4,
+      "type": "reveal",
+      "title": "A Breach",
+      "narration": "NOVA: 'Structural breach in the formation. Twelve-meter gap. Holding.' A pause. 'This has never been recorded in the archive.'",
+      "visual_prompt": "NOVA's 14-panel tactical display showing the Persian formation with a visible 12-meter breach gap at the impact point, highlighted in bright cyan against the red formation mass, data readouts confirming the breach, NOVA's visor showing something unprecedented — she's seeing it happen, cinematic, 1080x1920 vertical",
+      "bg_colors": ["#0077B6", "#0A0A1A"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 5,
+      "type": "action",
+      "title": "Through",
+      "narration": "They pushed through the breach. Together. All six. Moving as one intent with six separate wills. It was working. It was actually working.",
+      "visual_prompt": "All six mechs moving through the 12-meter breach together — orange, slate blue, cyan, purple, bronze, crimson — a coordinated force pushing through the Persian formation gap, Persian warriors falling back on both sides of the breach, the breakthrough moment captured in wide shot, cinematic, 1080x1920 vertical",
+      "bg_colors": ["#FF6B00", "#1A2A3A"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 6,
+      "type": "climax",
+      "title": "0.4 Seconds",
+      "narration": "Then the timing slipped. STORM — 0.4 seconds late on a cover strike. A gap in the coordination. Xerxes found it immediately.",
+      "visual_prompt": "Close-up of NOVA's panel display, time stamps showing the 0.4 second gap in STORM's cover strike sequence, and then the Persian formation beginning to exploit that exact gap — closing in on the exposed angle STORM should have covered, the precision of Xerxes's exploitation visible, cinematic, 1080x1920 vertical",
+      "bg_colors": ["#4B0082", "#1A0A1A"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 7,
+      "type": "action",
+      "title": "He Closes It",
+      "narration": "Xerxes closed the breach in eleven seconds. His formation adapted to the coordination pattern. The gap that had never existed before — gone.",
+      "visual_prompt": "The 12-meter breach closing as Xerxes's formation adapts with terrifying speed — Persian forces flowing back to fill the gap intelligently, the coordination pattern the team showed now being accounted for in real-time, the breach gone, NOVA's panel display showing the closure, cinematic, 1080x1920 vertical",
+      "bg_colors": ["#8B4513", "#0A0A0A"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 8,
+      "type": "emotional",
+      "title": "Learning Coordination",
+      "narration": "ELDER-7: 'He is learning your coordination now. He will build the counter. You cannot show him the pattern twice.'",
+      "visual_prompt": "ELDER-7 data pad showing new notation being made — the coordination pattern the team just demonstrated diagrammed in the archive annotation, Xerxes building the counter in real time, ELDER-7 at his observing angle watching both sides simultaneously, amber glow, cinematic, 1080x1920 vertical",
+      "bg_colors": ["#8B6914", "#0A0808"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 9,
+      "type": "reveal",
+      "title": "The Gap Happened",
+      "narration": "But the gap was real. NOVA's data confirmed it. Twelve meters. Sustained for nine seconds. BLAZE: 'We got through. Briefly.'",
+      "visual_prompt": "BLAZE and NOVA close together, NOVA's panel showing the confirmed 9-second breach data, BLAZE looking at it with the expression of someone counting what they have — not what they lost, the confirmed breach data more important than the closure, ELDER-7 in background, cinematic, 1080x1920 vertical",
+      "bg_colors": ["#FF6B00", "#0A0A1A"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 10,
+      "type": "resolution",
+      "title": "No Pattern to Learn",
+      "narration": "'Then we give him no pattern to learn. We don't coordinate — we converge. Six individuals, one instant, no sequence.' ELDER-7 closed the pad. 'Tomorrow.'",
+      "visual_prompt": "BLAZE close-up, visor lit with the conviction of someone who just solved it, ELDER-7 slowly closing the data pad behind him — a deliberate motion, the amber glow going dark — the team visible around BLAZE all taking in the words, the night around them quiet, the vast enemy encampment on the horizon the only light, cinematic, 1080x1920 vertical",
+      "bg_colors": ["#FF6B00", "#050510"],
+      "duration_sec": 9
+    }
+  ],
+  "viral_hook": "They breached his formation. For the first time in 2,800 years of records — a 12-meter gap. He closed it in 11 seconds.",
+  "highlight_scene": 4,
+  "highlight_note": "NOVA's panel showing the breach — 'This has never been recorded in the archive' — is the first genuinely hopeful moment of the season and lands with enormous force after eight episodes of FALLEN entries.",
+  "short_title": "A 12-Meter Gap",
+  "rewatch_bait": "STORM's 0.4 second gap in scene 6 — rewatch EP005 to see her in perfect form. The contrast shows how close they came. The timing gap wasn't failure — it was one number away from success.",
+  "youtube_title": "They Breached His Formation — First Time in 2,800 Years of Records | Mech Legends S1 EP011",
+  "lesson": "Almost doesn't count. But almost is proof it's possible. And that is not nothing.",
+  "arc_notes": "EP011 must feel like almost-victory, not defeat. The 12-meter breach is a genuine triumph. Xerxes closing it in 11 seconds is a setback but not a counter-argument. BLAZE's final insight — convergence vs coordination — is the distinction that makes EP012 work."
+}

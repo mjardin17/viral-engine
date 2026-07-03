@@ -1,0 +1,150 @@
+{
+  "channel": "GG",
+  "episode_number": 26,
+  "episode_id": "GG_EP026",
+  "series_name": "Gods & Glory",
+  "topic": "King Caesar",
+  "title": "King Caesar",
+  "tagline": "Rome killed its kings five hundred years before he was born. He almost brought one back anyway.",
+  "duration_target_min": 13,
+  "aesthetic": {
+    "color_grade": "cinematic_roman_imperial",
+    "primary_colors": [
+      "#8B0000",
+      "#D4AF37",
+      "#E8E4D9",
+      "#2C2C2C"
+    ],
+    "font_style": "serif_documentary_bold",
+    "music_style": "hans_zimmer_battle_epic",
+    "narrator_tone": "authoritative_punchy_dramatic"
+  },
+  "scenes": [
+    {
+      "scene_number": 1,
+      "type": "cold_open",
+      "title": "The Man Who Crossed a River",
+      "narration": "In January of 49 BC, a Roman general stood on the north bank of a small, unremarkable river called the Rubicon. Behind him: one legion, loyal to him personally. Ahead of him: Rome itself, and a law older than memory that said no general could ever cross that river with an army and live to tell about it. He crossed anyway. Ancient writers say he muttered a line that's been quoted for two thousand years: the die is cast. His name was Gaius Julius Caesar. And in that one river crossing, the five-hundred-year-old Roman Republic effectively ended, even though almost nobody in Rome understood that yet.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Roman general on horseback at the edge of a narrow river at dawn, a single legion of soldiers behind him, mist over the water, dramatic low light, the far bank leading toward a distant Rome on the horizon. Epic, ominous, momentous. 16:9.",
+      "bg_colors": ["#2C2C2C", "#8B0000", "#D4AF37"],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 2,
+      "type": "context",
+      "title": "A Republic That Feared Kings",
+      "narration": "To understand why crossing a river was such a big deal, you have to understand Rome's deepest fear. Five hundred years earlier, Rome had thrown out its last king and sworn never to have another. The whole system after that — two consuls instead of one ruler, a Senate full of rival families, terms limited to a single year — was built around one obsession: never again let one man hold all the power. By Caesar's time, Rome controlled most of the Mediterranean. It was the most powerful state on Earth. And it was being run, awkwardly, by committee.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Roman Senate house interior, dozens of senators in togas arguing and gesturing, marble columns, shafts of light from high windows, tense political atmosphere, wide establishing composition. 16:9.",
+      "bg_colors": ["#D4AF37", "#2C2C2C", "#E8E4D9"],
+      "duration_sec": 52
+    },
+    {
+      "scene_number": 3,
+      "type": "character_intro",
+      "title": "Who Was Caesar",
+      "narration": "Caesar came from an old patrician family that claimed, with a straight face, to be descended from the goddess Venus. The family had the bloodline but not the money — by his thirties Caesar was famously, enormously in debt, partly from bribing his way up the ladder of Roman politics. What he had instead of money was charisma, raw ambition, and an instinct for spectacle that his rivals consistently underestimated. He talked his way out of pirates once. He got himself elected to office he technically couldn't afford. People who dismissed him as a playboy kept being wrong about him, over and over, for twenty years.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Portrait-style character introduction of a young Roman patrician in formal toga, confident expression, Roman Forum visible behind him, marble busts and red banners, cinematic lighting. 16:9.",
+      "bg_colors": ["#8B0000", "#D4AF37", "#2C2C2C"],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 4,
+      "type": "historical",
+      "title": "Eight Years in Gaul",
+      "narration": "Caesar's actual rise started in Gaul — roughly modern France — where he spent eight years conquering tribe after tribe, by his own count killing or enslaving over a million people. It was brutal even by Roman standards. It was also the single best career move in Roman history. Gaul made Caesar staggeringly rich. It gave him a hardened, veteran army that worshipped him personally rather than the Senate. And his own written dispatches home — propaganda dressed up as war reports — made him the most famous man in Rome while he was still hundreds of miles away from it.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Roman legions on campaign through dense Gallic forest, war banners, a commander on horseback directing the column, smoke from a captured hill fort in the distance, epic battle-campaign atmosphere. 16:9.",
+      "bg_colors": ["#2C2C2C", "#8B0000", "#D4AF37"],
+      "duration_sec": 52
+    },
+    {
+      "scene_number": 5,
+      "type": "turning_point",
+      "title": "The Senate Gets Nervous",
+      "narration": "A general that rich, that popular, and that personally loyal-to-him army was exactly the nightmare the Roman system was designed to prevent. Caesar's old ally turned rival, Pompey the Great, sided with the Senate. Together they gave Caesar an ultimatum: give up your army, come back to Rome as a private citizen, and face trial — because his enemies were lining up charges the moment he was unarmed. Caesar understood exactly what that meant. Disband the legion, and he'd be finished, one way or another. Keep it, and he'd be committing treason. There was no safe third option left.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Tense confrontation in the Roman Senate, a messenger delivering a sealed ultimatum scroll, senators reacting with alarm, dramatic chiaroscuro lighting, sense of an impossible choice. 16:9.",
+      "bg_colors": ["#8B0000", "#2C2C2C", "#D4AF37"],
+      "duration_sec": 52
+    },
+    {
+      "scene_number": 6,
+      "type": "dramatic",
+      "title": "Alea Iacta Est",
+      "narration": "So Caesar chose the third option nobody else thought he'd actually take: civil war. Crossing the Rubicon with his army was, legally, an act of war against his own country. There was no plan to undo it once he'd done it — that's the whole meaning behind 'the die is cast.' It isn't a boast. It's a man acknowledging he has just removed his own ability to turn back. Within weeks, Pompey and most of the Senate fled Rome entirely rather than face Caesar's legions. The most powerful republic in the world had just been outmaneuvered by one general and a river.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Close, intense shot of a Roman general's resolute face lit by torchlight at a riverbank at night, soldiers marching past in the background, sense of irreversible decision, dramatic and weighty. 16:9.",
+      "bg_colors": ["#2C2C2C", "#8B0000", "#D4AF37"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 7,
+      "type": "battle",
+      "title": "Pharsalus",
+      "narration": "The civil war that followed dragged across the Mediterranean — Italy, Greece, Egypt, North Africa, Spain — but its hinge moment came at Pharsalus, in Greece, in 48 BC. Pompey's army outnumbered Caesar's roughly two to one. Caesar won anyway, through better tactics and a veteran core that simply would not break. Pompey fled to Egypt, hoping for sanctuary. Instead, hoping to win favor with the obvious winner of Rome's civil war, Egyptian courtiers had him killed the moment he stepped ashore. Caesar, when he arrived, reportedly wept at the sight of his old ally's severed head.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Ancient battlefield at Pharsalus, two massive Roman armies clashing, dust and chaos, banners and shields, a commander directing a decisive flanking maneuver, epic wide battle composition. 16:9.",
+      "bg_colors": ["#8B0000", "#D4AF37", "#2C2C2C"],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 8,
+      "type": "historical",
+      "title": "Dictator for Life",
+      "narration": "Back in Rome, Caesar didn't crown himself king — that word was still poison. Instead the Senate, intimidated and outmaneuvered, kept handing him a different title: dictator. Originally a Roman dictator was a temporary emergency office, six months, gone. Caesar's term kept getting renewed. In 44 BC, the Senate granted him the title dictator perpetuo — dictator for life. Whatever you called it, the function was now identical to a king's: one man, permanent, unaccountable power, with the Senate reduced to rubber-stamping his decisions. He also used the role productively — reforming the calendar into something close to the one we still use today, and granting citizenship more broadly than Rome ever had.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Caesar seated on an ornate curule chair in the Senate house, golden laurel wreath, senators bowing or looking away uneasily, opulent imperial color palette, power and unease combined. 16:9.",
+      "bg_colors": ["#D4AF37", "#8B0000", "#2C2C2C"],
+      "duration_sec": 54
+    },
+    {
+      "scene_number": 9,
+      "type": "dramatic",
+      "title": "The Crown He 'Refused'",
+      "narration": "At a public festival called the Lupercalia, Caesar's ally Mark Antony offered him a royal diadem in front of the crowd. Caesar pushed it away, and the crowd cheered the refusal. He had it offered to him a second time. He refused again. Some historians think it was genuine restraint. Many ancient sources think it was theater — testing the public's tolerance for the word 'king' in a city that still loathed it on principle, even while tolerating literally everything else a king would do. Either way, the staged refusal didn't reassure the people most worried about him. It confirmed their fears.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Public festival scene in the Roman Forum, a man holding out a golden diadem toward a seated leader, a crowd reacting with mixed cheers and tension, dramatic theatrical lighting. 16:9.",
+      "bg_colors": ["#8B0000", "#2C2C2C", "#D4AF37"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 10,
+      "type": "turning_point",
+      "title": "The Liberators",
+      "narration": "A group of senators — more than sixty of them eventually, led publicly by Brutus and Cassius — decided Caesar had to die, and soon, before he could be formally crowned. They called themselves the Liberators. Many of them genuinely believed they were saving the Republic, not committing a political murder. Brutus in particular was tortured by the decision — Caesar had pardoned him after the civil war and treated him almost like a son. Brutus chose Rome's five-hundred-year-old idea of itself over personal loyalty. He would spend the rest of his life unsure whether that choice was right.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Group of Roman senators in shadow, gathered in secret at night, conspiratorial expressions, hidden daggers beneath togas, candlelight, tense and foreboding atmosphere. 16:9.",
+      "bg_colors": ["#2C2C2C", "#8B0000", "#D4AF37"],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 11,
+      "type": "battle",
+      "title": "The Ides of March",
+      "narration": "March 15th, 44 BC. The Senate meeting that day was held, by sheer bad luck, in a hall attached to a theater built by Pompey himself. Caesar had been warned — a soothsayer had told him to beware the Ides of March, and he reportedly joked about it on the way in. The senators surrounded him under the pretense of a petition, then began stabbing. Ancient sources count twenty-three wounds. Most weren't individually fatal — in the chaos, conspirators were stabbing each other almost as often as Caesar. He fell at the base of a statue of Pompey, the man he'd beaten in the civil war that started all of this.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Dramatic recreation of the Senate assassination, togaed senators surrounding a falling figure near a marble statue base, dramatic red lighting, chaos and gravity, historical painting style. 16:9.",
+      "bg_colors": ["#8B0000", "#2C2C2C", "#D4AF37"],
+      "duration_sec": 52
+    },
+    {
+      "scene_number": 12,
+      "type": "aftermath",
+      "title": "Killing Him Didn't Save the Republic",
+      "narration": "Here's the part the conspirators got catastrophically wrong. They killed Caesar to stop one man from becoming a king in all but name. What they got instead was thirteen more years of brutal civil war, as Caesar's allies and rivals tore the Mediterranean apart fighting over what came next. The eventual winner was Caesar's eighteen-year-old adopted heir, a previously unremarkable young man named Octavian. He learned every lesson from his adoptive father's mistakes — and from his murder. He never called himself king either. He called himself Augustus. Princeps. First citizen. Rome got its emperor anyway. It just took a smarter one to make it permanent.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Smoldering aftermath of civil war battlefield transitioning to a young Roman heir standing calmly amid chaos, golden light breaking through smoke, symbolic transition of power, epic and ominous. 16:9.",
+      "bg_colors": ["#D4AF37", "#2C2C2C", "#8B0000"],
+      "duration_sec": 52
+    },
+    {
+      "scene_number": 13,
+      "type": "modern_connection",
+      "title": "Why This Still Matters",
+      "narration": "Caesar never wore a crown. He never let anyone call him king. And it didn't matter at all, because the title was never the point — the unaccountable, permanent, one-man power was. The men who killed him to preserve the Republic ended up proving that the Republic was already gone in every way that counted, and that removing one ambitious man doesn't fix a system that keeps producing them. Two thousand years later, his name is still the word for absolute ruler in a dozen languages — Kaiser, Tsar. Rome spent five centuries terrified of the word king. It got an empire anyway, just under a different name.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Wide symbolic shot of the Roman Forum at dusk transitioning into a montage of later emperors' busts, golden imperial light, sense of historical inevitability and legacy. 16:9.",
+      "bg_colors": ["#8B0000", "#D4AF37", "#2C2C2C"],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 14,
+      "type": "outro_cta",
+      "title": "Next Episode — Augustus",
+      "narration": "Next episode on Gods and Glory: Octavian becomes Augustus, defeats Antony and Cleopatra at Actium, and turns a murdered dictator's unfinished gamble into four hundred years of empire. Subscribe so you don't miss it.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Roman imperial eagle standard against a golden sunset sky over the Mediterranean, epic and forward-looking, cinematic outro composition. 16:9.",
+      "bg_colors": ["#D4AF37", "#8B0000", "#2C2C2C"],
+      "duration_sec": 30
+    }
+  ]
+}

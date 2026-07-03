@@ -1,0 +1,145 @@
+{
+  "channel": "Little Olympus",
+  "episode_number": 4,
+  "episode_id": "LO_EP004",
+  "title": "Athena's Big Idea",
+  "tagline": "She had a perfect plan. It was genuinely perfect. And then Baby Hercules helped.",
+  "duration_target_min": 5,
+  "aesthetic": {
+    "color_grade": "bright_kids_cartoon",
+    "primary_colors": ["#FFD700", "#B0C4DE", "#90EE90", "#FF6B35"],
+    "font_style": "rounded_chunky_bold",
+    "music_style": "upbeat_kids_adventure",
+    "narrator_tone": "warm_playful_encouraging"
+  },
+  "characters": {
+    "focus_hero": {
+      "name": "Athena",
+      "role": "This is HER episode. Her plan is right. Being right isn't always enough.",
+      "visual": "Grey-streaked braid, round glasses, owl Archie on shoulder, scroll — this episode she also has a large blueprint she keeps consulting",
+      "personality": "Three steps ahead, patient, competitive with herself — this episode she learns that the best plan sometimes has to be abandoned mid-execution"
+    },
+    "chaos_agent": {
+      "name": "Baby Hercules",
+      "role": "Helps. Enthusiastically. Catastrophically.",
+      "visual": "Chubby toddler, lion cape, enormous arms, honey smear on face (always)"
+    },
+    "support_1": {
+      "name": "Little Zeus",
+      "role": "Assigned a specific job. Does a different job. Means well.",
+      "visual": "Curly white hair, tiny bent crown, thunderbolt"
+    },
+    "support_2": {
+      "name": "Little Perseus",
+      "role": "The one who actually follows the plan. Completely ignored as a result.",
+      "visual": "Dark shaggy hair, green tunic, bronze shield, leather satchel"
+    },
+    "problem": {
+      "name": "The Olympus Great Games Committee",
+      "role": "Three minor gods (Hermes, Hephaestus, Ares) who need someone to organize the first-ever Olympus Games in 24 hours. They picked Athena without asking her.",
+      "note": "Not villains — just chaotic adults who created a crisis through poor planning and complete confidence"
+    }
+  },
+  "scenes": [
+    {
+      "scene_number": 1,
+      "type": "hook",
+      "title": "Athena Has Been Put In Charge",
+      "narration": "The First Annual Olympus Great Games was happening tomorrow. Someone needed to organize it. The committee had voted. The vote was unanimous. Athena found out about this at breakfast, via a very official scroll delivered by Hermes who was already gone by the time she unrolled it. She read it twice. Then she tapped her chin four times. Four taps meant serious.",
+      "visual_prompt": "Little Olympus kids cartoon style. Athena at breakfast, reading a very official-looking golden scroll with an expression of controlled disbelief. Hermes is already visible as a blur in the background — already gone. Archie on her shoulder reads the scroll too and his eyes go wide. Athena taps her chin — we see four taps, not the usual three. The others (Zeus, Hercules, Perseus) are eating breakfast and haven't noticed yet. Morning light. 16:9.",
+      "bg_colors": ["#FFD700", "#87CEEB", "#FFFFFF"],
+      "accent": "#B0C4DE",
+      "camera": "push_in",
+      "duration_sec": 9,
+      "higgsfield_prompt": "Cute kids cartoon style, smart girl with grey-streaked braid reading official golden scroll at breakfast with controlled disbelief expression, owl on shoulder also reading with wide eyes, Hermes already gone as blur in background, other kids eating and not noticing, morning light, girl tapping chin four times, 16:9"
+    },
+    {
+      "scene_number": 2,
+      "type": "setup",
+      "title": "The Perfect Plan",
+      "narration": "By the time the others finished breakfast, Athena had a complete plan. It was twelve pages. Color-coded. With a timeline, a backup timeline, and a backup to the backup timeline. She assigned everyone a specific job. Perseus would handle the track. Zeus would handle the opening ceremony torches. Hercules would — and this was crucial — stand very still and not touch anything.",
+      "visual_prompt": "Little Olympus kids cartoon style. Athena stands before her friends holding an enormous color-coded blueprint, pointing to each section efficiently. Perseus looks attentive and ready. Zeus looks confident (suspiciously so). Baby Hercules is nodding very seriously at his assignment — STAND STILL, DO NOT TOUCH — which is shown on the blueprint with a very clear drawing of Hercules with a big X through him touching things. Archie approves. 16:9.",
+      "bg_colors": ["#B0C4DE", "#FFD700", "#FFFFFF"],
+      "accent": "#FFD700",
+      "camera": "pull_back",
+      "duration_sec": 9,
+      "higgsfield_prompt": "Cute kids cartoon style, smart girl presenting enormous color-coded blueprint to friends, pointing to each section, attentive dark-haired boy ready, confident curly-haired boy, chubby toddler nodding very seriously at his assignment which shows a drawing of him with X through touching things, small owl approving, organized planning scene, 16:9"
+    },
+    {
+      "scene_number": 3,
+      "type": "attempt",
+      "title": "Zeus Improvises the Torch Ceremony",
+      "narration": "Zeus had one job: light the ceremonial torch. Athena's plan said: one small controlled lightning bolt, directly at the torch. What Zeus did was: a slightly bigger lightning bolt that also lit the decorative banners, the announcer's podium, and accidentally started a small rain cloud above the refreshments. The good news: the torch was lit. The bad news: so was everything else.",
+      "visual_prompt": "Little Olympus kids cartoon style. Comic disaster — Zeus aiming his thunderbolt with huge confidence, fires it at the ceremonial torch. A massive bolt that's WAY bigger than planned hits the torch and immediately also catches the decorative gold banners on fire, zaps the announcer's podium (the announcer — a small minor god — is frozen mid-speech with crackling hair), and accidentally creates a tiny rain cloud that starts drizzling on the refreshment table. The torch IS lit. Perfectly. Everything else is chaos. 16:9.",
+      "bg_colors": ["#FFD700", "#FF6B35", "#87CEEB"],
+      "accent": "#FF6B35",
+      "camera": "pull_back",
+      "duration_sec": 9,
+      "higgsfield_prompt": "Cute kids cartoon style, small boy with crown firing massive thunderbolt at ceremonial torch, bolt also catching gold banners on fire, zapping announcer's podium leaving announcer with crackling static hair, tiny rain cloud appearing over refreshment table, torch perfectly lit in center of chaos, boy looking proud while everything else is wrong, 16:9"
+    },
+    {
+      "scene_number": 4,
+      "type": "problem",
+      "title": "Hercules Helps With the Track",
+      "narration": "Baby Hercules had been doing so well. Standing still. Not touching things. For almost four minutes — a personal record. Then he noticed the running track needed smoothing. He decided to help Perseus. He flattened the track. Completely. Also part of the hill next to the track. Also the hill on the other side. The track was very smooth now. It was also now a valley.",
+      "visual_prompt": "Little Olympus kids cartoon style. Overhead view of the running track — which is now an impossibly flat, perfectly smooth valley between two flattened hills. Baby Hercules stands in the middle looking extremely proud, arms crossed. Perseus stands next to him, staring at what was supposed to be a gently undulating running track and is now a geological feature. Hercules: 'I helped!' Perseus: slowly opens his mouth. Nothing comes out. 16:9.",
+      "bg_colors": ["#90EE90", "#8B4513", "#87CEEB"],
+      "accent": "#FF6B35",
+      "camera": "pull_back",
+      "duration_sec": 9,
+      "higgsfield_prompt": "Cute kids cartoon style, overhead view of running track now impossibly flat valley between two flattened hills, chubby toddler standing proudly in middle with arms crossed, dark-haired boy standing next to him staring at geological disaster with mouth slowly opening, total accidental landscape alteration, bright colors, 16:9"
+    },
+    {
+      "scene_number": 5,
+      "type": "solution",
+      "title": "Athena Abandons the Plan",
+      "narration": "Athena looked at her twelve-page color-coded plan. She looked at the burning banners. The drizzling refreshments. The valley that used to be a track. She rolled up the plan. She put it under her arm. She tapped her chin once — just once. Then she said: 'New plan. Everyone do what they're actually good at. Now.'",
+      "visual_prompt": "Little Olympus kids cartoon style. KEY CHARACTER MOMENT — Athena surveys the chaos (burning banners in background, drizzle over refreshments, valley visible in distance). She looks at her perfect rolled-up plan. A beat. She tucks it under her arm. ONE chin tap. Then her expression shifts — from 'my plan' to 'what actually works.' The others look at her. She's calm. Actually calm, not performatively calm. She points. 'Zeus — rain. Perseus — use the valley as the finish line. Hercules — that boulder, that boulder, and that boulder need to move.' 16:9.",
+      "bg_colors": ["#FFD700", "#87CEEB", "#90EE90"],
+      "accent": "#FFD700",
+      "camera": "push_in",
+      "duration_sec": 9,
+      "higgsfield_prompt": "Cute kids cartoon style, smart girl with glasses surveying chaos with burning banners and drizzle in background, looking at rolled-up plan in her hand, tucking it under arm with one chin tap, expression shifting from perfect planning to practical problem-solving, friends looking at her ready, calm genuine confidence not performance, 16:9"
+    },
+    {
+      "scene_number": 6,
+      "type": "resolution",
+      "title": "The Best Games in Olympus History",
+      "narration": "Zeus made it rain in exactly the right places — keeping the crowd cool and the torches burning at the same time. Perseus turned the valley into the most dramatic finish line anyone had ever seen. And Baby Hercules moved three boulders to create the best obstacle course in history. The Games Committee declared it the best opening day ever. They asked Athena to plan next year's. She said she would think about it. Archie looked at the camera.",
+      "visual_prompt": "Little Olympus kids cartoon style. TRIUMPHANT MONTAGE FINAL SHOT — The Olympus Games in full swing! Beautiful dramatic setting: Zeus's controlled rain making rainbows, the valley finish line with a crowd cheering, three enormous boulders now forming an epic obstacle course, Hercules cheering from the sideline having set up his boulders perfectly. Athena watches it all working — her rolled-up original plan still under her arm, but she's smiling. Archie turns directly to camera and blinks slowly. 16:9.",
+      "bg_colors": ["#FFD700", "#87CEEB", "#90EE90"],
+      "accent": "#FFD700",
+      "camera": "pull_back",
+      "duration_sec": 9,
+      "higgsfield_prompt": "Cute kids cartoon style, triumphant Olympus Games in full swing, controlled rainbow rain, dramatic valley finish line with cheering crowd, three enormous boulders as epic obstacle course, chubby toddler cheering from sideline proud, smart girl watching everything work with original rolled-up plan under arm finally smiling, small owl turning directly to viewer blinking slowly, joyful success, 16:9"
+    },
+    {
+      "scene_number": 7,
+      "type": "lesson_and_cta",
+      "title": "What Did We Learn?",
+      "narration": "And here's what Athena learned that day. The best plan isn't the one that goes perfectly. It's the one you can change when it needs to change. She kept the twelve-page plan. She still thinks it was excellent. It was. It just wasn't the plan they ended up needing. See you next time on Little Olympus!",
+      "visual_prompt": "Little Olympus kids cartoon style. Final card — all four friends together at the Olympus Games. Athena waves at camera, rolled-up plan tucked proudly under arm. Perseus gives a thumbs up. Zeus has slightly singed eyebrows but is grinning. Baby Hercules waves with both enormous arms — the crowd behind him accidentally parts from the wind this creates. Rainbow sky, golden Olympus. Fun and warm. 16:9.",
+      "bg_colors": ["#1A1060", "#FFD700", "#87CEEB"],
+      "accent": "#FFD700",
+      "camera": "pull_back",
+      "duration_sec": 9,
+      "higgsfield_prompt": "Cute kids cartoon style, four friends together at Olympus Games waving at camera, smart girl with rolled-up plan under arm, dark-haired boy thumbs up, curly-haired boy with slightly singed eyebrows grinning, chubby toddler waving both enormous arms causing crowd to part behind him, rainbow sky, warm golden light, title card energy, 16:9"
+    }
+  ],
+  "music": {
+    "style": "upbeat_kids_adventure",
+    "notes": "Opening: organized, slightly march-like (Athena's planning energy). Scene 3-4: comedic chaos music, quick tempo. Scene 5: brief silence then warm build when Athena makes her decision. Scene 6: full triumphant kids adventure theme. End: warm and satisfied."
+  },
+  "voice_style": {
+    "tone": "warm_playful_encouraging",
+    "pacing": "Speed up through the chaos scenes. SLOW DOWN on 'She rolled up the plan.' That beat needs space. Then pick up again for the solution.",
+    "character": "A narrator who deeply respects what Athena did in scene 5 — that took more courage than the plan itself"
+  },
+  "lesson": "The best plan is the one you can change when you need to.",
+  "bible_reference": "Little_Olympus_Master_Bible.md — Athena: four chin taps (serious), abandoning the plan is her hardest thing, Archie looks at camera, running joke of plan being ignored. Hercules: 'I helped!', accidental destruction, personal record of standing still.",
+  "archie_camera_note": "Scene 6 is the designated Archie-looks-at-camera moment for this episode. Her advice WAS followed — just not the way she wrote it.",
+  "youtube_title": "Athena's PERFECT Plan Goes WRONG! 😅 | Little Olympus Episode 4",
+  "youtube_description": "Athena has a PERFECT plan for the First Annual Olympus Games! 📋\n\nIt is twelve pages. Color-coded. With THREE backup timelines.\n\nZeus has ONE job. Baby Hercules has ONE job (stand still). Nothing can go wrong.\n\n(Everything goes wrong.)\n\nIn today's adventure:\n🦉 Athena's most perfect plan ever\n⚡ Zeus improvises the torch ceremony (it's fine, it's totally fine)\n💪 Baby Hercules accidentally creates a valley\n✨ The best Olympus Games ever — just not the ones anyone planned\n\n📺 Watch ALL our adventures: [playlist link]\n🔔 SUBSCRIBE for new episodes every week!\n\n#LittleOlympus #Athena #BabyHercules #KidsCartoon #GreekMythology #KidsYouTube",
+  "next_episode_preview": "Episode 5 — The First Olympic Games! Achilles is racing. Against everyone. At the same time. He thinks this is fair.",
+  "higgsfield_style_notes": "Bright warm cartoon throughout. The chaos scenes should be visually funny — layered disasters happening simultaneously in background. Athena's ONE chin tap in scene 5 is visually distinct from her usual three — show it clearly."
+}

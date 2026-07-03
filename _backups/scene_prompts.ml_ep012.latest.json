@@ -1,0 +1,110 @@
+{
+  "channel": "ML",
+  "episode_number": 12,
+  "episode_id": "ML_EP012",
+  "season": 1,
+  "title": "HELD",
+  "tagline": "That word had never been written before.",
+  "hook_line": "Forty-seven teams. Forty-seven times ELDER-7 wrote FALLEN. He had never written anything else. Until now.",
+  "characters": ["BLAZE", "GRANITE", "NOVA", "STORM", "RUMBLE", "ELDER-7"],
+  "scenes": [
+    {
+      "scene_number": 1,
+      "type": "hook",
+      "title": "What He Had Always Written",
+      "narration": "Forty-seven times, ELDER-7 opened that archive. Forty-seven times he wrote the same word. He had never written anything else. Until tonight.",
+      "visual_prompt": "ELDER-7's data pad, the 47 FALLEN entries scrolling past in amber text one final time, coming to rest on the blank TEAM SIX result field — the blank space that has never been filled — dawn light beginning on the horizon beyond, cinematic, 1080x1920 vertical",
+      "bg_colors": ["#8B6914", "#0A0808"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 2,
+      "type": "action",
+      "title": "Full Deployment — All Six",
+      "narration": "BLAZE at the front. GRANITE on both flanks, cryo-sleeve frosted and ready, crack still visible. NOVA — all seventeen panels. First time since the first contact.",
+      "visual_prompt": "The six mechs deploying in convergence formation at dawn — BLAZE orange leading, GRANITE massive slate-blue flanking with cryo-sleeve glowing and the healed crack faintly visible, NOVA launching all 17 cyan panels simultaneously in a stunning bloom — the most panels she has shown since EP001 — cinematic epic, 1080x1920 vertical",
+      "bg_colors": ["#0077B6", "#FF6B00"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 3,
+      "type": "action",
+      "title": "STORM — Seven Points at Once",
+      "narration": "STORM struck from seven positions at exactly the same instant. RUMBLE and BLAZE were already converging. ELDER-7 rose to orbital mode — eyes on everything.",
+      "visual_prompt": "STORM as seven simultaneous purple strikes at different coordinates, BLAZE and RUMBLE visible converging on the same point from opposite angles, ELDER-7 above in his orbital drone form watching the full battlefield, all six active at exactly the same moment, the coordination of six distinct wills, cinematic, 1080x1920 vertical",
+      "bg_colors": ["#4B0082", "#8B0000"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 4,
+      "type": "action",
+      "title": "Xerxes Advances",
+      "narration": "Xerxes advanced. Two and a half million soldiers. The formation that had destroyed forty-seven predecessors. Moving.",
+      "visual_prompt": "The Persian army at full advance, Xerxes's commanding presence visible at the command position, the overwhelming scale of the army moving with unified purpose, gold and amber torchlight, perfect formation, the force that has never been stopped, cinematic epic, 1080x1920 vertical",
+      "bg_colors": ["#8B4513", "#1A0500"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 5,
+      "type": "climax",
+      "title": "They Meet",
+      "narration": "They met.",
+      "visual_prompt": "The collision — six mechs and 2.5 million soldiers — the impact moment captured in a wide epic shot, the scale incomprehensible, six colored lights — orange, slate blue, cyan, purple, bronze, crimson — against a sea of gold and amber, the collision shockwave visible, cinematic, 1080x1920 vertical",
+      "bg_colors": ["#FF6B00", "#8B4513"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 6,
+      "type": "climax",
+      "title": "Six, Simultaneously",
+      "narration": "BLAZE and RUMBLE converged. GRANITE held both flanks. NOVA routed STORM to every gap in real time. ELDER-7 coordinated everything from above. Six. Simultaneously.",
+      "visual_prompt": "Six-way split composition showing each mech in their role at the same moment — BLAZE orange impact, GRANITE slate blue arms wide, NOVA cyan 17 panels routing data, STORM purple seven-point strike, RUMBLE crimson convergence, ELDER-7 bronze orbital above — six simultaneous actions, one moment, cinematic, 1080x1920 vertical",
+      "bg_colors": ["#1A2A4A", "#1A0A00"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 7,
+      "type": "climax",
+      "title": "He Adjusts. They Already Have.",
+      "narration": "Xerxes adjusted his formation. They had already adjusted. For the first time in 2,800 years of engagements — he was responding to them.",
+      "visual_prompt": "NOVA's panel display showing Xerxes's formation attempting to adapt — and the team already having moved to counter that adaptation before it completes — the dynamic of initiative reversed for the first time, Xerxes reacting rather than preparing, cinematic, 1080x1920 vertical",
+      "bg_colors": ["#0077B6", "#3A1A00"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 8,
+      "type": "climax",
+      "title": "More. They Hold More.",
+      "narration": "He sent more. They held more. Not because they were stronger. Because none of them were fighting alone.",
+      "visual_prompt": "The relentless press of Persian reinforcements arriving and the six mechs holding their positions — each one pushed to their absolute limit but none failing, GRANITE's cryo-sleeve at maximum, BLAZE's armor scarred deep, NOVA's panels flickering, STORM at reserve — but the line is exactly where they put it, cinematic, 1080x1920 vertical",
+      "bg_colors": ["#2A1500", "#050A20"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 9,
+      "type": "reveal",
+      "title": "He Stops",
+      "narration": "Xerxes stopped. For the first time in 2,800 years of archive records — he looked at them. Then he withdrew. Not defeated. Choosing to withdraw.",
+      "visual_prompt": "The Persian army beginning to pull back — not routing, not fleeing, a deliberate tactical withdrawal ordered by command — Xerxes's presence in the far distance turning away from the engagement, the army flowing back like a tide, the six mechs still standing exactly where they were, watching, cinematic epic, 1080x1920 vertical",
+      "bg_colors": ["#8B4513", "#0A0A1A"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 10,
+      "type": "resolution",
+      "title": "HELD",
+      "narration": "BLAZE: 'Did we win?' ELDER-7 opened the data pad. Found the TEAM SIX entry. Typed one word in the result field. 'We did not win. We held. That has never happened before.'",
+      "visual_prompt": "ELDER-7's data pad in extreme close-up, the TEAM SIX result field, and ELDER-7's ancient bronze finger typing one word: HELD — glowing in amber in the blank field where 47 predecessors had FALLEN — the team visible in blurred background, battered and still standing, dawn light breaking, cinematic, 1080x1920 vertical",
+      "bg_colors": ["#8B6914", "#0A1A0A"],
+      "duration_sec": 9
+    }
+  ],
+  "viral_hook": "He's never written anything but FALLEN. 47 times. Until now. One word: HELD.",
+  "highlight_scene": 10,
+  "highlight_note": "ELDER-7's finger typing HELD — the word visible appearing in the blank field that has been empty all season — is the most earned image in the show. Everything has been building to those four letters.",
+  "short_title": "HELD",
+  "rewatch_bait": "Rewatch EP001. The blank TEAM SIX result field in scene 2. ELDER-7 never believed it would be filled. Now go back and watch his expression in every episode knowing what he was carrying.",
+  "youtube_title": "47 Teams. 47 Times He Wrote FALLEN. Tonight He Wrote Something Different. | Mech Legends S1 EP012",
+  "lesson": "You don't have to win. Sometimes the most impossible thing is just to hold.",
+  "arc_notes": "EP012 season finale. Xerxes retreats but is not defeated — he will return in Season 3 (after Hannibal's S2). ELDER-7's 'We did not win. We held.' is the thesis of the entire show: team over individual, persistence over perfection. The word HELD appears once. It means everything."
+}

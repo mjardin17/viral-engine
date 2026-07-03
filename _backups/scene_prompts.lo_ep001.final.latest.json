@@ -1,0 +1,141 @@
+{
+  "channel": "Little Olympus",
+  "episode_number": 1,
+  "episode_id": "LO_EP001",
+  "title": "Little Zeus Gets His Thunderbolt",
+  "tagline": "Every hero needs their first adventure. Even the king of the gods.",
+  "duration_target_min": 5,
+  "aesthetic": {
+    "color_grade": "bright_kids_cartoon",
+    "primary_colors": ["#FFD700", "#1A1060", "#00B4E6", "#FF6B35"],
+    "font_style": "rounded_chunky_bold",
+    "music_style": "upbeat_kids_adventure",
+    "narrator_tone": "warm_playful_encouraging"
+  },
+  "characters": {
+    "hero": {
+      "name": "Little Zeus",
+      "role": "The kid king of Mount Olympus",
+      "visual": "Small boy with wild curly white hair, tiny golden crown, holding a tiny lightning bolt, big bright blue eyes, wearing a white toga with gold trim",
+      "personality": "Energetic, brave, a little clumsy, LOVES his thunderbolt"
+    },
+    "sidekick": {
+      "name": "Baby Hercules",
+      "role": "The strongest little kid on Olympus",
+      "visual": "Chubby toddler with enormous arms, lion-skin cape (tiny), confused happy expression",
+      "personality": "Incredibly strong, has no idea how strong he is, very friendly"
+    },
+    "mentor": {
+      "name": "Athena",
+      "role": "The smart one who always has a plan",
+      "visual": "Girl with grey-streaked hair and a tiny owl on her shoulder, big glasses, holding a scroll",
+      "personality": "Calm, clever, always three steps ahead"
+    },
+    "villain_of_the_week": {
+      "name": "Stormy the Storm Cloud",
+      "role": "A grumpy magic storm cloud who stole the thunderbolt",
+      "visual": "Big dark grey cloud with a grumpy face, lightning crackling around it, dramatic for a cloud",
+      "note": "NOT an overwhelming villain — this is a kids show. Stormy is grumpy but solvable."
+    }
+  },
+  "scenes": [
+    {
+      "scene_number": 1,
+      "type": "hook",
+      "title": "The Thunderbolt Is Gone!",
+      "narration": "Every morning on Mount Olympus, Little Zeus woke up and did one thing before breakfast. He checked on his thunderbolt. But this morning... it was GONE!",
+      "visual_prompt": "Little Olympus kids cartoon style. Bright colorful Mount Olympus at sunrise — fluffy clouds, golden temples, bright blue sky. Little Zeus — a small curly-haired boy with a tiny crown — stands at his bedside looking at an EMPTY golden thunderbolt stand with a shocked expression. Big expressive cartoon eyes. Warm sunny colors. Super cute and fun. 16:9.",
+      "bg_colors": ["#87CEEB", "#FFD700", "#FFFFFF"],
+      "accent": "#FFD700",
+      "camera": "push_in",
+      "duration_sec": 9,
+      "higgsfield_prompt": "Cute kids cartoon style, colorful Mount Olympus bedroom, small boy with curly white hair and tiny golden crown looking shocked at empty thunderbolt stand, big expressive eyes, warm bright colors, 16:9"
+    },
+    {
+      "scene_number": 2,
+      "type": "setup",
+      "title": "Baby Hercules Didn't Take It",
+      "narration": "Little Zeus ran to find Baby Hercules. Baby Hercules was in the garden. He had accidentally picked up a mountain. He definitely did not take the thunderbolt.",
+      "visual_prompt": "Little Olympus kids cartoon style. Bright green garden on Mount Olympus. Baby Hercules — a chubby toddler with a tiny lion cape — is holding a small mountain over his head with one hand, looking very proud. Little Zeus runs up looking worried. Both characters are cute cartoon style with big expressive faces. Bright cheerful colors. 16:9.",
+      "bg_colors": ["#90EE90", "#87CEEB", "#FFFFFF"],
+      "accent": "#FF8C00",
+      "camera": "pull_back",
+      "duration_sec": 9,
+      "higgsfield_prompt": "Cute kids cartoon style, bright garden on Mount Olympus, chubby toddler with lion cape holding a mountain over his head, small curly-haired boy running up looking worried, big expressive cartoon faces, bright cheerful colors, 16:9"
+    },
+    {
+      "scene_number": 3,
+      "type": "clue",
+      "title": "Athena Has a Plan",
+      "narration": "Athena was already waiting. She always knew things before they happened. She pointed up at the sky — where a very large, very grumpy storm cloud was rumbling around. And in the middle of it? A golden glow. The thunderbolt.",
+      "visual_prompt": "Little Olympus kids cartoon style. Athena — a smart girl with grey-streaked hair and a tiny owl on her shoulder — points dramatically upward at a big grumpy-faced cartoon storm cloud in the sky. The cloud has an evil grin and you can see a tiny golden thunderbolt shape glowing inside it. Little Zeus and Baby Hercules look up. Bright cartoon art. 16:9.",
+      "bg_colors": ["#B0C4DE", "#87CEEB", "#FFFFFF"],
+      "accent": "#6A0DAD",
+      "camera": "pull_back",
+      "duration_sec": 9,
+      "higgsfield_prompt": "Cute kids cartoon style, smart girl with owl on shoulder pointing at big grumpy cartoon storm cloud in sky, golden glow inside cloud, two small kids looking up, bright cartoon style, 16:9"
+    },
+    {
+      "scene_number": 4,
+      "type": "problem",
+      "title": "Stormy the Storm Cloud",
+      "narration": "The cloud's name was Stormy. Stormy was having a very bad day. He hadn't rained on anyone in a week. Nobody had jumped in any puddles. Nobody had used an umbrella. Stormy just wanted someone to notice him. So he borrowed the thunderbolt. Just to get some attention.",
+      "visual_prompt": "Little Olympus kids cartoon style. Close up on Stormy the Storm Cloud — a big dramatic dark grey cartoon cloud with an extremely grumpy yet sad face, lightning sparkling around him, holding the tiny golden thunderbolt in one wispy cloud arm. His expression is grumpy-but-actually-sad. Very expressive. Cartoon style. 16:9.",
+      "bg_colors": ["#4A4A8A", "#2A2A6A", "#6A6AAA"],
+      "accent": "#FFD700",
+      "camera": "push_in",
+      "duration_sec": 9,
+      "higgsfield_prompt": "Cute kids cartoon style, large grumpy sad cartoon storm cloud face with lightning sparkling around it, holding tiny golden thunderbolt, expressive face showing grumpy but secretly sad emotion, cartoon style, 16:9"
+    },
+    {
+      "scene_number": 5,
+      "type": "solution",
+      "title": "Little Zeus Has an Idea",
+      "narration": "Little Zeus thought about it. Being left out felt awful. He knew how that felt. So instead of using his powers — he just talked to Stormy. He asked Stormy to come down and be friends. And he promised that every Tuesday, Stormy could make it rain on Olympus. Proper rain. With jumping puddles and everything.",
+      "visual_prompt": "Little Olympus kids cartoon style. Little Zeus floats up on a tiny cloud to be at eye level with Stormy the Storm Cloud. Zeus has a friendly open expression, arms out, offering friendship. Stormy looks surprised and touched. Baby Hercules and Athena cheer from below. Warm golden light breaking through clouds. Heartwarming moment. Bright cartoon colors. 16:9.",
+      "bg_colors": ["#FFD700", "#FFA500", "#FFFFFF"],
+      "accent": "#FFD700",
+      "camera": "pull_back",
+      "duration_sec": 9,
+      "higgsfield_prompt": "Cute kids cartoon style, small boy with crown floating on tiny cloud reaching out in friendship to large storm cloud, storm cloud looking surprised and touched, two kids cheering below, warm golden light, heartwarming moment, bright cartoon colors, 16:9"
+    },
+    {
+      "scene_number": 6,
+      "type": "resolution",
+      "title": "Thunderbolt Returned — and It Rains!",
+      "narration": "Stormy gave back the thunderbolt. And then — right there on Mount Olympus — it started to rain. The best, most perfect puddle-jumping rain you've ever seen. Even Athena got a little wet. And Baby Hercules jumped in a puddle so hard the splash went all the way to Athens.",
+      "visual_prompt": "Little Olympus kids cartoon style. Epic happy ending — it's raining beautifully on Mount Olympus, giant sparkly puddles everywhere. Little Zeus holds his golden thunderbolt triumphantly. Baby Hercules is mid-jump about to land in a HUGE puddle, splash going everywhere. Athena tries to stay dignified but is smiling. Stormy the cloud above looks genuinely happy for the first time. Rainbow in background. Pure joy. 16:9.",
+      "bg_colors": ["#87CEEB", "#FFD700", "#98FB98"],
+      "accent": "#FFD700",
+      "camera": "pull_back",
+      "duration_sec": 9,
+      "higgsfield_prompt": "Cute kids cartoon style, happy rain on Mount Olympus, small boy with crown holding golden thunderbolt triumphantly, chubby toddler jumping in huge puddle with massive splash, smart girl smiling, happy storm cloud above, rainbow in background, joyful scene, bright cartoon colors, 16:9"
+    },
+    {
+      "scene_number": 7,
+      "type": "lesson_and_cta",
+      "title": "What Did We Learn?",
+      "narration": "And that's what Little Zeus learned that day. Sometimes when someone acts grumpy or takes something that isn't theirs — they just want someone to notice them. Being kind is always more powerful than being the king. See you next time on Little Olympus!",
+      "visual_prompt": "Little Olympus kids cartoon style. Final card — all four characters together on Mount Olympus. Little Zeus holds his thunderbolt and waves at the camera. Baby Hercules gives a thumbs up. Athena and her owl bow. Stormy floats nearby looking friendly. Bright golden sky, colorful Mount Olympus behind them. Fun title energy. Channel branding style. 16:9.",
+      "bg_colors": ["#1A1060", "#FFD700", "#00B4E6"],
+      "accent": "#FFD700",
+      "camera": "pull_back",
+      "duration_sec": 9,
+      "higgsfield_prompt": "Cute kids cartoon style, all four characters together waving at camera on Mount Olympus, curly-haired boy with crown and thunderbolt, chubby toddler giving thumbs up, smart girl with owl, friendly happy storm cloud, golden sky, bright fun colors, title card energy, 16:9"
+    }
+  ],
+  "music": {
+    "style": "upbeat_kids_adventure",
+    "notes": "Light xylophone melody, bouncy percussion, warm brass. Think CoComelon energy but slightly more adventurous. Happy resolution swell at end."
+  },
+  "voice_style": {
+    "tone": "warm_playful_encouraging",
+    "pacing": "slightly faster, punchy — keeps kids engaged",
+    "character": "like a fun storyteller reading a picture book to kids"
+  },
+  "lesson": "Being kind is more powerful than being powerful.",
+  "youtube_title": "Little Zeus Lost His Thunderbolt! ⚡ | Little Olympus Episode 1",
+  "youtube_description": "Little Zeus wakes up and his thunderbolt is GONE! 😱\n\nJoin Little Zeus, Baby Hercules, and Athena as they track down the missing thunderbolt — and discover something surprising about who took it!\n\nIn today's adventure:\n⚡ Little Zeus loses his most prized possession\n💪 Baby Hercules picks up a mountain (by accident)\n🦉 Athena knows exactly what to do\n🌧️ Stormy the Storm Cloud has a surprise for everyone\n\n📺 Watch ALL our adventures: [playlist link]\n🔔 SUBSCRIBE for new episodes every week!\n\n#LittleOlympus #LittleZeus #BabyHercules #KidsCartoon #GreekMythology #KidsYouTube",
+  "next_episode_preview": "Episode 2 — Baby Hercules and the Giant Snake! Watch out — Baby Hercules doesn't know his own strength!",
+  "higgsfield_style_notes": "ALL scenes must be bright, colorful, cute cartoon style. Big expressive eyes on all characters. Think CoComelon × Greek mythology. NOT cinematic/dark. Warm, safe, fun colors. Kids ages 3-10 audience."
+}

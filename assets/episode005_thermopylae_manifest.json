@@ -1,0 +1,200 @@
+{
+  "episode_number": 5,
+  "series_name": "Empire Decoded",
+  "title": "The Battle of Thermopylae",
+  "status": "assets generated on Higgsfield (2026-06-14); not yet assembled into final video",
+  "rendered": false,
+  "source": "Recovered from Higgsfield generation history (cloud-hosted, persists independent of any local sandbox)",
+  "narration_script": {
+    "voice": "Hades (en)",
+    "model": "inworld_text_to_speech",
+    "notes": "Two cold-open takes exist (draft + final). Final (later timestamp, mentions 'This is Empire Decoded') should be used as scene 1.",
+    "lines": [
+      {
+        "order": 1,
+        "role": "cold_open_final",
+        "text": "What does it take to stop an empire of a million men? In four hundred and eighty B.C., three hundred Spartans found out — and for three days, they nearly did the impossible. This is Empire Decoded. This is the Battle of Thermopylae.",
+        "generation_id": "25c20571-07a8-4b8d-a8a7-971bb0a6ef57",
+        "audio_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3D9eVQycjqBmIClt0W6gUnVzpEA/hf_20260614_173745_25c20571-07a8-4b8d-a8a7-971bb0a6ef57.wav",
+        "created_at": "2026-06-14T17:37:45Z"
+      },
+      {
+        "order": 0,
+        "role": "cold_open_draft (alternate, not used if final exists)",
+        "text": "Three hundred men. One narrow pass. And an empire of more than a million soldiers that believed it could erase them from history. This is the story of the three days that changed the world — the Battle of Thermopylae.",
+        "generation_id": "0333bea1-ef7f-454f-a857-76dbba86e518",
+        "audio_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3D9eVQycjqBmIClt0W6gUnVzpEA/hf_20260614_171015_0333bea1-ef7f-454f-a857-76dbba86e518.wav",
+        "created_at": "2026-06-14T17:10:15Z"
+      },
+      {
+        "order": 2,
+        "role": "agoge",
+        "text": "In Sparta, a boy did not belong to his family. At age seven, he was taken from his home and placed into the agoge — a brutal state training system designed to produce one thing, and one thing only: the perfect soldier. Cold, hunger, and pain were not punishments. They were the curriculum.",
+        "generation_id": "c6a638ad-98a1-4438-ab70-34466c1d9ffe",
+        "audio_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3D9eVQycjqBmIClt0W6gUnVzpEA/hf_20260614_171016_c6a638ad-98a1-4438-ab70-34466c1d9ffe.wav",
+        "created_at": "2026-06-14T17:10:16Z"
+      },
+      {
+        "order": 3,
+        "role": "phalanx",
+        "text": "Every Spartan warrior, or hoplite, fought the same way: locked shoulder to shoulder, shields overlapping, spears forward. This formation was called the phalanx — and for two hundred years, it made Sparta's army the most feared infantry force in the known world.",
+        "generation_id": "a71d1d80-1fee-48db-97ef-9d24422d7768",
+        "audio_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3D9eVQycjqBmIClt0W6gUnVzpEA/hf_20260614_171102_a71d1d80-1fee-48db-97ef-9d24422d7768.wav",
+        "created_at": "2026-06-14T17:11:02Z"
+      },
+      {
+        "order": 4,
+        "role": "prophecy",
+        "text": "Before the war, Sparta's leaders traveled to the Oracle of Delphi for a prophecy. The answer they received was grim: either the city of Sparta would be destroyed — or one of her two kings would have to die so that it would not be. King Leonidas chose to be that king.",
+        "generation_id": "a8b35f30-9be4-4f66-9779-ddfebee83458",
+        "audio_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3D9eVQycjqBmIClt0W6gUnVzpEA/hf_20260614_171103_a8b35f30-9be4-4f66-9779-ddfebee83458.wav",
+        "created_at": "2026-06-14T17:11:03Z"
+      },
+      {
+        "order": 5,
+        "role": "persian_invasion",
+        "text": "King Xerxes of Persia assembled the largest invasion force the ancient world had ever seen — by some ancient accounts, over a million soldiers, drawn from dozens of nations across his empire. His engineers built a bridge of boats across the Hellespont so the army could walk from Asia into Europe.",
+        "generation_id": "9982e842-57ff-453e-ad70-1e859ba459b9",
+        "audio_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3D9eVQycjqBmIClt0W6gUnVzpEA/hf_20260614_171130_9982e842-57ff-453e-ad70-1e859ba459b9.wav",
+        "created_at": "2026-06-14T17:11:30Z"
+      },
+      {
+        "order": 6,
+        "role": "the_immortals",
+        "text": "At the heart of that army marched the Immortals — ten thousand of Persia's finest soldiers, hand-picked, richly equipped, and undefeated in living memory. To the rest of the ancient world, they were less an army than a force of nature.",
+        "generation_id": "7461946f-b13e-4983-89bf-8368fe1aee8d",
+        "audio_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3D9eVQycjqBmIClt0W6gUnVzpEA/hf_20260614_171131_7461946f-b13e-4983-89bf-8368fe1aee8d.wav",
+        "created_at": "2026-06-14T17:11:31Z"
+      },
+      {
+        "order": 7,
+        "role": "the_stand_begins",
+        "text": "Leonidas chose his ground carefully: a narrow mountain pass at Thermopylae, barely wide enough for a handful of men to stand abreast. Here, the size of the Persian army meant nothing. For two days, three hundred Spartans and a few thousand allied Greeks held the line against wave after wave of attacks — in the rain, in the heat, without retreat.",
+        "generation_id": "f1893ac3-9db5-4b94-b862-a3ee90b2cad3",
+        "audio_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3D9eVQycjqBmIClt0W6gUnVzpEA/hf_20260614_171157_f1893ac3-9db5-4b94-b862-a3ee90b2cad3.wav",
+        "created_at": "2026-06-14T17:11:57Z"
+      },
+      {
+        "order": 8,
+        "role": "the_betrayal_turn",
+        "text": "On the third day, a local shepherd showed the Persians a hidden mountain path that led behind the Greek position. Surrounded on all sides, Leonidas sent the bulk of the Greek army away to fight another day — and stayed at Thermopylae with his three hundred Spartans to hold the line to the very last man.",
+        "generation_id": "f61fd67b-da01-4385-bf1c-f9554bc3e82b",
+        "audio_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3D9eVQycjqBmIClt0W6gUnVzpEA/hf_20260614_171158_f61fd67b-da01-4385-bf1c-f9554bc3e82b.wav",
+        "created_at": "2026-06-14T17:11:58Z"
+      },
+      {
+        "order": 9,
+        "role": "aftermath",
+        "text": "They did not survive. But their stand bought Greece something it could not buy any other way: time. Time to gather its fleets, time to unite its city-states, and time to prepare for the battles that would ultimately turn the war — at Salamis, and at Plataea.",
+        "generation_id": "dbf6d813-bbdb-4de0-8fee-74b100358d5e",
+        "audio_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3D9eVQycjqBmIClt0W6gUnVzpEA/hf_20260614_171223_dbf6d813-bbdb-4de0-8fee-74b100358d5e.wav",
+        "created_at": "2026-06-14T17:12:23Z"
+      },
+      {
+        "order": 10,
+        "role": "legacy_outro",
+        "text": "Twenty-five hundred years later, the names Sparta and Thermopylae still mean the same thing: standing your ground against impossible odds. The Greek world that survived that war went on to give civilization democracy, philosophy, and the foundations of Western thought. Subscribe to Empire Decoded — because history's greatest stories are still being decoded.",
+        "generation_id": "b3477324-f751-49b2-9289-8ded8f281bc9",
+        "audio_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3D9eVQycjqBmIClt0W6gUnVzpEA/hf_20260614_171224_b3477324-f751-49b2-9289-8ded8f281bc9.wav",
+        "created_at": "2026-06-14T17:12:24Z"
+      }
+    ]
+  },
+  "music": {
+    "model": "sonilo_music",
+    "prompt": "Epic historical documentary score, cinematic orchestral, low strings and war drums, building tension throughout. Begins with a slow ominous opening, escalates into a marching theme with brass and percussion, builds to an intense battle theme with driving drums and choir, settles into somber strings and solo cello, and resolves with a swelling hopeful full orchestra finale. Instrumental only, no vocals except optional wordless choir swells. Style reference: Hans Zimmer historical trailer score.",
+    "duration_sec": 300,
+    "generation_id": "a3b190c6-75f6-42da-a96f-70a4891fde53",
+    "audio_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3D9eVQycjqBmIClt0W6gUnVzpEA/hf_20260614_171253_a3b190c6-75f6-42da-a96f-70a4891fde53.m4a"
+  },
+  "sound_effects": [
+    {
+      "label": "tension_drone",
+      "prompt": "Low ominous wind drone, distant dread atmosphere, cinematic tension build, no music",
+      "generation_id": "e42d097d-3b55-498a-bed9-2b13d57e9ba6",
+      "audio_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3D9eVQycjqBmIClt0W6gUnVzpEA/hf_20260614_173449_e42d097d-3b55-498a-bed9-2b13d57e9ba6.mp3"
+    },
+    {
+      "label": "agoge_training",
+      "prompt": "Wooden training swords clashing rhythmically, leather sandals on dirt, harsh military drill grunts, ancient training yard ambience",
+      "generation_id": "d3b6a9f7-69a4-41a0-b446-9a8d14b6b6e8",
+      "audio_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3D9eVQycjqBmIClt0W6gUnVzpEA/hf_20260614_173450_d3b6a9f7-69a4-41a0-b446-9a8d14b6b6e8.mp3"
+    },
+    {
+      "label": "forge",
+      "prompt": "Blacksmith forge ambience, hammer striking hot bronze on anvil, crackling fire, bellows pumping, sparks",
+      "generation_id": "ffcc9ff2-27b4-4d0e-829d-aad84616a68e",
+      "audio_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3D9eVQycjqBmIClt0W6gUnVzpEA/hf_20260614_173518_ffcc9ff2-27b4-4d0e-829d-aad84616a68e.mp3"
+    },
+    {
+      "label": "oracle_temple",
+      "prompt": "Eerie ancient temple ambience, echoing stone chamber, distant ritual chanting, torches flickering, mysterious atmosphere",
+      "generation_id": "6875d8e1-8620-4387-8037-9b0bb9577dc4",
+      "audio_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3D9eVQycjqBmIClt0W6gUnVzpEA/hf_20260614_173519_6875d8e1-8620-4387-8037-9b0bb9577dc4.mp3"
+    },
+    {
+      "label": "persian_army_march",
+      "prompt": "Massive army marching, thousands of footsteps on dirt, distant war horns, banners flapping in wind, ominous scale",
+      "generation_id": "e5e9c81f-a805-4198-9ff4-c70a19b9fa87",
+      "audio_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3D9eVQycjqBmIClt0W6gUnVzpEA/hf_20260614_173546_e5e9c81f-a805-4198-9ff4-c70a19b9fa87.mp3"
+    },
+    {
+      "label": "immortals_march",
+      "prompt": "Synchronized heavy footsteps of elite soldiers marching in unison, metallic armor clinking, low menacing drone",
+      "generation_id": "4b072c01-8495-4a57-ae6f-4b0d5fd26c13",
+      "audio_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3D9eVQycjqBmIClt0W6gUnVzpEA/hf_20260614_173548_4b072c01-8495-4a57-ae6f-4b0d5fd26c13.mp3"
+    },
+    {
+      "label": "storm_battle",
+      "prompt": "Heavy rain storm with thunder, bronze shields and spears clashing in battle, war cries, intense combat ambience",
+      "generation_id": "2e2265b6-a00e-404e-aaa3-13e496bc190c",
+      "audio_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3D9eVQycjqBmIClt0W6gUnVzpEA/hf_20260614_173617_2e2265b6-a00e-404e-aaa3-13e496bc190c.mp3"
+    },
+    {
+      "label": "last_stand_chaos",
+      "prompt": "Intense chaotic battle, swords and spears clashing rapidly, soldiers shouting, screams, desperate last-stand combat",
+      "generation_id": "1979719b-03fa-4677-b003-22f4b70a60fe",
+      "audio_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3D9eVQycjqBmIClt0W6gUnVzpEA/hf_20260614_173618_1979719b-03fa-4677-b003-22f4b70a60fe.mp3"
+    },
+    {
+      "label": "aftermath_ambience",
+      "prompt": "Aftermath of battle, wind blowing over a smoldering battlefield, crackling embers, distant crows calling, somber quiet",
+      "generation_id": "34e2f7ac-8d8a-45f9-93c9-989c0b6d8b59",
+      "audio_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3D9eVQycjqBmIClt0W6gUnVzpEA/hf_20260614_173647_34e2f7ac-8d8a-45f9-93c9-989c0b6d8b59.mp3"
+    },
+    {
+      "label": "triumphant_resolution",
+      "prompt": "Triumphant ethereal wind and distant choir-like tones, hopeful epic atmosphere, sweeping cinematic resolution",
+      "generation_id": "7c002741-6379-4950-b74c-880100be64c3",
+      "audio_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3D9eVQycjqBmIClt0W6gUnVzpEA/hf_20260614_173648_7c002741-6379-4950-b74c-880100be64c3.mp3"
+    }
+  ],
+  "character_images": [
+    {
+      "label": "spartan_hoplite_reference",
+      "model": "nano_banana_2",
+      "prompt": "Cinematic realistic character design, Spartan hoplite warrior, bronze muscle-cuirass armor, crimson wool cloak, bronze Corinthian-style helmet with horsehair crest, archaeology-based proportions (not film-specific), round bronze shield with an original geometric lambda-and-sunburst emblem, holding a long spear (doru), full body standing pose, neutral grey studio background, soft even lighting, character reference sheet, front view, no text, no logos, no watermark",
+      "generation_id": "2abbd8d0-a186-4f40-a307-d0240741f7df",
+      "image_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3D9eVQycjqBmIClt0W6gUnVzpEA/hf_20260614_164125_2abbd8d0-a186-4f40-a307-d0240741f7df.png",
+      "thumb_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3D9eVQycjqBmIClt0W6gUnVzpEA/hf_20260614_164125_2abbd8d0-a186-4f40-a307-d0240741f7df_min.webp"
+    }
+  ],
+  "video_clips": [
+    {
+      "scene_number": 1,
+      "model": "grok_video",
+      "prompt": "Cinematic shot for scene 1 of LEGEND EMPIRE Episode 5. Establish mood and setting, dynamic camera movement, high detail, dramatic lighting.",
+      "aspect_ratio": "16:9",
+      "resolution": "720p",
+      "generation_id": "05427a01-7ca8-4c14-b6e9-377805007fce",
+      "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3D9eVQycjqBmIClt0W6gUnVzpEA/hf_20260614_233334_05427a01-7ca8-4c14-b6e9-377805007fce.mp4",
+      "status": "completed"
+    }
+  ],
+  "remaining_work": [
+    "Scenes 2-10 (or however the final cut is segmented) still need video clips generated via Higgsfield (only scene 1 done so far).",
+    "Assemble narration + music + SFX + video clips into final cut.",
+    "Generate thumbnail using the Spartan hoplite reference image.",
+    "Generate captions/metadata for upload."
+  ]
+}

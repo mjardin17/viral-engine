@@ -1,0 +1,83 @@
+{
+  "channel": "Little Olympus",
+  "episode_number": 22,
+  "episode_id": "LO_EP022",
+  "season": 2,
+  "title": "Artemis Arrives",
+  "tagline": "She hit the target before anyone told her where it was.",
+  "hook_line": "A new god arrived at Little Olympus today. She immediately shot an arrow at something no one else could see. She hit it. She didn't think this was worth mentioning.",
+  "characters": ["Zeus", "Athena", "Achilles", "Artemis", "Archie", "Hercules", "Perseus"],
+  "scenes": [
+    {
+      "scene_number": 1,
+      "type": "hook",
+      "title": "The Arrow That Arrived First",
+      "narration": "Artemis did not knock on the gate of Little Olympus. An arrow arrived at the gate. It was stuck in the exact center of the post. Then Artemis walked up, pulled it out, and said: 'Is this where I'm supposed to be?' The arrow hole was perfectly round.",
+      "visual_prompt": "Wide shot of Little Olympus gate — golden gates, Mount Olympus in background, pastel cartoon style — a single arrow embedded in the exact dead center of the left gate post, the arrow still quivering — then Artemis walking up the path, small cartoon girl, silver-gray tunic, short dark hair, silver bow across her back, quiver of silver-tipped arrows, confident walk, already reaching for the arrow to pull it out — Zeus visible behind the gate with a startled expression, Archie on the gate post inches from where the arrow landed, completely unbothered, #FFD700 and silver, warm morning light",
+      "bg_colors": ["#FFD700", "#87CEEB", "#F0F8FF"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 2,
+      "type": "character",
+      "title": "Everyone Meets Artemis",
+      "narration": "Zeus introduced everyone. When he got to Achilles, Artemis looked at him for a long moment. 'You favor your left side when you stand,' she said. Achilles said: 'I don't.' Artemis said: 'You do. By about four degrees.' There was a pause. 'I'm a hunter,' she said. 'I notice things.' Achilles didn't say anything. But later, when no one was looking, he checked.",
+      "visual_prompt": "Group introduction scene at Little Olympus courtyard — cartoon ensemble, Zeus doing introductions with a hand gesture, Artemis standing with arms crossed slightly, silver bow on her back, looking at each character with precise attention — the moment she's studying Achilles, highlighted: her gaze at his stance, Achilles standing straight trying to look perfectly balanced, visual indicator showing his left-side lean (four degrees, labeled), Archie watching the exchange with interest, Hercules waving enthusiastically, pastel cartoon #FFD700 and silver",
+      "bg_colors": ["#FFD700", "#E8F4FD", "#87CEEB"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 3,
+      "type": "character",
+      "title": "The First Shot",
+      "narration": "Hercules asked Artemis to show them what she could do. She looked around for a moment, then shot an arrow at a cloud. A small piece of the cloud separated and drifted away. 'What was in the cloud?' Athena asked. 'Nothing,' Artemis said. 'I was aiming at the shape.' Everyone waited for her to say something else. She didn't.",
+      "visual_prompt": "Dramatic cartoon shot — Artemis mid-shot, silver bow drawn, one eye closed, aimed at a specific cloud in the clear blue sky — the arrow in flight, tiny, toward a large puffy cloud — then: the cloud with a neat circular piece missing from its edge, the separated cloud piece floating away, Hercules's jaw dropped, Athena writing something on a scroll, Zeus looking at his crown as if that's somehow related, Archie watching the separated cloud piece with an expression that suggests he understands something about it, #87CEEB sky, #FFD700 accents, silver arrow trail",
+      "bg_colors": ["#87CEEB", "#FFD700", "#F0F8FF"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 4,
+      "type": "character",
+      "title": "Artemis and Achilles",
+      "narration": "By afternoon Achilles had found a reason to be in the same training area as Artemis. He wasn't going to admit that's why he was there. He was 'checking the equipment.' Artemis was practicing target sequences — hit, reload, move, hit again. She was doing it very quickly. Achilles watched for a while. 'How do you know where the next target is before you've hit the first one?' 'I decide where it will be,' she said. 'Then it's there.' Achilles thought about that for a long time.",
+      "visual_prompt": "Training ground scene, afternoon light, Artemis moving through a rapid-fire sequence — arrows hitting multiple targets in succession, silver bow blur with speed, footwork perfect — Achilles leaning against the fence nearby pretending to check equipment (clearly watching), his expression going from skeptical to genuinely impressed, the training targets shown as a sequence of small moving objects she hits in rapid succession, cartoon style, warm afternoon #FFD700 light, silver and gold color story",
+      "bg_colors": ["#FFD700", "#FFF5C0", "#87CEEB"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 5,
+      "type": "development",
+      "title": "What She Noticed About Everyone",
+      "narration": "At dinner Athena asked Artemis what she'd noticed. Artemis said: 'Zeus holds his breath for two seconds before making a decision. Hercules always checks that other people got enough before he takes his share. Perseus looks at Medusa's direction when he thinks no one is watching. Achilles checks his left ankle every seven minutes.' There was a silence. 'I've been here eight hours,' Artemis said. She took a piece of bread and ate it.",
+      "visual_prompt": "Dinner scene at the Little Olympus table, evening light, everyone seated — Artemis eating calmly while everyone else is mid-realization: Zeus's hand caught at his mouth (confirming the breath-holding), Hercules looking at his plate (less than everyone else's), Perseus turning red, Achilles looking at his ankle — Athena staring at Artemis with undisguised professional admiration, Archie looking at Artemis as if he has finally met someone who notices things at his level, warm dinner light, #FFD700 and warm amber",
+      "bg_colors": ["#C8A951", "#FFD700", "#FFF5C0"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 6,
+      "type": "resolution",
+      "title": "She Stays",
+      "narration": "After dinner Zeus said: 'You can have the east room.' Artemis said: 'I've already put my things there.' Zeus said: 'I haven't shown you where it is.' Artemis said: 'No.' She walked toward the east room. 'She found it herself,' Hercules said. 'She found it before she arrived,' Athena said quietly. Zeus's crown listed left.",
+      "visual_prompt": "Evening scene at Little Olympus corridors, Artemis walking confidently toward the east room without directions, Zeus pointing in a completely different direction, everyone watching her go the right way, Athena with a small satisfied expression (a peer has arrived), Hercules impressed, Perseus watching with curiosity, Archie sitting in the exact correct spot to watch her pass — the east room door visible at the end of the hall, warm lamplight, #FFD700 and amber evening, the sense that everything just got more interesting",
+      "bg_colors": ["#C8A951", "#FFD700", "#F5E6C0"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 7,
+      "type": "tag",
+      "title": "Four Degrees",
+      "narration": "That night, alone in his room, Achilles stood in front of the small bronze mirror and checked his stance. He checked it very carefully. He was leaning left. By about four degrees. He stood there for a while. Then he adjusted his stance. Then he sat down on the floor and thought about what that meant for a long time.",
+      "visual_prompt": "Achilles's room at night, small and simple, a small bronze mirror on the wall — Achilles standing in front of it in his practice clothes, carefully checking his stance, a subtle four-degree lean visible — his expression going from denial to recognition — then: Achilles sitting on the floor against the bed with his arms around his knees, thinking, the mirror visible in the background, his left ankle visible — quiet, small moment, not dramatic, the weight is in the recognition — #FFD700 lamplight warm, shadows",
+      "bg_colors": ["#C8A951", "#8B6914", "#3D2B00"],
+      "duration_sec": 9
+    }
+  ],
+  "viral_hook": "She arrived at Little Olympus, shot an arrow at a cloud for fun, and then at dinner casually listed every secret everyone had been keeping about themselves. She'd been there eight hours.",
+  "highlight_scene": 5,
+  "highlight_note": "Artemis listing everyone's secrets at dinner — Zeus's breath-hold, Hercules giving less to himself, Perseus watching Medusa's direction. The table reactions are the whole episode in one scene.",
+  "short_title": "She's Been Here 8 Hours And Already Knows Everything",
+  "rewatch_bait": "Scene 3 — the cloud Artemis shoots. Archie watches the separated piece float away with a specific expression. The cloud piece drifts toward the Olympus Sea. Toward the Titan.",
+  "youtube_title": "The new god at Little Olympus notices EVERYTHING 👁️ | Little Olympus S2 EP2",
+  "lesson": "Paying attention is a skill. What you notice about others says as much about you as them.",
+  "arc_notes": "Artemis introduced. Artemis-Achilles dynamic planted — his four-degrees recognition is the beginning of a shift. Her ability to notice everything will be important for the Achilles heel arc (she notices the ankle getting worse in EP008). Running joke planted: she hits everything, doesn't think it's impressive. Archie scene 3 cloud reaction: seeds Titan connection."
+}

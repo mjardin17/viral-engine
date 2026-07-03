@@ -1,0 +1,327 @@
+{
+  "channel": "GG",
+  "episode_number": 24,
+  "episode_id": "GG_EP024",
+  "title": "Inchon: MacArthur's Impossible Landing",
+  "subtitle": "September 1950 \u2014 The Amphibious Strike That Saved South Korea",
+  "tagline": "Every admiral said it couldn't be done. The tides were wrong, the harbor was wrong, the timing was wrong. MacArthur did it anyway. It worked perfectly. He was fired six months later.",
+  "duration_target_sec": 1110,
+  "viral_hook": "MacArthur proposed landing at a harbor so difficult that his own admirals called it a 5,000-to-1 shot. He landed 70,000 men in 15 minutes and turned the entire Korean War.",
+  "youtube_title": "Battle of Inchon 1950: MacArthur's Impossible Landing That Saved South Korea",
+  "lesson": "Audacity is most valuable precisely when it seems most impossible \u2014 because the enemy has discounted it too.",
+  "highlight_scene": 11,
+  "scenes": [
+    {
+      "scene_number": 1,
+      "type": "cold_open",
+      "title": "Seoul Is Falling",
+      "duration_sec": 47,
+      "narration": "June 25, 1950. North Korean People's Army tanks cross the 38th parallel and pour south at dawn. Within three days, Seoul, the capital of South Korea, falls. Within two months, the South Korean army and the American forces rushed to stop them are compressed into a small perimeter around the port of Pusan at the southern tip of the peninsula. Eight thousand American soldiers are dead. The UN coalition is fighting for survival. To anyone watching, the war looks lost. General Douglas MacArthur, Supreme Commander of the Far East, is looking at a map of the Korean coastline, drawing a line to a port city on the west coast called Inchon. He has a plan. His admirals think it's madness.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The North Korean invasion: tanks crossing the 38th parallel at dawn, Seoul in flames, South Korean and American forces retreating south. The Pusan Perimeter \u2014 the last foothold \u2014 on a map. Then MacArthur studying a map of the Korean coastline, his finger on Inchon. The war looking lost, the plan being born. 16:9.",
+      "bg_colors": [
+        "#8B1A1A",
+        "#1A1A2E",
+        "#C9A227"
+      ]
+    },
+    {
+      "scene_number": 2,
+      "type": "context",
+      "title": "The Korean War \u2014 Summer 1950",
+      "duration_sec": 46,
+      "narration": "The Korean War began as a surprise invasion. North Korea, armed and trained by the Soviet Union, struck on a Sunday morning with 135,000 troops and Soviet-built T-34 tanks. The South Korean army was unprepared and outgunned. The American occupation forces in Japan were peacetime garrison troops \u2014 undertrained, underequipped. President Truman committed American forces under UN authorization within 48 hours. It was the first test of the new policy of containment \u2014 the idea that communist expansion must be opposed wherever it occurred. By August 1950, the test was failing. The entire Korean peninsula except for the Pusan Perimeter seemed about to fall to the North.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The Korean War's opening weeks: North Korean T-34 tanks driving south, the UN Security Council vote, American forces rushing from Japan to Korea. The rapid collapse of the South Korean defense. The Pusan Perimeter \u2014 the remaining foothold \u2014 surrounded and under pressure. The Cold War's first hot test, appearing to fail. 16:9.",
+      "bg_colors": [
+        "#1A1A2E",
+        "#8B1A1A",
+        "#C9A227"
+      ]
+    },
+    {
+      "scene_number": 3,
+      "type": "character_intro",
+      "title": "Douglas MacArthur",
+      "duration_sec": 46,
+      "narration": "General of the Army Douglas MacArthur was seventy years old, a living legend, and one of the most complex figures in American military history. He had been the youngest general officer in the US Army in World War One. He had commanded Allied forces in the Pacific in World War Two, returning to the Philippines as he had promised. He had presided over the occupation of Japan and remade that country in his own vision. He was theatrical, vain, brilliant, and contemptuous of those who questioned him. He had not visited Korea since the war began \u2014 he was running the show from Tokyo. But he had been studying the situation with the obsessive focus that made him both infuriating and indispensable.",
+      "visual_prompt": "Gods & Glory cinematic documentary. MacArthur \u2014 the corncob pipe, the aviator sunglasses, the military cap. Seventy years old, still commanding. His office in Tokyo where he ran the war. The contradiction: a man who hadn't visited Korea studying it more carefully than anyone else. His certainty that he knew what others couldn't see. 16:9.",
+      "bg_colors": [
+        "#C9A227",
+        "#1A1A2E",
+        "#4A3728"
+      ]
+    },
+    {
+      "scene_number": 4,
+      "type": "historical",
+      "title": "Why Inchon",
+      "duration_sec": 47,
+      "narration": "MacArthur's strategic insight was simple and elegant. The North Korean army had driven its main force south to Pusan. Its supply lines ran through Seoul, which itself depended on the port of Inchon on Korea's west coast. If he could land at Inchon, capture the port, take Seoul, and cut the supply lines \u2014 the North Korean army at Pusan would be isolated, cut off from ammunition and food, facing Allied forces attacking from both north and south simultaneously. It was the same strategic logic he had used in the Pacific \u2014 bypass strength, strike the supply lines, collapse the enemy from within. On the map, it was obvious. What made it terrifying was the specific geography of Inchon harbor.",
+      "visual_prompt": "Gods & Glory cinematic documentary. MacArthur's strategic concept visualized: the map of Korea showing the North Korean army at Pusan, the supply line running south through Seoul and Inchon. The landing at Inchon cutting the line. The North Korean army at Pusan isolated and trapped. The strategic logic \u2014 brilliant on paper. Then the harbor of Inchon: the problem. 16:9.",
+      "bg_colors": [
+        "#C9A227",
+        "#1A1A2E",
+        "#4A3728"
+      ]
+    },
+    {
+      "scene_number": 5,
+      "type": "historical",
+      "title": "The Impossible Harbor",
+      "duration_sec": 47,
+      "narration": "Inchon was nearly the worst possible place for an amphibious landing. The harbor had a tidal range of thirty feet \u2014 among the highest in the world \u2014 meaning at low tide the approaches were exposed mudflats for miles. Landing craft could reach the beach only during a narrow window at high tide, and the high tides at Inchon came only twice a year in the right configuration. The harbor entrance was a narrow channel lined with islands that would have to be cleared first. The sea walls of the city itself were twelve feet high \u2014 troops would have to scale them under fire. MacArthur's naval commander called it a 5,000-to-1 shot. The Joint Chiefs flew to Tokyo to talk him out of it. MacArthur talked for forty-five minutes. When he finished, everyone agreed to do it.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The geography of Inchon harbor \u2014 the thirty-foot tidal range revealed in maps, the mudflats exposed at low tide. The narrow channel, the twelve-foot sea walls. The two windows per year when a landing was possible. Admirals' faces as MacArthur describes what he wants to do. The Joint Chiefs coming to Tokyo to stop him and leaving convinced. 16:9.",
+      "bg_colors": [
+        "#1A1A2E",
+        "#C9A227",
+        "#8B1A1A"
+      ]
+    },
+    {
+      "scene_number": 6,
+      "type": "historical",
+      "title": "Operation Chromite",
+      "duration_sec": 46,
+      "narration": "Operation Chromite was planned in six weeks. The landing force was the 1st Marine Division and the Army's 7th Infantry Division \u2014 together the X Corps, commanded by General Edward Almond, MacArthur's chief of staff. The landing had to hit a specific high-tide window: September 15, 1950 \u2014 which gave the planners weeks instead of months. The preliminary operation would be the capture of Wolmi-do, a fortified island in the harbor that controlled the entrance channel. If Wolmi-do was taken, the main landing could proceed at the afternoon high tide. If Wolmi-do wasn't taken, the landing force would have to wait six hours in the harbor for the next tide \u2014 sitting ducks in a hostile port.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Operation Chromite being planned: the maps of Inchon, the 1st Marine Division, the specific date \u2014 September 15, 1950. The sequence: Wolmi-do first, then the main landing at afternoon high tide. The window \u2014 hours, not days. The planners working against the clock. The Marines being briefed on an operation they've never trained for. 16:9.",
+      "bg_colors": [
+        "#4A3728",
+        "#C9A227",
+        "#1A1A2E"
+      ]
+    },
+    {
+      "scene_number": 7,
+      "type": "battle",
+      "title": "Wolmi-Do \u2014 The Key to the Harbor",
+      "duration_sec": 47,
+      "narration": "At dawn on September 15, 1950, the 3rd Battalion, 5th Marines landed on Wolmi-do. The island was defended by North Korean troops who had been warned by MacArthur \u2014 American aircraft had dropped leaflets telling the North Koreans to evacuate civilians, inadvertently warning the garrison. Despite the warning, the Marines took Wolmi-do in forty-five minutes. The critical island was secure before the tide went out. For six hours, the Marines on Wolmi-do waited as the harbor emptied around them \u2014 sitting in the middle of the Korean west coast, held by 700 Americans surrounded by the sea wall of a hostile city. The afternoon tide was coming.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The dawn landing on Wolmi-do: Marines hitting the beach in the early morning, the fortified island defended by alerted North Korean troops. The forty-five minute battle. Then the eerie waiting \u2014 Marines on Wolmi-do as the tide goes out, the harbor emptying around them, the sea wall of Inchon visible. Six hours of waiting. 16:9.",
+      "bg_colors": [
+        "#C9A227",
+        "#4A3728",
+        "#1A1A2E"
+      ]
+    },
+    {
+      "scene_number": 8,
+      "type": "battle",
+      "title": "The Afternoon Landing",
+      "duration_sec": 47,
+      "narration": "At 5:33 PM on September 15, 1950, the main landing force hit the beaches of Inchon as the afternoon tide peaked. Marines scaled the twelve-foot sea walls on ladders \u2014 the same kind of assault that soldiers had conducted against medieval fortresses. The 5th Marines landed at Red Beach in the city's commercial district; the 1st Marines landed at Blue Beach south of the city. The North Korean defense was shocked and disorganized \u2014 the harbor approach had been so difficult that the garrison didn't believe a landing was coming. By nightfall, seventeen thousand Marines were inside Inchon. Total Marine casualties for the landing: 22 killed, 174 wounded. The harbor that every admiral called impossible had been taken in an afternoon.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The Inchon landing at 5:33 PM: Marines on landing craft approaching the sea wall, ladders going up, men scaling the twelve-foot barrier under fire. The dual beaches \u2014 Red and Blue. The North Korean defense disorganized and overwhelmed. By nightfall: 17,000 Marines inside Inchon. The harbor that couldn't be taken, taken in hours. 16:9.",
+      "bg_colors": [
+        "#8B1A1A",
+        "#C9A227",
+        "#1A1A2E"
+      ]
+    },
+    {
+      "scene_number": 9,
+      "type": "battle",
+      "title": "The Drive to Seoul",
+      "duration_sec": 46,
+      "narration": "From Inchon, X Corps drove eighteen miles east toward Seoul. The North Korean army, which had committed its main force to the Pusan Perimeter, had few reserves to throw against the unexpected attack from the rear. Resistance was fierce in places, but the defenders were too few and too surprised to stop the momentum. Simultaneously, the Eighth Army broke out of the Pusan Perimeter and drove north. The North Korean army was caught in exactly the trap MacArthur had designed \u2014 attacked from south and north simultaneously, its supply lines cut. In days, North Korean units that had been besieging Pusan were dissolving. Soldiers abandoned their weapons and tried to flee north through a shrinking gap.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The drive from Inchon to Seoul: X Corps advancing east while the Eighth Army breaks out of Pusan and drives north. The North Korean army caught in the trap \u2014 supply lines cut, attacked from both directions. North Korean soldiers abandoning weapons, units dissolving. The trap MacArthur designed closing exactly as planned. 16:9.",
+      "bg_colors": [
+        "#C9A227",
+        "#1A1A2E",
+        "#4A3728"
+      ]
+    },
+    {
+      "scene_number": 10,
+      "type": "battle",
+      "title": "The Battle for Seoul",
+      "duration_sec": 47,
+      "narration": "Seoul was defended by North Korean units fighting from street to street \u2014 some from fanaticism, some because they had no route of retreat. The battle for the South Korean capital was house-to-house fighting through a city of a million people. The Marines fought through the governmental quarter, past the capitol building, past the presidential palace. MacArthur declared Seoul liberated on September 26 \u2014 one Marine officer protested that the fighting wasn't actually over. MacArthur's communiqu\u00e9 gave the date as exactly three months after the invasion began. The city was devastated. It had been liberated before, under Japanese occupation, and before that, under repeated foreign invasions. Seoul had been taken and retaken for centuries. This time it was given back.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The battle for Seoul: street fighting through the South Korean capital, Marines fighting building to building. The governmental quarter, the capitol building under fire. MacArthur's communiqu\u00e9 declaring liberation. The devastated city \u2014 rubble and burned buildings, civilians emerging from hiding. Seoul liberated, again. 16:9.",
+      "bg_colors": [
+        "#8B1A1A",
+        "#4A3728",
+        "#C9A227"
+      ]
+    },
+    {
+      "scene_number": 11,
+      "type": "dramatic",
+      "title": "The Triumph",
+      "duration_sec": 47,
+      "narration": "MacArthur flew into a liberated Seoul and restored the South Korean government to its capital in a ceremony at the damaged National Assembly building. Syngman Rhee, the South Korean president, wept. MacArthur had done what his admirals said was impossible. He had turned a war that was being lost into a war that was being won in eleven days. From the brink of total defeat \u2014 the Pusan Perimeter, the last foothold \u2014 to an enemy army in complete collapse. One hundred thousand North Korean soldiers were killed or captured. The rest fled north across the 38th parallel. MacArthur had not just stopped the invasion. He had reversed it completely. It was, by almost any measure, the most successful amphibious operation since D-Day.",
+      "visual_prompt": "Gods & Glory cinematic documentary. MacArthur at the ceremony in Seoul: restoring the South Korean government to its capital. Syngman Rhee weeping. The scale of the achievement \u2014 from Pusan's last foothold to the North Korean army's collapse in eleven days. MacArthur at his peak: the general who did the impossible and proved everyone wrong. 16:9.",
+      "bg_colors": [
+        "#C9A227",
+        "#1A1A2E",
+        "#4A3728"
+      ]
+    },
+    {
+      "scene_number": 12,
+      "type": "historical",
+      "title": "Hubris \u2014 Crossing the 38th Parallel",
+      "duration_sec": 47,
+      "narration": "With the North Korean army defeated, MacArthur faced a decision: stop at the 38th parallel, which restored the pre-war status quo, or cross north and reunify Korea by force. Truman authorized crossing the parallel. MacArthur pushed north. China had warned, through multiple channels, that if American forces approached the Yalu River \u2014 the border between North Korea and China \u2014 China would intervene. MacArthur dismissed the warnings. His intelligence assessments consistently minimized the chance of Chinese intervention. In October 1950, three hundred thousand Chinese troops crossed the Yalu and struck the UN forces. The war that Inchon had seemed to win was suddenly a different war entirely.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The decision to cross the 38th parallel: MacArthur's confidence, the advance north, the warnings from China that were dismissed. The Yalu River on the map. Then October 1950: 300,000 Chinese troops pouring across the border. The war that was won becoming a war that was suddenly much larger. The moment MacArthur's genius turned to hubris. 16:9.",
+      "bg_colors": [
+        "#8B1A1A",
+        "#1A1A2E",
+        "#C9A227"
+      ]
+    },
+    {
+      "scene_number": 13,
+      "type": "historical",
+      "title": "MacArthur vs. Truman",
+      "duration_sec": 46,
+      "narration": "The clash between MacArthur and President Truman was about more than military strategy. MacArthur believed the Chinese intervention opened the opportunity to destroy communist China as a power \u2014 to use nuclear weapons if necessary, to blockade the Chinese coast, to support Nationalist forces from Taiwan. Truman believed this would risk World War Three and was not prepared to accept. MacArthur began publicly criticizing Truman's policy, communicating directly with congressional Republicans. He sent a letter to the House Republican leader undermining Truman's negotiating position with the enemy. On April 11, 1951, Truman fired MacArthur \u2014 relieving the most celebrated general in America over the objection of a majority of Americans.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The MacArthur-Truman confrontation: two men who could not coexist in the same command structure. MacArthur publicly challenging presidential authority. Truman \u2014 small, stubborn, certain of the constitutional principle at stake. The firing: April 11, 1951. A national firestorm. The general who won at Inchon dismissed by the president he served. 16:9.",
+      "bg_colors": [
+        "#1A1A2E",
+        "#C9A227",
+        "#8B1A1A"
+      ]
+    },
+    {
+      "scene_number": 14,
+      "type": "aftermath",
+      "title": "The War That Wasn't Won",
+      "duration_sec": 45,
+      "narration": "The Korean War did not end in 1951. It continued for two more years of grinding, bloody fighting along lines that moved little from where they stood in 1951. An armistice was signed on July 27, 1953, leaving the peninsula divided at almost exactly the same line that existed before the war began. Thirty-six thousand Americans were dead. One million Chinese soldiers were killed or wounded. Korean military and civilian dead numbered in the millions. The war that Inchon seemed to have won ended in stalemate. The 38th parallel remained the border. Korea remained divided. MacArthur's great triumph at Inchon was followed by the Chinese intervention that erased it and a war without a victory.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The Korean War grinding on: the stalemate along the 38th parallel, the armistice negotiations at Panmunjom. The final casualty figures. The divided peninsula on the map, almost exactly where it started. July 27, 1953: the armistice. The war that neither side won. MacArthur's triumph and what followed. 16:9.",
+      "bg_colors": [
+        "#4A3728",
+        "#8B8B6B",
+        "#1A1A2E"
+      ]
+    },
+    {
+      "scene_number": 15,
+      "type": "analysis",
+      "title": "The Genius and the Limit",
+      "duration_sec": 46,
+      "narration": "Inchon stands as one of the great military coups of the twentieth century \u2014 a bold operational concept executed against all advice and probability that reversed a losing war in eleven days. It is also inseparable from what followed: the overconfidence that discounted Chinese warnings, the drive to the Yalu, the catastrophic Chinese intervention. MacArthur's genius at Inchon and his failure afterward are the same quality expressed differently. The boldness that made Inchon possible also made him refuse to believe China would intervene. The certainty that convinced his admirals became the certainty that ignored the enemy's stated intentions. Genius and hubris are not opposites. They are often the same person in different circumstances.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The paradox of MacArthur: the boldness of Inchon and the overconfidence of the march to the Yalu are the same quality. Two maps side by side: Inchon, brilliant; the drive north, disastrous. The single thread connecting triumph and failure. Not two different generals but one general in two different moments. 16:9.",
+      "bg_colors": [
+        "#C9A227",
+        "#1A1A2E",
+        "#4A3728"
+      ]
+    },
+    {
+      "scene_number": 16,
+      "type": "historical",
+      "title": "The 1st Marine Division",
+      "duration_sec": 44,
+      "narration": "The Marines who landed at Inchon on September 15, 1950 were the 1st Marine Division \u2014 a unit with a storied history from World War Two, now fighting in a war that had not existed ninety days earlier. They were professionals and reservists, regular Marines and men who had been in civilian life weeks before. They were sent into one of the most difficult amphibious operations in history with weeks of preparation. They scaled twelve-foot sea walls on ladders. They fought through Seoul. Then they were sent north, and in the Chosin Reservoir they were surrounded by Chinese forces in temperatures of forty below zero \u2014 and fought their way out. The 1st Marines did everything they were asked. The war they fought was not the war they were promised.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The 1st Marine Division: the men who landed at Inchon \u2014 professional soldiers and recalled reservists. At Inchon: scaling the sea walls. At Seoul: street fighting. Then Chosin: surrounded in sub-zero temperatures, fighting out. Marines who did everything asked and more. The gap between what they achieved and what the war achieved. 16:9.",
+      "bg_colors": [
+        "#1A1A2E",
+        "#C9A227",
+        "#4A3728"
+      ]
+    },
+    {
+      "scene_number": 17,
+      "type": "modern_connection",
+      "title": "Korea Today",
+      "duration_sec": 45,
+      "narration": "Today, the Korean peninsula remains divided at the 38th parallel, almost exactly as it was when the war ended in 1953. South Korea is one of the wealthiest and most technologically advanced democracies in the world \u2014 a nation that was in rubble in 1953 and is now the home of Samsung, Hyundai, K-pop, and a world-class military. North Korea is one of the most isolated and impoverished nations on earth, ruled by the Kim family's third generation. The contrast is among the starkest in the world: two nations that were the same country seventy years ago, separated by seventy miles of demilitarized zone, living entirely different histories. What was fought for at Inchon \u2014 the survival of South Korea \u2014 survived.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Korea today: South Korea's gleaming cities \u2014 Seoul, Busan \u2014 and its technological powerhouses. North Korea's darkness, visible from satellites at night. The demilitarized zone between them. The seventy-year result of a war that ended in armistice, not victory. South Korea \u2014 the nation MacArthur saved at Inchon \u2014 thriving. 16:9.",
+      "bg_colors": [
+        "#1A3E2E",
+        "#C9A227",
+        "#1A1A2E"
+      ]
+    },
+    {
+      "scene_number": 18,
+      "type": "historical",
+      "title": "MacArthur's Return",
+      "duration_sec": 44,
+      "narration": "When MacArthur returned to the United States after his firing, he was greeted with one of the largest ticker-tape parades in New York history. Congress invited him to address a joint session \u2014 a rare honor. His speech ended with the famous line about old soldiers: 'Old soldiers never die; they just fade away.' He was wrong about himself \u2014 he remained a figure of controversy and occasional political relevance until his death in 1964 at age 84. But he never held command again. The greatest military mind of his generation \u2014 the man who had designed Inchon \u2014 spent his last thirteen years watching others fight wars he was certain he could have won.",
+      "visual_prompt": "Gods & Glory cinematic documentary. MacArthur's return: the ticker-tape parade in New York, the joint session of Congress, the 'old soldiers never die' speech. Then the long fade: MacArthur in the Waldorf Astoria suite where he lived out his years, watching Korea, watching Vietnam \u2014 wars he was certain he could have managed differently. 16:9.",
+      "bg_colors": [
+        "#C9A227",
+        "#1A1A2E",
+        "#4A3728"
+      ]
+    },
+    {
+      "scene_number": 19,
+      "type": "analysis",
+      "title": "Audacity as Strategy",
+      "duration_sec": 45,
+      "narration": "Inchon teaches a lesson about audacity in military operations. The harbor was not chosen despite its difficulty but partly because of it \u2014 no defender would believe an attack was coming there. The implausibility was the camouflage. MacArthur understood that the enemy would defend where attack was expected, and would be unprepared where attack seemed impossible. By choosing the impossible landing site, he guaranteed surprise. The North Korean garrison was alerted, and still didn't believe it was happening until it had happened. Audacity works most powerfully when it exploits exactly the gap between what the enemy thinks is possible and what is actually possible.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The operational logic of audacity: choosing Inchon because its difficulty made surprise possible. The North Korean garrison alerted and still not ready. The gap between what the enemy thought was possible and what MacArthur knew was possible. The impossible harbor as cover: no one defends what they don't believe can be attacked. 16:9.",
+      "bg_colors": [
+        "#1A1A2E",
+        "#C9A227",
+        "#8B4500"
+      ]
+    },
+    {
+      "scene_number": 20,
+      "type": "historical",
+      "title": "The Amphibious Tradition",
+      "duration_sec": 44,
+      "narration": "Inchon sits in the tradition of great amphibious operations that include Gallipoli, D-Day, and the island-hopping campaign of the Pacific. What distinguished Inchon was the speed of planning \u2014 six weeks from concept to execution \u2014 and the degree of difficulty overcome. The harbor constraints that MacArthur's admirals considered disqualifying were transformed into advantages: the tidal window that limited the landing also limited the defender's ability to predict when it would come. The sea walls that seemed to make assault impossible focused the attack and prevented the sprawl that plagued some amphibious operations. MacArthur turned the obstacles into tools.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Inchon in the tradition of great amphibious operations: from Gallipoli's failure to D-Day's success to Inchon's audacity. The tidal window as an unexpected advantage \u2014 it constrained both attacker and defender, but MacArthur knew his timing and the defender didn't. The obstacles that were turned into tools. 16:9.",
+      "bg_colors": [
+        "#4A3728",
+        "#C9A227",
+        "#1A1A2E"
+      ]
+    },
+    {
+      "scene_number": 21,
+      "type": "legacy",
+      "title": "What Inchon Proved",
+      "duration_sec": 45,
+      "narration": "Inchon proved that an amphibious landing against a defended coast could still achieve decisive operational surprise even in an era of aerial reconnaissance and modern communications. It proved that strategic audacity \u2014 choosing the objective that seems most difficult \u2014 could create the conditions for success precisely by defying the enemy's expectations. It proved that a seventy-year-old general who hadn't visited the front could understand what the maps were telling him better than any of the men on the ground. And it proved that even the most brilliant operational success can be undone by what follows it. Inchon was MacArthur's masterpiece. What he built with it, he destroyed.",
+      "visual_prompt": "Gods & Glory cinematic documentary. What Inchon proved: surprise at scale, strategic audacity, operational brilliance from seventy years of accumulated knowledge. And the shadow: the masterpiece followed by the overreach. MacArthur's arc as the lesson \u2014 not that audacity fails, but that success without limits becomes its own undoing. 16:9.",
+      "bg_colors": [
+        "#C9A227",
+        "#1A1A2E",
+        "#4A3728"
+      ]
+    },
+    {
+      "scene_number": 22,
+      "type": "historical",
+      "title": "The Forgotten War",
+      "duration_sec": 44,
+      "narration": "The Korean War is often called the Forgotten War \u2014 sandwiched between the heroism of World War Two and the controversy of Vietnam, it occupies an uncomfortable middle place in American memory. It was the first war the United States did not win outright, ending in armistice rather than victory. The men who fought it returned to a country that didn't quite know how to talk about them. The memorials came late \u2014 the Korean War Veterans Memorial in Washington DC was dedicated in 1995, forty-two years after the armistice. Inchon was brilliant. Korea was inconclusive. Both are true. The men who fought there deserve to be neither forgotten nor misremembered.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The Korean War Veterans Memorial in Washington DC: the steel statues of soldiers on patrol, the granite wall, the pool. Dedicated 1995 \u2014 forty-two years late. The forgotten veterans and the belated recognition. The inconclusive war and the men who fought it without the clear victory they deserved. 16:9.",
+      "bg_colors": [
+        "#1A1A2E",
+        "#8B8B6B",
+        "#C9A227"
+      ]
+    },
+    {
+      "scene_number": 23,
+      "type": "summary",
+      "title": "Fifteen Minutes That Changed a War",
+      "duration_sec": 45,
+      "narration": "On September 15, 1950, in a harbor that every expert said was impossible, American Marines landed at Inchon and turned the Korean War in the span of an afternoon. A peninsula about to fall to communist invasion was reversed in eleven days. MacArthur had designed an operation that worked exactly as he said it would, against every objection, at odds that every professional dismissed. He was fired six months later for the decisions he made after it worked. Inchon is proof that the impossible is sometimes just the unexpected. It is also proof that a single brilliant act, however magnificent, is not the same thing as wisdom.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The final image of Inchon: the Marines scaling the sea wall at sunset, September 15, 1950. The turning point that was won in an afternoon. Then the longer shadow: MacArthur's firing, the stalemate, the armistice. A moment of genius inside a war without a clean ending. 16:9.",
+      "bg_colors": [
+        "#C9A227",
+        "#1A1A2E",
+        "#4A3728"
+      ]
+    },
+    {
+      "scene_number": 24,
+      "type": "outro_cta",
+      "title": "Genius and Consequence",
+      "duration_sec": 44,
+      "narration": "Subscribe to Gods and Glory \u2014 history's greatest commanders, their greatest moments, and what came next. Next episode: Yorktown 1781 \u2014 the battle that ended a British empire's claim on a continent, and the French fleet that made it possible.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Final image: the sea wall at Inchon in the golden light \u2014 the moment of the impossible made real. Channel logo. Subscribe prompt. 16:9.",
+      "bg_colors": [
+        "#1A1A2E",
+        "#C9A227",
+        "#4A3728"
+      ]
+    }
+  ]
+}

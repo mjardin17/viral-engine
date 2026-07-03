@@ -1,0 +1,110 @@
+{
+  "channel": "Gods & Glory",
+  "episode_number": 22,
+  "episode_id": "GG_EP022",
+  "season": 2,
+  "title": "Battle of Midway",
+  "tagline": "June 1942. Japan had the largest carrier fleet in history. The United States had three carriers, broken code, and a bet.",
+  "hook_line": "Six months after Pearl Harbor, Japan's carrier fleet is undefeated. Admiral Yamamoto is sending the largest naval force in Pacific history to destroy the last American carriers. The Americans have broken the Japanese code. They know exactly where the Japanese fleet is going. The trap is set on both sides.",
+  "characters": ["Admiral Yamamoto", "Admiral Nimitz", "Commander Joseph Rochefort", "Admiral Nagumo"],
+  "scenes": [
+    {
+      "scene_number": 1,
+      "type": "hook",
+      "title": "Six Months After Pearl Harbor",
+      "narration": "December 7, 1941 — Japan's carrier fleet destroyed the American battleship fleet at Pearl Harbor. In the six months that followed, Japanese forces had taken the Philippines, Malaya, Singapore, Burma, the Dutch East Indies, Wake Island, Guam, and were advancing toward Australia. Japan's six fleet carriers — Akagi, Kaga, Soryu, Hiryu, Shokaku, Zuikaku — had not lost an engagement. Admiral Yamamoto's plan: draw out the remaining American carriers at Midway Island and destroy them. With no carriers, America could not project power in the Pacific. Japan would be uncontestable.",
+      "visual_prompt": "Pacific theater map showing Japanese expansion after Pearl Harbor — the territories taken marked in rising sun red spreading across the Pacific: Philippines, Singapore, Malaya, Dutch East Indies, Burma, Wake, Guam — the scale of Japanese territorial gains in six months shown as overwhelming — then: the six Japanese fleet carriers shown in formation, their combat records listed: undefeated, six months, every engagement — Yamamoto's plan shown as two arrows: the Japanese fleet toward Midway, and the expected American response — the scale of Japanese naval power in 1942 genuinely dominant, #2C1810 and #8B1A1A rising sun palette, cinematic",
+      "bg_colors": ["#2C1810", "#8B1A1A", "#1A1A4A"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 2,
+      "type": "villain",
+      "title": "Yamamoto's Fleet",
+      "narration": "The Japanese force heading to Midway was the most powerful naval armada ever assembled in the Pacific: 4 fleet carriers, 2 light carriers, 11 battleships, 16 cruisers, 46 destroyers, and 15 submarines — 200 ships in total. The four fleet carriers alone carried 248 aircraft. Admiral Yamamoto was personally commanding from his flagship Yamato — the largest battleship ever built, with 18-inch guns that could fire shells weighing 3,200 pounds a distance of 26 miles. He had never lost. He expected not to lose at Midway.",
+      "visual_prompt": "The Japanese Midway fleet in formation — 200 ships shown from above, the scale filling the Pacific ocean frame, the four fleet carriers prominent: Akagi, Kaga, Soryu, Hiryu — their aircraft visible on deck — the Yamato battleship enormous among them — Admiral Yamamoto visible on the Yamato bridge, fleet commander's confidence in his posture — the numbers overlaid: 4 carriers / 248 aircraft / 200 ships total / 18-inch guns on Yamato — the visual communicating genuine overwhelming naval supremacy, this force has beaten everything it has faced — #1A1A4A deep Pacific blue and #8B1A1A, the rising sun on carrier decks",
+      "bg_colors": ["#1A1A4A", "#2C1810", "#8B1A1A"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 3,
+      "type": "character",
+      "title": "The Broken Code",
+      "narration": "What Yamamoto did not know: the United States Navy's codebreakers at Station HYPO in Pearl Harbor had broken the Japanese naval code — JN-25. Commander Joseph Rochefort and his team had been working around the clock for months. They knew Yamamoto's plan. They knew the target. They knew the date. The only uncertainty was a two-letter location code: 'AF.' The Japanese called their target 'AF.' Rochefort needed to confirm AF was Midway. He sent a message through Midway in the clear: Midway's water desalination plant had broken down. Two days later, Japanese intelligence reported to Tokyo: 'AF is short of water.' AF was Midway.",
+      "visual_prompt": "Station HYPO in Pearl Harbor — the codebreaking facility, underground, cramped, Rochefort and his team surrounded by Japanese message traffic, codebooks, cipher machines — the breakthrough moment: the AF identification — Rochefort at the center, weeks of work visible in the room — then: the water desalination ruse: a Midway transmission (shown in the clear) about broken water equipment — and then: the Japanese intercept response, the confirmation visible: 'AF IS SHORT OF WATER' — Rochefort's team reaction: quiet, precise satisfaction — the trap is now set — #2C1810 and the warm underground lamp light of the codebreaking room, tension of intellectual work",
+      "bg_colors": ["#2C1810", "#1A0D08", "#3D2A10"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 4,
+      "type": "challenge",
+      "title": "Three Carriers",
+      "narration": "Admiral Nimitz had three carriers: Enterprise, Hornet, and Yorktown. Yorktown had been hit at the Battle of Coral Sea and was so badly damaged that Japanese intelligence assessed it would take ninety days to repair. Nimitz gave the Pearl Harbor shipyard seventy-two hours. The shipyard worked three shifts. Yorktown sailed for Midway three days later, still being repaired at sea. Three carriers against four — plus 200 ships. Nimitz knew the plan, knew the date, knew the approach route. He sent his three carriers to wait at a position northeast of Midway where the Japanese did not expect anything to be.",
+      "visual_prompt": "The USS Yorktown in the Pearl Harbor dry dock — the battle damage visible, teams of workers swarming over it in three shifts, welders working, equipment being replaced — a 72-hour repair job for a 90-day wound — then: Yorktown sailing, still with work crews aboard making repairs underway — beside it: Enterprise and Hornet — three carriers against 200 ships — Nimitz at his desk in Pearl Harbor, the known Japanese approach route marked on the Pacific map, and the American ambush position marked northeast of Midway — the intellect of the trap shown through the map, not the brute force — #1A1A4A and #2C1810, the dry dock floodlights against the damage",
+      "bg_colors": ["#1A1A4A", "#2C1810", "#4A4A6A"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 5,
+      "type": "turning_point",
+      "title": "Six Minutes",
+      "narration": "On the morning of June 4, 1942, three American dive bomber squadrons attacked the Japanese carrier fleet. The first two waves — torpedo bombers flying low and slow — were massacred. 35 of 41 torpedo bombers were shot down. But they pulled the Japanese fighter cover down to low altitude. At 10:22 AM, American dive bombers arrived at high altitude with no fighter opposition. In the next six minutes, three Japanese carriers — Akagi, Kaga, and Soryu — were struck by dive bombs and set ablaze. Three carriers in six minutes. The undefeated Japanese carrier fleet had lost three of four fleet carriers in the time it takes to brew coffee.",
+      "visual_prompt": "The six minutes — time-stamped composition: 10:22 AM — American SBD Dauntless dive bombers appearing at high altitude above the Japanese carriers — the Japanese fighters visible at low altitude pursuing the torpedo bombers (the sacrifice) — the dive bombers coming down in screaming dives — then: three carriers hit in rapid succession — Akagi ablaze, Kaga ablaze, Soryu ablaze — the three explosions shown in a trifold composition — the time: 10:28 AM — SIX MINUTES shown between the two timestamps — the Japanese carrier fleet six minutes before and six minutes after, three carriers gone — #1A1A4A and #8B1A1A fire, the dive angle steep and decisive, cinematic",
+      "bg_colors": ["#1A1A4A", "#8B1A1A", "#2C1810"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 6,
+      "type": "climax",
+      "title": "Hiryu Fights Back",
+      "narration": "The fourth Japanese carrier, Hiryu, survived the first attack and immediately launched a counterstrike. Hiryu's aircraft found Yorktown and hit her with three bombs and two torpedoes. Yorktown, already patched from Coral Sea, had to be abandoned. Then American dive bombers found Hiryu. Four bombs. Hiryu was set ablaze and sank the next morning. Japan had come to Midway with four fleet carriers. By June 5th, all four were sunk. The United States had lost one — the same one it had repaired in seventy-two hours.",
+      "visual_prompt": "The Hiryu counterstrike — Hiryu launching her aircraft, the counterattack on Yorktown shown: the already-damaged Yorktown being hit again, listing and being abandoned — the cost visible: one American carrier — and then: American dive bombers finding Hiryu, the four bomb impacts, Hiryu ablaze — the final accounting: four Japanese carriers shown sunk against the Pacific horizon — and one American carrier sunk beside them — the asymmetry of the outcome: Japan came to destroy American carriers, lost all of their own — Admiral Nagumo's flag transfer as he evacuates his flagship, the scale of the loss shown through the empty Pacific where four carriers had been — #1A1A4A and fire orange, the scale of the reversal",
+      "bg_colors": ["#1A1A4A", "#8B1A1A", "#2C1810"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 7,
+      "type": "aftermath",
+      "title": "What Yamamoto Said",
+      "narration": "Admiral Yamamoto, aboard the Yamato, received the reports. He had come to Midway with the most powerful naval force in the Pacific. He was returning with the Yamato and his surface fleet — the largest battleship in the world, and battleships that had never been able to help because the battle was fought entirely by aircraft and decided before any battleship fired a gun. Yamamoto cancelled the invasion, turned his fleet around, and went home. He reportedly said: 'I seem to have run into something quite unexpected.' He had. He had run into a broken code.",
+      "visual_prompt": "Admiral Yamamoto on the Yamato bridge receiving the damage reports — the enormous battleship around him, dwarfing everything — the reports arriving: Akagi, Kaga, Soryu, Hiryu — sunk — his expression shifting, the reports accumulating — the Yamato and the surviving surface fleet visible, untouched, unable to have helped — battleships made irrelevant by an aircraft battle they were never close enough to join — Yamamoto's final order: cancel, return — the fleet turning away from Midway — the largest battleship ever built turning away from a battle it never fired a shot in — #1A1A4A and the particular quality of an admiral absorbing catastrophe quietly, #2C1810",
+      "bg_colors": ["#1A1A4A", "#2C1810", "#16213E"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 8,
+      "type": "scale",
+      "title": "The Pacific Turns",
+      "narration": "Before Midway: Japan was advancing everywhere in the Pacific. After Midway: Japan never advanced again. Japan lost 4 fleet carriers, 1 heavy cruiser, 248 aircraft, and 3,057 men at Midway. It took Japan years to replace those carriers. It took the United States months to build more. The industrial asymmetry that Japan's planners had feared in 1941 — when they calculated that attacking America was gambling everything on a quick victory before American production mobilized — became the defining fact of the Pacific War after Midway. The gamble had failed. The quick victory hadn't happened. The factories were running.",
+      "visual_prompt": "The Pacific War turning point visualization — before Midway: Japanese advance arrows covering the Pacific — after Midway: those arrows stopped, then reversing — American production numbers shown: carrier construction timeline, the pace of American shipbuilding versus Japanese — a factory montage: American shipyards running at full capacity, the industrial scale that Japan feared — the Japanese losses at Midway overlaid: 4 carriers, 248 aircraft, 3,057 men and their years of replacement time — versus American production pace — the math that made the Pacific War's outcome inevitable after June 4, 1942 — #1A1A4A and American naval gray, the factories the decisive weapon",
+      "bg_colors": ["#1A1A4A", "#2C1810", "#4A4A6A"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 9,
+      "type": "villain_response",
+      "title": "Japan Does Not Stop",
+      "narration": "Japan did not surrender after Midway. It fought for three more years. The Pacific War continued through Guadalcanal, Tarawa, Peleliu, Iwo Jima, Okinawa — battles of extraordinary cost on both sides. Japan's military culture made surrender unthinkable; its soldiers and pilots continued fighting with full commitment until the final days of the war. Midway ended Japanese expansion. It did not end Japanese fighting. The distinction cost hundreds of thousands of lives on all sides between June 1942 and August 1945.",
+      "visual_prompt": "The three years after Midway — a timeline showing the Pacific island battles continuing: Guadalcanal 1942-43, Tarawa 1943, Iwo Jima 1945, Okinawa 1945 — each island shown with its cost on both sides — Japanese forces shown still fighting at full capacity in each engagement, the fanaticism and skill unchanged by Midway — the distinction between 'expansion ended' and 'war ended' communicated through the continuing casualties — respectful treatment of both sides' sacrifice — the atomic bombs of August 1945 shown as the final chapter, without glorification — #1A1A4A and #2C1810, the weight of three more years",
+      "bg_colors": ["#1A1A4A", "#2C1810", "#16213E"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 10,
+      "type": "tag",
+      "title": "The Codebreakers",
+      "narration": "Rochefort and his team at Station HYPO received no official recognition for their work at Midway during the war. Bureaucratic rivalry within the Navy intelligence community resulted in Rochefort being removed from his position and reassigned to a floating dry dock shortly after the battle. He was given the Distinguished Service Medal — thirty years after his death, in 1985. The men who may have done more to win the Battle of Midway than any admiral received their recognition posthumously, four decades late. The war was won. The code was broken. The paperwork took longer.",
+      "visual_prompt": "Station HYPO and Rochefort — the codebreakers at work during and after Midway, the intelligence triumph visible — then: Rochefort's reassignment, the bureaucratic transfer, the absence of recognition during the war — then: the 1985 posthumous Distinguished Service Medal being awarded, decades after his death — the gap: the battle won in 1942, the recognition in 1985 — a final shot of the codebreaking room at HYPO: the same crowded underground space where the trap was set, empty now — the quiet spaces where wars are won without anyone watching — #2C1810 and the lamp-lit underground codebreaking room, the particular dignity of unrecognized work",
+      "bg_colors": ["#2C1810", "#1A0D08", "#3D2A10"],
+      "duration_sec": 9
+    }
+  ],
+  "viral_hook": "Japan sent 200 ships to Midway. The Americans had 3 carriers and a broken code. In six minutes on the morning of June 4, 1942, three Japanese carriers were sunk. The man most responsible for the victory — the codebreaker who set the trap — got his medal 30 years after his death.",
+  "highlight_scene": 5,
+  "highlight_note": "Six minutes — 10:22 to 10:28 AM — three Japanese carriers ablaze. The timestamp visualization with the trifold explosion. The most consequential six minutes in naval history shown against the clock.",
+  "short_title": "Three Carriers In Six Minutes",
+  "rewatch_bait": "Scene 3 — the water desalination ruse. Rochefort sends a message in the clear about broken water equipment to confirm 'AF = Midway.' The Japanese intelligence report two days later confirming it. The simplicity of the trap inside the larger trap is the thing to watch for.",
+  "youtube_title": "3 Japanese carriers sunk in 6 minutes. The codebreaker who made it possible got his medal 30 years after his death. | Gods & Glory S2 EP7",
+  "lesson": "Sometimes the most powerful weapon is knowing what the other side thinks you don't know. Midway was won in a codebreaking room, months before the first plane took off.",
+  "arc_notes": "GG S2 E07. Villain mandate: Yamamoto with 200 ships and 4 carriers is genuinely overwhelming — largest naval force in the Pacific, undefeated fleet. Defeated by intelligence and six minutes of positioning. Rochefort's posthumous recognition is the episode's moral weight — the people who win wars are not always the people who receive credit. The six-minutes visual is the GG S2 signature highlight moment."
+}

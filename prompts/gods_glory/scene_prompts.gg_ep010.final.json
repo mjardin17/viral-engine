@@ -1,0 +1,234 @@
+{
+  "episode_id": "GG_EP010",
+  "channel": "GG",
+  "title": "The Vietnam War: America's Longest War",
+  "tagline": "Twenty years. Three million dead. A war nobody agreed on, even at home.",
+  "duration_target_min": 21,
+  "aesthetic": {
+    "color_grade": "cinematic_jungle_war",
+    "primary_colors": ["#1F2A1A", "#4A5C3A", "#8B1A1A", "#C9A84C"],
+    "font_style": "serif_documentary_bold",
+    "music_style": "hans_zimmer_conquest_epic",
+    "narrator_tone": "authoritative_punchy_dramatic"
+  },
+  "music": {
+    "style": "hans_zimmer_conquest_epic",
+    "notes": "Opening: tense, humid atmosphere, distant helicopter rotor sounds layered under low strings. Escalation: building, uneasy momentum. Combat sequences: percussive, chaotic, jungle-muffled. Tet Offensive: sudden violent surge breaking a falsely calm theme. Protest movements at home: a different, more melancholic civilian motif layered against the war theme. The fall of Saigon: frantic, desperate rhythm collapsing into silence. Legacy: heavy, unresolved, the theme never fully landing on triumph or defeat — just exhaustion."
+  },
+  "voice_style": {
+    "tone": "authoritative_punchy_dramatic",
+    "pacing": "measured through the political buildup, urgent and visceral in combat, weighted and unresolved in the aftermath",
+    "character": "documentary narrator who treats this as the war that taught America hard lessons about limited war, public consent, and what victory actually requires"
+  },
+  "youtube_title": "Vietnam: The War America Never Agreed On | Gods & Glory EP10",
+  "youtube_description": "From 1955 to 1975, the United States fought its longest war up to that point in a country most Americans couldn't find on a map. It killed over 58,000 Americans and millions of Vietnamese, divided the country at home, and ended in a helicopter evacuation off a rooftop.\n\nThis is the real story of Vietnam — how it started, why America couldn't win it on its own terms, and how it ended.\n\nGods & Glory — history's turning points, explained properly.",
+  "scenes": [
+    {
+      "scene_number": 1,
+      "type": "cold_open",
+      "title": "The War That Wouldn't End",
+      "narration": "By the time it ended in 1975, the Vietnam War had lasted, in one form or another, for two decades. It killed over 58,000 Americans, somewhere between one and a half and three million Vietnamese, and divided the United States at home more deeply than any conflict since the Civil War. It ended not with a victory parade, but with a helicopter lifting off a rooftop in a city that no longer officially existed by the next morning. This is how it happened.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. American helicopters flying low over dense Vietnamese jungle at dusk, soldiers visible inside, a sense of weary, prolonged conflict. Atmospheric, heavy. 16:9.",
+      "bg_colors": ["#1F2A1A", "#8B1A1A", "#4A5C3A"],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 2,
+      "type": "context",
+      "title": "A Country Already at War",
+      "narration": "Vietnam had been fighting for independence long before America became deeply involved. French colonial rule collapsed after a decisive defeat to communist-led Vietnamese forces in 1954, and the country was temporarily split at the 17th parallel — a communist North under Ho Chi Minh, and a Western-aligned South — pending elections meant to reunify it. Those elections never happened. Both sides expected the other to refuse to honor them, and within a few years, the divide had hardened into two separate, hostile governments.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Map-style visualization of Vietnam splitting at the 17th parallel, French colonial forces withdrawing, Ho Chi Minh and South Vietnamese leadership shown in contrast. Historical, methodical tone. 16:9.",
+      "bg_colors": ["#1F2A1A", "#4A5C3A", "#C9A84C"],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 3,
+      "type": "context",
+      "title": "Why America Got Involved",
+      "narration": "The United States framed its involvement around the Domino Theory — the belief that if one Southeast Asian country fell to communism, neighboring countries would fall in succession. American military advisers began arriving in growing numbers through the late 1950s and early 1960s, training and supporting the South Vietnamese government and army, while still officially avoiding direct combat involvement.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. American military advisers training South Vietnamese soldiers at a jungle outpost, maps showing Southeast Asia with a falling-domino visual metaphor. Methodical, Cold War tension. 16:9.",
+      "bg_colors": ["#4A5C3A", "#1F2A1A", "#8B1A1A"],
+      "duration_sec": 46
+    },
+    {
+      "scene_number": 4,
+      "type": "anecdote",
+      "title": "The Incident That Wasn't Quite What It Seemed",
+      "narration": "In August 1964, the US destroyer Maddox reported being attacked by North Vietnamese torpedo boats in the Gulf of Tonkin — a confirmed engagement. Two days later, the Maddox and a second destroyer reported a second attack. That second incident has never been fully confirmed and is widely believed by historians to have been a misread radar return amid bad weather and exhausted crews, not an actual attack. The Johnson administration nonetheless presented both incidents to Congress as deliberate aggression, and Congress responded by passing the Gulf of Tonkin Resolution, granting the President sweeping authority to escalate American military action in Vietnam without a formal declaration of war.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. US Navy destroyer at night in choppy seas, sonar operators staring intently at ambiguous radar returns, the fog of war made visual. Tense, uncertain atmosphere. 16:9.",
+      "bg_colors": ["#1F2A1A", "#4A5C3A", "#8B1A1A"],
+      "duration_sec": 54
+    },
+    {
+      "scene_number": 5,
+      "type": "context",
+      "title": "Escalation",
+      "narration": "Following the Gulf of Tonkin Resolution, President Johnson rapidly escalated American involvement. Sustained bombing campaigns against North Vietnam began in 1965, and the first American combat troops landed that same year. By 1969, more than 500,000 US military personnel were stationed in Vietnam. What had started as a small advisory mission had become a full-scale American war, fought in dense jungle and rice paddy terrain that favored an enemy who knew the ground far better than the soldiers sent to fight on it.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. American combat troops disembarking from transport ships onto Vietnamese shores, a montage suggesting rapidly escalating troop numbers over successive years. Methodical buildup. 16:9.",
+      "bg_colors": ["#4A5C3A", "#1F2A1A", "#C9A84C"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 6,
+      "type": "context",
+      "title": "An Enemy Without a Front Line",
+      "narration": "Unlike the battles of the Second World War, Vietnam had no clear front line. The Viet Cong — communist guerrilla fighters operating within South Vietnam — blended into the civilian population, used an extensive network of tunnels and jungle trails for movement and supply, and fought primarily through ambush, sabotage, and hit-and-run engagements rather than open battle. American forces, with overwhelming firepower and air superiority, consistently won tactical engagements but struggled to convert those victories into lasting territorial control.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Viet Cong fighters moving stealthily through dense jungle and underground tunnel entrances, contrasted with American patrols struggling to identify the enemy among rice paddies and villages. Tense asymmetric warfare. 16:9.",
+      "bg_colors": ["#1F2A1A", "#4A5C3A", "#8B1A1A"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 7,
+      "type": "battle",
+      "title": "The Tet Offensive",
+      "narration": "In January 1968, North Vietnamese and Viet Cong forces launched the Tet Offensive — a massive, coordinated surprise attack on dozens of cities and military installations across South Vietnam, timed to coincide with the Vietnamese New Year holiday. Militarily, the offensive was a disaster for the communist forces, who suffered enormous casualties and failed to hold any of their major objectives for long. But the sheer scale and audacity of the attack — including a direct assault on the US embassy compound in Saigon — shattered American public confidence that the war was nearly won, as officials had been claiming.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Chaotic urban combat in a South Vietnamese city during the Tet Offensive, explosions near government buildings, the US embassy compound under direct assault. Sudden, shocking violence. 16:9.",
+      "bg_colors": ["#8B1A1A", "#1F2A1A", "#4A5C3A"],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 8,
+      "type": "analysis",
+      "title": "A War Won and Lost at the Same Time",
+      "narration": "Tet became the defining example of Vietnam's strange arithmetic: a battle the United States won decisively on the ground while losing decisively in public opinion. Television coverage had brought the war into American living rooms more directly than any previous conflict, and the gap between official optimistic statements and the brutal footage of fighting at the embassy gates convinced a large segment of the public that they had been misled about how the war was actually going.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. American families watching grim war footage on a television set in a 1968 living room, the contrast between the news broadcast and official government statements. Disillusionment made visual. 16:9.",
+      "bg_colors": ["#1F2A1A", "#4A5C3A", "#C9A84C"],
+      "duration_sec": 46
+    },
+    {
+      "scene_number": 9,
+      "type": "human_interest",
+      "title": "The War at Home",
+      "narration": "By the late 1960s, the war had become a defining national fracture. Mass protests, draft resistance, and campus demonstrations spread across the country, while supporters of the war argued that withdrawal would betray both American allies and the soldiers who had already died. The military draft, which fell disproportionately on working-class and minority communities able to access fewer deferments than wealthier draftees, deepened resentment about who was actually bearing the war's cost.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Large anti-war protest march in an American city, signs and crowds, contrasted with a separate scene of soldiers departing for deployment. The national divide made visual. 16:9.",
+      "bg_colors": ["#4A5C3A", "#1F2A1A", "#8B1A1A"],
+      "duration_sec": 46
+    },
+    {
+      "scene_number": 10,
+      "type": "anecdote",
+      "title": "My Lai",
+      "narration": "In March 1968, American soldiers killed several hundred unarmed civilians, including women, children, and the elderly, in the village of My Lai. The massacre was initially covered up and only became public over a year later through investigative journalism, sparking national outrage and becoming one of the most notorious atrocities associated with the entire war. Only one soldier was ever convicted, and he served just over three years of an originally much longer sentence, partly under house arrest, before being paroled — an outcome many considered grossly inadequate given the scale of what had happened.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Somber, restrained depiction of a Vietnamese village, no graphic violence shown, conveyed through quiet aftermath imagery and a journalist's notebook. Respectful, weighty, non-exploitative tone. 16:9.",
+      "bg_colors": ["#1F2A1A", "#8B1A1A", "#4A5C3A"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 11,
+      "type": "context",
+      "title": "Vietnamization",
+      "narration": "Under President Nixon, American strategy shifted toward what was called Vietnamization — gradually transferring combat responsibility to South Vietnamese forces while slowly withdrawing American troops. The strategy aimed to extract the United States from direct combat without appearing to simply abandon an ally, but it depended on South Vietnamese forces becoming capable of sustaining the fight largely on their own, a capability that remained in serious doubt throughout the drawdown.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. South Vietnamese soldiers receiving equipment and training from departing American advisers, troop transport planes loading American units for withdrawal in the background. Transitional, uncertain tone. 16:9.",
+      "bg_colors": ["#4A5C3A", "#1F2A1A", "#C9A84C"],
+      "duration_sec": 46
+    },
+    {
+      "scene_number": 12,
+      "type": "context",
+      "title": "The Secret War Spreads",
+      "narration": "The war's geography expanded beyond Vietnam's borders. American and South Vietnamese forces conducted operations into neighboring Cambodia and Laos to disrupt communist supply lines and sanctuaries, and the United States carried out a massive covert bombing campaign in Laos that remains, by tonnage, one of the heaviest bombing campaigns in history relative to the size of the country. Cambodia's own descent into the catastrophic Khmer Rouge regime in the years that followed is, by most historians' assessment, connected at least in part to the destabilization caused by the spillover of the Vietnam War across its border.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Map-style visualization showing the war's expansion into Cambodia and Laos, bombing campaign overlays, the conflict's geography widening beyond Vietnam's borders. Sobering, expansive scope. 16:9.",
+      "bg_colors": ["#1F2A1A", "#4A5C3A", "#8B1A1A"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 13,
+      "type": "anecdote",
+      "title": "Agent Orange and Napalm",
+      "narration": "American forces used massive quantities of herbicides, most notoriously Agent Orange, to clear jungle cover and destroy crops that might feed enemy forces, along with napalm and other incendiary weapons in direct combat. The long-term health effects of Agent Orange exposure — on American veterans and on millions of Vietnamese civilians — produced birth defects, cancers, and other chronic illnesses that researchers and victims are still documenting and litigating over decades later, making it one of the war's most enduring and contested legacies.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Aircraft spraying herbicide defoliant over dense jungle canopy, contrasted with a present-day documentary-style shot of affected landscape decades later. Sobering, long-shadow consequence. 16:9.",
+      "bg_colors": ["#4A5C3A", "#1F2A1A", "#8B1A1A"],
+      "duration_sec": 46
+    },
+    {
+      "scene_number": 14,
+      "type": "context",
+      "title": "The Paris Peace Accords",
+      "narration": "In January 1973, the United States, North Vietnam, and South Vietnam signed the Paris Peace Accords, formally ending direct American combat involvement and securing the release of American prisoners of war. The agreement allowed remaining North Vietnamese forces to stay in positions they already held in the South, a provision critics warned essentially set the stage for South Vietnam's eventual collapse once American support fully withdrew. The last American combat troops left Vietnam by early 1973.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Formal signing ceremony of the Paris Peace Accords, diplomats at a long table, contrasted with American POWs being released and reunited with families. Bittersweet resolution. 16:9.",
+      "bg_colors": ["#C9A84C", "#1F2A1A", "#4A5C3A"],
+      "duration_sec": 46
+    },
+    {
+      "scene_number": 15,
+      "type": "battle",
+      "title": "The Final Offensive",
+      "narration": "With American forces gone and US Congress increasingly unwilling to fund further aid, North Vietnam launched a final, full-scale invasion of the South in early 1975. South Vietnamese forces, undersupplied and facing collapsing morale, fell back rapidly along multiple fronts. City after city fell with little organized resistance as North Vietnamese forces advanced far faster than even their own commanders had anticipated.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. North Vietnamese tank columns advancing rapidly down a highway, South Vietnamese forces and civilians fleeing in disorganized retreat. Collapse and chaos. 16:9.",
+      "bg_colors": ["#1F2A1A", "#8B1A1A", "#4A5C3A"],
+      "duration_sec": 46
+    },
+    {
+      "scene_number": 16,
+      "type": "anecdote",
+      "title": "The Helicopters on the Roof",
+      "narration": "On April 29th and 30th, 1975, as North Vietnamese forces closed in on Saigon, the United States carried out Operation Frequent Wind — the largest helicopter evacuation in history at that point, lifting Americans and at-risk South Vietnamese off the US embassy compound and other points across the city. Helicopters landed at intervals of just a few minutes on the embassy roof and an adjacent rooftop pad, ferrying evacuees to ships waiting offshore, while desperate crowds gathered outside the embassy walls hoping for a place on one of the last flights out.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. American helicopter landing on a rooftop helipad in Saigon, evacuees climbing aboard urgently, the city below in chaos as North Vietnamese forces approach. Frantic, historic final moment. 16:9.",
+      "bg_colors": ["#1F2A1A", "#4A5C3A", "#C9A84C"],
+      "duration_sec": 52
+    },
+    {
+      "scene_number": 17,
+      "type": "context",
+      "title": "April 30th, 1975",
+      "narration": "On the morning of April 30th, 1975, North Vietnamese tanks rolled through the gates of the South Vietnamese presidential palace in Saigon. The South Vietnamese government surrendered unconditionally that same day. Saigon was renamed Ho Chi Minh City. After two decades of conflict involving the United States in one capacity or another, and decades more counting the earlier fight against French colonial rule, Vietnam was unified under a single communist government.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. North Vietnamese tanks crashing through the gates of the presidential palace in Saigon, a flag being raised over the building, the war's end made visual. Historic, decisive moment. 16:9.",
+      "bg_colors": ["#1F2A1A", "#8B1A1A", "#C9A84C"],
+      "duration_sec": 46
+    },
+    {
+      "scene_number": 18,
+      "type": "analysis",
+      "title": "The Cost",
+      "narration": "Over 58,000 American service members died in Vietnam, with more than 150,000 wounded. Estimates for Vietnamese deaths — military and civilian, North and South combined — range widely but commonly fall between one and a half and three million people. Hundreds of thousands more fled the country in the years following reunification, including the refugees who became known as the boat people, risking dangerous sea voyages to escape political persecution and economic collapse.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Somber montage: the Vietnam Veterans Memorial wall, overcrowded refugee boats at sea, the human cost on both sides made visible with restraint and dignity. Weighted, respectful. 16:9.",
+      "bg_colors": ["#1F2A1A", "#4A5C3A", "#8B1A1A"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 19,
+      "type": "analysis",
+      "title": "Why America Couldn't Win It",
+      "narration": "Historians point to several compounding factors in the eventual American withdrawal without achieving its strategic aims: an enemy willing to absorb losses far beyond what conventional military calculations expected, a South Vietnamese government that struggled with corruption and limited popular legitimacy, the difficulty of fighting a guerrilla war with conventional military doctrine built for a different kind of conflict, and a steadily eroding base of public and political support at home as casualties mounted with no clear endpoint in sight. No single failure explains it — Vietnam is usually taught as a case study in the limits of military power when it isn't matched by a clear, achievable political objective and sustained public will.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Modern military and political historians analyzing Vietnam War strategy in a contemporary academic setting, maps and case studies displayed. Thoughtful, analytical retrospective. 16:9.",
+      "bg_colors": ["#4A5C3A", "#1F2A1A", "#C9A84C"],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 20,
+      "type": "legacy",
+      "title": "The Memorial and the Memory",
+      "narration": "The Vietnam Veterans Memorial in Washington, DC, dedicated in 1982, lists the names of every American service member who died or remains missing from the war, etched into a long black granite wall. For decades after the war ended, returning veterans often described facing public indifference or hostility rather than the welcome given to veterans of earlier wars — a wound in how the country processed the conflict that took years, and in some cases generations, to begin to heal.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. The Vietnam Veterans Memorial wall in Washington DC, visitors tracing names with their fingers, reflections of the sky in the polished black granite. Solemn, present-day reverence. 16:9.",
+      "bg_colors": ["#1F2A1A", "#C9A84C", "#4A5C3A"],
+      "duration_sec": 44
+    },
+    {
+      "scene_number": 21,
+      "type": "analysis",
+      "title": "Why This Still Matters",
+      "narration": "Vietnam fundamentally changed how the United States thinks about committing to war — the War Powers Resolution passed in 1973 specifically to limit a president's ability to wage extended military action without congressional approval, and the war remains the central reference point in American debates about military intervention abroad ever since, invoked in arguments over nearly every major conflict the country has entered in the decades that followed. Few wars have shaped a country's subsequent foreign policy thinking as thoroughly as the one America didn't win.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Modern congressional debate chamber with historical Vietnam War footage referenced on screens, the war's lasting influence on policy discussion made visual. Contemplative, present-day relevance. 16:9.",
+      "bg_colors": ["#1F2A1A", "#4A5C3A", "#8B1A1A"],
+      "duration_sec": 46
+    },
+    {
+      "scene_number": 22,
+      "type": "summary",
+      "title": "What Happened — The Summary",
+      "narration": "1954. Vietnam splits after French colonial rule collapses. The United States, fearing communist expansion, gradually escalates involvement through the 1960s. The Tet Offensive in 1968 breaks American public confidence even as it fails militarily. Nixon withdraws US troops through Vietnamization, formalized by the 1973 Paris Peace Accords. With American support gone, North Vietnam launches a final offensive in 1975. Saigon falls on April 30th, ending the war with a helicopter evacuation off an embassy rooftop. Vietnam unifies under communist rule. Over 58,000 Americans and millions of Vietnamese are dead.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Summary title card sequence: key Vietnam War moments in bold text over historical imagery — escalation, Tet, the withdrawal, the fall of Saigon. Final shot: the Vietnam Veterans Memorial at dusk. 16:9.",
+      "bg_colors": ["#1F2A1A", "#C9A84C", "#8B1A1A"],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 23,
+      "type": "next_episode",
+      "title": "Next Episode — Tet and Khe Sanh",
+      "narration": "Next episode on Gods and Glory: we go deeper into two of Vietnam's defining battles. The Tet Offensive, scene by scene, and the brutal siege at Khe Sanh and the Ia Drang Valley — the battles that shaped how Americans understood the war, and how the war actually shaped them.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Teaser shot: American troops dug into a fortified hilltop firebase under siege, artillery fire visible in the misty jungle valley below. Tense anticipation. 16:9.",
+      "bg_colors": ["#1F2A1A", "#4A5C3A", "#8B1A1A"],
+      "duration_sec": 40
+    }
+  ]
+}

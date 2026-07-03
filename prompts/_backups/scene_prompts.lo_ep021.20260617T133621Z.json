@@ -1,0 +1,83 @@
+{
+  "channel": "Little Olympus",
+  "episode_number": 21,
+  "episode_id": "LO_EP021",
+  "season": 2,
+  "title": "The Morning After",
+  "tagline": "The Titan is still there. That's new.",
+  "hook_line": "They stopped the Titan. But now the Titan is just... living in the sea. And nobody knows what to do about that.",
+  "characters": ["Zeus", "Athena", "Hercules", "Perseus", "Achilles", "Archie", "Poseidon"],
+  "scenes": [
+    {
+      "scene_number": 1,
+      "type": "hook",
+      "title": "The View From the Cliff",
+      "narration": "The morning after the Titan settled in the Olympus Sea, Zeus stood at the cliff and looked down at it. It was still there. It was just... sitting. Watching the sky. 'So,' Zeus said. 'That is a thing that is happening now.'",
+      "visual_prompt": "Aerial view of Mount Olympus cliff edge at dawn, golden sunrise light, small cartoon Zeus figure standing at the very tip looking down at the enormous Titan shape visible just below the surface of the turquoise sea, Titan's shape creates a huge shadow underwater, Zeus's crown listing left, Archie the owl perched on a rock beside him blinking slowly, soft morning clouds, watercolor cartoon style, warm orange and gold palette, #FFD700 and #87CEEB sky",
+      "bg_colors": ["#FFD700", "#87CEEB", "#E8F4FD"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 2,
+      "type": "character",
+      "title": "Everyone Comes to Look",
+      "narration": "One by one, they all came to the cliff. Hercules brought breakfast. Achilles arrived early and had already counted seventeen things he would do differently from yesterday. Athena brought a scroll and started writing on it before she even looked at the sea.",
+      "visual_prompt": "Wide shot of cliff edge, morning light, cartoon ensemble gathering — Hercules carrying a huge tray of food, Achilles standing with arms crossed and a list visible in his hand, Athena writing on a scroll without looking up, Perseus shielding eyes to look at the water, Poseidon arriving from below dripping wet, all looking at the enormous Titan shadow visible below the water surface, Archie at center blinking, pastel cartoon style, #FFD700 and #00BFFF palette",
+      "bg_colors": ["#FFD700", "#E8F9FF", "#00BFFF"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 3,
+      "type": "character",
+      "title": "Poseidon Has Notes",
+      "narration": "Poseidon climbed up from the sea. He was carrying a small scroll. 'It moved three meters to the left at midnight,' he said. 'I wrote it down.' He handed Zeus the scroll. Zeus looked at it. The scroll said: 'Moved left. 3 meters. Midnight. Am fine. — Poseidon.' There was a small wet sardine stuck to the corner.",
+      "visual_prompt": "Close-up of Uncle Poseidon, soaking wet, blue robes, holding out a tiny dripping scroll to Zeus, proud expression, a small sardine visibly stuck to the bottom corner of the scroll, Zeus examining the scroll with confused expression, Archie peering at the sardine with one eye, cartoon style, #00BFFF and #FFD700, underwater shimmer reflections on the cliff behind them",
+      "bg_colors": ["#00BFFF", "#E8F4FD", "#FFD700"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 4,
+      "type": "challenge",
+      "title": "What Do We Do With It",
+      "narration": "Athena had made a chart. The chart had three columns: THREAT, NOT A THREAT, and UNCLEAR. The Titan was in the UNCLEAR column. Athena had underlined UNCLEAR three times. 'We need more data,' she said. 'How much more?' Zeus asked. Athena looked at the sea. 'More than this.'",
+      "visual_prompt": "Athena holding up a large scroll-chart with three columns labeled THREAT, NOT A THREAT, UNCLEAR — the Titan's name written in the UNCLEAR column with three visible underlines, everyone gathered around looking at it, Achilles pointing at THREAT column, Perseus looking at UNCLEAR column, Hercules looking at NOT A THREAT column, Archie looking at all three simultaneously, cartoon style, #FFD700 and #C8A951 chart colors, cliff and sea background",
+      "bg_colors": ["#F5F0E8", "#FFD700", "#00BFFF"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 5,
+      "type": "development",
+      "title": "Hercules Has a Thought",
+      "narration": "Hercules raised his hand. 'What if it's just tired?' Everyone looked at him. 'We stopped what it was doing,' he said. 'Maybe it needed somewhere to rest.' There was a long pause. 'That is either the wisest thing you've said or the least useful,' Athena told him. 'I can't tell which.' Archie blinked once. Slowly. Very slowly.",
+      "visual_prompt": "Hercules standing with hand raised, earnest expression, everyone looking at him with varying expressions — Athena with pen raised mid-thought, Zeus stroking chin, Achilles skeptical, Perseus tilting head, Poseidon considering — Archie giving the slowest, most deliberate single blink in the series so far, cartoon style, morning Olympus cliff, #FFD700 and warm gold light, gentle humor",
+      "bg_colors": ["#FFD700", "#FFF5C0", "#87CEEB"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 6,
+      "type": "resolution",
+      "title": "The New Normal",
+      "narration": "By noon, they had agreed on three things: One, Poseidon would keep watch and keep notes. Two, no one would bother the Titan unless it bothered them first. Three, Hercules's theory was officially 'not ruled out.' Archie added nothing. He just looked at the sea for a long time, then turned and walked away, and everyone felt, somehow, that he had said the most important thing.",
+      "visual_prompt": "Soft afternoon light on the cliff, the group dispersing slowly — Poseidon descending back to the sea with a new scroll, Zeus adjusting his crown (straight for 4 seconds, then lists left), Hercules eating a piece of the breakfast he brought, Athena making notes, Achilles already ten meters away planning tomorrow — Archie at the cliff edge staring at the Titan shadow for a long beat, then walking away, cartoon style, golden afternoon palette, #FFD700 and #00BFFF",
+      "bg_colors": ["#FFD700", "#87CEEB", "#E8F4FD"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 7,
+      "type": "tag",
+      "title": "What the Titan Is Looking At",
+      "narration": "Deep below the surface of the Olympus Sea, Oceanus watched the sky. He had been watching the sky for a long time. He had questions. He had no particular way to ask them. Not yet.",
+      "visual_prompt": "Underwater view looking up through the Olympus Sea toward the surface, the silhouette of the enormous ancient Titan Oceanus visible in the deep, ancient and still, looking upward at the shimmering light from the surface — small cartoon figures of Zeus and Athena visible as tiny shapes on the cliff far above through the water surface — a sense of ancient curiosity, not threat, deep blue and teal underwater light, #003366 deep blue fading to #00BFFF near surface, single dolphin visible in middle distance, cinematic wide angle",
+      "bg_colors": ["#003366", "#004080", "#00BFFF"],
+      "duration_sec": 9
+    }
+  ],
+  "viral_hook": "They stopped the Titan. But now it lives in the sea outside their house. And it's just... watching. Nobody knows what to do about that.",
+  "highlight_scene": 7,
+  "highlight_note": "The Titan underwater watching the sky — the reveal that it's curious, not threatening. Completely recontextualizes Season 1.",
+  "short_title": "The Titan Is Still There (And That's New)",
+  "rewatch_bait": "Archie's exit in scene 6 — he pauses, looks at the Titan for exactly the same duration as the Titan has been described watching the sky. He recognized something.",
+  "youtube_title": "They stopped the Titan… but now it lives in the sea 🌊 | Little Olympus S2 EP1",
+  "lesson": "Not every problem gets resolved — some become the new normal, and figuring out how to live with that is its own kind of wisdom.",
+  "arc_notes": "S2 OPEN. Titan established as 'unclear' threat. Poseidon assigned as watcher. Hercules's 'it's just tired' theory planted — will be confirmed in EP06 when Oceanus communicates. Archie's reaction in scene 7 is the first hint he understands more than the others. Crown still listing left — Zeus hasn't changed."
+}

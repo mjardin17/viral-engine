@@ -1,0 +1,108 @@
+{
+  "episode_number": 6,
+  "series_name": "Empire Decoded",
+  "topic": "Salamis and Plataea: How Greece Won the War",
+  "title": "Salamis and Plataea: How Greece Won the War",
+  "rendered": false,
+  "generation": {
+    "gemini_source": "claude-direct (pre-generated ahead of Higgsfield credits)",
+    "chatgpt_source": "claude-direct"
+  },
+  "qa_notes": [
+    "Scene count: 6; total runtime ~54s of narration audio (estimate).",
+    "Direct continuation of episode 5's outro hook ('time to prepare for the battles that would ultimately turn the war — at Salamis, and at Plataea').",
+    "Villain-strength check: Persian fleet framed as the largest ever assembled (1,200+ ships) under Xerxes himself watching from a golden throne; ground army still framed as effectively unbeaten on land. Pass."
+  ],
+  "scenes": [
+    {
+      "scene_number": 1,
+      "title": "Cold Open",
+      "description": "Smoke still rises from the ruins of Athens. The largest fleet the world has ever seen fills the horizon, and the Persian King watches from a golden throne on the cliffs above — certain the war is already won.",
+      "narration": "Athens was burning. The largest fleet ever assembled — over twelve hundred ships — filled the sea below Athens, and on the cliffs above, King Xerxes sat on a golden throne to watch the final battle. He was so confident of victory, he'd already sent word home: Greece is finished.",
+      "video_prompt": "Cinematic historical documentary style, Empire Decoded. Aerial view of the smoking ruins of ancient Athens, the Acropolis scarred by fire. Below, a vast Persian war fleet of over a thousand ships fills the narrow strait. On a cliff overlooking the sea, King Xerxes sits on an ornate golden throne surrounded by attendants, watching. Photoreal detail, dramatic golden-hour lighting, accurate period costumes and architecture, film-grade composition, 16:9.",
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 2,
+      "title": "Setting the Stage",
+      "description": "After Thermopylae, the Persian army marched into Greece unopposed and burned Athens to the ground. The Athenians evacuated their entire city by sea. Now the Greek fleet — outnumbered more than two to one — has nowhere left to retreat.",
+      "narration": "After Thermopylae fell, nothing stood between Xerxes and Athens. The Athenians abandoned their city and evacuated by ship, watching from a distance as their homes burned. Now the Greek fleet, outnumbered more than two to one by the most powerful navy on Earth, had nowhere left to run.",
+      "video_prompt": "Cinematic historical documentary style, Empire Decoded. Wide shot of thousands of Greek refugees boarding wooden triremes as the city of Athens burns behind them on a hill. Smoke fills the sky. In the foreground, a smaller Greek fleet of around three hundred ships gathers in a narrow strait, dwarfed by the Persian armada visible in the distance. Photoreal detail, dramatic lighting, accurate period costumes and architecture, film-grade composition, 16:9.",
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 3,
+      "title": "Rising Tension",
+      "description": "The Athenian general Themistocles has one plan: trick the massive Persian fleet into the narrow strait of Salamis, where its size becomes a weakness instead of a strength. He sends a secret message to Xerxes — claiming the Greeks are about to flee.",
+      "narration": "The Athenian general Themistocles had one card to play. The Persian fleet's size was its greatest strength in open water — and its greatest weakness in a narrow channel. So he sent a secret messenger to Xerxes with a lie: the Greeks are demoralized, and about to flee in the night. Attack now, while you still can.",
+      "video_prompt": "Cinematic historical documentary style, Empire Decoded. Night scene, a lone messenger in a small boat rows silently across dark water toward the torch-lit silhouette of the massive Persian fleet anchored in a bay. On a ridge above a narrow strait, Themistocles, a sharp-eyed Athenian general in bronze armor and a red cloak, watches from the shadows with a grim, calculating expression. Photoreal detail, moody moonlit lighting, accurate period costumes and architecture, film-grade composition, 16:9.",
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 4,
+      "title": "The Clash",
+      "description": "At dawn, the Persian fleet pours into the narrow strait of Salamis to trap the Greeks — but there's no room to maneuver. Ship rams ship in the chaos as the smaller, more agile Greek triremes turn the bottleneck into a slaughter.",
+      "narration": "At dawn, the Persian fleet surged into the strait to crush the Greeks before they could escape. But the strait was too narrow. Ships meant for the open sea collided with each other, oars shattering, hulls grinding together — while the smaller, faster Greek triremes turned and rammed them, one by one.",
+      "video_prompt": "Cinematic historical documentary style, Empire Decoded. Chaotic naval battle in a narrow blue strait between rocky cliffs. Dozens of massive Persian warships are jammed together, oars splintering, while sleek Greek triremes ram into their hulls at speed. Bronze rams smash through wooden planking, sailors fall into the water, smoke rises from a burning ship. High-energy dynamic camera angle, photoreal detail, dramatic morning light, film-grade composition, 16:9.",
+      "duration_sec": 10
+    },
+    {
+      "scene_number": 5,
+      "title": "Turning Point",
+      "description": "By midday, hundreds of Persian ships are destroyed or fled. Xerxes, watching from his golden throne, sees the war turn in front of his eyes — and orders a retreat back to Asia, leaving his army behind to face Greece alone.",
+      "narration": "By midday, more than half the Persian fleet was sunk, burning, or fleeing. From his golden throne, Xerxes watched the greatest navy ever built come apart in a single morning. Within days, he abandoned the campaign entirely — sailing back to Asia and leaving his army in Greece to fend for itself.",
+      "video_prompt": "Cinematic historical documentary style, Empire Decoded. Wide aerial shot of the Salamis strait littered with burning and capsized warships, debris and wreckage floating in the water. On the cliff above, King Xerxes rises from his golden throne, his expression shifting from confidence to fury and disbelief, attendants around him frozen. Photoreal detail, dramatic late-afternoon lighting with smoke haze, accurate period costumes and architecture, film-grade composition, 16:9.",
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 6,
+      "title": "Legacy",
+      "description": "A year later, at Plataea, the combined armies of Greece destroy the last Persian force on land — ending the invasion for good. Salamis and Plataea together mark the high point of Persian power, and the dawn of Greece's golden age.",
+      "narration": "A year later, at the Battle of Plataea, the largest Greek army ever assembled crushed what remained of the Persian invasion force on land. The empire that once seemed unstoppable would never again set foot in Greece. Salamis and Plataea didn't just save a handful of cities — they opened the door to Greece's golden age. Subscribe to Empire Decoded for the next chapter.",
+      "video_prompt": "Cinematic historical documentary style, Empire Decoded. Wide battlefield shot at Plataea, ranks of Greek hoplites in bronze armor with overlapping shields advancing across a plain at sunrise, the defeated Persian camp burning in the background. Final shot transitions to a serene view of the Acropolis of Athens under construction, golden light, symbolizing a new era. Photoreal detail, epic and hopeful tone, film-grade composition, 16:9.",
+      "duration_sec": 10
+    }
+  ],
+  "music": {
+    "prompt": "Epic historical documentary score, cinematic orchestral, naval battle theme. Begins with tense low strings and a slow ominous brass swell, builds into a chaotic, percussive battle theme with driving low brass and crashing percussion mimicking ship collisions, breaks into a triumphant string and choir surge at the turning point, and resolves into a hopeful, golden, full-orchestra finale evoking a new dawn. Instrumental only, optional wordless choir swells. Style reference: Hans Zimmer historical trailer score.",
+    "duration_sec": 300
+  },
+  "sound_effects": [
+    {
+      "label": "burning_city",
+      "prompt": "Distant city burning, crackling flames, collapsing timber structures, faint crowd murmurs and crying in the distance, somber smoky ambience"
+    },
+    {
+      "label": "fleet_at_anchor_night",
+      "prompt": "Calm night sea ambience, hundreds of ships creaking and gently rocking at anchor, faint distant voices, water lapping against hulls, torches crackling"
+    },
+    {
+      "label": "naval_collision_chaos",
+      "prompt": "Massive wooden ship collisions, splintering oars and hulls, bronze ram impacts, men shouting and screaming, water splashing, chaotic naval battle ambience"
+    },
+    {
+      "label": "ram_impact",
+      "prompt": "Single heavy bronze ram smashing through a wooden ship hull, cracking timber, rushing water flooding in"
+    },
+    {
+      "label": "hoplite_advance",
+      "prompt": "Massed hoplite infantry advancing in formation, synchronized footsteps, shields and spears clattering, low war horn drone, dawn battlefield ambience"
+    },
+    {
+      "label": "dawn_resolution",
+      "prompt": "Calm dawn ambience, gentle wind, distant birdsong, soft construction sounds (stone chiseling), hopeful and peaceful atmosphere"
+    }
+  ],
+  "character_images": [
+    {
+      "label": "themistocles_reference",
+      "prompt": "Cinematic realistic character design, Themistocles, Athenian general and statesman, bronze muscle-cuirass armor, deep red wool cloak, bronze Corinthian helmet pushed back off the head revealing a sharp intelligent face, archaeology-based proportions, full body standing pose, neutral grey studio background, soft even lighting, character reference sheet, front view, no text, no logos, no watermark",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "label": "xerxes_reference",
+      "prompt": "Cinematic realistic character design, King Xerxes of Persia, ornate Persian royal robes in purple and gold, jeweled tiara crown, long dark beard, seated posture reference on an ornate golden throne, archaeology-based Achaemenid Persian proportions and dress, neutral grey studio background, soft even lighting, character reference sheet, front view, no text, no logos, no watermark",
+      "aspect_ratio": "3:4"
+    }
+  ]
+}

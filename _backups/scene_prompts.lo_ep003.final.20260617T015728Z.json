@@ -1,0 +1,141 @@
+{
+  "channel": "Little Olympus",
+  "episode_number": 3,
+  "episode_id": "LO_EP003",
+  "title": "Perseus and the Tiny Medusa",
+  "tagline": "She turns things to stone. He has a mirror. This won't end well for anyone.",
+  "duration_target_min": 5,
+  "aesthetic": {
+    "color_grade": "bright_kids_cartoon",
+    "primary_colors": ["#FFD700", "#6A0DAD", "#00B4E6", "#FF6B35"],
+    "font_style": "rounded_chunky_bold",
+    "music_style": "upbeat_kids_adventure",
+    "narrator_tone": "warm_playful_encouraging"
+  },
+  "characters": {
+    "hero": {
+      "name": "Little Perseus",
+      "role": "Brave kid who gets scared but does it anyway — audience surrogate",
+      "visual": "Dark shaggy hair, green eyes, earthy green tunic, leather satchel, small bronze shield (reflective), winged sandals that activate randomly",
+      "personality": "Genuinely brave (scared first, then acts), polite to a fault, terrible sense of direction, resourceful"
+    },
+    "villain_debut": {
+      "name": "Mini Medusa",
+      "role": "First appearance — turns things to stone but is secretly lonely",
+      "visual": "Small pale green girl with seven snake-hair (Hissy, Slick, Noodle, Chomp, Dreamy, Zigzag, Tiny), large golden round sunglasses, purple and gold wraps, shell jewelry",
+      "personality": "Dramatic proclamations, secretly sad, competitive with herself, has a stone garden she's proud of, snakes argue constantly"
+    },
+    "support_1": {
+      "name": "Little Zeus",
+      "role": "Sends Perseus on the mission, causes one problem",
+      "visual": "Curly white hair, tiny bent crown, white toga, thunderbolt"
+    },
+    "support_2": {
+      "name": "Athena",
+      "role": "Gives Perseus the key insight — the shield as a mirror",
+      "visual": "Grey-streaked braid, round glasses, owl Archie on shoulder, scroll"
+    }
+  },
+  "scenes": [
+    {
+      "scene_number": 1,
+      "type": "hook",
+      "title": "Everything at the Fountain Is Stone",
+      "narration": "Something strange was happening at the Olympus fountain. The fish were stone. The frogs were stone. The bucket was stone. Even the water — somehow — was stone. And in the middle of it all, one golden sunglasses case sat on the edge. With a note: 'This is MY fountain now. —M'",
+      "visual_prompt": "Little Olympus kids cartoon style. The beautiful Olympus fountain — but everything in and around it has been turned to grey stone. Stone fish mid-jump. Stone frogs. Even stone water droplets frozen in the air. Little Zeus and Perseus stand staring at it in shock. On the fountain edge: a small golden sunglasses case and a dramatic note. Bright cheerful surroundings contrast with the stone chaos. 16:9.",
+      "bg_colors": ["#87CEEB", "#A9A9A9", "#FFD700"],
+      "accent": "#6A0DAD",
+      "camera": "pull_back",
+      "duration_sec": 9,
+      "higgsfield_prompt": "Cute kids cartoon style, beautiful Greek fountain with everything turned to grey stone — stone fish, stone frogs, frozen stone water droplets, small curly-haired boy with crown and dark-haired boy staring in shock, golden sunglasses case on fountain edge, bright colors contrasting stone grey, 16:9"
+    },
+    {
+      "scene_number": 2,
+      "type": "setup",
+      "title": "Perseus Gets the Mission",
+      "narration": "Zeus had a plan. Perseus would find whoever left that note and ask them very nicely to un-stone the fountain. Perseus asked if Zeus wanted to come along. Zeus said absolutely not and immediately pretended to be busy with something else. Perseus was on his own.",
+      "visual_prompt": "Little Olympus kids cartoon style. Little Zeus points dramatically at Perseus while clearly backing away himself — pointing at the path toward the mountains, expression saying 'you've got this!' while his feet are shuffling backwards. Perseus looks nervous but determined, adjusting his satchel strap and gripping his bronze shield. Bright Olympus setting. 16:9.",
+      "bg_colors": ["#87CEEB", "#90EE90", "#FFD700"],
+      "accent": "#FF6B35",
+      "camera": "push_in",
+      "duration_sec": 9,
+      "higgsfield_prompt": "Cute kids cartoon style, small boy with crown pointing dramatically at brave dark-haired boy while clearly shuffling backwards away from mission himself, brave boy looking nervous but determined holding bronze shield and leather satchel, bright Olympus path, funny cowardly king expression, 16:9"
+    },
+    {
+      "scene_number": 3,
+      "type": "clue",
+      "title": "Athena's One Piece of Advice",
+      "narration": "Before he left, Athena stopped Perseus. She tapped her chin three times. Then she said five words. 'Do not look directly.' Perseus didn't understand yet. Archie the owl looked at him. Very meaningfully. Perseus still didn't understand. He would.",
+      "visual_prompt": "Little Olympus kids cartoon style. Athena stands with Perseus, tapping her chin thoughtfully (three taps). She holds up one finger and speaks those important words. Perseus looks confused. Archie the owl on her shoulder turns to look directly at Perseus with a deeply meaningful stare. Perseus squints, not getting it. Athena sighs. Warm afternoon light. 16:9.",
+      "bg_colors": ["#B0C4DE", "#FFD700", "#FFFFFF"],
+      "accent": "#6A0DAD",
+      "camera": "push_in",
+      "duration_sec": 9,
+      "higgsfield_prompt": "Cute kids cartoon style, smart girl with grey-streaked braid and glasses holding up one finger giving advice to dark-haired boy, small grey owl on her shoulder staring very meaningfully at the boy, boy looking confused and not getting it, girl sighing, warm afternoon light, 16:9"
+    },
+    {
+      "scene_number": 4,
+      "type": "problem",
+      "title": "Mini Medusa's Stone Garden",
+      "narration": "Perseus followed the sunglasses case clue to a valley behind Olympus. And there she was: Mini Medusa. She had turned an entire meadow into a stone sculpture garden. It was, actually, extremely beautiful. Mini Medusa was in the middle of it giving a tour to nobody.",
+      "visual_prompt": "Little Olympus kids cartoon style. A breathtaking stone sculpture garden in a valley — dozens of beautifully detailed stone animals, flowers, and mythical creatures all frozen mid-motion. Mini Medusa — small girl with seven animated snake-hair and big golden round sunglasses — stands in the center dramatically gesturing to her art as if presenting to a crowd. Nobody is there. Perseus peeks around a rock, amazed. 16:9.",
+      "bg_colors": ["#A9A9A9", "#6A0DAD", "#FFD700"],
+      "accent": "#6A0DAD",
+      "camera": "pull_back",
+      "duration_sec": 9,
+      "higgsfield_prompt": "Cute kids cartoon style, breathtaking stone sculpture garden with dozens of beautifully detailed frozen stone animals and flowers, small pale green girl with animated snake-hair and large golden round sunglasses dramatically gesturing to her art collection for nobody, dark-haired boy peeking amazed from behind a rock, purple and gold colors, 16:9"
+    },
+    {
+      "scene_number": 5,
+      "type": "attempt",
+      "title": "Perseus Steps Out — and the Snakes Spot Him",
+      "narration": "Perseus stepped forward to talk to Medusa. He said 'Excuse me, very sorry to interrupt your tour—' and then Medusa spun around. Her sunglasses slipped. Just slightly. Perseus's left sandal turned to stone. He hopped on his right foot. The winged sandal activated. He went straight up.",
+      "visual_prompt": "Little Olympus kids cartoon style. Comic chaos — Perseus steps out politely, Medusa spins and her golden sunglasses tilt sideways, a beam of petrification zaps his left foot which turns to stone. Perseus looks down at his stone foot with horror, hops on the other foot, the winged sandal activates with a burst of feathers and wind — he shoots vertically upward like a rocket, expression of complete surprise. Medusa watches, slightly offended. 16:9.",
+      "bg_colors": ["#6A0DAD", "#A9A9A9", "#87CEEB"],
+      "accent": "#FFD700",
+      "camera": "push_in",
+      "duration_sec": 9,
+      "higgsfield_prompt": "Cute kids cartoon style, boy stepping out politely, small green girl's golden sunglasses tilting sideways accidentally, boy's foot turning to stone, boy hopping, winged sandal activating with burst of feathers launching boy straight upward like rocket with surprised expression, girl watching offended, stone garden setting, 16:9"
+    },
+    {
+      "scene_number": 6,
+      "type": "solution",
+      "title": "The Shield Mirror",
+      "narration": "From very high up, Perseus remembered Athena's words. Do not look directly. He looked at his bronze shield. He could see Medusa's reflection perfectly in it. He called down: 'Your garden is genuinely beautiful. Could I see it? Without the turning-to-stone part?' Medusa's snakes went quiet. That was new. Nobody had ever said that before.",
+      "visual_prompt": "Little Olympus kids cartoon style. Perseus floating high above (winged sandal still active, one foot still stone), holding up his polished bronze shield to use as a mirror. In the shield's reflection we can see Mini Medusa below looking up. Perseus calls down with a friendly expression. Below, Mini Medusa stands surrounded by her stone garden — all seven of her snakes have gone completely still and are looking at each other. Something shifted. 16:9.",
+      "bg_colors": ["#87CEEB", "#FFD700", "#6A0DAD"],
+      "accent": "#FFD700",
+      "camera": "pull_back",
+      "duration_sec": 9,
+      "higgsfield_prompt": "Cute kids cartoon style, boy floating high up with one stone foot and one winged sandal, holding polished bronze shield as mirror showing small green girl's reflection below, boy calling down with friendly expression, girl below looking up with all seven snakes suddenly still and looking at each other in surprise, something changed, 16:9"
+    },
+    {
+      "scene_number": 7,
+      "type": "lesson_and_cta",
+      "title": "The Tour (Sort Of)",
+      "narration": "Medusa didn't un-stone the fountain. Not right away. But she did give Perseus a tour of her garden — him floating above, her pointing things out below, using the shield as a mirror the whole time. And when he landed, his foot un-stoned on its own. She said it does that sometimes. He said thank you. She said 'SILENCE' but then showed him her favorite sculpture. See you next time on Little Olympus.",
+      "visual_prompt": "Little Olympus kids cartoon style. Heartwarming awkward scene — Perseus floats slowly above using his shield-mirror while Mini Medusa points out different sculptures below with genuine pride. His foot is slowly un-stoning. He's smiling down at the shield reflection. She's pointing to her FAVORITE sculpture — a tiny stone owl that looks exactly like Archie. Perseus laughs. Medusa tries not to smile. Golden afternoon light. Both are awkward about this new thing. 16:9.",
+      "bg_colors": ["#1A1060", "#FFD700", "#6A0DAD"],
+      "accent": "#FFD700",
+      "camera": "pull_back",
+      "duration_sec": 9,
+      "higgsfield_prompt": "Cute kids cartoon style, boy floating slowly above using bronze shield as mirror smiling, small green girl below pointing to her favorite stone sculpture (tiny stone owl) with genuine pride, his stone foot slowly returning to normal, girl trying not to smile, golden afternoon light, awkward sweet first friendship moment, 16:9"
+    }
+  ],
+  "music": {
+    "style": "upbeat_kids_adventure",
+    "notes": "Playful mystery theme in scenes 1-3. Slightly dramatic comedic sting when the sunglasses slip. Warm, slightly tentative music in scenes 6-7 — something new is starting."
+  },
+  "voice_style": {
+    "tone": "warm_playful_encouraging",
+    "pacing": "Slow down on 'Do not look directly' — let it land. Speed up during the sandal chaos. Gentle and warm in scene 7.",
+    "character": "A storyteller who finds it genuinely funny that Perseus said thank you to the person who turned his foot to stone"
+  },
+  "lesson": "Sometimes the bravest thing isn't fighting — it's seeing someone the way nobody else has.",
+  "bible_reference": "Little_Olympus_Master_Bible.md — Mini Medusa debut (grumpy because lonely, stone garden is beautiful, dramatic exits), Perseus (polite to fault, shield as mirror, winged sandals activate randomly), Athena chin-tap (3x) in scene 3.",
+  "medusa_arc_note": "EP003: Antagonist. Defeated by Perseus's mirror trick. BUT — she didn't fully lose. The tour happened. Something started. This is her first step toward the group.",
+  "youtube_title": "Perseus vs MINI MEDUSA! 🐍👀 | Little Olympus Episode 3",
+  "youtube_description": "Someone turned the Olympus fountain to STONE! 😱\n\nThe note says it was Mini Medusa — but nobody can look directly at her or they'll turn to stone too! Perseus volunteers (Zeus definitely didn't volunteer). But Perseus has a secret weapon — his shiny shield works as a mirror!\n\nIn today's adventure:\n🛡️ Perseus gets a very dangerous mission\n👀 Athena's five most important words\n🐍 Mini Medusa's stone sculpture garden (it's actually really beautiful?)\n🪨 Perseus's foot turns to stone and his sandal launches him into the sky\n\n📺 Watch ALL our adventures: [playlist link]\n🔔 SUBSCRIBE for new episodes every week!\n\n#LittleOlympus #Perseus #MiniMedusa #KidsCartoon #GreekMythology #KidsYouTube",
+  "next_episode_preview": "Episode 4 — Athena's Big Idea! She has a plan. It's perfect. Nothing can go wrong. (Something goes wrong.)",
+  "higgsfield_style_notes": "ALL scenes bright colorful cute cartoon. Mini Medusa's snakes must look animated and expressive — they argue and react. Golden sunglasses always present. Stone effects look interesting and sculptural, NOT scary. Perseus's bronze shield should gleam."
+}

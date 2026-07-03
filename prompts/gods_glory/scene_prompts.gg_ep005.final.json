@@ -1,0 +1,199 @@
+{
+  "episode_id": "GG_EP005",
+  "channel": "GG",
+  "title": "Constantinople 1453: The End of an Age",
+  "scenes": [
+    {
+      "scene_number": 1,
+      "title": "The City That Should Not Have Fallen",
+      "narration": "For one thousand years, no army on earth had taken Constantinople. The Visigoths couldn't. The Arabs couldn't. Not once, in a millennium, had those walls been breached by force. In this episode: the last Roman emperor making his final stand, the twenty-one-year-old sultan who had been obsessed with this one city since childhood, the impossible cannon built to bring down walls that had stood for a thousand years, and the fifty-three-day siege that ended the Middle Ages. The city sat at the edge of two continents, the richest port alive, the last living heir of the Roman Empire. Then, in the spring of 1453, that sultan pointed his cannon at those walls — and changed everything.",
+      "visual_prompt": "Sweeping aerial cinematic shot of Constantinople circa 1453 — the city on a triangular peninsula jutting between the Sea of Marmara and the Golden Horn. The Hagia Sophia dome dominates the skyline. The triple-layered Theodosian Walls run along the western landward approach, massive and ancient. Golden light at dusk. The city glows. The Ottoman camp fires are just visible in the far distance. Documentary painting aesthetic, historically precise, 16:9 widescreen.",
+      "bg_colors": ["#1A0E2E", "#C9A227", "#8B3A3A"],
+      "duration_sec": 58
+    },
+    {
+      "scene_number": 2,
+      "title": "The Empire at Its Last Gasp",
+      "narration": "By 1453, the Byzantine Empire was a ghost of Rome. What had once stretched from Spain to Mesopotamia now controlled little more than Constantinople itself and a few scattered port towns. The treasury was empty. The population had collapsed from the Black Death. The emperor, Constantine XI Palaiologos, could muster barely seven thousand defenders for a city that once held half a million souls. An empire that had outlasted every rival on earth was dying — and everyone knew it.",
+      "visual_prompt": "Interior of the Blachernae Palace, Constantinople — cracked marble floors, faded gold mosaics dimmed by years of neglect, tapestries worn thin. Emperor Constantine XI Palaiologos stands at a window overlooking the city — a dignified man in his late forties, dark bearded, wearing imperial purple now threadbare at the edges. Outside: the city's narrow streets, half-empty, shuttered market stalls. The contrast between imperial grandeur and desperate poverty. Documentary cinematic painting style, 16:9.",
+      "bg_colors": ["#2C1A0E", "#6B4C2A", "#1A1A2E"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 3,
+      "title": "Mehmed II — The Sultan Obsessed",
+      "narration": "Mehmed II became Sultan of the Ottoman Empire at nineteen. From childhood, one city consumed him: Constantinople. He read everything written about it — Greek histories, Arabic accounts, Roman military manuals. He spoke six languages. He invited Italian Renaissance scholars to his court. He was not a barbarian at the gate. He was the most formidably educated ruler alive, and he wanted that city with a ferocity that frightened his own advisors. He called it his destiny. He called it the Red Apple.",
+      "visual_prompt": "Portrait-style cinematic shot of Sultan Mehmed II — young, intense, high cheekbones, dark calculating eyes beneath a white turban. He stands in an Ottoman campaign tent, maps of Constantinople spread on a table before him, his finger tracing the Theodosian Walls. Candlelight. An illuminated manuscript of Byzantine history lies open nearby. His expression is not rage — it is cold, absolute certainty. Documentary cinematic painting style, 16:9.",
+      "bg_colors": ["#1A1A2E", "#8B1A1A", "#C9A227"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 4,
+      "title": "The Theodosian Walls — A Thousand Years of Stone",
+      "narration": "The Theodosian Walls had been built in 413 AD and had never been breached by assault. Sixty feet high. Twenty feet thick. A triple line of defenses — outer wall, inner wall, a moat that could be flooded in hours. Fourteen towers per mile, each one a fortress within a fortress. Every sultan, every Arab caliph, every Viking raider who had looked at those walls had eventually turned away. Mehmed had studied them for years. He knew their age. He knew their weaknesses. He also knew that no weapon in the world had yet been built that could knock them down. So he commissioned one.",
+      "visual_prompt": "Ground-level cinematic view of the Theodosian Walls — the triple defensive line stretching across the Thracian plain, west of Constantinople. Massive limestone blocks, sixty feet of layered stone, towers rising at intervals. The outer wall, inner wall, and flooded moat visible in sequence. A Byzantine soldier walks the battlements, small against the wall's scale. The ancient stonework shows repairs and patches from centuries of siege — but it stands. Documentary painting style, historically precise, 16:9.",
+      "bg_colors": ["#3A3A2E", "#6B6B4A", "#C9A227"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 5,
+      "title": "Urban's Cannon — The Weapon That Changed War",
+      "narration": "His name was Urban, and he was Hungarian. A master founder — a man who cast bronze into guns. He went first to Constantinople, offering his services to Constantine. Constantine couldn't pay him. So Urban went to Mehmed, who paid him anything he asked. Urban told the sultan he could build a cannon that would blast through the walls of Babylon itself. Mehmed told him to build it. Three months later, Urban delivered a bronze barrel twenty-seven feet long, capable of firing a stone ball weighing twelve hundred pounds. When they test-fired it outside Edirne, the sound was heard twelve miles away.",
+      "visual_prompt": "Cinematic wide shot of Urban's great bombard — an enormous bronze cannon twenty-seven feet long, mounted on a massive wheeled timber carriage in a field outside Edirne. Workers and Ottoman soldiers stand nearby for scale, dwarfed by the barrel. The cannon mouth is the width of a man's shoulders. Mehmed II on horseback observes from a distance. Smoke and dust from a recent test firing still drifting. The Ottoman court watches in silence, some visibly shaken by what they have seen. Documentary cinematic painting style, 16:9.",
+      "bg_colors": ["#2C1810", "#8B3A1A", "#4A4A2E"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 6,
+      "title": "The Ottoman Army Arrives",
+      "narration": "In April 1453, Mehmed II marched on Constantinople with an army of eighty thousand men — some estimates put it at a hundred thousand. They carried the largest siege train in the world: dozens of cannons, including Urban's great bombard, hauled across the Thracian plain by teams of oxen. When the Byzantine defenders on the walls looked west and saw the Ottoman camp spreading across the horizon, the fires stretching for miles, they understood for the first time what they were actually facing. This was not a raid. This was an extinction event.",
+      "visual_prompt": "Panoramic view from atop the Theodosian Walls — Byzantine defenders in battered armor looking west as the vast Ottoman army camps spread across the entire horizon. Mehmed's red and gold pavilion at the center. Thousands of campfires. Teams of oxen hauling massive cannon carriages into position. The Ottoman battle standards — crescent and star — filling the plain. Smoke, dust, the low thunder of drums. The defenders' faces show the calculation of men who already know the odds. Documentary painting style, 16:9.",
+      "bg_colors": ["#8B1A1A", "#2C1810", "#C9A227"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 7,
+      "title": "Constantine XI's Last Appeal",
+      "narration": "Constantine XI knew he couldn't hold the city alone. He sent desperate letters to every Christian ruler in Europe — the Pope, Venice, Genoa, Hungary, France. He promised reunion of the Orthodox and Catholic churches, territory, anything. Most didn't respond. A few sent token aid. The Pope sent a cardinal. Venice sent promises. Genoa sent one man: Giovanni Giustiniani Longo, with seven hundred soldiers. In a crisis that would determine the fate of a civilization, the West sent seven hundred men.",
+      "visual_prompt": "Emperor Constantine XI at a writing desk in the Blachernae Palace, candlelight, quill in hand, composing urgent letters. Maps and correspondence scattered around him. A Byzantine cleric seals a diplomatic pouch. Cut to: a Genoese ship arriving in the Golden Horn, a single company of armored soldiers filing down the gangplank — Giovanni Giustiniani Longo at their head, a powerfully built man in Genoese plate armor. Constantine meeting him at the harbor. The desperate relief in the emperor's eyes. Documentary cinematic style, 16:9.",
+      "bg_colors": ["#1A1A2E", "#6B4C2A", "#8B3A1A"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 8,
+      "title": "Giustiniani — The Last Defender",
+      "narration": "Giovanni Giustiniani Longo was the finest military engineer in Genoese service. Constantine gave him command of the land walls — the most critical assignment in the defense. For fifty-three days, Giustiniani held the line. He organized the repair crews who patched the walls every night after the cannon fire tore them apart by day. He coordinated the night watches, the counterattacks, the morale of a garrison stretched impossibly thin. One man, from a city-state with no obligation to be there at all, became the spine of Byzantine resistance.",
+      "visual_prompt": "Giovanni Giustiniani Longo on the battlements of the Theodosian Walls at night — Genoese plate armor, commanding presence, directing Byzantine repair workers who fill breaches with timber and earth under torchlight. Behind him: the city, lights of Constantinople. Ahead: Ottoman cannon positions in the darkness, the glow of their slow-match fuses. Giustiniani's expression is that of a professional soldier entirely focused on a problem he hasn't solved yet. Documentary cinematic painting style, 16:9.",
+      "bg_colors": ["#1A1A2E", "#3A3A2E", "#8B3A1A"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 9,
+      "title": "The Cannon Opens Fire",
+      "narration": "April 6, 1453. Urban's great bombard fired for the first time against the Theodosian Walls. The impact shook the city. Stone blocks weighing tons crumbled. The inner walls cracked. Sections of the outer curtain collapsed in clouds of ancient mortar dust. But the cannon could only fire seven times a day — reloading took hours, and the barrel had to cool between shots. Every night, Byzantine workers hauled rubble back into the breach and packed it with timber, earth, and barrels of soil. The walls fell every morning. They were rebuilt every night.",
+      "visual_prompt": "Urban's great bombard fires — a massive muzzle blast, stone ball screaming across the field and striking the Theodosian Walls in a cascade of limestone dust and collapsing stonework. The impact zone: a gaping breach in the ancient outer wall, masonry scattered like gravel. Byzantine soldiers scrambling away from the impact. Night scene follows: torchlit work gangs hauling stones and timber, filling the breach by hand. The race between destruction and repair, played out in the darkness. Documentary cinematic painting style, 16:9.",
+      "bg_colors": ["#8B1A1A", "#2C1810", "#4A4A2E"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 10,
+      "title": "The Chain Across the Golden Horn",
+      "narration": "The Golden Horn — the natural harbor forming Constantinople's northern flank — was protected by a massive iron chain stretched across its mouth. As long as the chain held, no Ottoman ship could enter the harbor and attack the city's northern sea walls. The Byzantine and Genoese fleets held the harbor. Mehmed sent his own fleet to break through. It failed. The chain held. For weeks, Constantinople's northern side was safe — the defenders could focus everything on the land walls. Mehmed needed a different answer.",
+      "visual_prompt": "The mouth of the Golden Horn — a massive iron chain stretches across the narrow harbor entrance, supported by floating wooden booms. Byzantine and Genoese galleys patrol inside the chain, armed and ready. An Ottoman naval attack is repulsed — Greek fire arcing from Byzantine ships, Ottoman vessels turning back. The chain holding firm, links thick as a man's forearm. Aerial view showing how the chain seals the entire harbor. The city's northern shore safe, for now. Documentary cinematic painting style, 16:9.",
+      "bg_colors": ["#00376B", "#1A1A2E", "#C9A227"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 11,
+      "title": "Ships Dragged Over the Mountain",
+      "narration": "Mehmed's solution was one of the most audacious feats of military logistics in history. Unable to break the chain by sea, he ordered his fleet dragged overland — across a mile of hills north of the Golden Horn — and relaunched on the harbor's other side. Overnight, using wooden sledges greased with animal fat, seventy Ottoman ships were hauled out of the Bosphorus, dragged up a ridge, and lowered into the Golden Horn. When Byzantine defenders woke the next morning, the harbor that had been safe was full of Ottoman warships. The city's northern walls now needed defending.",
+      "visual_prompt": "Cinematic wide shot of Ottoman soldiers and workers hauling warships on greased wooden sledges up a steep hillside north of Constantinople — dozens of ships, masts lowered, hulls grinding over timber rollers. Torchlight at night. Thousands of men pulling on ropes and levers. The absurdity of ships cresting a hill, the city lights of Constantinople visible in the distance below. Then: morning light — seventy Ottoman ships in the Golden Horn, sailors rowing into position. Byzantine defenders on the northern sea walls staring in disbelief. Documentary painting style, 16:9.",
+      "bg_colors": ["#2C1810", "#8B3A1A", "#1A1A2E"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 12,
+      "title": "The Siege Tightens",
+      "narration": "By late April, Constantinople was encircled on every side. Ottoman ships commanded the harbor. The cannon pounded the land walls around the clock. Mehmed ordered the construction of a pontoon bridge across the Golden Horn, allowing troops to mass against the northern sea walls. The defenders were stretched to the breaking point — seven thousand men trying to hold miles of wall against a hundred thousand. The city's food was running low. Sleep was impossible. And every morning, when the cannon fired, more of the ancient wall came down.",
+      "visual_prompt": "Aerial view of Constantinople under full siege — Ottoman fleet in the Sea of Marmara to the south, ships now in the Golden Horn to the north, the vast Ottoman land camp to the west. The city on its peninsula, completely encircled. Smoke rising from cannon impacts along the Theodosian Walls. A pontoon bridge of lashed boats crossing the Golden Horn. The defenders' position visible from above — outnumbered, surrounded, holding. The geometry of doom. Documentary cinematic painting style, 16:9.",
+      "bg_colors": ["#8B1A1A", "#1A1A2E", "#2C1810"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 13,
+      "title": "The Defenders Hold — For Now",
+      "narration": "And yet they held. Giustiniani's genius at the walls, the desperate courage of the Byzantine garrison, the natural advantage of defending stone against attackers in the open — all of it combined to repel assault after assault. Ottoman infantry stormed the breaches only to be driven back by exhausted men fighting for their city and their civilization. Mehmed made three full-scale assaults before mid-May. Three times, the walls held. His generals began to whisper that the city might be unbreakable. Mehmed dismissed them. He would not stop. He would not negotiate. He would take it or he would die there.",
+      "visual_prompt": "The battle at a breach in the Theodosian Walls — Byzantine and Genoese defenders fighting hand-to-hand in a collapsed section of the outer wall, holding the gap against Ottoman soldiers pushing through. Giustiniani directing the defense at the center. The breach filled with rubble, timber stakes, and bodies. Men fighting with spears and swords in dust and smoke. Ottoman assault waves falling back. The defenders, bloodied and exhausted, still standing in the breach. Documentary cinematic painting style, 16:9.",
+      "bg_colors": ["#8B1A1A", "#3A3A2E", "#C9A227"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 14,
+      "title": "The Last Night — May 28, 1453",
+      "narration": "The night of May 28th was unlike any night the city had known. Constantine XI released his prisoners and freed his servants. He rode through the streets of Constantinople, saying farewell to the city he could not save. He visited the Hagia Sophia for a final liturgy — a church packed with soldiers and citizens praying together, Orthodox and Catholic alike, for the first time. There was no more politics left in it. They were just people, at the end of something, asking God for one more day.",
+      "visual_prompt": "Interior of the Hagia Sophia by candlelight — the vast dome above, every lamp lit, the church packed with Byzantine soldiers still in armor, civilians, priests, women and children. Emperor Constantine XI kneels at the altar in prayer, his purple imperial robe frayed at the hem. Orthodox and Catholic clergy officiating together — an impossible unity in the final hours. Faces in the candlelight: exhausted, afraid, determined. The sound of distant cannon barely audible. A civilization's last prayer. Documentary cinematic painting style, 16:9.",
+      "bg_colors": ["#1A0E2E", "#C9A227", "#6B4C2A"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 15,
+      "title": "The Final Assault Begins",
+      "narration": "Before dawn on May 29th, Mehmed ordered the final assault on three fronts simultaneously. The first wave — irregular troops, the Bashi-Bazouks — were sent against the walls to exhaust the defenders and identify weaknesses. They were followed by Anatolian regulars. Then, as the defenders were at the edge of collapse, Mehmed sent in his elite Janissaries — his most feared soldiers, the best-trained army in the Islamic world. The cannon fired continuously. Drums and trumpets masked the screams. The night turned red.",
+      "visual_prompt": "Pre-dawn assault on the Theodosian Walls — Ottoman drums and trumpets, the first wave of Bashi-Bazouk irregular troops storming the breach in waves under torchlight. Byzantine defenders pouring down arrows, pitch, and Greek fire. The Anatolian regulars following. Then, emerging from the dust and smoke: the elite Janissaries in white felt caps and blue uniforms, moving in disciplined formation. The cannon still firing in the darkness. The breach illuminated by fire and explosion. Documentary cinematic painting style, 16:9.",
+      "bg_colors": ["#8B1A1A", "#1A0E2E", "#4A2E1A"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 16,
+      "title": "Giustiniani Falls",
+      "narration": "The decisive moment came not from the Janissaries but from a wound. Giovanni Giustiniani Longo was struck — accounts disagree on where, perhaps in the hand, perhaps in the chest. The wound was serious enough that he asked permission to withdraw from the wall. Constantine begged him to stay. Giustiniani left. When the defenders saw their commander carried from the breach, something broke. Men who had held for fifty-three days began to look for a way out. The Genoese withdrew toward the harbor. The Byzantine line, already stretched to nothing, began to collapse.",
+      "visual_prompt": "Giovanni Giustiniani Longo wounded at the breach in the Theodosian Walls — blood on his armor, supported by two soldiers, being helped away from the fighting. Emperor Constantine XI grabs his arm in desperation, pleading. Giustiniani's face shows pain and the cold clarity of a man who knows he cannot continue. Behind them: the breach, the Janissaries pressing in. Byzantine defenders watching their commander leave — the moment of collective realization. Some already turning toward the harbor gates. Documentary cinematic painting style, 16:9.",
+      "bg_colors": ["#8B1A1A", "#2C1810", "#1A1A2E"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 17,
+      "title": "The Kerkoporta — The Gate Left Open",
+      "narration": "History would record one more failure. Somewhere in the chaos of the final assault, a small postern gate in the northern wall — the Kerkoporta — was left unlocked. Ottoman soldiers found it. They poured through. Within minutes, Ottoman flags appeared on the inner walls. Defenders looked back and saw the crescent behind them. The city was being taken from inside. The news spread faster than any army could move. Constantinople, after fifty-three days, was breached — not by the cannon alone, but by an unlocked door in a thousand-year-old wall.",
+      "visual_prompt": "The Kerkoporta — a small Byzantine postern gate, slightly ajar in the chaos of battle. Ottoman soldiers discovering it, pushing it open, streaming through into the space between the inner and outer walls. Turkish soldiers raising their standard on the inner battlements above. Byzantine defenders on the main wall turning to see enemy flags behind them — the horror of encirclement. The moment of collapse, spreading through the garrison like fire. Documentary cinematic painting style, 16:9.",
+      "bg_colors": ["#8B1A1A", "#1A0E2E", "#2C1810"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 18,
+      "title": "Constantine XI's Last Stand",
+      "narration": "Constantine XI Palaiologos, last Emperor of Rome, removed his imperial regalia. He threw off his purple cloak — the mark of emperorship that made him a target. He drew his sword and entered the breach with the last men still willing to fight. He was never seen again. No body was ever definitively identified. Accounts say he died in the street fighting as the city fell, cut down in the chaos. The last Roman emperor died as a soldier, unnamed in the final crush, which is perhaps the most Roman thing he ever did.",
+      "visual_prompt": "Constantine XI Palaiologos in the breach of the Theodosian Walls — he has removed his imperial purple cloak, discarded his crown, and stands in plain armor with his sword drawn. Around him: a handful of Byzantine soldiers making their last stand. Ottoman forces pressing in on all sides. Constantine's face is resolute, past fear. The breach behind him, the city behind that. No retreat. The last emperor of Rome fighting on foot, anonymous in the dying. Documentary cinematic painting style, 16:9.",
+      "bg_colors": ["#8B1A1A", "#1A0E2E", "#3A1A1A"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 19,
+      "title": "The City Falls",
+      "narration": "By mid-morning on May 29th, 1453, Constantinople was Mehmed's. Ottoman soldiers poured through every gate. The city that had held for eleven hundred years fell in a single morning. Mehmed allowed three days of plunder — Ottoman custom after a city that refused to surrender. Churches were looted. Thousands were enslaved. The Hagia Sophia, the greatest church in the Christian world, was converted to a mosque within days. The Patriarch of Constantinople fled. The bells that had rung in that city since the age of Constantine the Great rang for the last time.",
+      "visual_prompt": "Ottoman soldiers streaming through the gates and breaches of Constantinople — crowds flooding into the narrow streets. Looting of Byzantine churches, merchants' stalls, noble houses. Citizens fleeing toward the harbor. The Hagia Sophia surrounded by Ottoman troops, its cross being removed from the dome. The crescent raised above the largest church in Christendom. Smoke rising from multiple districts. The sound of celebration from the Ottoman camp visible outside the walls. A civilization ending in a morning. Documentary cinematic painting style, 16:9.",
+      "bg_colors": ["#8B1A1A", "#2C1810", "#C9A227"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 20,
+      "title": "Mehmed Enters the City",
+      "narration": "That afternoon, Mehmed II rode through the Gate of Charisius into his new capital. He was twenty-one years old. He dismounted at the Hagia Sophia, picked up a handful of earth, and poured it over his turban — a gesture of humility before God. Then he walked into the greatest building on earth and gave thanks. He declared Constantinople the new capital of his empire. He called himself Kayser-i Rum — Caesar of Rome. He was not destroying civilization. In his own mind, he was inheriting it.",
+      "visual_prompt": "Mehmed II rides a white horse through the Gate of Charisius into Constantinople — young, composed, in full ceremonial dress, his Janissary guard flanking him in columns. Citizens watching from doorways, some prostrating. He dismounts at the entrance to the Hagia Sophia, kneeling to touch the earth with a handful of soil which he pours over his head. Then he rises, looks at the dome above him, and enters. Inside: the vast space, candles still burning. A conqueror, genuinely awed. Documentary cinematic painting style, 16:9.",
+      "bg_colors": ["#1A1A2E", "#C9A227", "#8B3A1A"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 21,
+      "title": "The Scholars Flee — The Renaissance Ignites",
+      "narration": "In the weeks and months before the fall, and in the years after, Byzantine scholars fled west. They carried with them something the Latin West had almost forgotten existed: the original Greek manuscripts of Plato, Aristotle, Archimedes, Euclid, Ptolemy — ancient texts that had survived only in Byzantine libraries. They brought them to Florence, Venice, Rome. They found a West already beginning to stir. Their arrival accelerated everything. The Greek learning that the Byzantine Empire had preserved for a thousand years poured into Italy and lit the Renaissance from beneath.",
+      "visual_prompt": "Byzantine scholars on a Venetian ship departing Constantinople harbor — intellectuals in long robes, carrying armloads of manuscript scrolls and leather-bound codices. Constantinople receding behind them in smoke. They arrive at a Florentine dock — the Arno visible, Brunelleschi's unfinished dome in the background. A Florentine nobleman receives a scroll, unrolls it, reads. A humanist scholar bending over an ancient Greek text by lamplight. The chain of transmission: from Athens to Constantinople to Florence to the modern world. Documentary cinematic painting style, 16:9.",
+      "bg_colors": ["#1A3A6B", "#C9A227", "#6B4C2A"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 22,
+      "title": "The Ottoman Empire Ascendant",
+      "narration": "With Constantinople as his capital — renamed Istanbul — Mehmed II transformed the Ottoman Empire into a world power. The city's strategic position at the crossroads of Europe and Asia made it the greatest trading hub on earth once more. Mehmed rebuilt the population, invited Jews expelled from Europe, Greek Christians, Armenian traders. He built mosques, schools, covered markets. Within a generation, Constantinople-Istanbul was larger and wealthier than it had ever been under Byzantine rule. The empire that ended here did not simply collapse. It was absorbed and surpassed.",
+      "visual_prompt": "Constantinople rebuilt as Istanbul under Mehmed II — new mosques rising alongside the Hagia Sophia, the Grand Bazaar under construction, the harbor busy with ships from across the Mediterranean and Black Sea. A multicultural street scene: Ottoman Turks, Greek Christians, Armenian merchants, Jewish traders in the marketplace. The city skyline with minarets now added to Byzantine domes. The Topkapi Palace construction on the promontory. A city being reborn under new banners but with the same bones. Documentary cinematic painting style, 16:9.",
+      "bg_colors": ["#1A1A2E", "#C9A227", "#3A6B3A"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 23,
+      "title": "The Hinge of the Medieval and Modern World",
+      "narration": "Historians debate the exact moment the Middle Ages ended. Many point to 1453. The fall of Constantinople closed the overland Silk Road trade routes from Europe to Asia — forcing European powers to look west and south for sea routes. Within forty years, Columbus crosses the Atlantic. Da Gama rounds Africa. The Age of Exploration begins. The Greek manuscripts from Byzantine libraries spark the Renaissance. The Ottoman presence in the Balkans reshapes European power for centuries. One city, one morning, in the spring of 1453, and the modern world lurches into being.",
+      "visual_prompt": "Split-screen montage in documentary painting style: left panel — the fall of Constantinople, Ottoman flags on the walls, smoke over the Hagia Sophia. Right panel — Columbus's fleet at sea (1492), Da Gama rounding the Cape, Renaissance Florence with the Medici court, Leonardo da Vinci's sketch notebooks open on a desk, the Gutenberg press in operation. The visual argument: one event, cascading consequences. A map of the world as it was about to be transformed. 16:9.",
+      "bg_colors": ["#1A1A2E", "#8B1A1A", "#C9A227"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 24,
+      "title": "The End of an Age",
+      "narration": "A city that stood for a thousand years. A cannon that took fifty-three days to finish what armies had failed to do in eleven centuries. An emperor who died unnamed in a breach, a sultan who called himself Caesar, a handful of scholars who carried the ancient world across the sea. Constantinople fell on a Tuesday. In Greek, Tuesday — Triti — became the unluckiest day of the week, and remains so in Greek culture to this day. That is how deep the wound ran. That is how much was lost. And how much, because of what was carried west, was saved.",
+      "visual_prompt": "Final wide cinematic shot: the Hagia Sophia at golden hour — now a mosque, minarets rising at its four corners, but the ancient Byzantine dome still dominant above everything. Constantinople-Istanbul seen from the Bosphorus, the city on its peninsula between two seas, two continents, two worlds. The sun setting over the Sea of Marmara. A caption: May 29, 1453. Then: darkness. Then a single candle flame — the manuscripts carried west. The Renaissance beginning in the dark. Cinematic, authoritative, mournful and epic simultaneously. Documentary painting style, 16:9.",
+      "bg_colors": ["#1A0E2E", "#C9A227", "#8B1A1A"],
+      "duration_sec": 48
+    }
+  ]
+}

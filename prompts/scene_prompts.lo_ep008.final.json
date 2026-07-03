@@ -1,0 +1,145 @@
+{
+  "channel": "Little Olympus",
+  "episode_number": 8,
+  "episode_id": "LO_EP008",
+  "title": "Athena's Owl School",
+  "tagline": "Archie has been Athena's advisor for three years. He has never once been trained. He has been doing all of this on instinct. Today that becomes a problem.",
+  "duration_target_min": 5,
+  "aesthetic": {
+    "color_grade": "bright_kids_cartoon",
+    "primary_colors": ["#B0C4DE", "#FFD700", "#7B68EE", "#FFFFFF"],
+    "font_style": "rounded_chunky_bold",
+    "music_style": "upbeat_kids_adventure",
+    "narrator_tone": "warm_playful_encouraging"
+  },
+  "characters": {
+    "focus_duo": {
+      "name": "Athena + Archie",
+      "role": "ATHENA'S EPISODE — about her relationship with Archie. She discovers he's been operating on pure instinct, decides to formally train him, and learns that what she thought was untrained behavior was actually better judgment than any training would have produced.",
+      "athena_visual": "Grey-streaked braid, round glasses, scroll — this episode she also has a TRAINING MANUAL she wrote specifically for Archie",
+      "archie_visual": "Small grey owl, amber eyes — this episode he has a tiny student scroll tied to one talon that keeps unrolling"
+    },
+    "support_1": {
+      "name": "Baby Hercules",
+      "role": "Volunteer student in Athena's owl school. He is trying very hard. He cannot fly. He is attempting to fly anyway. Athena did not invite him.",
+      "visual": "Chubby toddler, lion cape, arms spread, looking at owl, determined expression"
+    },
+    "support_2": {
+      "name": "Little Zeus",
+      "role": "Also enrolled himself without being invited. Mostly interested in whether owls can conduct lightning. (They cannot.)",
+      "visual": "Curly white hair, bent crown, thunderbolt — this episode he's taken notes in the margins of Athena's training manual"
+    },
+    "support_3": {
+      "name": "Little Perseus",
+      "role": "Accidentally enrolled when he sat down nearby to eat his lunch and Athena handed him a syllabus. He has questions about the homework.",
+      "visual": "Dark shaggy hair, green tunic, holding a lunch apple and a very official-looking syllabus with equal confusion"
+    },
+    "problem": {
+      "name": "The Broken Aqueduct",
+      "role": "Two-thirds through the school day: the Olympus upper aqueduct develops a crack. Water is spreading toward the scroll library — Athena's scroll library. The trained response from Athena's manual is a four-step process. Archie takes action before step one is finished.",
+      "note": "Archie's instinct is correct and faster than any protocol. This is the episode's revelation."
+    }
+  },
+  "scenes": [
+    {
+      "scene_number": 1,
+      "type": "hook",
+      "title": "The Discovery",
+      "narration": "Athena had been reviewing Archie's advisory record — every time he'd looked at the camera, every meaningful stare, every slow blink during a crisis. She had started noticing a pattern: he was always right. Not sometimes. Always. She asked him directly: 'What training did you receive?' Archie looked at her. He tilted his head. She said: 'Any training at all?' He tilted his head the other way. She said: 'Archie.' He blinked. Athena opened a new scroll. She wrote: OWL SCHOOL.",
+      "visual_prompt": "Little Olympus kids cartoon style. Athena at her desk reviewing a long scroll — a record of every time Archie has been right (shown as tiny scenes: the camera look, the meaningful stare, the blink). She looks at him. He's on her shoulder. She asks the question. He tilts his head left. She asks again. He tilts his head right. She says his name. He blinks. One beat. Athena turns to a fresh scroll and we see her write in large determined letters: OWL SCHOOL. Archie watches her write it. 16:9.",
+      "bg_colors": ["#B0C4DE", "#FFD700", "#FFFFFF"],
+      "accent": "#7B68EE",
+      "camera": "push_in",
+      "duration_sec": 9,
+      "higgsfield_prompt": "Cute kids cartoon style, smart girl at desk reviewing long scroll with record of owl advisory moments shown as tiny scenes, looking at small grey owl on her shoulder and asking questions he answers only with head tilts left then right, then she turns to fresh scroll and writes OWL SCHOOL in large determined letters, owl watching her write with unreadable expression, 16:9"
+    },
+    {
+      "scene_number": 2,
+      "type": "setup",
+      "title": "The Student Body",
+      "narration": "Athena had planned to teach Archie alone. When she arrived at the teaching spot the next morning, Zeus was there. And Hercules. And Perseus, who was already holding a syllabus and had a question about the homework. Athena looked at all of them. She looked at Archie. Archie looked at the camera. She set up four desks.",
+      "visual_prompt": "Little Olympus kids cartoon style. Athena arrives at her designated teaching spot — a small outdoor area with a chalkboard she'd set up — to find Zeus sitting in a front-row desk with notes already written, Hercules at a desk with his arms spread in pre-flight position, and Perseus sitting with both an apple and a syllabus looking very confused. Athena looks at them all. Looks at Archie. Archie turns slowly to camera. She sighs and writes '4 STUDENTS' on the board. Archie's name is at the top of the list. 16:9.",
+      "bg_colors": ["#FFD700", "#B0C4DE", "#7B68EE"],
+      "accent": "#FFD700",
+      "camera": "pull_back",
+      "duration_sec": 9,
+      "higgsfield_prompt": "Cute kids cartoon style, smart girl arriving at outdoor teaching area with chalkboard to find curly-haired boy at front-row desk with existing notes, chubby toddler at desk with arms spread in pre-flight position, dark-haired boy holding apple and syllabus looking confused, girl looking at all of them then at owl who turns to camera, she sighs and writes 4 STUDENTS on board with owl's name at top, 16:9"
+    },
+    {
+      "scene_number": 3,
+      "type": "attempt",
+      "title": "Lesson One: Observation",
+      "narration": "Athena's first lesson was Observation — the ability to watch a situation and identify what matters most. She demonstrated. She watched the class for thirty seconds and reported: Zeus had written tomorrow's lunch order in his notes. Perseus had already eaten half his apple during the introduction. Baby Hercules had not blinked since the lesson began and appeared to be trying to observe so hard he had forgotten to blink. She said: 'Archie — what do you observe?' Archie looked at Athena's pen. Then at the inkwell. It was almost empty.",
+      "visual_prompt": "Little Olympus kids cartoon style. Athena mid-lesson, pointing at chalkboard that says OBSERVATION. She demonstrates — quick precise look at the class, then lists observations: Zeus shown with lunch order notes, Perseus shown with half-eaten apple. Hercules is shown wide-eyed and unblinking, staring with maximum effort. Then Athena turns to Archie. He tilts his head — looks at Athena's pen. Camera pans to her inkwell: almost empty. Athena pauses. Checks. He's right. She did not know that. 16:9.",
+      "bg_colors": ["#B0C4DE", "#FFFFFF", "#FFD700"],
+      "accent": "#7B68EE",
+      "camera": "push_in",
+      "duration_sec": 9,
+      "higgsfield_prompt": "Cute kids cartoon style, smart girl mid-lesson pointing at chalkboard saying OBSERVATION, quick scan showing curly-haired boy with lunch order in notes and dark-haired boy with half-eaten apple, chubby toddler wide-eyed and unblinking staring with maximum effort, girl turning to owl who tilts head and looks at her pen, camera showing inkwell almost empty, girl pausing and checking — he's right, she didn't know that, 16:9"
+    },
+    {
+      "scene_number": 4,
+      "type": "problem",
+      "title": "Lesson Two Goes Sideways",
+      "narration": "Lesson Two was Response Protocols — the four official steps for advisory owls when a crisis occurs. Athena had barely finished explaining Step One when there was a sound. A cracking, water-rushing sound. From the direction of the upper aqueduct. Athena looked at her protocol chart. She said: 'Step One: assess the—' Archie was already gone.",
+      "visual_prompt": "Little Olympus kids cartoon style. TRANSITION BEAT — Athena at the chalkboard mid-lesson, pointing at a four-step protocol chart. A CRACK sound from off-panel — visible water beginning to run down the hill in the background. Athena looks at chart. She's mid-sentence. She turns to ask Archie for the first step. His perch on her shoulder is empty. She looks at it. Looks at the aqueduct direction. He's already a grey dot in the sky, flying fast toward the water. 16:9.",
+      "bg_colors": ["#B0C4DE", "#FFD700", "#87CEEB"],
+      "accent": "#E94560",
+      "camera": "push_in",
+      "duration_sec": 9,
+      "higgsfield_prompt": "Cute kids cartoon style, smart girl at chalkboard mid-lesson with four-step protocol chart, water sound and water beginning to run down hill in background, girl mid-sentence turning to ask owl on her shoulder but shoulder perch is empty, looking at empty perch then at aqueduct direction, owl already a small grey dot flying fast toward the water, 16:9"
+    },
+    {
+      "scene_number": 5,
+      "type": "solution",
+      "title": "What Archie Does",
+      "narration": "Archie reached the cracked aqueduct in four seconds. He found the crack — one specific weak point where the water pressure was building. He landed on the edge, spread his wings, and called out twice. Loud, clear, pointed directly at the maintenance workers in the valley below. They looked up. He angled his wing toward the emergency shutoff valve forty meters away. They ran. The valve closed. The crack stopped spreading. The scroll library: dry. Archie flew back to class. He sat on Athena's shoulder. He blinked.",
+      "visual_prompt": "Little Olympus kids cartoon style. ARCHIE SEQUENCE — Archie at the aqueduct crack, landing on the edge and spreading wings, calling out with two sharp cries aimed at maintenance workers in the valley. He angled his wing — a precise gesture — toward an emergency shutoff valve. Workers running. Valve closing. Water stopping. The crack goes still. Then: Archie back on Athena's shoulder, perfectly calm, one slow blink. The students stare at him. Athena stares at him. The scroll library is visible in the background, completely dry. 16:9.",
+      "bg_colors": ["#87CEEB", "#FFD700", "#B0C4DE"],
+      "accent": "#FFD700",
+      "camera": "pull_back",
+      "duration_sec": 9,
+      "higgsfield_prompt": "Cute kids cartoon style, small grey owl at aqueduct crack spreading wings and calling out twice at maintenance workers in valley below, precisely angling wing toward emergency shutoff valve like a conductor, workers running to valve, valve closing, water stopping, crack going still, then owl back on shoulder of smart girl with one slow calm blink, students staring, scroll library completely dry in background, 16:9"
+    },
+    {
+      "scene_number": 6,
+      "type": "resolution",
+      "title": "Athena Updates the Curriculum",
+      "narration": "Athena looked at her four-step protocol chart. She looked at how long Archie's response had taken: eleven seconds. Her four-step protocol, executed perfectly, would have taken forty-five seconds. The scroll library would have been wet. She rolled up the protocol chart. She opened her training manual. She crossed out the title. She wrote a new one. Archie watched her write. She showed it to him. It said: ARCHIE TEACHES. He tilted his head.",
+      "visual_prompt": "Little Olympus kids cartoon style. CHARACTER RESOLUTION — Athena at the chalkboard with the four-step protocol chart and Archie's actual response time written next to it: 11 seconds vs 45 seconds. She looks at this for a long moment. Then she rolls up the protocol chart. Opens the training manual. Crosses out the title in pen. Writes a new title. Holds it up for Archie to see: ARCHIE TEACHES. He tilts his head. The others lean in to read it. Zeus writes something in his notes. 16:9.",
+      "bg_colors": ["#FFD700", "#B0C4DE", "#FFFFFF"],
+      "accent": "#7B68EE",
+      "camera": "push_in",
+      "duration_sec": 9,
+      "higgsfield_prompt": "Cute kids cartoon style, smart girl at chalkboard showing two response times side by side — 11 seconds vs 45 seconds, looking at comparison then rolling up protocol chart and opening training manual, crossing out title and writing new one, holding up manual reading ARCHIE TEACHES for owl to see, owl tilting head, other kids leaning in, curly-haired boy writing in notes, 16:9"
+    },
+    {
+      "scene_number": 7,
+      "type": "lesson_and_cta",
+      "title": "What Did We Learn?",
+      "narration": "And here's what Athena learned from Owl School. Training teaches you what to do. Experience teaches you what matters. Archie had three years of watching Athena — watching how she thought, what she valued, what she protected. That was his training. It just didn't come from a manual. The best advisor isn't always the one who follows every step. Sometimes it's the one who already knows which step to skip. See you next time on Little Olympus!",
+      "visual_prompt": "Little Olympus kids cartoon style. Final card — Athena and Archie together on the steps of the library, the scroll library visible and dry behind them. The training manual now says ARCHIE TEACHES on the cover. The other three students are visible: Zeus has Archie's curriculum notes in a new scroll. Hercules has a feather (from attempting to fly) tucked in his lion cape. Perseus is still holding his apple. Archie on Athena's shoulder. Golden afternoon. She scratches under his chin. He permits this, briefly. 16:9.",
+      "bg_colors": ["#1A1060", "#FFD700", "#B0C4DE"],
+      "accent": "#FFD700",
+      "camera": "pull_back",
+      "duration_sec": 9,
+      "higgsfield_prompt": "Cute kids cartoon style, smart girl and small owl together on library steps with scroll library dry and intact behind them, training manual visible with ARCHIE TEACHES on cover, other kids visible — curly-haired boy with new scroll notes, chubby toddler with feather tucked in lion cape from flight attempt, dark-haired boy still holding apple, girl scratching under owl's chin and owl briefly permitting it, golden afternoon, 16:9"
+    }
+  ],
+  "music": {
+    "style": "upbeat_kids_adventure",
+    "notes": "Scene 1: thoughtful and curious — Athena's research music, slightly mystery-tinged. Scene 2: comedy reveal of uninvited students. Scene 3: classroom music, warm and structured. Scene 4: the CRACK sound cuts everything — silence for one beat, then fast. Scene 5: Archie's sequence needs almost no music — the wing gesture is the sound design. Scene 6: quiet and warm, a lesson being re-learned. Scene 7: full warm ending."
+  },
+  "voice_style": {
+    "tone": "warm_playful_encouraging",
+    "pacing": "Scene 3 — 'Archie — what do you observe?' pause, beat, then the inkwell reveal. Scene 4 — 'She said: Step One: assess the—' cut off by the crack sound. No completion. Scene 5 — the whole sequence is best told quickly and cleanly. Scene 6 — slow down for the manual title change. Let the audience read it.",
+    "character": "A narrator who thinks Archie is quietly the most competent person on Olympus and has been trying to figure out how to say this for seven episodes"
+  },
+  "lesson": "The best kind of knowledge isn't always from a book. Sometimes experience and attention are better teachers than any protocol.",
+  "archie_canon_note": "Archie has NEVER been formally trained. This is now official canon. His instinct is three years of watching Athena — he learned from her. He teaches the class from EP008 onward (referenced in future episodes as background fact).",
+  "bible_reference": "Little_Olympus_Master_Bible.md — Archie: camera looks, meaningful stares, slow blinks, always right. Athena: solution-oriented, three chin taps = serious, loves her owl. Hercules: attempts everything. Zeus: enrolls himself in things. Perseus: ends up in things without meaning to.",
+  "youtube_title": "Archie Has NEVER Been Trained?! 🦉 | Little Olympus Episode 8",
+  "youtube_description": "Athena has been relying on Archie's advice for THREE YEARS.\n\nToday she found out he's never been trained a single day in his life.\n\nHe's been doing ALL OF IT on pure instinct.\n\nSo naturally... she opened an Owl School.\n\nIn today's adventure:\n🦉 Owl School begins (uninvited guests included)\n👀 Lesson One: Observation (Archie notices something Athena missed)\n💧 A cracked aqueduct — Athena's protocol says 45 seconds. Archie fixes it in 11.\n📚 Athena rewrites the training manual\n\n📺 Watch ALL our adventures: [playlist link]\n🔔 SUBSCRIBE for new episodes every week!\n\n#LittleOlympus #Archie #Athena #KidsCartoon #GreekMythology #KidsYouTube",
+  "next_episode_preview": "Episode 9 — Hades Visits! He's not bad. He's just... very underground. He's never seen sunlight. He has THOUGHTS about sunlight.",
+  "higgsfield_style_notes": "Archie must feel like the most competent character in the episode without a single word. His wing-gesture in scene 5 should be the sharpest, most intentional movement in any LO episode — not cute bird flapping, a precise directional gesture. The 11 vs 45 seconds comparison in scene 6 should be visually clear — big numbers, side by side. The training manual cover transformation is worth a close-up."
+}

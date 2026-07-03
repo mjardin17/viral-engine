@@ -1,0 +1,327 @@
+{
+  "channel": "GG",
+  "episode_number": 20,
+  "episode_id": "GG_EP020",
+  "title": "Vienna 1683: The Winged Hussars and the Day Europe Was Saved",
+  "subtitle": "September 12, 1683 \u2014 The Largest Cavalry Charge in History",
+  "tagline": "The Ottoman Empire had besieged Vienna for 60 days. Then 18,000 Polish winged hussars came down a hill at full charge. It took three hours to save Europe.",
+  "duration_target_sec": 1120,
+  "viral_hook": "The Ottomans besieged Vienna with 150,000 troops. King Sobieski arrived with 80,000 allies and launched the largest cavalry charge in history. Took 3 hours.",
+  "youtube_title": "Siege of Vienna 1683: The Winged Hussars vs. the Ottoman Empire",
+  "lesson": "The relieving force that arrives at exactly the right moment changes history. Timing and courage together create the decisive instant.",
+  "highlight_scene": 12,
+  "scenes": [
+    {
+      "scene_number": 1,
+      "type": "cold_open",
+      "title": "The City That Must Not Fall",
+      "duration_sec": 47,
+      "narration": "July 14, 1683. A hundred and fifty thousand Ottoman soldiers surround Vienna. Inside the walls: fifteen thousand defenders, sixty thousand civilians, and the knowledge that if Vienna falls, the Ottoman Empire will have an open road into central Europe. The siege has been going on for two months. The tunnelers are under the walls. The ammunition is running low. The Holy Roman Emperor Leopold I has fled \u2014 abandoning his capital to save himself. The citizens are eating cats and rats. And on a ridge overlooking the Danube valley, sixty-five miles away, a Polish king named Jan III Sobieski is marching to their rescue with the largest multinational relief army ever assembled in Christian Europe. He has to get there before the walls fall.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Vienna under siege in 1683 \u2014 the Ottoman camp surrounding the city, the vast circle of tents and artillery. Inside the walls: the gaunt defenders, the tunnelers threatening to blow the walls. Leopold I fleeing in his carriage. Then, on a ridge in the distance: the glittering banners of the approaching relief army. The race against time. 16:9.",
+      "bg_colors": [
+        "#8B4500",
+        "#C9A227",
+        "#1A1A2E"
+      ]
+    },
+    {
+      "scene_number": 2,
+      "type": "context",
+      "title": "The Ottoman Empire at Its Height",
+      "duration_sec": 46,
+      "narration": "The Ottoman Empire in 1683 was the most powerful state in the Mediterranean world. It had been expanding for over three centuries \u2014 from a small Anatolian principality to a state controlling Anatolia, the Middle East, Egypt, North Africa, the Balkans, and southeastern Europe as far as Hungary. Constantinople had been the Ottoman capital since 1453. The empire's military \u2014 the Janissaries, the Sipahis, the artillery corps \u2014 was sophisticated, experienced, and formidably equipped. The Ottoman siege train was among the best in the world. Vienna had been besieged by the Ottomans once before, in 1529, and had held by the skin of its teeth. Kara Mustafa Pasha, the Grand Vizier who commanded the 1683 campaign, intended to do what had failed fifty-four years before.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The Ottoman Empire at its 1683 height \u2014 a map showing its vast territory from Morocco to the Persian Gulf to Hungary. The Ottoman military machine: Janissaries, Sipahi cavalry, massive artillery. Kara Mustafa Pasha planning the Vienna campaign. The power of an empire that had been winning for three hundred years. 16:9.",
+      "bg_colors": [
+        "#8B4500",
+        "#C9A227",
+        "#1A1A2E"
+      ]
+    },
+    {
+      "scene_number": 3,
+      "type": "character_intro",
+      "title": "Kara Mustafa Pasha \u2014 The Grand Vizier",
+      "duration_sec": 45,
+      "narration": "Kara Mustafa Pasha was the Grand Vizier of the Ottoman Empire \u2014 effectively its prime minister and commander-in-chief. He was ambitious, politically powerful, and convinced that Vienna was his to take. His strategy at Vienna was the classic Ottoman siege methodology: dig approach trenches, blow the walls with mines, and wait for the garrison to exhaust itself. He had a hundred and fifty thousand men and the finest siege engineers in the world. His one significant error was strategic: he chose to besiege Vienna rather than bypass it and march deeper into Europe. His Sultan had told him to take or besiege Vienna. Kara Mustafa chose siege \u2014 and the weeks that consumed gave the relief army time to assemble.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Kara Mustafa Pasha \u2014 powerful, authoritative, supremely confident in his siege. His vast camp around Vienna: the orderly rows of tents, the artillery batteries, the approach trenches moving toward the walls. A man who has never failed, doing what he knows best. And in the background, the weeks passing. 16:9.",
+      "bg_colors": [
+        "#8B4500",
+        "#1A1A2E",
+        "#C9A227"
+      ]
+    },
+    {
+      "scene_number": 4,
+      "type": "character_intro",
+      "title": "Jan III Sobieski \u2014 The King Who Came",
+      "duration_sec": 46,
+      "narration": "Jan III Sobieski was King of Poland and Grand Duke of Lithuania \u2014 elected king of one of the largest states in Europe. He was fifty-three years old in 1683, and the finest cavalry commander of his generation. He had spent his career fighting the Ottomans on Poland's southeastern frontier, and he understood their tactics completely. He had fought and won against superior Ottoman forces before. When the Holy Roman Emperor Leopold I asked for help, Sobieski committed the largest Polish army ever sent abroad \u2014 and personally commanded it. He marched his hussars over the Carpathian Mountains \u2014 a logistical feat that military historians still study \u2014 and arrived outside Vienna on September 11, 1683.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Jan Sobieski \u2014 large, confident, a man shaped by decades of war against the Ottomans. His arrival on the Kahlenberg ridge above Vienna: looking down at the Ottoman camp and the besieged city. His army assembling on the ridge: Poles, Germans, Austrians, the glittering wings of the husaria visible. The relief army ready. 16:9.",
+      "bg_colors": [
+        "#1A1A2E",
+        "#C9A227",
+        "#4A3728"
+      ]
+    },
+    {
+      "scene_number": 5,
+      "type": "historical",
+      "title": "The Winged Hussars",
+      "duration_sec": 47,
+      "narration": "The Polish winged hussars \u2014 husaria \u2014 were the most elite cavalry unit in seventeenth-century Europe. They wore curved wing frames on their backs supporting long eagle feathers that created an eerie rushing sound as they charged. They carried twelve-foot lances, heavy armor, sabers, pistols, and war hammers. A single squadron of hussars could charge through almost any infantry formation of the period. An army of them was terrifying beyond description. They had never been broken in a frontal charge in two hundred years of combat. Kara Mustafa had between five thousand and eight thousand cavalry in reserve \u2014 almost none of them husaria-equivalent. Sobieski had eighteen thousand.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The Polish winged hussars in their full glory \u2014 the distinctive wings catching the wind, making their eerie rushing sound. Close-up of the armor, the lance, the feathers. The horses: enormous, bred for this kind of charge. Then the formation: eighteen thousand of these warriors on the Kahlenberg ridge. The most terrifying cavalry force in Europe. 16:9.",
+      "bg_colors": [
+        "#C9A227",
+        "#1A1A2E",
+        "#4A3728"
+      ]
+    },
+    {
+      "scene_number": 6,
+      "type": "historical",
+      "title": "The Relief Army Assembles",
+      "duration_sec": 46,
+      "narration": "The force that assembled on the Kahlenberg ridge above Vienna on September 11-12, 1683 was a genuinely multinational Christian alliance \u2014 Poles, Holy Roman Empire troops from Austria, Bavaria, and Saxony, and smaller contingents from other German states. Total strength: approximately sixty-five to eighty thousand men. It was the largest relief force assembled in medieval and early modern European history. Sobieski took command of the entire force by general agreement \u2014 he was the most experienced and the most respected commander present. He planned to attack in three columns, with the Poles and the winged hussars on the right flank, which would strike the Ottoman camp's most vulnerable point.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The multinational relief army on the Kahlenberg ridge \u2014 Polish, German, Austrian banners side by side. Sobieski commanding the war council. The plan laid out: three columns descending the hills toward the Ottoman camp. The Polish hussars on the right, positioned to deliver the decisive blow. 16:9.",
+      "bg_colors": [
+        "#1A1A2E",
+        "#C9A227",
+        "#8B4500"
+      ]
+    },
+    {
+      "scene_number": 7,
+      "type": "historical",
+      "title": "The Morning of September 12",
+      "duration_sec": 47,
+      "narration": "Before the battle, Sobieski attended Mass in a chapel on the Kahlenberg. He was famously devout \u2014 he wrote to his wife that he was going into battle certain of God's support. His personal priest Marco d'Aviano, a Capuchin friar who had helped organize the Christian alliance, gave the blessing. At the Mass, every commander of the relief army knelt. They then descended the hills toward the largest Ottoman army in Europe. Kara Mustafa had been warned the relief force was coming. He had detached forces to hold the hills. They were insufficient. The Christian columns pushed through them during the morning fighting \u2014 a costly, hard-won descent through broken terrain under fire.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Dawn of September 12: Sobieski at Mass on the Kahlenberg, his commanders kneeling. Father Marco d'Aviano's blessing. Then the descent begins: the relief army moving down the hills toward the Ottoman camp, fighting through the detachments in the forest and broken ground. The morning battle, costly and slow. 16:9.",
+      "bg_colors": [
+        "#C9A227",
+        "#1A1A2E",
+        "#4A3728"
+      ]
+    },
+    {
+      "scene_number": 8,
+      "type": "battle",
+      "title": "The Charge",
+      "duration_sec": 48,
+      "narration": "At approximately 5 PM on September 12, 1683, the moment came. The Austrian and German columns had reached the plain. The Ottoman army \u2014 which had been partly distracted by a major explosion in the Vienna walls and the desperate fighting of the garrison \u2014 was facing attacks on multiple fronts. Sobieski ordered the general charge. Eighteen thousand winged hussars led by Sobieski himself descended the hill at full gallop. It was the largest cavalry charge in recorded history. The Ottoman camp could not stop it. The hussars smashed through the Ottoman defensive lines, drove into the camp, and shattered the Ottoman army's cohesion in under three hours. Kara Mustafa fled.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The charge \u2014 eighteen thousand winged hussars descending at full gallop. The ground shaking. The wings making their eerie rushing sound. The Ottoman defensive lines hit. Husaria lances going through the formations. The camp penetrated. In three hours, the Ottoman siege is broken. Kara Mustafa's tent abandoned, his green standard left behind. 16:9.",
+      "bg_colors": [
+        "#C9A227",
+        "#8B1A1A",
+        "#1A1A2E"
+      ]
+    },
+    {
+      "scene_number": 9,
+      "type": "aftermath",
+      "title": "The Ottoman Rout",
+      "duration_sec": 46,
+      "narration": "The Ottoman retreat became a rout. The vast camp \u2014 with its treasures, its baggage, its administrative records, its artillery \u2014 was abandoned. Sobieski's men found the camp fully stocked: food, wine, gold, jewels, exotic animals, two thousand camels, tens of thousands of tents. The abandoned camp was so rich that Christian soldiers spent days plundering it. Among the booty: bags of roasted beans that the Polish soldiers initially didn't know what to do with. They eventually learned to brew them. Vienna's coffeehouses \u2014 which claim direct descent from the captured Ottoman supplies \u2014 began serving coffee. The beverage that runs the modern world may owe its European introduction to the Battle of Vienna.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The abandoned Ottoman camp: the vast wealth left behind. Tents, artillery, camels, gold. The bags of roasted coffee beans. Vienna's first coffeehouse opening with the captured supplies. The extraordinary postscript: the drink that changed European culture arriving as war booty from the Siege of Vienna. 16:9.",
+      "bg_colors": [
+        "#8B4500",
+        "#C9A227",
+        "#1A3E2E"
+      ]
+    },
+    {
+      "scene_number": 10,
+      "type": "historical",
+      "title": "Kara Mustafa's End",
+      "duration_sec": 45,
+      "narration": "Kara Mustafa Pasha fled to Belgrade. He was followed by a message from Sultan Mehmed IV: the silken cord. On December 25, 1683 \u2014 Christmas Day \u2014 Ottoman officials strangled Kara Mustafa in Belgrade. They cut off his head and brought it back to Constantinople in a velvet bag, as required by protocol. His failure at Vienna cost him not just his command but his life, as Ottoman custom demanded from commanders who failed the empire. The man who had come within days of taking Vienna died on the same day, three months later, that Christians celebrated the birth of Christ. History rarely lacks for irony.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Kara Mustafa in Belgrade, knowing what is coming. The Ottoman officials arriving with the silken cord on Christmas Day. His execution. His head in the velvet bag being carried back to Constantinople. The price of failure in the Ottoman Empire. The irony of the date. 16:9.",
+      "bg_colors": [
+        "#8B1A1A",
+        "#1A1A2E",
+        "#C9A227"
+      ]
+    },
+    {
+      "scene_number": 11,
+      "type": "historical",
+      "title": "The Great Turkish War",
+      "duration_sec": 46,
+      "narration": "The Battle of Vienna on September 12, 1683 is generally considered the high-water mark of Ottoman expansion in Europe. After the defeat, the Holy Roman Empire went on the offensive. The Great Turkish War \u2014 also called the War of the Holy League \u2014 lasted until 1699 and ended with the Treaty of Karlowitz, in which the Ottoman Empire ceded Hungary, Transylvania, Podolia, and other territories to the Christian powers. It was the first major territorial retreat of Ottoman power in Europe. After Vienna, the empire that had been advancing for three hundred years began, slowly, to pull back. The process that would eventually produce the 'sick man of Europe' of the nineteenth century began at the foot of the Kahlenberg ridge.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The Great Turkish War after Vienna: the Holy League advancing, the Ottoman Empire retreating. The Treaty of Karlowitz visualized: territory changing hands. A map of the Ottoman retreat across decades. The three-hundred-year expansion ending on September 12, 1683, and the long decline beginning. 16:9.",
+      "bg_colors": [
+        "#C9A227",
+        "#1A1A2E",
+        "#4A3728"
+      ]
+    },
+    {
+      "scene_number": 12,
+      "type": "dramatic",
+      "title": "Sobieski's Letter",
+      "duration_sec": 47,
+      "narration": "On the evening of September 12, Sobieski wrote to his wife Maria Kazimiera from inside the captured Ottoman tent of the Grand Vizier. The letter is one of the most extraordinary documents in the history of war. He wrote: 'I arrived, I saw, God conquered.' He adapted Caesar's famous line, substituting God for himself. He described the Ottoman camp \u2014 the riches, the tents, the baths, the peacocks. He wrote that he had saved Vienna, the Empire, and perhaps Christendom. He was probably right on the first two and may have been right about the third. It was the greatest victory of his life, written in the tent of the enemy he had destroyed, to the woman he loved most.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Sobieski writing to his wife Maria Kazimiera from inside Kara Mustafa's captured tent \u2014 the opulent interior, the abandoned treasures. His famous letter: 'I arrived, I saw, God conquered.' His expression: exhausted, triumphant, moved. The greatest soldier of his age, writing to his wife by candlelight inside the enemy's tent. 16:9.",
+      "bg_colors": [
+        "#C9A227",
+        "#1A1A2E",
+        "#8B4500"
+      ]
+    },
+    {
+      "scene_number": 13,
+      "type": "analysis",
+      "title": "Why Vienna Held",
+      "duration_sec": 46,
+      "narration": "Vienna held for sixty days against an Ottoman army that had taken almost every city it had besieged in three centuries. Why? The garrison was skilled \u2014 Count Ernst R\u00fcdiger von Starhemberg, the military governor, ran a disciplined defense, making every counterattack count. The walls held despite the mining; the defenders counter-mined. Kara Mustafa chose siege over assault, which gave the relief army time to assemble. And the relief army came \u2014 which was not guaranteed. Several German princes hesitated. The Pope, Innocent XI, had to spend enormous political capital and money to assemble the coalition. If any one of those factors had been different \u2014 if Starhemberg had been less capable, if the mining had worked faster, if a German elector had refused \u2014 the result could have been different.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The multiple factors that saved Vienna: Starhemberg's defense, the counter-mining, Kara Mustafa's choice to besiege rather than assault, the Pope's coalition-building. Each factor as a link in the chain. The realization that the result was not inevitable: it required every link to hold. 16:9.",
+      "bg_colors": [
+        "#1A1A2E",
+        "#C9A227",
+        "#4A3728"
+      ]
+    },
+    {
+      "scene_number": 14,
+      "type": "historical",
+      "title": "Leopold I's Return",
+      "duration_sec": 45,
+      "narration": "Holy Roman Emperor Leopold I, who had fled Vienna at the beginning of the siege, returned after the battle. His meeting with Sobieski was famously awkward. Imperial protocol required that a Holy Roman Emperor be received with maximum deference \u2014 but Sobieski had just saved the emperor's capital while Leopold had fled it. Leopold tried to enforce protocol. Sobieski's son Jakob kissed Leopold's hand; Leopold did not dismount. Sobieski was insulted. The political relationship between the man who had won and the man he had saved was difficult for the rest of their lives. Victory does not always produce gratitude. Sobieski returned to Poland celebrated as the savior of Christendom and died in 1696, his own kingdom in political disorder.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The awkward meeting: Sobieski and Leopold I after the battle. Leopold's protocol games \u2014 the emperor who fled trying to assert dignity over the king who fought. Sobieski's visible contempt. The tension between the man who saved Europe and the man Europe assumed would lead it. 16:9.",
+      "bg_colors": [
+        "#1A1A2E",
+        "#C9A227",
+        "#4A3728"
+      ]
+    },
+    {
+      "scene_number": 15,
+      "type": "legacy",
+      "title": "Coffee and the Croissant",
+      "duration_sec": 46,
+      "narration": "Two objects of everyday European life may trace their origin to the Siege of Vienna. Coffee, which was already known in Europe, was dramatically popularized after the siege \u2014 the captured Ottoman supplies contained vast quantities of roasted beans, and the coffee-houses that opened in Vienna and across Europe in the following years used this new supply. The croissant \u2014 the crescent-shaped pastry \u2014 is claimed by Vienna as a commemorative creation, the croissant shape mocking the Ottoman crescent moon symbol. Food historians debate this. What is true is that both coffee culture and the croissant became central to European morning life, and both are connected, in legend if not always in strict history, to the morning of September 12, 1683.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Vienna's first coffeehouse opening after the battle. The croissant's origin story: bakers in Vienna making pastries in the shape of the Ottoman crescent. The morning coffee and croissant that became European civilization's morning ritual. Two objects connecting every European morning to a September battle in 1683. 16:9.",
+      "bg_colors": [
+        "#C9A227",
+        "#8B4500",
+        "#1A1A2E"
+      ]
+    },
+    {
+      "scene_number": 16,
+      "type": "historical",
+      "title": "The Ottoman Decline",
+      "duration_sec": 46,
+      "narration": "The Ottoman Empire did not collapse immediately after Vienna. It remained a major power for over two more centuries \u2014 fighting Russia, fighting Austria, fighting Napoleon, fighting the Balkans. But after 1683, the trajectory changed. The empire that had been expanding became an empire that was defending. Territory that had been Ottoman for generations was reconquered by Austria and Russia. The empire's military technology, which had been equal to or ahead of Europe's, began to fall behind as European militaries adopted new weapons and tactics that the Ottomans were slow to match. By the nineteenth century, the empire was called the sick man of Europe. It finally dissolved in 1922 after the First World War.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The Ottoman trajectory after 1683: the expansion stopping, the slow retreat beginning. A time-lapse map showing Ottoman territory shrinking over two centuries. The empire losing ground in the Balkans, to Russia, to Austria. The 'sick man of Europe' in the nineteenth century. The final dissolution in 1922. 16:9.",
+      "bg_colors": [
+        "#8B4500",
+        "#C9A227",
+        "#1A1A2E"
+      ]
+    },
+    {
+      "scene_number": 17,
+      "type": "modern_connection",
+      "title": "Vienna's Place in History",
+      "duration_sec": 45,
+      "narration": "Vienna's resistance in 1683 is celebrated in Poland as one of the greatest moments in Polish military history, and Sobieski as one of Poland's greatest heroes. In Austria, September 12 has been marked for centuries as a day of commemoration. Pope John Paul II \u2014 himself Polish \u2014 visited Vienna in 1983 for the three-hundredth anniversary of the battle and used it as a meditation on European Christian identity. The battle has become, in the twentieth and twenty-first centuries, a touchstone for political debates about the relationship between Europe and the Islamic world \u2014 a context its participants would not have recognized, and which the historical complexity does not fully support.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Vienna 1983: Pope John Paul II at the three-hundredth anniversary celebration. The Polish national pride in Sobieski. The Austrian commemorations. The battle being invoked in twenty-first century political debates. The complex modern life of a seventeenth-century battle. 16:9.",
+      "bg_colors": [
+        "#C9A227",
+        "#1A1A2E",
+        "#4A3728"
+      ]
+    },
+    {
+      "scene_number": 18,
+      "type": "historical",
+      "title": "The Wings and Their Sound",
+      "duration_sec": 44,
+      "narration": "The wings of the Polish husaria \u2014 the frames bearing eagle and ostrich feathers \u2014 are one of the most distinctive military adornments in history. Their exact purpose is debated: the sound they made in a charge may have frightened horses and unnerved infantry; they may have made it harder to lasso the rider from horseback; they may have been purely ceremonial and psychological. What is certain is that the hussars in full charge \u2014 the wings roaring, the lances lowered, thousands of armored horsemen at full gallop \u2014 was one of the most terrifying sights in seventeenth-century warfare. When they came down the Kahlenberg on September 12, the Ottoman defenders had never seen anything like it.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Close-up of the husaria wings catching the wind: the eagle feathers, the rushing sound. The psychological impact visualized: Ottoman soldiers seeing this charge coming toward them for the first time. The combination of visual spectacle and sound. The wings as a weapon of terror as much as beauty. 16:9.",
+      "bg_colors": [
+        "#C9A227",
+        "#1A1A2E",
+        "#4A3728"
+      ]
+    },
+    {
+      "scene_number": 19,
+      "type": "legacy",
+      "title": "Sobieski's Legacy",
+      "duration_sec": 45,
+      "narration": "Jan Sobieski returned to Poland a hero but spent his final years dealing with political enemies, military setbacks in the east, and a kingdom that was already showing the political dysfunction that would lead to its partition a century later. He died in 1696 at sixty-six. His kingdom was partitioned between Russia, Prussia, and Austria in 1772, 1793, and 1795 \u2014 erased from the map of Europe for over a century. The man who saved Europe from one empire could not save his own country from three. But Poland remembered him. His tomb is in Wawel Cathedral in Krak\u00f3w \u2014 the burial place of Polish kings \u2014 and his name is still invoked when Poland claims its place in European civilization.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Sobieski's later years: the political difficulties, the ingratitude of those he saved. His death in 1696. Then the tragedy: Poland partitioned and erased from the map within a century. But his memory persisting: his tomb at Wawel Cathedral, his face on Polish currency, his name in Polish consciousness. 16:9.",
+      "bg_colors": [
+        "#1A1A2E",
+        "#C9A227",
+        "#4A3728"
+      ]
+    },
+    {
+      "scene_number": 20,
+      "type": "analysis",
+      "title": "What If Vienna Had Fallen?",
+      "duration_sec": 46,
+      "narration": "If Vienna had fallen in 1683, the consequences for European history would have been dramatic but not necessarily catastrophic in the long term. The Ottomans had taken Belgrade multiple times and always been pushed back. Vienna's fall would have been a massive psychological and political blow to the Holy Roman Empire, would likely have accelerated the Ottoman advance into Austria and possibly Bavaria. But European military technology was catching up with the Ottomans even in 1683. The long-term balance of power would probably have reasserted itself. What would have been lost was the specific shape of the following century \u2014 Vienna as the cultural center of European music, the specific Habsburg political order, the Austrian identity that shaped central Europe.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The counterfactual: Vienna fallen. The Ottoman crescent flying from the cathedral spires. The Holy Roman Emperor in permanent exile. Then: the probability of eventual recovery, the resilience of European military power. The specific things that would have been lost: the Vienna of Mozart, Beethoven, Freud. 16:9.",
+      "bg_colors": [
+        "#1A1A2E",
+        "#C9A227",
+        "#8B4500"
+      ]
+    },
+    {
+      "scene_number": 21,
+      "type": "analysis",
+      "title": "The Coalition That Won",
+      "duration_sec": 45,
+      "narration": "The victory at Vienna was only possible because of an unprecedented coalition: Poland and the Holy Roman Empire, traditional rivals, united under Ottoman pressure. Pope Innocent XI spent his personal fortune and his diplomatic capital to hold the alliance together. German princes who had everything to gain from letting Austria weaken agreed to come anyway. Sobieski marched an army over mountains in autumn for a country that was not his. The lesson of Vienna is not just the military genius of the charge \u2014 it is the political genius of the alliance that made the charge possible. Coalitions don't form by themselves. They require someone to hold them together.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The coalition visualized: the Pope's diplomacy, the German princes arriving, Sobieski's decision to march. The political work that made the military work possible. Pope Innocent XI as the hidden architect of the victory. The lesson that alliances are won before battles are fought. 16:9.",
+      "bg_colors": [
+        "#C9A227",
+        "#1A1A2E",
+        "#4A3728"
+      ]
+    },
+    {
+      "scene_number": 22,
+      "type": "historical",
+      "title": "The Turkish Gate",
+      "duration_sec": 44,
+      "narration": "The Vienna State Opera, the Kunsthistorisches Museum, the Belvedere Palace \u2014 the Vienna that is today one of the world's great cultural cities \u2014 was built in the century after the siege, partly as a deliberate statement of confidence and civilization by the Habsburg rulers who had survived. The Vienna coffeehouse culture that gave the world Freud's psychoanalysis, Klimt's art, Wittgenstein's philosophy, and Mahler's music grew in establishments that claimed descent from the captured Ottoman coffee supplies. The city the Ottomans failed to take became one of the most remarkable cities of the next three centuries \u2014 as if the near-miss of destruction had given Vienna something to prove.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Vienna after the siege: the baroque palaces rising, the Belvedere, the Kunsthistorisches Museum. The coffeehouses producing Freud, Klimt, Mahler, Wittgenstein. The extraordinary culture that grew from the city that survived. Vienna proving what it could be by becoming more than anyone expected. 16:9.",
+      "bg_colors": [
+        "#C9A227",
+        "#8B4500",
+        "#1A1A2E"
+      ]
+    },
+    {
+      "scene_number": 23,
+      "type": "summary",
+      "title": "Three Hours That Changed Europe",
+      "duration_sec": 46,
+      "narration": "On September 12, 1683, eighteen thousand Polish winged hussars descended a ridge above Vienna at full gallop and hit the largest Ottoman army to reach central Europe. Three hours later, the Ottoman camp was captured, Kara Mustafa was in flight, and the expansion that had been moving westward for three hundred years had stopped. Vienna survived. The coffeehouse culture that followed invented psychoanalysis and modernism. The Ottoman Empire began its long retreat. Europe's political map, which might have looked like the Middle East, remained the Europe we recognize. The winged hussars charged for three hours. It was enough.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The charge of September 12 recalled: the hussars coming down the hill, the wings in the wind, the Ottoman camp breaking. Then the long consequence: Vienna standing, the coffeehouses opening, the Ottoman retreat, Europe saved. The three hours and their three-century shadow. 16:9.",
+      "bg_colors": [
+        "#C9A227",
+        "#1A1A2E",
+        "#4A3728"
+      ]
+    },
+    {
+      "scene_number": 24,
+      "type": "outro_cta",
+      "title": "The Wings That Changed the World",
+      "duration_sec": 44,
+      "narration": "Subscribe to Gods and Glory \u2014 the battles that actually built the world you live in. Next episode: Battle of Midway \u2014 the four minutes that turned the tide of the Pacific War and ended Japan's carrier supremacy forever.",
+      "visual_prompt": "Gods & Glory cinematic documentary. A final image: the winged hussars on the Kahlenberg ridge, the dawn light, Vienna in the valley below. The charge about to begin. History in the moment before it happens. Channel logo. Subscribe prompt. 16:9.",
+      "bg_colors": [
+        "#C9A227",
+        "#1A1A2E",
+        "#4A3728"
+      ]
+    }
+  ]
+}

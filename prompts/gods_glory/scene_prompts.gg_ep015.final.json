@@ -1,0 +1,327 @@
+{
+  "channel": "GG",
+  "episode_number": 15,
+  "episode_id": "GG_EP015",
+  "title": "Marathon: The 26-Mile Run That Saved Western Civilization",
+  "subtitle": "490 BC \u2014 Ten Thousand Greeks Versus the Persian Empire",
+  "tagline": "The Persian Empire had never lost. Ten thousand Athenian soldiers had never won. One morning in September changed everything about the world that came after.",
+  "duration_target_sec": 1130,
+  "viral_hook": "10,000 Greeks. 25,000 Persians. The Greeks charged at a dead run. No army in history had done that before.",
+  "youtube_title": "Battle of Marathon 490 BC: The Day Greece Stopped Persia Forever",
+  "lesson": "Sometimes charging at the thing that terrifies you is the only strategy that works.",
+  "highlight_scene": 11,
+  "scenes": [
+    {
+      "scene_number": 1,
+      "type": "cold_open",
+      "title": "The Runner Who Never Was",
+      "duration_sec": 47,
+      "narration": "September 490 BC. A Greek soldier named Pheidippides \u2014 according to legend \u2014 runs twenty-six miles from the battlefield at Marathon to Athens to deliver one word: Nenikekamen. We have won. Then he collapses and dies. The story of Pheidippides may be legend. The story of what happened on the plain of Marathon is not. It is the story of the morning when a tiny city-state decided it would not kneel to the largest empire on earth, and paid for that decision by going to war with it. The Greeks won. The world that followed \u2014 democracy, philosophy, the Western tradition \u2014 came directly out of what happened on that plain.",
+      "visual_prompt": "Gods & Glory cinematic documentary. A Greek runner in ancient armor collapsing at the gates of Athens \u2014 the legendary Pheidippides. Behind him, smoke rising from the plain of Marathon in the distance. The streets of Athens waiting. The single word of victory. 16:9.",
+      "bg_colors": [
+        "#2C3E1A",
+        "#C9A227",
+        "#1A1A2E"
+      ]
+    },
+    {
+      "scene_number": 2,
+      "type": "context",
+      "title": "The Persian Empire",
+      "duration_sec": 46,
+      "narration": "The Persian Empire under Darius I was the largest empire the world had ever seen. It stretched from the Indus Valley in the east to the Aegean Sea in the west \u2014 from Egypt in the south to the Black Sea in the north. Under Darius and his predecessors Cyrus and Cambyses, it had absorbed nations, dissolved kingdoms, and absorbed cultures without destroying them. The Persians were tolerant conquerors who usually let subject peoples keep their customs and gods, as long as they paid tribute and provided soldiers. But in 499 BC, the Greek cities on the coast of what is now Turkey \u2014 the Ionian Greeks \u2014 rebelled against Persian rule. Athens sent ships to help them. The rebellion was crushed. Darius remembered Athens.",
+      "visual_prompt": "Gods & Glory cinematic documentary. A map of the Persian Empire at its height \u2014 an enormous territory covering most of the known world. Darius on his throne, the master of a continent. Then the Ionian coast, the rebellion, the Athenian ships. Darius's face: this insolence will be answered. 16:9.",
+      "bg_colors": [
+        "#8B4500",
+        "#C9A227",
+        "#1A1A2E"
+      ]
+    },
+    {
+      "scene_number": 3,
+      "type": "historical",
+      "title": "Darius's Demand",
+      "duration_sec": 45,
+      "narration": "Darius sent heralds to every Greek city-state demanding earth and water \u2014 the symbols of submission and vassalage. Most cities complied. The Persians were not a power you defied lightly. But Athens and Sparta refused. The Athenians threw Darius's heralds into a pit. The Spartans threw theirs into a well \u2014 and then apologized to the gods for the impiety of killing diplomats. Darius was enraged. In 490 BC he sent a fleet and army across the Aegean \u2014 not to destroy Greece, but to punish Athens and Eretria specifically, and install a compliant tyrant. The force was estimated at twenty-five thousand infantry and cavalry, carried in six hundred ships. It was not the full power of Persia. It was the back of Darius's hand.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Persian heralds arriving at Athens with the demand for earth and water. The Athenians' defiant response \u2014 the heralds thrown into a pit. A Persian fleet of six hundred ships crossing the Aegean. The scale of Persian power made visible against the small city of Athens. 16:9.",
+      "bg_colors": [
+        "#8B1A1A",
+        "#C9A227",
+        "#1A1A2E"
+      ]
+    },
+    {
+      "scene_number": 4,
+      "type": "character_intro",
+      "title": "Miltiades: The Man Who Had Fought the Persians",
+      "duration_sec": 46,
+      "narration": "Miltiades was the Athenian general who had, extraordinarily, once served the Persian Empire as a vassal ruler in Thrace. He had watched Persian tactics up close. He had seen their cavalry, their archers, and their infantry. He knew their formations. He knew their weaknesses. He fled Persian service when Darius's invasion threatened, returned to Athens, and became one of its ten elected generals. At Marathon, he would convince the other nine to attack rather than wait. Miltiades understood something that no one else in the Greek world seemed to grasp: the Persian army at Marathon was beatable. You just had to be fast enough to minimize their arrows and aggressive enough not to give them time to respond.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Miltiades \u2014 experienced, intense, a man who had lived inside the empire he now faced \u2014 studying the Persian camp on the plain of Marathon. His knowledge of Persian tactics visible in his eyes. The confidence of a man who understands his enemy. 16:9.",
+      "bg_colors": [
+        "#1A1A2E",
+        "#C9A227",
+        "#4A3728"
+      ]
+    },
+    {
+      "scene_number": 5,
+      "type": "historical",
+      "title": "The Plain of Marathon",
+      "duration_sec": 46,
+      "narration": "The Persians landed on the plain of Marathon \u2014 a coastal flatland about twenty-five miles from Athens. They had chosen it specifically because it was ideal terrain for cavalry, the arm of war that the Persians depended on. The Athenian army marched out to meet them and camped in the foothills at the edge of the plain, where their flanks were protected by hills and the cavalry couldn't deploy effectively. For several days, neither side attacked. The Athenians were waiting for Sparta \u2014 they had sent Pheidippides to run to Sparta to ask for help, a two-hundred-mile run he apparently completed in two days. The Spartans were observing a religious festival and could not march until it ended. Athens was on its own.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The plain of Marathon from above \u2014 the Persian camp on the beach, the Athenian camp in the foothills. The geography that shaped the battle: the marshes on one flank, the hills on the other. The days of standoff. The runner Pheidippides on his impossibly long run to Sparta. 16:9.",
+      "bg_colors": [
+        "#1A3E2E",
+        "#C9A227",
+        "#4A3728"
+      ]
+    },
+    {
+      "scene_number": 6,
+      "type": "historical",
+      "title": "The Decision to Attack",
+      "duration_sec": 47,
+      "narration": "Miltiades made the case for immediate attack. The ten Athenian generals were divided five to five. The polemarch \u2014 the war archon \u2014 Callimachus held the deciding vote. Miltiades' argument was simple: Athens could not sustain a prolonged standoff. The Persian fleet might sail around them to Athens while the army held them here. They had to attack now, when the terrain favored them. He won the vote. On the morning of September 12, 490 BC \u2014 the exact date is uncertain \u2014 Miltiades deployed the Athenian army in a long line that matched the Persian front. He deliberately weakened the center and strengthened both flanks. He was setting a trap that the Persians, with their standard formation, would walk directly into.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The Athenian council of war \u2014 ten generals around a fire at night, Miltiades making his case. The vote: five to five, the polemarch Callimachus deciding. Dawn coming up. Miltiades deploying his troops in the thin-center, strong-flanks formation. The trap being set. 16:9.",
+      "bg_colors": [
+        "#1A1A2E",
+        "#C9A227",
+        "#2C1A00"
+      ]
+    },
+    {
+      "scene_number": 7,
+      "type": "battle",
+      "title": "The Run Into Battle",
+      "duration_sec": 48,
+      "narration": "When the order came to advance, the Greek hoplites did something no one expected: they charged at a dead run. Eight hundred meters of open ground at a full sprint, in armor weighing sixty pounds. The Persians couldn't believe what they were seeing. Their archers had barely time to loose a volley before the Greeks were among them. The tactic worked for exactly the reason Miltiades intended: the shorter the time in the arrow zone, the fewer casualties before contact. The Greek phalanx hit the Persian line at full momentum. The shock was devastating. The center fought the Persians to a standstill. The flanks drove through.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The Greek hoplites charging at a dead run \u2014 bronze armor, long spears, shields bearing Athenian symbols. The run across the plain, the sprint through the arrow storm. The shock of impact with the Persian line. Persian archers barely drawing their bows before the Greeks are among them. 16:9.",
+      "bg_colors": [
+        "#8B1A1A",
+        "#C9A227",
+        "#4A3728"
+      ]
+    },
+    {
+      "scene_number": 8,
+      "type": "battle",
+      "title": "The Double Envelopment",
+      "duration_sec": 47,
+      "narration": "The Greek flanks broke through the Persians and then turned inward \u2014 a double envelopment, surrounding the stronger Persian center. The Persians who had been winning in the center found themselves fighting on three sides. Discipline collapsed. What had been an ordered Persian line became a rout toward the ships. The Athenians pursued them all the way to the beach, fighting for the ships \u2014 seven Persian ships were captured. It was over in roughly two to three hours. The largest empire on earth had been beaten by a city of thirty thousand citizens. Greek losses: one hundred ninety-two men. Persian losses: six thousand four hundred.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The Greek flanks closing inward, enveloping the Persian center from both sides. Persians fighting in three directions. Then the rout: Persian soldiers running for the ships, Athenian hoplites cutting them down on the beach. The scale of the victory: seven ships taken, six thousand Persians dead. 16:9.",
+      "bg_colors": [
+        "#8B1A1A",
+        "#8B4500",
+        "#C9A227"
+      ]
+    },
+    {
+      "scene_number": 9,
+      "type": "dramatic",
+      "title": "The Race Back to Athens",
+      "duration_sec": 46,
+      "narration": "After the battle, the Athenian army faced a problem. The Persian fleet \u2014 those six hundred ships \u2014 had not been destroyed. They were sailing around the tip of Attica toward Athens. They intended to arrive before the army could return, land troops, and take the now-undefended city. Miltiades force-marched his army twenty-five miles back to Athens \u2014 men who had just fought a battle in sixty pounds of armor in September heat. They arrived on the beach at Phaleron before the Persian fleet. The Persians saw the same army that had just beaten them, standing ready on the beach. They turned around and sailed home.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The Athenian army force-marching twenty-five miles back to Athens after the battle \u2014 exhausted soldiers in bloodied armor moving as fast as they could. Then: arriving at the beach at Phaleron to see the Persian fleet approaching. The fleet stopping. Turning. Sailing away. Victory complete. 16:9.",
+      "bg_colors": [
+        "#1A1A2E",
+        "#C9A227",
+        "#2C3E1A"
+      ]
+    },
+    {
+      "scene_number": 10,
+      "type": "aftermath",
+      "title": "The Fallen and the Monument",
+      "duration_sec": 45,
+      "narration": "The one hundred ninety-two Athenians who died at Marathon were buried on the battlefield in a burial mound \u2014 the Soros \u2014 that still stands today. They were considered heroes who had died in the service of all humanity. The mound was a place of pilgrimage for centuries. The Plataeans \u2014 the only other Greeks who had come to help, one thousand of them \u2014 were buried nearby. Callimachus the polemarch, who had cast the deciding vote and died in the battle, was commemorated at Delphi. Marathon became the most celebrated battle in Greek history \u2014 the proof that freedom could defeat empire.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The Soros burial mound on the plain of Marathon \u2014 a simple earthen monument where one hundred ninety-two Athenians were buried. The plain around it: now quiet, then filled with the dead. The monument that still stands 2,500 years later. 16:9.",
+      "bg_colors": [
+        "#4A3728",
+        "#8B8B6B",
+        "#1A1A2E"
+      ]
+    },
+    {
+      "scene_number": 11,
+      "type": "historical",
+      "title": "Persia's Return \u2014 and Thermopylae",
+      "duration_sec": 47,
+      "narration": "Darius died before he could take revenge. His son Xerxes took ten years to plan a response. In 480 BC, Xerxes invaded Greece with the full power of the Persian Empire \u2014 estimates range from one hundred fifty thousand to over two hundred thousand soldiers. This was not the back of the Persian hand. This was the fist. And yet the Greeks held them. The three hundred Spartans at Thermopylae bought time. The Athenian navy under Themistocles destroyed the Persian fleet at Salamis. The Persian army was beaten at Plataea in 479 BC. Marathon had been the opening move. But the Greeks only had the confidence to fight Xerxes because they had already beaten his father.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The Persian return under Xerxes \u2014 an army that fills the horizon, larger than anything Greece has ever faced. The three hundred Spartans at Thermopylae: the narrow pass, the shields, the last stand. Then Salamis: Greek warships destroying the Persian fleet. The chain of resistance that Marathon made possible. 16:9.",
+      "bg_colors": [
+        "#8B1A1A",
+        "#C9A227",
+        "#1A1A2E"
+      ]
+    },
+    {
+      "scene_number": 12,
+      "type": "historical",
+      "title": "The Golden Age Marathon Enabled",
+      "duration_sec": 46,
+      "narration": "If Persia had won at Marathon and installed a tyrant in Athens, there would have been no Golden Age of Athens. No Pericles. No Parthenon. No Socrates. No Plato. No Aristotle. Democracy was less than twenty years old when Marathon was fought \u2014 it was fragile, experimental, easily crushed. The Persian model was imperial administration: tribute, obedience, and order. The Greek model \u2014 messy, argumentative, contentious \u2014 produced philosophy, drama, history, and science. Herodotus wrote the first work of history in the Western tradition in the generation after Marathon. Sophocles fought at Salamis and wrote Antigone. The men who built Western civilization were the children and grandchildren of the men who ran across the plain of Marathon.",
+      "visual_prompt": "Gods & Glory cinematic documentary. A visual of the Golden Age of Athens following Marathon: the Parthenon being built, the Assembly debating, Socrates teaching in the agora, Sophocles at the theater. The world that came from one morning in 490 BC. The alternative: Persian imperial administration, no democracy, no philosophy. 16:9.",
+      "bg_colors": [
+        "#C9A227",
+        "#1A1A2E",
+        "#2C3E1A"
+      ]
+    },
+    {
+      "scene_number": 13,
+      "type": "analysis",
+      "title": "Why the Greeks Won",
+      "duration_sec": 47,
+      "narration": "The Persian army at Marathon was not inferior to the Greek army in numbers or equipment. The Persians had better archers. They had cavalry the Greeks did not. What they did not have was the Greek phalanx \u2014 a formation where heavy infantry locked shields and moved as a single armored mass, each man covering the man to his left. The phalanx worked on flat ground against infantry. And the Greeks were fighting for their homes, their families, and the idea of freedom, which is not a clich\u00e9 when the alternative is actual subjugation. Miltiades' tactics were brilliant. But tactics work because of the men who execute them.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The Greek phalanx visualized: hoplites in locked formation, shields overlapping, spears extended. The difference between this and Persian tactics. Then the human element: Athenian men who understood what they were fighting for. Home, freedom, family, democracy. The combination that won. 16:9.",
+      "bg_colors": [
+        "#1A1A2E",
+        "#C9A227",
+        "#4A3728"
+      ]
+    },
+    {
+      "scene_number": 14,
+      "type": "legacy",
+      "title": "The Marathon Race",
+      "duration_sec": 45,
+      "narration": "The modern marathon race \u2014 26.2 miles, run in the Olympics and in over eight hundred races worldwide every year \u2014 commemorates the legendary run of Pheidippides. The first modern marathon was run at the 1896 Athens Olympics, the race deliberately set at the distance from Marathon to Athens. Over a million people run marathons every year. Most of them do not know why the distance is 26.2 miles, or who supposedly ran it first, or what he was trying to tell his city. They know the distance. They feel it. Pheidippides \u2014 if he ran it at all \u2014 felt it too, and died. The thing he died for is what you're reading and watching right now.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The modern Olympic marathon \u2014 thousands of runners in a modern race. Then a transition to the ancient plain of Marathon. The 1896 Athens Olympics, the first modern marathon. A split screen: ancient runner in armor and modern runner in racing kit, covering the same ground. 16:9.",
+      "bg_colors": [
+        "#2C3E1A",
+        "#C9A227",
+        "#1A1A2E"
+      ]
+    },
+    {
+      "scene_number": 15,
+      "type": "historical",
+      "title": "Athens After Marathon",
+      "duration_sec": 46,
+      "narration": "The victory at Marathon transformed Athens. Before Marathon, Athens was one of several significant Greek cities. After Marathon, Athens was the city that had saved Greece. The silver mines at Laurion \u2014 discovered in 483 BC \u2014 provided the wealth to build a massive fleet, which is what ultimately destroyed the Persian navy at Salamis. Themistocles, the architect of that fleet, later argued that the battle of Salamis mattered more than Marathon. He was probably right, militarily. But Marathon was the proof of concept. It showed that the Persians were not invincible. Without that belief, no one would have stayed to fight at Thermopylae, Salamis, or Plataea.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Athens transformed by Marathon: a confident, wealthy city building ships, debating in the Assembly, expanding its influence. The silver mines of Laurion providing the resources. Themistocles planning the fleet that will defeat Xerxes. The chain from Marathon to Salamis made visible. 16:9.",
+      "bg_colors": [
+        "#C9A227",
+        "#1A3E2E",
+        "#1A1A2E"
+      ]
+    },
+    {
+      "scene_number": 16,
+      "type": "historical",
+      "title": "The Persians' Perspective",
+      "duration_sec": 45,
+      "narration": "From the Persian perspective, Marathon was a minor setback in a vast empire. Darius sent a punitive expedition that suffered an embarrassing reverse. He would organize a proper response \u2014 then died before he could. Xerxes' invasion ten years later was the proper response: overwhelming force that should have worked. It very nearly did. The Persian Empire continued to exist for another century and a half, until Alexander the Great finally destroyed it in 331 BC. The Greeks celebrated Marathon as a world-historical turning point. The Persians filed it under 'administrative difficulties in the west' and moved on. That asymmetry of perspective is itself telling.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The Persian court \u2014 Darius receiving the news of Marathon with anger, not panic. The vast empire continuing to function. A map showing Marathon as a tiny dot on the western edge of Persian territory. Then Alexander the Great, a century later, finally ending the empire. The long perspective. 16:9.",
+      "bg_colors": [
+        "#8B4500",
+        "#C9A227",
+        "#1A1A2E"
+      ]
+    },
+    {
+      "scene_number": 17,
+      "type": "dramatic",
+      "title": "The Grave Mound Today",
+      "duration_sec": 44,
+      "narration": "The Soros \u2014 the burial mound of the Athenian dead at Marathon \u2014 still stands in the plain. It is about nine meters high and forty meters across. Archaeological excavations have confirmed it contains cremated human remains. You can drive to it in forty minutes from Athens. There is a small museum nearby. The plain is flat and agricultural. In September, it looks like what it always was: a coastal flatland where farmers once grew grain, and where \u2014 once, for a few hours \u2014 the future of Western civilization was decided. The mound sits in the middle of the plain, quietly. The most consequential grave in Western history, with a fence around it and a parking lot.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The Soros mound today \u2014 the low earthen hill rising above the flat plain of Marathon. Modern visitors approaching it. The small museum nearby. The agricultural plain around it: ordinary, quiet, and yet the site of the most important morning in Greek history. 16:9.",
+      "bg_colors": [
+        "#1A3E2E",
+        "#8B8B6B",
+        "#4A3728"
+      ]
+    },
+    {
+      "scene_number": 18,
+      "type": "analysis",
+      "title": "The First Democracy in Battle",
+      "duration_sec": 46,
+      "narration": "Athens in 490 BC had been a democracy for less than twenty years \u2014 since Cleisthenes' reforms in 508 BC. Democracy was an experiment, and an unusual one. Aristotle later classified it among the corrupt forms of government, prone to demagoguery and mob rule. And yet the democratic Athenians at Marathon fought differently than the Persian subjects they faced. Persian soldiers fought because the king commanded it. Greek soldiers fought because they voted for it. The difference in motivation \u2014 not always, but on this day \u2014 was visible in the way they ran at the Persians instead of waiting to be charged. Democracy's first military test was also its greatest single-day victory.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The Athenian Assembly \u2014 citizens voting, arguing, deciding. The concept of free men choosing to fight. Contrasted with Persian soldiers who fight because the king commands. The philosophical question of why democratic armies sometimes fight with particular ferocity. 16:9.",
+      "bg_colors": [
+        "#1A1A2E",
+        "#C9A227",
+        "#2C3E1A"
+      ]
+    },
+    {
+      "scene_number": 19,
+      "type": "legacy",
+      "title": "Marathon in Western Memory",
+      "duration_sec": 45,
+      "narration": "Marathon became the touchstone for every Western battle since. When Elizabethans compared England to Athens and Spain to Persia during the Spanish Armada, they were invoking Marathon. When Churchill spoke of the few who saved the many in 1940, he was using a template established in 490 BC. Every story of a small defender against a large aggressor \u2014 from Thermopylae to Valley Forge to the Battle of Britain \u2014 draws on the same narrative that Marathon established: the outnumbered free people who chose to fight rather than submit. The battle is still being cited as the template, twenty-five centuries later.",
+      "visual_prompt": "Gods & Glory cinematic documentary. A montage of historical moments compared to Marathon: the Spanish Armada, the Battle of Britain, smaller defenders against larger aggressors across history. The template established at Marathon still operating in modern consciousness. 16:9.",
+      "bg_colors": [
+        "#C9A227",
+        "#1A1A2E",
+        "#8B1A1A"
+      ]
+    },
+    {
+      "scene_number": 20,
+      "type": "historical",
+      "title": "What the Persians Built",
+      "duration_sec": 45,
+      "narration": "The Persian Empire that lost at Marathon was not the villain it appears in Greek sources. Cyrus the Great, who founded it, issued the first known declaration of human rights \u2014 the Cyrus Cylinder \u2014 guaranteeing religious freedom to conquered peoples. The Persians built roads, standardized weights and measures, protected trade routes, and administered an enormous multicultural empire with surprising tolerance. Darius built Persepolis \u2014 one of the great cities of the ancient world. The Greek narrative of barbarism versus civilization was exactly that: a narrative. The Persians were as civilized as the Greeks. They were just on the other side of the battle.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Persepolis in its glory \u2014 the great audience hall, the tribute friezes showing peoples from across the empire. The Cyrus Cylinder. Persian roads and trade routes. The complexity of an empire that was not simply 'barbarian' despite how the Greeks portrayed them. 16:9.",
+      "bg_colors": [
+        "#8B4500",
+        "#C9A227",
+        "#1A3E2E"
+      ]
+    },
+    {
+      "scene_number": 21,
+      "type": "modern_connection",
+      "title": "The Spirit of Marathon",
+      "duration_sec": 46,
+      "narration": "Every year in November, the Athens Marathon retraces the ancient route \u2014 from the plain of Marathon to the Panathenaic Stadium in Athens. Thousands of runners from around the world complete the course. Most of them are not professional athletes. Most of them are ordinary people who decided to do something that seemed impossible, trained for it, and ran twenty-six miles anyway. Miltiades would understand them. He was also ordinary in the sense that matters: he was a Greek man with no divine protection, no supernatural advantage, facing an empire that had never lost. He trained, he planned, he charged. The modern marathoner carries that tradition in their legs without knowing it.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Modern Athens Marathon runners passing the same countryside Pheidippides supposedly ran. The ancient Panathenaic Stadium where the modern race finishes. Ordinary people completing the distance for the same reason soldiers did: because they decided to. The timeless quality of running toward something terrifying. 16:9.",
+      "bg_colors": [
+        "#2C3E1A",
+        "#C9A227",
+        "#1A1A2E"
+      ]
+    },
+    {
+      "scene_number": 22,
+      "type": "analysis",
+      "title": "The Smallest Great Battle",
+      "duration_sec": 46,
+      "narration": "By the standards of later battles, Marathon was tiny. Fewer than thirty-five thousand men in total. A few hours of fighting on a coastal plain. Fewer than seven thousand dead combined. Compared to the tens of thousands killed at Salamis, the hundreds of thousands at Plataea, the millions in the World Wars \u2014 Marathon was a skirmish. Its importance was entirely in what it prevented and what it enabled. It prevented the extinguishing of Athenian democracy before it could develop. It enabled the Golden Age. It proved the Greeks could fight the Persians and win. The smallest battles are sometimes the ones that change the most.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Scale comparison: Marathon's tiny numbers against later battles. A visualization of what it prevented \u2014 the Parthenon never built, philosophy never written, democracy never developed. The smallest battle with the largest consequences in Western history. 16:9.",
+      "bg_colors": [
+        "#1A1A2E",
+        "#C9A227",
+        "#4A3728"
+      ]
+    },
+    {
+      "scene_number": 23,
+      "type": "summary",
+      "title": "The Morning That Made the West",
+      "duration_sec": 46,
+      "narration": "On one September morning in 490 BC, ten thousand Athenians ran across a coastal plain and fought for a few hours and changed the world. Not because they were invincible \u2014 they weren't. Not because their cause was righteous \u2014 history is not so simple. But because they ran when running was possible, held when holding was necessary, and built on their victory something that lasted long after the men who won it were dead. Democracy, philosophy, science, theater, history, the Olympic Games \u2014 all of it traces back, in ways direct and indirect, to the plain of Marathon. Pheidippides ran to tell Athens. Athens built the world that ran after him.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The plain of Marathon at dawn \u2014 the moment before the charge. Then a cascading montage: the Parthenon, the philosophers, the Olympic Games, Western civilization in all its forms. Everything that came from one morning. The extraordinary chain of consequence from a single battle. 16:9.",
+      "bg_colors": [
+        "#C9A227",
+        "#1A1A2E",
+        "#2C3E1A"
+      ]
+    },
+    {
+      "scene_number": 24,
+      "type": "outro_cta",
+      "title": "Subscribe \u2014 History That Actually Matters",
+      "duration_sec": 44,
+      "narration": "The battle of Marathon lasted a few hours. The world it created is still running. Subscribe to Gods and Glory for more battles that actually changed what came after \u2014 not just who won, but who we became because of it. Next episode: Agincourt \u2014 the day English longbowmen beat a French army five times their size and changed the rules of medieval warfare forever.",
+      "visual_prompt": "Gods & Glory cinematic documentary. A final aerial view of the plain of Marathon \u2014 the Soros mound visible, the sea beyond, the mountains framing it. The scale of the place and the scale of its importance. Channel logo. Subscribe prompt. The battlefield that built the world. 16:9.",
+      "bg_colors": [
+        "#1A1A2E",
+        "#C9A227",
+        "#2C3E1A"
+      ]
+    }
+  ]
+}

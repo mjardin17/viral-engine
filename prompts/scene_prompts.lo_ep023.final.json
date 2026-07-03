@@ -1,0 +1,83 @@
+{
+  "channel": "Little Olympus",
+  "episode_number": 23,
+  "episode_id": "LO_EP023",
+  "season": 2,
+  "title": "Achilles Changes His Training",
+  "tagline": "He didn't announce it. He just started doing it differently.",
+  "hook_line": "Achilles showed up to training today with a completely different routine. He didn't explain why. But Artemis was watching, and she already knew.",
+  "characters": ["Achilles", "Artemis", "Athena", "Zeus", "Archie"],
+  "scenes": [
+    {
+      "scene_number": 1,
+      "type": "hook",
+      "title": "The New Routine",
+      "narration": "For as long as anyone could remember, Achilles trained the same way every morning: run the outer wall three times, then footwork drills, then sprints. He was the fastest person at Little Olympus. Everyone knew it. He knew it. This morning, he ran the outer wall once. Then he stopped at the coordination post and started something different. Athena noticed. Artemis had already been watching for ten minutes.",
+      "visual_prompt": "Training ground at Little Olympus, morning light, Achilles in his training outfit at the coordination post — not the running track — doing a new set of drills: reaction exercises, hand-signal response patterns, directional calling tests — exercises focused on perception and coordination, not speed — his expression focused and private, Athena visible in the background stopping mid-scroll to look, Artemis visible in the far corner already watching with calm attention, Archie on the post above Achilles watching, #FFD700 and warm morning light, cartoon style",
+      "bg_colors": ["#FFD700", "#87CEEB", "#FFF5C0"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 2,
+      "type": "character",
+      "title": "What the New Drills Are",
+      "narration": "The new drills were coordination drills — the kind a commander does, not a runner. Response time to signals. Peripheral awareness. Calling positions without looking at them. Achilles had been doing these for one day. He was already better at them than most people get in a month. The faster your reactions, the less you need to run to be useful. He had worked this out on his own.",
+      "visual_prompt": "Close-up montage of the new drills — Achilles calling out positions without looking (accurate), responding to signal flags at speed, tracking multiple points simultaneously — the drills feel different from his old running focus, these are about mind and awareness not leg speed — the subtle detail: his left heel never taking weight during these exercises, not dramatically, just a slight adjustment built in — Artemis visible still watching, Archie watching with what might be approval, warm morning #FFD700 cartoon style",
+      "bg_colors": ["#FFD700", "#FFF5C0", "#87CEEB"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 3,
+      "type": "character",
+      "title": "Artemis Doesn't Say Anything",
+      "narration": "Artemis did not comment. She watched for another few minutes, then picked up her bow and started her own practice. But when Achilles finished a sequence, she called out: 'The ninth flag. You saw it two seconds before you responded to it.' Achilles stopped. 'I was checking the pattern first.' 'I know,' she said. 'You were right to. I'm just noting it.' She didn't look at him again for a while. Achilles went back to the drills.",
+      "visual_prompt": "Parallel training shot — Artemis with her bow practicing shot sequences on the left, Achilles with coordination drills on the right, the training ground separating them, the moment she calls out the flag timing: Achilles pausing mid-drill to look at her, she's not looking back, already on her next shot — the exchange is professional, between two people who train seriously, no performance for either of them — Archie looking from one to the other with interest, #FFD700 and silver, morning training light",
+      "bg_colors": ["#87CEEB", "#FFD700", "#F0F8FF"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 4,
+      "type": "character",
+      "title": "Athena Has Thoughts",
+      "narration": "Athena came to the training ground at midmorning with her scroll. She watched Achilles for a while. Then she wrote something. She did not tell him what. But later, when Achilles had left, she read it back: 'He's shifting from a speed role to a coordination role. Proactively. Without being asked. Without announcing it. The new role will be more valuable. He has known about the heel for eighteen months and has spent that time quietly preparing for what comes after speed.' She paused. Then added: 'He is smarter than we have been giving him credit for.'",
+      "visual_prompt": "Athena at the edge of the training ground with her scroll, watching Achilles in the background doing drills — she's writing, her expression thoughtful, the scroll showing text she's adding — then: close-up on the scroll with the words about his role shift visible — then: Athena alone after Achilles has left, reading the scroll back to herself, pausing at the last line, looking at the now-empty training ground with new consideration — warm midmorning light, #FFD700 and warm gold, Archie beside her reading the scroll upside down",
+      "bg_colors": ["#FFD700", "#C8A951", "#FFF5C0"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 5,
+      "type": "development",
+      "title": "Zeus Asks",
+      "narration": "Zeus found Achilles at lunch and sat down. He didn't say anything for a while. Then: 'New drills.' It wasn't a question. Achilles said: 'Yes.' Another pause. 'Coordination work,' Zeus said. 'Yes.' Zeus looked at his food. 'That's the kind of thing we need more of.' Achilles said: 'I know.' They ate in silence for a while. Zeus's crown listed left. 'I'm glad you're here,' Zeus said. Achilles said: 'I know that too.'",
+      "visual_prompt": "Lunch scene at Little Olympus, Achilles and Zeus seated together at the outdoor table, everyone else nearby but giving them space without making it obvious — the conversation is private but visible, their body language showing the particular ease of two people who have been through something together — Zeus with his crown listing left, looking at his food more than at Achilles, the warmth of the exchange in the lack of drama — Archie on the table between them looking from one to the other with his slow blink, #FFD700 warm midday light",
+      "bg_colors": ["#FFD700", "#FFF5C0", "#C8A951"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 6,
+      "type": "resolution",
+      "title": "End of Training Day",
+      "narration": "At the end of the day, Achilles ran the outer wall. Once. At a pace that was not his fastest. He finished, stretched his left ankle slowly, and walked back without announcing anything. The running was still there. It was just no longer the only thing. Artemis was still at the training ground when he passed. She didn't look up from her bow maintenance. 'Better,' she said. Achilles didn't answer. But he didn't argue.",
+      "visual_prompt": "Evening training ground, warm sunset light over Little Olympus, Achilles jogging the outer wall at a measured pace — not the full sprint, deliberate and sustainable — finishing the single circuit, stopping to stretch his left ankle carefully and specifically, a private moment — Artemis visible in the background cleaning her bow, not watching him, the 'better' happening without eye contact on either side — a small moment of respect between two serious people — #C8A951 and warm evening gold, #FFD700 sunset",
+      "bg_colors": ["#C8A951", "#FFD700", "#FF8C42"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 7,
+      "type": "tag",
+      "title": "Athena's Note",
+      "narration": "That night, Athena added one more line to her scroll. 'He stretched the ankle at the end. Specifically and carefully. He knows it's getting worse. He's been building toward what comes after for longer than any of us realized.' She rolled the scroll up and put it with the others. It was the third scroll she'd started about Achilles since he first said anything about it. She had not told him she was keeping them.",
+      "visual_prompt": "Athena's study at night, lamplight, scrolls organized carefully — Athena adding the final line to the day's scroll, then rolling it and placing it with two other scrolls in a specific section of her scroll rack — a label visible: ACHILLES (HEEL ARC) — three scrolls of notes accumulated — her expression is not sad, it's the expression of someone who takes care of information about people she cares about — Archie on the desk watching her roll the scroll, the lamplight warm, #C8A951 and amber, #FFD700 lamp glow",
+      "bg_colors": ["#3D2B00", "#C8A951", "#8B6914"],
+      "duration_sec": 9
+    }
+  ],
+  "viral_hook": "Achilles has known about his heel for eighteen months. He hasn't been ignoring it. He's been quietly rebuilding his entire role around what comes after speed. Nobody noticed until Artemis did.",
+  "highlight_scene": 4,
+  "highlight_note": "Athena reading her own note back — 'He is smarter than we have been giving him credit for' — the realization that Achilles has been managing this the whole time.",
+  "short_title": "He's Been Preparing This Whole Time",
+  "rewatch_bait": "Scene 1 — Achilles stops running after one circuit. In S1, he always ran three. The episode treats this as new. But he's been doing one circuit some mornings for weeks — watch his warm-up in S1E017. It was already starting.",
+  "youtube_title": "Achilles changed his training. He didn't tell anyone why. Artemis already knew. | Little Olympus S2 EP3",
+  "lesson": "Adapting isn't giving up. It's understanding what you're actually for.",
+  "arc_notes": "Achilles heel arc S2: first real accommodation episode. Athena's three-scroll archive established — will be referenced in EP008 when she shows him the data. Artemis dynamic deepening — she notices the ankle specifically in scene 3 (the left heel never taking weight). Zeus-Achilles conversation establishes the emotional baseline before EP008's harder conversation. Running joke: Zeus crown still listing left."
+}

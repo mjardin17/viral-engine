@@ -1,0 +1,111 @@
+{
+  "channel": "GG",
+  "track": "historical",
+  "episode_number": 9,
+  "episode_id": "GG_HIST_EP009",
+  "season": 1,
+  "title": "The Burning",
+  "tagline": "He promised to burn Athens. Athens was empty when he arrived. He burned it anyway.",
+  "hook_line": "Xerxes entered Athens to find it empty. The entire population had escaped. He burned the Acropolis to the ground.",
+  "characters": ["XERXES"],
+  "scenes": [
+    {
+      "scene_number": 1,
+      "type": "hook",
+      "title": "Athens Evacuated",
+      "narration": "The three days at Thermopylae had bought this. The Athenians used the time. They evacuated their entire population — 150,000 people — to the island of Salamis.",
+      "visual_prompt": "Epic oil painting, the extraordinary evacuation of Athens — Athenian civilians streaming to the port of Piraeus with their possessions, boarding the fleet of ships, 150,000 people moving with organized urgency, the city emptying as Xerxes approaches, children and elderly and merchants and priests all moving, dramatic wide, 1080x1920 vertical",
+      "bg_colors": ["#2A3A5A", "#0A0808"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 2,
+      "type": "reveal",
+      "title": "A Message",
+      "narration": "They left a message. On the empty Acropolis, a few hundred volunteers remained — priests and elderly men who believed the Oracle's promise that Athens would be saved behind a 'wooden wall.' They had interpreted this as the city's ancient wooden gates.",
+      "visual_prompt": "Epic oil painting, the Acropolis of Athens nearly empty but for a small group of volunteers — priests in robes, elderly men with weapons — who have barricaded themselves behind the ancient wooden gates, believing the Oracle's wooden wall prophecy, a ghostly defense of an empty city, dramatic, 1080x1920 vertical",
+      "bg_colors": ["#4A3A1A", "#0A0808"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 3,
+      "type": "action",
+      "title": "Xerxes Enters",
+      "narration": "Xerxes arrived in Athens. He rode through the streets of the greatest city of the Greek world. They were empty. Every house, every market, every temple — empty. He walked the Agora alone.",
+      "visual_prompt": "Epic oil painting, Xerxes on horseback moving through the streets of abandoned Athens — empty market stalls, empty houses with doors open, empty temples, the absolute silence of a great city with no one in it, Xerxes composed but clearly sensing the strangeness, generals and soldiers behind him, dramatic, 1080x1920 vertical",
+      "bg_colors": ["#4A3A1A", "#0A0A0A"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 4,
+      "type": "action",
+      "title": "The Acropolis",
+      "narration": "He climbed to the Acropolis. The defenders held for days, dropping stones on Persian soldiers who tried to climb. Then Xerxes's forces found another path — and took it from behind. The defenders were killed to the last man.",
+      "visual_prompt": "Epic oil painting, the assault on the Acropolis — Persian soldiers finding the unguarded approach while the defenders are focused on the main route, the small garrison being overwhelmed, the elderly priests and volunteers facing the end with the same composure Leonidas had shown, the fall of the last Athenian defense, dramatic, 1080x1920 vertical",
+      "bg_colors": ["#8B4513", "#0A0808"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 5,
+      "type": "action",
+      "title": "The Promise Kept",
+      "narration": "Xerxes had promised his father this. Before Darius died: Greece would be punished for the burning of Sardis. Darius had planned it. Xerxes delivered it.",
+      "visual_prompt": "Epic oil painting, the Acropolis of Athens beginning to burn — the Parthenon and temples on fire, flames rising into the night sky, visible for miles, the fulfillment of a twenty-year promise from a dead king delivered by his son, Xerxes watching from a distance with an expression between satisfaction and something heavier, dramatic, 1080x1920 vertical",
+      "bg_colors": ["#CC4400", "#0A0A0A"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 6,
+      "type": "emotional",
+      "title": "The Athenians Watch",
+      "narration": "On the island of Salamis, the Athenian refugees watched the smoke rise from the Acropolis. Their city was burning. Their gods' temples were burning. They were alive.",
+      "visual_prompt": "Epic oil painting, Athenian refugees on the shore of Salamis watching the distant smoke column rising from the Acropolis on the mainland, families together, children and elders, the full emotional weight of watching your home burn from safety — alive because of three days at a pass, saved by the sacrifice, dramatic, 1080x1920 vertical",
+      "bg_colors": ["#CC4400", "#2A3A5A"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 7,
+      "type": "reveal",
+      "title": "The Wooden Wall",
+      "narration": "The Athenian fleet waited at Salamis — 200 wooden ships. The Oracle's wooden wall. Not the gates of the Acropolis. The ships. The Athenians had misread the Oracle. Themistocles had read it correctly.",
+      "visual_prompt": "Epic oil painting, the Athenian fleet at Salamis — 200 wooden-hulled warships in the narrow strait, their wooden hulls the literal wooden wall the Oracle had promised, Themistocles on the command ship surveying the position, the Persian fleet approaching, the coming naval battle setting up, dramatic, 1080x1920 vertical",
+      "bg_colors": ["#0A2A4A", "#0A0808"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 8,
+      "type": "action",
+      "title": "Salamis",
+      "narration": "At Salamis, the Greek fleet lured the larger Persian navy into the narrow strait. The Persian ships — too large for the narrow water — could not maneuver. The Greeks destroyed them.",
+      "visual_prompt": "Epic oil painting, the naval battle of Salamis — Greek triremes maneuvering with deadly efficiency in the narrow strait, Persian warships unable to use their numbers in the confined water, colliding with each other, Greek rams striking, the sea battle a mirror of Thermopylae's lesson about narrow terrain, dramatic naval, 1080x1920 vertical",
+      "bg_colors": ["#0A2A4A", "#1A0A00"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 9,
+      "type": "emotional",
+      "title": "Xerxes Watches Again",
+      "narration": "Xerxes watched the naval battle from a throne placed on the shore above Salamis. He watched his fleet destroyed. He had his secretaries record the names of his commanders who fled versus those who fought. He was already thinking about the accounting.",
+      "visual_prompt": "Epic oil painting, Xerxes on a golden throne elevated on the shore above Salamis watching his fleet be destroyed below, secretaries beside him recording names as he dictates, his expression showing the controlled fury of a man who will account for every failure — he is not broken, he is taking inventory, dramatic, 1080x1920 vertical",
+      "bg_colors": ["#0A2A4A", "#4A2000"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 10,
+      "type": "resolution",
+      "title": "He Withdrew",
+      "narration": "Xerxes withdrew the main army to Persia. He left a force in Greece. He was not defeated — he had burned Athens, as promised. But he had not conquered Greece. He never would.",
+      "visual_prompt": "Epic oil painting, the Persian army in withdrawal — Xerxes at the head of the remaining force moving east, Athens's smoke still visible on the horizon behind them, the army unbroken but returning, Xerxes's posture showing not defeat but the calculation of what was accomplished and what was not, the beginning of the long march home, dramatic, 1080x1920 vertical",
+      "bg_colors": ["#8B4513", "#0A0A0A"],
+      "duration_sec": 9
+    }
+  ],
+  "viral_hook": "He burned Athens to fulfill his father's dying wish. The Athenians watched from a nearby island. They were alive because of 300 Spartans at a pass.",
+  "highlight_scene": 6,
+  "highlight_note": "The Athenians watching the smoke from Salamis — alive because of three days at a pass — is where the Thermopylae sacrifice becomes concrete. The viewer understands in that moment what the 300 bought.",
+  "short_title": "The Acropolis Burns",
+  "rewatch_bait": "The 'wooden wall' prophecy resolved — the Oracle said walls of wood would protect Athens. The priests thought it was the gates. Themistocles thought it was the ships. He was right.",
+  "youtube_title": "He Burned Athens. The Athenians Watched From an Island. They Were Alive. | Gods & Glory",
+  "lesson": "He accomplished his mission. He burned Athens. He did what he came to do. And still he did not win. Accomplishing the goal and winning are not always the same thing.",
+  "arc_notes": "EP009 closes the military arc. The withdrawal sets up EP010 (legacy) — the question of what Xerxes actually achieved and why he is remembered. Cross-feeds ML: after watching the burning of Athens, the scale of what the ML team faces becomes viscerally real."
+}

@@ -1,0 +1,22 @@
+{
+  "series_name": "Empire Decoded",
+  "next_episode_number": 16,
+  "creative_brief": {
+    "villains": "Always portray the opposing empire/antagonist force as EXTREMELY STRONG — overwhelming numbers, elite reputation, top-tier equipment and leadership. The protagonists' achievement should feel impossible, not easy. (e.g. Thermopylae episode framed Persia as 'an empire of a million men' with the undefeated 'Immortals'.) Apply this villain-strength standard to every future episode's antagonist faction."
+  },
+  "topic_backlog": [
+    "The Battle of Tours: Stopping an Empire's Advance",
+    "Agincourt: The Impossible Longbow Victory",
+    "The Fall of Baghdad: The Mongols and the House of Wisdom",
+    "Tenochtitlan: The Fall of the Aztec Empire",
+    "The Battle of Hastings: A Kingdom in a Single Day",
+    "The Siege of Vienna: Europe's Last Stand",
+    "Rorke's Drift: A Hundred Against Four Thousand",
+    "Midway: The Turning Point of the Pacific",
+    "Stalingrad: The Siege That Broke an Army",
+    "The Battle of Adrianople: The Day Rome's Legions Broke"
+  ],
+  "season_2_note": "topic_backlog refilled with 10 new season 2 topics (2026-06-15) so pipeline.py --auto can run for episode 16 onward without wrapping back to season 1 topics. Scripts for these have NOT been pre-generated yet (unlike episodes 6-15) — pipeline.py --auto will draft them on demand when next run.",
+  "history": [
+    {
+      "note": "Episodes 1-4 are not present in this workspace and could not be recovered (built/saved in a separate session's temporary sandbox). Episode 5 (Battle of Thermopylae) WAS reco

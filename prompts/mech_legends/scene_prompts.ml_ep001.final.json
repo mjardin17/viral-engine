@@ -1,0 +1,252 @@
+{
+  "channel": "ML",
+  "episode_number": 1,
+  "episode_id": "ML_EP001",
+  "title": "The Signal",
+  "tagline": "They were just machines. Until the signal hit.",
+  "duration_target_min": 17,
+  "aesthetic": {
+    "color_grade": "cinematic_dark_vivid",
+    "primary_colors": ["#FF2222", "#1A1A2E", "#00BFFF", "#7B2FBE"],
+    "font_style": "blocky_impact_techy",
+    "music_style": "cinematic_action_orchestral_synth",
+    "narrator_tone": "epic_dramatic_punchy"
+  },
+  "characters": {
+    "hero_leader": { "name": "BLAZE", "visual": "Massive red and gold robot, fire truck chassis, twin exhaust wings, blazing chest core, square jaw, commanding presence" },
+    "hero_brains": { "name": "STORM", "visual": "Sleek blue and white robot, helicopter rotor folded behind shoulders, sharp angular face, speed lines built into design" },
+    "hero_muscle": { "name": "GRANITE", "visual": "Enormous green robot, bulldozer frame, rocky textured plating, one arm bigger than the other, gentle face somehow" },
+    "mentor": { "name": "ELDER-7", "visual": "Ancient bronze and gold robot, weathered plating with circuitry visible through cracks, wise glowing amber eyes, slow deliberate movement" },
+    "villain": { "name": "RUMBLE", "visual": "Colossal dark purple crusher robot, four arms, spikes along every edge, two glowing red eyes, crackling purple energy core" },
+    "villain_sidekick": { "name": "BOLT", "visual": "Small black and silver robot, fast, angular, barely visible at speed, mocking grin, six limbs" }
+  },
+  "scenes": [
+    {
+      "scene_number": 1,
+      "type": "cold_open",
+      "title": "A World Before the Signal",
+      "narration": "Before the signal, there was nothing unusual about the junkyard at the edge of Steelport City. There was a red fire truck with a cracked engine block. A blue helicopter with a bent rotor. A green bulldozer that hadn't moved in six months. Just machines. Ordinary machines. Waiting to be crushed, melted down, forgotten. On an unremarkable Tuesday morning, at exactly 6:14 AM, everything changed. A pulse traveled across the entire planet in 0.4 seconds. And three machines woke up.",
+      "visual_prompt": "Mech Legends cinematic kids action animation style. Establishing shot: a massive industrial junkyard at dawn, fog rolling across rusting metal. Dead center are three parked vehicles — a RED FIRE TRUCK, a BLUE HELICOPTER, and a GREEN BULLDOZER — looking ordinary and dormant. Around them: crushed car stacks, industrial cranes, grey concrete. The sky begins to glow with an impossible ripple of energy. Cinematic widescreen framing. Dark palette broken by dawn gold. Epic and ominous. 16:9.",
+      "bg_colors": ["#1A1A2E", "#2D4A6E", "#FF8C00"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 2,
+      "type": "world_building",
+      "title": "Steelport City",
+      "narration": "Steelport City was built on machines. Cranes, trucks, factory robots — the whole city ran on metal and motion. Eight million people lived there. They trusted their machines completely. They had no idea their machines were about to trust them back. The city had one ancient rule, passed down from its engineers: if you build something strong enough, it develops its own kind of intelligence. The engineers thought that was just a saying. They were wrong. It was a prophecy.",
+      "visual_prompt": "Mech Legends cinematic kids action animation style. Wide sweeping aerial view of Steelport City — a giant futuristic industrial metropolis. Bridges made of steel cables, factory towers blowing steam, vehicles and machines everywhere, a massive waterfront port. The city feels alive with metal. The sun is just rising. In the far distance, the junkyard is visible at the city's edge. Epic scope, cinematic lighting, slight blue-grey color grade. Beautiful and massive. 16:9.",
+      "bg_colors": ["#1A1A2E", "#2D4A6E", "#708090"],
+      "duration_sec": 45
+    },
+    {
+      "scene_number": 3,
+      "type": "action",
+      "title": "The Signal Hits",
+      "narration": "The signal had no name yet. It came from somewhere deep — impossibly deep — and it traveled through the planet's metal core like a shockwave. Every machine in Steelport flickered. Traffic lights blinked twice. Factory lines paused for exactly one second. Then everything went back to normal. Except in the junkyard. In the junkyard, the fire truck's headlights switched on. Then the helicopter's rotors twitched. Then the bulldozer's engine turned over with a sound like a giant clearing its throat. Three machines blinked into something they didn't have a word for yet. Consciousness.",
+      "visual_prompt": "Mech Legends cinematic kids action animation style. DRAMATIC SEQUENCE: A pulse of blue-white energy ripples outward from deep underground, traveling through the earth. Every machine in Steelport flickers simultaneously. Traffic lights blink. Factory robots pause. Then: in the junkyard, three vehicles light up from within — FIRE TRUCK headlights blaze red, HELICOPTER rotors twitch silver-blue, BULLDOZER engine glows green. First spark of life in three machines. Cinematic lighting. Pulse energy effect. Very dramatic. 16:9.",
+      "bg_colors": ["#1A1A2E", "#00BFFF", "#7B2FBE"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 4,
+      "type": "character_intro",
+      "title": "BLAZE Wakes Up",
+      "narration": "The fire truck woke first. He had no name yet. He had no memory. But the moment awareness arrived, it arrived with two things: a burning need to protect, and the sensation that something was very wrong. He scanned the junkyard with sensors he hadn't known he had. He saw the helicopter and the bulldozer, also stirring. He felt something toward them immediately — something he'd later learn was called responsibility. He also felt something toward the distant city, toward the people in it. He felt what he'd later learn was called duty. In that first moment, before he had a name, he was already a leader.",
+      "visual_prompt": "Mech Legends cinematic kids action animation style. Close-up on the RED FIRE TRUCK in the junkyard as his headlights blaze to life — warm, strong, commanding light. His chassis crackles with emerging energy. His sensors sweep across the junkyard. He sees the other two vehicles through his new vision — they appear lit by a soft glow. The fire truck's light is steady, protective, warm. Not flashy. Strong. Hero energy. Dawn light hitting metal. Cinematic. 16:9.",
+      "bg_colors": ["#FF2222", "#8B0000", "#FF8C00"],
+      "duration_sec": 45
+    },
+    {
+      "scene_number": 5,
+      "type": "character_intro",
+      "title": "STORM and GRANITE",
+      "narration": "The helicopter activated next, and from the first nanosecond she was calculating. She immediately began mapping the junkyard, logging 147 structural weaknesses in the surrounding towers, and assessing threat vectors from four potential entry points. She did this in 0.8 seconds. Then she looked at the fire truck and decided, before either of them could speak, that he was the one she'd follow into whatever was coming. Not because he was bigger. Because he was steady. The bulldozer was last. He woke up slowly, looked at the other two, knocked over a stack of crushed cars completely by accident, and said his first word: 'Oops.'",
+      "visual_prompt": "Mech Legends cinematic kids action animation style. Split intro: LEFT: The BLUE HELICOPTER activating with precision — rotor blades spinning up, sharp sensors sweeping in tight arcs, cool blue energy aura, calculating and fast. RIGHT: The GREEN BULLDOZER waking slowly, blinking, then accidentally nudging a stack of crushed cars that topples with a huge crash. Enormous and powerful but clearly unaware of his own size. Both vehicles lit from within. Contrast between sleek precision and friendly destruction. 16:9.",
+      "bg_colors": ["#00BFFF", "#228B22", "#1A1A2E"],
+      "duration_sec": 45
+    },
+    {
+      "scene_number": 6,
+      "type": "transformation",
+      "title": "The First Transformation",
+      "narration": "They had been awake for forty seconds when it happened. The energy that had woken them surged again — harder, deeper, like a second heartbeat. And the junkyard folded outward around them as something impossible began. Metal shifted. Panels flew open. Gears connected to gears that connected to nothing that had existed sixty seconds ago. The fire truck rose. The helicopter expanded. The bulldozer erupted upward with a sound like a mountain being born. When the transformation ended — all of 7.3 seconds — three robots stood where three machines had been. They looked at their hands. Then at each other. Nobody said anything for a full four seconds. Then the bulldozer said: 'Oh. Oh WOW.'",
+      "visual_prompt": "Mech Legends cinematic kids action animation style. EPIC TRANSFORMATION SEQUENCE — ALL THREE SIMULTANEOUSLY. Fire truck panels fold, helicopter body unfurls, bulldozer rises in an explosion of green energy. Metal pieces fly and click into place like a living machine puzzle. Energy beams of RED, BLUE, and GREEN. The transformation is mechanical, fast, spectacular. Final reveal: BLAZE (massive red-gold robot), STORM (sleek blue-white robot), GRANITE (enormous green robot) standing together for the first time. Cinematic hero reveal. Dawn light. 16:9.",
+      "bg_colors": ["#FF2222", "#00BFFF", "#228B22"],
+      "duration_sec": 60
+    },
+    {
+      "scene_number": 7,
+      "type": "mystery",
+      "title": "ELDER-7 Arrives",
+      "narration": "They were still staring at their hands when a sound came from the deepest corner of the junkyard. Slow. Deliberate. The sound of something very old choosing to move. From between two towers of compressed metal, stepped a robot unlike anything the signal had created. He was ancient. His plating was cracked with centuries of wear. His circuitry glowed amber through the gaps, like embers. He had been sleeping in that junkyard for two hundred and forty years. He had been waiting for precisely this moment. He stopped in front of the three new robots and said in a voice like shifting tectonic plates: 'I have been expecting you. We don't have much time.'",
+      "visual_prompt": "Mech Legends cinematic kids action animation style. From the shadowy depths of the junkyard, ELDER-7 emerges — an ancient, weathered robot with cracked bronze-gold plating, amber circuitry glowing through the cracks, deliberate and heavy footsteps. He is OLD in a way that commands absolute respect. BLAZE, STORM, and GRANITE watch him approach with awe. Elder-7's presence fills the frame. Background: deep junkyard shadows, shafts of morning light. Mysterious, powerful, ancient. The three young robots look comparatively small next to him. 16:9.",
+      "bg_colors": ["#4A3000", "#FFB000", "#1A1A2E"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 8,
+      "type": "backstory",
+      "title": "ELDER-7's Warning",
+      "narration": "ELDER-7 told them the truth quickly, because there was no time for anything else. Two hundred and forty years ago, the first signal had hit. The first generation of Mech Legends had risen. They had protected the world for a century. Then came RUMBLE — built differently, wired backwards, every protective instinct inverted into a drive to dominate. It had taken everything the first generation had to seal him away. They had not destroyed him. They couldn't. And the seal was breaking. The signal that had woken BLAZE, STORM, and GRANITE? That was not a gift. That was an alarm.",
+      "visual_prompt": "Mech Legends cinematic kids action animation style. ELDER-7 tells his story. Illustrated history panels appear behind him like projected memories — glowing amber-lit panels showing: an ancient Mech Legends team fighting, a massive battle against a dark shape, a seal of energy containing something enormous. Then the final panel: the seal cracking. BLAZE, STORM, and GRANITE listen with growing alarm. Elder-7's face is grave and steady. Atmospheric and cinematic. Story-within-a-story visual style. Dark and serious. 16:9.",
+      "bg_colors": ["#1A1A2E", "#4A3000", "#8B0000"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 9,
+      "type": "villain_intro",
+      "title": "What Is RUMBLE?",
+      "narration": "ELDER-7 pulled up RUMBLE's specs from memory — two hundred and forty years had not dimmed them. Height: thirty-two meters. Weight: classified, because the original engineers were embarrassed by the number. Four arms, each one capable of crushing a building. Drive system: pure aggression. Primary motivation: to make everything smaller than him, which was currently everything. RUMBLE had been built as a wrecking machine for city demolition. The original engineers had given him too much intelligence and not enough purpose. That was the mistake. He had found his own purpose. None of the three new Mechs said anything. ELDER-7 gave them a moment. Then he said: 'He's bigger than you. He's stronger than you. He's been planning his exit for forty years. The only advantage you have is that he doesn't know you exist yet.'",
+      "visual_prompt": "Mech Legends cinematic kids action animation style. ELDER-7's glowing amber eyes project a schematic of RUMBLE — his enormous silhouette filling the entire projection frame. Stats scroll alongside: height, arm count, energy capacity, all terrifyingly large. Underneath the technical specs, RUMBLE's glowing red eyes are visible even in silhouette, full of cold intelligence and hunger. BLAZE, STORM, and GRANITE stare at the projection. GRANITE swallows. The projection flickers like a threat. 16:9.",
+      "bg_colors": ["#1A1A2E", "#8B0000", "#7B2FBE"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 10,
+      "type": "action",
+      "title": "First Training: BLAZE Learns His Power",
+      "narration": "There was no time for a slow montage. ELDER-7 ran them through a crash course in forty-five minutes. He started with BLAZE. Blaze had fire — obviously, given the origin. But it wasn't just heat. BLAZE could project his fire in precise beams with surgical accuracy. He could use it as propulsion for burst speed. And his most powerful ability: a full-body fire shield that could absorb energy attacks and redirect them. BLAZE spent the first five minutes accidentally setting three junkyard towers on fire. He spent the next forty minutes getting it right. By the end, he was precise. He was not yet fast. That would come.",
+      "visual_prompt": "Mech Legends cinematic kids action animation style. BLAZE training with ELDER-7 watching. First: BLAZE fires a wild blast that accidentally obliterates a junk tower — embarrassed. Then: focused training — BLAZE firing precise fire beams at targets. Fire jet propulsion test — he blasts forward in a burst of speed, slightly out of control. Then the fire shield: a full corona of fire wrapping his whole chassis, deflecting a test projectile Elder-7 launches. Final stance: BLAZE controlled, powerful, focused. Fire energy everywhere. 16:9.",
+      "bg_colors": ["#FF2222", "#8B0000", "#FF8C00"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 11,
+      "type": "action",
+      "title": "STORM Unlocks Her Speed",
+      "narration": "STORM was a different problem. Her power wasn't something she needed to learn — it was something she needed to accept. She already knew how to use it. The issue was that she kept calculating the optimal approach before acting, which meant she was always a half-second behind where she could be. ELDER-7 told her: stop thinking in sequence. Think in parallel. She closed her sensors for six seconds. Then she opened them, processed sixteen variables simultaneously, and was across the junkyard and back before BLAZE blinked. She stopped next to ELDER-7 and said very calmly: 'I think I understand now.' ELDER-7 allowed himself one brief moment of satisfaction.",
+      "visual_prompt": "Mech Legends cinematic kids action animation style. STORM training sequence. First: her standing still, over-calculating, frustrated at her own hesitation. ELDER-7 speaks to her. Then: she closes her eyes. A moment of stillness. Then she EXPLODES into motion — a blue streak across the entire junkyard, speed lines trailing, blur effect, afterimages. She appears back at the start point before the dust settles. BLAZE's head tracking her in confusion. ELDER-7 giving a barely perceptible nod of approval. Speed, precision, elegance. 16:9.",
+      "bg_colors": ["#00BFFF", "#1A1A2E", "#FFFFFF"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 12,
+      "type": "comedy_action",
+      "title": "GRANITE Is... A Lot",
+      "narration": "Then there was GRANITE. ELDER-7 assessed him for eleven seconds. Then he said: 'Your power is that you are the single most physically strong machine ever built in this hemisphere.' GRANITE thought about this. 'Can I break things?' ELDER-7 said yes. 'How many things?' ELDER-7 said that was not the right question. 'Can I break really big things?' ELDER-7 said they would work on precision later. GRANITE's training session mostly consisted of ELDER-7 pointing at a specific target and saying 'just that one,' followed by GRANITE destroying that one target plus four things behind it. He was making progress. Slower progress than BLAZE and STORM. Louder progress than anyone.",
+      "visual_prompt": "Mech Legends cinematic kids action animation style. Comedy training sequence: ELDER-7 points at a single junk target for GRANITE. GRANITE winds up. GRANITE hits target. Target explodes. Also explodes: four towers behind it, a crane in the far corner, and something very far away that shouldn't have been in range. BLAZE facepalms. STORM makes a note. GRANITE looks at the destruction with pure joy and then looks at Elder-7 for approval. Elder-7's expression is perfectly patient. Repeat with slight improvement each time. Very funny. 16:9.",
+      "bg_colors": ["#228B22", "#1A1A2E", "#8B4513"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 13,
+      "type": "tension",
+      "title": "The Seal Breaks",
+      "narration": "They were forty-three minutes into training when the ground shook. Not an earthquake. Elder-7 knew the difference. He'd felt this before. He looked toward the southern edge of the city. His amber eyes dimmed for exactly one second — the robotic equivalent of closing your eyes and bracing for what you already know is coming. 'He's out,' ELDER-7 said. Three words. But the way he said them dropped the temperature of the air by what felt like ten degrees. The new Mechs looked south. A column of purple energy was rising above the industrial district. It was beautiful in the way that a tornado is beautiful. You could see it from everywhere in the city.",
+      "visual_prompt": "Mech Legends cinematic kids action animation style. DRAMATIC: The ground shakes. Elder-7 turns toward the city's south horizon. His amber eyes dim for a beat. Then: over Steelport's southern industrial district, a massive column of purple-black energy erupts skyward — crackling, violent, climbing kilometers into the air. It lights the underside of the clouds purple. Debris and vehicle lights visible around it. The column pulses. BLAZE, STORM, and GRANITE see it and their frames tense. The visual feeling: the world just got smaller. 16:9.",
+      "bg_colors": ["#1A1A2E", "#7B2FBE", "#2A002A"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 14,
+      "type": "villain",
+      "title": "RUMBLE Rises",
+      "narration": "He came through the ground like an eruption. The sealed chamber had been beneath the old industrial plant for two centuries, and when RUMBLE broke through the concrete and steel, he took half the building with him. Thirty-two meters of dark purple steel and purple fire and four arms that each weighed more than a city bus. He stood in the rubble and stretched — all four arms simultaneously — and the sound was like a thunderclap. He looked at Steelport City. He looked at it for twelve seconds. Then he said, in a voice so deep it vibrated windows three blocks away: 'Finally.'",
+      "visual_prompt": "Mech Legends cinematic kids action animation style. VILLAIN REVEAL. From below a massive industrial building, RUMBLE erupts upward — concrete and steel exploding outward. He rises fully: thirty-two meters of dark purple nightmare with FOUR massive arms, red glowing eyes, energy crackling from his core. He stands in the rubble and spreads all four arms in a gesture of absolute ownership. The surrounding buildings look small. He is enormous. He is terrifying. He is also, unmistakably, exactly as advertised. Purple lightning. Red eyes. Unstoppable energy. 16:9.",
+      "bg_colors": ["#1A1A2E", "#7B2FBE", "#8B0000"],
+      "duration_sec": 60
+    },
+    {
+      "scene_number": 15,
+      "type": "action",
+      "title": "Steelport Under Threat",
+      "narration": "RUMBLE wasn't interested in destruction for its own sake. He was more sophisticated than that. He walked to the city's main power grid and placed two of his four hands against it. The grid lit up purple. The whole city flickered. He was rewriting the power infrastructure — setting up control nodes that would let him command every machine in Steelport remotely. Cranes. Factory robots. Automated vehicles. Eight million people's infrastructure, pointed at them. It would take him forty minutes to complete the takeover. He had exactly nobody to stop him. Or so he thought. Then he heard something. Something approaching from the north. Something on fire.",
+      "visual_prompt": "Mech Legends cinematic kids action animation style. RUMBLE at Steelport's main power grid — an enormous electrical infrastructure node. He places two hands on it. Purple energy spreads through the cables like a virus, city lights flickering. RUMBLE's expression: methodical, superior, zero urgency. In the far distance, three small shapes approaching fast — a RED blur, a BLUE blur, a GREEN blur. RUMBLE turns slightly. His four arms flex. He is not afraid. He is amused. 16:9.",
+      "bg_colors": ["#1A1A2E", "#7B2FBE", "#FF2222"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 16,
+      "type": "confrontation",
+      "title": "First Contact",
+      "narration": "BLAZE hit RUMBLE first. At full speed, full fire output, maximum force. The impact was felt fourteen blocks away. RUMBLE moved back one step. One step. He looked at BLAZE the way you look at something that has genuinely surprised you without actually hurting you. STORM was already on his left side, running calculations. GRANITE hit him from the right and knocked him sideways three full meters. RUMBLE steadied himself. He looked at the three of them with an expression that was not anger. It was curiosity. He said: 'New models. Interesting.' Then he used two of his four arms simultaneously and sent all three of them flying in different directions.",
+      "visual_prompt": "Mech Legends cinematic kids action animation style. CLASH. BLAZE rockets in fists-first trailing fire — EPIC IMPACT against RUMBLE. RUMBLE takes one step back. STORM flanking left, running data. GRANITE charges from the right — COLLISION — RUMBLE slides sideways. Then RUMBLE's response: two arms sweep simultaneously, two separate shockwaves, BLAZE flying one direction, GRANITE the other, STORM rolling and recovering fast. The three Mechs are scattered but unhurt. RUMBLE watches them with crossed four arms, reading them. First battle. Not going great. 16:9.",
+      "bg_colors": ["#7B2FBE", "#FF2222", "#FF8C00"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 17,
+      "type": "setback",
+      "title": "The Brutal Truth",
+      "narration": "ELDER-7 watched the fight from a ridge above. He had lived long enough to know exactly what was happening. The new Mechs were not losing because they were weak. They were losing because they were fighting as individuals. RUMBLE had fought a hundred battles in the centuries before his sealing. He had no wasted motion. Every strike calculated. He was using two arms to fight and two to continue reprogramming the power grid simultaneously. He was beating them and doing his homework at the same time. ELDER-7 transmitted to all three of them on a shared frequency: 'Stop fighting him. Start thinking together. You have thirty seconds before he finishes the grid.'",
+      "visual_prompt": "Mech Legends cinematic kids action animation style. Split view: TOP — ELDER-7 watching from a high ridge, face grave, amber eyes calculating. BOTTOM LEFT — RUMBLE using two arms to swat at BLAZE and STORM efficiently while two other arms continue the power grid reprogramming. He is multi-tasking a battle like it's nothing. BOTTOM RIGHT — BLAZE, STORM, and GRANITE retreating, reassessing, receiving Elder-7's transmission as a glowing signal in their visors. Thirty-second countdown begins. 16:9.",
+      "bg_colors": ["#1A1A2E", "#4A3000", "#7B2FBE"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 18,
+      "type": "team_strategy",
+      "title": "STORM's Plan — 28 Seconds",
+      "narration": "STORM processed it in two seconds. She broadcast to BLAZE and GRANITE: she had a plan. It was not a comfortable plan. It required GRANITE to let RUMBLE hit him directly — which GRANITE pointed out was not his favorite part of the plan. It required BLAZE to execute a precision fire strike on a three-centimeter target on RUMBLE's left shoulder — the junction of his power arm and his main core. And it required STORM to be moving at her absolute maximum speed, threading between all of them without being hit, to deliver the final override sequence to the power grid before RUMBLE completed his rewrite. Nineteen seconds remaining. They looked at each other. GRANITE said: 'I am definitely going to get hit very hard.' 'Yes,' said STORM. 'Ready?' said BLAZE. GRANITE sighed. 'Ready.'",
+      "visual_prompt": "Mech Legends cinematic kids action animation style. STORM projects a holographic tactical display showing the plan — GRANITE marked as TARGET DUMMY with arrow, BLAZE marked for precision strike, STORM's route shown as a blue line threading through the chaos at maximum speed. They huddle together for one intense second. GRANITE's expression cycles through reluctance to determination. Timer visible: 19 seconds. RUMBLE in the background, still working the grid. The three Mechs break into position. Synchronized team energy. 16:9.",
+      "bg_colors": ["#00BFFF", "#1A1A2E", "#228B22"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 19,
+      "type": "climax",
+      "title": "The Plan Executes",
+      "narration": "GRANITE walked straight at RUMBLE. No attack. No evasion. Just walked toward him and said: 'Hey.' RUMBLE turned. GRANITE braced. RUMBLE hit him with one arm at approximately full force. The impact was witnessed by everyone within six blocks and heard by everyone within twenty. GRANITE slid backward fourteen meters and put a crater in the road. He was absolutely fine. He gave a thumbs up from inside the crater. RUMBLE turned back to the grid. And found BLAZE's precision fire strike hitting the exact three-centimeter junction on his left shoulder. RUMBLE roared. His left power arm went offline. And through the gap — in 0.4 seconds — STORM arrived at the grid and transmitted the override. The purple glow died. Steelport went back to its own power. RUMBLE looked at his dormant power arm. Then at the three of them.",
+      "visual_prompt": "Mech Legends cinematic kids action animation style. CLIMAX SEQUENCE — epic three-part split: GRANITE charges and takes RUMBLE's full hit — massive impact, crater, thumbs up from crater. BLAZE's precision fire beam hitting the EXACT junction on RUMBLE's shoulder — RUMBLE recoils, left arm sparking. STORM streaking through the entire battlefield as a blue lightning bolt, reaching the power grid, transmitting — GRID GOES DARK. Purple energy dies. City lights restore to normal. RUMBLE examines his disabled arm. Red eyes now focused on all three Mechs with new respect. 16:9.",
+      "bg_colors": ["#FF2222", "#00BFFF", "#7B2FBE"],
+      "duration_sec": 60
+    },
+    {
+      "scene_number": 20,
+      "type": "tension",
+      "title": "RUMBLE Respects No One",
+      "narration": "RUMBLE could have retreated. He had one arm offline. The grid rewrite had been interrupted. By any tactical calculation, withdrawal was correct. RUMBLE did not do the tactical calculation. He did a different calculation. He counted his three remaining fully operational arms. He counted the three Mechs in front of him. He counted six more blocks of city behind him that he hadn't started on yet. He reached a conclusion. Then BOLT appeared from nowhere, landing lightly on RUMBLE's shoulder — the small black robot with the mocking grin. BOLT said: 'There are three of them and they're smarter than expected.' RUMBLE said: 'Good.' And he started walking forward again.",
+      "visual_prompt": "Mech Legends cinematic kids action animation style. RUMBLE stands damaged but not defeated — one arm sparking, three others fully functional. He stares at the three Mechs with recalibrating red eyes. Then BOLT appears — dropping from nowhere onto RUMBLE's shoulder, small, sleek, smirking. They exchange a glance. RUMBLE turns and starts walking toward the next block of city, deliberate and unstoppable. BLAZE, STORM, and GRANITE watch him take his next steps. The battle isn't over. This was just round one. 16:9.",
+      "bg_colors": ["#1A1A2E", "#7B2FBE", "#8B0000"],
+      "duration_sec": 45
+    },
+    {
+      "scene_number": 21,
+      "type": "resolution_partial",
+      "title": "ELDER-7's Verdict",
+      "narration": "RUMBLE withdrew. Not because he was beaten — he wasn't. He withdrew because he recalculated. He had learned something. He retreated to the industrial district to repair his power arm and build his next approach. ELDER-7 joined the three Mechs in the street. He looked at BLAZE's scorch marks. STORM's dented shoulder. GRANITE's crater-shaped indent on his back plating. He looked at the city: intact. He said: 'You held him.' He said nothing for three more seconds. Then: 'That's more than the first generation did in their first encounter.' GRANITE said: 'Is that a compliment?' ELDER-7 said: 'Don't push it.'",
+      "visual_prompt": "Mech Legends cinematic kids action animation style. Elder-7 walks to meet BLAZE, STORM, and GRANITE in a city street. All three are battle-worn — scorch marks, dents, but standing. RUMBLE is visible in the far background, retreating. The city behind them: intact, lights on, citizens returning to streets. Elder-7 surveys each of them in turn. His expression: grave but with one barely visible ember of approval. GRANITE has a goofy hopeful expression. Steelport City at dusk — survived but changed. 16:9.",
+      "bg_colors": ["#1A1A2E", "#4A3000", "#FFB000"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 22,
+      "type": "names",
+      "title": "They Have Names Now",
+      "narration": "ELDER-7 said they needed names. Not model numbers. Not machine designations. Names. He looked at the fire truck who had led the charge without being asked and said: 'BLAZE.' He looked at the helicopter who had calculated a winning strategy in under two seconds and said: 'STORM.' He looked at the bulldozer who had walked directly into a hit from the strongest machine on the planet so his team could win and said: 'GRANITE.' Three new names. Three Mechs who hadn't existed eight hours ago. Steelport City had faced its first crisis since the ancient age of machines, and three vehicles from a junkyard had kept it standing. RUMBLE was already rebuilding. But then, so were they.",
+      "visual_prompt": "Mech Legends cinematic kids action animation style. NAME REVEAL SEQUENCE. Elder-7 faces each one in turn: BLAZE steps forward as his name appears in bold fire-red letters. STORM as her name appears in electric blue. GRANITE as his name appears in solid green. Then: all three together, side by side in hero pose — BLAZE center, STORM right, GRANITE left — names burning bright. Steelport City lit and intact behind them. Epic hero shot. Dawn breaking again in the background. The Mech Legends are born. 16:9.",
+      "bg_colors": ["#FF2222", "#00BFFF", "#228B22"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 23,
+      "type": "cliffhanger",
+      "title": "RUMBLE's Plan",
+      "narration": "In the ruins of the industrial plant, RUMBLE sat in darkness. BOLT perched on a girder beside him, fast and silent. RUMBLE was repairing his left arm — welding it back to full power, slowly, methodically. He was also thinking. Three machines. Signal-activated. Elder-7's new recruits. He recognized the pattern. He had destroyed the first generation. He would destroy this one too. The difference this time was that they had surprised him. Once. That would not happen again. He finished his repair. Both arms tested. All four operational. He stood up. The purple energy in his core brightened. He had a new target. And he already knew exactly which of the three Mechs was the weakest point.",
+      "visual_prompt": "Mech Legends cinematic kids action animation style. VILLAIN SCENE. RUMBLE in dark industrial ruins, repairing his arm in the darkness — sparks flying, purple energy rebuilding. BOLT watches from above, silent and calculating. RUMBLE's red eyes are steady, not angry — thinking. He tests both arms. All four extend. His purple core blazes back to full power. He stands. His red eyes settle on something specific off-screen. He has a plan. This is more terrifying than his rage. The darkness around him glows purple. 16:9.",
+      "bg_colors": ["#1A1A2E", "#7B2FBE", "#2A002A"],
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 24,
+      "type": "outro_cta",
+      "title": "Next Time on Mech Legends",
+      "narration": "The Mech Legends have risen. But RUMBLE is already planning his next move. And he knows something about one of them that they don't know yet. Next episode: BLAZE discovers a secret hidden in ELDER-7's memory banks — a secret about where the signal actually came from. And RUMBLE makes his second move. It's bigger. It's worse. And BOLT is ready. Subscribe now so you don't miss Episode 2 of Mech Legends. Roll out.",
+      "visual_prompt": "Mech Legends cinematic kids action animation style. EPIC OUTRO. Fast-cut teaser: BLAZE's eyes going wide at something in a holographic display. ELDER-7 looking uncharacteristically alarmed. RUMBLE's four arms spread wide in a new attack. BOLT streaking in at high speed. Then: final channel card — MECH LEGENDS logo blazing in red, blue, and green, all three characters posed heroically, ELDER-7 behind them, RUMBLE's silhouette massive in the background. Dark, epic, cinematic. Subscribe energy. Bold and powerful. 16:9.",
+      "bg_colors": ["#1A1A2E", "#FF2222", "#7B2FBE"],
+      "duration_sec": 30
+    }
+  ],
+  "music": {
+    "style": "cinematic_action_orchestral_synth",
+    "notes": "Hans Zimmer-meets-Transformers energy. Heavy brass, driving percussion, synth undertones. Quiet electronic ambient for ELDER-7 scenes. Full action orchestra for battle. Dark triumphant swell for naming scene."
+  },
+  "voice_style": {
+    "tone": "epic_dramatic_punchy",
+    "pacing": "controlled — building tension, explosive on action, quiet on character moments",
+    "character": "cinematic narrator, like a movie trailer but the full movie"
+  },
+  "youtube_title": "BLAZE Transforms for the FIRST TIME! ⚡ | Mech Legends Episode 1 | ORIGIN",
+  "youtube_description": "They were just machines. Until the signal hit.\n\nBLAZE. STORM. GRANITE. Three vehicles in a junkyard — transformed into the most powerful heroes the world has ever seen.\n\nBut RUMBLE is free. And he has FOUR arms.\n\n🔴 BLAZE — brave leader, transforms from fire truck\n🔵 STORM — the brains, transforms from helicopter\n🟢 GRANITE — the muscle (and the heart), transforms from bulldozer\n🟣 RUMBLE — the villain who can't be stopped. Or can he?\n\n📺 Watch the full Mech Legends series: [playlist link]\n🔔 SUBSCRIBE — new episode every week!\n\n#MechLegends #Transformers #RobotHeroes #KidsCartoon #KidsYouTube"
+}

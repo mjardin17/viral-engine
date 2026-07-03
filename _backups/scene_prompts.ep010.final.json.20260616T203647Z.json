@@ -1,0 +1,113 @@
+{
+  "episode_number": 10,
+  "series_name": "Empire Decoded",
+  "topic": "Hannibal's Crossing: Over the Alps and Into Italy",
+  "title": "Hannibal's Crossing: Over the Alps and Into Italy",
+  "rendered": false,
+  "generation": {
+    "gemini_source": "claude-direct (pre-generated ahead of Higgsfield credits)",
+    "chatgpt_source": "claude-direct"
+  },
+  "qa_notes": [
+    "Scene count: 6; total runtime ~55s of narration audio (estimate).",
+    "Direct continuation of episode 8's hook (Hannibal raised on an oath, Carthage rebuilding in Spain).",
+    "Villain-strength check: Rome framed as the dominant land power in the Mediterranean, with a manpower reserve no enemy had ever matched and a record of never losing a war on home soil — making Hannibal's gamble feel impossible. Pass."
+  ],
+  "scenes": [
+    {
+      "scene_number": 1,
+      "title": "Cold Open",
+      "description": "An army of nearly fifty thousand men, thousands of horses, and dozens of war elephants stands at the foot of the Alps — a mountain range no army has ever crossed with anything heavier than a pack mule. Behind them, the largest, wealthiest, most populous power in the western Mediterranean waits, never having lost a war on its own soil.",
+      "narration": "An army of nearly fifty thousand men, thousands of cavalry horses, and dozens of war elephants stood at the foot of the Alps — a mountain range no army in history had crossed with anything heavier than a mule train. On the other side waited Rome: the largest, wealthiest, most populous power in the western Mediterranean, a city that had never lost a war fought on its own soil. The man leading this army across the mountains had sworn, as a child, to bring that streak to an end.",
+      "video_prompt": "Cinematic historical documentary style, Empire Decoded. Epic wide shot of a massive Carthaginian army — tens of thousands of soldiers, cavalry, and war elephants — gathered at the base of towering, snow-capped Alpine peaks, looking up at the impossible terrain ahead. Photoreal detail, dramatic overcast lighting, accurate period costumes and armor, film-grade composition, 16:9.",
+      "duration_sec": 10
+    },
+    {
+      "scene_number": 2,
+      "title": "Setting the Stage",
+      "description": "Rome's strength isn't just its legions — it's its sheer depth. Rome can lose entire armies and simply raise new ones from a population and alliance network larger than any power Carthage has ever fought. Hannibal knows he cannot win a war of attrition; he has to strike at the heart of Italy before Rome can mobilize its full weight.",
+      "narration": "Rome's true weapon wasn't its legions — it was depth. Rome could lose an entire army in a single battle and simply raise another one, drawing on a population and a network of allies larger than any power Carthage had ever faced. Hannibal knew he could never win a long war of attrition against that kind of reserve. His only chance was speed: strike into the heart of Italy before Rome could bring its full weight to bear, and shatter its alliances from within.",
+      "video_prompt": "Cinematic historical documentary style, Empire Decoded. Split composition: on one side, vast Roman recruitment grounds with seemingly endless ranks of new legionaries being equipped and drilled across the Italian countryside, farms and towns visible in the distance. On the other side, Hannibal studying a map by torchlight in a war tent, surrounded by officers, a determined and urgent expression. Photoreal detail, dramatic lighting, accurate period costumes and architecture, film-grade composition, 16:9.",
+      "duration_sec": 10
+    },
+    {
+      "scene_number": 3,
+      "title": "Rising Tension",
+      "description": "The crossing itself becomes a battle against the mountains: hostile tribes attack from the cliffs above, freak early snowstorms bury the path, and narrow ledges collapse under the weight of men, horses, and elephants. Thousands die before a single Roman is even seen.",
+      "narration": "The crossing became a war against the mountains themselves. Hostile tribes rolled boulders down from the cliffs above, ambushing the column in narrow passes. An early snowstorm buried the path in ice. Ledges crumbled under the weight of men, horses, and elephants, sending soldiers tumbling into ravines. By the time Hannibal's army reached the other side, he had lost nearly half his men — and he hadn't fought a single Roman yet.",
+      "video_prompt": "Cinematic historical documentary style, Empire Decoded. Dramatic mountain pass scene, a long column of soldiers, horses, and war elephants struggling along a narrow icy ledge in a snowstorm, boulders and rocks raining down from tribal warriors hidden on the cliffs above, some animals and soldiers slipping toward the edge. Chaotic, perilous atmosphere. Photoreal detail, harsh grey lighting, film-grade composition, 16:9.",
+      "duration_sec": 11
+    },
+    {
+      "scene_number": 4,
+      "title": "The Clash",
+      "description": "Descending into Italy, Hannibal's battered but battle-hardened survivors face a Roman army at the Trebia river — fresh, well-supplied, and confident on home ground. Using the terrain and a hidden ambush force, Hannibal turns Rome's numerical advantage into a trap.",
+      "narration": "Descending into Italy, Hannibal's survivors — exhausted, frostbitten, but battle-hardened — faced a fresh Roman army at the Trebia river, confident on its own home ground. Hannibal lured the Romans across the freezing river at dawn, then sprang a hidden ambush force from the riverbanks, surrounding them. An army that should have crushed Hannibal's remnants was instead shattered in its first real test.",
+      "video_prompt": "Cinematic historical documentary style, Empire Decoded. Cold dawn battle scene at a wide river, Roman legionaries wading across freezing water to attack a smaller Carthaginian force, then Carthaginian cavalry and hidden infantry emerging from concealed positions along the riverbanks to encircle the Romans. War elephants pushing through the chaos. Photoreal detail, cold blue-grey lighting, film-grade composition, 16:9.",
+      "duration_sec": 10
+    },
+    {
+      "scene_number": 5,
+      "title": "Turning Point",
+      "description": "Word of the victory spreads through Italy — for the first time, Rome's allies begin to question whether Rome's reserves are truly endless. Hannibal has done what no enemy commander has ever done: won a battle on Roman soil. Rome's response is to raise even more legions.",
+      "narration": "News of the defeat spread through Italy like wildfire. For the first time, Rome's allies began to wonder whether Rome's endless reserves were really endless. Hannibal had done what no foreign commander had ever done — won a battle on Roman soil. Rome's answer was simple, and terrifying: it raised more legions, and kept coming.",
+      "video_prompt": "Cinematic historical documentary style, Empire Decoded. Wide shot of messengers on horseback riding through Italian towns and allied cities, townspeople gathering anxiously to hear the news. Cut to the Roman Senate chamber, senators in togas debating intensely, then a shot of new legions being raised and marching out of Rome's city gates in even greater numbers than before. Photoreal detail, dramatic lighting, accurate period architecture and costumes, film-grade composition, 16:9.",
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 6,
+      "title": "Legacy",
+      "description": "Hannibal's crossing of the Alps remains one of the most audacious military feats in history — and it was only the beginning. Two years later, at a small town called Cannae, he would inflict the worst defeat in Roman history, against odds that should have made it impossible.",
+      "narration": "Hannibal's crossing of the Alps remains one of the most audacious feats in military history — and it was only the opening move. Two years later, at a small town called Cannae, against an army nearly twice the size of his own, he would inflict the single worst defeat Rome ever suffered. Subscribe to Empire Decoded for the next chapter.",
+      "video_prompt": "Cinematic historical documentary style, Empire Decoded. Final epic shot, Hannibal on horseback looking out over the Italian countryside from a hilltop, his battered but determined army visible behind him descending from the mountains in the background. Map-style overlay shows his route from Spain across the Alps into Italy, with an ominous arrow pointing toward a location labeled for the next battle. Photoreal detail, epic and ominous tone, film-grade composition, 16:9.",
+      "duration_sec": 9
+    }
+  ],
+  "music": {
+    "prompt": "Epic historical documentary score, cinematic orchestral, mountain-crossing survival theme. Begins with a vast, cold, sparse string and wind motif representing the scale of the Alps, builds into a desperate, percussive survival theme with low brass and dissonant strings for the crossing's hardships, shifts into a tense ambush theme for the river battle, and ends on a determined, ominous theme with rising brass foreshadowing Cannae. Instrumental only. Style reference: Hans Zimmer historical trailer score.",
+    "duration_sec": 300
+  },
+  "sound_effects": [
+    {
+      "label": "army_at_alps_base",
+      "prompt": "Vast army camp ambience at the foot of mountains, war elephants trumpeting, horses neighing, soldiers murmuring nervously, cold wind"
+    },
+    {
+      "label": "roman_recruitment_grounds",
+      "prompt": "Busy Roman military recruitment ambience, marching drills, armor being issued and clattering, officers shouting orders, large crowd murmur"
+    },
+    {
+      "label": "alpine_avalanche_ambush",
+      "prompt": "Mountain pass ambience, howling wind and snow, rocks and boulders crashing down a cliffside, shouts of alarm, ice cracking, distant animal cries"
+    },
+    {
+      "label": "river_ambush_battle",
+      "prompt": "Cold river battle ambience, splashing through freezing water, war elephants trumpeting, clashing weapons, shouts echoing across water, chaotic encirclement"
+    },
+    {
+      "label": "senate_debate",
+      "prompt": "Echoing stone chamber ambience, multiple overlapping male voices debating in Latin, gavel-like staff striking floor for order, tense political atmosphere"
+    },
+    {
+      "label": "march_to_cannae_foreshadow",
+      "prompt": "Distant marching army ambience, low ominous drum heartbeat, wind across open countryside, building tension"
+    }
+  ],
+  "character_images": [
+    {
+      "label": "hannibal_adult_reference",
+      "prompt": "Cinematic realistic character design, Hannibal Barca as an adult general in his late twenties, Carthaginian military cloak over Hellenistic-influenced bronze armor, dark hair and beard, intense weathered face with an eye injury scar, archaeology-based North African Punic proportions and dress, full body standing pose, neutral grey studio background, soft even lighting, character reference sheet, front view, no text, no logos, no watermark",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "label": "carthaginian_war_elephant_reference",
+      "prompt": "Cinematic realistic design reference, North African war elephant with light Carthaginian armor and a mahout rider, full body side profile in a snowy mountain setting, photoreal detail, neutral grey studio background, soft even lighting, no text, no logos, no watermark",
+      "aspect_ratio": "4:3"
+    },
+    {
+      "label": "roman_legionary_reference",
+      "prompt": "Cinematic realistic character design, mid-Republic Roman legionary, bronze helmet, chainmail armor, large oval shield with Republic insignia, gladius and pilum, archaeology-based proportions and dress, full body standing pose, neutral grey studio background, soft even lighting, character reference sheet, front view, no text, no logos, no watermark",
+      "aspect_ratio": "3:4"
+    }
+  ]
+}

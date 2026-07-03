@@ -1,0 +1,327 @@
+{
+  "channel": "GG",
+  "episode_number": 18,
+  "episode_id": "GG_EP018",
+  "title": "Hastings 1066: The Arrow That Forged a Nation",
+  "subtitle": "October 14, 1066 \u2014 The Last Successful Invasion of Britain",
+  "tagline": "King Harold had just beaten one Viking army. Nine days later he marched 250 miles to fight another. He almost won.",
+  "duration_target_sec": 1120,
+  "viral_hook": "Harold had just beaten a Viking king 250 miles away. He marched his exhausted army south to fight William. One arrow ended everything.",
+  "youtube_title": "Battle of Hastings 1066: The Day Britain Became England",
+  "lesson": "Winning the first battle brilliantly then failing to rest before the second is how empires are lost.",
+  "highlight_scene": 13,
+  "scenes": [
+    {
+      "scene_number": 1,
+      "type": "cold_open",
+      "title": "The Year Three Kings Died",
+      "duration_sec": 48,
+      "narration": "1066 is the most famous year in English history. It began with King Edward the Confessor dying childless on January 5, setting off a crisis that would end with Britain being fought over by three men: Harald Hardrada of Norway, who claimed England by right of ancient treaty; William, Duke of Normandy, who claimed Edward had promised him the throne; and Harold Godwinson, Earl of Wessex, who was crowned king by the English nobles the day after Edward died. By the end of October, two of the three claimants were dead. England belonged to the third. It would never be the same. The England that emerged from 1066 spoke French in its courts and Latin in its churches and Old English in its fields, and from that collision, the English language was born.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The year 1066 opening: King Edward the Confessor dying in his palace, his crown contested. Three claimants visualized: Harald Hardrada the Viking, William of Normandy the Norman duke, Harold Godwinson the English earl. A map showing three armies converging on England from different directions. 16:9.",
+      "bg_colors": [
+        "#1A1A2E",
+        "#C9A227",
+        "#8B1A1A"
+      ]
+    },
+    {
+      "scene_number": 2,
+      "type": "context",
+      "title": "Who Owned England?",
+      "duration_sec": 46,
+      "narration": "England in 1066 was a wealthy, organized kingdom with sophisticated law, an efficient tax system, and a competent professional army \u2014 the huscarls, elite Danish-style warriors who were among the best heavy infantry in Europe. But its succession law was unclear. Edward the Confessor had apparently promised the throne to multiple people: his cousin William of Normandy during a visit in 1051, and Harold Godwinson on his deathbed. Harold's claim was the strongest in English law \u2014 he was chosen by the Witan, the council of nobles \u2014 but William believed his promise was binding, and the Pope agreed with him. William received papal blessing for his invasion. He was not just a conqueror. He was, in his own telling, a rightful king recovering what was his.",
+      "visual_prompt": "Gods & Glory cinematic documentary. England in 1066: a prosperous, ordered kingdom. The competing claims visualized \u2014 William's promise of 1051, Harold's deathbed appointment, the Witan's vote. The Pope's blessing of William's invasion: the papal banner William carried to Hastings. The collision of Norman, Viking, and English claims to one crown. 16:9.",
+      "bg_colors": [
+        "#1A1A2E",
+        "#8B4500",
+        "#C9A227"
+      ]
+    },
+    {
+      "scene_number": 3,
+      "type": "character_intro",
+      "title": "Harold Godwinson \u2014 The English King",
+      "duration_sec": 46,
+      "narration": "Harold Godwinson was perhaps the most capable English commander of his generation. His family had effectively run England for decades \u2014 his father Godwin was the most powerful earl in the kingdom. Harold himself had campaigned brilliantly in Wales, subduing the Welsh king Gruffydd ap Llywelyn. He was a professional soldier and a political operator. What he was not was a man with much time. He was crowned on January 6, 1066, spent the spring and summer watching the Channel for Norman ships, then received news in September that Harald Hardrada had landed in the north with a Norwegian army. Harold force-marched his army three hundred miles in four days and defeated Hardrada at Stamford Bridge.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Harold Godwinson \u2014 powerful, experienced, confident \u2014 being crowned at Westminster. His brilliant campaign in Wales. Then the news arriving: Hardrada has landed in the north. Harold's expression changing from king to general. The force-march beginning: England's huscarls moving north at speed. 16:9.",
+      "bg_colors": [
+        "#1A1A2E",
+        "#C9A227",
+        "#8B4500"
+      ]
+    },
+    {
+      "scene_number": 4,
+      "type": "historical",
+      "title": "Stamford Bridge \u2014 The Viking Battle",
+      "duration_sec": 47,
+      "narration": "The Battle of Stamford Bridge on September 25, 1066 was one of the most complete English victories of the medieval era. Harald Hardrada and his Norwegian army \u2014 estimated at nine to fifteen thousand \u2014 were met by Harold Godwinson's army at a crossing over the River Derwent. The Norwegians were caught without their armor, which was with their ships three miles away. Harold offered Hardrada 'seven feet of English earth or as much more as he is taller than other men.' Hardrada refused. The battle was devastating for the Norwegians. Hardrada was killed by an arrow in the throat. The Norwegian army was virtually destroyed. Harold had fought one of the greatest battles in English history. Three days later, the wind changed in the Channel. William's fleet sailed.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Stamford Bridge: the Norwegian army caught without armor at the river crossing. Harold's offer to Hardrada \u2014 seven feet of earth. Hardrada's proud refusal. The battle: English huscarls destroying the Norwegian infantry. Hardrada killed by an arrow. Then, three days later: William's fleet in the Channel, sails catching the wind. 16:9.",
+      "bg_colors": [
+        "#8B1A1A",
+        "#C9A227",
+        "#1A1A2E"
+      ]
+    },
+    {
+      "scene_number": 5,
+      "type": "character_intro",
+      "title": "William the Conqueror",
+      "duration_sec": 46,
+      "narration": "William, Duke of Normandy, was one of the most formidable rulers of the eleventh century. Born illegitimate \u2014 his father Duke Robert I and his mother Herleva were not married \u2014 he had survived assassination attempts as a child, subdued Norman barons who refused to accept his rule, and built Normandy into the most militarily advanced state in northern Europe. The Normans \u2014 descendants of Vikings who had settled in France in the tenth century \u2014 had adopted French culture, the French language, and the most advanced military technology of their time: castle-building and heavy cavalry tactics. William was fifty-nine when he fought at Hastings \u2014 or forty, depending on which source you believe. He was experienced, calculating, and utterly determined.",
+      "visual_prompt": "Gods & Glory cinematic documentary. William of Normandy \u2014 the bastard who survived assassination attempts as a child and became the most powerful duke in France. His Norman knights: cavalry in chain mail, the most advanced warriors of the era. William surveying his fleet preparing to cross the Channel. The determination of a man who has been fighting all his life. 16:9.",
+      "bg_colors": [
+        "#1A1A2E",
+        "#C9A227",
+        "#4A3728"
+      ]
+    },
+    {
+      "scene_number": 6,
+      "type": "historical",
+      "title": "The Fateful March South",
+      "duration_sec": 47,
+      "narration": "Harold received news of William's landing on September 29. His army was still recovering from Stamford Bridge. His advisors \u2014 including his brother Gyrth \u2014 urged him to wait: let the Norman army exhaust itself in England while Harold rested, recruited, and chose his ground. Harold refused. The Norman army was ravaging his personal estates in Sussex. He may have felt political pressure to be seen acting. He may have been overconfident after Stamford Bridge. He force-marched his army back to London \u2014 two hundred fifty miles in four days \u2014 paused for a week, and then marched south to confront William. His army was exhausted. Many of his best huscarls were dead or injured. He could have waited. He didn't.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The news arriving: William has landed in the south. Harold's advisor Gyrth pleading \u2014 wait, rest, recover. Harold's face: determined but perhaps too confident. The march south beginning: the same army that fought at Stamford Bridge, now walking another two hundred fifty miles. Exhaustion visible in their faces. 16:9.",
+      "bg_colors": [
+        "#4A3728",
+        "#8B1A1A",
+        "#1A1A2E"
+      ]
+    },
+    {
+      "scene_number": 7,
+      "type": "battle",
+      "title": "Senlac Hill",
+      "duration_sec": 47,
+      "narration": "Harold chose his ground at Senlac Hill \u2014 a ridge about seven miles north of Hastings. He formed his army in the shield wall at the top of the ridge: huscarls, the elite professionals, in the front line; the fyrd, the militia, behind. The position was strong. To reach Harold, William had to charge uphill into the shield wall. The Norman cavalry and infantry attacked repeatedly through the morning. The English shield wall held. Norman archers could not shoot effectively uphill. The cavalry broke against the wall. By midday, the English were winning. Then the Normans retreated \u2014 whether deliberately or in real panic, sources disagree \u2014 and some English soldiers broke formation to pursue them. The Normans turned and cut them down.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Harold's shield wall on Senlac Hill \u2014 the English warriors in tight formation on the ridge crest. Norman cavalry charging uphill and breaking against the wall. Arrows falling short. The English position looking impregnable. Then the Norman 'retreat' \u2014 real or feigned \u2014 and English fyrdmen breaking ranks to chase. The Norman cavalry turning. 16:9.",
+      "bg_colors": [
+        "#8B1A1A",
+        "#4A3728",
+        "#C9A227"
+      ]
+    },
+    {
+      "scene_number": 8,
+      "type": "battle",
+      "title": "The Feigned Retreat",
+      "duration_sec": 47,
+      "narration": "The feigned retreat \u2014 deliberately pulling back to draw an enemy off fortified ground \u2014 was a classic Norman cavalry tactic, used at the Battle of Arques in 1053 and elsewhere. Whether it was deliberate at Hastings or whether a genuine panic happened to produce the same result is debated. What is not debated is the effect: a section of the English fyrd pursued the retreating Normans, was cut off in the open ground, and was destroyed by cavalry. Gaps appeared in the shield wall. The Norman cavalry could now reach the ridge. The battle that had been English was now in doubt. The wall was still holding its core, but it was no longer the complete defense it had been in the morning.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The feigned retreat in detail: Norman cavalry pulling back, English militia breaking ranks to pursue, Norman cavalry turning and cutting them down in the open field. The gaps in the shield wall becoming visible. William watching, reading the battle, seeing his opportunity. 16:9.",
+      "bg_colors": [
+        "#8B1A1A",
+        "#C9A227",
+        "#4A3728"
+      ]
+    },
+    {
+      "scene_number": 9,
+      "type": "battle",
+      "title": "The Afternoon Assault",
+      "duration_sec": 46,
+      "narration": "Through the afternoon, the Norman attacks intensified. William ordered his archers to shoot at a higher angle \u2014 arching arrows into the sky to fall on the English from above rather than shooting directly into the shield wall. He was probing for a weakness, trying new approaches, keeping up the pressure. The English held, but they were exhausted. They had marched three hundred miles north to Stamford Bridge, fought a major battle, marched three hundred miles back south, and had now been fighting all day on a ridge in Sussex. The wall was thinner than it had been in the morning. The huscarls who held it were tired. And somewhere on the ridge, Harold was still in command.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The afternoon battle: Norman archers shooting at a high angle, arrows falling from above. The English shield wall thinner now. Huscarls visibly exhausted. Hours of fighting visible in the battered shields and wounded men. But the wall still holding. Harold visible on the ridge, surrounded by his bodyguard. 16:9.",
+      "bg_colors": [
+        "#8B1A1A",
+        "#4A3728",
+        "#2C1A00"
+      ]
+    },
+    {
+      "scene_number": 10,
+      "type": "pivotal_action",
+      "title": "The Arrow",
+      "duration_sec": 47,
+      "narration": "The exact manner of Harold's death has been debated since Domesday. The Bayeux Tapestry shows a figure with an arrow in his eye above the words 'Harold Rex Interfectus Est' \u2014 King Harold is killed. Some historians believe the arrow-in-the-eye is a later interpolation and Harold died in a cavalry charge. The balance of medieval sources suggests an arrow hit him in the head, possibly the eye, around the time when the shield wall began to break. What is certain is that when Harold died, the English resistance collapsed. Without the king, the wall broke. The English ran. The Normans pursued and killed as they fled. Night came down on a field littered with English dead.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The Bayeux Tapestry image: the figure with an arrow in the eye, 'Rex Harold Interfectus Est.' The chaos of Harold's fall on the ridge. The English shield wall, which had held all day, breaking as word spread that the king was dead. The pursuit in the gathering dark. The field at nightfall. 16:9.",
+      "bg_colors": [
+        "#8B1A1A",
+        "#1A1A2E",
+        "#4A3728"
+      ]
+    },
+    {
+      "scene_number": 11,
+      "type": "aftermath",
+      "title": "Christmas Day 1066",
+      "duration_sec": 46,
+      "narration": "William was crowned King of England at Westminster Abbey on Christmas Day 1066. He was reportedly so moved \u2014 or so overwhelmed \u2014 that he trembled during the ceremony. The Norman guards outside the Abbey, hearing the shouts of acclamation from inside, thought it was a riot and began burning buildings nearby. The coronation of the last successful conqueror of England began with arson. William spent the next five years suppressing English revolts, building castles, and replacing the English nobility with Normans. By 1086, most English land was in Norman hands. The Domesday Book \u2014 William's comprehensive survey of his new kingdom \u2014 is one of the most remarkable administrative documents in medieval history.",
+      "visual_prompt": "Gods & Glory cinematic documentary. William's coronation at Westminster Abbey on Christmas Day 1066 \u2014 the trembling new king, the Norman guards burning buildings outside. Then the transformation: English nobles replaced by Normans, castles rising across the landscape, the Domesday Book being compiled. England changing irrevocably. 16:9.",
+      "bg_colors": [
+        "#C9A227",
+        "#1A1A2E",
+        "#4A3728"
+      ]
+    },
+    {
+      "scene_number": 12,
+      "type": "historical",
+      "title": "The Harrying of the North",
+      "duration_sec": 46,
+      "narration": "William's suppression of rebellion in northern England in 1069-70 became one of the most notorious acts of medieval violence in British history: the Harrying of the North. Faced with persistent rebellion in Yorkshire and surrounding areas, William ordered the systematic destruction of crops, livestock, food stores, and villages across a vast area. Estimates of the dead vary from tens of thousands to over one hundred thousand. Some sources suggest the north of England took a generation to recover. The Domesday Book, compiled sixteen years later, shows large areas of the north as waste \u2014 uninhabited, uncultivated, worthless. William was capable of extraordinary administrative sophistication and extraordinary brutality, sometimes in the same campaign.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The Harrying of the North: villages burning, crops destroyed, livestock slaughtered. The brutal campaign that cleared northern England of resistance. Then the Domesday Book showing the north years later as 'waste' \u2014 the scale of destruction visible in the administrative record. The two faces of William: administrator and destroyer. 16:9.",
+      "bg_colors": [
+        "#8B1A1A",
+        "#4A3728",
+        "#2C1A00"
+      ]
+    },
+    {
+      "scene_number": 13,
+      "type": "dramatic",
+      "title": "What the Normans Did to English",
+      "duration_sec": 47,
+      "narration": "The Norman Conquest did something no military victory in English history had done before or has done since: it changed the English language. Old English, the language of Harold and his huscarls, became the language of the lower classes \u2014 servants, farmers, craftsmen. Norman French became the language of law, government, and the nobility. For two centuries, England was linguistically stratified: the cow in the field was Old English, but on the table it became beef, from Norman French b\u0153uf. Pig became pork. Sheep became mutton. The words for working and farming stayed English; the words for eating and ruling went Norman. Modern English is the result of those two languages grinding against each other for three hundred years.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The linguistic stratification of Norman England: Old English peasants in the fields, Norman French lords in the castle. The pairs of words: cow/beef, pig/pork, sheep/mutton. The two languages coexisting and colliding. Then the English that emerged from the collision \u2014 richer, stranger, more versatile than either parent. 16:9.",
+      "bg_colors": [
+        "#C9A227",
+        "#1A1A2E",
+        "#2C3E1A"
+      ]
+    },
+    {
+      "scene_number": 14,
+      "type": "historical",
+      "title": "The Bayeux Tapestry",
+      "duration_sec": 45,
+      "narration": "The Bayeux Tapestry \u2014 not actually a tapestry but an embroidered cloth seventy meters long \u2014 is the most detailed visual account of the Norman Conquest. Commissioned by Bishop Odo of Bayeux, William's half-brother, probably within twenty years of Hastings, it depicts the entire story from Edward's reign through the battle in vivid, detailed scenes. It is preserved in Bayeux, Normandy, where it has been since the Middle Ages, and is one of the great historical documents of the medieval world. It was almost certainly embroidered by English women \u2014 the conquered making a monument to their conquest. That irony has never been fully resolved.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The Bayeux Tapestry unrolling \u2014 the seventy meters of embroidered history. Key scenes: Harold's oath, the Norman fleet, the battle, Harold's death. The detail and vitality of the images. The fact that it was probably made by English embroiderers: the conquered recording their own defeat. 16:9.",
+      "bg_colors": [
+        "#C9A227",
+        "#8B4500",
+        "#1A1A2E"
+      ]
+    },
+    {
+      "scene_number": 15,
+      "type": "legacy",
+      "title": "The Castle Comes to England",
+      "duration_sec": 45,
+      "narration": "Before 1066, England had virtually no castles. Within a generation of the Conquest, there were over five hundred. The Norman castle \u2014 motte-and-bailey initially, then stone keep \u2014 was a technology of domination. It allowed a small Norman garrison to control a hostile English population. The castle changed the English landscape, the English legal system, and English society. Every English city with a 'castle' in its name or its geography was changed by this Norman technology. The Tower of London \u2014 built by William himself \u2014 still stands. It was built not to defend England from outside invasion, but to overawe the city of London from within.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The Norman castle coming to England: motte-and-bailey constructions rising across the landscape. The Tower of London being built. A map showing five hundred castle sites appearing within a generation. The castle as a technology of control. The Norman garrison looking down on the English town below. 16:9.",
+      "bg_colors": [
+        "#4A3728",
+        "#1A1A2E",
+        "#C9A227"
+      ]
+    },
+    {
+      "scene_number": 16,
+      "type": "historical",
+      "title": "The Domesday Book",
+      "duration_sec": 46,
+      "narration": "In 1086, William ordered the most comprehensive survey of a medieval kingdom ever attempted. Commissioners fanned out across England and recorded every landowner, every hide of land, every ox, every pig, every mill, every fishpond. The results were compiled into the Domesday Book \u2014 named by the English because they said the record was as inescapable as the Day of Judgment. It is still preserved in Kew. You can look up medieval villages in it today. It revealed that twenty years after Hastings, England's wealth was overwhelmingly concentrated in Norman hands. The survey was how William knew what he owned. What he owned was a country.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Domesday commissioners across England \u2014 scribes, local officials, the systematic survey of everything. The Domesday Book itself: the massive medieval document. Modern archivists handling it. The names of English villages visible, many still existing. William's administrative genius made concrete: he counted everything he had taken. 16:9.",
+      "bg_colors": [
+        "#C9A227",
+        "#4A3728",
+        "#1A1A2E"
+      ]
+    },
+    {
+      "scene_number": 17,
+      "type": "modern_connection",
+      "title": "The Last Invasion",
+      "duration_sec": 45,
+      "narration": "Britain has not been successfully invaded since October 14, 1066. There have been attempts: the Spanish Armada in 1588, various Jacobite efforts, Napoleon's never-launched invasion plan, Hitler's Operation Sea Lion. None succeeded. The Channel, the Royal Navy, and \u2014 at critical moments \u2014 luck and weather have defended the island since Hastings. Britain's island identity \u2014 the consciousness of being separate, the instinct of independence that still shapes British politics \u2014 is in part a product of the fact that the last time someone successfully invaded, it changed the language. The memory of that change, even unconsciously, is part of what makes invasion unthinkable.",
+      "visual_prompt": "Gods & Glory cinematic documentary. A timeline of failed invasions of Britain after 1066: the Spanish Armada shattering in storms, Napoleon's troops on the coast of Calais looking north, Hitler's invasion plans never launched. The Channel as moat. The island consciousness that Hastings created and no subsequent invader has broken. 16:9.",
+      "bg_colors": [
+        "#1A1A2E",
+        "#C9A227",
+        "#4A3728"
+      ]
+    },
+    {
+      "scene_number": 18,
+      "type": "analysis",
+      "title": "Harold's Mistakes",
+      "duration_sec": 46,
+      "narration": "Harold Godwinson made two critical decisions at Hastings. First, he attacked before his army was fully rested and reinforced \u2014 ignoring his brother Gyrth's advice. Second, during the battle, his army broke formation to pursue the Norman retreat, which may have been feigned. The second failure may have been Harold's inability to control the fyrd \u2014 the militia \u2014 who were less disciplined than his huscarls. Or it may have been the result of his elite huscarls, already depleted by Stamford Bridge, being too thin to hold the wall all the way down both flanks. Harold's biggest mistake may have been winning too brilliantly at Stamford Bridge and believing he could do it again before he was ready.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Harold's strategic decisions analyzed: the too-quick march south, the understrength army, the fyrd breaking formation. The comparison with Stamford Bridge \u2014 what worked there that failed here. The way overconfidence after a brilliant victory leads to catastrophe in the next battle. 16:9.",
+      "bg_colors": [
+        "#1A1A2E",
+        "#C9A227",
+        "#8B1A1A"
+      ]
+    },
+    {
+      "scene_number": 19,
+      "type": "historical",
+      "title": "The Norman Legacy",
+      "duration_sec": 46,
+      "narration": "The Norman Conquest reorganized England from top to bottom. The Normans introduced feudalism \u2014 holding land in exchange for military service \u2014 which became the organizing principle of medieval English society. They replaced the English Church hierarchy with Norman bishops and abbots. They replaced English common law with Norman legal traditions, though the common law eventually reasserted itself. The Magna Carta of 1215 \u2014 signed by King John, a Norman-descended king \u2014 was a product of the tension between Norman kingship and English nobility that went back to the Conquest. Parliamentary democracy, common law, trial by jury \u2014 the institutions that England gave to the modern world \u2014 were forged in the centuries of Norman-English collision that started on a ridge in Sussex.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The Norman transformation of England: feudalism visualized, Norman bishops in English cathedrals, the law courts. Then the chain forward: Magna Carta, Parliament, Common Law. The Norman-English collision producing the institutions that shaped the modern world. Hastings as the origin point. 16:9.",
+      "bg_colors": [
+        "#C9A227",
+        "#1A1A2E",
+        "#4A3728"
+      ]
+    },
+    {
+      "scene_number": 20,
+      "type": "legacy",
+      "title": "Battle Abbey",
+      "duration_sec": 44,
+      "narration": "William built Battle Abbey on the site of Hastings \u2014 its altar placed, according to tradition, on the spot where Harold fell. He was ordered to do so by the Pope as penance for the deaths in the invasion. Battle Abbey stood until Henry VIII dissolved it in 1537. The ruins are still there \u2014 you can stand at the altar marker that supposedly marks where Harold died. The ridge where the English shield wall stood is still recognizable. The town that grew around the abbey is still called Battle. England has been building its identity around this one day for nearly a thousand years.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Battle Abbey \u2014 built by William's command on the ridge of Senlac Hill. The altar placed where Harold fell. The ruins today: visitors walking the ridge where the shield wall stood. The town of Battle below. A thousand years of memory concentrated in one Sussex field. 16:9.",
+      "bg_colors": [
+        "#4A3728",
+        "#8B8B6B",
+        "#1A1A2E"
+      ]
+    },
+    {
+      "scene_number": 21,
+      "type": "analysis",
+      "title": "Was William Right?",
+      "duration_sec": 45,
+      "narration": "William believed he had a rightful claim to England. The papacy agreed with him. Harold had, according to William, sworn an oath on holy relics to support William's claim \u2014 the oath Harold denied ever making, or claimed was made under duress. The legitimacy of the Conquest rested on this disputed oath and on the outcome of a battle. Might made right, as it usually does in such cases. But William was a serious, effective ruler who built institutions that lasted \u2014 the common law, the Domesday survey, the feudal organization. England under William was less free and more Norman than it had been under Harold. It was also more organized, more efficiently taxed, and more connected to European affairs than it would otherwise have been.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The disputed oath \u2014 Harold at William's court, swearing on holy relics. Whether Harold understood what he was swearing, whether the oath was valid. William's justification and the papacy's blessing. The moral complexity: a conquest justified by a disputed promise, legitimate by might. 16:9.",
+      "bg_colors": [
+        "#1A1A2E",
+        "#C9A227",
+        "#4A3728"
+      ]
+    },
+    {
+      "scene_number": 22,
+      "type": "analysis",
+      "title": "1066 and All That",
+      "duration_sec": 46,
+      "narration": "The year 1066 is the one date that virtually every British person knows. It sits at the center of English national consciousness as the definitive before-and-after moment. Before 1066: Anglo-Saxon England, the world of Beowulf and Alfred the Great and the Old English Chronicle. After 1066: the England of Norman kings, the Plantagenets, Shakespeare, the Common Law, the language that became a world language. The boundary is real. The England of 1065 and the England of 1100 were genuinely different countries. The battle on Senlac Hill was the hinge that separated them.",
+      "visual_prompt": "Gods & Glory cinematic documentary. 1066 as the hinge of English history: before \u2014 the world of Alfred the Great, Beowulf, Anglo-Saxon England. After \u2014 Norman castles, French law courts, the language transforming. The single year as a genuine before-and-after. The hinge between two Englands. 16:9.",
+      "bg_colors": [
+        "#C9A227",
+        "#1A1A2E",
+        "#2C3E1A"
+      ]
+    },
+    {
+      "scene_number": 23,
+      "type": "summary",
+      "title": "The Fourteen-Hour Battle",
+      "duration_sec": 46,
+      "narration": "On October 14, 1066, an English army held a ridge in Sussex for approximately fourteen hours against a Norman army that had every military advantage except the ground. They held until their king died. Then they broke. The world that came from that break \u2014 the English language, the Common Law, parliamentary democracy, the idea of Britain itself \u2014 was shaped by the collision of Norman and English cultures over the three centuries that followed. Harold Godwinson made two mistakes and died for them. William the Conqueror was ruthless, brilliant, and lucky. England became what it became because of a ridge, an arrow, and an October afternoon.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Senlac Hill at dusk on October 14, 1066 \u2014 the English dead on the ridge, William's Normans moving through the twilight. The shield wall broken, the king dead, England changed. Then the world that followed: the language, the law, the institutions. Everything that came from that one afternoon. 16:9.",
+      "bg_colors": [
+        "#1A1A2E",
+        "#4A3728",
+        "#C9A227"
+      ]
+    },
+    {
+      "scene_number": 24,
+      "type": "outro_cta",
+      "title": "The Day Everything Changed",
+      "duration_sec": 44,
+      "narration": "Subscribe to Gods and Glory \u2014 the days that made the world you live in, told from inside the moment they happened. Next episode: The Divine Wind \u2014 how two typhoons destroyed the Mongol fleet and saved Japan, giving the world the word kamikaze.",
+      "visual_prompt": "Gods & Glory cinematic documentary. A final image: the ridge at Battle, Sussex \u2014 empty, peaceful, the morning sun on the slope where the shield wall stood. The quiet after the storm of history. Channel logo. Subscribe prompt. The last successful invasion of Britain. 16:9.",
+      "bg_colors": [
+        "#1A1A2E",
+        "#C9A227",
+        "#4A3728"
+      ]
+    }
+  ]
+}

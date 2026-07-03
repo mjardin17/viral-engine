@@ -1,0 +1,20 @@
+[
+  {
+    "episode_id": "GG_EP026",
+    "title": "King Caesar",
+    "scene_count": 14,
+    "total_duration_sec": 690,
+    "queued_at": "2026-06-27T17:27:25.275056",
+    "status": "pending",
+    "has_partial_output": false
+  },
+  {
+    "episode_id": "LO_EP001",
+    "title": "Little Zeus Gets His Thunderbolt",
+    "scene_count": 24,
+    "total_duration_sec": 1065,
+    "queued_at": "2026-06-27T17:27:25.277268",
+    "status": "pending",
+    "has_partial_output": false
+  }
+]

@@ -1,0 +1,110 @@
+{
+  "channel": "ML",
+  "episode_number": 2,
+  "episode_id": "ML_EP002",
+  "season": 1,
+  "title": "First Contact",
+  "tagline": "They won the skirmish. Xerxes didn't send his best.",
+  "hook_line": "The team just destroyed the advance force. ELDER-7 is not celebrating. There's a reason Xerxes sent scouts first.",
+  "characters": ["BLAZE", "GRANITE", "NOVA", "STORM", "RUMBLE", "ELDER-7"],
+  "scenes": [
+    {
+      "scene_number": 1,
+      "type": "hook",
+      "title": "The Victory That Isn't",
+      "narration": "They won. BLAZE destroyed the advance unit in 4 minutes. The team is operational. ELDER-7 is not satisfied.",
+      "visual_prompt": "Aftermath of a destroyed Persian advance force — mechanical wreckage (ancient-modern fusion design), BLAZE standing in the center amber core bright, team assembled around the victory, ELDER-7 in background watching at his angle, his expression unchanged, data pad already updating, mood: the team celebrates while the oldest member calculates what the win actually means",
+      "bg_colors": ["#1a0800", "#2d1500"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 2,
+      "type": "reveal",
+      "title": "NOVA's Count",
+      "narration": "NOVA's panels open. She counts what they destroyed. Then she counts what that represents as a percentage of Xerxes's total force. The number is 0.003%.",
+      "visual_prompt": "NOVA (cyan mech) with holographic panels showing the math — destroyed units on one panel, total army size on another, the percentage calculation: 0.003%, her expression unchanged as she processes this, the team seeing the panels and going quiet, RUMBLE still holding plasma cannon mid-celebration, mood: the number that reframes everything",
+      "bg_colors": ["#001a1a", "#002233"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 3,
+      "type": "reveal",
+      "title": "Why Xerxes Sent Scouts",
+      "narration": "ELDER-7: 'Xerxes doesn't send scouts to win. He sends scouts to learn. He now knows our six signatures, our response time, and our formation pattern.'",
+      "visual_prompt": "ELDER-7's data pad showing a tactical analysis — the team's battle as Xerxes saw it: six colored signatures moving in pattern, response time logged, formation geometry mapped, the advance force wasn't the mission — the observation was, ELDER-7 partially angled away as always, red energy lines steady and deliberate, mood: the realization that winning the skirmish lost something else",
+      "bg_colors": ["#1a0000", "#0d0000"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 4,
+      "type": "action",
+      "title": "STORM's Counter",
+      "narration": "STORM doesn't wait for the briefing to end. She's already rewriting her infiltration signature. If Xerxes logged their patterns, she needs a new one.",
+      "visual_prompt": "STORM (purple mech) in rapid reconfiguration — EM arcs shifting frequency, stealth coating cycling to a new signature, she moves while others are still processing the information, purple lightning in new configuration, speed-blur on her adjustments, BLAZE watching her work, NOVA tracking the new signature on her panels, mood: the team's fastest adapter already adapting",
+      "bg_colors": ["#14001a", "#1a0026"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 5,
+      "type": "action",
+      "title": "RUMBLE's Objection",
+      "narration": "RUMBLE: 'So Xerxes learned our patterns. Let him. We'll go through anyway.' GRANITE, without looking up: 'He'll build a wall specifically designed to stop you.'",
+      "visual_prompt": "RUMBLE (crimson red, 28m) facing GRANITE (slate blue, 12m) — the size difference notable, RUMBLE towering over GRANITE but GRANITE unmoved, GRANITE's posture solid as the conversation, cryo-sleeve slightly active as if his position generates its own cold, RUMBLE's six weapon loadouts all visible, mood: the argument that shows the team's internal dynamic",
+      "bg_colors": ["#1a0000", "#001428"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 6,
+      "type": "reveal",
+      "title": "The Main Force Moves",
+      "narration": "NOVA: 'He already has.' Seventeen panels open. The main force is moving. Not a skirmish wave. The organized advance of a 2.5 million-strong army.",
+      "visual_prompt": "NOVA's 17 holographic panels all active simultaneously showing the main Persian force beginning its advance — the scale overwhelming, dust clouds visible from the movement of 2.5 million, cavalry flanks extending beyond visible range, siege equipment rolling, naval formation in distance, the team in foreground looking at what's coming, mood: the first real look at the actual enemy",
+      "bg_colors": ["#001a1a", "#001a00"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 7,
+      "type": "emotional",
+      "title": "ELDER-7 Checks the Archive",
+      "narration": "ELDER-7 finds the archive entry for the last team that saw this formation advance. He doesn't read it aloud. He doesn't need to.",
+      "visual_prompt": "Close-up on ELDER-7's data pad — archive entry visible: a team designation, an encounter with this same formation, single-word result: FALLEN, ELDER-7's massive thumb scrolling past it without pausing, finding the next entry — another team, same result — then closing the archive, his red eye scanning the team below him, mood: the knowledge he carries that they don't yet",
+      "bg_colors": ["#0d0000", "#1a0800"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 8,
+      "type": "action",
+      "title": "BLAZE's Call",
+      "narration": "BLAZE: 'NOVA, I need a first-contact point. Somewhere we choose the terms.' NOVA: 'There are four viable positions. Three end badly.' BLAZE: 'Give me the fourth.'",
+      "visual_prompt": "BLAZE and NOVA in rapid tactical exchange — NOVA's panels highlighting one position on the advancing army's flank, a narrow channel between two formations where the team has the terrain advantage, BLAZE's amber core pulsing with decision, the rest of the team orienting to the plan, ELDER-7 watching from above as always, mood: the leader choosing the fourth option",
+      "bg_colors": ["#1a0800", "#001a1a"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 9,
+      "type": "action",
+      "title": "The Team Moves",
+      "narration": "Six mechs. One direction. For the first time, the advance is coordinated. STORM flanks. NOVA tracks. GRANITE anchors. RUMBLE drives. BLAZE leads. ELDER-7 watches from above.",
+      "visual_prompt": "Team in coordinated advance — aerial view from ELDER-7's orbital drone perspective, six color signatures moving in precise formation: STORM streaking ahead in stealth mode (purple signature), NOVA holding mid-position with panels active (cyan corona), GRANITE moving solidly on the left (slate blue), RUMBLE driving from the right with war hammer ready (crimson), BLAZE at the point (orange), ELDER-7's drone eye in the corner of the frame, mood: the first coordinated movement",
+      "bg_colors": ["#0d0d14", "#1a1400"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 10,
+      "type": "climax",
+      "title": "Xerxes Watches",
+      "narration": "On his command platform, elevated above 2.5 million soldiers, Xerxes observes. He makes a notation. The team just told him exactly what they can do together. He is already building the counter.",
+      "visual_prompt": "Elevated shot of XERXES on his command platform — Persian imperial regalia, absolute composure, not watching the battle with urgency but with the stillness of total certainty, a commander making a notation on a scroll, behind him: the vast army, ahead of him: six colored signatures visible in the distance like sparks against his ocean, his expression: not impressed, not threatened — calculating, mood: the villain who is three moves ahead",
+      "bg_colors": ["#1a0800", "#2d0000"],
+      "duration_sec": 9
+    }
+  ],
+  "viral_hook": "They destroyed the advance force. NOVA calculated what that represents as a percentage of Xerxes's total army: 0.003%. Xerxes sent the scouts to learn their patterns. He already knows how to stop them.",
+  "highlight_scene": 2,
+  "highlight_note": "0.003%. The number that reframes the 'victory' of EP001 in a single stat. Maximum shareability.",
+  "short_title": "First Contact",
+  "rewatch_bait": "Xerxes's notation in scene 10 — rewatchers will see he marks NOVA's panel formation specifically. In EP005, he builds a counter to it exactly.",
+  "youtube_title": "MECH LEGENDS EP2 — First Contact | They Won. Xerxes Learned 0.003% Of His Army Just Told Him Everything.",
+  "lesson": "Winning a small battle can lose a bigger one. What you reveal matters as much as what you destroy.",
+  "arc_notes": "EP002 establishes the tactical intelligence layer — Xerxes is not just an overwhelming force, he's an overwhelming MIND. STORM's instant adaptation and NOVA's 0.003% calculation set up the team's intelligence advantage. Xerxes's notation at the end is the season's central threat: he adapts faster than armies."
+}

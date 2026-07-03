@@ -1,0 +1,145 @@
+{
+  "channel": "Little Olympus",
+  "episode_number": 5,
+  "episode_id": "LO_EP005",
+  "title": "The First Olympic Games",
+  "tagline": "Achilles is the fastest kid alive. He also forgot that racing is supposed to be fun.",
+  "duration_target_min": 5,
+  "aesthetic": {
+    "color_grade": "bright_kids_cartoon",
+    "primary_colors": ["#FFD700", "#00BFFF", "#FF6B35", "#90EE90"],
+    "font_style": "rounded_chunky_bold",
+    "music_style": "upbeat_kids_adventure",
+    "narrator_tone": "warm_playful_encouraging"
+  },
+  "characters": {
+    "focus_hero": {
+      "name": "Young Achilles",
+      "role": "DEBUT EPISODE. Fastest kid on Olympus. This episode he learns that being fastest doesn't mean winning at everything.",
+      "visual": "Tall, lean, golden blonde windswept hair, amber eyes, sky blue athletic tunic with silver trim, speed-sparkle sandals — leaves brief sparkle trails when running fast. Bounces on his toes when standing still.",
+      "personality": "Confident without arrogance, competitive with himself, thrill-seeker, quietly emotional. This episode: he discovers there's a race he can't win with speed."
+    },
+    "support_1": {
+      "name": "Little Zeus",
+      "role": "Enthusiastically signed up for every event. Not good at any of them. Having the best time.",
+      "visual": "Curly white hair, bent crown, white toga, thunderbolt"
+    },
+    "support_2": {
+      "name": "Baby Hercules",
+      "role": "Shot put. He throws the shot put. It lands in a different country. He is very proud.",
+      "visual": "Chubby toddler, lion cape, enormous arms"
+    },
+    "support_3": {
+      "name": "Little Perseus",
+      "role": "Doing surprisingly well in the long jump. Nobody expected this. Especially not Perseus.",
+      "visual": "Dark shaggy hair, green tunic, satchel — his winged sandal activates mid-jump, giving him an accidental advantage"
+    },
+    "challenge": {
+      "name": "The Relay Race",
+      "role": "The final event. Achilles's team needs to work together. Achilles has never needed to wait for anyone.",
+      "note": "Not a villain — a structural challenge. Achilles outrunning his teammates and leaving them behind is the problem."
+    }
+  },
+  "scenes": [
+    {
+      "scene_number": 1,
+      "type": "hook",
+      "title": "A New Face at the Starting Line",
+      "narration": "The First Olympic Games were finally here — thanks to Athena's reorganized plan. And standing at the starting line of the sprint was someone nobody had seen before. Tall, golden hair, bouncing on his toes like he'd been waiting for this his entire life. He introduced himself in exactly four words: 'I'm going to win.'",
+      "visual_prompt": "Little Olympus kids cartoon style. The Olympus Games arena — bright, colorful, packed with minor god spectators. At the sprint starting line: ACHILLES, tall and lean with golden windswept hair, bouncing excitedly on his toes, sparkle-trail sandals glinting. He looks at the other competitors (Zeus, Perseus, a few minor god kids) with a friendly but absolutely certain expression. Zeus looks slightly offended. Perseus waves politely. Morning gold light, crowd energy. 16:9.",
+      "bg_colors": ["#FFD700", "#87CEEB", "#FF6B35"],
+      "accent": "#00BFFF",
+      "camera": "pull_back",
+      "duration_sec": 9,
+      "higgsfield_prompt": "Cute kids cartoon style, Olympus Games arena packed with spectators, tall golden-haired athletic boy bouncing on toes at starting line with sparkle sandals, looking at other competitors with friendly certainty, small curly-haired boy looking offended, dark-haired boy waving politely, morning gold arena light, excited crowd energy, 16:9"
+    },
+    {
+      "scene_number": 2,
+      "type": "setup",
+      "title": "He Wasn't Wrong",
+      "narration": "Achilles won the sprint. He finished so fast that he had time to walk back to the start, sit down, and eat a snack before the second-place runner crossed the line. He was very kind about it. He cheered everyone else in. He meant it genuinely. That somehow made it slightly more embarrassing for everyone else.",
+      "visual_prompt": "Little Olympus kids cartoon style. COMEDY TIMING — Achilles sitting relaxed at the finish line eating a snack, cheering enthusiastically as Zeus puffs in exhausted in second place, Perseus arrives third looking surprised he's even here, a minor god arrives last and Achilles gives him the biggest cheer of all. Speed lines still fading from Achilles's lane. He's not smug — he's genuinely happy for everyone. That's almost the problem. 16:9.",
+      "bg_colors": ["#FFD700", "#87CEEB", "#FF6B35"],
+      "accent": "#00BFFF",
+      "camera": "pull_back",
+      "duration_sec": 9,
+      "higgsfield_prompt": "Cute kids cartoon style, golden-haired boy sitting relaxed at finish line eating snack cheering enthusiastically as exhausted curly-haired boy crosses second, dark-haired boy surprised third, speed lines fading from winner's lane, winner genuinely happy for everyone else which somehow makes it worse for them, bright arena, 16:9"
+    },
+    {
+      "scene_number": 3,
+      "type": "attempt",
+      "title": "The Other Events",
+      "narration": "Baby Hercules competed in the shot put. The shot put was found two days later, near Sparta. Perseus accidentally won the long jump when his winged sandal activated at exactly the wrong — or right — moment. Zeus entered the javelin throw, the discus, and the swimming, and came last in all three, and had a wonderful time. Achilles watched. He wanted to do everything faster.",
+      "visual_prompt": "Little Olympus kids cartoon style. Three-panel fun montage: LEFT — Baby Hercules winds up and releases the shot put, which streaks into the sky as a tiny dot, Hercules watching proudly while everyone else watches it disappear over the horizon. CENTER — Perseus mid-long-jump when winged sandal activates, shooting him impossibly far, expression of pure surprise. RIGHT — Zeus happily swimming in absolute last place, thunderbolt left on the side, tiny crown on his head in the pool, completely content. 16:9.",
+      "bg_colors": ["#87CEEB", "#90EE90", "#FFD700"],
+      "accent": "#FF6B35",
+      "camera": "pull_back",
+      "duration_sec": 9,
+      "higgsfield_prompt": "Cute kids cartoon style, three-panel sports montage: chubby toddler releasing shot put that streaks into sky while everyone watches it disappear, dark-haired boy mid-long-jump with winged sandal activating launching him impossibly far with surprised expression, small curly-haired boy happily swimming last with tiny crown on head completely content, bright colorful games, 16:9"
+    },
+    {
+      "scene_number": 4,
+      "type": "problem",
+      "title": "The Relay Race",
+      "narration": "Then came the relay race. Four runners, one team. You run your leg, pass the baton, wait for your team. Achilles had never waited for anyone in his life. The starter said go. Achilles ran his leg in approximately one second. Then he stood at the second exchange point. Waiting. He had never, ever waited before. He didn't know what to do with his hands.",
+      "visual_prompt": "Little Olympus kids cartoon style. ACHILLES standing at the second exchange point, holding his baton, bouncing with suppressed energy. He ran his leg so fast the sparkle trail hasn't faded yet. Zeus is somewhere in the far background running toward him — a tiny figure. Achilles looks at his hands. Looks at the baton. Looks at Zeus. Looks at his hands again. He has never stood still waiting for someone before. He is vibrating with the effort of standing still. 16:9.",
+      "bg_colors": ["#87CEEB", "#FFD700", "#FF6B35"],
+      "accent": "#00BFFF",
+      "camera": "push_in",
+      "duration_sec": 9,
+      "higgsfield_prompt": "Cute kids cartoon style, tall golden-haired boy standing at relay exchange point holding baton with sparkle trail still fading behind him, small curly-haired boy tiny figure running toward him in far background, boy vibrating with suppressed energy looking at his own hands not knowing what to do, never waited for anyone before, funny restless energy, 16:9"
+    },
+    {
+      "scene_number": 5,
+      "type": "solution",
+      "title": "What Achilles Learns About Waiting",
+      "narration": "Zeus finally arrived, breathing hard, and handed off the baton. Achilles ran the next leg. Then he stopped. Again. Waiting for Perseus. And this time — instead of looking at his hands — he watched Perseus run. Actually watched. He noticed that Perseus had a good stride. Better than Zeus's. He started counting. He could tell Perseus exactly where to push harder. He never knew he could see that before. He'd always been too busy running.",
+      "visual_prompt": "Little Olympus kids cartoon style. CHARACTER MOMENT — Achilles at the third exchange point, but this time genuinely watching Perseus run toward him. His expression has shifted — he's analyzing, noticing things. His hand comes up slightly as if mentally coaching. Perseus running toward him, a little winded but solid form. Achilles calls out something — an encouragement, a tip. Perseus's stride improves slightly. Achilles looks surprised at himself. 16:9.",
+      "bg_colors": ["#FFD700", "#87CEEB", "#90EE90"],
+      "accent": "#00BFFF",
+      "camera": "push_in",
+      "duration_sec": 9,
+      "higgsfield_prompt": "Cute kids cartoon style, tall golden-haired boy at relay exchange point genuinely watching dark-haired boy run toward him with analytical expression, hand raised slightly as if coaching, calling out encouragement, dark-haired boy's stride improving slightly, golden-haired boy looking surprised at himself for noticing things, character discovery moment, 16:9"
+    },
+    {
+      "scene_number": 6,
+      "type": "resolution",
+      "title": "They Win (Barely)",
+      "narration": "Their team didn't win by much. Achilles ran the final anchor leg and brought them home first, but it was close — because the team they beat had four good runners. Achilles's team had one great runner and three runners who'd gotten better because someone had finally been watching them. After the race, Achilles told each of them specifically what they'd done well. He hadn't known he could do that either.",
+      "visual_prompt": "Little Olympus kids cartoon style. FINISH LINE — Achilles crosses first, but only slightly ahead of the other team. Behind him: Zeus, then Perseus, then Baby Hercules (who ran the third leg and tried very hard not to break the track). The crowd goes wild. What matters: after crossing, Achilles immediately turns back and tells Zeus, Perseus, and Hercules something specific about their running — pointing, demonstrating, genuinely coaching. Their faces: surprised, then proud. 16:9.",
+      "bg_colors": ["#FFD700", "#FF6B35", "#87CEEB"],
+      "accent": "#FFD700",
+      "camera": "pull_back",
+      "duration_sec": 9,
+      "higgsfield_prompt": "Cute kids cartoon style, golden-haired boy crossing finish line first but only slightly ahead, crowd cheering, then immediately turning back to tell each teammate something specific about their running — pointing at curly-haired boy, demonstrating stride to dark-haired boy, patting chubby toddler on back, teammates going from surprised to proud, team celebration, 16:9"
+    },
+    {
+      "scene_number": 7,
+      "type": "lesson_and_cta",
+      "title": "What Did We Learn?",
+      "narration": "And that's what Achilles discovered at the First Olympic Games. When you're the fastest, you spend all your time running. You never get to see anyone else run. And watching — really watching — is its own kind of speed. He'd never noticed how much you could learn when you stopped moving. He planned to spend more time doing that. Starting tomorrow. See you next time on Little Olympus!",
+      "visual_prompt": "Little Olympus kids cartoon style. Final card — the five friends at the Games podium. Achilles stands with his gold medal but has his arm around Zeus. Perseus holds his surprise silver from the long jump. Baby Hercules has a special award ribbon that says LONGEST SHOT PUT IN HISTORY. Zeus has a ribbon that says BEST ATTITUDE. Athena in the background holding her clipboard, Archie on her shoulder looking satisfied. Golden Olympus sky. Everyone is happy. 16:9.",
+      "bg_colors": ["#1A1060", "#FFD700", "#00BFFF"],
+      "accent": "#FFD700",
+      "camera": "pull_back",
+      "duration_sec": 9,
+      "higgsfield_prompt": "Cute kids cartoon style, five friends at games podium, tall golden-haired boy with gold medal arm around curly-haired boy, dark-haired boy holding silver medal surprised, chubby toddler with special ribbon saying LONGEST SHOT PUT IN HISTORY, curly-haired boy with ribbon saying BEST ATTITUDE, smart girl in background with clipboard and owl looking satisfied, golden Olympus sky, 16:9"
+    }
+  ],
+  "music": {
+    "style": "upbeat_kids_adventure",
+    "notes": "Scene 1-2: energetic fast sports music — Achilles's theme should feel like a sprint (short fast bursts). Scene 3: playful montage music, each event gets a brief musical joke. Scene 4: music slows when Achilles has to stand still — his restlessness in the tempo. Scene 5: music shifts, slightly warmer when he starts watching. Scene 6-7: full triumphant but warm — this isn't a solo victory theme, it's a team theme."
+  },
+  "voice_style": {
+    "tone": "warm_playful_encouraging",
+    "pacing": "Fast during action, slow down on 'He had never, ever waited before. He didn't know what to do with his hands.' — that line is the heart of the episode. Let it breathe.",
+    "character": "A narrator who finds it genuinely funny that the fastest kid in history has never had to wait for anyone"
+  },
+  "lesson": "When you're always the fastest, you never get to see everyone else run. Sometimes the most valuable thing you can do is slow down and watch.",
+  "bible_reference": "Little_Olympus_Master_Bible.md — Achilles: bounces on toes, competitive with himself, speed sparkle trails, heel is fine (don't mention it yet — saving for EP006), quietly emotional expressed through action. Perseus: winged sandals activate randomly. Hercules: breaks things, 'I helped!'. Zeus: enters everything, wins nothing, loves it.",
+  "achilles_arc_note": "EP005: Achilles discovers he can coach. This matters later — he becomes the team's tactical runner, not just its fastest. The heel subplot begins in EP006.",
+  "youtube_title": "Achilles Races EVERYONE at the Olympic Games! 🏃⚡ | Little Olympus Episode 5",
+  "youtube_description": "The First Annual Olympus Olympic Games are HERE — and there's a new face at the starting line!\n\nYoung Achilles is the fastest kid alive. He knows it. Everyone knows it. But there's one event that even the fastest kid can't win alone...\n\nIn today's adventure:\n⚡ Achilles wins the sprint (before anyone else finishes, he's had a snack)\n💪 Baby Hercules's shot put lands near Sparta\n🛡️ Perseus accidentally wins the long jump\n⚡ Zeus enters every event and comes last in all of them — happily\n🏆 The relay race changes everything\n\n📺 Watch ALL our adventures: [playlist link]\n🔔 SUBSCRIBE for new episodes every week!\n\n#LittleOlympus #Achilles #OlympicGames #KidsCartoon #GreekMythology #KidsYouTube",
+  "next_episode_preview": "Episode 6 — Achilles and the Magic Heel! Why does everyone keep asking about his heel? It's FINE. He said it's fine. STOP ASKING.",
+  "higgsfield_style_notes": "Bright energetic cartoon throughout. Achilles's speed sparkle trails should be visible in every scene he runs — brief silver-gold sparkles behind his feet. The relay race exchange points should feel genuine with stadium atmosphere. Achilles's expression in scene 5 (watching Perseus) is the key visual of the episode — show him noticing something for the first time."
+}

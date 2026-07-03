@@ -1,0 +1,67 @@
+{
+  "channel": "GG",
+  "episode_id": "GG_GRAND_OPENING_SHORT",
+  "title": "Gods & Glory \u2014 Grand Opening Short",
+  "format": "vertical_short",
+  "aspect_ratio": "9:16",
+  "duration_target_sec": 60,
+  "platform": [
+    "TikTok",
+    "Instagram Reels",
+    "YouTube Shorts"
+  ],
+  "scenes": [
+    {
+      "scene_number": 1,
+      "type": "hook",
+      "title": "What If History Felt Real",
+      "duration_sec": 15,
+      "narration": "What if history didn't feel like a textbook? What if it felt like you were there \u2014 inside the battle, inside the moment, inside the decision that changed everything?",
+      "visual_prompt": "Gods & Glory cinematic documentary. Ultra-dramatic close-up of a Greek warrior's eye through a battle helmet at Marathon. Fire reflecting. The weight of a civilization in one face. Black and gold. Vertical 9:16 format.",
+      "bg_colors": [
+        "#1A1A2E",
+        "#C9A227",
+        "#8B1A1A"
+      ]
+    },
+    {
+      "scene_number": 2,
+      "type": "brand_reveal",
+      "title": "Welcome to Gods and Glory",
+      "duration_sec": 15,
+      "narration": "Gods and Glory. Real battles. Real stakes. Real history \u2014 told the way it actually felt to the people who lived it. Every episode, every detail, built for people who want the truth, not the textbook.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The channel logo emerging from darkness \u2014 gold letters on black. Behind it, a collage of epic battle moments: Agincourt arrows, Roman legions, Viking longships. Cinematic, vertical 9:16.",
+      "bg_colors": [
+        "#1A1A2E",
+        "#C9A227",
+        "#4A3728"
+      ]
+    },
+    {
+      "scene_number": 3,
+      "type": "content_tease",
+      "title": "What's Coming",
+      "duration_sec": 17,
+      "narration": "Marathon. Waterloo. Pearl Harbor. Agincourt. Vienna. Hastings. The battles that built the world you live in \u2014 and the men and women who fought them when it was not yet history. It was just Tuesday, and they had to decide.",
+      "visual_prompt": "Gods & Glory cinematic documentary. A rapid-fire montage of battle locations across history: the plain of Marathon, Napoleon's battlefield at Waterloo, the ridge at Hastings, the Mongol fleet in a typhoon. Each image dramatic, cinematic. Vertical 9:16.",
+      "bg_colors": [
+        "#8B1A1A",
+        "#C9A227",
+        "#1A1A2E"
+      ]
+    },
+    {
+      "scene_number": 4,
+      "type": "cta",
+      "title": "Subscribe Now",
+      "duration_sec": 13,
+      "narration": "Subscribe to Gods and Glory. New episodes dropping now. History that actually hits \u2014 because it happened, and it mattered, and it still does.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The channel name in gold against black. A subscribe button glowing. Epic orchestral energy. The promise of the channel in one frame. Vertical 9:16.",
+      "bg_colors": [
+        "#C9A227",
+        "#1A1A2E",
+        "#8B4500"
+      ]
+    }
+  ]
+}

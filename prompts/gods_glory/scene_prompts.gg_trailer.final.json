@@ -1,0 +1,81 @@
+{
+  "episode_id": "GG_TRAILER",
+  "channel": "GG",
+  "title": "Gods & Glory — Channel Trailer",
+  "tagline": "History's greatest battles. Only the truth.",
+  "duration_target_min": 1.2,
+  "aesthetic": {
+    "color_grade": "cinematic_macedonian_epic",
+    "primary_colors": ["#0E1A2B", "#C9A84C", "#8B1A1A", "#1A1F26"],
+    "font_style": "serif_documentary_bold",
+    "music_style": "hans_zimmer_conquest_epic",
+    "narrator_tone": "authoritative_punchy_dramatic"
+  },
+  "music": {
+    "style": "hans_zimmer_conquest_epic",
+    "notes": "Cold open: single low drone, dead silence around it. Range tease: building percussion, tempo accelerating scene to scene. The promise: brief pull-back, quieter, more serious. Power montage: full orchestral surge, brass and percussion at maximum. CTA: the theme resolves into one final, hard hitting brass stab then cuts to silence on the logo."
+  },
+  "voice_style": {
+    "tone": "authoritative_punchy_dramatic",
+    "pacing": "short, hard-hitting sentences throughout — no scene runs long, every line is built to be quoted",
+    "character": "the voice of a channel that has earned the right to be confident because everything it says is sourced"
+  },
+  "youtube_title": "Gods & Glory — Channel Trailer",
+  "youtube_description": "History's greatest battles. Only the truth.\n\nFrom the 300 Spartans at Thermopylae to D-Day and Vietnam — every episode sourced, fact-checked, and never sanitized.\n\nNew episode every week. Subscribe.",
+  "scenes": [
+    {
+      "scene_number": 1,
+      "type": "cold_open",
+      "title": "The Hook",
+      "narration": "Three hundred men. Against two million. And they chose to fight anyway.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Lone Spartan warrior in red cape standing at the narrow pass of Thermopylae at dawn, facing an immense Persian army stretching to the horizon. Epic, silent tension, painterly cinematic lighting. 16:9.",
+      "bg_colors": ["#0E1A2B", "#8B1A1A", "#C9A84C"],
+      "duration_sec": 9
+    },
+    {
+      "scene_number": 2,
+      "type": "montage",
+      "title": "Ancient and Medieval",
+      "narration": "Gods and Glory covers every era. Sparta. Alexander's Macedon. Hannibal's Carthage. The Mongol Empire. The fall of Constantinople.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Fast-paced montage: Macedonian phalanx charging, Hannibal's war elephants crossing mountains, Mongol horse archers at full gallop, the walls of Constantinople under cannon fire. Rapid cuts, epic scale. 16:9.",
+      "bg_colors": ["#C9A84C", "#1A1F26", "#8B1A1A"],
+      "duration_sec": 14
+    },
+    {
+      "scene_number": 3,
+      "type": "montage",
+      "title": "Modern War",
+      "narration": "Pearl Harbor. D-Day. Stalingrad. Iwo Jima. The jungles of Vietnam. Every battle that actually decided something.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Fast-paced montage: battleships burning at Pearl Harbor, landing craft approaching Normandy beaches, Soviet troops in the ruins of Stalingrad, Marines raising a flag on a volcanic peak, helicopters over Vietnamese jungle. Rapid cuts, dramatic intensity. 16:9.",
+      "bg_colors": ["#1A1F26", "#8B1A1A", "#0E1A2B"],
+      "duration_sec": 14
+    },
+    {
+      "scene_number": 4,
+      "type": "promise",
+      "title": "The Promise",
+      "narration": "No myths. No movie-version shortcuts. Real sources. Real numbers. The complicated version — because the complicated version is always more interesting than the legend.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. A historian's hands turning the pages of an old primary source document, ancient maps and modern declassified documents overlapping, the research behind the drama made visual. Thoughtful, grounded tone. 16:9.",
+      "bg_colors": ["#0E1A2B", "#C9A84C", "#1A1F26"],
+      "duration_sec": 13
+    },
+    {
+      "scene_number": 5,
+      "type": "power_montage",
+      "title": "The Names",
+      "narration": "Leonidas. Alexander. Hannibal. Genghis Khan. Eisenhower. These aren't just names in a textbook. These are the moments that decided whether your world would exist at all.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Rapid-fire portrait montage of legendary commanders rendered in dramatic cinematic style — Leonidas, Alexander the Great, Hannibal Barca, Genghis Khan, General Eisenhower — each shot bold and powerful. Epic, confident pacing. 16:9.",
+      "bg_colors": ["#8B1A1A", "#C9A84C", "#0E1A2B"],
+      "duration_sec": 13
+    },
+    {
+      "scene_number": 6,
+      "type": "cta",
+      "title": "Subscribe",
+      "narration": "Gods and Glory. History's greatest battles. Only the truth. New episode every week. The next one is already in production.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. The channel's gold serif logo on a black background, crossed sword and laurel wreath emblem, clean and powerful final title card. Minimal, confident, cinematic branding. 16:9.",
+      "bg_colors": ["#0E1A2B", "#C9A84C", "#1A1F26"],
+      "duration_sec": 10
+    }
+  ]
+}

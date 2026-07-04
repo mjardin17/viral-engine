@@ -75,3 +75,6 @@ desktop.ini
 
 # --- GIT LOCK FILES ---
 *.lock
+
+# --- EMPIRE OS STAGING (separate repo) ---
+empire-os/

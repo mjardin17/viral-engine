@@ -9,6 +9,15 @@
 .env.local
 *.key
 *.token
+*.pickle
+credentials.json
+client_secret*.json
+token*.pickle
+token.pickle
+token_gg.pickle
+token_il.pickle
+token_lo.pickle
+token_ed.pickle
 
 # --- GENERATED VIDEO/AUDIO (too large) ---
 renders/

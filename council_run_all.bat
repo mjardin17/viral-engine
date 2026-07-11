@@ -1,7 +1,8 @@
 @echo off
-title EMPIRE OS — Council — ALL CHANNELS
+title EMPIRE OS - Council - ALL CHANNELS
 set PYTHONUTF8=1
 set BASE=%~dp0
+set PYTHON=C:\Users\jjard\AppData\Local\Programs\Python\Python314\python.exe
 
 :: ============================================================
 ::  EMPIRE OS — All-Channel Council
@@ -23,7 +24,7 @@ echo ============================================================
 echo   EMPIRE OS COUNCIL — ALL CHANNELS (sequential)
 echo ============================================================
 echo.
-py "%BASE%council\council.py" --channel all
+"%PYTHON%" "%BASE%council\council.py" --channel all
 goto end
 
 :rotate
@@ -56,7 +57,7 @@ echo.
 echo %NEXT%> "%STATE_FILE%"
 
 :: Run council for this channel
-py "%BASE%council\council.py" --channel %NEXT%
+"%PYTHON%" "%BASE%council\council.py" --channel %NEXT%
 goto end
 
 :status
@@ -64,10 +65,10 @@ echo.
 echo ============================================================
 echo   EMPIRE OS COUNCIL — STATUS ALL CHANNELS
 echo ============================================================
-py "%BASE%council\council.py" --channel gg --status
-py "%BASE%council\council.py" --channel il --status
-py "%BASE%council\council.py" --channel lo --status
-py "%BASE%council\council.py" --channel ed --status
+"%PYTHON%" "%BASE%council\council.py" --channel gg --status
+"%PYTHON%" "%BASE%council\council.py" --channel il --status
+"%PYTHON%" "%BASE%council\council.py" --channel lo --status
+"%PYTHON%" "%BASE%council\council.py" --channel ed --status
 goto end
 
 :end

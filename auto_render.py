@@ -151,6 +151,8 @@ def find_ffmpeg() -> str:
     if f:
         return f
     for c in [
+        # Local repo copy (highest priority — always works without PATH setup)
+        str(Path(__file__).parent / "ffmpeg_bin" / "ffmpeg.exe"),
         r"C:\ffmpeg\bin\ffmpeg.exe",
         r"C:\Program Files\ffmpeg\bin\ffmpeg.exe",
         r"C:\Program Files (x86)\ffmpeg\bin\ffmpeg.exe",

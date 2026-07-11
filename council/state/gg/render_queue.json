@@ -1,0 +1,137 @@
+[
+  {
+    "episode_id": "GG_EP012",
+    "title": "The Last Emperor: How Rome Fell in a Single Day",
+    "scene_count": 55,
+    "total_duration_sec": 2736,
+    "queued_at": "2026-07-11T15:57:46.368793",
+    "status": "pending",
+    "has_partial_output": true
+  },
+  {
+    "episode_id": "GG_EP013",
+    "title": "The Crusader Kingdoms: How Europe Built an Empire in the Holy Land \u2014 and Lost It",
+    "scene_count": 54,
+    "total_duration_sec": 2721,
+    "queued_at": "2026-07-11T15:57:46.369239",
+    "status": "pending",
+    "has_partial_output": false
+  },
+  {
+    "episode_id": "GG_EP014",
+    "title": "Waterloo: The Day Napoleon's Genius Ran Out of Miracles",
+    "scene_count": 54,
+    "total_duration_sec": 2876,
+    "queued_at": "2026-07-11T15:57:46.369303",
+    "status": "pending",
+    "has_partial_output": false
+  },
+  {
+    "episode_id": "GG_EP015",
+    "title": "Marathon: The 26-Mile Run That Saved Western Civilization",
+    "scene_count": 56,
+    "total_duration_sec": 2769,
+    "queued_at": "2026-07-11T15:57:46.369341",
+    "status": "pending",
+    "has_partial_output": false
+  },
+  {
+    "episode_id": "GG_EP016",
+    "title": "Agincourt: How Mud and Arrows Beat the Flower of French Chivalry",
+    "scene_count": 57,
+    "total_duration_sec": 2829,
+    "queued_at": "2026-07-11T15:57:46.369382",
+    "status": "pending",
+    "has_partial_output": false
+  },
+  {
+    "episode_id": "GG_EP017",
+    "title": "Battle of Tours: The Hammer That Stopped Islam's Conquest of Europe",
+    "scene_count": 56,
+    "total_duration_sec": 2770,
+    "queued_at": "2026-07-11T15:57:46.369421",
+    "status": "pending",
+    "has_partial_output": false
+  },
+  {
+    "episode_id": "GG_EP018",
+    "title": "Hastings 1066: The Arrow That Forged a Nation",
+    "scene_count": 55,
+    "total_duration_sec": 2724,
+    "queued_at": "2026-07-11T15:57:46.369457",
+    "status": "pending",
+    "has_partial_output": false
+  },
+  {
+    "episode_id": "GG_EP019",
+    "title": "Kamikaze: How Two Typhoons Drowned the Mongol Empire's Greatest Fleet",
+    "scene_count": 56,
+    "total_duration_sec": 2780,
+    "queued_at": "2026-07-11T15:57:46.369491",
+    "status": "pending",
+    "has_partial_output": false
+  },
+  {
+    "episode_id": "GG_EP020",
+    "title": "Vienna 1683: The Winged Hussars and the Day Europe Was Saved",
+    "scene_count": 55,
+    "total_duration_sec": 2722,
+    "queued_at": "2026-07-11T15:57:46.369526",
+    "status": "pending",
+    "has_partial_output": false
+  },
+  {
+    "episode_id": "GG_EP021",
+    "title": "Midway: Four Minutes That Turned the Pacific War",
+    "scene_count": 55,
+    "total_duration_sec": 2724,
+    "queued_at": "2026-07-11T15:57:46.369561",
+    "status": "pending",
+    "has_partial_output": false
+  },
+  {
+    "episode_id": "GG_EP022",
+    "title": "Battle of the Bulge: Hitler's Last Gamble in the Frozen Ardennes",
+    "scene_count": 55,
+    "total_duration_sec": 2720,
+    "queued_at": "2026-07-11T15:57:46.369623",
+    "status": "pending",
+    "has_partial_output": false
+  },
+  {
+    "episode_id": "GG_EP023",
+    "title": "Operation Market Garden: A Bridge Too Far",
+    "scene_count": 55,
+    "total_duration_sec": 2739,
+    "queued_at": "2026-07-11T15:57:46.369663",
+    "status": "pending",
+    "has_partial_output": false
+  },
+  {
+    "episode_id": "GG_EP024",
+    "title": "Inchon: MacArthur's Impossible Landing",
+    "scene_count": 54,
+    "total_duration_sec": 2703,
+    "queued_at": "2026-07-11T15:57:46.369699",
+    "status": "pending",
+    "has_partial_output": false
+  },
+  {
+    "episode_id": "GG_EP025",
+    "title": "Yorktown: The Battle That Ended an Empire",
+    "scene_count": 54,
+    "total_duration_sec": 2700,
+    "queued_at": "2026-07-11T15:57:46.369733",
+    "status": "pending",
+    "has_partial_output": false
+  },
+  {
+    "episode_id": "GG_EP026",
+    "title": "King Caesar",
+    "scene_count": 14,
+    "total_duration_sec": 690,
+    "queued_at": "2026-07-11T15:57:46.369768",
+    "status": "pending",
+    "has_partial_output": false
+  }
+]

@@ -1,0 +1,14 @@
+services:
+  echoes-council:
+    build: .
+    container_name: echoes-council
+    environment:
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+    ports:
+      - "8001:8001"
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: '2.0'
+          memory: 4G

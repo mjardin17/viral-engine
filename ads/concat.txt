@@ -1,0 +1,4 @@
+file 'clip1_spartan_lone.mp4'
+file 'clip2_persian_army.mp4'
+file 'clip3_spartan_phalanx.mp4'
+file 'clip4_gods_glory_reveal.mp4'

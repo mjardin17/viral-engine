@@ -12,8 +12,6 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 from council.bot_base import CouncilBot, BotResult, BASE_DIR, STATE_DIR
 
-OUTPUT_DIR = BASE_DIR / "output"
-RENDERS_DIR = BASE_DIR / "renders"
 MUSIC_DIR = BASE_DIR / "music"
 MIN_FINAL_SECONDS = 300
 
@@ -60,7 +58,8 @@ def _find_music() -> str | None:
     return str(candidates[0]) if candidates else None
 
 
-def _assemble_final(ep_id: str, ep_dir: Path, ffmpeg: str, ffprobe: str) -> tuple[bool, str]:
+def _assemble_final(ep_id: str, ep_dir: Path, ffmpeg: str, ffprobe: str,
+                    renders_dir: Path) -> tuple[bool, str]:
     """Concat all scene clips and mix with music. Returns (success, message)."""
     clips = sorted(ep_dir.glob("scene_[0-9][0-9].mp4"),
                    key=lambda p: int(p.stem.split("_")[1]))
@@ -88,8 +87,8 @@ def _assemble_final(ep_id: str, ep_dir: Path, ffmpeg: str, ffprobe: str) -> tupl
         return False, f"concat failed: {r.stderr.decode(errors='replace')[:200]}"
 
     # Step 2: mix with music
-    RENDERS_DIR.mkdir(exist_ok=True)
-    final_mp4 = RENDERS_DIR / f"{ep_id}_final.mp4"
+    renders_dir.mkdir(exist_ok=True)
+    final_mp4 = renders_dir / f"{ep_id}_final.mp4"
     music = _find_music()
 
     if music:
@@ -132,10 +131,14 @@ class FinalAssemblerBot(CouncilBot):
 
         import json
 
-        # Collect episodes flagged by upstream bots
+        if not self.output_dir.exists():
+            r.ok(f"No output dir yet for {self.channel_name} — nothing to assemble")
+            return r
+
+        # Collect episodes flagged by upstream bots (channel-scoped state)
         episodes_to_assemble = set()
         for state_file in ["bot_clip_rebuilder.json", "bot_image_healer.json"]:
-            state_path = STATE_DIR / state_file
+            state_path = self.state_dir / state_file
             if state_path.exists():
                 try:
                     state = json.loads(state_path.read_text())
@@ -145,10 +148,10 @@ class FinalAssemblerBot(CouncilBot):
                     pass
 
         # Also check for episodes with no final at all
-        for ep_dir in sorted(OUTPUT_DIR.iterdir()):
+        for ep_dir in sorted(self.output_dir.iterdir()):
             if not ep_dir.is_dir() or ep_dir.name.startswith("_"):
                 continue
-            final = RENDERS_DIR / f"{ep_dir.name}_final.mp4"
+            final = self.renders_dir / f"{ep_dir.name}_final.mp4"
             if not final.exists():
                 episodes_to_assemble.add(ep_dir.name)
 
@@ -157,13 +160,14 @@ class FinalAssemblerBot(CouncilBot):
             return r
 
         for ep_id in sorted(episodes_to_assemble):
-            ep_dir = OUTPUT_DIR / ep_id
+            ep_dir = self.output_dir / ep_id
             if not ep_dir.exists():
                 r.warn(f"{ep_id}: output directory not found")
                 continue
 
             self.log(f"Assembling final for {ep_id}…")
-            success, msg = _assemble_final(ep_id, ep_dir, ffmpeg, ffprobe)
+            success, msg = _assemble_final(ep_id, ep_dir, ffmpeg, ffprobe,
+                                           renders_dir=self.renders_dir)
             if success:
                 r.fixed(f"{ep_id}: {msg}")
             else:

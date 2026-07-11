@@ -1,0 +1,34 @@
+{
+  "channel": "GG",
+  "episode_id": "GG_PROMO001",
+  "title": "Gods & Glory — Channel Trailer",
+  "scenes": [
+    {
+      "scene_number": 1,
+      "type": "intro",
+      "title": "The Hook",
+      "narration": "Every battle has a story. Every empire has a fall. Every hero has a moment that changed the world. This is Gods and Glory — where the greatest conflicts in human history come alive. Subscribe now. And never see history the same way again.",
+      "visual_prompt": "Epic montage of ancient warriors in battle, bronze armor gleaming, dramatic sunset battlefield, cinematic wide shot, dust and fire",
+      "bg_colors": ["#1a0000", "#3a0000"],
+      "duration_sec": 20
+    },
+    {
+      "scene_number": 2,
+      "type": "narration",
+      "title": "The Empire",
+      "narration": "From the siege of Troy to the beaches of Normandy. From Alexander's conquest of Persia to the last stand at Thermopylae. Gods and Glory covers every defining moment in the history of warfare. Cinematic. Accurate. Unforgettable. Hit subscribe. New episodes every week.",
+      "visual_prompt": "Ancient Greek hoplite warriors in phalanx formation, spears raised against a dramatic sky, sun blazing behind them, National Geographic documentary style",
+      "bg_colors": ["#0a0a00", "#1a1a00"],
+      "duration_sec": 20
+    },
+    {
+      "scene_number": 3,
+      "type": "outro",
+      "title": "Subscribe",
+      "narration": "Gods and Glory. The history channel built for those who demand more than a textbook. Subscribe today and join the empire.",
+      "visual_prompt": "Gods and Glory channel logo over a sweeping aerial view of an ancient Roman colosseum at golden hour, epic cinematic closing shot",
+      "bg_colors": ["#1a0800", "#3a1200"],
+      "duration_sec": 15
+    }
+  ]
+}

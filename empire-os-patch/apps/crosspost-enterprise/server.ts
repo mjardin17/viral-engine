@@ -323,9 +323,9 @@ app.post("/api/generate", async (req, res) => {
     try {
       console.log("[CROSSPOST Multi-Agent Platform Specialist Engine] Initiating pipeline...");
       
-      // Step 1: Run Core Analyst Agent using gemini-3.5-flash to extract themes and meta tags
+      // Step 1: Run Core Analyst Agent using gemini-2.5-flash to extract themes and meta tags
       const analystResponse = await ai.models.generateContent({
-        model: "gemini-3.5-flash",
+        model: "gemini-2.5-flash",
         contents: `Analyze this creator script and extract its core properties:\n\n${script}`,
         config: {
           systemInstruction: "You are the Core Analyst Agent. Analyze the creator script and extract its main theme, key entities/tools, target audience archetype, and psychological tone. You MUST return JSON matching the schema precisely.",
@@ -437,7 +437,7 @@ Deliver the output strictly in the requested JSON structure. Keep finalContent w
 
           try {
             const specResponse = await ai.models.generateContent({
-              model: "gemini-3.5-flash",
+              model: "gemini-2.5-flash",
               contents: promptPayload,
               config: {
                 systemInstruction: sysInstruction,
@@ -915,7 +915,7 @@ const empireEvents: any[] = [
     timestamp: new Date(Date.now() - 3000000).toISOString(),
     source: "empire.core.ai_router",
     type: "core.ai_router.online",
-    payload: { primaryModel: "gemini-3.5-flash", gateway: "https://api.empire.os/ai" }
+    payload: { primaryModel: "gemini-2.5-flash", gateway: "https://api.empire.os/ai" }
   },
   {
     id: "evt_003",
@@ -1080,7 +1080,7 @@ app.post("/api/video-pipeline/execute-step", async (req, res) => {
       let researchText = "";
       if (ai) {
         const response = await ai.models.generateContent({
-          model: "gemini-3.5-flash",
+          model: "gemini-2.5-flash",
           contents: `Analyze and gather comprehensive academic, technical, and investigative research points on this topic: "${project.topic}". Discuss structural mechanics, historical precedents, and systemic impact.`,
           config: {
             systemInstruction: "You are a master investigative journalist and chief documentary researcher. Provide comprehensive, factual, well-organized markdown summaries of your findings.",
@@ -1112,7 +1112,7 @@ This document outlines the hidden systemic architectures behind the seed topic.
       let outlineObj = null;
       if (ai) {
         const response = await ai.models.generateContent({
-          model: "gemini-3.5-flash",
+          model: "gemini-2.5-flash",
           contents: `Create a structured 4-act documentary screenplay outline based on this research:\n\n${project.assets.research}`,
           config: {
             systemInstruction: "You are a professional documentary screenwriter. Organize the screenplay into Act I: The Hook, Act II: The Mechanism, Act III: The Crisis, Act IV: The Resolution. Return valid JSON only, using this schema: {\"title\": \"string\", \"acts\": [{\"title\": \"string\", \"focus\": \"string\"}]}. Do not wrap in markdown tags.",
@@ -1147,7 +1147,7 @@ This document outlines the hidden systemic architectures behind the seed topic.
       let scriptText = "";
       if (ai) {
         const response = await ai.models.generateContent({
-          model: "gemini-3.5-flash",
+          model: "gemini-2.5-flash",
           contents: `Write a full documentary narrator screenplay script with exact narrator dialogue lines based on this outline:\n\n${JSON.stringify(project.assets.outline)}`,
           config: {
             systemInstruction: "You are an elite screenwriter. Write narrator voiceover lines. Insert precise cinematic scene visual instructions in square brackets [Visual: drone shot of deep server room] preceding or following spoken dialogue lines. Maintain extreme drama and tension.",
@@ -1181,7 +1181,7 @@ Every millisecond of latency saved is a fortune captured. But who controls the r
       let scenePrompts = [];
       if (ai) {
         const response = await ai.models.generateContent({
-          model: "gemini-3.5-flash",
+          model: "gemini-2.5-flash",
           contents: `Generate exactly 4 scene-by-scene prompts for an AI video model based on this script:\n\n${project.assets.script}`,
           config: {
             systemInstruction: "You are an AI video producer and cinematic prompt engineer. Convert the visual cues into 4 highly detailed prompts for video synthesis (4k, cinematic, realistic, camera motions). Output only valid JSON matching this schema: [{\"scene\": 1, \"visual\": \"string\", \"audio\": \"string\", \"prompt\": \"string\"}]. Do not wrap in markdown.",
@@ -1268,7 +1268,7 @@ Every millisecond of latency saved is a fortune captured. But who controls the r
       let meta = null;
       if (ai) {
         const response = await ai.models.generateContent({
-          model: "gemini-3.5-flash",
+          model: "gemini-2.5-flash",
           contents: `Generate YouTube SEO metadata for a documentary on: "${project.topic}"`,
           config: {
             systemInstruction: "You are an elite social media director. Generate an SEO YouTube video title, a comprehensive description with keyword tags, and an array of metadata keyword tags. Return valid JSON only, using schema: {\"title\": \"string\", \"description\": \"string\", \"tags\": [\"string\"]}. Do not wrap in markdown.",
@@ -1377,7 +1377,7 @@ app.get("/api/export-ai-context", (req, res) => {
   }
 });
 
-// 3. POST /api/empire/ai-router - Support central Empire AI Routing schema
+// 3. POST /api/empire/ai-router - Ollama-first, Gemini fallback, simulation last
 app.post("/api/empire/ai-router", async (req, res) => {
   const { prompt, systemInstruction, platformId, useModel } = req.body;
 
@@ -1385,76 +1385,105 @@ app.post("/api/empire/ai-router", async (req, res) => {
     return res.status(400).json({ success: false, error: "Prompt is required for routing." });
   }
 
-  const modelToUse = useModel || "gemini-3.5-flash";
   const start = Date.now();
-  const ai = getGemini();
+  const OLLAMA_URL  = process.env.OLLAMA_URL  || "http://localhost:11434";
+  const OLLAMA_MODEL = process.env.OLLAMA_MODEL || "qwen2.5-coder:7b";
 
-  // Create an Event Bus log entry
-  const dispatchEvent = {
+  // Log to Event Bus
+  empireEvents.push({
     id: `evt_${Math.random().toString(36).substr(2, 9)}`,
     timestamp: new Date().toISOString(),
     source: "empire.core.ai_router",
     type: "plugin.ai_route.dispatched",
-    payload: { model: modelToUse, targetPlatform: platformId || "general" }
-  };
-  empireEvents.push(dispatchEvent);
+    payload: { requestedModel: useModel || "auto", targetPlatform: platformId || "general" }
+  });
 
+  // ── TIER 1: Ollama (local, free, always try first) ──────────────────────
+  const forceCloud = useModel && !useModel.toLowerCase().includes("ollama");
+  if (!forceCloud) {
+    try {
+      console.log(`[EMPIRE AI ROUTER] Trying Ollama (${OLLAMA_MODEL})...`);
+      const ollamaPayload = JSON.stringify({
+        model: OLLAMA_MODEL,
+        prompt: systemInstruction ? `${systemInstruction}\n\n${prompt}` : prompt,
+        stream: false,
+        options: { temperature: 0.7, num_ctx: 4096 }
+      });
+      const ollamaResp = await fetch(`${OLLAMA_URL}/api/generate`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: ollamaPayload,
+        signal: AbortSignal.timeout(60000)
+      });
+      if (ollamaResp.ok) {
+        const ollamaData = await ollamaResp.json() as { response?: string };
+        const textOutput = ollamaData.response || "";
+        const latencyMs = Date.now() - start;
+        const estimatedTokens = Math.ceil((prompt.length + textOutput.length) / 4);
+        console.log(`[EMPIRE AI ROUTER] Ollama OK — ${latencyMs}ms, ${estimatedTokens} tokens, $0.00`);
+        return res.json({
+          success: true,
+          text: textOutput,
+          metrics: {
+            latencyMs,
+            modelUsed: OLLAMA_MODEL,
+            tokensCount: estimatedTokens,
+            estimatedCostUsd: 0,
+            gateway: "OLLAMA_LOCAL",
+            isSimulated: false
+          }
+        });
+      }
+    } catch (ollamaErr: any) {
+      console.warn(`[EMPIRE AI ROUTER] Ollama unavailable: ${ollamaErr?.message}. Trying Gemini...`);
+    }
+  }
+
+  // ── TIER 2: Gemini (cloud, paid, only if Ollama fails or cloud forced) ──
+  const geminiModel = (useModel && !useModel.toLowerCase().includes("ollama")) ? useModel : "gemini-2.5-flash";
+  const ai = getGemini();
   if (ai) {
     try {
-      console.log(`[EMPIRE AI ROUTER] Routing query to ${modelToUse}...`);
+      console.log(`[EMPIRE AI ROUTER] Routing to Gemini (${geminiModel})...`);
       const response = await ai.models.generateContent({
-        model: modelToUse,
+        model: geminiModel,
         contents: prompt,
-        config: {
-          systemInstruction: systemInstruction || "You are an Empire OS Core AI agent.",
-          temperature: 0.7
-        }
+        config: { systemInstruction: systemInstruction || "You are an Empire OS Core AI agent.", temperature: 0.7 }
       });
-
       const textOutput = response.text || "";
       const latencyMs = Date.now() - start;
       const estimatedTokens = Math.ceil((prompt.length + textOutput.length) / 4);
-      const estCost = (estimatedTokens * 0.000000075); // rough math
-
+      const estCost = estimatedTokens * 0.000000075;
       return res.json({
         success: true,
         text: textOutput,
         metrics: {
           latencyMs,
-          modelUsed: modelToUse,
+          modelUsed: geminiModel,
           tokensCount: estimatedTokens,
           estimatedCostUsd: estCost,
-          gateway: "EMPIRE_AI_GATEWAY",
+          gateway: "GEMINI_CLOUD",
           isSimulated: false
         }
       });
     } catch (err: any) {
-      console.error("[EMPIRE AI ROUTER] Live routing failed. Falling back...", err);
+      console.error("[EMPIRE AI ROUTER] Gemini failed:", err?.message);
     }
   }
 
-  // Simulated Cognitive Fallback if key missing or failed
-  const latencyMs = Math.floor(Math.random() * 800) + 200;
-  let simulatedText = `[EMPIRE OS AI ROUTER - COGNITIVE FALLBACK REPLY]
-Successfully processed your query for platform "${platformId || 'general'}".
-Input prompt size: ${prompt.length} chars.
-We simulated the model execution for ${modelToUse}. Here is the platform-specific optimization suggestion:
-- Bold first 4 words to maximize attention span capture.
-- Structure in short paragraphs (<15 words/sentence) to maintain vertical scan flow.
-- Add exactly 3 contextual hashtags based on trending triggers.`;
-
+  // ── TIER 3: Simulation fallback ─────────────────────────────────────────
+  const latencyMs = Math.floor(Math.random() * 400) + 100;
+  const simulatedText = `[SIMULATION — Ollama + Gemini both unavailable]\nQuery received for platform "${platformId || 'general'}". Start Ollama (ollama serve) to enable free local inference.`;
   const estimatedTokens = Math.ceil((prompt.length + simulatedText.length) / 4);
-  const estCost = (estimatedTokens * 0.000000075);
-
   return res.json({
     success: true,
     text: simulatedText,
     metrics: {
       latencyMs,
-      modelUsed: `${modelToUse} (Simulated)`,
+      modelUsed: "simulation",
       tokensCount: estimatedTokens,
-      estimatedCostUsd: estCost,
-      gateway: "EMPIRE_AI_SIMULATION_GATEWAY",
+      estimatedCostUsd: 0,
+      gateway: "SIMULATION",
       isSimulated: true
     }
   });
@@ -1540,7 +1569,7 @@ app.post("/api/inspector/advisor", (req, res) => {
   let localModel = "llama3:8b";
   let localSpeed = "35 tok/sec";
   let localVram = "5.4 GB";
-  let cloudModel = "gemini-3.5-flash";
+  let cloudModel = "gemini-2.5-flash";
   let justification = "";
   let costEst = "";
 
@@ -1549,7 +1578,7 @@ app.post("/api/inspector/advisor", (req, res) => {
       localModel = "deepseek-coder:6.7b";
       localSpeed = "42 tok/sec";
       localVram = "4.8 GB";
-      cloudModel = "gemini-3.1-pro-preview";
+      cloudModel = "gemini-2.5-pro";
       justification = "DeepSeek-Coder is highly specialized for structural code reviews. If task has extremely massive multi-file dependencies, route to Gemini 3.1 Pro via local proxy.";
       costEst = "Local: $0.00 / Cloud: $0.0015 per 1k input tokens";
       break;
@@ -1558,7 +1587,7 @@ app.post("/api/inspector/advisor", (req, res) => {
       localModel = "phi3:3.8b (Fast summary)";
       localSpeed = "58 tok/sec";
       localVram = "2.8 GB";
-      cloudModel = "gemini-3.5-flash";
+      cloudModel = "gemini-2.5-flash";
       justification = "phi3 is lightning fast for small document sweeps. However, high-volume PDF extraction requires multimodal context window. We advise routing large chunks to Gemini 3.5 Flash because of its unmatched 1M token context capacity.";
       costEst = "Local: $0.00 / Cloud: $0.000075 per 1k tokens";
       break;
@@ -1566,7 +1595,7 @@ app.post("/api/inspector/advisor", (req, res) => {
       localModel = "mistral:7b";
       localSpeed = "38 tok/sec";
       localVram = "5.1 GB";
-      cloudModel = "gemini-3.5-flash";
+      cloudModel = "gemini-2.5-flash";
       justification = "Mistral-7B provides highly eloquent creative copy. Route to local model first. Resort to Cloud Flash only if high concurrent throughput is required.";
       costEst = "Local: $0.00 / Cloud: $0.00015 per 1k tokens";
       break;
@@ -1574,7 +1603,7 @@ app.post("/api/inspector/advisor", (req, res) => {
       localModel = "qwen2.5:7b";
       localSpeed = "36 tok/sec";
       localVram = "5.8 GB";
-      cloudModel = "gemini-3.5-flash";
+      cloudModel = "gemini-2.5-flash";
       justification = "Qwen2.5-7B has excellent multilingual dictionary representations. Local-first deployment is highly secure for private translation.";
       costEst = "Local: $0.00 / Cloud: $0.000075 per 1k tokens";
       break;
@@ -3060,6 +3089,313 @@ app.post("/empire/event", (req, res) => {
 
 // ══════════════════════════════════════════════════════════════════════
 // END EMPIRE OS HOOKS
+// ══════════════════════════════════════════════════════════════════════
+
+// --- BOSS LISTERS AI ENDPOINT ---
+// Generates AI-powered high-ticket product listing copy using Gemini.
+// Produces: headlines, boss bullets, pricing models, sales funnel, and SEO meta.
+app.post("/api/boss-listers/optimize", async (req, res) => {
+  const { productName, targetPrice, nicheCategory, productFeatures, copyTone } = req.body;
+
+  if (!productName || typeof productName !== "string" || productName.trim() === "") {
+    return res.status(400).json({ success: false, error: "Product name is required." });
+  }
+
+  const ai = getGemini();
+
+  if (ai) {
+    try {
+      const systemInstruction = `You are a world-class high-ticket sales copywriter and conversion optimization expert.
+Your sole goal is to generate premium product listing copy that converts.
+You write concise, authoritative, benefit-focused copy using the "${copyTone || 'Authority & Trust'}" tone.
+You MUST return a JSON payload matching the requested responseSchema format EXACTLY.`;
+
+      const promptPayload = `Generate a complete high-ticket sales listing for:
+Product: ${productName}
+Price: ${targetPrice || "Premium pricing"}
+Niche: ${nicheCategory || "Enterprise Software"}
+Key Features: ${productFeatures || "Custom solution"}
+Tone: ${copyTone || "Authority & Trust"}
+
+Create 2 punchy conversion headlines, 3 "Boss Bullet" benefit statements (label + body), 2 pricing tiers, a 3-step sales funnel, and SEO metadata.`;
+
+      const apiResponse = await ai.models.generateContent({
+        model: "gemini-2.5-flash",
+        contents: promptPayload,
+        config: {
+          systemInstruction,
+          temperature: 0.75,
+          responseMimeType: "application/json",
+          responseSchema: {
+            type: Type.OBJECT,
+            properties: {
+              headlines: {
+                type: Type.ARRAY,
+                items: { type: Type.STRING }
+              },
+              bossBullets: {
+                type: Type.ARRAY,
+                items: {
+                  type: Type.OBJECT,
+                  properties: {
+                    label: { type: Type.STRING },
+                    text: { type: Type.STRING }
+                  },
+                  required: ["label", "text"]
+                }
+              },
+              pricingModels: {
+                type: Type.ARRAY,
+                items: {
+                  type: Type.OBJECT,
+                  properties: {
+                    tier: { type: Type.STRING },
+                    price: { type: Type.STRING },
+                    detail: { type: Type.STRING }
+                  },
+                  required: ["tier", "price", "detail"]
+                }
+              },
+              salesFunnel: {
+                type: Type.ARRAY,
+                items: {
+                  type: Type.OBJECT,
+                  properties: {
+                    step: { type: Type.STRING },
+                    action: { type: Type.STRING }
+                  },
+                  required: ["step", "action"]
+                }
+              },
+              metaTags: {
+                type: Type.OBJECT,
+                properties: {
+                  title: { type: Type.STRING },
+                  description: { type: Type.STRING },
+                  keywords: { type: Type.STRING }
+                },
+                required: ["title", "description", "keywords"]
+              }
+            },
+            required: ["headlines", "bossBullets", "pricingModels", "salesFunnel", "metaTags"]
+          }
+        }
+      });
+
+      const responseText = apiResponse.text;
+      if (responseText) {
+        const parsed = JSON.parse(responseText);
+        return res.json({ success: true, ...parsed, isSimulated: false });
+      }
+    } catch (err: any) {
+      console.error("[BOSS LISTERS] Gemini generation failed. Falling back to procedural copy.", err);
+    }
+  }
+
+  // --- Procedural fallback (always works, no API key needed) ---
+  const cleanName = (productName || "Your Product").trim();
+  const cleanNiche = (nicheCategory || "Enterprise").trim();
+  const cleanPrice = (targetPrice || "Premium").trim();
+
+  const headlines = [
+    `Stop Paying Cloud Rents: Own Your ${cleanNiche} Layer with ${cleanName}`,
+    `The Self-Auditing ${cleanNiche} System Built for High-Scale Operators`
+  ];
+
+  const bossBullets = [
+    {
+      label: "ZERO-LATENCY DISPATCH SPEED",
+      text: `${cleanName} eliminates the overhead of legacy SaaS layers. Runs locally on standard hardware, cutting your monthly platform bills by up to 85%.`
+    },
+    {
+      label: "AUTOMATED OPTIMIZATION SWEEPS",
+      text: `Continuous background analysis flags inefficiencies, pinpoints duplicate processes, and recommends cleanup vectors in real time.`
+    },
+    {
+      label: "MULTI-CHANNEL DEPLOYMENT PIPELINE",
+      text: `Deploy updates, publish assets, or push campaigns simultaneously across all active endpoints with zero staging delays.`
+    }
+  ];
+
+  const pricingModels = [
+    {
+      tier: "ENTERPRISE ONE-OFF",
+      price: cleanPrice,
+      detail: "Permanent license. Includes 12 months priority support and source-code integration access."
+    },
+    {
+      tier: "MANAGED SUBSCRIPTION",
+      price: "Custom / Contact Sales",
+      detail: "Zero hardware required. Fully managed, hosted, and maintained instance with dedicated SLA."
+    }
+  ];
+
+  const salesFunnel = [
+    {
+      step: "1. COGNITIVE HOOK (Ingress)",
+      action: `Promote a free '${cleanNiche} Audit Report' via LinkedIn or X/Twitter targeting decision-makers in the space.`
+    },
+    {
+      step: "2. INTERACTIVE DEMO (Value Delivery)",
+      action: `Drop leads into a live interactive sandbox that demonstrates ${cleanName} solving a real pain point in under 60 seconds.`
+    },
+    {
+      step: "3. HIGH-TICKET CLOSE (Conversion)",
+      action: `Present the one-off licensing model with a live cost-savings calculator comparing total cost of ownership vs. alternatives.`
+    }
+  ];
+
+  const metaTags = {
+    title: `${cleanName} | ${cleanNiche} Solution for High-Performance Teams`,
+    description: `Maximize operational throughput with ${cleanName}. Built for ${cleanNiche} — eliminate inefficiencies, automate workflows, and scale without limits.`,
+    keywords: `${cleanNiche.toLowerCase()}, enterprise software, automation, ${cleanName.toLowerCase()}, high-ticket SaaS`
+  };
+
+  return res.json({
+    success: true,
+    headlines,
+    bossBullets,
+    pricingModels,
+    salesFunnel,
+    metaTags,
+    isSimulated: true
+  });
+});
+
+// ══════════════════════════════════════════════════════════════════════
+
+// --- DOCUMENTARY FACTORY AI ENDPOINT ---
+// Generates documentary act structures, voiceover cue sheets, and visual directions.
+// Returns: title, acts[], cues[]. Live Gemini or procedural fallback.
+app.post("/api/documentary/assemble", async (req, res) => {
+  const { topic, narrationStyle, voiceCloning, backgroundTrack } = req.body;
+
+  if (!topic || typeof topic !== "string" || topic.trim() === "") {
+    return res.status(400).json({ success: false, error: "Documentary topic is required." });
+  }
+
+  const cleanTopic = topic.trim();
+  const cleanStyle = (narrationStyle || "Investigative & Dramatic").trim();
+  const cleanVoice = (voiceCloning || "British Historian").trim();
+  const cleanTrack = (backgroundTrack || "Subtle Retro Sub-bass Synth").trim();
+
+  const ai = getGemini();
+
+  if (ai) {
+    try {
+      const systemInstruction = `You are an award-winning documentary director and scriptwriter.
+You create powerful three-act documentary structures with precise voiceover cue sheets.
+Narration style: "${cleanStyle}". Voice profile: "${cleanVoice}". Background: "${cleanTrack}".
+You MUST return a JSON payload matching the requested responseSchema format EXACTLY.`;
+
+      const promptPayload = `Create a professional documentary production plan for:
+Topic: "${cleanTopic}"
+Narration Style: ${cleanStyle}
+Voice Profile: ${cleanVoice}
+Background Track: ${cleanTrack}
+
+Generate a title (ALL CAPS), 3 dramatic acts (name + duration + description), and 3 timestamped cue sheets (timestamp + audio direction + narration line + visual direction).`;
+
+      const apiResponse = await ai.models.generateContent({
+        model: "gemini-2.5-flash",
+        contents: promptPayload,
+        config: {
+          systemInstruction,
+          temperature: 0.80,
+          responseMimeType: "application/json",
+          responseSchema: {
+            type: Type.OBJECT,
+            properties: {
+              title: { type: Type.STRING },
+              acts: {
+                type: Type.ARRAY,
+                items: {
+                  type: Type.OBJECT,
+                  properties: {
+                    name: { type: Type.STRING },
+                    duration: { type: Type.STRING },
+                    description: { type: Type.STRING }
+                  },
+                  required: ["name", "duration", "description"]
+                }
+              },
+              cues: {
+                type: Type.ARRAY,
+                items: {
+                  type: Type.OBJECT,
+                  properties: {
+                    timestamp: { type: Type.STRING },
+                    audio: { type: Type.STRING },
+                    narration: { type: Type.STRING },
+                    visual: { type: Type.STRING }
+                  },
+                  required: ["timestamp", "audio", "narration", "visual"]
+                }
+              }
+            },
+            required: ["title", "acts", "cues"]
+          }
+        }
+      });
+
+      const responseText = apiResponse.text;
+      if (responseText) {
+        const parsed = JSON.parse(responseText);
+        return res.json({ success: true, ...parsed, isSimulated: false });
+      }
+    } catch (err: any) {
+      console.error("[DOCUMENTARY FACTORY] Gemini generation failed. Using procedural fallback.", err);
+    }
+  }
+
+  // --- Procedural fallback ---
+  const words = cleanTopic.replace(/[^a-zA-Z0-9 ]/g, "").toUpperCase().split(" ").slice(0, 4).join(" ");
+  const fallbackTitle = words || "THE UNTOLD STORY";
+
+  return res.json({
+    success: true,
+    isSimulated: true,
+    title: fallbackTitle,
+    acts: [
+      {
+        name: "ACT I: THE REVELATION",
+        duration: "2m 30s",
+        description: `Establishes the hidden scale and stakes of "${cleanTopic}". Opens with a visceral hook that immediately implicates the viewer.`
+      },
+      {
+        name: "ACT II: THE UNRAVELING",
+        duration: "5m 15s",
+        description: "Peels back the layers. Technical evidence, expert testimony, and archival footage reveal the true mechanisms at work."
+      },
+      {
+        name: "ACT III: THE RECKONING",
+        duration: "3m 45s",
+        description: "The philosophical and moral outcome. What does this mean for society? What must change? Ends on a call to consciousness."
+      }
+    ],
+    cues: [
+      {
+        timestamp: "00:00 - 00:30",
+        audio: `Low ${cleanTrack} rumble. No music — just tension.`,
+        narration: `The world you see is not the world that exists. Behind every system of control, there is another system — older, quieter, and far more powerful.`,
+        visual: "Extreme close-up of hands at a keyboard. Slow push-in. Screen glow reflects in eyes."
+      },
+      {
+        timestamp: "00:30 - 01:45",
+        audio: "Music swells into structured percussion. ${cleanVoice} narration rises.",
+        narration: `We spent fourteen months inside the machine. What we found changed how we understand "${cleanTopic}" forever.`,
+        visual: "Drone shot descending into city infrastructure at night. Cut to archival footage. Data visualizations overlay."
+      },
+      {
+        timestamp: "01:45 - 03:00",
+        audio: "Music fades. Silence. Then a single ambient tone.",
+        narration: "They told us this was progress. They told us this was safety. They never told us the cost.",
+        visual: "Interview subject pauses mid-sentence. Camera holds. Cut to black."
+      }
+    ]
+  });
+});
+
 // ══════════════════════════════════════════════════════════════════════
 
 // Configure serving frontend static site built assets

@@ -184,9 +184,81 @@ python pipeline_run.py --channel gg
 
 ---
 
-## Immediate Actions Needed (as of 2026-07-02)
+## Empire OS — Module Architecture (as of 2026-07-05)
 
-1. `render_ep006.bat` — Fix GG_EP006 (Pearl Harbor, 21/24 clips broken)
-2. `render_season3.bat` — Render GG_EP012–EP025 (all scripts complete)
-3. Set real `ELEVENLABS_API_KEY` in .env (optional — edge-tts fallback works)
-4. Update `script_registry.json` (only shows EP001–EP005)
+Empire OS server: `empire-os-patch/apps/empire-os-server/server.ts` — 22 modules total.
+
+**Video Pipeline module (new 2026-07-05):**
+- `empire-os-patch/apps/video-pipeline/empire-module/video-pipeline.module.ts` → `/video-pipeline/`
+- Proxies all requests to `empire_server.py` at `http://localhost:8002`
+- Wired in server.ts — proxies `/video-pipeline/*` to port 8002
+- `empire_server.py` must be running separately (see START_EMPIRE_PIPELINE.bat)
+
+**empire_server.py (new 2026-07-05):**
+- Location: `empire-os-patch/apps/video-pipeline/empire_server.py`
+- FastAPI at port 8002 — the one-click render bridge
+- Spawns `auto_render.py` as subprocess, captures stdout, tracks progress
+- Endpoints: GET /api/episodes, POST /api/render, GET /api/render/status, GET /api/render/logs (SSE + polling), POST /api/cancel, GET /api/council/status
+- Start: `python empire-os-patch/apps/video-pipeline/empire_server.py` from repo root
+- Or use: `START_EMPIRE_PIPELINE.bat` (starts both Empire OS + empire_server.py)
+
+**empire-dashboard.module.ts updated (2026-07-05):**
+- New "Render Episode" page in sidebar under Studio
+- Episode dropdown (auto-populated from prompts/ scan)
+- Live progress bar + log streaming (polling via /video-pipeline proxy)
+- Job history table
+
+**Operation Blacksmith modules (new 2026-07-04):**
+- `logger.module.ts` → `/logger/` — centralized structured logging, `empireLog()` singleton
+- `metrics-engine.module.ts` → `/metrics-engine/` — P50/P95/P99 per module, `recordMetric()` called in server.ts routing
+- `job-scheduler.module.ts` → `/job-scheduler/` — 4 built-in background jobs (backup/discovery/self-check/log-rotate)
+- `service-registry.module.ts` → `/service-registry/` — 26 services, dependency graph, health matrix
+- `notification.module.ts` → `/notification/` — event queue, `emitNotification()` importable
+
+**All modules are instrumented for metrics** — `recordMetric()` is called at the routing call site in server.ts after every `handleRequest()`.
+
+---
+
+## YouTube Upload System (Working as of 2026-07-07)
+
+**Upload script:** `easy_youtube_uploader.py`
+**Launcher:** `UPLOAD_NOW.bat`
+**Token:** `token.pickle` (saved after first auth, reused automatically)
+**Credentials:** `credentials.json` (OAuth Desktop client — DO NOT COMMIT)
+
+**GCP Project:** `viral-engine-yt` (owner: justifiedmagnificent@gmail.com)
+**YouTube channel:** "Gods & Glory" on **godsandgloryai@gmail.com**
+**GCP test users:** justifiedmagnificent@gmail.com, godsandgloryai@gmail.com
+**CRITICAL:** Always sign in as godsandgloryai@gmail.com for uploads — justifiedmagnificent@gmail.com is NOT verified for long videos and uploads will fail.
+
+### Normal upload flow
+1. Double-click `UPLOAD_NOW.bat`
+2. If browser opens for auth: sign in as **godsandgloryai@gmail.com** → Allow
+3. All videos upload automatically. Token saved — no re-auth on next run.
+
+### If auth breaks (wrong account or expired)
+- Delete `token.pickle` from pipeline folder → run `UPLOAD_NOW.bat` again
+
+### If "Access is blocked" error
+- Visit: https://console.cloud.google.com/auth/audience?project=viral-engine-yt
+- Sign into GCP as justifiedmagnificent@gmail.com
+- Scroll to Test users → confirm justifiedmagnificent@gmail.com is listed
+
+### If Chrome doesn't open automatically
+- URL is printed in CMD — copy/paste into Chrome manually, complete sign-in there
+
+### Adding more videos to upload
+- Edit the `VIDEOS` list in `easy_youtube_uploader.py`
+
+---
+
+## Immediate Actions Needed (as of 2026-07-05)
+
+1. **SECURITY**: Josh must rotate all keys exposed in .env before next commit — see SECURITY_REPORT.md
+2. **SECURITY**: Run `FIX_SECURITY.bat` to remove .env from git tracking (after rotating keys)
+3. **Install FastAPI**: `pip install fastapi uvicorn` (one-time, for empire_server.py)
+4. **Launch**: Run `START_EMPIRE_PIPELINE.bat` — starts both Empire OS (port 3001) and empire_server.py (port 8002)
+5. **Test**: Open http://localhost:3001/empire-dashboard/ → click "Render Episode" → pick episode → click Render
+6. `render_ep006.bat` — Fix GG_EP006 (Pearl Harbor, 21/24 clips broken)
+7. `render_season3.bat` — Render GG_EP012–EP025 (all scripts complete)
+8. Set real `ELEVENLABS_API_KEY` in .env (optional — edge-tts fallback works)

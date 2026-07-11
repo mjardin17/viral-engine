@@ -97,6 +97,17 @@ STYLE_SUFFIX: dict[str, str] = {
         "epic historical painting, cinematic battle scene, dramatic side lighting, "
         "ultra detailed, photorealistic, 8k, widescreen composition"
     ),
+    "EO": (
+        "cinematic documentary photography, dramatic atmospheric lighting, ancient ruins, "
+        "moody fog and golden hour, ultra detailed, photorealistic, 8k, widescreen composition, "
+        "National Geographic style"
+    ),
+    "IL": (
+        "80s 90s retro cartoon animation style, vibrant electric colors, dramatic robot mech battle, "
+        "Transformers G.I. Joe He-Man aesthetic, cel-shaded anime art, bold outlines, "
+        "cinematic action composition, neon blue and orange energy beams, steel chrome surfaces, "
+        "ultra detailed, widescreen 16:9, Saturday morning cartoon meets modern anime"
+    ),
 }
 DEFAULT_STYLE = "cinematic, dramatic lighting, ultra detailed, photorealistic, 8k"
 
@@ -104,19 +115,34 @@ CHANNEL_LABELS: dict[str, str] = {
     "ML": "MECH LEGENDS",
     "LO": "LITTLE OLYMPUS",
     "GG": "GODS & GLORY",
+    "EO": "ECHOES OF ETERNITY",
+    "IL": "IRON LEGENDS",
 }
-# edge-tts neural voices — sounds like a real human narrator
-# Full list: run `edge-tts --list-voices` in terminal
+# ── TTS Engine: Kokoro (replaces edge-tts) ───────────────────────────────────
+# Kokoro voices — run voice-music-factory/run_factory.py to preview
+# am_* = American male  |  af_* = American female
 CHANNEL_VOICE: dict[str, str] = {
-    "GG": "en-US-ChristopherNeural",   # Deep, authoritative, documentary narrator
-    "ML": "en-US-GuyNeural",           # Energetic, punchy, action-hero energy
-    "LO": "en-US-AriaNeural",          # Warm, friendly, storyteller
+    "GG": "am_adam",    # Deep authoritative male — documentary narrator
+    "ML": "am_adam",    # Energetic male — action energy
+    "LO": "af_bella",   # Warm female — storyteller/kids
+    "EO": "am_adam",    # Cinematic deep male — Echoes of Eternity
+    "IL": "am_adam",    # High-energy male — Saturday morning cartoon
 }
-CHANNEL_RATE: dict[str, str] = {
-    "GG": "-5%",    # Slightly slower — gravitas
-    "ML": "+5%",    # Slightly faster — action energy
-    "LO": "-10%",   # Slower — kids need time to follow
+# Kokoro speed multipliers (1.0 = normal; <1.0 = slower; >1.0 = faster)
+# Mirrors old edge-tts rate percentages: -35% → 0.65, +8% → 1.08, etc.
+CHANNEL_RATE: dict[str, float] = {
+    "GG": 0.65,   # Slowed for gravitas — targets 45+ min runtime
+    "ML": 1.05,   # Slightly faster — action energy
+    "LO": 0.90,   # Slower — kids need time to follow
+    "EO": 0.92,   # Slow and deliberate — mystery and weight
+    "IL": 1.08,   # Fast and punchy — Saturday morning cartoon energy
 }
+
+# Kokoro TTS CLI — called via venv Python so no import conflicts
+KOKORO_PYTHON = (
+    Path(__file__).parent / "voice-music-factory" / "venv" / "Scripts" / "python.exe"
+)
+KOKORO_CLI = Path(__file__).parent / "voice-music-factory" / "tts_cli.py"
 
 
 # ── FFmpeg ─────────────────────────────────────────────────────────────────────
@@ -1181,8 +1207,8 @@ def main() -> None:
         sys.exit("ERROR: No scenes found in episode JSON.")
 
     title   = ep_data.get("title", episode_id)
-    voice   = CHANNEL_VOICE.get(channel, "en-US-ChristopherNeural")
-    rate    = CHANNEL_RATE.get(channel,  "-5%")
+    voice   = CHANNEL_VOICE.get(channel, "am_adam")
+    rate    = CHANNEL_RATE.get(channel,  0.90)   # Kokoro speed multiplier
 
     print(f"  Episode : {title}")
     print(f"  Scenes  : {len(scenes)}")
@@ -1301,19 +1327,49 @@ def main() -> None:
                 pass
 
         if not audio_path.exists():
-            print(f"   [TTS]  Generating narration…")
-            try:
-                import asyncio, edge_tts
-                async def _tts() -> None:
-                    comm = edge_tts.Communicate(narr, voice=voice, rate=rate)
-                    await comm.save(str(audio_path))
-                asyncio.run(_tts())
-                print(f"   [TTS]  ✓ {audio_path.name}")
-            except ImportError:
-                print("   [TTS]  edge-tts not installed — trying SAPI fallback…")
+            print(f"   [TTS]  Generating narration (Kokoro voice={voice}, speed={rate})...")
+            kokoro_ok = False
+            if KOKORO_PYTHON.exists() and KOKORO_CLI.exists():
                 try:
-                    wav_str = str(audio_path.with_suffix(".wav"))
-                    safe_narr = narr.replace("'", "")
+                    wav_out = audio_path.with_suffix(".wav")
+                    result = subprocess.run(
+                        [
+                            str(KOKORO_PYTHON), str(KOKORO_CLI),
+                            "--text",  narr,
+                            "--voice", voice,
+                            "--speed", str(rate),
+                            "--out",   str(wav_out),
+                        ],
+                        capture_output=True, text=True,
+                        timeout=180,
+                        encoding="utf-8", errors="replace",
+                    )
+                    if result.returncode == 0 and wav_out.exists() and wav_out.stat().st_size > 1000:
+                        # Convert WAV -> MP3 for pipeline compatibility
+                        subprocess.run(
+                            [ffmpeg, "-y", "-i", str(wav_out), str(audio_path)],
+                            capture_output=True, timeout=60,
+                        )
+                        wav_out.unlink(missing_ok=True)
+                        if audio_path.exists() and audio_path.stat().st_size > 1000:
+                            print(f"   [TTS]  [OK] Kokoro -> {audio_path.name}")
+                            kokoro_ok = True
+                        else:
+                            print(f"   [TTS]  [WARN] Kokoro WAV->MP3 failed -- trying SAPI")
+                    else:
+                        err = (result.stderr or "").strip()
+                        print(f"   [TTS]  [WARN] Kokoro failed (exit {result.returncode}): {err[:120]}")
+                except Exception as e:
+                    print(f"   [TTS]  [WARN] Kokoro exception: {e}")
+            else:
+                print(f"   [TTS]  [WARN] Kokoro venv not found -- using SAPI fallback")
+
+            if not kokoro_ok:
+                # SAPI fallback (Windows built-in, no internet required)
+                print("   [TTS]  Trying SAPI fallback...")
+                try:
+                    wav_str   = str(audio_path.with_suffix(".wav"))
+                    safe_narr = narr.replace("'", "").replace('"', "")
                     subprocess.run(
                         ["powershell", "-Command",
                          "Add-Type -AssemblyName System.Speech; "
@@ -1323,19 +1379,19 @@ def main() -> None:
                         capture_output=True, timeout=60,
                     )
                     wav = audio_path.with_suffix(".wav")
-                    if wav.exists():
+                    if wav.exists() and wav.stat().st_size > 1000:
                         subprocess.run(
                             [ffmpeg, "-y", "-i", str(wav), str(audio_path)],
                             capture_output=True,
                         )
-                        print(f"   [TTS]  ✓ SAPI fallback {audio_path.name}")
+                        wav.unlink(missing_ok=True)
+                        print(f"   [TTS]  [OK] SAPI fallback -> {audio_path.name}")
                     else:
+                        print(f"   [TTS]  [WARN] SAPI produced no audio -- using silence")
                         _make_silence(audio_path, dur, ffmpeg)
-                except Exception:
+                except Exception as e:
+                    print(f"   [TTS]  [FAIL] SAPI failed: {e} -- using silence")
                     _make_silence(audio_path, dur, ffmpeg)
-            except Exception as e:
-                print(f"   [TTS]  ✗ Failed: {e} — using silence")
-                _make_silence(audio_path, dur, ffmpeg)
         else:
             print(f"   [TTS]  Reusing {audio_path.name}")
 

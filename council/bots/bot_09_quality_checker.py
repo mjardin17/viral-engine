@@ -19,8 +19,6 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 from council.bot_base import CouncilBot, BotResult, BASE_DIR
 
-RENDERS_DIR = BASE_DIR / "renders"
-MIN_DURATION_SEC = 300
 TARGET_DURATION_SEC = 600
 MIN_AUDIO_RMS = -40.0       # dBFS — below this is effectively silent
 ABRUPT_END_DROP_DB = 15.0   # if last 2s RMS is this many dB below overall → abrupt cutoff
@@ -125,7 +123,11 @@ class QualityCheckerBot(CouncilBot):
 
     def run(self) -> BotResult:
         r = self.result
-        finals = sorted(RENDERS_DIR.glob("*_final.mp4"))
+        if not self.renders_dir.exists():
+            r.ok(f"No renders dir yet for {self.channel_name} — nothing to check")
+            return r
+
+        finals = sorted(self.renders_dir.glob("*_final.mp4"))
 
         if not finals:
             r.ok("No final MP4s to check")
@@ -140,8 +142,8 @@ class QualityCheckerBot(CouncilBot):
             probe = _ffprobe(final, "duration")
             dur = float((probe.get("format") or {}).get("duration", 0))
 
-            if dur < MIN_DURATION_SEC:
-                r.error(f"{ep_id}: final too short ({dur:.0f}s < {MIN_DURATION_SEC}s)")
+            if dur < self.min_final_sec:
+                r.error(f"{ep_id}: final too short ({dur:.0f}s < {self.min_final_sec}s)")
                 quality_issues.append({"episode": ep_id, "issue": "too_short", "value": dur})
                 continue
 

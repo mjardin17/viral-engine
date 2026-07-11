@@ -3,10 +3,15 @@
   "channel": "GG",
   "title": "Gaugamela: The Battle That Ended an Empire",
   "tagline": "One charge. One empire. The day the world changed forever.",
-  "duration_target_min": 19,
+  "duration_target_min": 50,
   "aesthetic": {
     "color_grade": "cinematic_macedonian_epic",
-    "primary_colors": ["#1C2B4A", "#C9A84C", "#8B1A1A", "#2E4A3E"],
+    "primary_colors": [
+      "#1C2B4A",
+      "#C9A84C",
+      "#8B1A1A",
+      "#2E4A3E"
+    ],
     "font_style": "serif_documentary_bold",
     "music_style": "hans_zimmer_conquest_epic",
     "narrator_tone": "authoritative_punchy_dramatic"
@@ -17,7 +22,10 @@
       "title": "The Last Dawn of Persia",
       "narration": "On the first of October, 331 BC, a twenty-five-year-old Macedonian king stood on a ridge in what is now northern Iraq and looked down at the largest army ever assembled to fight a single battle. Two hundred and fifty thousand men. Scythe-wheeled chariots built to shred infantry formations. War elephants. Cavalry from the ends of the known world. Waiting for him. He had forty-seven thousand soldiers. He told his generals to sleep. He stayed awake all night. By dawn, the Persian Empire — the greatest empire the world had ever seen — had a few hours left to live. This is Gaugamela. The battle that ended everything.",
       "visual_prompt": "Gods & Glory cinematic historical documentary. Pre-dawn aerial view of the flat plain of Gaugamela — vast, deliberately cleared terrain stretching to the horizon. In the foreground on a rocky ridge: a lone young king in Macedonian bronze armor, silhouetted against the first bruise of dawn light, looking down. Below, Persian campfires extend across the entire plain like a field of burning stars — hundreds of thousands of points of light filling the frame. The scale is overwhelming: one figure against an ocean of fire. Cinematic widescreen, heavy shadow, slow-burn dread. 16:9.",
-      "bg_colors": ["#0D1B2A", "#C9A84C"],
+      "bg_colors": [
+        "#0D1B2A",
+        "#C9A84C"
+      ],
       "duration_sec": 50
     },
     {
@@ -25,183 +33,642 @@
       "title": "The Persian Empire at Its Height",
       "narration": "To understand what was at stake at Gaugamela, you have to understand what the Persian Empire actually was. In 331 BC, the Achaemenid Empire was the largest political entity in human history. It stretched from Greece in the west to the borders of India in the east, from the steppes of Central Asia in the north to the cataracts of the Nile in the south. It controlled approximately forty-four percent of the world's population. Its royal road network connected cities that had never met. Its treasury at Persepolis contained wealth beyond any Greek's comprehension. The empire was not just powerful. It was the world's operating system — the framework within which commerce, law, and civilization functioned across three continents. Darius III was the man responsible for holding it together.",
       "visual_prompt": "Gods & Glory cinematic historical documentary. Sweeping animated map of the Achaemenid Persian Empire at its height — the entire territory illuminated in deep gold from Greece to India, Egypt to the Caspian Sea. The royal road network shown as glowing arteries connecting major cities: Persepolis, Babylon, Susa, Sardis, Memphis. Then: the treasury of Persepolis visualized — vast columned halls stacked with tribute gold from forty nations, lamplight catching polished metal. A scale inset showing Greece as a sliver beside the empire's mass. Rich, authoritative documentary palette. 16:9.",
-      "bg_colors": ["#C9A84C", "#1C2B4A"],
+      "bg_colors": [
+        "#C9A84C",
+        "#1C2B4A"
+      ],
       "duration_sec": 48
     },
     {
-      "scene_number": 3,
-      "title": "Darius III — The Last King",
-      "narration": "Darius III had not been born to be Great King. He came to the throne in 336 BC through a series of court murders that eliminated everyone ahead of him. His given name was Artashata. He was a capable administrator, reportedly personally brave in single combat, and had survived palace politics that would have destroyed lesser men. But he had two fatal problems. First, he had already met Alexander in battle — at Issus in 333 BC — and had fled the field when Alexander's cavalry broke through toward him. That flight cost him his family, who were captured and treated with remarkable courtesy. Second, he was fighting an opponent who did not recognize the conventions of ancient warfare. Alexander had not come to win a battle. He had come to end an empire.",
-      "visual_prompt": "Gods & Glory cinematic historical documentary. DARIUS III portrait — a tall, dignified Persian king in full royal regalia: jeweled crown, richly embroidered ceremonial robe, golden weapons. His expression carries the weight of survival and the shadow of previous defeat. Background: the columned halls of Persepolis with fire altars burning. Then: a flashback visual to the Battle of Issus — Darius on his royal chariot turning away as Alexander's cavalry charges directly toward him, the king's face caught in the moment of decision. The defining image of a man who has already flinched. 16:9.",
-      "bg_colors": ["#4A1C1C", "#C9A84C"],
-      "duration_sec": 49
+      "title": "Philip II — The Father Who Built the Army",
+      "type": "context",
+      "narration": "Alexander the Great did not build the army that conquered the world. His father did. Philip II of Macedon inherited a weak northern kingdom in 359 BC and spent twenty years transforming it into the most professional military force in the Greek world. He invented the sarissa — an eighteen-foot pike that outreached every opponent's spear — and the oblique attack formation that became the foundation of Macedonian tactics. He welded the Greek city-states into an alliance under Macedonian leadership by a combination of diplomacy, bribery, and military conquest. When he was assassinated in 336 BC, he left his twenty-year-old son a trained, veteran, loyal army and a plan already drawn up for the Persian invasion. Alexander executed the plan. Philip created the conditions that made it possible. The conquest of Persia was, in military terms, Philip's work. Alexander's genius was in seeing it through.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Philip II of Macedon: powerful, one-eyed (historical detail — he lost an eye in battle), commanding his army. The sarissa pike: extreme length shown against standard Greek spear. The Macedonian phalanx with sarissa bristling like a porcupine. Philip's political achievements: map of Macedonia growing from small kingdom to dominant power. Philip receiving Alexander as a young student. The father's campaign plans laid on a table. His assassination at his daughter's wedding. The crown passing to the twenty-year-old Alexander. 16:9.",
+      "bg_colors": [
+        "#D4AF37",
+        "#1A1A2E",
+        "#8B0000"
+      ],
+      "duration_sec": 50,
+      "scene_number": 3
     },
     {
       "scene_number": 4,
-      "title": "Alexander — The Unstoppable",
-      "narration": "Alexander III of Macedon was twenty-five years old at Gaugamela and had never lost a battle. He had crossed into Asia with forty-three thousand men four years earlier and had since destroyed two Persian armies, captured the entire eastern Mediterranean coastline, conquered Egypt, and been declared a god by Egyptian priests. He had been trained personally by Aristotle. He memorized Homer and kept a copy of the Iliad under his pillow alongside a dagger. He believed, with complete sincerity, that he was descended from both Achilles and Heracles. The terrifying thing about Alexander was not that he was reckless. He was methodical, tactical, and extraordinarily disciplined. He was also willing to bet everything on a single calculated instant. At Gaugamela, that instant was coming.",
-      "visual_prompt": "Gods & Glory cinematic historical documentary. ALEXANDER portrait — a young, magnetic Macedonian king in polished bronze armor with the royal diadem visible at his brow. Eyes intense, forward-focused, radiating controlled energy and absolute conviction. Then: a rapid visual sequence of his conquests lighting up on a map — Granicus, the Aegean coast, Egypt, Issus. Alexander studying a battle map by torchlight with his generals, his finger tracing a diagonal line. The genius at work. Then: him on horseback at the head of the Companion Cavalry, the wedge formation arrayed behind him. 16:9.",
-      "bg_colors": ["#1C2B4A", "#8B1A1A"],
+      "title": "Darius III — The Last King",
+      "narration": "Darius III had not been born to be Great King. He came to the throne in 336 BC through a series of court murders that eliminated everyone ahead of him. His given name was Artashata. He was a capable administrator, reportedly personally brave in single combat, and had survived palace politics that would have destroyed lesser men. But he had two fatal problems. First, he had already met Alexander in battle — at Issus in 333 BC — and had fled the field when Alexander's cavalry broke through toward him. That flight cost him his family, who were captured and treated with remarkable courtesy. Second, he was fighting an opponent who did not recognize the conventions of ancient warfare. Alexander had not come to win a battle. He had come to end an empire.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. DARIUS III portrait — a tall, dignified Persian king in full royal regalia: jeweled crown, richly embroidered ceremonial robe, golden weapons. His expression carries the weight of survival and the shadow of previous defeat. Background: the columned halls of Persepolis with fire altars burning. Then: a flashback visual to the Battle of Issus — Darius on his royal chariot turning away as Alexander's cavalry charges directly toward him, the king's face caught in the moment of decision. The defining image of a man who has already flinched. 16:9.",
+      "bg_colors": [
+        "#4A1C1C",
+        "#C9A84C"
+      ],
       "duration_sec": 49
     },
     {
-      "scene_number": 5,
-      "title": "The Road to Gaugamela",
-      "narration": "After crushing the Persians at Issus and spending two years consolidating the Mediterranean coast and Egypt, Alexander turned east. He crossed the Euphrates and the Tigris rivers with an army of roughly forty-seven thousand — Macedonian infantry and cavalry, Greek allied troops, Thessalian horsemen, and mercenaries from across the known world. Darius had used the time to rebuild. He called in cavalry from Bactria and Scythia, commissioned hundreds of scythe-wheeled chariots designed specifically to destroy Macedonian phalanx formations, and had the plain at Gaugamela deliberately leveled and smoothed so his cavalry could maneuver without obstruction. Darius was choosing the battlefield. He had a plan. Alexander was already thinking three moves ahead.",
-      "visual_prompt": "Gods & Glory cinematic historical documentary. Animated campaign map showing Alexander's route: south from Issus to Egypt, then curling northeast — the Euphrates and Tigris river crossings marked with army icons. The Macedonian army on the march across flat Mesopotamian landscape — infantry columns, cavalry flanks, supply trains. Then: the Persian side — engineers with tools deliberately smoothing and leveling the plain of Gaugamela. Persian workers clearing rocks, filling hollows. The trap being constructed. The killing ground made perfect for chariots. 16:9.",
-      "bg_colors": ["#2E4A3E", "#C9A84C"],
-      "duration_sec": 48
+      "title": "Crossing Into Asia — The Promise at Troy",
+      "type": "context",
+      "narration": "When Alexander led his army across the Hellespont into Asia in 334 BC, his first act was not military. He stopped at Troy. He went to the tomb of Achilles, made sacrifice, anointed the gravestone with oil, and ran a ceremonial race around it. This was not religious obligation. It was strategic theater. Alexander had grown up reading Homer, had been tutored by Aristotle, and genuinely modeled himself on Achilles — the hero who chose a short glorious life over a long obscure one. By stopping at Troy, he announced to the Greek world what kind of campaign this was: not a punitive raid, not a diplomatic maneuver, but a heroic quest. He was also doing something militarily shrewd. When crossing the Hellespont, he threw a spear from his ship into the Asian soil and jumped ashore in full armor — claiming Asia as 'won by the spear.' He was establishing legal and symbolic ownership from the first moment.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Alexander arriving at the Hellespont strait: his fleet of ships crossing the narrow water. The dramatic moment: Alexander throws his spear from the ship into Asian soil, leaps ashore in full armor. Then: the ruins of ancient Troy, Alexander at the tomb of Achilles, anointing the gravestone, making sacrifice. His copy of the Iliad — annotated by Aristotle — shown as an artifact. The young king at 22, beginning the conquest of the largest empire on earth. The weight of Homeric expectation he carries. 16:9.",
+      "bg_colors": [
+        "#D4AF37",
+        "#8B0000",
+        "#1A1A2E"
+      ],
+      "duration_sec": 50,
+      "scene_number": 5
     },
     {
       "scene_number": 6,
-      "title": "Two Armies — A Study in Contrast",
-      "narration": "The two armies that faced each other at Gaugamela were extraordinarily different in philosophy, structure, and scale. Darius commanded somewhere between two hundred thousand and two hundred fifty thousand soldiers — ancient sources give numbers ranging widely, and modern historians generally accept the lower estimates. The core was twenty-four thousand elite Persian cavalry, forty-two thousand Greek mercenary infantry, Bactrian and Scythian horsemen, war elephants, and two hundred scythe-wheeled chariots. Against this: Alexander's forty-seven thousand, organized into the most tactically sophisticated military system the ancient world had produced. Outnumbered at least four to one. On terrain chosen by his enemy specifically to neutralize his advantages. This was supposed to be impossible.",
-      "visual_prompt": "Gods & Glory cinematic historical documentary. Split-screen battle order comparison. Left side: the Persian array — vast, multicolored, drawn from a dozen nations. Cavalry standards from Bactria and Scythia. Scythe chariots in the front line. War elephants on the flanks. The sheer mass overwhelming the frame. Right side: the Macedonian formation — smaller but geometric, precise, intentional. The sarissa phalanx in the center, Companion Cavalry on the right, allied troops on the left. Then both sides rendered on a single battlefield map showing the enormous scale difference between them. 16:9.",
-      "bg_colors": ["#1C2B4A", "#4A1C1C"],
-      "duration_sec": 50
-    },
-    {
-      "scene_number": 7,
-      "title": "The Macedonian War Machine",
-      "narration": "The Macedonian military system that Philip II invented and Alexander perfected was unlike anything that had come before it. The core was the sarissa phalanx — infantry carrying pikes eighteen to twenty-one feet long, arranged in close formation sixteen ranks deep. The sarissas of the first five ranks projected forward simultaneously, creating an impenetrable wall of iron points. No cavalry could charge into it. No infantry could get close enough to use a sword. But the phalanx was slow and inflexible, and Alexander knew it. He never used it to win. He used it as an anvil — to fix the enemy in place while the real weapon did its work. The real weapon was Alexander himself, leading the Companion Cavalry in wedge formation. The hammer to the phalanx's anvil.",
-      "visual_prompt": "Gods & Glory cinematic historical documentary. The Macedonian sarissa phalanx in clinical technical detail — soldiers in bronze helmets and linen armor holding eighteen-foot pikes angled forward at multiple levels. The view from in front: a forest of iron points at chest, throat, and face height, with no gap visible anywhere. An approaching Persian cavalryman's point-of-view — finding no entry. Then: the Companion Cavalry in wedge formation, Alexander at the sharpened tip, bronze and horsehair, accelerating. Tactical animation showing the hammer-and-anvil doctrine: phalanx pins, cavalry shatters. 16:9.",
-      "bg_colors": ["#1C2B4A", "#8B1A1A"],
+      "title": "Alexander — The Unstoppable",
+      "narration": "Alexander III of Macedon was twenty-five years old at Gaugamela and had never lost a battle. He had crossed into Asia with forty-three thousand men four years earlier and had since destroyed two Persian armies, captured the entire eastern Mediterranean coastline, conquered Egypt, and been declared a god by Egyptian priests. He had been trained personally by Aristotle. He memorized Homer and kept a copy of the Iliad under his pillow alongside a dagger. He believed, with complete sincerity, that he was descended from both Achilles and Heracles. The terrifying thing about Alexander was not that he was reckless. He was methodical, tactical, and extraordinarily disciplined. He was also willing to bet everything on a single calculated instant. At Gaugamela, that instant was coming.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. ALEXANDER portrait — a young, magnetic Macedonian king in polished bronze armor with the royal diadem visible at his brow. Eyes intense, forward-focused, radiating controlled energy and absolute conviction. Then: a rapid visual sequence of his conquests lighting up on a map — Granicus, the Aegean coast, Egypt, Issus. Alexander studying a battle map by torchlight with his generals, his finger tracing a diagonal line. The genius at work. Then: him on horseback at the head of the Companion Cavalry, the wedge formation arrayed behind him. 16:9.",
+      "bg_colors": [
+        "#1C2B4A",
+        "#8B1A1A"
+      ],
       "duration_sec": 49
     },
     {
-      "scene_number": 8,
-      "title": "Darius's Secret Weapon — The Scythe Chariots",
-      "narration": "Darius had spent the years between Issus and Gaugamela engineering a specific answer to the Macedonian phalanx: the scythed chariots. Each chariot was fitted with rotating iron blades extending horizontally from the wheel axles — designed to cut through packed infantry at speed. Two hundred of them deployed in the front line. If they could break the Macedonian formation before the battle was decided, Darius's numerical advantage would become overwhelming. The flat, prepared ground at Gaugamela was designed to let them reach maximum velocity before impact. Darius had also re-equipped his cavalry with longer lances to better match Macedonian reach. He had studied his enemy carefully. He had engineered specific countermeasures. The question was whether Alexander had already planned for those countermeasures.",
-      "visual_prompt": "Gods & Glory cinematic historical documentary. Close technical study of the Persian scythed chariot — iron scythe blades extending two feet from each wheel hub, gleaming and honed to an edge. A row of two hundred chariots in the Persian front line: horses stamping and blowing, drivers gripping reins, blades catching the morning light. A simulated view showing what a chariot charge at full speed would do to a packed infantry formation — the blades passing through at axle height. Darius observing from elevation as his special weapon is positioned. The smoothed ground ahead of them: a deliberate runway. 16:9.",
-      "bg_colors": ["#4A1C1C", "#C9A84C"],
-      "duration_sec": 50
+      "title": "The Battle of Issus — The First Time They Met",
+      "type": "battle",
+      "narration": "Gaugamela was not the first time Alexander and Darius III faced each other. They had met two years earlier at the Battle of Issus in 333 BC, in a narrow coastal plain between the mountains and the sea on the Syrian-Turkish border. It was Darius's mistake. He had a larger army and chose to fight it in a confined space that negated his numerical advantage — exactly the error the Greeks had exploited at Thermopylae. Alexander's cavalry charge broke the Persian left, and Darius fled in his chariot, abandoning his mother, wife, and children on the battlefield. Alexander treated them with elaborate courtesy, sending word to Darius that his family was safe and unharmed. Darius then made an offer that one of Alexander's generals called the greatest offer he had ever heard: all Persian territory west of the Euphrates, his daughter in marriage, ten thousand talents of gold. Alexander refused. He was already thinking about Persia itself.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. The Battle of Issus: narrow coastal plain, mountains on one side, sea on the other. Persian army cramped into unsuitable terrain. The Macedonian cavalry charge breaking the Persian line. Darius on his royal chariot, the famous moment of flight — captured on the Alexander Mosaic (the famous Roman copy). The abandoned Persian royal tent: Darius's mother, wife, daughters, left behind. Alexander entering the tent, treating the royal women with respect. The peace offer laid out: a massive map showing what Darius offered. Alexander's refusal. 16:9.",
+      "bg_colors": [
+        "#8B0000",
+        "#D4AF37",
+        "#4A4A4A"
+      ],
+      "duration_sec": 52,
+      "scene_number": 7
     },
     {
-      "scene_number": 9,
-      "title": "Alexander's Night Before the Battle",
-      "narration": "The night before Gaugamela, Alexander's generals urged him to launch a surprise night attack. Parmenion, his second-in-command, argued that darkness would negate the Persian numerical advantage and prevent the cavalry from maneuvering effectively. Alexander refused. Reportedly he said: I will not steal my victory. The real reason was tactical. A night battle is unpredictable, and unpredictability is the enemy of a commander who wins through precise execution. He needed to see what he was doing. He needed Darius to be exactly where Alexander expected him. The Persians stood to arms all night in formation, afraid of an attack that never came. By morning they were exhausted. Alexander had slept. His physician had to wake him. He rose, ate a full breakfast, and gave his pre-battle address with the ease of a man who had already decided how this would end.",
-      "visual_prompt": "Gods & Glory cinematic historical documentary. Night on the plain of Gaugamela. The Persian army standing in battle formation by torchlight — two hundred thousand men on their feet all night, exhausted, scanning the darkness. Sweat and torchlight. Then cut to the Macedonian camp: Alexander's tent, quiet. He is asleep — genuinely, deeply asleep. His generals pace nervously outside. Dawn beginning to color the horizon. Alexander's physician approaching the tent. Then: Alexander awake, unhurried. Putting on armor piece by piece — ritual, deliberate. His Companions assembling around him. The pre-battle calm of a man who has already won in his own mind. 16:9.",
-      "bg_colors": ["#0D1B2A", "#C9A84C"],
-      "duration_sec": 49
+      "title": "The Siege of Tyre — Seven Months of the Impossible",
+      "type": "battle",
+      "narration": "Between Issus and Gaugamela, Alexander did something that military engineers still study: he captured Tyre. Ancient Tyre was an island city half a mile offshore, with massive stone walls rising directly from the sea. It had never been taken by siege. Alexander spent seven months building a causeway — a half-mile mole of rubble, timber, and earth from the mainland to the island, under constant attack from Tyrian ships and missiles. When the first siege towers were destroyed, he built taller ones. When the causeway kept being undermined by Tyrian divers cutting the foundations, he positioned ships to guard it. He assembled a navy from conquered Phoenician cities and used it to block the harbor. When the causeway finally reached the walls, Alexander himself was in the front of the assault. He was first through the breach. Tyre fell. Two thousand defenders were crucified. The message was specific: resist Alexander and this is what happens.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. The Siege of Tyre: ancient Tyre as an island fortress, walls rising from the sea. The mole under construction: thousands of workers building the causeway toward the island while Tyrian ships rain fire and missiles. Siege towers on the causeway being attacked. Alexander on horseback directing the operation over seven months. The fleet assembled from Phoenician cities surrounding the island. The final assault: the mole reaching the walls, siege towers swinging bridges down, Alexander first through the breach. The aftermath: crucified defenders on the beach. 16:9.",
+      "bg_colors": [
+        "#1A1A2E",
+        "#4A3728",
+        "#8B0000"
+      ],
+      "duration_sec": 52,
+      "scene_number": 8
+    },
+    {
+      "title": "Egypt and the Founding of Alexandria",
+      "type": "context",
+      "narration": "After the coast was secured, Alexander turned to Egypt. The Egyptians had hated Persian rule for nearly two centuries and surrendered without a battle, hailing Alexander as a liberator and a pharaoh. He went to the Siwa Oasis, deep in the Libyan desert, to consult the Oracle of Ammon — an African god the Greeks identified with Zeus. What the Oracle told him is not recorded. What is recorded is that he left believing, or claiming to believe, that he was the son of a god. He then chose a site for a new city: a strip of land between the Mediterranean and Lake Mareotis, with two natural harbors, positioned to become the commercial hub of the eastern Mediterranean. Alexandria was not the only city Alexander named after himself — there were eighteen in total — but it was the only one that mattered. Within a century of his death it was the largest and most sophisticated city in the world.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Alexander in Egypt: received as a liberator, the contrast with Persian oppression shown. The journey to Siwa Oasis: a tiny caravan crossing the Libyan desert. The Oracle of Ammon at Siwa: the remote temple, the priest's greeting. Then: Alexander on the Egyptian coast, choosing the site of Alexandria. Architects and surveyors laying out the city plan. Map of Alexandria's eventual layout: the Pharos lighthouse, the Library, the royal quarter. The city growing from Alexander's sketched plan to the greatest metropolis of the ancient world. 16:9.",
+      "bg_colors": [
+        "#D4AF37",
+        "#4A3728",
+        "#1A1A2E"
+      ],
+      "duration_sec": 50,
+      "scene_number": 9
     },
     {
       "scene_number": 10,
-      "title": "The Battle Opens — Chariot Charge Neutralized",
-      "narration": "The battle opened when Darius launched his scythe chariots. Two hundred armored vehicles with spinning iron blades accelerating toward the Macedonian center. It should have been devastating. It was not. Alexander had drilled his infantry for exactly this moment. As the chariots approached, the Macedonian phalanx opened calculated gaps in its formation — lanes for the chariots to pass through. Soldiers on either side banged their sarissas against their shields, creating noise that panicked the horses and deflected them sideways. Chariots that made it through the gaps were dispatched by troops positioned specifically behind the phalanx for this purpose. The entire weapon Darius had spent years building was neutralized in minutes. Not by accident. By a countermeasure Alexander had prepared before the battle even began.",
-      "visual_prompt": "Gods & Glory cinematic historical documentary. The chariot charge at full speed: two hundred scythed Persian chariots thundering across the flat plain toward the Macedonian line — a wall of iron, horses, spinning blades, and raised dust. Then: the Macedonian response unfolds with stunning precision. Gaps open in the phalanx. Soldiers bang weapons on shields — noise erupts. Horses veer and panic at the sound. Chariots swerve into the gaps harmlessly. Rear troops finish those that pass through. The choreography of a rehearsed plan working perfectly. Darius watching from his position as his secret weapon dissolves into dust. 16:9.",
-      "bg_colors": ["#8B1A1A", "#C9A84C"],
-      "duration_sec": 50
+      "title": "The Road to Gaugamela",
+      "narration": "After crushing the Persians at Issus and spending two years consolidating the Mediterranean coast and Egypt, Alexander turned east. He crossed the Euphrates and the Tigris rivers with an army of roughly forty-seven thousand — Macedonian infantry and cavalry, Greek allied troops, Thessalian horsemen, and mercenaries from across the known world. Darius had used the time to rebuild. He called in cavalry from Bactria and Scythia, commissioned hundreds of scythe-wheeled chariots designed specifically to destroy Macedonian phalanx formations, and had the plain at Gaugamela deliberately leveled and smoothed so his cavalry could maneuver without obstruction. Darius was choosing the battlefield. He had a plan. Alexander was already thinking three moves ahead.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Animated campaign map showing Alexander's route: south from Issus to Egypt, then curling northeast — the Euphrates and Tigris river crossings marked with army icons. The Macedonian army on the march across flat Mesopotamian landscape — infantry columns, cavalry flanks, supply trains. Then: the Persian side — engineers with tools deliberately smoothing and leveling the plain of Gaugamela. Persian workers clearing rocks, filling hollows. The trap being constructed. The killing ground made perfect for chariots. 16:9.",
+      "bg_colors": [
+        "#2E4A3E",
+        "#C9A84C"
+      ],
+      "duration_sec": 48
     },
     {
       "scene_number": 11,
-      "title": "The Oblique Advance",
-      "narration": "Here is where Alexander did something that military historians still study. As the full battle was joined — the phalanx grinding against Persian infantry, cavalry clashing on both flanks — Alexander did not charge straight forward. He led the Companion Cavalry in a diagonal march to the right. Across the entire Persian front. This was not a retreat. It was a calculated maneuver. As he marched obliquely, the Persian line had to stretch to keep up with him. Units extended sideways to cover the movement. And in stretching, something happened that Darius had done everything possible to prevent: a gap opened in the Persian line. Not a large gap. Not a gap by accident. A gap created by Alexander's oblique march, by the Persian response to it, and by the chaos of a battle already underway on multiple fronts simultaneously.",
-      "visual_prompt": "Gods & Glory cinematic historical documentary. Overhead tactical battlefield view rendered cinematically. The Macedonian army in formation, the vast Persian line opposite. Then: Alexander and the Companion Cavalry begin moving diagonally — rightward and forward, drawing across the entire Persian front. Animated arrows trace the movement and the Persian counter-movement as their line stretches to match. Then: a gap appearing in the Persian center-left. A tear in two hundred and fifty thousand men. Small, momentary, but present. Alexander's position relative to Darius becoming visible for the first time. The geometry of genius made visual. 16:9.",
-      "bg_colors": ["#1C2B4A", "#8B1A1A"],
+      "title": "Two Armies — A Study in Contrast",
+      "narration": "The two armies that faced each other at Gaugamela were extraordinarily different in philosophy, structure, and scale. Darius commanded somewhere between two hundred thousand and two hundred fifty thousand soldiers — ancient sources give numbers ranging widely, and modern historians generally accept the lower estimates. The core was twenty-four thousand elite Persian cavalry, forty-two thousand Greek mercenary infantry, Bactrian and Scythian horsemen, war elephants, and two hundred scythe-wheeled chariots. Against this: Alexander's forty-seven thousand, organized into the most tactically sophisticated military system the ancient world had produced. Outnumbered at least four to one. On terrain chosen by his enemy specifically to neutralize his advantages. This was supposed to be impossible.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Split-screen battle order comparison. Left side: the Persian array — vast, multicolored, drawn from a dozen nations. Cavalry standards from Bactria and Scythia. Scythe chariots in the front line. War elephants on the flanks. The sheer mass overwhelming the frame. Right side: the Macedonian formation — smaller but geometric, precise, intentional. The sarissa phalanx in the center, Companion Cavalry on the right, allied troops on the left. Then both sides rendered on a single battlefield map showing the enormous scale difference between them. 16:9.",
+      "bg_colors": [
+        "#1C2B4A",
+        "#4A1C1C"
+      ],
       "duration_sec": 50
     },
     {
-      "scene_number": 12,
-      "title": "The Charge at the Gap",
-      "narration": "Alexander saw the gap. And in that moment he did what Alexander always did. He charged directly at the king. He wheeled the Companion Cavalry — thousands of armored horsemen in wedge formation — and drove them straight at the hole in the Persian line. Not at the edges of the gap, not at the troops on either side. Through the gap itself, aimed at one target: Darius III, the Great King, standing in his royal chariot behind his bodyguard at the Persian center. The Companions drove through like a spear. The soldiers around Darius's position were hit from a direction they could not adequately defend. The fighting around the royal chariot was described by ancient sources as the most intense of the entire battle. Javelins were thrown at Alexander himself. Two horses were killed under him. He kept charging.",
-      "visual_prompt": "Gods & Glory cinematic historical documentary. THE DECISIVE MOMENT. Alexander at the head of the Companion Cavalry, his arm rising — the signal. The wedge formation turns as one. A thundering mass of Macedonian armored horsemen driving diagonally into the Persian line, through the gap, aimed at the center. Darius visible in his royal chariot behind layers of Persian Royal Guard — elite soldiers in gold-trimmed armor forming a human wall. The collision is catastrophic: javelins arcing through the air, horses screaming, the Royal Guard struggling to hold as the wedge punches through. Alexander at the tip, unreachable, relentless, closing the distance. 16:9.",
-      "bg_colors": ["#8B1A1A", "#C9A84C"],
-      "duration_sec": 50
+      "title": "The Night Before Gaugamela — Two Very Different Camps",
+      "type": "deep_dive",
+      "narration": "The night before Gaugamela, two armies made very different decisions. Darius, worried about a night attack, kept his army standing in formation all night. By morning, when the battle began, his men had been standing awake for hours. Parmenion, Alexander's senior general, came to Alexander at midnight and urged a night attack — the Persian camp was visible, they could hit it in the dark and achieve surprise. Alexander famously refused. 'I will not steal a victory,' he said — he wanted to defeat Darius in daylight, in a clean engagement, so there could be no question about the result. This was not just pride. It was political calculation. He was claiming Persia's throne as a legitimate king, not a raider. A night ambush would undermine the legitimacy he was building. While Parmenion argued and Alexander slept, the Persian army stood awake in the dark, waiting for an attack that never came.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. The two camps the night before Gaugamela: the Persian camp — enormous, lit by thousands of fires, soldiers standing at arms all night, exhausted and anxious. Then: the Macedonian camp — quieter, men sleeping, Alexander in his tent listening to Parmenion's midnight argument. Alexander's refusal: 'I will not steal a victory' shown in text. The strategic reasoning: claiming Persia's throne requires legitimate conquest, not a night raid. Dawn breaking over both armies — Persian soldiers haggard from a sleepless night, Macedonians rested. The psychological advantage Alexander had already seized. 16:9.",
+      "bg_colors": [
+        "#1A1A2E",
+        "#4A4A4A",
+        "#D4AF37"
+      ],
+      "duration_sec": 50,
+      "scene_number": 12
     },
     {
       "scene_number": 13,
-      "title": "Darius Flees — The Empire Cracks",
-      "narration": "Darius III, Great King of Persia, master of forty nations, commander of the largest army ever assembled — fled. The exact trigger is debated by historians. Some ancient sources claim his charioteer was killed and he feared capture. Others say the weight of Alexander's charge simply overwhelmed the bodyguard and the king had no rational choice. What is certain is that at the critical moment of the battle, Darius turned his chariot and rode away from the fighting. The ripple effect through the Persian army was immediate and catastrophic. When soldiers see their king flee, the battle is over before the last sword is swung. Units that had been holding — some of them winning on their sectors — began to disintegrate. Two hundred and fifty thousand men started to become a mob. The empire started to end.",
-      "visual_prompt": "Gods & Glory cinematic historical documentary. THE FLIGHT OF DARIUS. His royal chariot turning — the Great King's face caught in three-quarter profile, not cowardice but the recognition of an impossible situation. The chariot accelerating away from the battle, Darius looking back once. Behind him: the Royal Guard fighting desperately but being pushed back and overwhelmed. Then: the shockwave through the Persian army. Soldiers at the edge of the battle looking back toward the center — no king, no standard. Persian standards beginning to fall. The vast army starting to fragment — individual units breaking, then sections, then the cascade. The dissolution of history's greatest army. 16:9.",
-      "bg_colors": ["#4A1C1C", "#0D1B2A"],
-      "duration_sec": 50
+      "title": "The Macedonian War Machine",
+      "narration": "The Macedonian military system that Philip II invented and Alexander perfected was unlike anything that had come before it. The core was the sarissa phalanx — infantry carrying pikes eighteen to twenty-one feet long, arranged in close formation sixteen ranks deep. The sarissas of the first five ranks projected forward simultaneously, creating an impenetrable wall of iron points. No cavalry could charge into it. No infantry could get close enough to use a sword. But the phalanx was slow and inflexible, and Alexander knew it. He never used it to win. He used it as an anvil — to fix the enemy in place while the real weapon did its work. The real weapon was Alexander himself, leading the Companion Cavalry in wedge formation. The hammer to the phalanx's anvil.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. The Macedonian sarissa phalanx in clinical technical detail — soldiers in bronze helmets and linen armor holding eighteen-foot pikes angled forward at multiple levels. The view from in front: a forest of iron points at chest, throat, and face height, with no gap visible anywhere. An approaching Persian cavalryman's point-of-view — finding no entry. Then: the Companion Cavalry in wedge formation, Alexander at the sharpened tip, bronze and horsehair, accelerating. Tactical animation showing the hammer-and-anvil doctrine: phalanx pins, cavalry shatters. 16:9.",
+      "bg_colors": [
+        "#1C2B4A",
+        "#8B1A1A"
+      ],
+      "duration_sec": 49
     },
     {
-      "scene_number": 14,
-      "title": "Crisis on the Macedonian Left",
-      "narration": "This is the part of Gaugamela that almost undid everything. While Alexander was driving toward Darius on the right, the Macedonian left flank — commanded by the veteran general Parmenion — was collapsing. Persian cavalry had broken through Parmenion's line and was attacking the Macedonian baggage train in the rear. Soldiers were looting the camp. Parmenion sent a desperate message to Alexander: we are being destroyed on the left. Come back. Alexander faced the most critical decision of the battle: continue chasing Darius, who was fleeing but might escape, or abandon the pursuit and save his army. He turned back. He led a portion of the Companions in a brutal frontal charge against the Persian cavalry that had broken through. The fighting was the bloodiest of the day. He saved the left.",
-      "visual_prompt": "Gods & Glory cinematic historical documentary. The Macedonian left flank in violent crisis — Persian Bactrian and Scythian cavalry smashing through the line, the Macedonian formation fragmenting. Parmenion's face: a veteran general trying to hold together a collapsing position, his officers falling around him. A messenger on horseback racing across the chaotic battlefield toward Alexander. Then: Alexander receiving the message — his eyes moving between the escaping Darius ahead and the crisis behind him. The decision made. He turns. The Companions wheel and charge back, crashing into the flanking Persian cavalry. A brutal, grinding collision. The left holds. Barely. 16:9.",
-      "bg_colors": ["#1C2B4A", "#8B1A1A"],
-      "duration_sec": 50
+      "title": "The Scythed Chariots — Darius's Secret Weapon That Failed",
+      "type": "battle",
+      "narration": "Darius had spent months preparing the battlefield at Gaugamela. He had it leveled specifically so his scythed chariots could operate — chariots with rotating blades attached to their axles designed to cut through infantry formations. He had also prepared an area for his war elephants and positioned his massive cavalry to overlap the Macedonian flanks. Alexander had been briefed on all of this by Persian deserters. The Macedonian response to the chariots was simple and devastating: when the chariots charged, the infantry opened ranks, let them pass through harmlessly, and then the grooms and servants waiting behind the line grabbed the horses' reins and dragged the chariots to a halt. The great technological weapon of the Persian army — months of preparation, specifically leveled terrain — neutralized by the Macedonian soldiers simply getting out of the way.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Darius's preparations at Gaugamela: workers leveling the battlefield, Persian engineers designing the scythed chariot deployment. Close on the scythed chariot: spinning blade attachments on the wheel axles, the lethal geometry. The Persian battle order: chariots forward, cavalry on the flanks, war elephants positioned. Then: the chariot charge — thundering toward the Macedonian line. The Macedonian infantry response: opening lanes, the chariots driving through empty space. The grooms waiting behind seizing the reins. The chariots stopped, disarmed. Darius watching his masterstroke fail. 16:9.",
+      "bg_colors": [
+        "#D4AF37",
+        "#8B0000",
+        "#4A4A4A"
+      ],
+      "duration_sec": 52,
+      "scene_number": 14
     },
     {
       "scene_number": 15,
-      "title": "The Pursuit and the Escape",
-      "narration": "With the left flank stabilized, Alexander resumed his pursuit of Darius. He drove his cavalry for miles across the darkening plain, following the dust cloud of the Persian flight. He came close. Ancient sources say he nearly caught the Great King twice. But darkness, the exhaustion of his horses, and the sprawling chaos of a fleeing army two hundred and fifty thousand strong made it impossible. Darius escaped eastward into Bactria — modern Afghanistan. He had lost his army, his treasury, his family, and his empire in a single afternoon. He still had his life. He would keep it for less than a year. A Bactrian nobleman named Bessus, who had commanded Darius's left wing at Gaugamela, would murder him the following year when it became clear Alexander was closing in and Darius had become a liability.",
-      "visual_prompt": "Gods & Glory cinematic historical documentary. The pursuit across the darkening Gaugamela plain — Alexander on horseback at the head of exhausted Companions, horses lathered, following a dust cloud on the distant horizon. The sun descending red and huge. Persian stragglers on the road: abandoned wagons on their sides, dropped weapons and armor, fleeing soldiers throwing off their gear. Alexander's face: controlled frustration as darkness and distance defeat him where no army could. Then: Darius's chariot, far ahead, silhouetted against the sunset as it disappears into eastern hills. A map showing his escape route northeast toward Bactria. 16:9.",
-      "bg_colors": ["#C9A84C", "#0D1B2A"],
-      "duration_sec": 49
+      "title": "Darius's Secret Weapon — The Scythe Chariots",
+      "narration": "Darius had spent the years between Issus and Gaugamela engineering a specific answer to the Macedonian phalanx: the scythed chariots. Each chariot was fitted with rotating iron blades extending horizontally from the wheel axles — designed to cut through packed infantry at speed. Two hundred of them deployed in the front line. If they could break the Macedonian formation before the battle was decided, Darius's numerical advantage would become overwhelming. The flat, prepared ground at Gaugamela was designed to let them reach maximum velocity before impact. Darius had also re-equipped his cavalry with longer lances to better match Macedonian reach. He had studied his enemy carefully. He had engineered specific countermeasures. The question was whether Alexander had already planned for those countermeasures.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Close technical study of the Persian scythed chariot — iron scythe blades extending two feet from each wheel hub, gleaming and honed to an edge. A row of two hundred chariots in the Persian front line: horses stamping and blowing, drivers gripping reins, blades catching the morning light. A simulated view showing what a chariot charge at full speed would do to a packed infantry formation — the blades passing through at axle height. Darius observing from elevation as his special weapon is positioned. The smoothed ground ahead of them: a deliberate runway. 16:9.",
+      "bg_colors": [
+        "#4A1C1C",
+        "#C9A84C"
+      ],
+      "duration_sec": 50
     },
     {
-      "scene_number": 16,
-      "title": "The Battlefield — The Scale of the Slaughter",
-      "narration": "The killing field at Gaugamela covered dozens of square miles. Ancient sources give Persian casualties as high as ninety thousand dead. Modern historians consider this likely exaggerated but accept that Persian losses were catastrophic — probably forty to sixty thousand killed in the battle and pursuit. Macedonian losses are recorded at around five hundred dead, a figure that seems almost fictional until you understand what it means when one side's formation collapsed completely while the other maintained discipline to the end. The wounded numbered in the thousands. Alexander walked the field himself in the days following — customary for him. He ordered burial rites for the Macedonian fallen, ensured proper care for his wounded, and inspected the bodies of the Persian Royal Guard who had died protecting Darius. He ordered them buried with honors.",
-      "visual_prompt": "Gods & Glory cinematic historical documentary. The aftermath: the battlefield of Gaugamela at dusk — enormous scale, the carnage spread across miles of flat terrain. Persian dead in vast numbers across the smoothed ground Darius had so carefully prepared. Macedonian medical teams moving through the field, tending to wounded by torchlight. Alexander walking the field slowly and deliberately — not triumphant but grave, observing with the weight of a man who knows what has happened. He pauses over the bodies of the Persian Royal Guard who died at their posts. He speaks to his officer. He gives the order for their burial with honors. 16:9.",
-      "bg_colors": ["#2E4A3E", "#0D1B2A"],
-      "duration_sec": 49
+      "title": "The Oblique Advance — The Tactical Genius of Gaugamela",
+      "type": "battle",
+      "narration": "The actual tactical genius of Gaugamela was in Alexander's advance, not his charge. He marched his entire army at an angle — to the right — toward the edge of the prepared ground. Darius had leveled that ground specifically to eliminate terrain advantage. By marching right, Alexander was threatening to move his army off the prepared ground entirely. Darius had to match him, shifting his own line right to keep Alexander in front. This lateral movement compressed the Persian left, stretched the Persian center, and eventually opened a gap in the Persian line exactly where Alexander intended. When the gap appeared, Alexander wheeled the Companion Cavalry at a full charge directly into it. The gap was not the result of an accident. It was the result of Alexander maneuvering a quarter-million-man army into opening a specific hole in a specific place through controlled, deliberate lateral movement. At the age of twenty-five.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. The tactical diagram of Gaugamela: overhead animated map showing the Macedonian oblique rightward advance. Persian line stretching and shifting to match. The gap opening in the Persian center as the left is extended too far. The Companion Cavalry wedge forming and accelerating. The angle of attack shown: not straight forward but oblique into the gap. Alexander at the head of the cavalry wedge, in full armor, leading the charge personally. The precision of the maneuver: a 25-year-old controlling the movement of forty thousand soldiers to open a specific gap. 16:9.",
+      "bg_colors": [
+        "#8B0000",
+        "#4A4A4A",
+        "#D4AF37"
+      ],
+      "duration_sec": 52,
+      "scene_number": 16
     },
     {
       "scene_number": 17,
-      "title": "Babylon Opens Its Gates",
-      "narration": "Within weeks of Gaugamela, the great cities of the Persian Empire began to surrender. Babylon — the most magnificent city on earth, home to the Hanging Gardens, center of commerce and culture for two thousand years — opened its gates to Alexander without a fight. Its people lined the processional way with flowers. Its priests declared him liberator. Babylon had been conquered once before, by Cyrus the Great himself, who had also been welcomed as a deliverer. But the surrender carried a different meaning now. Babylon was not just a city. It was the economic heart of the Persian Empire. Its treasury helped fund Alexander's further campaigns. Its grain fed his army. Alexander entered Babylon as a conqueror and was received like a king who had always been expected.",
-      "visual_prompt": "Gods & Glory cinematic historical documentary. Alexander's entry into Babylon: the Ishtar Gate — its deep glazed blue bricks and rows of golden lions and dragons gleaming in morning sun — thrown open wide. Dense crowds of Babylonians lining the processional way, throwing flowers and palm fronds. Babylonian priests in white robes at the front, welcoming formally. Alexander on horseback, riding slowly through the gate, head turning to take in the scale of the city — ziggurats rising, palace rooftops, the Euphrates glittering beyond. His army behind him, soldiers staring upward at structures grander than anything they have ever seen. 16:9.",
-      "bg_colors": ["#1C2B4A", "#C9A84C"],
+      "title": "Alexander's Night Before the Battle",
+      "narration": "The night before Gaugamela, Alexander's generals urged him to launch a surprise night attack. Parmenion, his second-in-command, argued that darkness would negate the Persian numerical advantage and prevent the cavalry from maneuvering effectively. Alexander refused. Reportedly he said: I will not steal my victory. The real reason was tactical. A night battle is unpredictable, and unpredictability is the enemy of a commander who wins through precise execution. He needed to see what he was doing. He needed Darius to be exactly where Alexander expected him. The Persians stood to arms all night in formation, afraid of an attack that never came. By morning they were exhausted. Alexander had slept. His physician had to wake him. He rose, ate a full breakfast, and gave his pre-battle address with the ease of a man who had already decided how this would end.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Night on the plain of Gaugamela. The Persian army standing in battle formation by torchlight — two hundred thousand men on their feet all night, exhausted, scanning the darkness. Sweat and torchlight. Then cut to the Macedonian camp: Alexander's tent, quiet. He is asleep — genuinely, deeply asleep. His generals pace nervously outside. Dawn beginning to color the horizon. Alexander's physician approaching the tent. Then: Alexander awake, unhurried. Putting on armor piece by piece — ritual, deliberate. His Companions assembling around him. The pre-battle calm of a man who has already won in his own mind. 16:9.",
+      "bg_colors": [
+        "#0D1B2A",
+        "#C9A84C"
+      ],
       "duration_sec": 49
     },
     {
       "scene_number": 18,
-      "title": "Persepolis — The Empire's Heart Burns",
-      "narration": "After Babylon came Susa and its treasury. After Susa came the Persian heartland, and Persepolis — the ceremonial capital of the Achaemenid Empire, the seat of the Great Kings, the most awe-inspiring palace complex in the world. Alexander captured Persepolis in early 330 BC and looted its treasury — ancient sources say ten thousand mules and five thousand camels were required to carry the gold and silver away. Then, months later, at a banquet that grew into something else, the palace was burned. Ancient sources differ on whether it was a calculated political act — a symbolic destruction of Persian imperial power — or a decision Alexander later regretted. He may have regretted it. But the palace of Darius and Xerxes, the building from which the orders to burn Athens had come, burned to its foundations in a single night.",
-      "visual_prompt": "Gods & Glory cinematic historical documentary. Persepolis at its height of glory — the Apadana audience hall with its towering stone columns, the Gate of All Nations, relief carvings of subject peoples bringing tribute. Then: the burning. Fire consuming the cedar columns at night — flames climbing, the carved reliefs of kings and soldiers catching the orange light of their own destruction. Alexander watching from a distance, his face illuminated but unreadable. Earlier: the treasury being emptied by torchlight — a river of mule trains carrying gold into the darkness. The scope of what was taken and what was irrevocably lost. 16:9.",
-      "bg_colors": ["#8B1A1A", "#C9A84C"],
+      "title": "The Battle Opens — Chariot Charge Neutralized",
+      "narration": "The battle opened when Darius launched his scythe chariots. Two hundred armored vehicles with spinning iron blades accelerating toward the Macedonian center. It should have been devastating. It was not. Alexander had drilled his infantry for exactly this moment. As the chariots approached, the Macedonian phalanx opened calculated gaps in its formation — lanes for the chariots to pass through. Soldiers on either side banged their sarissas against their shields, creating noise that panicked the horses and deflected them sideways. Chariots that made it through the gaps were dispatched by troops positioned specifically behind the phalanx for this purpose. The entire weapon Darius had spent years building was neutralized in minutes. Not by accident. By a countermeasure Alexander had prepared before the battle even began.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. The chariot charge at full speed: two hundred scythed Persian chariots thundering across the flat plain toward the Macedonian line — a wall of iron, horses, spinning blades, and raised dust. Then: the Macedonian response unfolds with stunning precision. Gaps open in the phalanx. Soldiers bang weapons on shields — noise erupts. Horses veer and panic at the sound. Chariots swerve into the gaps harmlessly. Rear troops finish those that pass through. The choreography of a rehearsed plan working perfectly. Darius watching from his position as his secret weapon dissolves into dust. 16:9.",
+      "bg_colors": [
+        "#8B1A1A",
+        "#C9A84C"
+      ],
       "duration_sec": 50
     },
     {
       "scene_number": 19,
-      "title": "The Death of Darius III",
-      "narration": "Darius III never stopped being Great King, at least in his own mind. He fled east, attempting to raise a new army in Bactria, sending messages to potential allies, trying to rebuild what had been destroyed in an afternoon at Gaugamela. His companion in flight was Bessus, the satrap of Bactria, who had commanded the left wing at Gaugamela. When Alexander's pursuit proved relentless — moving faster than Darius had thought possible — Bessus made a calculation. He arrested Darius, declared himself the new Great King under the name Artaxerxes V, and murdered Darius when Alexander's advance cavalry was literally hours behind them. Alexander found Darius's body abandoned in a wagon on the road. He stepped down from his horse, removed his own cloak, and covered the fallen king. He sent the body to Persepolis for burial with full royal honors.",
-      "visual_prompt": "Gods & Glory cinematic historical documentary. Darius in flight east — on horseback, increasingly isolated, the Great King reduced to a fugitive with dwindling followers. Bessus riding beside him — calculating, his eyes already somewhere else. The arrest: Persian soldiers loyal to Bessus surrounding Darius. His face: comprehension. The murder: understated and final — Darius wounded and dying in the back of an ordinary wagon on a dusty road. Alexander's advance cavalry arriving, finding the wagon. Alexander himself arriving on horseback, dismounting, walking slowly to the wagon. He looks at the fallen king, removes his own royal cloak, and covers him with it. 16:9.",
-      "bg_colors": ["#4A1C1C", "#0D1B2A"],
+      "title": "The Oblique Advance",
+      "narration": "Here is where Alexander did something that military historians still study. As the full battle was joined — the phalanx grinding against Persian infantry, cavalry clashing on both flanks — Alexander did not charge straight forward. He led the Companion Cavalry in a diagonal march to the right. Across the entire Persian front. This was not a retreat. It was a calculated maneuver. As he marched obliquely, the Persian line had to stretch to keep up with him. Units extended sideways to cover the movement. And in stretching, something happened that Darius had done everything possible to prevent: a gap opened in the Persian line. Not a large gap. Not a gap by accident. A gap created by Alexander's oblique march, by the Persian response to it, and by the chaos of a battle already underway on multiple fronts simultaneously.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Overhead tactical battlefield view rendered cinematically. The Macedonian army in formation, the vast Persian line opposite. Then: Alexander and the Companion Cavalry begin moving diagonally — rightward and forward, drawing across the entire Persian front. Animated arrows trace the movement and the Persian counter-movement as their line stretches to match. Then: a gap appearing in the Persian center-left. A tear in two hundred and fifty thousand men. Small, momentary, but present. Alexander's position relative to Darius becoming visible for the first time. The geometry of genius made visual. 16:9.",
+      "bg_colors": [
+        "#1C2B4A",
+        "#8B1A1A"
+      ],
       "duration_sec": 50
     },
     {
       "scene_number": 20,
-      "title": "Alexander as King of Kings",
-      "narration": "After Gaugamela, Alexander did not merely rule the Persian Empire. He became it. He adopted elements of Persian court dress — not entirely, but visibly. He retained Persian administrators in their positions rather than replacing them with Macedonians. He began performing Persian royal ceremonies. His Macedonian generals and veterans were appalled. To them, he was becoming the thing they had come to destroy. To Alexander, it was pragmatic genius. An empire of forty nations could not be ruled by a Macedonian garrison. It had to be administered by people who understood it. He was not surrendering to Persian culture. He was absorbing it — adding it to himself the way he added everything he encountered. Egypt, Babylon, Persia. He would try the same approach all the way to India.",
-      "visual_prompt": "Gods & Glory cinematic historical documentary. Alexander in the Persian royal court — wearing a hybrid of Macedonian and Persian dress, the two cultures fused on a single man. He sits on the throne of the Great Kings at Susa, gold and lapis inlaid beneath him. Persian courtiers performing the ritual bow before him. His Macedonian generals standing in the background — Parmenion, Craterus — their expressions showing visible discomfort with what they are witnessing. Then: a map showing the retained Persian administrative structure now serving Alexander seamlessly. A ruler absorbing an empire. 16:9.",
-      "bg_colors": ["#C9A84C", "#1C2B4A"],
-      "duration_sec": 49
-    },
-    {
-      "scene_number": 21,
-      "title": "The World Alexander Made",
-      "narration": "Gaugamela did not just end the Persian Empire. It began the Hellenistic Age — three centuries during which Greek language, philosophy, and culture became the common tongue of the entire ancient world from Egypt to India. Alexander founded over seventy cities — many called Alexandria — that became centers of scholarship, commerce, and cultural exchange. The Library of Alexandria, one of the greatest intellectual institutions in human history, was built in one of them. Greek became the international language of the Mediterranean and the Near East — which is why the New Testament, written three hundred years after Alexander's death, was written in Greek. The encounter between Greek thought and the ancient wisdom of Egypt, Persia, and Babylon produced an intellectual synthesis that shaped philosophy, science, and religion for centuries to come.",
-      "visual_prompt": "Gods & Glory cinematic historical documentary. The Hellenistic world spreading outward from Gaugamela — an animated map showing Greek-named cities lighting up across Asia: Alexandrias in Egypt, Persia, Bactria, India. The Library of Alexandria visualized — vast reading rooms, scholars from Egypt, Greece, Persia, and Judea working side by side, scrolls stacked floor to ceiling. The Greek language as a glowing network across three continents. The New Testament shown as a Greek manuscript. Greek columns alongside Persian fire altars, Egyptian hieroglyphs alongside Aristotelian philosophy. One afternoon battle's shadow across millennia. 16:9.",
-      "bg_colors": ["#2E4A3E", "#C9A84C"],
-      "duration_sec": 49
-    },
-    {
-      "scene_number": 22,
-      "title": "The Military Legacy — What Gaugamela Taught",
-      "narration": "Military historians and strategists have analyzed Gaugamela for two thousand three hundred years. It remains one of the most studied battles in human history, taught in military academies from West Point to Sandhurst. What they study is not just the tactics — the oblique advance, the hammer-and-anvil combination, the calculated exploitation of a gap. They study the decision-making under pressure: the refusal to launch a night attack, the choice to return and save the left flank, the willingness to break off pursuit to address a crisis. And they study what Alexander understood about his enemy: he did not try to destroy the Persian army everywhere. He identified one point — the gap, the king — and drove everything at that single point. One strike. Decisive. Total. The doctrine that defines decisive battle to this day.",
-      "visual_prompt": "Gods & Glory cinematic historical documentary. A modern military academy war room — maps of Gaugamela mounted on the wall with annotations. Officers in uniform leaning over a table, pointing at positions. The battle reconstructed as a clean tactical diagram: starting positions, the oblique advance, the chariot response, the gap, the charge. Then: historical commanders shown studying the same battle through history — Napoleon with rolled maps, Patton with a swagger stick. The battle's key moments isolated as labeled visual lessons. The teaching of a battle that still teaches generals two millennia later. 16:9.",
-      "bg_colors": ["#1C2B4A", "#2E4A3E"],
-      "duration_sec": 49
-    },
-    {
-      "scene_number": 23,
-      "title": "Darius and Alexander — What History Made of Them",
-      "narration": "History has not been entirely fair to Darius III. He is remembered primarily for fleeing — twice. But the man who inherited a destabilized empire, rebuilt its military after Issus, engineered specific tactical responses to Macedonian innovations, chose a superior battlefield, and managed to survive the most dangerous tactician in history long enough to be murdered by his own subordinate was not a coward or a fool. He was a capable ruler who faced an opponent who operated outside the expected parameters of ancient warfare. Darius planned for Alexander. He could not plan for what Alexander actually was. And Alexander himself — who covered Darius's body with his own cloak and sent it to Persepolis with royal honors — appears to have understood this. He fought to end Darius's empire. He respected Darius the man.",
-      "visual_prompt": "Gods & Glory cinematic historical documentary. A contemplative documentary portrait diptych. DARIUS III — shown first in strength: commanding his rebuilt army before Gaugamela, meeting with satraps in the columned halls of Persepolis, performing the rituals of kingship with full dignity. His tactical preparation shown: the leveled plain, the scythed chariots, the longer lances. A capable ruler shown whole. Then: ALEXANDER covering Darius's body. The two kings' faces shown side by side in final close-up — one who lost everything, one who won everything, and the complicated respect between conqueror and conquered that history preserved in the gesture of a cloak. 16:9.",
-      "bg_colors": ["#4A1C1C", "#1C2B4A"],
+      "title": "The Charge at the Gap",
+      "narration": "Alexander saw the gap. And in that moment he did what Alexander always did. He charged directly at the king. He wheeled the Companion Cavalry — thousands of armored horsemen in wedge formation — and drove them straight at the hole in the Persian line. Not at the edges of the gap, not at the troops on either side. Through the gap itself, aimed at one target: Darius III, the Great King, standing in his royal chariot behind his bodyguard at the Persian center. The Companions drove through like a spear. The soldiers around Darius's position were hit from a direction they could not adequately defend. The fighting around the royal chariot was described by ancient sources as the most intense of the entire battle. Javelins were thrown at Alexander himself. Two horses were killed under him. He kept charging.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. THE DECISIVE MOMENT. Alexander at the head of the Companion Cavalry, his arm rising — the signal. The wedge formation turns as one. A thundering mass of Macedonian armored horsemen driving diagonally into the Persian line, through the gap, aimed at the center. Darius visible in his royal chariot behind layers of Persian Royal Guard — elite soldiers in gold-trimmed armor forming a human wall. The collision is catastrophic: javelins arcing through the air, horses screaming, the Royal Guard struggling to hold as the wedge punches through. Alexander at the tip, unreachable, relentless, closing the distance. 16:9.",
+      "bg_colors": [
+        "#8B1A1A",
+        "#C9A84C"
+      ],
       "duration_sec": 50
     },
     {
-      "scene_number": 24,
+      "scene_number": 21,
+      "title": "Darius Flees — The Empire Cracks",
+      "narration": "Darius III, Great King of Persia, master of forty nations, commander of the largest army ever assembled — fled. The exact trigger is debated by historians. Some ancient sources claim his charioteer was killed and he feared capture. Others say the weight of Alexander's charge simply overwhelmed the bodyguard and the king had no rational choice. What is certain is that at the critical moment of the battle, Darius turned his chariot and rode away from the fighting. The ripple effect through the Persian army was immediate and catastrophic. When soldiers see their king flee, the battle is over before the last sword is swung. Units that had been holding — some of them winning on their sectors — began to disintegrate. Two hundred and fifty thousand men started to become a mob. The empire started to end.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. THE FLIGHT OF DARIUS. His royal chariot turning — the Great King's face caught in three-quarter profile, not cowardice but the recognition of an impossible situation. The chariot accelerating away from the battle, Darius looking back once. Behind him: the Royal Guard fighting desperately but being pushed back and overwhelmed. Then: the shockwave through the Persian army. Soldiers at the edge of the battle looking back toward the center — no king, no standard. Persian standards beginning to fall. The vast army starting to fragment — individual units breaking, then sections, then the cascade. The dissolution of history's greatest army. 16:9.",
+      "bg_colors": [
+        "#4A1C1C",
+        "#0D1B2A"
+      ],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 22,
+      "title": "Crisis on the Macedonian Left",
+      "narration": "This is the part of Gaugamela that almost undid everything. While Alexander was driving toward Darius on the right, the Macedonian left flank — commanded by the veteran general Parmenion — was collapsing. Persian cavalry had broken through Parmenion's line and was attacking the Macedonian baggage train in the rear. Soldiers were looting the camp. Parmenion sent a desperate message to Alexander: we are being destroyed on the left. Come back. Alexander faced the most critical decision of the battle: continue chasing Darius, who was fleeing but might escape, or abandon the pursuit and save his army. He turned back. He led a portion of the Companions in a brutal frontal charge against the Persian cavalry that had broken through. The fighting was the bloodiest of the day. He saved the left.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. The Macedonian left flank in violent crisis — Persian Bactrian and Scythian cavalry smashing through the line, the Macedonian formation fragmenting. Parmenion's face: a veteran general trying to hold together a collapsing position, his officers falling around him. A messenger on horseback racing across the chaotic battlefield toward Alexander. Then: Alexander receiving the message — his eyes moving between the escaping Darius ahead and the crisis behind him. The decision made. He turns. The Companions wheel and charge back, crashing into the flanking Persian cavalry. A brutal, grinding collision. The left holds. Barely. 16:9.",
+      "bg_colors": [
+        "#1C2B4A",
+        "#8B1A1A"
+      ],
+      "duration_sec": 50
+    },
+    {
+      "title": "The Burning of Persepolis — Victory and Its Cost",
+      "type": "deep_dive",
+      "narration": "After Gaugamela, the Persian capitals fell one by one. Babylon. Susa. Then Persepolis — the ceremonial heart of the Persian Empire, the palace city that Darius and Xerxes had built. The treasury at Persepolis contained so much gold and silver that it took three thousand camels to carry it away. Alexander held a banquet in the great throne room. What happened that night is disputed. One ancient account says Alexander, drunk, was urged by an Athenian courtesan named Thaïs to set fire to the palace in revenge for the Persian burning of Athens a hundred and fifty years earlier. Another account says it was a deliberate political act: burning Persepolis signaled to all Persians that the old empire was definitively over. The fire started. The greatest palace complex in the ancient world burned to the foundations. Ancient accounts say Alexander, sober and watching it burn, felt immediate regret. The ruins still stand.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Persepolis: the surviving ruins today — the Apadana staircase carvings, the Hall of a Hundred Columns, the Gate of All Nations. Reconstruction showing the palace in its glory: gold, carved reliefs, monumental columns. The treasury: workers loading gold onto camels (three thousand of them). The banquet night: the great throne room, Alexander, his generals, the courtesan Thaïs. The fire beginning in one corner. Alexander watching the inferno. Then: the ruins as they appear today — burned stone, fallen columns, the charred destruction visible in the archaeology. 16:9.",
+      "bg_colors": [
+        "#D4AF37",
+        "#8B0000",
+        "#1A1A2E"
+      ],
+      "duration_sec": 52,
+      "scene_number": 23
+    },
+    {
+      "title": "The Death of Darius III — Killed by His Own Men",
+      "type": "deep_dive",
+      "narration": "Darius III fled Gaugamela east, into Bactria, pursued by Alexander. His own satrap — his provincial governor — Bessus, decided that Darius was a liability. The king who had fled twice, lost three battles, and now had Alexander's cavalry gaining ground was a man around whom resistance was impossible to organize. Bessus and his conspirators seized Darius, put him in chains, and drove him in a wagon toward Bactria. When Alexander's cavalry scouts got close, they stabbed Darius and left him dying in the wagon. A Macedonian soldier found him, gave him water, and he died. Alexander arrived shortly after. He found Darius covered with a cloak, already dead. He removed his own purple cloak and covered the body. This was not sentimentality. It was politics. Alexander needed to be seen as the legitimate successor to Darius, not as a conqueror over a murdered king. He gave Darius a royal Persian funeral and executed Bessus for regicide.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. The pursuit: Alexander's cavalry racing across the Iranian plateau after the fleeing Persian column. Inside the wagon: Darius in chains, Bessus and the conspirators arguing. The stabbing: Darius wounded and left dying. A Macedonian cavalry trooper reaching the wagon, giving water to the wounded king. Alexander arriving on horseback, dismounting, finding Darius dead. Alexander removing his own cloak and covering the body — a gesture of respect. The royal Persian funeral organized by Alexander. The capture of Bessus presented to Alexander, who executes him for killing a king. 16:9.",
+      "bg_colors": [
+        "#4A4A4A",
+        "#8B0000",
+        "#D4AF37"
+      ],
+      "duration_sec": 50,
+      "scene_number": 24
+    },
+    {
+      "scene_number": 25,
+      "title": "The Pursuit and the Escape",
+      "narration": "With the left flank stabilized, Alexander resumed his pursuit of Darius. He drove his cavalry for miles across the darkening plain, following the dust cloud of the Persian flight. He came close. Ancient sources say he nearly caught the Great King twice. But darkness, the exhaustion of his horses, and the sprawling chaos of a fleeing army two hundred and fifty thousand strong made it impossible. Darius escaped eastward into Bactria — modern Afghanistan. He had lost his army, his treasury, his family, and his empire in a single afternoon. He still had his life. He would keep it for less than a year. A Bactrian nobleman named Bessus, who had commanded Darius's left wing at Gaugamela, would murder him the following year when it became clear Alexander was closing in and Darius had become a liability.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. The pursuit across the darkening Gaugamela plain — Alexander on horseback at the head of exhausted Companions, horses lathered, following a dust cloud on the distant horizon. The sun descending red and huge. Persian stragglers on the road: abandoned wagons on their sides, dropped weapons and armor, fleeing soldiers throwing off their gear. Alexander's face: controlled frustration as darkness and distance defeat him where no army could. Then: Darius's chariot, far ahead, silhouetted against the sunset as it disappears into eastern hills. A map showing his escape route northeast toward Bactria. 16:9.",
+      "bg_colors": [
+        "#C9A84C",
+        "#0D1B2A"
+      ],
+      "duration_sec": 49
+    },
+    {
+      "scene_number": 26,
+      "title": "The Battlefield — The Scale of the Slaughter",
+      "narration": "The killing field at Gaugamela covered dozens of square miles. Ancient sources give Persian casualties as high as ninety thousand dead. Modern historians consider this likely exaggerated but accept that Persian losses were catastrophic — probably forty to sixty thousand killed in the battle and pursuit. Macedonian losses are recorded at around five hundred dead, a figure that seems almost fictional until you understand what it means when one side's formation collapsed completely while the other maintained discipline to the end. The wounded numbered in the thousands. Alexander walked the field himself in the days following — customary for him. He ordered burial rites for the Macedonian fallen, ensured proper care for his wounded, and inspected the bodies of the Persian Royal Guard who had died protecting Darius. He ordered them buried with honors.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. The aftermath: the battlefield of Gaugamela at dusk — enormous scale, the carnage spread across miles of flat terrain. Persian dead in vast numbers across the smoothed ground Darius had so carefully prepared. Macedonian medical teams moving through the field, tending to wounded by torchlight. Alexander walking the field slowly and deliberately — not triumphant but grave, observing with the weight of a man who knows what has happened. He pauses over the bodies of the Persian Royal Guard who died at their posts. He speaks to his officer. He gives the order for their burial with honors. 16:9.",
+      "bg_colors": [
+        "#2E4A3E",
+        "#0D1B2A"
+      ],
+      "duration_sec": 49
+    },
+    {
+      "title": "The Edge of the World — Where Alexander's Army Said No",
+      "type": "deep_dive",
+      "narration": "After eight years of continuous campaign — from Macedonia through Greece, across Persia, through Afghanistan and into Central Asia — Alexander's army reached the Beas River in India in 326 BC. And stopped. Not because of enemy forces. Because the men refused to go further. Coenus, one of Alexander's senior officers, stood up in the war council and said what the soldiers had been saying in their tents: they had gone far enough. They had been fighting for eight years. Their armor was worn through, their weapons replaced dozens of times, their bodies worn down. They had wives and children they had not seen for a decade. They wanted to go home. Alexander argued. He retreated into his tent for three days. He sacrificed to the gods for permission to advance, and the omens came back unfavorable. He announced they would turn back. His men, who had conquered the known world, broke down and wept with relief. The furthest east the Macedonian army reached is now a mark on the map. It is the limit of one man's vision against the collective will of his soldiers.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. The Beas River in India: a wide river, jungle beyond, the end of the known Greek world. The army encamped, exhausted — worn equipment, tired faces, men who have marched 17,000 miles in eight years. The war council: Coenus standing, speaking for the soldiers, Alexander's fury. The three days in the tent. The sacrifices with unfavorable omens. Alexander's announcement: they turn back. The soldiers weeping with relief. A map showing the full extent of Alexander's campaign from Macedonia to India — the greatest march of the ancient world ending not at a wall or an ocean but at the refusal of tired men. 16:9.",
+      "bg_colors": [
+        "#1A1A2E",
+        "#4A3728",
+        "#D4AF37"
+      ],
+      "duration_sec": 52,
+      "scene_number": 27
+    },
+    {
+      "scene_number": 28,
+      "title": "Babylon Opens Its Gates",
+      "narration": "Within weeks of Gaugamela, the great cities of the Persian Empire began to surrender. Babylon — the most magnificent city on earth, home to the Hanging Gardens, center of commerce and culture for two thousand years — opened its gates to Alexander without a fight. Its people lined the processional way with flowers. Its priests declared him liberator. Babylon had been conquered once before, by Cyrus the Great himself, who had also been welcomed as a deliverer. But the surrender carried a different meaning now. Babylon was not just a city. It was the economic heart of the Persian Empire. Its treasury helped fund Alexander's further campaigns. Its grain fed his army. Alexander entered Babylon as a conqueror and was received like a king who had always been expected.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Alexander's entry into Babylon: the Ishtar Gate — its deep glazed blue bricks and rows of golden lions and dragons gleaming in morning sun — thrown open wide. Dense crowds of Babylonians lining the processional way, throwing flowers and palm fronds. Babylonian priests in white robes at the front, welcoming formally. Alexander on horseback, riding slowly through the gate, head turning to take in the scale of the city — ziggurats rising, palace rooftops, the Euphrates glittering beyond. His army behind him, soldiers staring upward at structures grander than anything they have ever seen. 16:9.",
+      "bg_colors": [
+        "#1C2B4A",
+        "#C9A84C"
+      ],
+      "duration_sec": 49
+    },
+    {
+      "title": "The Death of Alexander — What Actually Happened",
+      "type": "deep_dive",
+      "narration": "Alexander the Great died in Babylon in June 323 BC, at the age of thirty-two. The cause of death is one of history's most analyzed medical mysteries. Ancient sources say he fell ill after a heavy drinking bout, but modern analysis has proposed dozens of alternatives: typhoid fever complicated by his many battle wounds, West Nile virus, poisoning by his generals, liver failure from chronic heavy drinking. A 2019 medical paper made the provocative argument that Alexander had Guillain-Barré syndrome — a neurological condition that could mimic death while the person remained conscious. This would explain ancient accounts of his body not decomposing for six days: he may not have been dead yet. When asked on his deathbed who should inherit his empire, Alexander reportedly said 'the strongest.' His generals proceeded to tear the empire apart in forty years of war. The world he had spent his life building fractured the moment he was gone.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Alexander in Babylon, his final days: weakening, feverish, still trying to conduct business from his sickbed. His generals surrounding him, waiting. The moment of death: June 323 BC, Babylon. Map of the immediate aftermath: the Diadochi wars, Alexander's empire fragmenting into competing kingdoms within a generation. Medical analysis visualization: the competing theories (typhoid, poisoning, Guillain-Barré). The 'to the strongest' quote. The body being claimed by Ptolemy and taken to Egypt. Alexander's sarcophagus — the search for it still ongoing. The life measured: conquered more than any human before or since, dead at 32. 16:9.",
+      "bg_colors": [
+        "#D4AF37",
+        "#1A1A2E",
+        "#8B0000"
+      ],
+      "duration_sec": 52,
+      "scene_number": 29
+    },
+    {
+      "scene_number": 30,
+      "title": "Persepolis — The Empire's Heart Burns",
+      "narration": "After Babylon came Susa and its treasury. After Susa came the Persian heartland, and Persepolis — the ceremonial capital of the Achaemenid Empire, the seat of the Great Kings, the most awe-inspiring palace complex in the world. Alexander captured Persepolis in early 330 BC and looted its treasury — ancient sources say ten thousand mules and five thousand camels were required to carry the gold and silver away. Then, months later, at a banquet that grew into something else, the palace was burned. Ancient sources differ on whether it was a calculated political act — a symbolic destruction of Persian imperial power — or a decision Alexander later regretted. He may have regretted it. But the palace of Darius and Xerxes, the building from which the orders to burn Athens had come, burned to its foundations in a single night.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Persepolis at its height of glory — the Apadana audience hall with its towering stone columns, the Gate of All Nations, relief carvings of subject peoples bringing tribute. Then: the burning. Fire consuming the cedar columns at night — flames climbing, the carved reliefs of kings and soldiers catching the orange light of their own destruction. Alexander watching from a distance, his face illuminated but unreadable. Earlier: the treasury being emptied by torchlight — a river of mule trains carrying gold into the darkness. The scope of what was taken and what was irrevocably lost. 16:9.",
+      "bg_colors": [
+        "#8B1A1A",
+        "#C9A84C"
+      ],
+      "duration_sec": 50
+    },
+    {
+      "title": "The Hellenistic World — What Gaugamela Actually Created",
+      "type": "analysis",
+      "narration": "The real consequence of Gaugamela was not the destruction of Persia. It was the creation of something new: the Hellenistic world. After Alexander's death, his generals divided the empire into kingdoms — the Ptolemaic in Egypt, the Seleucid in Asia, the Antigonid in Macedonia. For three hundred years, these kingdoms blended Greek and Near Eastern culture in a fusion that changed both. Greek became the common language of commerce, scholarship, and philosophy from Egypt to Bactria. The Library of Alexandria was a Hellenistic institution. Euclid, Archimedes, Eratosthenes — all Hellenistic. The New Testament was written in Hellenistic Greek because that was the lingua franca of the eastern Mediterranean. When Rome absorbed these kingdoms, it absorbed Greek culture with them — and transmitted both to Western civilization. Everything that followed from Alexander's charge at Gaugamela — the Greek language, the philosophical tradition, the scientific method, Christianity's textual tradition — was downstream of that oblique advance.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. The Hellenistic world: map showing the three successor kingdoms after Alexander's death. Cultural fusion shown: Greek temples in Bactria (Afghanistan), Egyptian rulers depicted in Greek style, Seleucid coins mixing Greek and Persian iconography. The Library of Alexandria: scholars from multiple cultures working together. Euclid and Archimedes at work. The New Testament in Greek script — the lasting linguistic legacy. A branching tree diagram: Gaugamela → Hellenistic world → Rome absorbs it → Western civilization. The battle's consequences reaching forward 2,300 years. 16:9.",
+      "bg_colors": [
+        "#4A3728",
+        "#D4AF37",
+        "#1A1A2E"
+      ],
+      "duration_sec": 52,
+      "scene_number": 31
+    },
+    {
+      "scene_number": 32,
+      "title": "The Death of Darius III",
+      "narration": "Darius III never stopped being Great King, at least in his own mind. He fled east, attempting to raise a new army in Bactria, sending messages to potential allies, trying to rebuild what had been destroyed in an afternoon at Gaugamela. His companion in flight was Bessus, the satrap of Bactria, who had commanded the left wing at Gaugamela. When Alexander's pursuit proved relentless — moving faster than Darius had thought possible — Bessus made a calculation. He arrested Darius, declared himself the new Great King under the name Artaxerxes V, and murdered Darius when Alexander's advance cavalry was literally hours behind them. Alexander found Darius's body abandoned in a wagon on the road. He stepped down from his horse, removed his own cloak, and covered the fallen king. He sent the body to Persepolis for burial with full royal honors.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Darius in flight east — on horseback, increasingly isolated, the Great King reduced to a fugitive with dwindling followers. Bessus riding beside him — calculating, his eyes already somewhere else. The arrest: Persian soldiers loyal to Bessus surrounding Darius. His face: comprehension. The murder: understated and final — Darius wounded and dying in the back of an ordinary wagon on a dusty road. Alexander's advance cavalry arriving, finding the wagon. Alexander himself arriving on horseback, dismounting, walking slowly to the wagon. He looks at the fallen king, removes his own royal cloak, and covers him with it. 16:9.",
+      "bg_colors": [
+        "#4A1C1C",
+        "#0D1B2A"
+      ],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 33,
+      "title": "Alexander as King of Kings",
+      "narration": "After Gaugamela, Alexander did not merely rule the Persian Empire. He became it. He adopted elements of Persian court dress — not entirely, but visibly. He retained Persian administrators in their positions rather than replacing them with Macedonians. He began performing Persian royal ceremonies. His Macedonian generals and veterans were appalled. To them, he was becoming the thing they had come to destroy. To Alexander, it was pragmatic genius. An empire of forty nations could not be ruled by a Macedonian garrison. It had to be administered by people who understood it. He was not surrendering to Persian culture. He was absorbing it — adding it to himself the way he added everything he encountered. Egypt, Babylon, Persia. He would try the same approach all the way to India.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Alexander in the Persian royal court — wearing a hybrid of Macedonian and Persian dress, the two cultures fused on a single man. He sits on the throne of the Great Kings at Susa, gold and lapis inlaid beneath him. Persian courtiers performing the ritual bow before him. His Macedonian generals standing in the background — Parmenion, Craterus — their expressions showing visible discomfort with what they are witnessing. Then: a map showing the retained Persian administrative structure now serving Alexander seamlessly. A ruler absorbing an empire. 16:9.",
+      "bg_colors": [
+        "#C9A84C",
+        "#1C2B4A"
+      ],
+      "duration_sec": 49
+    },
+    {
+      "scene_number": 34,
+      "title": "The World Alexander Made",
+      "narration": "Gaugamela did not just end the Persian Empire. It began the Hellenistic Age — three centuries during which Greek language, philosophy, and culture became the common tongue of the entire ancient world from Egypt to India. Alexander founded over seventy cities — many called Alexandria — that became centers of scholarship, commerce, and cultural exchange. The Library of Alexandria, one of the greatest intellectual institutions in human history, was built in one of them. Greek became the international language of the Mediterranean and the Near East — which is why the New Testament, written three hundred years after Alexander's death, was written in Greek. The encounter between Greek thought and the ancient wisdom of Egypt, Persia, and Babylon produced an intellectual synthesis that shaped philosophy, science, and religion for centuries to come.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. The Hellenistic world spreading outward from Gaugamela — an animated map showing Greek-named cities lighting up across Asia: Alexandrias in Egypt, Persia, Bactria, India. The Library of Alexandria visualized — vast reading rooms, scholars from Egypt, Greece, Persia, and Judea working side by side, scrolls stacked floor to ceiling. The Greek language as a glowing network across three continents. The New Testament shown as a Greek manuscript. Greek columns alongside Persian fire altars, Egyptian hieroglyphs alongside Aristotelian philosophy. One afternoon battle's shadow across millennia. 16:9.",
+      "bg_colors": [
+        "#2E4A3E",
+        "#C9A84C"
+      ],
+      "duration_sec": 49
+    },
+    {
+      "scene_number": 35,
+      "title": "The Military Legacy — What Gaugamela Taught",
+      "narration": "Military historians and strategists have analyzed Gaugamela for two thousand three hundred years. It remains one of the most studied battles in human history, taught in military academies from West Point to Sandhurst. What they study is not just the tactics — the oblique advance, the hammer-and-anvil combination, the calculated exploitation of a gap. They study the decision-making under pressure: the refusal to launch a night attack, the choice to return and save the left flank, the willingness to break off pursuit to address a crisis. And they study what Alexander understood about his enemy: he did not try to destroy the Persian army everywhere. He identified one point — the gap, the king — and drove everything at that single point. One strike. Decisive. Total. The doctrine that defines decisive battle to this day.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. A modern military academy war room — maps of Gaugamela mounted on the wall with annotations. Officers in uniform leaning over a table, pointing at positions. The battle reconstructed as a clean tactical diagram: starting positions, the oblique advance, the chariot response, the gap, the charge. Then: historical commanders shown studying the same battle through history — Napoleon with rolled maps, Patton with a swagger stick. The battle's key moments isolated as labeled visual lessons. The teaching of a battle that still teaches generals two millennia later. 16:9.",
+      "bg_colors": [
+        "#1C2B4A",
+        "#2E4A3E"
+      ],
+      "duration_sec": 49
+    },
+    {
+      "scene_number": 36,
+      "title": "Darius and Alexander — What History Made of Them",
+      "narration": "History has not been entirely fair to Darius III. He is remembered primarily for fleeing — twice. But the man who inherited a destabilized empire, rebuilt its military after Issus, engineered specific tactical responses to Macedonian innovations, chose a superior battlefield, and managed to survive the most dangerous tactician in history long enough to be murdered by his own subordinate was not a coward or a fool. He was a capable ruler who faced an opponent who operated outside the expected parameters of ancient warfare. Darius planned for Alexander. He could not plan for what Alexander actually was. And Alexander himself — who covered Darius's body with his own cloak and sent it to Persepolis with royal honors — appears to have understood this. He fought to end Darius's empire. He respected Darius the man.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. A contemplative documentary portrait diptych. DARIUS III — shown first in strength: commanding his rebuilt army before Gaugamela, meeting with satraps in the columned halls of Persepolis, performing the rituals of kingship with full dignity. His tactical preparation shown: the leveled plain, the scythed chariots, the longer lances. A capable ruler shown whole. Then: ALEXANDER covering Darius's body. The two kings' faces shown side by side in final close-up — one who lost everything, one who won everything, and the complicated respect between conqueror and conquered that history preserved in the gesture of a cloak. 16:9.",
+      "bg_colors": [
+        "#4A1C1C",
+        "#1C2B4A"
+      ],
+      "duration_sec": 50
+    },
+    {
+      "title": "Alexander's First Act — Destroying Thebes",
+      "type": "context",
+      "narration": "Alexander was twenty years old when his father was assassinated. Within months, he faced revolts across Greece from cities that assumed a twenty-year-old king could be ignored or manipulated. Thebes, one of Greece's great cities, revolted, encouraged by false rumors that Alexander himself had been killed in a northern campaign. Alexander covered three hundred miles in fourteen days. Thebes refused to surrender. Alexander destroyed it. He sold its entire population of thirty thousand into slavery. He spared only the temples, the house of the poet Pindar, and the families of men who had supported Macedon. The message to all of Greece was delivered in one act: Philip's son was not a boy to be tested. Every Greek city that had been considering revolt reconsidered it immediately. Alexander had been king for perhaps eight months. He was already operating at a level of ruthless strategic intelligence that would define the next twelve years.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Alexander's rapid march — covering 300 miles in 14 days, army moving at extraordinary speed. Thebes: the city's walls, its famous Sacred Band, its defiance. The assault: Macedonian forces breaching the walls after fierce resistance. The aftermath: the population of 30,000 being sold into slavery — a column of captives. The temples and Pindar's house spared, standing amid ruins. Greek ambassadors from other cities watching, pale. The message understood across Greece: this is not his father's son. This is something else.",
+      "bg_colors": [
+        "#8B0000",
+        "#4A4A4A",
+        "#D4AF37"
+      ],
+      "duration_sec": 50,
+      "scene_number": 37
+    },
+    {
+      "title": "The Gordian Knot — Myth and Reality",
+      "type": "context",
+      "narration": "In 333 BC, Alexander stopped at the city of Gordium in Phrygia. In the city's acropolis was a wagon secured with a knot of cornel bark, tied by the legendary King Gordias, with a prophecy attached: whoever undid the knot would rule all of Asia. Dozens of people had tried and failed. The knot had no visible ends. Alexander studied it. Then, depending on which ancient source you read, he either found the pin that held the central coil together and pulled it out, or he simply drew his sword and cut it. Both versions agree on the outcome: the knot came apart. Alexander declared the prophecy fulfilled. This is one of the most analyzed small incidents in Alexander's career, not because of what happened but because of what it tells us about his method. When Alexander encountered a problem with no conventional solution, he questioned whether the rules of engagement were actually binding.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. The ancient wagon in Gordium's acropolis: the famous knot of cornel bark, complex, ancient, no visible ends. Previous visitors examining it, failing. Alexander studying the knot, walking around it. Two versions shown: finding the central pin and drawing it out; or the sword cutting straight through. The knot falling apart. Alexander's declaration. The prophecy: ruler of all Asia. Map of what he had already conquered and what remained. The philosophical point: asking whether the stated rules actually applied. A pattern visible throughout his career. 16:9.",
+      "bg_colors": [
+        "#D4AF37",
+        "#1A1A2E",
+        "#8B0000"
+      ],
+      "duration_sec": 50,
+      "scene_number": 38
+    },
+    {
+      "title": "The Proskynesis Controversy — Where East Met West and Failed",
+      "type": "deep_dive",
+      "narration": "In 327 BC, after years of conquering Persian territory, Alexander attempted to introduce proskynesis — the Persian court custom of prostrating oneself before the king — to his Macedonian court. For Persians, this was ordinary respectful greeting. For Greeks and Macedonians, it was an act reserved for the gods. Alexander was trying to create a unified court culture that treated his Persian and Macedonian subjects equally. The Macedonians refused. His court philosopher Callisthenes — Aristotle's nephew — led the resistance, arguing openly that Alexander was a man, not a god, and that a Greek should prostrate himself before no man. Alexander eventually dropped the requirement for Macedonians. Callisthenes was later executed, ostensibly for involvement in a conspiracy. The proskynesis controversy reveals the central tension in Alexander's empire: he was trying to be simultaneously the Macedonian king his Greek soldiers respected and the Great King his Persian subjects expected. He could not fully be both.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. The Persian court at proskynesis: Persian nobles and officials prostrating themselves before the king — their ordinary court greeting. Then: the Macedonian reaction — veteran soldiers and philosophers refusing, standing upright. Callisthenes speaking in court, arguing against the requirement. Alexander's conflict shown: he needs Persian legitimacy and Macedonian loyalty simultaneously. The compromise: different standards for different subjects. Callisthenes arrested later. The cultural faultline running through the empire. The two worlds Alexander was trying to merge and the limits of his success. 16:9.",
+      "bg_colors": [
+        "#4A3728",
+        "#D4AF37",
+        "#1A1A2E"
+      ],
+      "duration_sec": 52,
+      "scene_number": 39
+    },
+    {
+      "title": "The Death of Cleitus — Alexander's Worst Night",
+      "type": "deep_dive",
+      "narration": "In 328 BC, during a banquet in Samarkand, Alexander killed his friend. Cleitus the Black had saved Alexander's life at the Battle of Granicus, personally striking down a Persian noble whose sword was already raised over Alexander's head. At this drunken banquet, Cleitus grew angry at Alexander's pretensions to divinity and his adoption of Persian customs, and said things that Macedonian officers had been thinking but not saying: that Philip was the real genius, that Alexander owed his success to his officers, that he was becoming a Persian tyrant. Alexander threw a javelin. Cleitus died. Alexander spent the next three days refusing to eat or drink, lying in his tent, calling his friend's name. His officers finally got a court philosopher to argue that a king by definition could not murder — whatever he did was just. Alexander accepted this, went through the motions of formal atonement, and continued. Cleitus was gone. The grief was real. So was the logic that had killed him.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. The Samarkand banquet: a loud, drunken dinner, wine flowing, the arguments escalating. Cleitus standing, shouting — his genuine fury at Alexander's changes. Alexander's hand finding the javelin. The throw. Cleitus falling. The silence in the room. Alexander in his tent for three days: calling Cleitus's name, refusing food. His officers outside, worried. The philosopher Anaxarchus talking him out of grief through sophistry. Alexander emerging. The empty place at the table where Cleitus had sat. The man who saved Alexander's life died at Alexander's hand. 16:9.",
+      "bg_colors": [
+        "#8B0000",
+        "#4A4A4A",
+        "#D4AF37"
+      ],
+      "duration_sec": 52,
+      "scene_number": 40
+    },
+    {
+      "title": "Roxana — The Political Marriage That Surprised Everyone",
+      "type": "character_intro",
+      "narration": "In 327 BC, Alexander did something that shocked his Macedonian officers: he married a Bactrian princess. Roxana was the daughter of the Bactrian nobleman Oxyartes, who had been holding out against Macedonian conquest in a mountain fortress. Alexander's decision to marry her rather than simply taking her as a concubine was unusual — Macedonian kings typically married Greek or Macedonian noblewomen for political alliance. This marriage was simultaneously political and, by all ancient accounts, genuine. Alexander reportedly fell in love with her on sight, which was unusual enough to be worth noting. The political genius was that it reconciled his most difficult eastern territories: Bactria and Sogdiana — what is now Afghanistan — had proven the most resistant to Macedonian rule, guerrilla warfare continuing for two years. Marrying into the local nobility transformed an occupation into a dynasty. Roxana was pregnant when Alexander died at thirty-two. Their son, Alexander IV, was murdered at fourteen by one of Alexander's generals. The bloodline ended there.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. The mountain fortress of Sogdian Rock: sheer cliffs, thought to be impregnable. Oxyartes's daughter Roxana — depicted as a central Asian noblewoman. Alexander's decision to marry rather than conquer by force. The wedding ceremony: Macedonian and Bactrian traditions mixed. Macedonian officers' reactions ranging from confusion to disapproval. Map of Bactria — the territory suddenly pacified by marriage. Alexander's son born posthumously. The boy-king Alexander IV: a child ruler under regents, murdered before reaching adulthood. The dynasty's end. 16:9.",
+      "bg_colors": [
+        "#D4AF37",
+        "#1A1A2E",
+        "#8B0000"
+      ],
+      "duration_sec": 50,
+      "scene_number": 41
+    },
+    {
+      "title": "The Gedrosian Desert — The March That Killed Thousands",
+      "type": "deep_dive",
+      "narration": "Returning from India in 325 BC, Alexander chose to march his army through the Gedrosian Desert — what is now the Makran coast of Pakistan and Iran — rather than taking the easier northern route. Historians debate whether this was deliberate punishment, competition with the legendary feats of Cyrus and Semiramis who had reportedly attempted the same march, or a miscalculation of the desert's severity. The result was catastrophic. Temperatures exceeded fifty degrees Celsius. Water sources ran out. Flash floods killed sleeping soldiers. The army ran out of food. Soldiers ate their own horses and baggage animals. Ancient sources estimate that three-quarters of the soldiers who entered the desert did not come out. If these numbers are accurate — and they may be exaggerated — it was Alexander's greatest military disaster, happening not in battle but on a march in territory he had already conquered. He emerged from the desert, held a festival, and continued.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. The Gedrosian Desert: the Makran coast landscape — extreme heat, rocky terrain, the sea in the distance but undrinkable. Alexander's army entering this landscape — still large, loaded with baggage. The progressive deterioration: water sources empty, animals dying, soldiers stumbling. Flash floods killing men in their sleep. The food running out. Horses eaten. The column shrinking. Alexander walking rather than riding, sharing the same deprivation as his soldiers — one of his more remarkable leadership moments. The survivors emerging from the desert: a fraction of those who entered. The festival held afterward, the survivors celebrating survival itself. 16:9.",
+      "bg_colors": [
+        "#4A4A4A",
+        "#1A1A2E",
+        "#D4AF37"
+      ],
+      "duration_sec": 52,
+      "scene_number": 42
+    },
+    {
+      "title": "Alexander's Legacy — The Man Who Changed the Map of Human Civilization",
+      "type": "analysis",
+      "narration": "Two thousand, three hundred years after his death, Alexander the Great's influence is still directly measurable. The Greek language he spread across the Near East became the language of the New Testament, ensuring Christianity's textual foundation. The cities he founded — Alexandria most of all — became the intellectual centers of the ancient world, where mathematics, astronomy, medicine, and philosophy advanced further than anywhere before. The military tactics he developed became the template for Roman legions, which spread Greek culture even further west. The Silk Road he opened through Central Asia enabled the first systematic contact between east and west. The question of whether Alexander was 'great' — whether greatness should include the hundreds of thousands killed in his campaigns — is one that every generation answers differently. What cannot be disputed is the scale: no single human being before or after has more measurably altered the direction of world civilization in a single lifetime. Whether that constitutes greatness is yours to decide.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Alexander's legacy as a branching impact diagram. The Greek language spreading: map of Hellenistic world, then the New Testament written in that language. Alexandria: the Library, the Museum, the scholars. Roman military tactics derived from Macedonian models. The Silk Road connection. Then: the other side of the ledger — cities destroyed, populations killed, cultures disrupted. A weighing scale: the civilization advanced against the cost paid. The final image: the modern world as downstream consequence of one man's ambition. The question left to the viewer. 16:9.",
+      "bg_colors": [
+        "#4A3728",
+        "#D4AF37",
+        "#1A1A2E"
+      ],
+      "duration_sec": 52,
+      "scene_number": 43
+    },
+    {
+      "title": "Where Is Alexander's Tomb — History's Greatest Missing Monument",
+      "type": "deep_dive",
+      "narration": "Alexander's body was claimed after his death by Ptolemy, who diverted the funeral procession to Egypt and eventually placed the body in a golden sarcophagus in Alexandria. For centuries, it was a destination for pilgrimage. Julius Caesar wept at it. Augustus Caesar accidentally broke the nose touching it. Then, sometime in late antiquity — probably during the political chaos of the third or fourth century AD — the tomb was lost. Despite two millennia of searching, involving multiple serious archaeological expeditions, it has not been found. Alexandria has been continuously inhabited, built over, dug into, and rebuilt since Alexander's death. The most likely location is under the modern city, buried under two thousand years of construction. More than a hundred people have claimed to have found it; none have provided credible evidence. The absence of the tomb is fitting in a strange way: the man who spent his life being compared to Achilles shares Achilles's most famous attribute. We know where he fought. We do not know where he lies.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. The search for Alexander's tomb: map of Alexandria, the ancient city overlaid on the modern one. The ancient descriptions of the tomb's location. Julius Caesar and Augustus visiting — the last documented evidence of its existence. The city growing over the centuries: layers of construction on the modern map. Archaeological expeditions: the many serious searches, the many failed claims. The probable location: under the modern city, inaccessible. The paradox — the most sought object in archaeology, in the middle of a city of five million people. The fitting mystery: Alexander, like Achilles, exists in history but not in recoverable form. 16:9.",
+      "bg_colors": [
+        "#1A1A2E",
+        "#8B0000",
+        "#D4AF37"
+      ],
+      "duration_sec": 50,
+      "scene_number": 44
+    },
+    {
+      "title": "The Companion Cavalry — Alexander's Decisive Strike Force",
+      "type": "deep_dive",
+      "narration": "Alexander's Companion Cavalry was the finest heavy cavalry in the ancient world and the instrument of his most decisive victories. These were Macedonian nobles who had trained with Alexander since boyhood, riding massive Nisaean warhorses in a wedge formation that could pierce any infantry line. At Gaugamela, the Companions were positioned on Alexander's right wing, and Alexander himself led them at the tip of the wedge. When the gap opened in Darius's line during the battle, the Companions didn't need orders — they had rehearsed this moment for years. The shock of three hundred armored horsemen hitting infantry at full gallop was tactically and psychologically overwhelming. No formation in the ancient world had an answer for it. The Companions were not just cavalry. They were the instrument through which Alexander's genius was expressed on the battlefield — the perfect weapon for the perfect general.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. The Companion Cavalry: Macedonian nobles on massive Nisaean warhorses, armored in bronze breastplates, long cavalry lances. The wedge formation — the V-shape concentrating force at a single point. Alexander at the front, the gold sunburst on his helmet. The charge beginning at Gaugamela — hundreds of hooves, the ground shaking, the formation accelerating through the gap in the Persian line. The most decisive cavalry force of the ancient world in the moment that defined it. 16:9.",
+      "bg_colors": [
+        "#8B0000",
+        "#4A4A4A",
+        "#D4AF37"
+      ],
+      "duration_sec": 52,
+      "scene_number": 45
+    },
+    {
+      "title": "The Death of the Persian Empire — What Gaugamela Actually Ended",
+      "type": "analysis",
+      "narration": "The Achaemenid Persian Empire had existed for over two hundred years when it fell at Gaugamela. Founded by Cyrus the Great in 550 BC, it had stretched from the Aegean to the Indus — the largest empire the world had yet seen. It had absorbed Babylon, Egypt, and Lydia, built the Royal Road, and created the first documented postal service. The fall of this empire was not inevitable. It was caused by the military revolution Alexander represented meeting an army organized on older principles. After Gaugamela, Darius fled east. His own nobles murdered him. The empire that had endured two centuries dissolved in months. What Alexander did at Gaugamela was not just win a battle. He ended a world — the world of Achaemenid power that had defined the Near East for two centuries. Nothing that came after was the same.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. The Persian Empire at its height: a map showing its full extent from the Aegean to the Indus. The Royal Road, the satrapy system, Persepolis. Two hundred years of Persian dominance. Then Gaugamela: the map beginning to collapse. Darius fleeing east, his assassination by his own nobles. The last Achaemenid king dead in a ditch, the greatest empire of the ancient world ending. 16:9.",
+      "bg_colors": [
+        "#1A1A2E",
+        "#8B0000",
+        "#D4AF37"
+      ],
+      "duration_sec": 52,
+      "scene_number": 46
+    },
+    {
+      "title": "Babylon's Surrender — The World's Greatest City Opens Its Gates",
+      "type": "battle",
+      "narration": "After Gaugamela, Alexander marched south toward Babylon — the largest city in the world, with a population of perhaps two hundred thousand. The city's governor, Mazaeus — the same man who had commanded the Persian right wing at Gaugamela — came out to surrender before Alexander arrived. The Babylonians lined the road with flowers. Alexander entered through the Ishtar Gate on a chariot, its blue glazed tiles depicting lions, bulls, and dragons. He made sacrifices at the temple of Marduk, declared himself the legitimate ruler of Babylon in the tradition of Babylonian kings, and was twenty-six years old. The city that had been the center of human civilization for two thousand years was his, surrendered without a fight by a general who had just fought against him.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. The road to Babylon after Gaugamela: Alexander's army marching south. Mazaeus coming out to surrender — a former enemy general submitting. Babylonian civilians lining the road with flowers. The Ishtar Gate: blue glazed tiles, lions and bulls and dragons. Alexander's chariot passing through. The interior of Babylon: the ziggurat, the temple of Marduk. Alexander making sacrifices in the Babylonian tradition. Twenty-six years old, master of the world's greatest city. 16:9.",
+      "bg_colors": [
+        "#D4AF37",
+        "#1A1A2E",
+        "#8B0000"
+      ],
+      "duration_sec": 52,
+      "scene_number": 47
+    },
+    {
+      "title": "Darius III — The King Who Ran Twice",
+      "type": "character_intro",
+      "narration": "History has not been kind to Darius III, and part of the blame is deserved. He fled the battlefield at both Issus and Gaugamela — behavior that was extraordinary by any standard of ancient warfare. Kings did not flee. The symbolism of the Persian Great King abandoning his army shattered morale more than any tactical defeat could. But Darius III deserves more than simple condemnation. He inherited an empire in crisis, survived a palace coup, and was facing a military revolution he had no framework to counter. His strategic judgment was often sound — he chose flat ground at Gaugamela specifically to maximize his cavalry advantage. He was not a coward in the abstract. He was a man who panicked at the specific, overwhelming moment of Alexander's personal charge. He was murdered by his own nobles before Alexander could capture him. Alexander covered his body with his own cloak — respect for a fallen king.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Darius III: his accession after the palace coup. At Issus: the famous mosaic showing his terrified face as Alexander charges. At Gaugamela: the same moment repeating — the gap in the line, Alexander coming, Darius breaking and fleeing. The armies seeing their king flee. Darius in exile, moving east, betrayed by Bessus. His body found by the road. Alexander covering it with his cloak. The end of the Achaemenid line. 16:9.",
+      "bg_colors": [
+        "#4A4A4A",
+        "#1A1A2E",
+        "#D4AF37"
+      ],
+      "duration_sec": 52,
+      "scene_number": 48
+    },
+    {
+      "title": "Alexander's Vision — One World Under One Rule",
+      "type": "analysis",
+      "narration": "Alexander is often described as a conqueror. He thought of himself as something more: the creator of a unified world. His policy in every conquered territory was to adopt and synthesize. He married Roxana, a Bactrian princess. He adopted Persian court dress. He incorporated Persian nobles into his administration and cavalry into his army. He encouraged his officers to marry Persian women. His vision — the 'brotherhood of mankind' cited by ancient sources — was of a world united under his rule not by force alone but by cultural fusion. This vision was too radical for most of his Macedonian officers, who had not conquered Persia to become Persian. The mutinies, the murders, the constant friction of his later campaigns were partly about this tension: a conqueror who wanted to become universal, leading men who wanted to go home.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Alexander's fusion policy: Persian nobles at his court, Macedonian officers uncomfortable in Persian robes. The mass marriage at Susa: Alexander and 90 officers marrying Persian noblewomen. Alexander in Persian court dress — the diadem, the purple robe. The mixed army. The fundamental tension: world-unifier vs. men who wanted conquest, not synthesis. The mutiny at the Hyphasis. Alexander's impossible dream of a single civilization where Greece and Persia became one. 16:9.",
+      "bg_colors": [
+        "#4A3728",
+        "#D4AF37",
+        "#1A1A2E"
+      ],
+      "duration_sec": 52,
+      "scene_number": 49
+    },
+    {
+      "title": "The Limits of Empire — Why Alexander Stopped at the Hyphasis",
+      "type": "battle",
+      "narration": "Alexander's empire ended not with a defeat but with a refusal. In 326 BC, having crossed the Hindu Kush and defeated the Indian king Porus on the Hydaspes, his army reached the Hyphasis River and stopped. The soldiers had been marching for eight years. They refused to go further. Alexander went to his tent and didn't come out for three days. Then he announced they would turn back. It was the first time he had been stopped by anything. He never recovered his purpose after the Hyphasis. He drank more. He became erratic. He died two years later in Babylon at thirty-two, possibly from typhoid or alcohol-related illness, without a designated heir, having conquered but not consolidated an empire too large for any single successor to hold.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. The Hyphasis River in 326 BC: the easternmost point of Alexander's march. His veterans — eight years, dozens of battles, three continents. The officers presenting the army's refusal. Alexander's tent, closed for three days. The sacrifice and the unfavorable omens. The army turning west. Alexander's face: the first defeat he couldn't fight. The two years afterward: drinking, erratic decisions, death in Babylon at 32. The greatest conqueror who ever lived, stopped by his own men. 16:9.",
+      "bg_colors": [
+        "#1A1A2E",
+        "#8B0000",
+        "#D4AF37"
+      ],
+      "duration_sec": 52,
+      "scene_number": 50
+    },
+    {
+      "title": "The Phalanx — Macedonian War Machine Explained",
+      "type": "deep_dive",
+      "narration": "The Macedonian sarissa phalanx was the most formidable infantry formation of its age. The sarissa — a pike approximately five to seven meters long — was so long that the pikes of the first five ranks projected past the front of the formation, creating a wall of steel that no cavalry could charge and no standard infantry could approach. The men in ranks six through sixteen held their sarissas angled to deflect incoming missiles. The key was its combination with the Companion Cavalry: the phalanx fixed the enemy infantry and couldn't be flanked by infantry, while the cavalry waited for the gap. Neither element alone was decisive. Together they were nearly unbeatable. This combined arms doctrine was not invented by Alexander — Philip II had built the system. Alexander perfected the coordination between its parts.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. The Macedonian phalanx in formation: sixteen ranks deep, sarissas projecting forward — five ranks of pike points creating a wall of steel. Scale shown: 8,000 men presenting 8,000 pike points. No cavalry can charge it, no infantry can approach it. The weakness: flanks. The cavalry's job: protect the flanks until the gap opens. The two elements — phalanx as anvil, cavalry as hammer — shown in tactical diagram. Philip II's invention, Alexander's perfection. The war machine in its component parts. 16:9.",
+      "bg_colors": [
+        "#8B0000",
+        "#4A4A4A",
+        "#D4AF37"
+      ],
+      "duration_sec": 52,
+      "scene_number": 51
+    },
+    {
+      "title": "What Gaugamela Gave the World — The Hellenistic Age",
+      "type": "analysis",
+      "narration": "The century after Gaugamela transformed the Mediterranean and Middle East more thoroughly than any period since the Bronze Age collapse. The Hellenistic Age produced Alexandria as the intellectual capital of the world, the Library of Alexandria with half a million scrolls, Euclid's geometry, Archimedes' physics, Eratosthenes measuring the circumference of the Earth. Greek became the common language from the Adriatic to the Indus. Greek theater, philosophy, and art fused with Egyptian, Persian, and Mesopotamian traditions to produce something genuinely new. When Rome conquered the Hellenistic kingdoms, it adopted their culture and transmitted it to us. The battle of Gaugamela is the origin point of this process — the moment when Alexander's victory made the Mediterranean world Greek, setting the foundations for everything that followed.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. The Hellenistic world after Alexander: the map of his empire divided among successors. Alexandria: the lighthouse, the Library. Euclid drawing geometric proofs, Eratosthenes calculating Earth's circumference. Greek theater in Egyptian Alexandria. Fusion architecture: Greek columns on Egyptian temples. The Greek language as the lingua franca of commerce and scholarship. The process that took this cultural synthesis to Rome and from Rome to us. Gaugamela as the hinge point of Western civilization. 16:9.",
+      "bg_colors": [
+        "#D4AF37",
+        "#1A1A2E",
+        "#8B0000"
+      ],
+      "duration_sec": 52,
+      "scene_number": 52
+    },
+    {
+      "title": "Alexander's Legacy — The Most Copied Conqueror in History",
+      "type": "analysis",
+      "narration": "No figure in military history has been more copied, more studied, and more used as a template than Alexander. Julius Caesar allegedly wept before a statue of Alexander in Spain because at Alexander's age he had conquered the world while Caesar had accomplished nothing. Napoleon kept a portrait of Alexander in his campaign tent. Every major conqueror from Rome through the 20th century studied Alexander's campaigns. His tactics at Gaugamela are still analyzed in military academies worldwide. What Alexander's legacy actually teaches is complex: it demonstrates the limits of personality-based power, the impossibility of empires built on one man's genius, and the durability of the cultural fusion he created even after his political creation collapsed. The empire fell instantly at his death. The Hellenistic civilization he created lasted three centuries.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Alexander's legacy across centuries: Caesar at the statue in Spain. Napoleon studying the Gaugamela campaign. West Point and Sandhurst cadets analyzing Macedonian combined arms. The cultural legacy: Alexandria, the spread of Greek, the intellectual flowering. The political failure: the Diadochi wars, the empire divided. The pattern: conqueror who won everything on the battlefield and built nothing that lasted beyond himself. The final map: Alexander's conquests overlaid on today's countries — 30 countries, 2 continents, 1 man, 12 years. 16:9.",
+      "bg_colors": [
+        "#4A3728",
+        "#D4AF37",
+        "#1A1A2E"
+      ],
+      "duration_sec": 52,
+      "scene_number": 53
+    },
+    {
+      "scene_number": 54,
       "title": "The Day the World Changed",
       "narration": "On the first of October, 331 BC, at a site called Gaugamela near the village of Tel Gomel in what is now northern Iraq, a twenty-five-year-old king and his forty-seven thousand soldiers ended the largest empire the world had ever known. The battle lasted perhaps four hours. The empire had lasted two hundred and twenty years. Alexander would go on — to Bactria, to the Hindu Kush, to the Indus River, where his army finally refused to march further. He died in Babylon in 323 BC, aged thirty-two, of causes still debated. But the world he remade at Gaugamela outlasted him by centuries. The Persian Empire ended on that plain. The Hellenistic world began. And the argument about what it means to conquer, to rule, and to leave a mark on history has never really ended. We are still having it.",
       "visual_prompt": "Gods & Glory cinematic historical documentary. FINAL SCENE. The plain of Gaugamela as it exists today — quiet, flat, agricultural land in northern Iraq under a vast open sky. A single caption: 'October 1, 331 BC.' Then: the battle at its decisive moment — the full panorama in cinematic glory: Alexander at the tip of the Companion Cavalry driving through the gap, the Persian army in cascading chaos, Darius's chariot turning. Slow fade back to the modern plain. Then: the legacy sequence — the Library of Alexandria, a page of the Greek New Testament, a West Point battle map, a city sign reading 'Alexandria.' The plain that held the world. The quiet of a battlefield two thousand three hundred years later. 16:9.",
-      "bg_colors": ["#0D1B2A", "#C9A84C"],
+      "bg_colors": [
+        "#0D1B2A",
+        "#C9A84C"
+      ],
       "duration_sec": 52
     }
   ],

@@ -32,7 +32,7 @@ STATE_DIR.mkdir(parents=True, exist_ok=True)
 RUNS_DIR.mkdir(parents=True, exist_ok=True)
 
 sys.path.insert(0, str(BASE_DIR))
-from council.bot_base import CouncilBot, BotResult
+from council.bot_base import CouncilBot, BotResult, ALL_CHANNELS
 
 
 # ── Bot Discovery ─────────────────────────────────────────────────────────────
@@ -65,8 +65,9 @@ def discover_bots() -> list[type[CouncilBot]]:
 
 # ── Council Run ───────────────────────────────────────────────────────────────
 
-def run_council(bot_filter: str | None = None, verbose: bool = True) -> dict:
-    """Run all (or one) bot(s) and return summary."""
+def run_council(bot_filter: str | None = None, verbose: bool = True,
+                channel: str = "gg") -> dict:
+    """Run all (or one) bot(s) for a given channel and return summary."""
     bot_classes = discover_bots()
     if not bot_classes:
         print("  [WARN] No bots found in council/bots/")
@@ -83,12 +84,12 @@ def run_council(bot_filter: str | None = None, verbose: bool = True) -> dict:
     triggered_next: list[str] = []
 
     print(f"\n{'='*65}")
-    print(f"  VIRAL ENGINE COUNCIL  —  Run {run_id}")
+    print(f"  VIRAL ENGINE COUNCIL  —  {channel.upper()}  —  Run {run_id}")
     print(f"  {len(bot_classes)} bot(s) active")
     print(f"{'='*65}\n")
 
     for BotClass in bot_classes:
-        bot = BotClass(base_dir=BASE_DIR, verbose=verbose)
+        bot = BotClass(base_dir=BASE_DIR, verbose=verbose, channel=channel)
         print(f"  ▶ {bot.name}  [{bot.description}]")
 
         try:
@@ -134,6 +135,7 @@ def run_council(bot_filter: str | None = None, verbose: bool = True) -> dict:
     # ── Save run log ─────────────────────────────────────────────────────────
     run_summary = {
         "run_id": run_id,
+        "channel": channel,
         "ran_at": datetime.now().isoformat(),
         "overall_status": overall,
         "total_issues_found": total_issues,
@@ -142,25 +144,31 @@ def run_council(bot_filter: str | None = None, verbose: bool = True) -> dict:
         "next_actions": triggered_next,
     }
 
-    run_path = RUNS_DIR / f"run_{run_id}.json"
+    # Channel-scoped run log
+    channel_runs_dir = RUNS_DIR / channel
+    channel_runs_dir.mkdir(parents=True, exist_ok=True)
+    run_path = channel_runs_dir / f"run_{run_id}.json"
     run_path.write_text(json.dumps(run_summary, indent=2))
 
-    # Also write latest.json for quick status checks
-    (STATE_DIR / "latest_run.json").write_text(json.dumps(run_summary, indent=2))
+    # Latest run per channel — used by show_status()
+    channel_state_dir = STATE_DIR / channel
+    channel_state_dir.mkdir(parents=True, exist_ok=True)
+    (channel_state_dir / "latest_run.json").write_text(json.dumps(run_summary, indent=2))
 
     return run_summary
 
 
 # ── Watch Mode ────────────────────────────────────────────────────────────────
 
-def watch_mode(interval_sec: int, bot_filter: str | None = None):
+def watch_mode(interval_sec: int, bot_filter: str | None = None,
+               channel: str = "gg"):
     """Run council repeatedly on a timer."""
-    print(f"\n  Council watch mode — interval: {interval_sec}s  (Ctrl+C to stop)\n")
+    print(f"\n  Council watch mode [{channel.upper()}] — interval: {interval_sec}s  (Ctrl+C to stop)\n")
     run_count = 0
     while True:
         run_count += 1
-        print(f"\n  ═══ Watch run #{run_count} ═══")
-        result = run_council(bot_filter=bot_filter, verbose=True)
+        print(f"\n  ═══ Watch run #{run_count} [{channel.upper()}] ═══")
+        result = run_council(bot_filter=bot_filter, verbose=True, channel=channel)
         overall = result.get("overall_status", "?")
         next_run = datetime.now().strftime("%H:%M:%S")
         print(f"  Sleeping {interval_sec}s… (next run ~{next_run})")
@@ -173,26 +181,26 @@ def watch_mode(interval_sec: int, bot_filter: str | None = None):
 
 # ── Status ───────────────────────────────────────────────────────────────────
 
-def show_status():
-    latest = STATE_DIR / "latest_run.json"
-    if not latest.exists():
-        print("  No council runs yet. Run: py council/council.py")
-        return
-
-    data = json.loads(latest.read_text())
-    print(f"\n  Last run: {data['ran_at'][:19]}  —  {data['overall_status'].upper()}")
-    print(f"  Issues: {data['total_issues_found']} found, {data['total_issues_fixed']} fixed\n")
-
-    for bot in data.get("bots", []):
-        icon = {"ok": "✓", "warning": "⚠", "error": "✗", "fixed": "→"}.get(bot["status"], "?")
-        print(f"  {icon} {bot['bot_name']:30s}  {bot['status']:8s}  "
-              f"+{bot['issues_found']}/-{bot['issues_fixed']}")
-
-    if data.get("next_actions"):
-        print(f"\n  Pending actions:")
-        for a in data["next_actions"]:
-            print(f"    → {a}")
-    print()
+def show_status(channel: str = "gg"):
+    """Show last run summary for a given channel (or all channels)."""
+    channels = ALL_CHANNELS if channel == "all" else [channel]
+    for ch in channels:
+        latest = STATE_DIR / ch / "latest_run.json"
+        if not latest.exists():
+            print(f"  [{ch.upper()}] No council runs yet.")
+            continue
+        data = json.loads(latest.read_text())
+        print(f"\n  [{ch.upper()}] Last run: {data['ran_at'][:19]}  —  {data['overall_status'].upper()}")
+        print(f"  Issues: {data['total_issues_found']} found, {data['total_issues_fixed']} fixed\n")
+        for bot in data.get("bots", []):
+            icon = {"ok": "✓", "warning": "⚠", "error": "✗", "fixed": "→"}.get(bot["status"], "?")
+            print(f"  {icon} {bot['bot_name']:30s}  {bot['status']:8s}  "
+                  f"+{bot['issues_found']}/-{bot['issues_fixed']}")
+        if data.get("next_actions"):
+            print(f"\n  Pending actions:")
+            for a in data["next_actions"]:
+                print(f"    → {a}")
+        print()
 
     # Show bot count
     bots = list(BOTS_DIR.glob("bot_*.py"))
@@ -232,16 +240,29 @@ def main():
                         help="List all registered bots")
     parser.add_argument("--quiet", action="store_true",
                         help="Minimal output")
+    parser.add_argument(
+        "--channel",
+        default="gg",
+        choices=ALL_CHANNELS + ["all"],
+        help=f"Channel to run council for (default: gg). Use 'all' for all channels.",
+    )
     args = parser.parse_args()
 
     if args.status:
-        show_status()
+        show_status(channel=args.channel)
     elif args.list:
         list_bots()
+    elif args.channel == "all" and not args.watch:
+        # Run every channel sequentially
+        for ch in ALL_CHANNELS:
+            print(f"\n{'#'*65}")
+            print(f"  EMPIRE OS — Running council for: {ch.upper()}")
+            print(f"{'#'*65}")
+            run_council(bot_filter=args.bot, verbose=not args.quiet, channel=ch)
     elif args.watch:
-        watch_mode(args.watch, bot_filter=args.bot)
+        watch_mode(args.watch, bot_filter=args.bot, channel=args.channel)
     else:
-        run_council(bot_filter=args.bot, verbose=not args.quiet)
+        run_council(bot_filter=args.bot, verbose=not args.quiet, channel=args.channel)
 
 
 if __name__ == "__main__":

@@ -322,6 +322,409 @@
         "#C9A227",
         "#1A3E2E"
       ]
+    },
+    {
+      "type": "history",
+      "title": "The Pacific War \u2014 January to May 1942",
+      "narration": "In the six months after Pearl Harbor, Japan had seized an empire. The Philippines, Malaya, Singapore, Burma, the Dutch East Indies, Wake Island, Guam \u2014 all fell in the most rapid territorial expansion in modern military history. Japan's defensive perimeter now extended 4,000 miles from Tokyo. But Admiral Yamamoto Isoroku understood that Pearl Harbor had failed at its essential objective: the American aircraft carriers had been at sea and survived. Until the carriers were destroyed, the Pacific war was unfinished.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Map of Japanese expansion across the Pacific January-May 1942 \u2014 the vast new empire from Wake Island to Burma, the defensive perimeter extending 4,000 miles from Tokyo. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#8B1A1A",
+        "#1A2A3D"
+      ],
+      "duration_sec": 52,
+      "scene_number": 25
+    },
+    {
+      "type": "biography",
+      "title": "Joseph Rochefort \u2014 The Codebreaker in the Basement",
+      "narration": "Commander Joseph Rochefort ran Station HYPO from a basement office in Pearl Harbor. He and his team of 30 cryptanalysts worked around the clock for weeks without going home, sleeping in the office, eating at their desks. They had partially broken JN-25, Japan's naval operational code. By May 1942 they were reading 15-20% of Japanese message traffic. That fraction was enough. When they identified the target as AF, Rochefort sent a message in the clear: Midway is low on fresh water. A Japanese signal promptly reported that AF was low on fresh water. The trap was set.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Commander Rochefort in the Station HYPO basement \u2014 the codebreaking team working by fluorescent lights surrounded by paper, the intelligence operation that located the Japanese fleet. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#1A2A3D",
+        "#C9A227"
+      ],
+      "duration_sec": 52,
+      "scene_number": 26
+    },
+    {
+      "type": "detail",
+      "title": "AF \u2014 The Debate at Pearl Harbor",
+      "narration": "Not everyone believed Rochefort. The intelligence section in Washington believed the Japanese target was the Aleutians or possibly the US West Coast. Rochefort was certain it was Midway. The fresh water test settled the argument. But Admiral Nimitz had to make a decision: send the carriers to Midway based on intelligence that could be wrong, leaving the West Coast undefended, or hold the carriers back. Nimitz trusted Rochefort. He ordered all three available carriers \u2014 Enterprise, Hornet, and the damaged Yorktown \u2014 to Midway.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Admiral Nimitz reviewing intelligence reports in his Pearl Harbor office, the decision to trust Rochefort's codebreaking and commit all three carriers to Midway \u2014 the command decision that changed the Pacific war. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#1A2A3D",
+        "#C9A227"
+      ],
+      "duration_sec": 52,
+      "scene_number": 27
+    },
+    {
+      "type": "detail",
+      "title": "The Yorktown \u2014 72 Hours",
+      "narration": "USS Yorktown had been damaged at the Battle of Coral Sea. Naval engineers estimated repairs would take 90 days. Nimitz ordered repairs completed in three days. Working in round-the-clock shifts, 1,400 workers made the carrier combat-capable by June 2. She was not perfect \u2014 she left Pearl Harbor still leaking oil, with crews from other ships borrowed to fill out her air group. But she was operational. Japan's intelligence reported only two American carriers at Midway. There were three.",
+      "visual_prompt": "Gods & Glory cinematic documentary. 1,400 shipyard workers repairing the Yorktown in 72 hours \u2014 the welding lights burning around the clock, the damaged carrier transformed to combat-ready against all engineering logic. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#C9A227",
+        "#1A2A3D"
+      ],
+      "duration_sec": 52,
+      "scene_number": 28
+    },
+    {
+      "type": "detail",
+      "title": "The Japanese Order of Battle \u2014 Overwhelming Force",
+      "narration": "The Japanese fleet approaching Midway in late May 1942 was the most powerful naval force ever assembled. The Kido Butai \u2014 the carrier strike force \u2014 had four fleet carriers: Akagi, Kaga, Soryu, and Hiryu. Combined, they carried 250 aircraft. The invasion fleet behind them had 14 transports carrying 5,000 troops. A surface bombardment group had two battleships. The entire force totaled 200 ships. Against this, Nimitz had three carriers, no battleships, and the land-based aircraft on Midway island itself.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The Japanese fleet \u2014 four carriers, battleships, cruisers, destroyers \u2014 the most powerful naval force ever assembled, moving northeast across the Pacific toward Midway. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#8B1A1A",
+        "#C9A227"
+      ],
+      "duration_sec": 52,
+      "scene_number": 29
+    },
+    {
+      "type": "analysis",
+      "title": "The Fatal Assumption \u2014 Japan's Intelligence Failure",
+      "narration": "Japan's operational plan rested on a critical assumption: American carriers would not arrive at Midway until after the island was taken and the Japanese fleet had consolidated. This assumption was wrong because American codebreakers had read Yamamoto's orders. The entire strategic purpose of Operation MI \u2014 to draw out and destroy the American carriers in a decisive engagement \u2014 had already been negated before a single plane flew. The Japanese were trying to spring an ambush while their intended victims were already waiting in ambush position.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Japanese fleet intelligence officers confident in their operational timeline \u2014 the fatal gap between Japanese assumption and American foreknowledge, the ambush waiting to be sprung in reverse. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#8B1A1A",
+        "#1A2A3D"
+      ],
+      "duration_sec": 52,
+      "scene_number": 30
+    },
+    {
+      "type": "battle",
+      "title": "June 3 \u2014 First Contact",
+      "narration": "American search planes found elements of the Japanese invasion fleet on June 3 and land-based bombers from Midway attacked in waves. All attacks failed \u2014 the high-level bombing that existed in 1942 was almost useless against maneuvering warships. But the Japanese recognized they had lost surprise: American forces knew they were coming. Nagumo, commanding the carrier force, received the news that Midway was alert but continued on course. He had 250 carrier aircraft and the most battle-tested naval aviators in the world. He was not afraid of Midway.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Land-based bombers from Midway attacking the Japanese invasion fleet on June 3 \u2014 bombs falling wide of maneuvering warships, the first failed American attacks alerting Japan that surprise was lost. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#8B1A1A",
+        "#C9A227"
+      ],
+      "duration_sec": 52,
+      "scene_number": 31
+    },
+    {
+      "type": "battle",
+      "title": "June 4 \u2014 The First Strike",
+      "narration": "At 4:30 AM on June 4, Admiral Nagumo launched 108 aircraft at Midway island \u2014 bombers and fighters to suppress the airfield. The strike commander reported back: Midway needs a second strike to be neutralized for the invasion. Nagumo made the decision that would destroy his fleet. He ordered his reserve aircraft \u2014 armed with torpedoes for use against ships \u2014 to be re-armed with bombs for a second island strike. Mechanics began the laborious process of switching ordnance in the hangar decks. At that moment, American search planes found the Kido Butai.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Japanese aircraft launching from Kido Butai in the pre-dawn darkness of June 4, 1942 \u2014 108 planes heading for Midway, the carrier decks cleared, the fatal re-arming order about to be given. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#8B1A1A",
+        "#1A2A3D"
+      ],
+      "duration_sec": 52,
+      "scene_number": 32
+    },
+    {
+      "type": "battle",
+      "title": "The Torpedo Bombers \u2014 Sacrifice at Midway",
+      "narration": "Three American torpedo bomber squadrons found the Japanese carriers and attacked without fighter cover. Torpedo Squadron 8, flying the obsolete Devastator, was destroyed almost entirely \u2014 15 of 15 planes lost, 29 of 30 men killed. Torpedo Squadrons 6 and 3 suffered similar losses. Not a single torpedo hit. The attack seemed like complete failure. But those torpedo bombers had pulled the Japanese combat air patrol down to wave height to defend against them. The Zeros were at sea level, 15 miles away. And the dive bombers were at 20,000 feet, directly above the carriers.",
+      "visual_prompt": "Gods & Glory cinematic documentary. American torpedo bombers attacking Japanese carriers through intense anti-aircraft fire \u2014 Devastators falling into the sea, the suicidal attack pulling Japanese fighters to sea level, unknowingly clearing the sky above. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#8B1A1A",
+        "#C9A227"
+      ],
+      "duration_sec": 52,
+      "scene_number": 33
+    },
+    {
+      "type": "battle",
+      "title": "Five Minutes That Changed the War",
+      "narration": "At 10:22 AM, dive bombers from Enterprise and Yorktown pushed over into their dives. The Japanese carriers had their decks crowded with re-armed aircraft, fueled and ready. Bombs hit Akagi and Kaga within seconds of each other. Soryu was hit moments later. The combination of aircraft fuel, loose ammunition, and aircraft crowded on the decks turned each carrier into an inferno. All three were burning and doomed within five minutes. The most powerful carrier force in the world had been destroyed in the time it takes to drink a cup of coffee.",
+      "visual_prompt": "Gods & Glory cinematic documentary. American dive bombers screaming down onto the Japanese carriers \u2014 Akagi, Kaga, and Soryu hit within minutes, the crowded flight decks exploding in aviation fuel and loose ordnance. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#8B1A1A",
+        "#0D1520"
+      ],
+      "duration_sec": 52,
+      "scene_number": 34
+    },
+    {
+      "type": "battle",
+      "title": "Hiryu Strikes Back",
+      "narration": "The fourth carrier, Hiryu, had separated from the group and survived. Her commander, Yamaguchi Tamon, launched immediate counterstrikes. His aircraft found Yorktown and hit her with bombs and torpedoes. Two separate Hiryu strikes left Yorktown dead in the water, listing, abandoned. For several hours it appeared Japan might yet salvage the battle \u2014 one Japanese carrier versus two damaged American ones. Then dive bombers from Enterprise found Hiryu in the late afternoon and put four bombs into her flight deck. By evening, all four Japanese carriers were burning.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The surviving Hiryu launching counterstrikes at Yorktown, the American carrier hit and listing \u2014 and then Enterprise's dive bombers finding Hiryu, the last Japanese carrier going up in flames. 16:9 cinematic.",
+      "bg_colors": [
+        "#8B1A1A",
+        "#0D1520",
+        "#C9A227"
+      ],
+      "duration_sec": 52,
+      "scene_number": 35
+    },
+    {
+      "type": "detail",
+      "title": "The Carrier Crews \u2014 Burning with Their Ships",
+      "narration": "The four Japanese carriers burned through the night of June 4-5. The crews of Akagi, Kaga, Soryu, and Hiryu fought their fires through the night before being ordered to abandon ship. Soryu sank in 20 minutes. Kaga sank at 7:25 PM. Akagi was scuttled by Japanese destroyers on June 5. Hiryu sank at 9 AM on June 5. Among the dead were some of Japan's most experienced naval aviators \u2014 men who had flown at Pearl Harbor, in the Indian Ocean campaign, at Coral Sea. Japan could build new carriers. She could not replace these men.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The Japanese carriers burning through the night of June 4-5, crews fighting fires on doomed ships, the most experienced naval aviators in the world dying with their ships. 16:9 cinematic.",
+      "bg_colors": [
+        "#8B1A1A",
+        "#0D1520",
+        "#1A2A3D"
+      ],
+      "duration_sec": 52,
+      "scene_number": 36
+    },
+    {
+      "type": "detail",
+      "title": "Yamamoto's Choice \u2014 Advance or Retreat",
+      "narration": "Admiral Yamamoto, commanding from his flagship far to the west, received the news that all four carriers were lost. He still had the most powerful surface fleet afloat \u2014 battleships, cruisers, destroyers \u2014 against which American carriers were extremely vulnerable at night. He ordered an advance. Then he ordered a retreat. Then he ordered another advance. His staff officers could see he was in shock. By midnight he ordered the entire operation cancelled and the fleet withdrawn. The man who had planned Pearl Harbor understood what Midway meant. Japan had lost the war.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Admiral Yamamoto on his flagship receiving the news of four lost carriers \u2014 the architect of Pearl Harbor absorbing the catastrophe, his fleet advancing and retreating as he struggled to comprehend the defeat. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#C9A227",
+        "#1A2A3D"
+      ],
+      "duration_sec": 52,
+      "scene_number": 37
+    },
+    {
+      "type": "detail",
+      "title": "The Yorktown's Survivors and Second Death",
+      "narration": "Yorktown was damaged but not sunk on June 4. Repair crews went back aboard and she was under tow on June 6, still afloat. A Japanese submarine found her and fired two torpedoes. The Yorktown, which had survived Coral Sea, which had been repaired in 72 hours, which had fought at Midway under a crew stitched together from multiple ships, finally sank on June 7. 141 of her crew were killed in total. The destroyer Hammann alongside her when the torpedoes hit also sank, killing 80 more. The ship that gave America three carriers instead of two died hard.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Yorktown under tow after the battle, repair crews working aboard \u2014 and then the submarine torpedo explosion, the carrier that saved Midway finally sinking on June 7. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#1A2A3D",
+        "#8B1A1A"
+      ],
+      "duration_sec": 52,
+      "scene_number": 38
+    },
+    {
+      "type": "detail",
+      "title": "Admiral Spruance \u2014 The Invisible Victor",
+      "narration": "Rear Admiral Raymond Spruance commanded the Enterprise and Hornet task force at Midway. He had replaced the ill Admiral Halsey two days before the battle. He had never commanded carriers before. His decision to launch aircraft at maximum range on the morning of June 4 \u2014 175 miles from the Japanese carriers \u2014 was criticized as too risky. His decision not to pursue the Japanese fleet on the night of June 4-5 was criticized as too cautious. Both decisions were correct. Spruance won the greatest naval victory in American history on his first carrier command.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Admiral Spruance on Enterprise's bridge, the quiet methodical commander who replaced the flamboyant Halsey and won the greatest naval battle in American history on his first carrier command. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#C9A227",
+        "#1A2A3D"
+      ],
+      "duration_sec": 52,
+      "scene_number": 39
+    },
+    {
+      "type": "analysis",
+      "title": "What Midway Decided",
+      "narration": "Japan lost four fleet carriers at Midway. America lost one. Japan lost 248 aircraft and their trained crews. America lost 150 aircraft but the crews were partly replaced. More importantly, Japan's strategic initiative \u2014 the ability to choose when and where to fight \u2014 was gone. From Midway forward, Japan would be reacting to American moves rather than making her own. The war in the Pacific would last another three years and cost millions of lives. But the question of who would win was answered on June 4, 1942.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Map showing the Pacific strategic balance shifting after Midway \u2014 Japan on defense, America beginning its island-hopping campaign, the three-year road to Tokyo beginning from this turning point. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#C9A227",
+        "#1A2A3D"
+      ],
+      "duration_sec": 52,
+      "scene_number": 40
+    },
+    {
+      "type": "detail",
+      "title": "Rochefort's Reward \u2014 Bureaucratic Revenge",
+      "narration": "Commander Rochefort's codebreaking made Midway possible. The intelligence section in Washington, which had been wrong about the target, spent months after Midway trying to give credit to their own analysts. They succeeded. Rochefort was denied the Distinguished Service Medal he was recommended for and transferred to command a floating drydock \u2014 a dead-end assignment. He received the Presidential Medal of Freedom posthumously in 1986, 44 years after the battle. The man who cracked the code that won the Pacific war spent the rest of the war in institutional exile.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Commander Rochefort \u2014 the codebreaker who made Midway possible, denied recognition by institutional rivals, transferred to obscurity, his contribution acknowledged decades after his death. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#C9A227",
+        "#1A2A3D"
+      ],
+      "duration_sec": 52,
+      "scene_number": 41
+    },
+    {
+      "type": "legacy",
+      "title": "The Japanese Pilot Shortage \u2014 The Long Consequence",
+      "narration": "The pilots lost at Midway could not be replaced quickly. Japan had an intensive training pipeline that prioritized quality over quantity \u2014 a fighter pilot required 700 hours of training before combat. The graduates of Japan's pre-war aviation program, who had combat experience from China, who had flown at Pearl Harbor, who had devastated British and American airpower across the Pacific \u2014 these men were irreplaceable. As Japan's remaining experienced pilots were ground down in subsequent battles, the quality gap between Japanese and American aviation widened until American pilots were routinely killing veterans with inexperienced pilots.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Japanese aviation training pipeline \u2014 the years required to develop expert pilots, the growing shortage after Midway, the quality gap that widened with each subsequent battle. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#8B1A1A",
+        "#1A2A3D"
+      ],
+      "duration_sec": 52,
+      "scene_number": 42
+    },
+    {
+      "type": "legacy",
+      "title": "The Island Campaign \u2014 What Midway Made Possible",
+      "narration": "After Midway, America began the island-hopping campaign that would bring the war to Japan's home islands. Guadalcanal in August 1942. The Solomons. The Marshalls and Marianas in 1944. Iwo Jima and Okinawa in 1945. Each step brought American bombers closer to Tokyo. None of it was possible without Midway. The carriers Japan lost on June 4, 1942 could not protect Japan's island perimeter. The experience lost with those carriers could not train the replacement pilots fast enough. Midway didn't end the war \u2014 it decided who would win it.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Map of the American island-hopping campaign \u2014 Guadalcanal to Iwo Jima, the path to Tokyo made possible by the carrier superiority established at Midway. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#C9A227",
+        "#1A2A3D"
+      ],
+      "duration_sec": 52,
+      "scene_number": 43
+    },
+    {
+      "type": "detail",
+      "title": "Torpedo Squadron 8 \u2014 The Memorial",
+      "narration": "Of Torpedo Squadron 8's 30 men, one survived: Ensign George Gay. Shot down and floating in the water, he watched the Japanese carriers burn from under his life raft. He was picked up the following day. Gay became the only firsthand witness to both the torpedo attack and the destruction of the Japanese fleet. The men of Torpedo Squadron 8, and of the other torpedo squadrons whose failed attack made the dive bomber strike possible, are remembered by a memorial on Midway island. They died in an attack that accomplished nothing directly and changed everything indirectly.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The memorial to Torpedo Squadron 8 on Midway island \u2014 the one survivor George Gay, the 29 men who died in a failed attack that unknowingly cleared the sky for the dive bombers above. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#C9A227",
+        "#1A2A3D"
+      ],
+      "duration_sec": 52,
+      "scene_number": 44
+    },
+    {
+      "type": "close",
+      "title": "June 4, 1942 \u2014 The Day the Pacific Changed",
+      "narration": "In five minutes on June 4, 1942, the Pacific war was decided. Three Japanese carriers destroyed in a single dive bombing attack. The fourth carrier gone by evening. 250 aircraft and their irreplaceable crews at the bottom of the Pacific. The Japanese navy would build new carriers. It would never replace the Kido Butai. The six months of Japanese dominance that began at Pearl Harbor ended at Midway. The three years of American advance that ended in Tokyo Bay began there. Five minutes. Three carriers. The turning point of the largest naval war in history.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The Pacific Ocean at Midway \u2014 three burning carriers visible from the air, the tactical map showing the battle's decisive moment, the strategic turning point of World War II in the Pacific. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#1A2A3D"
+      ],
+      "duration_sec": 56,
+      "scene_number": 45
+    },
+    {
+      "type": "detail",
+      "title": "Nagumo's Dilemma \u2014 The Re-Arming Decision",
+      "narration": "The most consequential single decision at Midway was Admiral Nagumo's order to re-arm his reserve aircraft from torpedoes to bombs. The decision was reasonable given available information: his strike commander said Midway needed a second attack, and no confirmed report of American carriers had yet arrived. When a report of American ships arrived minutes later, Nagumo ordered another re-arming \u2014 back to torpedoes. His carriers were caught between configurations: planes sitting on the hangar deck with weapons being changed, fuel lines running, ammunition in the open. A weapons management problem became a catastrophic vulnerability.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Japanese carrier hangar decks during the fatal re-arming \u2014 aircraft with weapons being swapped, fuel hoses running between planes, ammunition in the open, the vulnerability that five minutes of dive bombing would exploit. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#8B1A1A",
+        "#1A2A3D"
+      ],
+      "duration_sec": 52,
+      "scene_number": 46
+    },
+    {
+      "type": "detail",
+      "title": "The Search Pattern Gap",
+      "narration": "Nagumo's search pattern for American ships on June 4 had a gap. A Japanese cruiser launched a search plane on a sector that would have found the American carriers \u2014 but the catapult malfunctioned. The plane launched 30 minutes late. By the time it reported American ships, Nagumo had already begun his re-arming. The report came too late to change the carrier configuration before American bombers arrived. The catapult malfunction on one cruiser, combined with the 30-minute delay, meant Japan received the critical American carrier sighting 90 minutes after they should have. Those 90 minutes were everything.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The Japanese search aircraft launching late due to a catapult malfunction \u2014 the 30-minute delay that compressed Nagumo's decision timeline fatally, the mechanical failure that changed history. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#8B1A1A",
+        "#C9A227"
+      ],
+      "duration_sec": 52,
+      "scene_number": 47
+    },
+    {
+      "type": "biography",
+      "title": "Yamaguchi Tamon \u2014 The Admiral Who Stayed",
+      "narration": "Rear Admiral Yamaguchi Tamon commanded the Hiryu and survived the June 4 sinkings by chance \u2014 his carrier was positioned away from the others. He launched the counterstrikes that damaged Yorktown. When Hiryu was hit late that afternoon, Yamaguchi chose to go down with his ship. He dismissed his crew, gave permission for the wounded to be saved, and remained on the bridge. He was 49 years old. After the war, Japanese naval officers identified Yamaguchi as the commander most likely to have changed the war's outcome had he survived Midway. Japan lost its best admiral and four carriers on the same day.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Admiral Yamaguchi Tamon on Hiryu's bridge as the carrier sinks, choosing to remain as his crew evacuates \u2014 the admiral Japan considered its best, lost with the last Japanese carrier at Midway. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#C9A227",
+        "#1A2A3D"
+      ],
+      "duration_sec": 52,
+      "scene_number": 48
+    },
+    {
+      "type": "detail",
+      "title": "The Battle of Midway \u2014 The Numbers",
+      "narration": "The Battle of Midway lasted four days: June 4-7, 1942. Japan lost four fleet carriers, one heavy cruiser, 248 aircraft, and approximately 3,000 men. America lost one carrier, one destroyer, 150 aircraft, and 307 men. The disparity in aircraft losses was almost exactly reversed from Pearl Harbor six months earlier. The disparity in carriers lost was decisive: Japan had six fleet carriers before Midway and two after. America had three before and two after \u2014 and was building more at a rate Japan could not match. The industrial arithmetic of carrier warfare decided the war within the battle.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Battle of Midway statistics and comparison \u2014 the numbers that show the strategic reversal, four Japanese carriers against one American, the arithmetic of industrial production underlying tactical outcomes. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#C9A227",
+        "#1A2A3D"
+      ],
+      "duration_sec": 52,
+      "scene_number": 49
+    },
+    {
+      "type": "detail",
+      "title": "America's Carrier Production \u2014 The Industrial War",
+      "narration": "In 1942 alone, the United States commissioned or laid down 17 fleet and escort carriers. Japan commissioned 5. By 1944, American shipyards were producing carrier tonnage faster than Japan could sink it. The Essex-class carriers \u2014 27 commissioned between 1943 and 1945 \u2014 each carried 90 aircraft, compared to the 60-70 of the Japanese carriers they replaced. Japan's shipbuilding capacity, constrained by steel and fuel shortages, could not compete. Midway was a battle. The carrier production race was the war. America was winning it regardless of Midway. Midway simply made it irreversible sooner.",
+      "visual_prompt": "Gods & Glory cinematic documentary. American shipyards in 1942-1944 building Essex-class carriers \u2014 the industrial scale that Japan could not match, the assembly lines of war that would overwhelm Japanese production. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#1A2A3D"
+      ],
+      "duration_sec": 52,
+      "scene_number": 50
+    },
+    {
+      "type": "legacy",
+      "title": "The Pacific War's Cost \u2014 Three More Years",
+      "narration": "Midway decided who would win. It did not end the killing. Three more years of war followed. Guadalcanal. The Marianas. The Philippines. Iwo Jima. Okinawa. The firebombing of Japan's cities. The atomic bombs at Hiroshima and Nagasaki. Approximately 3 million Japanese and 100,000 Americans died in the Pacific after Midway. The war whose outcome was settled in five minutes on June 4, 1942 killed millions more before it ended on September 2, 1945. This is the truth about decisive battles: they decide who wins. They do not decide when the losing side stops fighting.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The Pacific war timeline after Midway \u2014 Guadalcanal, Iwo Jima, the firebombing of Tokyo, Hiroshima, the three more years of death that followed the battle that decided the outcome. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#8B1A1A",
+        "#C9A227"
+      ],
+      "duration_sec": 52,
+      "scene_number": 51
+    },
+    {
+      "type": "analysis",
+      "title": "Nimitz vs Yamamoto \u2014 The Two Admirals",
+      "narration": "The two admirals who faced each other at Midway represented opposite philosophies. Yamamoto planned the war-ending decisive battle, committing overwhelming force to force a single definitive engagement. Nimitz played a calculated hand: use intelligence to choose the ground, commit what he had, accept losses. Yamamoto lost because his intelligence was wrong and his plan was too complex. Nimitz won because his intelligence was right and his plan was simple. The battle that decided the Pacific war was, at its core, a contest between an admiral who knew what was coming and one who didn't.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Contrast of Yamamoto and Nimitz \u2014 the two admirals who shaped the Pacific war, the intelligence advantage that gave Nimitz the decisive edge at the battle that ended Japanese dominance. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#1A2A3D"
+      ],
+      "duration_sec": 52,
+      "scene_number": 52
+    },
+    {
+      "type": "close",
+      "title": "The Men at the Bottom of the Pacific",
+      "narration": "At the bottom of the Pacific Ocean, approximately 1,000 feet down, lie the wrecks of four Japanese carriers and the memories of the men who sailed them. The aviators who had bombed Pearl Harbor, raided Ceylon, sunk British warships in the Indian Ocean \u2014 they died in burning water off a tiny atoll most Americans had never heard of. On the American side, the men of Torpedo Squadron 8 lie nearby. All of them died in the same ocean, on the same day, within sight of each other. A coral reef in the Central Pacific holds everything that the Pacific war was, and everything it decided.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The Pacific Ocean floor \u2014 the resting place of the Midway carriers, the memorial quality of the vast deep water above them, the quiet permanence of history's most decisive naval battle. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#1A2A3D",
+        "#C9A227"
+      ],
+      "duration_sec": 56,
+      "scene_number": 53
+    },
+    {
+      "type": "analysis",
+      "title": "The Intelligence Edge \u2014 Why America Won Before the Battle",
+      "narration": "Midway is studied in every military intelligence school in the world because it demonstrates a fundamental principle: knowing your enemy's intentions is worth more than numerical equality. America's three carriers were outnumbered by Japan's four. American aircraft were technically inferior. American pilots were less experienced. But Nimitz knew when Japan was coming, from which direction, in what strength, and with what objectives. That intelligence transformed a defensive situation into an ambush. The battle demonstrated something that still shapes modern warfare: the side with better intelligence defeats the side with more ships.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Intelligence analysis and battle outcome comparison \u2014 the intelligence chain from codebreaking to combat decision, demonstrating how information transformed American inferiority into strategic advantage. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#1A2A3D"
+      ],
+      "duration_sec": 54,
+      "scene_number": 54
+    },
+    {
+      "type": "legacy",
+      "title": "Midway Today \u2014 A National Monument",
+      "narration": "The Battle of Midway was designated a National Monument in 2000. The atoll remains largely unchanged from 1942 \u2014 Laysan albatrosses still nest there in vast numbers. The runways are deteriorating. The old Pan American seaplane base is a ruin. The navy facilities are abandoned. But every June 4, ceremonies are held on Midway and in Washington remembering the pilots who didn't come back, the torpedo bomber crews who died in a hopeless attack that made a decisive attack possible, and the codebreakers in a basement in Pearl Harbor who read enough of the enemy's mail to change history.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Midway Atoll today \u2014 the albatross colony on the unchanged landscape, the deteriorating runways and navy facilities, the June 4 commemorations honoring the men who fought there. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#C9A227",
+        "#1A2A3D"
+      ],
+      "duration_sec": 54,
+      "scene_number": 55
     }
   ]
 }

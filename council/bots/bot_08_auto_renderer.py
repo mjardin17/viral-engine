@@ -14,24 +14,22 @@ from datetime import datetime
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 from council.bot_base import CouncilBot, BotResult, BASE_DIR, STATE_DIR
 
-RENDERS_DIR = BASE_DIR / "renders"
-QUEUE_PATH = STATE_DIR / "render_queue.json"
 MUSIC_PATH = BASE_DIR / "music" / "battle_epic.mp3"
 AUTO_RENDER = BASE_DIR / "auto_render.py"
 MAX_PER_RUN = 1   # render 1 episode per council run (don't hog CPU for hours)
 
 
-def _load_queue() -> list[dict]:
-    if QUEUE_PATH.exists():
+def _load_queue(queue_path: Path) -> list[dict]:
+    if queue_path.exists():
         try:
-            return json.loads(QUEUE_PATH.read_text())
+            return json.loads(queue_path.read_text())
         except Exception:
             pass
     return []
 
 
-def _save_queue(queue: list[dict]):
-    QUEUE_PATH.write_text(json.dumps(queue, indent=2))
+def _save_queue(queue: list[dict], queue_path: Path):
+    queue_path.write_text(json.dumps(queue, indent=2))
 
 
 class AutoRendererBot(CouncilBot):
@@ -42,7 +40,8 @@ class AutoRendererBot(CouncilBot):
 
     def run(self) -> BotResult:
         r = self.result
-        queue = _load_queue()
+        queue_path = self.state_dir / "render_queue.json"
+        queue = _load_queue(queue_path)
 
         pending = [q for q in queue if q.get("status") == "pending"]
         in_progress = [q for q in queue if q.get("status") == "in_progress"]
@@ -58,7 +57,7 @@ class AutoRendererBot(CouncilBot):
 
         # Check if a render finished since last run
         for q in in_progress:
-            final = RENDERS_DIR / f"{q['episode_id']}_final.mp4"
+            final = self.renders_dir / f"{q['episode_id']}_final.mp4"
             if final.exists() and final.stat().st_size > 1_000_000:
                 q["status"] = "done"
                 q["completed_at"] = datetime.now().isoformat()
@@ -92,7 +91,7 @@ class AutoRendererBot(CouncilBot):
             result = subprocess.run(cmd, timeout=7200)  # 2 hour max per episode
 
             if result.returncode == 0:
-                final = RENDERS_DIR / f"{ep_id}_final.mp4"
+                final = self.renders_dir / f"{ep_id}_final.mp4"
                 if final.exists() and final.stat().st_size > 1_000_000:
                     item["status"] = "done"
                     item["completed_at"] = datetime.now().isoformat()
@@ -105,5 +104,5 @@ class AutoRendererBot(CouncilBot):
                 item["failed_at"] = datetime.now().isoformat()
                 r.error(f"{ep_id}: render exited with code {result.returncode}")
 
-        _save_queue(queue)
+        _save_queue(queue, queue_path)
         return r

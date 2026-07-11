@@ -13,24 +13,22 @@ from datetime import datetime
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 from council.bot_base import CouncilBot, BotResult, BASE_DIR, STATE_DIR
 
-PROMPTS_DIR = BASE_DIR / "prompts"
-BACKLOG_PATH = BASE_DIR / "council" / "state" / "stub_backlog.json"
 MIN_FULL_DURATION = 600
 STUB_CRITICAL = 120
 
 
-def _load_backlog() -> dict:
-    if BACKLOG_PATH.exists():
+def _load_backlog(backlog_path: Path) -> dict:
+    if backlog_path.exists():
         try:
-            return json.loads(BACKLOG_PATH.read_text())
+            return json.loads(backlog_path.read_text())
         except Exception:
             pass
     return {}
 
 
-def _save_backlog(backlog: dict):
-    BACKLOG_PATH.parent.mkdir(parents=True, exist_ok=True)
-    BACKLOG_PATH.write_text(json.dumps(backlog, indent=2))
+def _save_backlog(backlog: dict, backlog_path: Path):
+    backlog_path.parent.mkdir(parents=True, exist_ok=True)
+    backlog_path.write_text(json.dumps(backlog, indent=2))
 
 
 class StubExpanderBot(CouncilBot):
@@ -41,12 +39,17 @@ class StubExpanderBot(CouncilBot):
 
     def run(self) -> BotResult:
         r = self.result
-        backlog = _load_backlog()
+        backlog_path = self.state_dir / "stub_backlog.json"
+        backlog = _load_backlog(backlog_path)
 
-        # Scan all scripts grouped by episode_id
+        if not self.prompts_dir.exists():
+            r.ok(f"No prompts dir yet for {self.channel_name} — nothing to scan")
+            return r
+
+        # Scan channel's scripts grouped by episode_id
         by_ep: dict[str, list] = {}
-        for p in sorted(PROMPTS_DIR.rglob("*.json")):
-            if any(part.startswith("_") for part in p.relative_to(PROMPTS_DIR).parts[:-1]):
+        for p in sorted(self.prompts_dir.rglob("*.json")):
+            if any(part.startswith("_") for part in p.relative_to(self.prompts_dir).parts[:-1]):
                 continue
             try:
                 data = json.loads(p.read_text(encoding="utf-8"))
@@ -99,7 +102,7 @@ class StubExpanderBot(CouncilBot):
             else:
                 r.warn(f"{ep_id}: still stub (backlog since {backlog[ep_id]['first_seen'][:10]})")
 
-        _save_backlog(backlog)
+        _save_backlog(backlog, backlog_path)
 
         # Summary
         total_stubs = len(stubs_without_full)

@@ -1,0 +1,16 @@
+{
+  "recommendations": [
+    {
+      "id": "rec-1783190879585-0njdu",
+      "type": "benchmark",
+      "priority": "medium",
+      "title": "Benchmark qwen2.5-coder:7b",
+      "reason": "qwen2.5-coder:7b is installed but has never been benchmarked. Benchmarks help rank your models.",
+      "action": "Go to Model Benchmark → select qwen2.5-coder:7b → Run Benchmark",
+      "targetModelId": "bench:qwen2.5-coder:7b",
+      "status": "pending",
+      "createdAt": "2026-07-04T18:47:59.585Z"
+    }
+  ],
+  "lastAnalysis": "2026-07-06T02:20:42.503Z"
+}

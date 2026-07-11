@@ -1,0 +1,547 @@
+{
+  "channel": "EO",
+  "episode_id": "EO_EP001",
+  "title": "Atlantis: The Lost Civilization Science Finally Found",
+  "scenes": [
+    {
+      "scene_number": 1,
+      "type": "intro",
+      "title": "The Question That Haunts History",
+      "narration": "In 360 BC, a Greek philosopher wrote about a civilization so advanced, so powerful, that its destruction shook the ancient world. He described its location, its architecture, its navy, and its fall — in precise detail. For two thousand years, scholars have debated whether it was myth or memory. Today, that debate may finally be over. This is Echoes of Eternity. And this is the story of Atlantis.",
+      "visual_prompt": "Ancient Greek marble temple at sunset, dramatic golden light, columns casting long shadows over the Aegean sea, cinematic wide shot",
+      "bg_colors": ["#0a0a1a", "#1a0a2e"],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 2,
+      "type": "narration",
+      "title": "A World Before Memory",
+      "narration": "Before we dive into the evidence, we need to understand something about ancient history. Most of what happened before 3000 BC is lost — not because it didn't exist, but because the recording systems we rely on hadn't been invented yet. Writing itself is only about five thousand years old. Which means every civilization that came before that threshold left almost no written record. They left ruins. They left bones. And sometimes, they left stories.",
+      "visual_prompt": "Ancient cave paintings in a dark cavern illuminated by torchlight, primitive human figures hunting mammoths, deep shadows, atmospheric",
+      "bg_colors": ["#0d0d1a", "#1a1230"],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 3,
+      "type": "narration",
+      "title": "The Man Who Started Everything",
+      "narration": "Plato was not a storyteller. He was a philosopher — one of the most rigorous and disciplined thinkers in all of human history. In two of his dialogues, Timaeus and Critias, written around 360 BC, he introduces Atlantis through the voice of his characters, tracing the account back to the Athenian statesman Solon, who allegedly received it from Egyptian priests during a visit to Sais around 590 BC. This matters. Because Plato had no reason to invent a false history.",
+      "visual_prompt": "Ancient Greek philosopher Plato writing by candlelight in a stone library, scrolls and manuscripts surrounding him, dramatic chiaroscuro lighting",
+      "bg_colors": ["#1a0f0a", "#2e1a0a"],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 4,
+      "type": "narration",
+      "title": "What Plato Actually Wrote",
+      "narration": "The account is startlingly specific. Atlantis was located, according to Plato, beyond the Pillars of Hercules — what we call the Strait of Gibraltar. It was a large island, larger than Libya and Asia Minor combined. Its capital city was built on a hill surrounded by alternating rings of water and land. It had a powerful navy, advanced agriculture, a sophisticated system of government, and massive temples clad in the metal orichalcum — a reddish alloy that ancient texts describe as second only to gold in value.",
+      "visual_prompt": "Aerial view of a circular ancient city with concentric rings of canals and walls, golden temples at center, lush ancient landscape surrounding it",
+      "bg_colors": ["#0a1020", "#102040"],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 5,
+      "type": "narration",
+      "title": "The Timeline",
+      "narration": "Plato gives us a date. He says the Atlanteans waged war against Athens and Egypt approximately nine thousand years before Solon's time — which places the conflict around 9600 BC. This is the number that has caused the most skepticism, because in 9600 BC, mainstream archaeology tells us there were no advanced civilizations on Earth. Only hunter-gatherers and early Neolithic villages. No navies. No temples. No organized states. And yet — that timeline keeps appearing in other places.",
+      "visual_prompt": "Ancient stone monoliths rising from morning mist at sunrise, silhouetted hunter-gatherer figures in the foreground, Stonehenge-like arrangement, atmospheric",
+      "bg_colors": ["#0a1518", "#102030"],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 6,
+      "type": "narration",
+      "title": "Göbekli Tepe Changes Everything",
+      "narration": "In 1994, a Kurdish shepherd in southeastern Turkey noticed something strange protruding from the hillside. Archaeologists were called. What they found upended everything. Göbekli Tepe — a massive temple complex of carved limestone pillars — was dated to approximately 9600 BC. The exact same era Plato described. This was not a small camp. This was organized, ritualistic, monumental architecture requiring hundreds of coordinated workers. Someone had the organizational capacity to build this. The question is — how widespread was that capacity?",
+      "visual_prompt": "Aerial excavation of Göbekli Tepe ancient temple complex in Turkey, massive T-shaped limestone pillars with carved animal reliefs, archaeological dig site at golden hour",
+      "bg_colors": ["#1a1000", "#2e1e00"],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 7,
+      "type": "narration",
+      "title": "The Egyptian Priests Knew",
+      "narration": "When Solon visited the Egyptian priests at Sais, according to Plato's account, they told him something remarkable. They said that the Greeks were like children compared to the Egyptians — because Greece had no continuous written tradition stretching back far enough. The priests claimed to have records going back ten thousand years. They described a catastrophe that had destroyed a great civilization and reset the world. The Egyptians, they said, remembered it. The Greeks had forgotten.",
+      "visual_prompt": "Interior of ancient Egyptian temple with towering hieroglyph-covered walls, a robed Egyptian priest showing papyrus scrolls to a Greek visitor, torchlit sacred chamber",
+      "bg_colors": ["#1a0f00", "#2a1a00"],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 8,
+      "type": "narration",
+      "title": "The Flood Stories",
+      "narration": "Here is something the history books rarely emphasize: flood myths exist in virtually every culture on Earth. The Sumerians wrote about it in the Epic of Gilgamesh — predating the Biblical flood by fifteen hundred years. The Hindus have the story of Manu. The Aztecs described four previous worlds, each destroyed by catastrophe. The Greeks had Deucalion. The Norse had Ragnarok. Indigenous cultures across Australia, the Americas, and Southeast Asia all carry traditions of a great flood that destroyed a prior world. This is not coincidence.",
+      "visual_prompt": "Dramatic biblical flood artwork, massive dark storm waves crashing over ancient stone city buildings, lightning filling the sky, cinematic apocalyptic scene",
+      "bg_colors": ["#050518", "#0a0a28"],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 9,
+      "type": "narration",
+      "title": "The Ice Age Connection",
+      "narration": "The last Ice Age ended approximately eleven thousand six hundred years ago — around 9600 BC. At its peak, sea levels were nearly four hundred feet lower than they are today. Vast landmasses that are now underwater were once dry, fertile coastal plains. When the ice sheets melted — and they melted fast, in geologic terms — the resulting sea level rise was catastrophic. Entire regions were swallowed. Coastlines were redrawn. Civilizations built on those coasts would have been erased. Not slowly. Suddenly.",
+      "visual_prompt": "Scientific illustration of Ice Age Earth with exposed continental shelves, massive glaciers covering northern continents, lowered sea levels revealing land bridges between continents",
+      "bg_colors": ["#0a1520", "#102535"],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 10,
+      "type": "narration",
+      "title": "The Meltwater Pulses",
+      "narration": "Geologists have identified events called meltwater pulses — moments when the Ice Age melting accelerated dramatically. Meltwater Pulse 1A, occurring around 14,600 years ago, raised sea levels by approximately fifteen meters in just five hundred years. Meltwater Pulse 1B, around 11,600 years ago — exactly when Plato's story is set — raised them again. These weren't slow, gradual changes. These were geological events that, to the humans living through them, would have felt like the end of the world. Because for many, it was.",
+      "visual_prompt": "Scientific visualization of rapidly rising ocean flooding coastal plains, ancient settlement being submerged, dramatic storm lighting, aerial perspective showing encroaching waters",
+      "bg_colors": ["#050a18", "#0a1530"],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 11,
+      "type": "narration",
+      "title": "Candidate One: The Azores",
+      "narration": "The most traditionally popular candidate for Atlantis is the Azores — a chain of volcanic islands in the mid-Atlantic, sitting almost exactly where Plato described, beyond the Pillars of Hercules. Nineteenth-century researcher Ignatius Donnelly made the case in his 1882 book, arguing that the Azores are the mountain peaks of a sunken continent. The mid-Atlantic Ridge runs directly beneath them — a massive geological feature where two tectonic plates meet. But here's where the theory hits a wall: the evidence simply doesn't support a sunken continent.",
+      "visual_prompt": "Dramatic aerial view of Azores volcanic islands in the Atlantic Ocean at sunset, dark ocean waters, volcanic peaks emerging from clouds, cinematic wide shot",
+      "bg_colors": ["#001520", "#003040"],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 12,
+      "type": "narration",
+      "title": "The Problem with the Azores Theory",
+      "narration": "Ocean floor mapping has been extraordinarily precise since the 1970s. We have detailed topographic maps of the Atlantic seabed. What those maps show is not a sunken continent. They show exactly what geologists expected — tectonic ridge formations, volcanic seamounts, and ocean sediment patterns consistent with millions of years of normal oceanic activity. There is no evidence of sunken temples, roads, or cities in the mid-Atlantic. If Atlantis was out there, we would have found its ruins by now. The ocean has given up its secrets. The Azores theory doesn't survive scrutiny.",
+      "visual_prompt": "Sonar mapping display showing ocean floor topography of the Atlantic Ridge, scientific research vessel on surface, underwater mountain ranges visible in blue-tinted visualization",
+      "bg_colors": ["#001828", "#002a3a"],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 13,
+      "type": "narration",
+      "title": "Candidate Two: Santorini and the Minoans",
+      "narration": "The second and more scientifically compelling candidate is Santorini — or more precisely, the Bronze Age civilization it hosted. Around 1600 BC, one of the largest volcanic eruptions in recorded history destroyed the island of Thera, which we now call Santorini. The eruption was so powerful that it sent a tsunami racing across the Mediterranean. And the civilization closest to ground zero — the Minoans — never fully recovered. Their palace at Akrotiri, buried under volcanic ash, was discovered in 1967 and is remarkably well preserved. It is stunning.",
+      "visual_prompt": "Archaeological ruins of ancient Minoan civilization of Akrotiri preserved under volcanic ash, excavated frescoes and pottery visible, dramatic volcanic landscape of Santorini in background",
+      "bg_colors": ["#1a0808", "#2e1010"],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 14,
+      "type": "narration",
+      "title": "The Minoan Civilization",
+      "narration": "The Minoans were extraordinary. Operating from their base on Crete and the surrounding Aegean islands, they built the first palace-based civilization in Europe. Their palace at Knossos had running water and sewage systems. Their art featured vivid frescoes of acrobats leaping over bulls, women dressed in sophisticated fashion, dolphins painted on palace walls. They were seafarers who dominated Mediterranean trade. They were, in every meaningful sense, advanced. And their sudden decline around 1450 BC remains one of archaeology's great puzzles.",
+      "visual_prompt": "Reconstructed ancient Minoan palace of Knossos interior with vivid colorful frescoes of bull leaping ceremonies, painted columns, sophisticated Bronze Age architecture bathed in warm light",
+      "bg_colors": ["#1a0f00", "#2e1800"],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 15,
+      "type": "narration",
+      "title": "The Santorini Eruption",
+      "narration": "The Thera eruption ejected an estimated one hundred cubic kilometers of material into the atmosphere. It triggered a tsunami estimated at one hundred fifty meters high that struck the northern coast of Crete. Ash fall would have destroyed crops across the region. The seismic activity would have devastated coastal settlements. Archaeologists have found destruction layers at Minoan sites dating to this period. But here is the complicating factor: the eruption at Thera occurred around 1600 BC. Plato's Atlantis sank around 9600 BC. That's a difference of eight thousand years.",
+      "visual_prompt": "Dramatic artistic reconstruction of the ancient Thera volcanic eruption, massive pyroclastic column rising over ancient Aegean sea, dark ash clouds filling the sky, ships fleeing in foreground",
+      "bg_colors": ["#200a00", "#380f00"],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 16,
+      "type": "narration",
+      "title": "The Thousand-Year Error",
+      "narration": "Some researchers have proposed a solution to this timeline problem that is both elegant and troubling. What if Plato's source — the Egyptian priests — made an error in translation? Specifically: what if they confused the Egyptian symbol for one hundred with the symbol for one thousand? If you divide Plato's nine thousand years by ten, you get nine hundred years — which places the destruction of Atlantis around 1500 BC. That's within decades of the Thera eruption. And it transforms the Minoan theory from mythology into plausibility.",
+      "visual_prompt": "Close-up of ancient Egyptian hieroglyphic inscriptions on stone wall showing numerical symbols and dynasty records, torchlit interior, scholarly hands pointing to specific glyphs",
+      "bg_colors": ["#1a1000", "#2e1a00"],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 17,
+      "type": "narration",
+      "title": "The Geographic Problem",
+      "narration": "But the Santorini theory has its own fatal flaw: geography. Santorini is inside the Mediterranean. Plato explicitly places Atlantis outside the Pillars of Hercules — in the Atlantic Ocean. This isn't a small discrepancy. It's a foundational one. Proponents of the Santorini theory argue that Plato's account was distorted over centuries of retelling. But that requires dismissing one of the most specific geographical details in the entire account. For many scholars, that's too much to accept. Which brings us to the third candidate. The one that fits the geography. The one they found underwater.",
+      "visual_prompt": "Satellite map view showing the Strait of Gibraltar and Mediterranean Sea, golden light highlighting the narrow passage between Europe and Africa, dramatic aerial perspective",
+      "bg_colors": ["#000f1a", "#001828"],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 18,
+      "type": "narration",
+      "title": "Candidate Three: The Spartel Bank",
+      "narration": "In 2001, a French geologist named Marc-André Gutscher published a paper in the journal Geology that sent shockwaves through the academic community. Using seismic mapping data, he identified a sunken plateau in the Atlantic Ocean just outside the Strait of Gibraltar — exactly where Plato said Atlantis would be. The feature is called the Spartel Bank. It lies approximately sixty meters underwater. And it was dry land. Until approximately eleven thousand years ago.",
+      "visual_prompt": "Underwater sonar image of submerged plateau formations outside the Strait of Gibraltar, blue-tinted oceanic visualization showing shallow bank structures beneath the Atlantic, research data overlays",
+      "bg_colors": ["#000818", "#001025"],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 19,
+      "type": "narration",
+      "title": "The Spartel Bank in Detail",
+      "narration": "The Spartel Bank is a shallow area of seafloor about fourteen kilometers wide and roughly one hundred forty kilometers long — large enough to have supported a significant civilization. At the end of the last Ice Age, when sea levels rose, this entire plateau would have been submerged. The flooding would have been sudden by human standards — occurring over decades or centuries, not millennia. Any coastal civilization occupying that plateau would have been forced to retreat, and eventually swallowed. The timing matches Plato. The location matches Plato. The geological mechanism matches Plato.",
+      "visual_prompt": "Dramatic 3D geological cross-section visualization showing the Spartel Bank plateau submerging as sea levels rise at end of Ice Age, dramatic lighting, scientific illustration style",
+      "bg_colors": ["#001020", "#001a30"],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 20,
+      "type": "narration",
+      "title": "The Archaeological Evidence",
+      "narration": "In 2015, a team of underwater archaeologists announced findings from the seafloor near the Spartel Bank. They recovered fragments of pottery, stone tools, and evidence of fire — all dating to the Neolithic period, consistent with the timeline of human occupation before the flooding. The findings were not spectacular — no golden temples, no orichalcum. But they confirmed what the geology suggested: people lived there. And then the sea came. Whether those people were sophisticated enough to match Plato's description remains the central question.",
+      "visual_prompt": "Underwater archaeologists in diving gear examining ancient pottery fragments and stone tools on sandy ocean floor, underwater lighting, bubbles rising, careful excavation scene",
+      "bg_colors": ["#000a15", "#001522"],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 21,
+      "type": "narration",
+      "title": "The Orichalcum Mystery",
+      "narration": "One of the most evocative details in Plato's account is orichalcum — the gleaming metal that covered Atlantis's inner walls. For centuries, scholars assumed it was fictional. Then in 2015, marine archaeologists recovered thirty-nine metal ingots from a two-thousand-five-hundred-year-old shipwreck off the coast of Sicily. Analysis revealed they were made of an unusual zinc-copper alloy — almost exactly matching ancient descriptions of orichalcum. The metal was real. The trade in it was real. And the ship carrying it was heading west — toward the area beyond the Pillars of Hercules.",
+      "visual_prompt": "Close-up of recovered ancient metal ingots covered in sea growth being lifted from ocean floor by robotic arms, Sicilian waters, underwater excavation, scientific documentation",
+      "bg_colors": ["#1a1000", "#281800"],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 22,
+      "type": "narration",
+      "title": "The Concentric Rings",
+      "narration": "Plato describes Atlantis's capital city as built on a hill surrounded by alternating rings of land and water — three rings of sea and two of land, all precisely engineered. For centuries, this was dismissed as literary embellishment. But then geologists began documenting a geological structure in the Sahara Desert of Mauritania that stopped researchers cold. The Richat Structure — also called the Eye of the Sahara — is a massive formation of concentric rings, each separated by precise intervals, measuring roughly forty kilometers across. It is enormous. It is unmistakable. And it matches Plato's description ring for ring.",
+      "visual_prompt": "Aerial satellite photograph of the Eye of Sahara - Richat Structure in Mauritania desert, massive concentric circular rings of rock formation visible from above, dramatic desert landscape",
+      "bg_colors": ["#1a0f00", "#2a1800"],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 23,
+      "type": "narration",
+      "title": "The Eye of the Sahara",
+      "narration": "The Richat Structure was first photographed by astronauts on the Gemini IV mission in 1965. Geologists initially classified it as a meteorite impact crater. Later analysis showed it was an eroded geological dome — layers of ancient rock pushed upward and then worn down by millions of years of erosion. But here is what makes Atlantis researchers excited: during the last Ice Age, sea levels were low enough that the Atlantic shoreline extended much farther inland. Parts of what is now the Sahara were coastal lowlands. The Richat Structure, in that world, would have been accessible from the sea.",
+      "visual_prompt": "NASA satellite image of the Richat Structure Eye of Sahara in Mauritania showing perfect concentric geological rings from space, Saharan desert surroundings, precise circular formations",
+      "bg_colors": ["#1a0800", "#2e1000"],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 24,
+      "type": "narration",
+      "title": "The Scale Problem",
+      "narration": "Every theory about Atlantis runs into the same fundamental problem: scale. Plato says the city was enormous — the central plain alone was three thousand stades by two thousand stades, roughly five hundred fifty kilometers by three hundred seventy kilometers. That's larger than Portugal. No known Bronze Age civilization occupied anything approaching that scale. Either Plato's numbers were exaggerated in the retelling, or they were encoded in units that we are misreading, or Atlantis was something genuinely unlike anything else in the ancient world. None of those options are comfortable.",
+      "visual_prompt": "Comparison graphic showing ancient city scale versus modern European country size, cartographic ancient map style, dramatic golden tones, illustrated measurement overlay",
+      "bg_colors": ["#0a0a1a", "#15153a"],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 25,
+      "type": "narration",
+      "title": "The Volcanic Hypothesis",
+      "narration": "One of the more recent geological theories combines several lines of evidence into a compelling unified hypothesis. Multiple researchers have proposed that the destruction of Atlantis was not a single catastrophic flood but a combination of events: rising sea levels from Ice Age melt, compounded by a volcanic or seismic event that accelerated coastal collapse, combined with a tsunami that struck the surviving populations. This combination — happening over decades rather than a single day — would explain why the story survived in oral tradition. It was catastrophic enough to remember, long enough to witness, and survivors would have carried the memory across generations.",
+      "visual_prompt": "Dramatic composite artwork showing ancient coastal civilization being struck simultaneously by earthquake ground fissures, rising floodwaters, and volcanic ash clouds in the distance",
+      "bg_colors": ["#1a0500", "#2e0800"],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 26,
+      "type": "narration",
+      "title": "The Survivors",
+      "narration": "Whatever destroyed Atlantis, some people survived. They had to. Otherwise, how did the story reach Egypt? How did it survive four thousand years to reach Solon? The refugees from a destroyed coastal civilization would have migrated — to Egypt, to Mesopotamia, to the Aegean. Some researchers argue that this migration is precisely what seeded the earliest river valley civilizations. That the knowledge and organizational capacity of this destroyed culture was carried inward — and planted the seeds for everything that followed. Sumer. Egypt. The Indus Valley. All emerging with unusual sophistication, seemingly from nowhere, around the same period.",
+      "visual_prompt": "Ancient refugees on wooden boats crossing rough seas at dawn, dark storm clouds behind them, a distant burning coastline reflected in the water, desperate ancient migration scene",
+      "bg_colors": ["#050518", "#0a0a2a"],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 27,
+      "type": "narration",
+      "title": "The Knowledge Transfer Theory",
+      "narration": "This brings us to one of the most controversial and compelling ideas in alternative archaeology: the knowledge transfer hypothesis. Mainstream history treats the emergence of civilization as an independent process — Sumer develops writing, Egypt develops architecture, the Indus Valley develops urban planning — all separately, all roughly simultaneously. But what if they weren't independent? What if a single earlier culture, destroyed by the sea, had survivors who carried technical knowledge to multiple sites simultaneously? The similarities between early Egyptian and Sumerian iconography, building techniques, and even writing systems have puzzled scholars for over a century.",
+      "visual_prompt": "Side-by-side comparison of ancient Egyptian pyramid and Mesopotamian ziggurat construction, ancient workers using similar techniques, artistic reconstruction, dramatic lighting",
+      "bg_colors": ["#1a1000", "#2a1a00"],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 28,
+      "type": "narration",
+      "title": "What the Mainstream Says",
+      "narration": "It's important to be honest here. The mainstream archaeological consensus is clear: there is insufficient evidence for an advanced civilization predating Sumer and Egypt. The alternative theories — the Spartel Bank, the Richat Structure, the knowledge transfer hypothesis — are not accepted in peer-reviewed archaeology. They are speculative. The burden of proof is high, and the physical evidence is thin. This does not mean these theories are wrong. It means they have not yet been proven. And in the absence of proof, legitimate scholars remain cautious. As they should be.",
+      "visual_prompt": "University archaeology professor examining ancient artifact in laboratory setting, bookshelves of academic texts, careful scholarly analysis under bright laboratory lighting",
+      "bg_colors": ["#0a0f15", "#101820"],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 29,
+      "type": "narration",
+      "title": "But Science Keeps Finding Surprises",
+      "narration": "And yet. In 1994, Göbekli Tepe proved that organized monumental architecture existed twelve thousand years ago — two thousand years before the consensus said it was possible. In 2017, the Trinil site in Java produced evidence of geometric engravings made by Homo erectus five hundred thousand years ago. In 2021, the submerged cities off the coast of India — Dwarka — were confirmed to predate the current shoreline by thousands of years. History keeps revising itself. The story of the past is still being written. And Atlantis keeps appearing at the edges of the frame.",
+      "visual_prompt": "Montage of real archaeological discoveries - Gobekli Tepe excavation, underwater ruins, ancient engravings on stone, each revealed by dramatic lighting showing recent surprising discoveries",
+      "bg_colors": ["#0a1520", "#102030"],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 30,
+      "type": "narration",
+      "title": "The Weapons of Atlantis",
+      "narration": "Plato describes the Atlanteans as a military power that threatened to conquer the entire Mediterranean world. They had a navy of twelve hundred ships and six hundred thousand soldiers. These numbers are almost certainly exaggerated — as ancient military figures routinely were. But the military ambition they describe is consistent with what we know of Bronze Age maritime powers. The Sea Peoples, who terrorized the eastern Mediterranean around 1200 BC and brought down the Hittite Empire, the Egyptian New Kingdom, and a dozen other states simultaneously, remain unidentified to this day. Some researchers have suggested they were the remnant fleet of a destroyed Atlantic civilization.",
+      "visual_prompt": "Epic ancient naval battle scene with bronze-age warships in the Mediterranean Sea, fire and smoke, warriors in ancient armor, dramatic cinematic battle reconstruction artwork",
+      "bg_colors": ["#1a0800", "#2e1000"],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 31,
+      "type": "narration",
+      "title": "The Sea Peoples Connection",
+      "narration": "The Bronze Age Collapse of 1200 BC is one of history's great mysteries. Within a period of roughly fifty years, virtually every advanced civilization in the eastern Mediterranean collapsed simultaneously. The Hittites vanished. Mycenae fell. Cyprus was devastated. Egypt barely survived. The cause has been debated for decades — drought, invasion, systems collapse, plague. The Sea Peoples appear in Egyptian records as the primary catalyst, but their origin is unknown. Egyptian inscriptions describe them as coming from islands in the sea, speaking unknown languages, with weapons of iron — a technology the Bronze Age world had barely encountered. They came from somewhere.",
+      "visual_prompt": "Ancient Egyptian temple wall relief carvings showing battle against Sea Peoples, hieroglyphic inscriptions, foreign warriors in distinctive helmets fighting Egyptian soldiers, dramatic stone relief artistry",
+      "bg_colors": ["#1a1000", "#281800"],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 32,
+      "type": "narration",
+      "title": "The Rings of Power",
+      "narration": "Plato describes the government of Atlantis in detail that feels almost modern. Ten kings ruled the ten divisions of the empire — all descended from the god Poseidon and his mortal wife Cleito. Every five years they gathered in the central temple for a ceremony involving the hunting and sacrifice of a bull without iron weapons — only wood, stone, and bronze. After the ceremony, they drank the bull's blood mixed with wine, reaffirmed their oaths to the laws inscribed on the golden pillar, and judged any crimes committed among themselves. This is not the description of a myth. This is a constitutional arrangement.",
+      "visual_prompt": "Ancient throne room with ten ornate stone thrones arranged in semicircle, golden orichalcum pillars with inscribed laws, ceremonial fire at center, atmospheric torchlight",
+      "bg_colors": ["#1a0f00", "#2a1800"],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 33,
+      "type": "narration",
+      "title": "The Corruption of Atlantis",
+      "narration": "But Plato doesn't just describe Atlantis's power. He describes its fall from within. The Atlanteans, he writes, were originally noble and spiritually pure, their divine nature keeping their ambitions in check. But as the divine blood became diluted over generations, human nature took over. Greed, pride, and the lust for conquest corrupted them. They became oppressive. They reached beyond their domain. And when they moved to conquer Athens and Egypt, the gods decided they had gone too far. Zeus called a council. And Atlantis was condemned. Within a single day and night, it sank beneath the waves.",
+      "visual_prompt": "Dramatic fantasy artwork of Zeus and Greek gods in council among storm clouds, lightning illuminating divine figures, ominous dark seas below, godly judgment scene",
+      "bg_colors": ["#0a0520", "#100a38"],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 34,
+      "type": "narration",
+      "title": "What Athens Did",
+      "narration": "Before the destruction, Plato says, ancient Athens stood alone against the Atlantean invasion. This proto-Athens — existing nine thousand years before the historical Athens — defeated the greatest military power in the world through virtue, courage, and unity. This is where many scholars believe the real purpose of Plato's story lies: not as a historical record, but as a political allegory. Plato was writing at a time when Athens had declined from its golden age. The story of ancient Athens defeating Atlantis was his idealized vision of what a just society could achieve. But allegories can be built on real events.",
+      "visual_prompt": "Heroic ancient Athenian warriors in bronze armor defending a rocky citadel against overwhelming naval forces, dramatic battle scene at dawn, Acropolis-like structure in background",
+      "bg_colors": ["#0a1020", "#102040"],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 35,
+      "type": "narration",
+      "title": "The Day It Sank",
+      "narration": "A civilization going under in a single day and night sounds impossible. But it isn't. In 1883, when the volcanic island of Krakatoa erupted, it triggered tsunamis that killed over thirty-six thousand people within hours. In 2004, the Indian Ocean tsunami devastated coastlines across eleven countries in a single morning. In 365 AD, a massive earthquake off the coast of Crete generated a tsunami that struck Alexandria, Egypt, killing fifty thousand people and carrying ships two miles inland. These events happened within living memory. For ancient people, they would have felt exactly like what Plato described: the world ending in a single day.",
+      "visual_prompt": "Artistic reconstruction of ancient coastal city being struck by massive tsunami wave, buildings crumbling, panicking ancient citizens fleeing to high ground, apocalyptic scene",
+      "bg_colors": ["#050518", "#0a0a28"],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 36,
+      "type": "narration",
+      "title": "The Legend Travels",
+      "narration": "After the destruction, whoever survived carried the story. Oral traditions are remarkably stable over millennia when the events are traumatic enough. Indigenous Australians have been found to preserve geological memories of sea level changes dating back seven thousand years through their Dreamtime stories. Coastal flooding events in the Americas are encoded in Native American oral traditions matching events from ten thousand years ago. The human brain is exquisitely designed to remember catastrophe. A civilization that watched its homeland swallow itself beneath the ocean would not forget. They would tell the story forever.",
+      "visual_prompt": "Ancient tribal elder telling story to group of people around a large fire at night, animated gestures describing catastrophic event, dark forest surrounding, firelight on intent faces",
+      "bg_colors": ["#0a0800", "#1a1200"],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 37,
+      "type": "narration",
+      "title": "The Egyptian Archive",
+      "narration": "When the story reached Egypt, it entered the most stable archival tradition in the ancient world. Egyptian priests were renowned for their meticulous record-keeping. The temples at Karnak contain inscriptions stretching back three thousand five hundred years without interruption. When Solon visited Sais around 590 BC, the priests reportedly showed him records going back much further — written in hieroglyphs, not the Greek alphabet, which Solon could not read. He had to rely on their translation. How much was lost in that translation? How much was already lost in the centuries of Egyptian record-keeping before Solon arrived?",
+      "visual_prompt": "Interior of ancient Egyptian temple archive at Karnak with walls covered in carved hieroglyphic inscriptions, papyrus scrolls in clay jars, torchlit sacred library atmosphere",
+      "bg_colors": ["#1a1000", "#2a1800"],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 38,
+      "type": "narration",
+      "title": "What Modern Technology Reveals",
+      "narration": "In the twenty-first century, we have tools that previous centuries could not imagine. Satellite-based LIDAR scanning can penetrate rainforest canopy to map ancient cities below. Ground-penetrating radar reveals structures beneath sand and soil without excavation. Deep-sea submersibles can access ocean floors that were unreachable even thirty years ago. Multibeam sonar maps seafloor terrain to centimeter precision. In the last twenty years, these technologies have revealed more lost cities than the entire previous history of archaeology combined. Cambodia, Mexico, Turkey, Egypt — hidden sites emerging from underneath our feet. The ocean floor has barely been explored.",
+      "visual_prompt": "Modern research submersible with bright LED lights exploring dark ocean floor, sediment billowing, high-tech equipment panels glowing, vast unexplored seafloor stretching into darkness",
+      "bg_colors": ["#000818", "#001020"],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 39,
+      "type": "narration",
+      "title": "What Remains Undiscovered",
+      "narration": "Consider this: less than twenty percent of the world's ocean floor has been mapped in high resolution. Eighty percent of the seafloor — including the continental shelves where Ice Age populations once lived — remains largely uncharted. The shallow coastal shelves, where any Ice Age civilization would most likely have built, are the areas we have explored least, because they are both too deep for conventional diving and too shallow for deep-sea submersibles. We have better maps of the surface of Mars than we do of our own seafloor. Atlantis, if it exists, is most likely hiding in the gap between our instruments.",
+      "visual_prompt": "Split comparison image showing high-resolution Mars surface map versus low-resolution blurry Earth ocean floor map, scientific data visualization, contrast between explored and unexplored",
+      "bg_colors": ["#0a0a18", "#151530"],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 40,
+      "type": "narration",
+      "title": "The Plato Question Revisited",
+      "narration": "We return, inevitably, to Plato. The central debate is whether he was reporting history or creating allegory. The honest answer is: probably both. Ancient writers did not separate these categories the way we do. Homer's Iliad describes the fall of Troy — long dismissed as myth, now confirmed by archaeology as a historical event, though embellished. Herodotus wrote the first true history, but mixed documented events with legends and hearsay without distinguishing between them. Ancient texts require a different kind of reading: not literal belief, not outright dismissal, but careful excavation of the real event beneath the mythological overlay.",
+      "visual_prompt": "Ancient Greek scholar Plato writing at a marble desk in the Academy of Athens, scrolls spread before him, afternoon sunlight through columns, deep in philosophical concentration",
+      "bg_colors": ["#1a1000", "#282000"],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 41,
+      "type": "narration",
+      "title": "The Real Architecture of Memory",
+      "narration": "Every civilization that has ever been destroyed left traces. Troy left ruins on a Turkish hillside. Pompeii left a city under volcanic ash. Mohenjo-daro left planned streets and granaries in the Indus plain. The Anasazi left cliff dwellings in Colorado. Even civilizations we have not yet named left their traces in the geological record, in genetic markers, in oral tradition, and in the foundations of the civilizations that came after. If Atlantis was real, it left traces too. We just haven't found them yet. Or rather — we haven't recognized them.",
+      "visual_prompt": "Archaeological ruins of multiple ancient civilizations montage - Troy ruins, Pompeii preserved streets, Mohenjo-daro grid city, all shown in dramatic atmospheric lighting",
+      "bg_colors": ["#0f0a00", "#1e1400"],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 42,
+      "type": "narration",
+      "title": "The Atlantic Anomalies",
+      "narration": "Ocean surveys of the Atlantic have identified a number of anomalies that mainstream science cannot fully explain. Freshwater springs have been found bubbling up from the Atlantic seafloor off the coast of Florida — in water that is too deep and too far offshore for typical freshwater sources. These springs are fed by ancient aquifers that would have been land during the Ice Age. Off the coast of Cuba, sonar imaging in 2001 revealed what appeared to be a grid of geometrically regular structures at depths of six hundred to seven hundred fifty meters. The Cuban government investigated. And then went quiet.",
+      "visual_prompt": "Deep sea sonar image showing geometrically regular underwater formations off Cuban coast, grid-like structures visible in blue-tinted sonar visualization, research vessel on surface above",
+      "bg_colors": ["#000a15", "#001525"],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 43,
+      "type": "narration",
+      "title": "The Cuba Underwater Discovery",
+      "narration": "The Cuban anomaly was investigated by Canadian company Advanced Digital Communications, working with the Cuban government on a pipeline survey. Their sonar picked up what appeared to be symmetrically arranged stone structures — cylinders, pyramids, and blocks — spread across several square kilometers at a depth far below normal wave action. Marine geologist Manuel Iturralde from the Cuban Natural History Museum examined the data and said the structures were intriguing but puzzling, noting that their depth suggested they would have been on the surface approximately fifty thousand years ago — far earlier than any human civilization. The site has never been fully excavated.",
+      "visual_prompt": "Marine geologist analyzing sonar data on large computer screen showing geometric underwater formations, Cuban research facility, detailed technical oceanographic equipment surrounding",
+      "bg_colors": ["#000f1a", "#001a2e"],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 44,
+      "type": "narration",
+      "title": "The Bimini Road",
+      "narration": "Off the coast of North Bimini in the Bahamas lies another disputed feature. The Bimini Road — or Bimini Wall — is a formation of large, flat, rectangular limestone blocks arranged in a curved line for approximately half a mile on the seafloor in shallow water. Discovered by divers in 1968, it sparked immediate speculation. Mainstream geologists classify it as a natural beachrock formation — limestone that forms naturally in flat, rectangular patterns as it hardens and fractures. Critics point to aspects of the stone arrangement that look deliberately placed. The debate has never been fully resolved. The blocks sit there, mute and ambiguous.",
+      "visual_prompt": "Underwater photograph of the Bimini Road limestone formation, large rectangular stone blocks arranged in a curved line on the seafloor, clear Caribbean water, sunlight filtering from above",
+      "bg_colors": ["#001520", "#002535"],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 45,
+      "type": "narration",
+      "title": "Genetic Echoes",
+      "narration": "One of the most unexpected sources of evidence for a pre-Flood civilization comes from human genetics. Ancient DNA studies have revealed that there were populations in pre-historic Europe and the Americas that cannot be fully explained by known migration patterns. The Ancient North Eurasian lineage, the Ancient Beringian people, and various ghost populations in the Amazon rainforest all point to the existence of human groups that moved, diversified, and then largely vanished — leaving only their genes in the populations that survived. Genetics tells us there were people in places we didn't expect, at times we thought impossible.",
+      "visual_prompt": "Scientific DNA helix visualization overlaid on world map showing ancient human migration arrows, glowing genetic markers, modern genetic laboratory equipment in background",
+      "bg_colors": ["#0a1520", "#102535"],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 46,
+      "type": "narration",
+      "title": "The Younger Dryas Impact",
+      "narration": "And then there is the Younger Dryas Impact hypothesis — one of the most controversial theories in recent science. Published in 2007 and updated multiple times since, it proposes that approximately twelve thousand eight hundred years ago, a comet or asteroid airburst over the North American ice sheet triggered a catastrophic cooling event, massive wildfires, and a dramatic sea level drop followed by rapid rise. Evidence for this impact — platinum deposits, nanodiamonds, magnetic spherules, and impact glass — has been found at over fifty sites across four continents. If real, this event would have been catastrophic for any coastal civilization that existed at the time.",
+      "visual_prompt": "Scientific artistic rendering of asteroid airburst over ancient ice sheet causing massive firestorm, mushroom cloud of debris, ice sheet cracking, vast landscape destruction visualization",
+      "bg_colors": ["#1a0500", "#2e0800"],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 47,
+      "type": "narration",
+      "title": "The Convergence",
+      "narration": "Here is what all the evidence, taken together, suggests. Around eleven thousand to twelve thousand years ago, the world was genuinely catastrophic. The ice was melting rapidly. Sea levels were rising. A possible cosmic impact event may have accelerated everything. Enormous areas of previously inhabited coastal land were being swallowed by the sea. Whatever civilization existed in those coastal zones — whether modest or advanced — would have been obliterated. Their survivors would have fled inland, carrying their memories, their skills, and their stories. And in the warm river valleys of the Middle East and North Africa, they would have met and merged with the indigenous populations. And civilization — the version we know — began.",
+      "visual_prompt": "Sweeping cinematic panorama of ancient world at the end of Ice Age, glaciers melting into rising seas, forests growing over once-frozen plains, dawn light over a world reborn",
+      "bg_colors": ["#0a1020", "#152040"],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 48,
+      "type": "narration",
+      "title": "The Philosopher's Warning",
+      "narration": "Whether or not Plato's Atlantis was a real place, his story contains something that transcends the historical debate. The Atlanteans, he writes, were destroyed not by nature alone, but by their own moral corruption. They had everything — technology, wealth, military power, geographic advantage — and they squandered it. They reached beyond their natural domain. They became slaves to their own ambition. And the gods — or nature, or fate, or karma — responded. Plato wrote this in 360 BC. It has felt relevant in every century since. That may be the real reason the story has survived.",
+      "visual_prompt": "Dramatic artistic rendering of the final destruction of Atlantis, ornate golden city with orichalcum temples being swallowed by dark ocean waves at night, lightning and chaos",
+      "bg_colors": ["#0a0520", "#150a38"],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 49,
+      "type": "narration",
+      "title": "Why We Keep Looking",
+      "narration": "The search for Atlantis is, at its core, a search for our own origins. Not just the origins of a specific culture, but the origins of civilization itself — the moment when human beings organized themselves, built things that lasted, recorded things worth remembering, and created systems of knowledge and governance sophisticated enough to pass on. We look for Atlantis because somewhere in our collective memory, we suspect there is more to our history than the official version allows. We sense that the human story is older, deeper, and stranger than the textbooks suggest. And every time we find a Göbekli Tepe or a submerged ruin, that suspicion is confirmed.",
+      "visual_prompt": "Modern underwater exploration submersible's front camera view approaching mysterious dark underwater ruins emerging from sea floor sediment, dramatic discovery moment, lights illuminating ancient stones",
+      "bg_colors": ["#000a18", "#001525"],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 50,
+      "type": "narration",
+      "title": "The Modern Echo — Civilizations at the Edge",
+      "narration": "And now — the Modern Echo. Because Atlantis is not just ancient history. It is a warning that is actively playing out right now. The Intergovernmental Panel on Climate Change projects that sea levels will rise between half a meter and one meter by 2100 — and potentially far more if ice sheet collapse accelerates. The World Bank estimates that over one hundred forty three million people could be displaced by climate impacts by 2050. Entire island nations — Tuvalu, Kiribati, the Maldives — are making international legal arrangements for the eventual disappearance of their territory beneath the sea. History is not repeating. It is continuing.",
+      "visual_prompt": "Aerial photograph of low-lying Pacific island nation showing its proximity to the rising ocean, turquoise water surrounding green land barely above sea level, modern climate crisis visualization",
+      "bg_colors": ["#001520", "#002535"],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 51,
+      "type": "narration",
+      "title": "The Modern Echo — What We Build at the Water's Edge",
+      "narration": "We have built our civilization at the water's edge. Miami Beach spends one hundred million dollars per year pumping seawater off its streets. Jakarta, home to thirty million people, is sinking into the Java Sea at a rate of twenty-five centimeters per year — so fast that Indonesia is moving its capital. New Orleans sits below sea level and was catastrophically flooded in 2005. Amsterdam is protected by flood barriers that engineers freely admit are temporary. The Netherlands has a saying: God made the world, but the Dutch made Holland. And the sea is making plans to take it back.",
+      "visual_prompt": "Dramatic aerial view of Miami Beach streets with water pumping infrastructure visible, flood barriers, modern high-rise buildings surrounded by encroaching sea water, climate vulnerability",
+      "bg_colors": ["#001825", "#002e3d"],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 52,
+      "type": "narration",
+      "title": "The Modern Echo — The Moral Dimension",
+      "narration": "Plato's Atlanteans were not destroyed by an earthquake. They were destroyed by their own hubris — by the belief that their technological power and military strength exempted them from the natural order. They could build anything. They could conquer anything. And so they forgot to ask whether they should. The civilization we have built in the last two hundred years has extracted, burned, and discarded more than all previous human civilization combined. We are the most powerful species this planet has ever produced. The question Plato asked of the Atlanteans, he is now asking of us: are we powerful enough to be wise?",
+      "visual_prompt": "Powerful environmental split image - half showing thriving industrial civilization with factories and cities, half showing consequences including floods, fires, and dying coral reefs",
+      "bg_colors": ["#0a0f00", "#151800"],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 53,
+      "type": "narration",
+      "title": "The Modern Echo — What We Will Leave Behind",
+      "narration": "Archaeologists in the future — if there are archaeologists in the future — will excavate our era with a mix of wonder and horror. They will find the geological layer we are creating: a thin band of plastic, radioactive isotopes from nuclear testing, and fossilized chicken bones, spanning the entire globe simultaneously. They will see, in the rock record, the mass extinction event currently underway. And they will find our coastal cities, our airports, and our power plants, slowly sinking under the sea. Whether they will know our names is uncertain. Whether they will recognize our story — that is something we should be asking ourselves right now.",
+      "visual_prompt": "Futuristic underwater archaeology scene showing submerged skyscrapers of a modern city covered in coral and sea life, gentle ocean currents moving through office windows, haunting beauty",
+      "bg_colors": ["#001020", "#001838"],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 54,
+      "type": "narration",
+      "title": "The Modern Echo — The Choice",
+      "narration": "Every civilization that has ever existed made choices. The Minoans chose to build on a volcanic island. The Sumerians chose to build on a floodplain. The Atlanteans, if they existed, chose to ignore the warning signs of divine displeasure — which, stripped of the mythological language, means they chose to ignore the signals of environmental instability. We are not helpless. We are not cursed. We are not fated to repeat the story of every civilization that sank beneath the waves. But repeating it is the default. Not repeating it requires a choice. That is the lesson Plato encoded in the story of Atlantis. Two thousand, three hundred and eighty-four years ago.",
+      "visual_prompt": "Hopeful sunrise over modern sustainable city with solar panels and green architecture, clean energy windmills on hills, healthy forests and clean rivers, humanity choosing a different path",
+      "bg_colors": ["#1a1000", "#2a2000"],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 55,
+      "type": "narration",
+      "title": "What We Know for Certain",
+      "narration": "Let us be precise about what we actually know. We know that around twelve thousand years ago, global sea levels rose dramatically due to Ice Age melt. We know that vast areas of coastal land were submerged — land that had been inhabited by humans for tens of thousands of years. We know that Göbekli Tepe proves organized, monumental human activity existed twelve thousand years ago. We know that virtually every culture on Earth has a flood memory. We know that Plato described a specific, detailed geography for a powerful civilization that sank beneath the sea in a specific time frame. And we know that the location he described contains a submerged plateau that fits his account.",
+      "visual_prompt": "Scientific data visualization showing sea level rise graphs, Gobekli Tepe photographs, geological cross-sections, all arranged as evidence board with connecting threads, scholarly documentation",
+      "bg_colors": ["#0a1020", "#152035"],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 56,
+      "type": "narration",
+      "title": "What We Do Not Know",
+      "narration": "And we must be equally precise about what we do not know. We do not know if the civilization that may have existed on the Spartel Bank, or at the Richat Structure, or anywhere else in the prehistoric Atlantic was sophisticated enough to match Plato's description. We do not know if the Egyptian records Solon accessed were historical or legendary. We do not know if the translation and retelling process distorted the original account beyond recovery. We do not know where the ruins are — or if any ruins remain accessible. The truth of Atlantis lives in that gap between what we know and what we don't. It is an honest gap. And it is worth keeping open.",
+      "visual_prompt": "Empty ocean horizon at dawn, calm water stretching to infinity, a single ancient stone fragment half-submerged at the edge of the frame, representing mystery and unknown history",
+      "bg_colors": ["#050a15", "#0a1525"],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 57,
+      "type": "narration",
+      "title": "The Search Continues",
+      "narration": "As of 2024, multiple teams of researchers are actively investigating Atlantis-related sites. Spanish archaeologists are conducting underwater surveys off the coast of Morocco near the Spartel Bank. The Cuban underwater anomaly remains formally uninvestigated, pending better submersible access. Independent researchers continue to study the Richat Structure using satellite imagery and ground surveys. New LiDAR mapping of the ocean floor around the Azores is revealing previously unknown geological formations. The search has never been more scientifically rigorous. And the technologies that can resolve the question have never been more powerful. We are getting closer.",
+      "visual_prompt": "Montage of modern Atlantis research - Spanish marine archaeologists on research vessel, satellite imagery analysis on screens, drone footage of Mauritanian desert, scientific expedition preparation",
+      "bg_colors": ["#0a1520", "#102535"],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 58,
+      "type": "narration",
+      "title": "The Stories That Shaped Us",
+      "narration": "Whether Atlantis was real or allegorical, it has shaped us. The story has inspired countless searches, countless theories, countless works of art and literature. It gave Jules Verne the setting for Twenty Thousand Leagues Under the Sea. It gave Tolkien one of his primary mythological templates. It gave Francis Bacon the model for his utopian New Atlantis, which in turn influenced the founding principles of the Royal Society — the institution that launched modern science. An idea that may be fictional has been one of the most consequential ideas in the history of Western civilization. Plato would have appreciated the irony.",
+      "visual_prompt": "Literary and artistic collage of Atlantis representations through history - vintage Jules Verne illustration, fantasy art, Renaissance painting, modern film still, all connected by historical thread",
+      "bg_colors": ["#1a0f00", "#2a1800"],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 59,
+      "type": "narration",
+      "title": "The Echo",
+      "narration": "The stories that shaped us are never quite finished. They echo forward through time, finding new relevance in each generation that inherits them. Atlantis echoes in every coastal city now measuring the tide. It echoes in every climate summit where world leaders argue about who is responsible for what is coming. It echoes in the work of every archaeologist who believes that human history is deeper and stranger than the approved textbooks admit. And it echoes here — because if even a fraction of what Plato described was real, then buried somewhere beneath the Atlantic, there is a civilization waiting to be heard. A story waiting to be told. An echo waiting to be recognized.",
+      "visual_prompt": "Wide cinematic ocean shot at golden hour, calm Atlantic waters reflecting sunset colors, a single sonar research vessel on the horizon, vast mystery of the deep ocean stretching in all directions",
+      "bg_colors": ["#1a0f00", "#2a1500"],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 60,
+      "type": "outro",
+      "title": "Echoes of Eternity",
+      "narration": "Thank you for watching Echoes of Eternity. The stories that shaped us — told like never before. If this episode made you think differently about the past, consider what it means for the present. Subscribe to follow the series. Leave a comment with your theory on Atlantis. And until next time — remember that every civilization that has ever existed believed it would last forever. None of them were right. But all of them left echoes. This has been Echoes of Eternity.",
+      "visual_prompt": "Dramatic channel outro card with dark ancient temple backdrop, golden Echoes of Eternity logo glowing, cinematic letterbox format, subscribe animation, stars visible through temple columns",
+      "bg_colors": ["#0a0520", "#10083a"],
+      "duration_sec": 45
+    }
+  ]
+}

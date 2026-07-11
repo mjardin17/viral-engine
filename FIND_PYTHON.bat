@@ -1,24 +1,10 @@
 @echo off
-echo Searching for Python installs...
+echo Searching for Python on this computer...
 echo.
-echo == LOCALAPPDATA\Programs\Python ==
-dir "%LOCALAPPDATA%\Programs\Python\" 2>nul || echo  not found
-
+where python 2>nul && echo FOUND: python in PATH
+where py 2>nul && echo FOUND: py launcher
+dir /b "C:\Users\jjard\AppData\Local\Programs\Python\" 2>nul
+dir /b "C:\Users\jjard\jjclaudevideobot\Scripts\python.exe" 2>nul && echo FOUND: venv jjclaudevideobot
 echo.
-echo == C:\Program Files\Python* ==
-dir "C:\Program Files\Python*" /b 2>nul || echo  not found
-
-echo.
-echo == C:\Python* ==
-dir "C:\Python*" /b 2>nul || echo  not found
-
-echo.
-echo == PATH python ==
-where python 2>nul || echo  not in PATH
-
-echo.
-echo == PATH python3 ==
-where python3 2>nul || echo  not in PATH
-
-echo.
+echo Done. Take a screenshot and show Claude.
 pause

@@ -13,21 +13,21 @@ goto normal
 :normal
 echo.
 echo ============================================================
-echo   VIRAL ENGINE COUNCIL — Full Scan
+echo   VIRAL ENGINE COUNCIL — Gods ^& Glory (GG)
 echo ============================================================
-py "%BASE%council\council.py"
+py "%BASE%council\council.py" --channel gg
 goto end
 
 :watch
 echo.
 echo ============================================================
-echo   VIRAL ENGINE COUNCIL — Watch Mode (every 10 min)
+echo   VIRAL ENGINE COUNCIL — GG Watch Mode (every 10 min)
 echo ============================================================
-py "%BASE%council\council.py" --watch 600
+py "%BASE%council\council.py" --channel gg --watch 600
 goto end
 
 :status
-py "%BASE%council\council.py" --status
+py "%BASE%council\council.py" --channel gg --status
 goto end
 
 :list
@@ -37,11 +37,11 @@ goto end
 :fix
 echo.
 echo ============================================================
-echo   VIRAL ENGINE COUNCIL — Scan + Auto-Fix
+echo   VIRAL ENGINE COUNCIL — GG Scan + Auto-Fix
 echo ============================================================
-py "%BASE%council\council.py" --bot bot_image_healer
-py "%BASE%council\council.py" --bot bot_clip_rebuilder
-py "%BASE%council\council.py" --bot bot_final_assembler
+py "%BASE%council\council.py" --channel gg --bot bot_image_healer
+py "%BASE%council\council.py" --channel gg --bot bot_clip_rebuilder
+py "%BASE%council\council.py" --channel gg --bot bot_final_assembler
 goto end
 
 :end

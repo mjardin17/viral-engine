@@ -322,6 +322,409 @@
         "#C9A227",
         "#4A3728"
       ]
+    },
+    {
+      "type": "history",
+      "title": "September 1944 \u2014 The Allied Dilemma",
+      "narration": "By September 1944 the Allied armies had liberated France and Belgium in a stunning advance, but now faced a critical problem: logistics. Every gallon of fuel, every artillery shell, every ration had to travel by truck from the Normandy beaches \u2014 a supply line stretching 400 miles. Patton's Third Army had halted for lack of fuel. Hodges' First Army was barely moving. The Allied advance that had covered 400 miles in two months was grinding to a halt on Germany's doorstep. Eisenhower needed a breakthrough. Montgomery offered him one.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Allied supply lines stretched from Normandy to the German border in September 1944 \u2014 fuel trucks on packed roads, armies halting for want of gasoline, the supply crisis that made Market Garden possible. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#1A2A3D",
+        "#C9A227"
+      ],
+      "duration_sec": 52,
+      "scene_number": 25
+    },
+    {
+      "type": "biography",
+      "title": "Browning \u2014 The Airborne Corps Commander",
+      "narration": "Lieutenant General Frederick 'Boy' Browning commanded the Allied Airborne Corps. He was a decorated World War I veteran and husband of novelist Daphne du Maurier. At the planning conference for Market Garden, when shown the bridge at Arnhem, Browning reportedly said: 'I think we might be going a bridge too far.' He said it and then planned and executed the operation anyway. His performance at Arnhem has been debated ever since \u2014 the man who coined the phrase that defined the operation's failure was the man responsible for its planning.",
+      "visual_prompt": "Gods & Glory cinematic documentary. General Browning at the Market Garden planning conference, reviewing the bridge at Arnhem on the map \u2014 the commander who expressed doubt and proceeded anyway, his name forever linked to the operation's failure. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#C9A227",
+        "#1A2A3D"
+      ],
+      "duration_sec": 52,
+      "scene_number": 26
+    },
+    {
+      "type": "detail",
+      "title": "The Three Bridges \u2014 Market's Objectives",
+      "narration": "Operation Market was the airborne half of Market Garden. Three divisions would drop simultaneously to capture a series of bridges across the rivers and canals of the Netherlands. The 101st Airborne would take Eindhoven and the Son bridge. The 82nd Airborne would take Nijmegen and the Maas-Waal bridges. The British 1st Airborne would take the most important prize: the Arnhem bridge over the Rhine. If all three objectives held, XXX Corps could drive straight up Highway 69 \u2014 Hell's Highway \u2014 to Arnhem and across the Rhine into Germany.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Map of Operation Market Garden \u2014 the three airborne division drop zones, the bridges at Eindhoven, Nijmegen, and Arnhem, the corridor XXX Corps would drive through. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#C9A227",
+        "#1A2A3D"
+      ],
+      "duration_sec": 52,
+      "scene_number": 27
+    },
+    {
+      "type": "detail",
+      "title": "The Drop Zones \u2014 A Fatal Compromise",
+      "narration": "The British 1st Airborne Division was assigned to capture the Arnhem bridge, eight miles from its drop zones. The RAF refused to fly multiple lifts on the same day, citing losses. Pilots objected to the flak around Arnhem. The result: the division would land miles from its objective, wait a day for the second lift to arrive, and then advance on foot to the bridge. This decision \u2014 dropping eight miles short and splitting the division over three days \u2014 was the structural flaw that doomed the operation before a single paratrooper left England.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The British 1st Airborne drop zones eight miles from Arnhem bridge \u2014 the RAF compromise that required paratroopers to walk to their objective rather than land on it. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#8B1A1A",
+        "#C9A227"
+      ],
+      "duration_sec": 52,
+      "scene_number": 28
+    },
+    {
+      "type": "detail",
+      "title": "The Intelligence Ignored \u2014 Panzer Divisions at Arnhem",
+      "narration": "Dutch resistance sources reported two SS Panzer divisions resting near Arnhem: the 9th and 10th SS Panzer. A British intelligence officer, Major Brian Urquhart, brought aerial photographs showing German tanks near the drop zones. He was told the tanks were probably inoperable. When he persisted, he was sent on medical leave for nervous exhaustion. The intelligence was accurate. The 9th and 10th SS Panzer were at Arnhem in better condition than anyone admitted. The lightly armed British paratroopers who landed on September 17 were dropping next to a Panzer corps.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Aerial reconnaissance photographs showing German tanks near Arnhem \u2014 the intelligence that was dismissed, the SS Panzer divisions resting in the woods that would destroy the British 1st Airborne. 16:9 cinematic.",
+      "bg_colors": [
+        "#8B1A1A",
+        "#0D1520",
+        "#C9A227"
+      ],
+      "duration_sec": 52,
+      "scene_number": 29
+    },
+    {
+      "type": "battle",
+      "title": "September 17 \u2014 The Drop",
+      "narration": "On September 17, 1944, 1,438 transport aircraft and 321 gliders carrying 20,000 paratroopers took off from bases in England in the largest airborne operation in history. The sky over the Netherlands darkened with aircraft. Dutch civilians came out to wave and cheer. The drops were accurate and losses were light. Within hours, the 101st had taken Eindhoven, the 82nd had landed near Nijmegen, and the British 1st Airborne was walking toward Arnhem eight miles away. For a few hours on September 17, Market Garden appeared to be working.",
+      "visual_prompt": "Gods & Glory cinematic documentary. 1,438 aircraft and 321 gliders filling the sky over the Netherlands on September 17, 1944 \u2014 Dutch civilians waving as the largest airborne operation in history descends toward their occupied country. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#1A2A3D"
+      ],
+      "duration_sec": 52,
+      "scene_number": 30
+    },
+    {
+      "type": "battle",
+      "title": "XXX Corps \u2014 Hell's Highway",
+      "narration": "At 2:35 PM on September 17, XXX Corps launched its ground advance up Highway 69. The plan called for the armored column to reach Arnhem in 48 hours \u2014 64 miles in two days through terrain that allowed only single-file movement. German defenses channeled the advance onto one road through flat low country where tanks were vulnerable to ambushes from both sides. The column moved, stopped under fire, moved again. By nightfall on September 17 they were already behind schedule. Every hour of delay increased the pressure on the paratroopers waiting at Arnhem.",
+      "visual_prompt": "Gods & Glory cinematic documentary. XXX Corps tank columns advancing up Hell's Highway \u2014 the single road through flat Dutch countryside, German ambushes from both sides, the armored relief force fighting its way toward Arnhem. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#8B1A1A",
+        "#0D1520"
+      ],
+      "duration_sec": 52,
+      "scene_number": 31
+    },
+    {
+      "type": "battle",
+      "title": "Frost at the Bridge",
+      "narration": "Lieutenant Colonel John Frost led 2nd Battalion of the Parachute Regiment \u2014 approximately 700 men \u2014 through Arnhem to the north end of the road bridge. They arrived at 8 PM on September 17 and dug in. The south end of the bridge was held by the Germans and could not be taken. Other British units trying to reach Frost were cut off and destroyed by SS Panzer forces. For four days, Frost's battalion held the north end of Arnhem bridge against everything the 9th SS Panzer Division could throw at them \u2014 refusing to surrender, running out of ammunition, treating their wounded in burning buildings.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Lieutenant Colonel Frost's 700 paratroopers dug in at the north end of Arnhem bridge \u2014 the isolated battalion holding against SS Panzer attacks, the burning buildings of their perimeter. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#8B1A1A",
+        "#C9A227"
+      ],
+      "duration_sec": 52,
+      "scene_number": 32
+    },
+    {
+      "type": "battle",
+      "title": "The Radio Failure",
+      "narration": "The British 1st Airborne's radios largely failed at Arnhem. The sets were tuned to frequencies that didn't work in the Dutch terrain. Urquhart \u2014 the divisional commander \u2014 was cut off from his own units for 36 hours, hiding in a Dutch house while SS troops searched the neighborhood. Units that could have supported each other couldn't communicate. Requests for close air support couldn't be transmitted. Supply drops landed in German-held territory because the change of drop zone couldn't be relayed. The radio failure turned a difficult operation into a catastrophe.",
+      "visual_prompt": "Gods & Glory cinematic documentary. British paratroopers with useless radios in Arnhem \u2014 the communications failure that left General Urquhart isolated, units unable to coordinate, supply drops falling into German hands. 16:9 cinematic.",
+      "bg_colors": [
+        "#8B1A1A",
+        "#0D1520",
+        "#1A2A3D"
+      ],
+      "duration_sec": 52,
+      "scene_number": 33
+    },
+    {
+      "type": "battle",
+      "title": "Nijmegen \u2014 The River Crossing",
+      "narration": "While Frost was dying at Arnhem, the 82nd Airborne fought for the Nijmegen bridge. The bridge had to be taken intact and it was defended. Major General Gavin made one of the most audacious decisions of the war: on September 20, he sent 260 paratroopers across the Waal River in canvas boats under fire, in daylight, to take the north end of the bridge while armor attacked the south. Of 260 men in the river crossing, approximately 200 made it across. The Nijmegen bridge was taken. XXX Corps was now 11 miles from Arnhem. But it was September 20 \u2014 Frost had been holding for three days.",
+      "visual_prompt": "Gods & Glory cinematic documentary. 82nd Airborne paratroopers crossing the Waal River in canvas boats under German fire on September 20 \u2014 the daylight crossing that took the Nijmegen bridge, with Arnhem falling just 11 miles away. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#8B1A1A",
+        "#0D1520"
+      ],
+      "duration_sec": 52,
+      "scene_number": 34
+    },
+    {
+      "type": "battle",
+      "title": "The Polder \u2014 One Mile Per Day",
+      "narration": "After Nijmegen, XXX Corps faced the worst terrain of the operation: the polder \u2014 Dutch low-lying reclaimed land flanked by drainage ditches. Tanks could not leave the road. German forces set up blocking positions. The 11 miles from Nijmegen to Arnhem took four days. The Grenadier Guards tankers sat in their vehicles watching the sky over Arnhem turn orange with fire, knowing British paratroopers were dying there, unable to move faster than German resistance allowed. One Irish Guards officer wrote in his diary: 'We are watching our friends burn. We cannot reach them.'",
+      "visual_prompt": "Gods & Glory cinematic documentary. XXX Corps tanks halted on the polder road between Nijmegen and Arnhem \u2014 the flat drained farmland where tanks couldn't maneuver, German blocking positions, the orange sky over Arnhem visible ahead. 16:9 cinematic.",
+      "bg_colors": [
+        "#8B1A1A",
+        "#0D1520",
+        "#C9A227"
+      ],
+      "duration_sec": 52,
+      "scene_number": 35
+    },
+    {
+      "type": "battle",
+      "title": "Frost's Last Stand \u2014 Day Four",
+      "narration": "By September 20, Frost's battalion at Arnhem bridge had taken catastrophic casualties. Buildings were burning. Ammunition was almost gone. The wounded filled the cellars. German tanks drove up to buildings and fired point-blank. Frost himself was wounded on September 20 and command passed to Major Freddie Gough. On September 21, the survivors surrendered \u2014 not because they chose to but because they had literally nothing left to fight with. Of the 700 men who had reached the bridge, approximately 300 survived to be taken prisoner. The Germans were so impressed they carried Frost's wounded to their own hospital.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The last hours of Frost's battalion at Arnhem bridge \u2014 burning buildings, ammunition exhausted, wounded filling the cellars, the German tanks firing point-blank at the final British positions. 16:9 cinematic.",
+      "bg_colors": [
+        "#8B1A1A",
+        "#0D1520",
+        "#1A2A3D"
+      ],
+      "duration_sec": 52,
+      "scene_number": 36
+    },
+    {
+      "type": "battle",
+      "title": "The Perimeter \u2014 Oosterbeek",
+      "narration": "The rest of the British 1st Airborne that had never reached the bridge formed a defensive perimeter in the Oosterbeek suburb west of Arnhem. Approximately 3,500 men held a shrinking pocket for nine days against SS Panzer forces. Supply drops continued \u2014 80% fell in German-held territory. Polish paratroopers dropped south of the Rhine and tried to cross to help \u2014 most drowned or were killed. On September 25, General Urquhart received permission to withdraw. Operation Berlin \u2014 the evacuation \u2014 began that night.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The Oosterbeek perimeter \u2014 3,500 British paratroopers in a shrinking pocket, supply drops falling in German territory, the nine-day fight before the evacuation order. 16:9 cinematic.",
+      "bg_colors": [
+        "#8B1A1A",
+        "#0D1520",
+        "#C9A227"
+      ],
+      "duration_sec": 52,
+      "scene_number": 37
+    },
+    {
+      "type": "battle",
+      "title": "The Evacuation \u2014 Operation Berlin",
+      "narration": "On the night of September 25-26, the survivors of the British 1st Airborne crossed the Rhine in small boats. Engineers and Dutch civilians ferried them across in darkness. Of approximately 10,000 British and Polish paratroopers who had crossed into the Arnhem area, 2,163 escaped across the river. Approximately 1,500 were killed. 6,500 were captured. The Dutch civilians who helped were subsequently punished by the Germans \u2014 the city of Arnhem was evacuated by force and all food supplies were seized. The Netherlands suffered its famine winter of 1944-45 partly because of Market Garden.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The night evacuation across the Rhine \u2014 British paratroopers crossing in small boats in darkness, the 2,163 survivors of 10,000 who had gone in, engineers and Dutch civilians rowing them to safety. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#1A2A3D",
+        "#8B1A1A"
+      ],
+      "duration_sec": 52,
+      "scene_number": 38
+    },
+    {
+      "type": "analysis",
+      "title": "Why Market Garden Failed",
+      "narration": "Market Garden failed for five compounding reasons: drop zones eight miles from the objective, radio failure, two SS Panzer divisions that intelligence dismissed, the single road that channeled XXX Corps into predictable ambushes, and the plan's assumption that everything had to go right. Any one of these problems was manageable alone. Together they were fatal. Montgomery called Market Garden 90% successful because the first three bridges were taken. The 10% that failed was the only bridge that mattered. A plan that works 90% of the way to its objective and fails at the last step has simply failed.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Analysis diagram of Market Garden's failure points \u2014 the eight-mile drop, the radios, the Panzers, the single road, the accumulated delays \u2014 each factor compounding the others. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#C9A227",
+        "#1A2A3D"
+      ],
+      "duration_sec": 52,
+      "scene_number": 39
+    },
+    {
+      "type": "detail",
+      "title": "The Dutch Winter Famine",
+      "narration": "After Market Garden failed, the Allies called a railway strike to support future operations. The Germans responded by stopping all food shipments to the western Netherlands. That winter \u2014 the Hunger Winter of 1944-45 \u2014 approximately 22,000 Dutch civilians died of starvation. People ate tulip bulbs and sugar beets. In Amsterdam and Rotterdam, daily rations fell to 400 calories. The Netherlands was liberated in May 1945, but the winter the liberation failed to prevent killed more Dutch civilians than the entire German occupation had in four years.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The Dutch Hunger Winter of 1944-45 \u2014 civilians in Amsterdam and Rotterdam searching for food, the starvation that killed 22,000 people in the months after Market Garden's failure. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#8B1A1A",
+        "#1A2A3D"
+      ],
+      "duration_sec": 52,
+      "scene_number": 40
+    },
+    {
+      "type": "biography",
+      "title": "John Frost \u2014 The Soldier at the Bridge",
+      "narration": "John Frost was captured after the bridge battle and spent the rest of the war as a prisoner. He returned to Arnhem after the war and the bridge was renamed John Frost Bridge in his honor. He attended ceremonies there until his death in 1993. The Dutch who survived the battle and the famine that followed never forgot the paratroopers who had tried. At Arnhem today, the graves of 1,750 British and Polish paratroopers are maintained by the Commonwealth War Graves Commission. Dutch families still adopt graves \u2014 cleaning them, placing flowers, attending burial services for newly identified remains.",
+      "visual_prompt": "Gods & Glory cinematic documentary. John Frost Bridge at Arnhem today \u2014 named for the colonel who held it for four days, the Commonwealth War Graves cemetery nearby, Dutch families maintaining the graves of the paratroopers who came to free them. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#1A2A3D"
+      ],
+      "duration_sec": 52,
+      "scene_number": 41
+    },
+    {
+      "type": "legacy",
+      "title": "A Bridge Too Far \u2014 What Went Wrong and Why It Matters",
+      "narration": "Market Garden is studied in every staff college in the world as a case study in the gap between bold planning and operational reality. The intelligence was there and was ignored. The warnings were given and were dismissed. The plan required everything to work and nothing to go wrong. Military history is full of plans that required everything to work. They almost never do. Frost's battalion at Arnhem bridge understood this in the most direct possible way: they held for four days waiting for relief that was supposed to arrive in two. The bridge that was supposed to end the war became a monument to the distance between ambition and execution.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The Arnhem bridge today \u2014 the John Frost Bridge over the Rhine, the monument to ambition and the lesson in the gap between bold planning and operational reality. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#1A2A3D"
+      ],
+      "duration_sec": 52,
+      "scene_number": 42
+    },
+    {
+      "type": "close",
+      "title": "September 1944 \u2014 The Road Not Taken",
+      "narration": "If Market Garden had succeeded \u2014 if Frost had been relieved on time, if XXX Corps had crossed the Rhine \u2014 the war in Europe might have ended in 1944. Instead it lasted until May 1945. Eight more months of fighting killed approximately 500,000 more soldiers on all sides. The Netherlands starved through its worst winter. The concentration camps continued operating until liberation in the spring. Every day the war continued after September 1944 has a cost that can be counted. Market Garden was the road that might have shortened it. The bridge at Arnhem was one bridge too far. And the road not taken led through eight more months of the worst war in human history.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Arnhem bridge at dusk \u2014 the road not taken visible in the quiet Rhine crossing, the eight more months of war that followed the failed September gamble, the cost of one bridge too far. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#1A2A3D"
+      ],
+      "duration_sec": 56,
+      "scene_number": 43
+    },
+    {
+      "type": "detail",
+      "title": "The Polish Brigade \u2014 Dropped Too Late",
+      "narration": "The Polish 1st Independent Parachute Brigade under General Sosabowski was supposed to drop south of Arnhem on September 19 to reinforce the bridge. Bad weather in England delayed them. They finally dropped on September 21 \u2014 after Frost's battalion had already been overrun. The Poles tried to cross the Rhine to reach the Oosterbeek perimeter and were slaughtered on the riverbank. Sosabowski had argued against Market Garden from the beginning, warning that the plan was too optimistic. He was ignored, his brigade was sacrificed in a battle that was already lost, and he was later scapegoated by British commanders for the failure.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Polish paratroopers dropping south of Arnhem on September 21 \u2014 too late to help Frost, cut down trying to cross the Rhine, General Sosabowski's warnings vindicated and ignored. 16:9 cinematic.",
+      "bg_colors": [
+        "#8B1A1A",
+        "#0D1520",
+        "#C9A227"
+      ],
+      "duration_sec": 54,
+      "scene_number": 44
+    },
+    {
+      "type": "detail",
+      "title": "The Dutch Resistance \u2014 Eyes on the Ground",
+      "narration": "The Dutch resistance had provided accurate intelligence about German forces near Arnhem before the operation. Their reports were dismissed by Allied planners who believed the SS Panzer divisions were too worn down to fight effectively. After the battle, resistance members helped hide wounded paratroopers from German searches. The Dutch civilian Cornelia van Hoof hid seventeen British soldiers in her home for months. Resistance members guided survivors to the Rhine crossing during Operation Berlin. The people whose country Market Garden was supposed to liberate contributed more to saving Allied soldiers than the intelligence system that ignored their warnings.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Dutch resistance members guiding wounded British paratroopers to safety after Market Garden \u2014 the civilians who hid soldiers for months and guided the survivors to the Rhine crossing. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#1A2A3D",
+        "#C9A227"
+      ],
+      "duration_sec": 54,
+      "scene_number": 45
+    },
+    {
+      "type": "detail",
+      "title": "Montgomery's Verdict \u2014 90 Percent Success",
+      "narration": "Field Marshal Montgomery declared Market Garden 90 percent successful because the first three bridge objectives were achieved. He maintained this position for the rest of his life. Critics pointed out that the 10 percent that failed \u2014 the Arnhem bridge \u2014 was the only objective that mattered strategically. Capturing Eindhoven and Nijmegen without Arnhem left the Allies exactly where they started: south of the Rhine. Montgomery never acknowledged the intelligence failures, the drop zone decisions, or the radio problems. His reputation suffered permanently. The man who had planned El Alamein and D-Day ended his career defending a failure he refused to call a failure.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Montgomery reviewing his Market Garden assessment \u2014 the field marshal who called a strategic defeat 90 percent successful, his reputation clouded by the one bridge that didn't hold. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#C9A227",
+        "#8B1A1A"
+      ],
+      "duration_sec": 54,
+      "scene_number": 46
+    },
+    {
+      "type": "detail",
+      "title": "The Arnhem Veterans \u2014 Return Ceremonies",
+      "narration": "Every September, Arnhem holds a ceremony for the British and Polish paratroopers who fought there. Veterans returned for decades \u2014 old men in berets with parachute wings, some in wheelchairs. Dutch schoolchildren line the roads. The graves at Oosterbeek War Cemetery \u2014 1,750 paratroopers \u2014 are maintained by the Commonwealth War Graves Commission. Dutch families still adopt graves. When the last veterans became too old to travel, Dutch children wrote letters to their families in England. The bond between Arnhem and the paratroopers who died there is one of the most sustained acts of collective gratitude in European history.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Annual Arnhem liberation ceremony \u2014 British veterans in red berets, Dutch children lining the roads, the Oosterbeek War Cemetery where 1,750 paratroopers are buried. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#1A2A3D"
+      ],
+      "duration_sec": 54,
+      "scene_number": 47
+    },
+    {
+      "type": "analysis",
+      "title": "What Success Would Have Meant",
+      "narration": "If Market Garden had succeeded \u2014 if Frost had been relieved, if XXX Corps had crossed at Arnhem \u2014 Allied forces would have been north of the Rhine by late September 1944. The Ruhr industrial region would have been outflanked. German forces in the Netherlands would have been cut off. Military historians estimate the war in Europe could have ended three to six months earlier than it did. Three to six months of World War II in Europe meant approximately 500,000 additional military deaths and the continued operation of the death camps until spring 1945 instead of late 1944. The bridge at Arnhem carried a weight that went far beyond its span over the Rhine.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The strategic map of what a successful Arnhem crossing meant \u2014 the Ruhr outflanked, German forces in Holland cut off, the months of war and death that the bridge's capture could have prevented. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#C9A227",
+        "#1A2A3D"
+      ],
+      "duration_sec": 54,
+      "scene_number": 48
+    },
+    {
+      "type": "detail",
+      "title": "The Son Bridge \u2014 Blown Up",
+      "narration": "The 101st Airborne took Eindhoven as planned, but the bridge at Son over the Wilhelmina Canal was blown by German engineers as paratroopers were running toward it. XXX Corps had to wait while engineers built a Bailey bridge \u2014 11 hours lost. Every delay compounded. The Son bridge was a minor obstacle in the overall plan, but losing 11 hours on day one meant XXX Corps was already behind when it reached Nijmegen. The delays accumulated: Son bridge blown, Nijmegen not taken until day four, the polder road between Nijmegen and Arnhem taking four more days. Frost was dead before XXX Corps was close.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The Son bridge over the Wilhelmina Canal blown by German engineers as 101st Airborne paratroopers ran toward it \u2014 11 hours lost building a Bailey bridge, the first delay in a chain of disasters. 16:9 cinematic.",
+      "bg_colors": [
+        "#8B1A1A",
+        "#0D1520",
+        "#C9A227"
+      ],
+      "duration_sec": 54,
+      "scene_number": 49
+    },
+    {
+      "type": "detail",
+      "title": "Radio Silence and the Phantom Division",
+      "narration": "During the Market Garden planning, intelligence identified what appeared to be a phantom German division on the map \u2014 unit markings that didn't correspond to a real formation. This was actually the 9th SS Panzer Division being reorganized and re-equipped after heavy losses. Its presence was known. Its combat effectiveness was unknown and was assumed to be low. Planners chose the most optimistic reading of the evidence. This is the consistent pattern of Market Garden's planning failures: every ambiguous piece of intelligence was resolved in favor of the operation succeeding. The price of optimism was 1,500 British and Polish dead.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Market Garden intelligence maps showing the 9th SS Panzer Division \u2014 the unit assumed to be combat-ineffective that destroyed the British 1st Airborne, optimistic planning meeting hard reality. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#8B1A1A",
+        "#C9A227"
+      ],
+      "duration_sec": 54,
+      "scene_number": 50
+    },
+    {
+      "type": "legacy",
+      "title": "Hell's Highway \u2014 The Road That Couldn't Be Held",
+      "narration": "Even as XXX Corps advanced north, the single road \u2014 Hell's Highway \u2014 was repeatedly cut by German counterattacks. Supply convoys were ambushed. Units had to fight to reopen the road while also trying to advance. The 101st Airborne spent Market Garden not advancing but defending the road behind the armored column. This was another flaw in the plan: a single road through flat country that could be cut anywhere along its 64-mile length couldn't serve as the main supply and reinforcement route for an operation of this scale. Market Garden required a highway. Hell's Highway was one road through a shooting gallery.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Hell's Highway under German counterattack \u2014 supply convoys ambushed, the 101st Airborne fighting to keep the road open, the single supply route that made the entire operation fragile. 16:9 cinematic.",
+      "bg_colors": [
+        "#8B1A1A",
+        "#0D1520",
+        "#C9A227"
+      ],
+      "duration_sec": 54,
+      "scene_number": 51
+    },
+    {
+      "type": "detail",
+      "title": "Sosabowski \u2014 The Scapegoat",
+      "narration": "General Sosabowski, who had warned against Market Garden from the beginning, was relieved of command in December 1944 at British insistence. The British commanders who had ignored his warnings needed someone to blame for Arnhem. The Polish general who had been right about everything became the official scapegoat. He received no recognition from Britain. Poland was handed to Stalin at Yalta two months later, so there was no Polish government to defend him. Sosabowski died in London in 1967, his reputation unrestored. In 2006, the Netherlands awarded him the Military Order of William \u2014 their highest military honor \u2014 posthumously. He was right. It took sixty years to say so.",
+      "visual_prompt": "Gods & Glory cinematic documentary. General Sosabowski \u2014 the Polish commander who warned against Market Garden and was scapegoated for its failure, his posthumous Dutch decoration sixty years after his vindication. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#8B1A1A",
+        "#C9A227"
+      ],
+      "duration_sec": 54,
+      "scene_number": 52
+    },
+    {
+      "type": "detail",
+      "title": "The Hartenstein Hotel \u2014 Urquhart's Last Stand",
+      "narration": "The British 1st Airborne's final perimeter centered on the Hartenstein Hotel in Oosterbeek, which served as divisional headquarters. The hotel was under constant fire. Its lawn became a casualty collection point. Dutch civilians sheltered in its cellars alongside wounded paratroopers. When the evacuation order came on September 25, soldiers wrapped their boots in cloth to muffle their footsteps and walked silently to the Rhine. The Hartenstein is now the Airborne Museum \u2014 visitors can walk the ground where the perimeter stood and see the bullet holes that are still preserved in the walls.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The Hartenstein Hotel at Oosterbeek \u2014 the last British divisional headquarters under constant fire, now the Airborne Museum where bullet holes are still preserved in the original walls. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#C9A227",
+        "#1A2A3D"
+      ],
+      "duration_sec": 54,
+      "scene_number": 53
+    },
+    {
+      "type": "detail",
+      "title": "Market Garden's Tactical Lessons",
+      "narration": "Market Garden produced changes in airborne doctrine that lasted for the rest of the Cold War. Never again would paratroopers be dropped miles from their objectives to preserve aircraft. Never again would a relief force have only one road. Never again would intelligence warnings about enemy armor near drop zones be dismissed without physical verification. The British 1st Airborne Division was never reconstituted as a division \u2014 it was broken up. The specific failures at Arnhem were codified into doctrine so they would never be repeated. The 10,000 men who went into Arnhem taught lessons that shaped airborne operations for fifty years.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Post-Market Garden airborne doctrine changes \u2014 the new drop zone rules, the intelligence verification requirements, the lessons written in the blood of the 1st Airborne encoded into military doctrine. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#1A2A3D"
+      ],
+      "duration_sec": 54,
+      "scene_number": 54
+    },
+    {
+      "type": "legacy",
+      "title": "Arnhem \u2014 The Name That Means Something",
+      "narration": "Arnhem is one of those place names that carries weight beyond geography. Like Thermopylae or the Alamo, it means something \u2014 a last stand, a battle fought beyond the point where survival was possible, men holding because they had been told to hold and had not been told to stop. John Frost's 700 men held a bridge for four days against a Panzer division. They lost. The bridge fell. The operation failed. But the holding itself became the thing remembered. The world that was not turned right-side-up in September 1944 was turned right-side-up in May 1945. The men at Arnhem did not live to see it. They had already given everything they had to give.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The John Frost Bridge at Arnhem at dusk \u2014 the name that means last stand, the bridge where 700 men held for four days, the place where the war's longest shadow falls. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#1A2A3D"
+      ],
+      "duration_sec": 56,
+      "scene_number": 55
     }
   ]
 }

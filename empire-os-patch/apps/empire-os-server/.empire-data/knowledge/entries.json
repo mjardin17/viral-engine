@@ -1,0 +1,73 @@
+[
+  {
+    "id": "64885bd2-d0a6-4d76-8fe6-948f1e4a1ab6",
+    "category": "workflow",
+    "title": "Empire OS Provider Routing",
+    "content": {
+      "routing": {
+        "ollama": "Local/routine — copy, summary, classification (free, fastest)",
+        "anthropic": "Code, architecture, complex reasoning",
+        "google": "Research, long-context planning, scripts",
+        "openai": "GPT-specific features, function calling",
+        "goose": "Local dev tasks, file ops, shell commands"
+      },
+      "defaultStrategy": "cost"
+    },
+    "tags": [
+      "empire",
+      "routing",
+      "providers"
+    ],
+    "createdAt": "2026-07-04T18:47:56.562Z",
+    "updatedAt": "2026-07-04T18:47:56.562Z"
+  },
+  {
+    "id": "0ce52025-4a0e-4218-9869-07a996183e6d",
+    "category": "preference",
+    "title": "Viral Engine — Josh's AI Channel Empire",
+    "content": {
+      "channels": [
+        "Gods & Glory (GG)",
+        "Machine Learning (ML)",
+        "Little Olympus (LO)"
+      ],
+      "pipeline": "auto_render.py — JSON scripts → images → TTS → FFmpeg → MP4",
+      "status": "S1 complete, S2 partial, S3 scripted — render with render_season3.bat",
+      "empire_os_port": 3001,
+      "ollama_port": 11434
+    },
+    "tags": [
+      "project",
+      "youtube",
+      "viral-engine",
+      "pipeline"
+    ],
+    "createdAt": "2026-07-04T18:47:56.561Z",
+    "updatedAt": "2026-07-04T18:47:56.561Z"
+  },
+  {
+    "id": "d5ac0d52-259c-41b3-ac4c-974ca90b764c",
+    "category": "preference",
+    "title": "Machine: Josh's Windows Laptop",
+    "content": {
+      "ram": "8GB",
+      "platform": "Windows",
+      "gpu": "Unknown — check via Task Manager",
+      "recommendedModels": [
+        "qwen2.5:7b",
+        "qwen2.5-coder:7b",
+        "llama3.1:8b",
+        "gemma3:4b",
+        "phi4-mini:3.8b"
+      ],
+      "maxModelSize": "6GB RAM"
+    },
+    "tags": [
+      "hardware",
+      "machine",
+      "config"
+    ],
+    "createdAt": "2026-07-04T18:47:56.561Z",
+    "updatedAt": "2026-07-04T18:47:56.561Z"
+  }
+]

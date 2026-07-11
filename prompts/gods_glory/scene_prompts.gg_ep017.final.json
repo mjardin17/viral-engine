@@ -322,6 +322,422 @@
         "#C9A227",
         "#4A3728"
       ]
+    },
+    {
+      "type": "history",
+      "title": "The Umayyad Caliphate \u2014 The Speed of Conquest",
+      "narration": "In one century, Islam had expanded from the Arabian Peninsula to Spain. The Prophet Muhammad died in 632 AD. By 732 AD \u2014 one hundred years later \u2014 Muslim armies had conquered Arabia, Persia, Egypt, North Africa, Spain, and were advancing into France. The speed was astonishing. No previous empire had expanded as quickly. The military system the early Caliphate used \u2014 highly mobile cavalry, sophisticated logistics, ideologically committed soldiers \u2014 was genuinely revolutionary. When Abdul Rahman Al Ghafiqi crossed the Pyrenees into France in 732, he was the leading edge of the most dynamic military expansion in recorded history.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Map of the rapid expansion of Islam 632-732 AD \u2014 the Arabian Peninsula, Persia, North Africa, Spain, all falling within a single century, the arrows of conquest reaching toward Tours and the heart of Europe, the most rapid empire-building in history. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#2C1A00",
+        "#0D1520"
+      ],
+      "duration_sec": 52,
+      "scene_number": 25
+    },
+    {
+      "type": "biography",
+      "title": "Charles Martel \u2014 Who He Actually Was",
+      "narration": "Charles Martel was not king of France. He was mayor of the palace \u2014 effectively the prime minister \u2014 under Frankish kings who were too weak to rule. He had spent the previous twenty years fighting to unify the Frankish kingdoms through a series of brutal civil wars. He was illegitimate, having been born to a concubine rather than a legal wife, and had spent time in prison before fighting his way to power. By 732, he controlled the military resources of most of what is now France and Germany. His title \u2014 'Martel,' meaning hammer \u2014 may have been given after Tours or may have been earned in the civil wars. Either way, he was a practical, experienced military commander who had been fighting continuously for two decades.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Charles Martel before the Battle of Tours \u2014 not a king but a warlord who had fought his way to power through twenty years of civil war, the illegitimate son who controlled the military strength of the Franks, studying the approaching Muslim force. 16:9 cinematic.",
+      "bg_colors": [
+        "#3D3020",
+        "#2C1A00",
+        "#C9A227"
+      ],
+      "duration_sec": 52,
+      "scene_number": 26
+    },
+    {
+      "type": "detail",
+      "title": "The Frankish Heavy Infantry",
+      "narration": "Charles Martel's military innovation was to build an infantry force capable of standing against the Muslim cavalry. Most European armies of the period relied on cavalry or poorly organized infantry. Martel's Franks were professional foot soldiers fighting in close formation, heavily equipped, trained to hold their ground. Where Muslim armies excelled at mobility and the enveloping strike, the Frankish formation presented a wall that mobility couldn't easily circumvent. The encounter at Tours was between two military systems: Muslim cavalry optimized for speed and encirclement versus Frankish infantry optimized for holding terrain. The terrain \u2014 and the formation that used it \u2014 won.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Frankish heavy infantry forming shield wall on the road to Tours, their axes and spears visible, the disciplined formation Charles Martel had trained to stand against cavalry, the antithesis of the mobile Muslim force they were about to face. 16:9 cinematic.",
+      "bg_colors": [
+        "#3D3020",
+        "#2C1A00",
+        "#8B1A1A"
+      ],
+      "duration_sec": 52,
+      "scene_number": 27
+    },
+    {
+      "type": "battle",
+      "title": "The Seven Days \u2014 What Actually Happened",
+      "narration": "The Battle of Tours \u2014 more precisely identified by Muslim sources as the Battle of the Court of the Martyrs \u2014 was not a single day's engagement. The armies faced each other for approximately seven days, with probing attacks and skirmishing before the main engagement. Charles chose his position carefully: wooded, hilly terrain that limited the Muslim cavalry's ability to outflank his formation. Abdul Rahman attacked on an unspecified day with cavalry charges that broke against the Frankish infantry wall repeatedly. The Muslim chronicles describe the Franks as 'a sea of ice that could not be moved.'",
+      "visual_prompt": "Gods & Glory cinematic documentary. The week-long confrontation at Tours \u2014 both armies facing each other across wooded terrain, probing attacks and skirmishing before the main engagement, the disciplined Frankish formation holding its ground day after day against Muslim cavalry probes. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#1A2A3D",
+        "#3D3020"
+      ],
+      "duration_sec": 52,
+      "scene_number": 28
+    },
+    {
+      "type": "battle",
+      "title": "The Death of Abdul Rahman \u2014 The Turning Point",
+      "narration": "During one of the cavalry charges against the Frankish line, Abdul Rahman Al Ghafiqi was killed. The Muslim sources record his death in battle. The Frankish response to a rumor that a detachment had looped around to loot the baggage train may have contributed to the disorganization \u2014 but the death of the commander was the decisive moment. Muslim armies of the period depended heavily on commanders for tactical coordination. The death of Abdul Rahman broke the coherence of the assault. That night, the Muslim forces withdrew silently. When Charles's scouts moved forward at dawn, the camp was abandoned.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Abdul Rahman Al Ghafiqi killed leading a cavalry charge against the Frankish line \u2014 his death breaking the Muslim army's tactical cohesion, the pivotal moment of the Battle of Tours, the Muslim withdrawal in the night that followed. 16:9 cinematic.",
+      "bg_colors": [
+        "#8B1A1A",
+        "#2C1A00",
+        "#C9A227"
+      ],
+      "duration_sec": 52,
+      "scene_number": 29
+    },
+    {
+      "type": "analysis",
+      "title": "Was Tours Really Decisive? \u2014 The Historian's Debate",
+      "narration": "Edward Gibbon's claim that if Tours had gone differently, Islamic scholars might be teaching in Oxford has been debated ever since. Modern historians are divided. Some argue Tours was one battle in a long frontier conflict and that Muslim expansion into France was already slowing due to overextended supply lines and internal Caliphate politics. The Umayyad Caliphate fractured ten years after Tours. Others argue Tours was genuinely decisive \u2014 the last serious Muslim push into Western Europe for 700 years. What is not debated: Tours was fought at the northwestern tip of Muslim expansion. After Tours, the frontier stabilized approximately where Charles set it. The debate is about why.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Historians debating the significance of Tours \u2014 one view showing it as the decisive barrier to Islamic Europe, the other showing the Umayyad Caliphate already overextended and fracturing internally, the two interpretations of the same battle. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#C9A227",
+        "#1A2A3D"
+      ],
+      "duration_sec": 52,
+      "scene_number": 30
+    },
+    {
+      "type": "history",
+      "title": "Al-Andalus \u2014 The Spain That Tours Didn't End",
+      "narration": "Muslim Spain \u2014 Al-Andalus \u2014 wasn't ended by Tours. It lasted another 761 years, until the fall of Granada in 1492. For much of this period, Al-Andalus was the most sophisticated civilization in Western Europe. C\u00f3rdoba in the 10th century had a population of over 500,000 and a library of 400,000 volumes. Muslim, Jewish, and Christian scholars worked together translating Greek texts into Arabic and Latin. The astronomical, mathematical, and medical knowledge that produced the European Renaissance came largely through Al-Andalus. The 'clash of civilizations' narrative about Tours ignores that the civilization it supposedly stopped was, in many ways, more advanced than the one that stopped it.",
+      "visual_prompt": "Gods & Glory cinematic documentary. C\u00f3rdoba in its golden age \u2014 the Great Mosque, the library, scholars of three religions working together, the most sophisticated city in Western Europe, the Islamic civilization that Tours 'stopped' while simultaneously being the source of the knowledge that would produce the Renaissance. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#2C1A00"
+      ],
+      "duration_sec": 52,
+      "scene_number": 31
+    },
+    {
+      "type": "history",
+      "title": "Charlemagne \u2014 What Charles Martel's Victory Made Possible",
+      "narration": "Charles Martel died in 741. His son Pepin III became the first Carolingian king. His grandson Charlemagne built the empire that defined medieval Europe. Without Tours, Charlemagne probably couldn't have been crowned Holy Roman Emperor. The Frankish kingdom that Charlemagne inherited \u2014 unified and defended partly through the stability Charles Martel had created \u2014 was the platform for everything that followed. The coronation in 800 AD. The Carolingian Renaissance. The administrative and ecclesiastical system that became medieval European governance. The chain of consequence from Tours to Charlemagne to Europe is real, even if it's not the simple story of Christianity versus Islam.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Charlemagne in his court at Aachen \u2014 the grandson of Charles Martel, the emperor whose kingdom was built on the foundation his grandfather's victory at Tours had secured, the Carolingian Empire that defined medieval European civilization. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#2C2A1A"
+      ],
+      "duration_sec": 52,
+      "scene_number": 32
+    },
+    {
+      "type": "analysis",
+      "title": "The Carolingian Military Revolution",
+      "narration": "The Battle of Tours was the first major demonstration of a new Western European military system. Charles Martel's success required expensive heavy cavalry and professional infantry, which required land to support them. He solved the funding problem by seizing Church lands and distributing them to warriors in exchange for military service \u2014 the origin of the feudal system. Feudalism was not an economic inevitability. It was a military solution to the specific problem of funding cavalry. The institution that would define European society for centuries was invented to pay for the soldiers who stopped the Muslim advance at Tours. Military problems produce civilizational consequences.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Frankish knight receiving land grant from Charles Martel in exchange for military service \u2014 the birth of the feudal system as a military funding mechanism, the administrative innovation that Tours made necessary and that would define European society for 600 years. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#2C1A00",
+        "#3D3020"
+      ],
+      "duration_sec": 52,
+      "scene_number": 33
+    },
+    {
+      "type": "detail",
+      "title": "The Reconquista \u2014 761 Years of Response",
+      "narration": "The Christian reconquest of Spain began almost immediately after the Muslim conquest and continued for 761 years. It ended in 1492 when Ferdinand and Isabella captured Granada, the last Muslim kingdom in Spain \u2014 and sent Columbus to America in the same year. The Reconquista shaped Spanish identity more profoundly than any other historical experience: the crusading spirit, the religious devotion, the martial culture, the Inquisition's obsession with religious purity were all products of centuries fighting for and against Islam on the Iberian Peninsula. The Battle of Tours was the northern limit of Islamic expansion. The Reconquista was the 761-year process of determining the southern limit.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The fall of Granada 1492 \u2014 Ferdinand and Isabella receiving the surrender of the last Muslim kingdom in Spain, 761 years after the first Islamic conquest, the end of the Reconquista in the same year Columbus sailed west. 16:9 cinematic.",
+      "bg_colors": [
+        "#8B1A1A",
+        "#C9A227",
+        "#0D1520"
+      ],
+      "duration_sec": 52,
+      "scene_number": 34
+    },
+    {
+      "type": "detail",
+      "title": "Islamic Spain's Intellectual Legacy",
+      "narration": "When Toledo was recaptured by Christian forces in 1085, scholars found the city's libraries intact: Arabic translations of Aristotle, Euclid, Ptolemy, and Galen, plus original Arabic works in mathematics, astronomy, medicine, and philosophy. Over the next century, translation schools worked systematically to render these into Latin. The '12th-century Renaissance' \u2014 the intellectual revival that preceded the Italian Renaissance \u2014 was built on these translations. European medicine, astronomy, mathematics, and philosophy in the medieval period were largely transmitted through Arabic sources in Al-Andalus. The civilization that Tours 'saved' Europe from was also the civilization that gave Europe the intellectual tools to build its own.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Medieval Toledo translation school \u2014 Christian, Jewish, and Muslim scholars working together to translate Arabic scientific and philosophical texts into Latin, the intellectual transmission that gave Europe Aristotle, algebra, and Arabic numerals. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#2C1A00"
+      ],
+      "duration_sec": 52,
+      "scene_number": 35
+    },
+    {
+      "type": "detail",
+      "title": "Why the Muslim Advance Stopped \u2014 The Bigger Picture",
+      "narration": "Tours was not the only reason Muslim expansion into Europe slowed. The Umayyad Caliphate was facing a major internal crisis: the Abbasid Revolution of 750 AD overthrew the Umayyad dynasty, fragmenting the unified Islamic world. The logistics of supplying an army across the Pyrenees were already straining capacity. Berber revolts in North Africa in 740 AD were pulling resources back. The Muslim commanders in Spain were fighting each other as much as the Franks. Tours was one factor in a complex situation \u2014 perhaps the decisive military factor on the Western front, but not the sole cause of the expansion's limit. History rarely has single causes for large events.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Political map of the Islamic world in 740-750 AD showing the Abbasid Revolution overthrowing the Umayyads, Berber revolts in North Africa, internal fragmentation, all occurring at the same time Charles Martel was fighting at Tours \u2014 the multiple causes of the expansion's limit. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#1A2A3D",
+        "#C9A227"
+      ],
+      "duration_sec": 52,
+      "scene_number": 36
+    },
+    {
+      "type": "legacy",
+      "title": "Tours in Modern Political Rhetoric",
+      "narration": "The Battle of Tours has been repeatedly invoked in modern European political discourse about Islam and immigration. Far-right political movements cite it as proof of eternal civilizational conflict. The citation misrepresents both the battle and its context: the Muslim advance was not primarily religious but imperial, just as the Frankish defense was not primarily Christian but territorial. Both sides had complex, internally diverse motivations. The use of Tours as a civilizational metaphor tells us more about contemporary anxieties than about 8th-century events. History offers us almost unlimited material for whatever story we've already decided to tell.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Modern political demonstrations in Europe invoking the Battle of Tours with flags and symbols, the medieval battle being used to argue for contemporary anti-immigration positions, the gap between historical reality and political mythology. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#8B1A1A",
+        "#1A2A3D"
+      ],
+      "duration_sec": 52,
+      "scene_number": 37
+    },
+    {
+      "type": "close",
+      "title": "The Hammer's Legacy",
+      "narration": "Charles Martel died without a royal title but with a kingdom more secure than any his predecessors had held. He had unified the Franks, defeated the Muslim advance, and created the military and economic system \u2014 feudalism \u2014 that would organize European society for five hundred years. His grandson became the most powerful ruler in European history since the Western Roman Empire. The Battle of Tours was one element of his achievement \u2014 perhaps the most dramatic, but not the most consequential. The most consequential was that he made the Frankish kingdom strong enough to transmit itself. Empires are built by warriors. They're sustained by systems. Charles Martel built both.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Charles Martel surveying his kingdom after Tours \u2014 the unified Frankish realm he had built through two decades of warfare, the military system he had created, the dynasty he had established, the legacy that would produce Charlemagne and medieval Europe. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#2C1A00",
+        "#0D1520"
+      ],
+      "duration_sec": 56,
+      "scene_number": 38
+    },
+    {
+      "type": "detail",
+      "title": "Eudo of Aquitaine \u2014 The Duke Who Called for Help",
+      "narration": "Before Charles Martel, the first Christian force to face the Muslim advance into France was Eudo, Duke of Aquitaine. In 721 AD, he had defeated a Muslim force at Toulouse \u2014 a victory that slowed but didn't stop the expansion. In 732, Abdul Rahman's larger force defeated Eudo at the Battle of the River Garonne and burned Bordeaux. Eudo fled north and appealed to his enemy Charles Martel for help. The two men had been fighting each other for years. Martel agreed to fight on condition that Eudo submit to Frankish suzerainty. Eudo accepted. The alliance that stopped the Muslim advance at Tours was assembled from men who had been trying to destroy each other weeks earlier.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Duke Eudo of Aquitaine arriving at Charles Martel's court as a supplicant after his defeat at Bordeaux, the man who had been Martel's enemy asking for military help, the pragmatic alliance assembled from former enemies to face a common threat. 16:9 cinematic.",
+      "bg_colors": [
+        "#3D3020",
+        "#2C1A00",
+        "#8B1A1A"
+      ],
+      "duration_sec": 52,
+      "scene_number": 39
+    },
+    {
+      "type": "detail",
+      "title": "The Muslim Army's Composition",
+      "narration": "Abdul Rahman Al Ghafiqi's force was not purely Arab. It included Berbers from North Africa, Moors from Spain, and Arab warriors \u2014 a coalition army of the Umayyad Caliphate's diverse subjects. Many were motivated by religious conviction; others by the prospect of plunder. The army carried enormous amounts of looted treasure from its raids through Aquitaine. It was this plunder \u2014 and the need to protect it \u2014 that complicated its tactical options when facing the Franks. An army carrying a baggage train of wealth moves differently than one traveling light. The treasure that was the point of the campaign also constrained how the army could fight.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The Muslim army marching through Aquitaine loaded with looted treasure from Bordeaux and surrounding towns, the diverse coalition of Arabs, Berbers, and Moors, the plunder that would complicate their tactical options at Tours. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#2C1A00",
+        "#8B1A1A"
+      ],
+      "duration_sec": 52,
+      "scene_number": 40
+    },
+    {
+      "type": "detail",
+      "title": "The Geography \u2014 Why the Site Mattered",
+      "narration": "The battle was fought between the cities of Tours and Poitiers, near the confluence of the Vienne and Clain rivers. Charles Martel chose terrain that blocked the direct route north toward the Loire valley \u2014 beyond which lay the heart of the Frankish kingdom, Paris, and the major ecclesiastical centers. The wooded, hilly ground he selected limited Muslim cavalry's mobility. He positioned his army on a ridge that forced the Muslim force to attack uphill. Medieval commanders understood topography as thoroughly as modern ones; the difference is they had to assess it personally rather than by satellite. Charles walked the ground before he fought on it.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Map of the Battle of Tours location between the cities of Tours and Poitiers, Charles Martel's army positioned on wooded high ground blocking the route north toward the Loire Valley and the Frankish heartland. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#1A2A3D",
+        "#3D3020"
+      ],
+      "duration_sec": 52,
+      "scene_number": 41
+    },
+    {
+      "type": "detail",
+      "title": "How Charles Martel Paid for His Army",
+      "narration": "Charles Martel's military reforms required professional soldiers who fought year-round \u2014 not seasonal levies who went home to harvest. Professional soldiers required pay. Pay required revenue. Charles solved the revenue problem by seizing Church lands and distributing them to warriors as benefices (land grants in exchange for military service). This was technically illegal \u2014 Church property was considered inviolable \u2014 and it created lasting hostility between the Carolingian dynasty and the papacy. It also created feudalism. The institution that would organize European society for 500 years was invented to solve a military payroll problem. Charles Martel's practical necessity became civilization's organizing principle.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Charles Martel meeting with Church bishops, taking their lands by force over their objections, distributing the confiscated estates to warriors in exchange for military service \u2014 the birth of European feudalism as a military finance system. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#2C1A00",
+        "#0D1520"
+      ],
+      "duration_sec": 52,
+      "scene_number": 42
+    },
+    {
+      "type": "detail",
+      "title": "The Frankish Weapons System",
+      "narration": "The Frankish soldier of the 730s carried a francisca \u2014 a throwing axe \u2014 along with a spear and a scramasax (short sword). Frankish shields were round, relatively small, and designed for offensive fighting rather than the large defensive shields of the hoplite tradition. The Frankish formation was not as rigidly geometric as the Greek phalanx; it was more flexible, better suited to broken terrain. What it shared with the phalanx was cohesion: Frankish warriors trained together, knew each other by name, and trusted each other not to break. Unit cohesion is the variable that military training exists to create. Charles Martel had been building it through a decade of civil warfare before Tours.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Frankish warriors of 732 AD with their francisca throwing axes, round shields, and spears \u2014 the weapons system of Charles Martel's professional army, honed through a decade of civil war before being deployed against the Muslim advance. 16:9 cinematic.",
+      "bg_colors": [
+        "#3D3020",
+        "#2C1A00",
+        "#8B1A1A"
+      ],
+      "duration_sec": 52,
+      "scene_number": 43
+    },
+    {
+      "type": "detail",
+      "title": "Subsequent Muslim Raids \u2014 Tours Was Not the End",
+      "narration": "The Battle of Tours ended Abdul Rahman's campaign but not Muslim raiding into France. In 734, Muslim forces captured Avignon. In 735-737, Narbonne and other southern cities were contested. Charles Martel fought at least four more campaigns against Muslim forces in southern France between 735 and 739. He never lost a major engagement. The frontier that Tours established was defended, consolidated, and eventually pushed south over the following decades. Tours was not the end of the conflict; it was the beginning of a military resolution that took thirty more years of fighting to complete. History prefers decisive battles to grinding campaigns.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Charles Martel's campaigns in southern France after Tours \u2014 fighting at Avignon, Narbonne, and across Provence to push the Muslim frontier back to the Pyrenees, the grinding thirty-year military consolidation that Tours began. 16:9 cinematic.",
+      "bg_colors": [
+        "#8B1A1A",
+        "#3D3020",
+        "#C9A227"
+      ],
+      "duration_sec": 52,
+      "scene_number": 44
+    },
+    {
+      "type": "history",
+      "title": "The Abbasid Revolution \u2014 Timing That Saved Europe",
+      "narration": "In 750 AD \u2014 eighteen years after Tours \u2014 the Abbasid Revolution overthrew the Umayyad Caliphate. The Umayyads were killed almost entirely; one survivor, Abd al-Rahman I, fled to Spain and established an independent Umayyad emirate at C\u00f3rdoba. The unified Islamic world fractured into competing power centers: the Abbasid Caliphate in Baghdad, the Umayyad emirate in Spain, and various regional powers. A fractured Islamic world could not mount the coordinated effort that a full Umayyad Caliphate might have directed against France. Tours weakened the will for western expansion; the Abbasid Revolution removed the institutional capacity. Both things were necessary.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The Abbasid Revolution of 750 AD \u2014 the killing of the Umayyad dynasty, the single surviving Umayyad prince fleeing to Spain, the fracturing of the united Islamic world that ended any possibility of renewed large-scale expansion into Europe. 16:9 cinematic.",
+      "bg_colors": [
+        "#8B1A1A",
+        "#0D1520",
+        "#C9A227"
+      ],
+      "duration_sec": 52,
+      "scene_number": 45
+    },
+    {
+      "type": "analysis",
+      "title": "Edward Gibbon's Claim \u2014 Was He Right?",
+      "narration": "In 1776, Edward Gibbon wrote that if the Muslim advance hadn't been stopped at Tours, Oxford might be teaching the Koran rather than the Bible. This claim has been debated by every serious historian since. Critics note that Gibbon was projecting backwards \u2014 the Umayyad Caliphate was already overstretched, the Abbasid Revolution would have changed everything, and the Franks had other defensive positions. Defenders note that no power before the Franks had successfully stopped a major Muslim advance, that the Loire valley north of Tours contained the Frankish heartland, and that without the Frankish military system, resistance to further expansion was unclear. Gibbon was certainly exaggerating. He was not certainly wrong.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Edward Gibbon writing 'The Decline and Fall of the Roman Empire' in the 18th century, his famous counterfactual about Tours in the margin, the historian who gave the battle its modern significance and the debate it provoked. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#2C2A1A"
+      ],
+      "duration_sec": 52,
+      "scene_number": 46
+    },
+    {
+      "type": "detail",
+      "title": "Charles Martel and the Pope",
+      "narration": "Charles Martel never went to Rome and never reconciled with the papacy over the Church lands he had seized. Pope Gregory III, who needed Frankish military help against the Lombards, wrote to Charles asking for alliance. Charles ignored him. His son Pepin III eventually formed the alliance the papacy wanted, receiving papal recognition as king in exchange for military support. The deal Pepin made with Rome created the Papal States and established the model of Church-state cooperation that defined medieval European governance for centuries. The foundation of this system was Charles Martel's victory at Tours, which made the Franks the only power capable of protecting the papacy, even though Charles himself remained too pragmatic to pursue the alliance.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Pope Gregory III writing to Charles Martel asking for military alliance against the Lombards, Charles's pragmatic non-response, the political calculation that his son Pepin would complete to create the medieval Church-state partnership. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#2C2A1A"
+      ],
+      "duration_sec": 52,
+      "scene_number": 47
+    },
+    {
+      "type": "analysis",
+      "title": "Islamic Spain's Cultural Gift \u2014 The Numbers",
+      "narration": "Al-Andalus transmitted specific, documentable knowledge to Europe. The Arabic numeral system \u2014 including zero \u2014 reached Europe through Spain, replacing Roman numerals and making complex mathematics possible. Algebra was developed by Al-Khwarizmi in Baghdad and transmitted through Al-Andalus. Astronomical tables used by European navigators until the 17th century were Arabic. The medical texts of Ibn Sina (Avicenna) were standard European medical education until the 1700s. The natural philosophy of Averroes (Ibn Rushd) was essential to the development of European scholastic philosophy. The civilization that Tours supposedly stopped from conquering Europe was also the channel through which Europe received the intellectual tools to build its own civilization.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Toledo translation school \u2014 Christian scholars translating Arabic texts on astronomy, mathematics, medicine and philosophy into Latin, the intellectual pipeline from Al-Andalus to Europe that would fuel the Renaissance. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#2C1A00"
+      ],
+      "duration_sec": 52,
+      "scene_number": 48
+    },
+    {
+      "type": "detail",
+      "title": "The Iberian Military Orders \u2014 Reconquista's Engine",
+      "narration": "The 761-year Reconquista produced Spain's military religious orders \u2014 the Order of Santiago, the Order of Calatrava, the Order of Alc\u00e1ntara. These were military brotherhoods modeled on the Crusader orders, dedicated to fighting Islam and rewarded with captured territory. They accumulated enormous wealth and political power. When Ferdinand and Isabella completed the Reconquista in 1492 and sought warriors for overseas exploration, the military orders provided trained soldiers with a culture of holy warfare. The conquistadors who conquered Mexico and Peru came from the same warrior culture that the Reconquista had created. Tours initiated a military tradition that ended up conquering the Americas.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Spanish military order knights in their distinctive habits \u2014 the Order of Santiago, the Order of Calatrava \u2014 the Reconquista's warrior-monks whose culture of holy warfare would eventually produce the conquistadors who crossed the Atlantic. 16:9 cinematic.",
+      "bg_colors": [
+        "#8B1A1A",
+        "#C9A227",
+        "#2C1A00"
+      ],
+      "duration_sec": 52,
+      "scene_number": 49
+    },
+    {
+      "type": "detail",
+      "title": "Charles Martel's Legacy \u2014 The Man Behind the Myth",
+      "narration": "Charles Martel died in 741 having never been crowned king. His division of the Frankish kingdom between his sons \u2014 Carloman and Pepin \u2014 initially seemed to risk the unity he had built. Carloman became a monk within four years. Pepin became king with papal blessing. The succession worked partly because Charles had built institutions \u2014 the feudal military system, the professional cavalry, the administrative network \u2014 that could survive a generation transition. Great men sometimes build systems that outlast themselves. Charles Martel built a better one than most.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Charles Martel on his deathbed, dividing his kingdom between his sons without a royal title, the man who had saved Europe dying as mayor of the palace, his institutional innovations already running without him. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#2C1A00",
+        "#0D1520"
+      ],
+      "duration_sec": 52,
+      "scene_number": 50
+    },
+    {
+      "type": "detail",
+      "title": "Tours in the Crusades \u2014 The Connection",
+      "narration": "The First Crusade was called in 1095 \u2014 363 years after Tours. Pope Urban II's call at Clermont drew heavily on the cultural vocabulary that centuries of conflict in Spain and the memory of battles like Tours had created: holy war, Christian defense against Islam, the recovery of sacred territory. The Crusader armies were predominantly Frankish \u2014 the descendants of the culture Charles Martel had defended and transmitted. The theology of crusade was developed partly from the practical necessity of justifying the violence that battles like Tours had required. The fight to defend Christian Europe that Tours exemplified became, three centuries later, the fight to recover Christian territory.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Pope Urban II calling the First Crusade at Clermont 1095, the Frankish knights responding with crusading fervor \u2014 the cultural and theological tradition that began with Charles Martel's defensive wars finding its most ambitious expression 363 years later. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#8B1A1A",
+        "#0D1520"
+      ],
+      "duration_sec": 52,
+      "scene_number": 51
+    },
+    {
+      "type": "analysis",
+      "title": "What the Muslim Chronicles Say About Tours",
+      "narration": "Arabic sources for the Battle of Tours are limited and sometimes contradictory. The most detailed account describes the Franks as 'a sea of ice' that couldn't be moved \u2014 a description that aligns with what we know of the Frankish shield wall. Arabic sources record Abdul Rahman's death clearly. They do not record the battle as a catastrophic defeat of the kind Western sources describe; some treat it as a rear-guard action during withdrawal. This may reflect genuine historical difference of emphasis \u2014 the Umayyad Caliphate had many frontiers \u2014 or it may reflect the awkwardness of recording a significant defeat. History is always written by survivors with reasons to interpret as well as record.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Arab scholars in a medieval library recording the 732 campaign into France, the battle mentioned briefly in contrast to Western sources that call it decisive, the asymmetric historical significance of the same event seen from opposite sides. 16:9 cinematic.",
+      "bg_colors": [
+        "#2C1A00",
+        "#0D1520",
+        "#C9A227"
+      ],
+      "duration_sec": 52,
+      "scene_number": 52
+    },
+    {
+      "type": "legacy",
+      "title": "Tours and European Identity \u2014 The Long Echo",
+      "narration": "The Battle of Tours has been used to define European and Christian identity since at least the 9th century, when Carolingian court historians described it as a defense of Christendom. That framing has proved remarkably durable: it appeared in the Crusades, in Renaissance historiography, in 19th-century nationalist narratives, and in contemporary political rhetoric. The battle's meaning has been reconstructed by each era to serve its current needs. What it actually was \u2014 a military engagement between a Frankish warlord and an Umayyad raiding force on a river plain in France \u2014 has been almost completely buried under the meaning it has been made to carry. That is what historical significance means: events acquiring weight they couldn't have possessed at the time.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The long journey of Tours through European historical consciousness \u2014 from Carolingian court history through Crusader chronicles through Renaissance nationalism through modern political rhetoric \u2014 the battle acquiring meaning it couldn't have had in 732 AD. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#1A2A3D"
+      ],
+      "duration_sec": 52,
+      "scene_number": 53
+    },
+    {
+      "type": "detail",
+      "title": "The Frankish Cavalry \u2014 Charles's New Weapon",
+      "narration": "Charles Martel used Tours to develop the heavy cavalry that would define medieval European warfare. After Tours, he invested systematically in mounted knights \u2014 expensive to equip, requiring years of training, needing large land grants to sustain. The Carolingian cavalry was the military cutting edge of Europe for the next two centuries. It produced the feudal knight as the dominant military figure. Tours was fought largely by infantry; the campaigns that followed used the cavalry Tours helped fund and legitimize. The battle was a tactical infantry victory that produced a strategic cavalry revolution.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Frankish heavy cavalry being trained and equipped after Tours \u2014 the systematic military investment that Charles Martel's victory enabled, the expensive mounted knights who would dominate European warfare for the next 500 years. 16:9 cinematic.",
+      "bg_colors": [
+        "#3D3020",
+        "#C9A227",
+        "#2C1A00"
+      ],
+      "duration_sec": 52,
+      "scene_number": 54
+    },
+    {
+      "type": "detail",
+      "title": "The Spanish March \u2014 Charlemagne's Buffer Zone",
+      "narration": "Charlemagne, building on his grandfather's work, established the Spanish March \u2014 a buffer zone of fortified territories south of the Pyrenees. It included Barcelona, Girona, and Pamplona. This march \u2014 a military frontier zone governed by Margraves \u2014 was the institutional response to the threat Tours had identified. The concept of the fortified march became a template for Carolingian frontier management across Europe: the Danish March, the Ostmark (later Austria), the Breton March. The administrative solution to the Tours problem shaped European geography for centuries. Austria \u2014 one of Tours's ultimate institutional descendants \u2014 exists because Charles Martel needed a way to manage frontier warfare.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Charlemagne establishing the Spanish March \u2014 the fortified buffer zone south of the Pyrenees, the administrative solution to the Tours problem that became a template for Carolingian frontier governance across Europe. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#3D3020"
+      ],
+      "duration_sec": 52,
+      "scene_number": 55
+    },
+    {
+      "type": "legacy",
+      "title": "The Reconquista Ends \u2014 1492 and What Followed",
+      "narration": "The fall of Granada in January 1492 \u2014 760 years after Tours \u2014 was the final moment of the Reconquista. Ferdinand and Isabella accepted the surrender of Muhammad XII (Boabdil), the last Muslim king of Spain. Eight months later, Columbus sailed west from Palos. The same institutional structure \u2014 the Castilian crown with its military orders, its religious conviction, its experience of holy warfare \u2014 that had fought the Reconquista funded the discovery of the Americas. The civilization that Tours helped preserve expanded globally in 1492. The battle that stopped Islam from reaching Paris in 732 was one link in the chain that connected to Tenochtitlan in 1521.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The fall of Granada January 1492 \u2014 Boabdil surrendering to Ferdinand and Isabella, the last Moorish kingdom in Spain ending 760 years after Tours, eight months before Columbus sailed, the chain of consequence from one battle to a world. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#8B1A1A",
+        "#0D1520"
+      ],
+      "duration_sec": 56,
+      "scene_number": 56
     }
   ]
 }

@@ -1,0 +1,1652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Little Olympus Studio</title>
+<style>
+:root {
+  --bg: #080D1A;
+  --surface: #0F1629;
+  --surface2: #162035;
+  --border: #1E2D4A;
+  --border2: #243352;
+  --purple: #7C3AED;
+  --purple-light: #9B5CF6;
+  --gold: #F59E0B;
+  --gold-light: #FCD34D;
+  --green: #10B981;
+  --red: #EF4444;
+  --blue: #3B82F6;
+  --text: #E2E8F0;
+  --text-muted: #64748B;
+  --text-dim: #94A3B8;
+  font-size: 14px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: var(--bg); color: var(--text); font-family: system-ui, -apple-system, sans-serif; height: 100vh; display: flex; flex-direction: column; overflow: hidden; }
+
+/* Header */
+#header { background: var(--surface); border-bottom: 1px solid var(--border); padding: 0 16px; height: 48px; display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+#header .logo { font-size: 18px; font-weight: 700; color: var(--gold); letter-spacing: -0.5px; }
+#header .logo span { color: var(--purple-light); }
+#header .proj-name { background: var(--surface2); border: 1px solid var(--border); border-radius: 6px; padding: 4px 10px; font-size: 12px; color: var(--text-dim); cursor: pointer; min-width: 120px; }
+#header .spacer { flex: 1; }
+.status-dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+.status-dot.green { background: var(--green); box-shadow: 0 0 6px var(--green); }
+.status-dot.red { background: var(--red); }
+.status-dot.yellow { background: var(--gold); box-shadow: 0 0 6px var(--gold); }
+#header .status-badge { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--text-muted); padding: 4px 10px; background: var(--surface2); border: 1px solid var(--border); border-radius: 6px; }
+
+/* Layout */
+#layout { display: flex; flex: 1; overflow: hidden; }
+
+/* Sidebar */
+#sidebar { width: 200px; background: var(--surface); border-right: 1px solid var(--border); padding: 12px 8px; display: flex; flex-direction: column; gap: 2px; flex-shrink: 0; overflow-y: auto; }
+.nav-item { display: flex; align-items: center; gap: 10px; padding: 8px 12px; border-radius: 8px; cursor: pointer; font-size: 13px; color: var(--text-muted); transition: all 0.15s; user-select: none; }
+.nav-item:hover { background: var(--surface2); color: var(--text); }
+.nav-item.active { background: rgba(124,58,237,0.2); color: var(--purple-light); border: 1px solid rgba(124,58,237,0.3); }
+.nav-item .icon { width: 20px; text-align: center; }
+.nav-section { font-size: 10px; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted); padding: 12px 12px 4px; }
+
+/* Main content */
+#main { flex: 1; overflow: hidden; display: flex; flex-direction: column; }
+.page { display: none; flex: 1; overflow: hidden; }
+.page.active { display: flex; flex-direction: column; }
+
+/* Cards */
+.card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 16px; }
+.card-header { font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+.card-header .icon { font-size: 16px; }
+
+/* Scrollable content area */
+.scroll-area { flex: 1; overflow-y: auto; padding: 16px; display: flex; flex-direction: column; gap: 12px; }
+.scroll-area::-webkit-scrollbar { width: 6px; } .scroll-area::-webkit-scrollbar-track { background: transparent; } .scroll-area::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+/* Buttons */
+.btn { padding: 8px 16px; border-radius: 8px; border: none; cursor: pointer; font-size: 13px; font-weight: 500; transition: all 0.15s; display: inline-flex; align-items: center; gap: 6px; }
+.btn-primary { background: var(--purple); color: white; }
+.btn-primary:hover { background: var(--purple-light); }
+.btn-primary:disabled { opacity: 0.5; cursor: not-allowed; }
+.btn-gold { background: var(--gold); color: #0A0E1A; }
+.btn-gold:hover { background: var(--gold-light); }
+.btn-outline { background: transparent; color: var(--text-dim); border: 1px solid var(--border); }
+.btn-outline:hover { border-color: var(--border2); color: var(--text); }
+.btn-green { background: var(--green); color: white; }
+.btn-sm { padding: 5px 10px; font-size: 12px; }
+.btn-lg { padding: 12px 24px; font-size: 15px; font-weight: 600; border-radius: 10px; }
+
+/* Form elements */
+input, textarea, select { background: var(--surface2); border: 1px solid var(--border); border-radius: 8px; color: var(--text); padding: 8px 12px; font-size: 13px; font-family: inherit; outline: none; width: 100%; transition: border-color 0.15s; }
+input:focus, textarea:focus, select:focus { border-color: var(--purple); }
+textarea { resize: vertical; min-height: 70px; }
+label { font-size: 12px; color: var(--text-muted); display: block; margin-bottom: 4px; }
+.form-row { display: flex; gap: 10px; }
+.form-row > * { flex: 1; }
+.form-group { display: flex; flex-direction: column; gap: 4px; }
+
+/* Tags / character chips */
+.char-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
+.char-chip { padding: 4px 10px; border-radius: 20px; font-size: 12px; cursor: pointer; border: 1px solid var(--border); color: var(--text-muted); transition: all 0.15s; user-select: none; }
+.char-chip.selected { border-color: var(--purple); color: var(--purple-light); background: rgba(124,58,237,0.15); }
+
+/* ── PIPELINE PAGE ─────────────────────────────────────────────────── */
+#page-pipeline { flex-direction: row; }
+.pipeline-input { width: 320px; border-right: 1px solid var(--border); padding: 16px; overflow-y: auto; flex-shrink: 0; display: flex; flex-direction: column; gap: 12px; }
+.pipeline-input h2 { font-size: 15px; font-weight: 700; color: var(--text); }
+.pipeline-input .sub { font-size: 11px; color: var(--text-muted); margin-top: -8px; }
+.pipeline-right { flex: 1; display: flex; flex-direction: column; overflow: hidden; }
+.pipeline-toolbar { padding: 12px 16px; border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+.pipeline-body { flex: 1; overflow-y: auto; padding: 16px; display: flex; flex-direction: column; gap: 10px; }
+
+/* Pipeline steps */
+.step-card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; transition: border-color 0.2s; }
+.step-card.running { border-color: var(--purple); }
+.step-card.done { border-color: rgba(16,185,129,0.4); }
+.step-card.error { border-color: rgba(239,68,68,0.4); }
+.step-header { padding: 10px 14px; display: flex; align-items: center; gap: 10px; cursor: pointer; user-select: none; }
+.step-icon { font-size: 18px; width: 24px; text-align: center; }
+.step-name { font-size: 13px; font-weight: 600; flex: 1; }
+.step-status { font-size: 11px; color: var(--text-muted); display: flex; align-items: center; gap: 6px; }
+.step-status.running { color: var(--purple-light); }
+.step-status.done { color: var(--green); }
+.step-status.error { color: var(--red); }
+.step-time { font-size: 11px; color: var(--text-muted); }
+.step-body { padding: 12px 14px; border-top: 1px solid var(--border); background: var(--surface2); display: none; }
+.step-body.open { display: block; }
+.step-body pre { white-space: pre-wrap; word-break: break-word; font-family: 'Consolas', monospace; font-size: 11px; color: var(--text-dim); max-height: 300px; overflow-y: auto; }
+.step-body .output-grid { display: grid; gap: 8px; }
+.step-body .output-item { background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 8px 10px; }
+.step-body .output-item h4 { font-size: 11px; color: var(--text-muted); margin-bottom: 4px; }
+.step-body .output-item p { font-size: 12px; color: var(--text); }
+.spinner { width: 12px; height: 12px; border: 2px solid rgba(124,58,237,0.3); border-top-color: var(--purple); border-radius: 50%; animation: spin 0.8s linear infinite; display: inline-block; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* Export panel */
+.export-panel { background: linear-gradient(135deg, rgba(124,58,237,0.1), rgba(245,158,11,0.08)); border: 1px solid rgba(124,58,237,0.3); border-radius: 10px; padding: 20px; text-align: center; }
+.export-panel h3 { font-size: 18px; font-weight: 700; color: var(--gold); margin-bottom: 8px; }
+.export-panel p { font-size: 12px; color: var(--text-muted); margin-bottom: 16px; }
+.export-actions { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; }
+.file-list { text-align: left; margin-top: 12px; display: flex; flex-direction: column; gap: 4px; }
+.file-list span { font-size: 11px; color: var(--text-dim); display: flex; align-items: center; gap: 6px; }
+
+/* ── CHARACTER BIBLE ────────────────────────────────────────────────── */
+.char-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px; }
+.char-card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 16px; transition: border-color 0.2s; }
+.char-card:hover { border-color: var(--border2); }
+.char-card .char-name { font-size: 15px; font-weight: 700; margin-bottom: 2px; }
+.char-card .char-role { font-size: 11px; color: var(--text-muted); margin-bottom: 10px; }
+.char-card .char-section { font-size: 11px; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; margin-top: 10px; margin-bottom: 4px; }
+.char-card .char-text { font-size: 12px; color: var(--text-dim); line-height: 1.6; }
+.char-card .char-catchphrase { font-size: 12px; color: var(--gold); font-style: italic; margin-top: 8px; padding: 6px 10px; background: rgba(245,158,11,0.08); border-radius: 6px; border-left: 3px solid var(--gold); }
+.color-swatches { display: flex; gap: 4px; margin-top: 8px; }
+.color-swatch { width: 18px; height: 18px; border-radius: 4px; }
+
+/* ── WORLD BIBLE ────────────────────────────────────────────────────── */
+.location-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 12px; }
+.location-card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 16px; }
+.location-card .loc-name { font-size: 14px; font-weight: 700; margin-bottom: 4px; }
+.location-card .loc-desc { font-size: 12px; color: var(--text-dim); line-height: 1.6; margin-bottom: 8px; }
+.location-card .loc-mood { font-size: 11px; color: var(--text-muted); font-style: italic; }
+
+/* ── EPISODE HISTORY ─────────────────────────────────────────────────── */
+.ep-search { padding: 12px 16px; border-bottom: 1px solid var(--border); flex-shrink: 0; }
+.ep-search input { max-width: 400px; }
+.ep-list { flex: 1; overflow-y: auto; }
+.ep-item { padding: 12px 16px; border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 12px; cursor: pointer; transition: background 0.1s; }
+.ep-item:hover { background: var(--surface2); }
+.ep-num { font-size: 11px; color: var(--text-muted); min-width: 50px; font-family: monospace; }
+.ep-title { font-size: 13px; font-weight: 500; flex: 1; }
+.ep-meta { font-size: 11px; color: var(--text-muted); display: flex; gap: 10px; }
+.ep-badge { font-size: 10px; padding: 2px 8px; border-radius: 10px; background: var(--surface2); border: 1px solid var(--border); color: var(--text-muted); }
+
+/* ── STORY ARC PLANNER ──────────────────────────────────────────────── */
+.arc-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 8px; }
+.arc-slot { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 12px; min-height: 80px; cursor: pointer; transition: border-color 0.15s; }
+.arc-slot:hover { border-color: var(--purple); }
+.arc-slot .ep-label { font-size: 10px; color: var(--text-muted); font-family: monospace; margin-bottom: 4px; }
+.arc-slot .ep-name { font-size: 12px; font-weight: 500; }
+.arc-slot.planned { border-color: rgba(245,158,11,0.4); background: rgba(245,158,11,0.05); }
+.arc-slot.written { border-color: rgba(124,58,237,0.4); background: rgba(124,58,237,0.05); }
+.arc-slot.rendered { border-color: rgba(16,185,129,0.4); background: rgba(16,185,129,0.05); }
+
+/* ── DASHBOARD ──────────────────────────────────────────────────────── */
+.dash-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 10px; margin-bottom: 12px; }
+.stat-card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 16px; }
+.stat-card .stat-num { font-size: 32px; font-weight: 700; color: var(--gold); }
+.stat-card .stat-label { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+.quick-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+
+/* ── EXPORT PAGE ────────────────────────────────────────────────────── */
+.export-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+
+/* Toasts */
+#toast-container { position: fixed; bottom: 16px; right: 16px; display: flex; flex-direction: column; gap: 8px; z-index: 1000; }
+.toast { padding: 10px 16px; border-radius: 8px; font-size: 13px; max-width: 320px; animation: slideIn 0.2s ease; }
+.toast.success { background: #065F46; border: 1px solid var(--green); color: #D1FAE5; }
+.toast.error { background: #7F1D1D; border: 1px solid var(--red); color: #FEE2E2; }
+.toast.info { background: #1E3A5F; border: 1px solid var(--blue); color: #BFDBFE; }
+@keyframes slideIn { from { transform: translateX(100%); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+
+/* Misc */
+.divider { border: none; border-top: 1px solid var(--border); margin: 4px 0; }
+.badge { font-size: 10px; padding: 2px 7px; border-radius: 10px; font-weight: 500; }
+.badge.purple { background: rgba(124,58,237,0.2); color: var(--purple-light); border: 1px solid rgba(124,58,237,0.3); }
+.badge.gold { background: rgba(245,158,11,0.15); color: var(--gold); border: 1px solid rgba(245,158,11,0.3); }
+.badge.green { background: rgba(16,185,129,0.15); color: var(--green); border: 1px solid rgba(16,185,129,0.3); }
+.scene-count-badge { font-size: 11px; color: var(--text-muted); }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div id="header">
+  <div class="logo">🎭 Little Olympus <span>Studio</span></div>
+  <div class="proj-name" id="proj-name-display" onclick="App.promptProjectName()">Untitled Project</div>
+  <div class="spacer"></div>
+  <div class="status-badge"><span class="status-dot" id="dot-ollama"></span> Ollama</div>
+  <div class="status-badge"><span class="status-dot" id="dot-openai"></span> OpenAI</div>
+  <div class="status-badge" id="ep-count-badge">— eps</div>
+</div>
+
+<!-- LAYOUT -->
+<div id="layout">
+
+  <!-- SIDEBAR -->
+  <nav id="sidebar">
+    <div class="nav-section">Create</div>
+    <div class="nav-item active" data-page="pipeline" onclick="App.navigate('pipeline')">
+      <span class="icon">⚡</span> Production Pipeline
+    </div>
+    <div class="nav-item" data-page="arc" onclick="App.navigate('arc')">
+      <span class="icon">🗺️</span> Story Arc Planner
+    </div>
+    <div class="nav-section">Bible</div>
+    <div class="nav-item" data-page="characters" onclick="App.navigate('characters')">
+      <span class="icon">🎭</span> Character Bible
+    </div>
+    <div class="nav-item" data-page="world" onclick="App.navigate('world')">
+      <span class="icon">🏛️</span> World Bible
+    </div>
+    <div class="nav-section">Library</div>
+    <div class="nav-item" data-page="history" onclick="App.navigate('history')">
+      <span class="icon">📚</span> Episode History
+    </div>
+    <div class="nav-item" data-page="dashboard" onclick="App.navigate('dashboard')">
+      <span class="icon">📊</span> Dashboard
+    </div>
+  </nav>
+
+  <!-- MAIN -->
+  <main id="main">
+
+    <!-- ═══ PIPELINE PAGE ═══════════════════════════════════════════════════ -->
+    <div class="page active" id="page-pipeline">
+      <!-- LEFT: Input -->
+      <div class="pipeline-input">
+        <div>
+          <h2>⚡ Episode Generator</h2>
+          <p class="sub">One click → complete production package</p>
+        </div>
+
+        <div class="form-group">
+          <label>Episode Title</label>
+          <input id="in-title" type="text" placeholder="e.g. Little Zeus and the Lost Thunderbolt">
+        </div>
+
+        <div class="form-group">
+          <label>Episode Idea</label>
+          <textarea id="in-idea" rows="3" placeholder="What happens? Who's involved? What goes wrong? Keep it simple — Ollama does the rest."></textarea>
+        </div>
+
+        <div class="form-group">
+          <label>Lesson for Kids</label>
+          <input id="in-lesson" type="text" placeholder="e.g. It's okay to ask for help">
+        </div>
+
+        <div class="form-group">
+          <label>Characters</label>
+          <div class="char-chips" id="char-selector">
+            <div class="char-chip selected" data-char="Little Zeus">👑 Little Zeus</div>
+            <div class="char-chip selected" data-char="Baby Hercules">💪 Baby Hercules</div>
+            <div class="char-chip selected" data-char="Athena">🦉 Athena</div>
+            <div class="char-chip" data-char="Little Perseus">🛡️ Perseus</div>
+            <div class="char-chip" data-char="Young Achilles">⚡ Achilles</div>
+            <div class="char-chip" data-char="Mini Medusa">🐍 Medusa</div>
+            <div class="char-chip" data-char="Uncle Hades">💀 Hades</div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Episode Duration</label>
+          <select id="in-duration">
+            <option value="5">Standard — 4-6 min (~18 scenes)</option>
+            <option value="10">Extended — 10-12 min (~30 scenes)</option>
+            <option value="20">Feature — 15-20 min (~54 scenes)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Episode Number (optional)</label>
+          <input id="in-ep-num" type="number" min="1" placeholder="e.g. 41">
+        </div>
+
+        <hr class="divider">
+
+        <button class="btn btn-gold btn-lg" id="btn-generate" onclick="Pipeline.start()" style="width:100%">
+          ⚡ Generate Full Episode
+        </button>
+        <button class="btn btn-outline btn-sm" id="btn-cancel" onclick="Pipeline.cancel()" style="display:none; width:100%">
+          ✕ Cancel
+        </button>
+
+        <div id="quick-actions" style="display:none; margin-top:4px;">
+          <p style="font-size:11px;color:var(--text-muted);margin-bottom:6px;">Quick generate:</p>
+          <div style="display:flex;gap:6px;flex-wrap:wrap;">
+            <button class="btn btn-outline btn-sm" onclick="Pipeline.runStep('research')">🔬 Research Only</button>
+            <button class="btn btn-outline btn-sm" onclick="Pipeline.runStep('outline')">📋 Outline Only</button>
+            <button class="btn btn-outline btn-sm" onclick="Pipeline.runStep('seo')">📊 SEO Only</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: Pipeline steps -->
+      <div class="pipeline-right">
+        <div class="pipeline-toolbar">
+          <span style="font-size:13px;font-weight:600;color:var(--text)">Production Pipeline</span>
+          <div class="spacer"></div>
+          <span id="pipeline-status-text" style="font-size:12px;color:var(--text-muted)">Ready</span>
+        </div>
+
+        <div class="pipeline-body" id="pipeline-body">
+          <!-- Steps rendered by JS -->
+          <div id="pipeline-placeholder" style="text-align:center;padding:60px 20px;">
+            <div style="font-size:48px;margin-bottom:12px;">🎬</div>
+            <div style="font-size:15px;font-weight:600;color:var(--text);margin-bottom:8px;">Ready to generate</div>
+            <div style="font-size:12px;color:var(--text-muted)">Fill in the episode details and click Generate.<br>The pipeline runs: Research → Outline → Script → Prompts → Music → Voice → SEO → Export</div>
+          </div>
+
+          <div id="pipeline-steps" style="display:none;"></div>
+          <div id="pipeline-export-panel" style="display:none;"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ CHARACTER BIBLE ══════════════════════════════════════════════════ -->
+    <div class="page" id="page-characters">
+      <div style="padding:12px 16px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:8px;flex-shrink:0;">
+        <span style="font-size:15px;font-weight:700;">🎭 Character Manager</span>
+        <span style="flex:1;"></span>
+        <span class="badge purple" id="char-count-badge">Loading…</span>
+        <button class="btn btn-gold btn-sm" onclick="CharManager.openAdd()">+ New Character</button>
+      </div>
+      <div class="scroll-area">
+        <div id="char-filter-bar" style="display:flex;gap:8px;padding:8px 0 4px;align-items:center;">
+          <input type="text" id="char-search" placeholder="Search characters…" class="input-field" style="flex:1;font-size:12px;padding:5px 10px;" oninput="CharManager.filter(this.value)">
+          <label style="font-size:12px;color:var(--text-muted);display:flex;align-items:center;gap:4px;cursor:pointer;">
+            <input type="checkbox" id="char-show-locked" checked onchange="CharManager.filter(document.getElementById('char-search').value)"> Show Bible
+          </label>
+        </div>
+        <div class="char-grid" id="char-grid"></div>
+      </div>
+    </div>
+
+    <!-- Character Editor Modal -->
+    <div id="char-modal-backdrop" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.7);z-index:1000;overflow-y:auto;" onclick="if(event.target===this)CharManager.closeModal()">
+      <div style="margin:40px auto;max-width:660px;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:24px;">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;">
+          <span style="font-size:16px;font-weight:700;" id="char-modal-title">New Character</span>
+          <span style="flex:1"></span>
+          <button class="btn btn-sm btn-outline" onclick="CharManager.closeModal()">✕ Close</button>
+        </div>
+
+        <!-- Reference image -->
+        <div style="display:flex;gap:16px;margin-bottom:16px;">
+          <div style="flex-shrink:0;">
+            <div id="char-img-preview" style="width:80px;height:80px;border-radius:10px;background:var(--surface2);border:2px dashed var(--border);display:flex;align-items:center;justify-content:center;font-size:28px;overflow:hidden;">🎭</div>
+            <input type="file" id="char-img-input" accept="image/*" style="display:none" onchange="CharManager.previewImage(this)">
+            <button class="btn btn-sm btn-outline" style="margin-top:4px;width:80px;font-size:10px;" onclick="document.getElementById('char-img-input').click()">📷 Image</button>
+          </div>
+          <div style="flex:1;display:flex;flex-direction:column;gap:8px;">
+            <input type="text" id="cm-name" placeholder="Character name *" class="input-field" style="font-size:13px;">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+              <input type="text" id="cm-age" placeholder="Age / apparent age" class="input-field" style="font-size:12px;">
+              <input type="text" id="cm-role" placeholder="Role (e.g. antagonist)" class="input-field" style="font-size:12px;">
+            </div>
+          </div>
+        </div>
+
+        <!-- Appearance -->
+        <div style="margin-bottom:10px;">
+          <div style="display:flex;align-items:center;gap:6px;margin-bottom:4px;">
+            <label style="font-size:12px;font-weight:600;color:var(--text-muted);">APPEARANCE</label>
+            <button class="btn btn-sm btn-outline" style="font-size:10px;padding:2px 8px;" onclick="CharManager.aiAppearance()">✨ AI Draft</button>
+          </div>
+          <textarea id="cm-appearance" rows="3" class="input-field" placeholder="Describe hair, eyes, clothing, accessories, signature items…" style="font-size:12px;resize:vertical;"></textarea>
+        </div>
+
+        <!-- Personality + Voice side-by-side -->
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px;">
+          <div>
+            <label style="font-size:12px;font-weight:600;color:var(--text-muted);display:block;margin-bottom:4px;">PERSONALITY</label>
+            <textarea id="cm-personality" rows="3" class="input-field" placeholder="3-5 traits, separated by commas" style="font-size:12px;resize:vertical;"></textarea>
+          </div>
+          <div>
+            <label style="font-size:12px;font-weight:600;color:var(--text-muted);display:block;margin-bottom:4px;">VOICE PROFILE</label>
+            <textarea id="cm-voice" rows="3" class="input-field" placeholder="Pitch, pace, quirks, delivery style…" style="font-size:12px;resize:vertical;"></textarea>
+          </div>
+        </div>
+
+        <!-- Catchphrase + Notes -->
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px;">
+          <div>
+            <label style="font-size:12px;font-weight:600;color:var(--text-muted);display:block;margin-bottom:4px;">CATCHPHRASE</label>
+            <input type="text" id="cm-catchphrase" class="input-field" placeholder='"Their signature line"' style="font-size:12px;">
+          </div>
+          <div>
+            <label style="font-size:12px;font-weight:600;color:var(--text-muted);display:block;margin-bottom:4px;">COLOR PALETTE (hex, comma-separated)</label>
+            <input type="text" id="cm-colors" class="input-field" placeholder="#F5E642, #4FC3F7" style="font-size:12px;">
+          </div>
+        </div>
+
+        <!-- Relationships -->
+        <div style="margin-bottom:10px;">
+          <label style="font-size:12px;font-weight:600;color:var(--text-muted);display:block;margin-bottom:4px;">RELATIONSHIPS (one per line: CharacterName: description)</label>
+          <textarea id="cm-relationships" rows="2" class="input-field" placeholder="Little Zeus: rivals but secretly respect each other" style="font-size:12px;resize:vertical;"></textarea>
+        </div>
+
+        <!-- Notes + Consistency Lock -->
+        <div style="display:grid;grid-template-columns:1fr auto;gap:8px;align-items:start;margin-bottom:16px;">
+          <div>
+            <label style="font-size:12px;font-weight:600;color:var(--text-muted);display:block;margin-bottom:4px;">NOTES</label>
+            <textarea id="cm-notes" rows="2" class="input-field" placeholder="Creator notes, special rules…" style="font-size:12px;resize:vertical;"></textarea>
+          </div>
+          <div style="padding-top:18px;">
+            <label style="display:flex;align-items:center;gap:6px;font-size:12px;cursor:pointer;white-space:nowrap;">
+              <input type="checkbox" id="cm-locked">
+              🔒 Consistency Lock
+            </label>
+            <div style="font-size:10px;color:var(--text-muted);margin-top:4px;max-width:130px;">Appearance injected into every image prompt</div>
+          </div>
+        </div>
+
+        <div style="display:flex;gap:8px;">
+          <button class="btn btn-gold" id="char-save-btn" onclick="CharManager.save()">💾 Save Character</button>
+          <button class="btn btn-outline" onclick="CharManager.aiTraits()">✨ AI Fill Traits</button>
+          <span style="flex:1"></span>
+          <button class="btn btn-outline" id="char-delete-btn" style="display:none;color:var(--red);border-color:var(--red);" onclick="CharManager.deleteChar()">🗑 Delete</button>
+        </div>
+        <div id="char-modal-status" style="margin-top:8px;font-size:12px;color:var(--text-muted);"></div>
+      </div>
+    </div>
+
+    <!-- ═══ WORLD BIBLE ═══════════════════════════════════════════════════════ -->
+    <div class="page" id="page-world">
+      <div style="padding:12px 16px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:8px;flex-shrink:0;">
+        <span style="font-size:15px;font-weight:700;">🏛️ World Bible</span>
+        <span style="flex:1;"></span>
+        <span class="badge purple">5 Locations</span>
+      </div>
+      <div class="scroll-area">
+        <div style="font-size:12px;color:var(--text-muted);padding:4px 0 8px;">The world of Little Olympus. Each episode should feel grounded in these locations and rules.</div>
+
+        <!-- World Rules -->
+        <div class="card">
+          <div class="card-header"><span class="icon">📜</span> World Rules</div>
+          <div style="display:flex;flex-direction:column;gap:8px;">
+            <div style="font-size:12px;color:var(--text-dim);line-height:1.7;">
+              <strong style="color:var(--text)">Age:</strong> All gods appear as children (ages 5-10). Zeus is 7, Hercules is 5, Athena is 8, Perseus is 7, Achilles is 7.<br>
+              <strong style="color:var(--text)">Powers:</strong> Everyone has their powers but they're unpredictable, not always on command, and sized down to kid-level consequences.<br>
+              <strong style="color:var(--text)">Adults:</strong> Only Uncle Hades and Poseidon appear as adults. They're bumbling, well-meaning, and can't quite handle children.<br>
+              <strong style="color:var(--text)">Tone:</strong> Warm, bright, funny, educational. No real danger. Stakes are real to the characters but always resolved safely.<br>
+              <strong style="color:var(--text)">Lesson rule:</strong> The lesson must emerge naturally from the story. No one lectures. Kids figure it out themselves.<br>
+              <strong style="color:var(--text)">Mini Medusa rule:</strong> She's dramatic, not scary. Her stone power is played for comedy. She almost always cancels her own threats.<br>
+              <strong style="color:var(--text)">No scene reuse:</strong> Every scene must be visually distinct. Check before generating.
+            </div>
+          </div>
+        </div>
+
+        <!-- Locations -->
+        <div class="card-header" style="padding:0"><span class="icon">📍</span> Locations</div>
+        <div class="location-grid" id="location-grid"></div>
+
+        <!-- Character Relationships -->
+        <div class="card">
+          <div class="card-header"><span class="icon">🤝</span> Character Relationships</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;font-size:12px;color:var(--text-dim);">
+            <div><strong style="color:var(--text)">Zeus ↔ Hercules:</strong> Best friends. Zeus is louder, Hercules is stronger. They try not to compete but they do.</div>
+            <div><strong style="color:var(--text)">Zeus ↔ Athena:</strong> She's smarter. He knows it. He ignores her advice then regrets it. She says "I told you so" with a sigh.</div>
+            <div><strong style="color:var(--text)">Zeus ↔ Perseus:</strong> Zeus treats him like a sidekick. Perseus is actually the most thoughtful of the group.</div>
+            <div><strong style="color:var(--text)">Athena ↔ Medusa:</strong> Medusa respects Athena but won't admit it. Athena is the only one who speaks to Medusa like a person.</div>
+            <div><strong style="color:var(--text)">Achilles ↔ Hercules:</strong> Protective friendship. Achilles won't let anyone tease Hercules. Hercules thinks Achilles smells like lightning.</div>
+            <div><strong style="color:var(--text)">All ↔ Hades:</strong> He's the accidental babysitter. He signed up for none of this. He makes excellent tea. He loves them all.</div>
+            <div><strong style="color:var(--text)">Perseus ↔ Hermes:</strong> Hermes lent Perseus the winged sandals. He's been trying to get them back all season. Perseus "forgot" he has them.</div>
+            <div><strong style="color:var(--text)">Medusa's Snakes:</strong> Hissy (bossy), Slick (vain), Noodle (anxious), Chomp (big threats, no follow-through), Dreamy (asleep), Zigzag (restless), Tiny (wisest).</div>
+          </div>
+        </div>
+
+        <!-- Show Bible -->
+        <div class="card">
+          <div class="card-header"><span class="icon">📺</span> Show Bible</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;font-size:12px;color:var(--text-dim);">
+            <div><strong style="color:var(--text)">Channel:</strong> @LittleOlympusTV</div>
+            <div><strong style="color:var(--text)">Platform:</strong> YouTube Kids + Main YouTube</div>
+            <div><strong style="color:var(--text)">Target Age:</strong> 3-10 years</div>
+            <div><strong style="color:var(--text)">Standard Duration:</strong> 4-6 min per episode</div>
+            <div><strong style="color:var(--text)">Visual Style:</strong> Bright, warm, soft-edge cartoon</div>
+            <div><strong style="color:var(--text)">Music:</strong> Warm orchestral + Greek instruments</div>
+            <div><strong style="color:var(--text)">One lesson per episode:</strong> Emerges naturally</div>
+            <div><strong style="color:var(--text)">Mythology basis:</strong> Greek & Roman myths, simplified</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ STORY ARC PLANNER ════════════════════════════════════════════════ -->
+    <div class="page" id="page-arc">
+      <div style="padding:12px 16px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:8px;flex-shrink:0;">
+        <span style="font-size:15px;font-weight:700;">🗺️ Story Arc Planner</span>
+        <span style="flex:1;"></span>
+        <span class="badge green">Season 1</span>
+      </div>
+      <div class="scroll-area">
+        <div style="font-size:12px;color:var(--text-muted);padding:4px 0 8px;">Season-level story arc. Click any slot to view or generate that episode.</div>
+        <div class="arc-grid" id="arc-grid"></div>
+      </div>
+    </div>
+
+    <!-- ═══ EPISODE HISTORY ══════════════════════════════════════════════════ -->
+    <div class="page" id="page-history">
+      <div class="ep-search">
+        <input id="ep-search-input" type="text" placeholder="🔍 Search episodes by title, lesson, or character..." oninput="History.search(this.value)">
+      </div>
+      <div class="ep-list" id="ep-list"></div>
+    </div>
+
+    <!-- ═══ DASHBOARD ════════════════════════════════════════════════════════ -->
+    <div class="page" id="page-dashboard">
+      <div class="scroll-area">
+        <div style="font-size:15px;font-weight:700;margin-bottom:4px;">📊 Dashboard</div>
+        <div class="dash-grid" id="dash-stats"></div>
+        <div class="card">
+          <div class="card-header"><span class="icon">⚡</span> Quick Actions</div>
+          <div class="quick-actions">
+            <button class="btn btn-primary" onclick="App.navigate('pipeline')">New Episode</button>
+            <button class="btn btn-outline" onclick="App.navigate('history')">Browse All Episodes</button>
+            <button class="btn btn-outline" onclick="App.navigate('characters')">View Character Bible</button>
+            <button class="btn btn-outline" onclick="System.checkStatus()">Check AI Status</button>
+          </div>
+        </div>
+        <div class="card" id="dash-ai-status">
+          <div class="card-header"><span class="icon">🤖</span> AI System Status</div>
+          <div id="dash-ai-detail" style="font-size:12px;color:var(--text-muted)">Loading...</div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<!-- Toast container -->
+<div id="toast-container"></div>
+
+<script>
+// ═══════════════════════════════════════════════════════════════════════════
+// LITTLE OLYMPUS STUDIO — Client-side App
+// All API calls go to Flask server on same origin (localhost:5050)
+// ═══════════════════════════════════════════════════════════════════════════
+
+const API_BASE = '';  // Same origin
+
+// ── Utility ────────────────────────────────────────────────────────────────
+
+async function api(path, opts = {}) {
+  const res = await fetch(API_BASE + path, {
+    headers: { 'Content-Type': 'application/json' },
+    ...opts,
+    body: opts.body ? (typeof opts.body === 'string' ? opts.body : JSON.stringify(opts.body)) : undefined,
+  });
+  if (!res.ok) {
+    const err = await res.json().catch(() => ({ error: res.statusText }));
+    throw new Error(err.error || `HTTP ${res.status}`);
+  }
+  return res.json();
+}
+
+async function apiPost(path, data, method = 'POST') {
+  return api(path, { method, body: data });
+}
+
+function toast(msg, type = 'info') {
+  const el = document.createElement('div');
+  el.className = `toast ${type}`;
+  el.textContent = msg;
+  document.getElementById('toast-container').appendChild(el);
+  setTimeout(() => el.remove(), 4000);
+}
+
+function esc(s) {
+  return String(s || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+function fmt(obj, maxLen = 400) {
+  const s = typeof obj === 'string' ? obj : JSON.stringify(obj, null, 2);
+  return s.length > maxLen ? s.slice(0, maxLen) + '...' : s;
+}
+
+// ── App navigation ─────────────────────────────────────────────────────────
+
+const App = {
+  currentPage: 'pipeline',
+  projectName: 'Untitled Project',
+
+  navigate(page) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+    const el = document.getElementById('page-' + page);
+    if (el) el.classList.add('active');
+    const nav = document.querySelector(`.nav-item[data-page="${page}"]`);
+    if (nav) nav.classList.add('active');
+    this.currentPage = page;
+    // Lazy load page data
+    if (page === 'characters') CharManager.load();
+    if (page === 'history') History.load();
+    if (page === 'arc') Arc.render();
+    if (page === 'dashboard') Dashboard.load();
+  },
+
+  promptProjectName() {
+    const name = prompt('Project name:', this.projectName);
+    if (name) {
+      this.projectName = name;
+      document.getElementById('proj-name-display').textContent = name;
+    }
+  },
+};
+
+// ── System status ──────────────────────────────────────────────────────────
+
+const System = {
+  status: null,
+
+  async checkStatus() {
+    try {
+      this.status = await api('/api/status');
+      const ollama = this.status.ai.ollama;
+      const openai = this.status.ai.openai;
+      const dot_o = document.getElementById('dot-ollama');
+      const dot_ai = document.getElementById('dot-openai');
+      dot_o.className = 'status-dot ' + (ollama.available ? 'green' : 'red');
+      dot_ai.className = 'status-dot ' + (openai.available ? 'green' : 'yellow');
+      const epCount = this.status.episodes?.total || 0;
+      document.getElementById('ep-count-badge').textContent = `${epCount} episodes`;
+    } catch (e) {
+      console.error('Status check failed:', e);
+    }
+  },
+};
+
+// ── Character Bible ────────────────────────────────────────────────────────
+
+// CharBible is kept for backward compat (pipeline chip selector uses it)
+const CharBible = {
+  data: null,
+  async load() {
+    try {
+      const r = await api('/api/characters');
+      this.data = r.characters;
+      CharManager.allChars = r.characters;
+      CharManager.render();
+    } catch (e) {
+      toast('Could not load characters: ' + e.message, 'error');
+    }
+  },
+};
+
+// ── Character Manager ──────────────────────────────────────────────────────
+
+const CharManager = {
+  allChars: {},     // key → character object
+  editingKey: null, // null = new, string = editing existing
+
+  async load() { return CharBible.load(); },
+
+  filter(q) {
+    const showLocked = document.getElementById('char-show-locked')?.checked ?? true;
+    const lower = (q || '').toLowerCase();
+    const grid = document.getElementById('char-grid');
+    if (!grid) return;
+    const entries = Object.entries(this.allChars).filter(([key, c]) => {
+      if (!showLocked && c._locked) return false;
+      if (!lower) return true;
+      return (c.name||'').toLowerCase().includes(lower) ||
+             (c.role||'').toLowerCase().includes(lower) ||
+             (c.personality||'').toLowerCase().includes(lower);
+    });
+    this._renderCards(grid, entries);
+  },
+
+  render() {
+    const grid = document.getElementById('char-grid');
+    const badge = document.getElementById('char-count-badge');
+    if (!grid) return;
+    const entries = Object.entries(this.allChars);
+    if (badge) badge.textContent = `${entries.length} Characters`;
+    this._renderCards(grid, entries);
+  },
+
+  _renderCards(grid, entries) {
+    grid.innerHTML = entries.map(([key, c]) => {
+      const swatches = (c.colors || []).map(col =>
+        `<div class="color-swatch" style="background:${col}" title="${col}"></div>`).join('');
+      const locked = c._locked || c.consistency_locked;
+      const isCustom = c._source === 'custom';
+      const imgEl = c.reference_image
+        ? `<img src="/data/character_images/${key}.${c.reference_image.split('.').pop()}" style="width:100%;height:100%;object-fit:cover;border-radius:8px;" onerror="this.style.display='none'">`
+        : `<span style="font-size:22px">🎭</span>`;
+      return `
+        <div class="char-card" style="${locked ? 'border-color:rgba(124,58,237,0.4)' : ''}">
+          <div style="display:flex;align-items:flex-start;gap:8px;margin-bottom:6px;">
+            <div style="width:40px;height:40px;border-radius:8px;background:var(--surface2);display:flex;align-items:center;justify-content:center;overflow:hidden;flex-shrink:0;">${imgEl}</div>
+            <div style="flex:1;min-width:0;">
+              <div class="char-name" style="font-size:13px">${esc(c.name)}</div>
+              <div class="char-role">${esc(c.role || c.age_apparent || ('Age ' + (c.age||'?')))}</div>
+            </div>
+            <div style="display:flex;gap:4px;flex-shrink:0;">
+              ${locked ? '<span title="Consistency locked" style="font-size:11px">🔒</span>' : ''}
+              <button class="btn btn-sm btn-outline" style="padding:2px 8px;font-size:10px;" onclick="CharManager.openEdit('${esc(key)}')">✏️</button>
+              ${isCustom ? `<button class="btn btn-sm btn-outline" style="padding:2px 8px;font-size:10px;color:var(--red);border-color:var(--red);" onclick="CharManager.confirmDelete('${esc(key)}','${esc(c.name)}')">🗑</button>` : '<span class="badge purple" style="font-size:9px;padding:2px 5px;">Bible</span>'}
+            </div>
+          </div>
+          ${c.appearance ? `<div class="char-section">Appearance</div><div class="char-text">${esc(c.appearance)}</div>` : ''}
+          ${c.personality ? `<div class="char-section">Personality</div><div class="char-text">${esc(c.personality)}</div>` : ''}
+          ${c.voice ? `<div class="char-section">Voice</div><div class="char-text">${esc(c.voice)}</div>` : ''}
+          ${c.catchphrase ? `<div class="char-catchphrase">"${esc(c.catchphrase)}"</div>` : ''}
+          <div class="color-swatches" style="margin-top:6px">${swatches}</div>
+        </div>`;
+    }).join('') || '<div style="color:var(--text-muted);padding:20px;text-align:center;">No characters match</div>';
+  },
+
+  _fillForm(c) {
+    document.getElementById('cm-name').value        = c.name || '';
+    document.getElementById('cm-age').value         = c.age || c.age_apparent || '';
+    document.getElementById('cm-role').value        = c.role || '';
+    document.getElementById('cm-appearance').value  = c.appearance || '';
+    document.getElementById('cm-personality').value = c.personality || '';
+    document.getElementById('cm-voice').value       = c.voice || '';
+    document.getElementById('cm-catchphrase').value = c.catchphrase || '';
+    document.getElementById('cm-colors').value      = (c.colors || []).join(', ');
+    document.getElementById('cm-notes').value       = c.notes || '';
+    document.getElementById('cm-locked').checked    = !!(c.consistency_locked || c._locked);
+    // Relationships: object → "Name: desc\n"
+    const rels = c.relationships || {};
+    document.getElementById('cm-relationships').value =
+      Object.entries(rels).map(([k,v]) => `${k}: ${v}`).join('\n');
+    // Image preview
+    const prev = document.getElementById('char-img-preview');
+    if (c.reference_image) {
+      prev.innerHTML = `<img src="/${c.reference_image}" style="width:100%;height:100%;object-fit:cover;border-radius:8px;">`;
+    } else {
+      prev.innerHTML = '🎭';
+    }
+  },
+
+  openAdd() {
+    this.editingKey = null;
+    document.getElementById('char-modal-title').textContent = '➕ New Character';
+    document.getElementById('char-delete-btn').style.display = 'none';
+    document.getElementById('char-modal-status').textContent = '';
+    // Clear form
+    ['cm-name','cm-age','cm-role','cm-appearance','cm-personality','cm-voice',
+     'cm-catchphrase','cm-colors','cm-notes','cm-relationships'].forEach(id => {
+      document.getElementById(id).value = '';
+    });
+    document.getElementById('cm-locked').checked = false;
+    document.getElementById('char-img-preview').innerHTML = '🎭';
+    document.getElementById('char-modal-backdrop').style.display = 'block';
+    document.getElementById('cm-name').focus();
+  },
+
+  openEdit(key) {
+    const c = this.allChars[key];
+    if (!c) return;
+    this.editingKey = key;
+    document.getElementById('char-modal-title').textContent = `✏️ Edit — ${c.name}`;
+    document.getElementById('char-modal-status').textContent = '';
+    const delBtn = document.getElementById('char-delete-btn');
+    delBtn.style.display = c._source === 'custom' ? 'block' : 'none';
+    this._fillForm(c);
+    document.getElementById('char-modal-backdrop').style.display = 'block';
+  },
+
+  closeModal() {
+    document.getElementById('char-modal-backdrop').style.display = 'none';
+    this.editingKey = null;
+  },
+
+  previewImage(input) {
+    const file = input.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = e => {
+      document.getElementById('char-img-preview').innerHTML =
+        `<img src="${e.target.result}" style="width:100%;height:100%;object-fit:cover;border-radius:8px;">`;
+    };
+    reader.readAsDataURL(file);
+  },
+
+  _readForm() {
+    const rels = {};
+    (document.getElementById('cm-relationships').value || '').split('\n').forEach(line => {
+      const idx = line.indexOf(':');
+      if (idx > 0) {
+        const k = line.slice(0, idx).trim();
+        const v = line.slice(idx + 1).trim();
+        if (k) rels[k] = v;
+      }
+    });
+    const colors = (document.getElementById('cm-colors').value || '')
+      .split(',').map(s => s.trim()).filter(s => s.startsWith('#') || s.length > 0).filter(Boolean);
+    return {
+      name:              document.getElementById('cm-name').value.trim(),
+      age:               document.getElementById('cm-age').value.trim(),
+      role:              document.getElementById('cm-role').value.trim(),
+      appearance:        document.getElementById('cm-appearance').value.trim(),
+      personality:       document.getElementById('cm-personality').value.trim(),
+      voice:             document.getElementById('cm-voice').value.trim(),
+      catchphrase:       document.getElementById('cm-catchphrase').value.trim(),
+      colors,
+      notes:             document.getElementById('cm-notes').value.trim(),
+      consistency_locked: document.getElementById('cm-locked').checked,
+      relationships:     rels,
+    };
+  },
+
+  async save() {
+    const data = this._readForm();
+    if (!data.name) { toast('Name is required', 'error'); return; }
+
+    const status = document.getElementById('char-modal-status');
+    status.textContent = 'Saving…';
+
+    try {
+      let result;
+      if (this.editingKey) {
+        result = await apiPost(`/api/characters/${this.editingKey}`, data, 'PUT');
+      } else {
+        result = await apiPost('/api/characters', data);
+      }
+      if (result.error) throw new Error(result.error);
+
+      const key = this.editingKey || result.key;
+
+      // Upload image if one was selected
+      const imgInput = document.getElementById('char-img-input');
+      if (imgInput.files.length > 0) {
+        await this._uploadImage(key, imgInput.files[0]);
+        imgInput.value = '';
+      }
+
+      toast(`${data.name} saved!`, 'success');
+      status.textContent = '';
+      this.closeModal();
+      await this.load(); // refresh
+    } catch (e) {
+      status.textContent = '⚠️ ' + e.message;
+      toast('Save failed: ' + e.message, 'error');
+    }
+  },
+
+  async _uploadImage(key, file) {
+    const fd = new FormData();
+    fd.append('image', file);
+    const resp = await fetch(`/api/characters/${key}/image`, { method: 'POST', body: fd });
+    if (!resp.ok) {
+      const err = await resp.json().catch(() => ({}));
+      throw new Error(err.error || 'Image upload failed');
+    }
+    return resp.json();
+  },
+
+  async confirmDelete(key, name) {
+    if (!confirm(`Delete "${name}"? This cannot be undone.`)) return;
+    await this.deleteChar(key);
+  },
+
+  async deleteChar(key) {
+    const k = key || this.editingKey;
+    if (!k) return;
+    try {
+      const r = await apiPost(`/api/characters/${k}`, {}, 'DELETE');
+      if (r.error) throw new Error(r.error);
+      toast('Character deleted', 'info');
+      this.closeModal();
+      await this.load();
+    } catch (e) {
+      toast('Delete failed: ' + e.message, 'error');
+    }
+  },
+
+  async aiAppearance() {
+    const name = document.getElementById('cm-name').value.trim();
+    const role = document.getElementById('cm-role').value.trim();
+    const notes = document.getElementById('cm-notes').value.trim();
+    if (!name) { toast('Enter a name first', 'error'); return; }
+    const status = document.getElementById('char-modal-status');
+    status.textContent = '✨ Drafting appearance with AI…';
+    try {
+      const r = await apiPost('/api/characters/generate-appearance', { name, role, notes });
+      if (r.error) throw new Error(r.error);
+      if (r.appearance) document.getElementById('cm-appearance').value = r.appearance;
+      if (r.color_palette) document.getElementById('cm-colors').value = r.color_palette.join(', ');
+      status.textContent = `✓ Drafted via ${r.gateway || 'AI'}`;
+    } catch (e) {
+      status.textContent = '⚠️ ' + e.message;
+    }
+  },
+
+  async aiTraits() {
+    const name = document.getElementById('cm-name').value.trim();
+    const role = document.getElementById('cm-role').value.trim();
+    const appearance = document.getElementById('cm-appearance').value.trim();
+    if (!name) { toast('Enter a name first', 'error'); return; }
+    const status = document.getElementById('char-modal-status');
+    status.textContent = '✨ Generating traits with AI…';
+    try {
+      // Use a temp key if editing, else "new"
+      const key = this.editingKey || 'new';
+      const r = await apiPost(`/api/characters/${key}/generate-traits`, { name, role, appearance });
+      if (r.error) throw new Error(r.error);
+      if (r.personality) document.getElementById('cm-personality').value = r.personality;
+      if (r.voice) document.getElementById('cm-voice').value = r.voice;
+      if (r.catchphrase) document.getElementById('cm-catchphrase').value = r.catchphrase;
+      if (r.relationship_to_zeus) {
+        const cur = document.getElementById('cm-relationships').value.trim();
+        const line = `Little Zeus: ${r.relationship_to_zeus}`;
+        document.getElementById('cm-relationships').value = cur ? cur + '\n' + line : line;
+      }
+      if (r.notes) {
+        const cur = document.getElementById('cm-notes').value.trim();
+        const extra = `Comedy: ${r.comedy_angle || ''}\nLesson: ${r.lesson_they_teach || ''}`;
+        document.getElementById('cm-notes').value = cur ? cur + '\n' + extra : extra;
+      }
+      status.textContent = `✓ Traits filled via ${r.gateway || 'AI'}`;
+    } catch (e) {
+      status.textContent = '⚠️ ' + e.message;
+    }
+  },
+};
+
+// ── World Bible ────────────────────────────────────────────────────────────
+
+const WorldBible = {
+  async load() {
+    try {
+      const r = await api('/api/bible/locations');
+      const grid = document.getElementById('location-grid');
+      if (!grid) return;
+      grid.innerHTML = Object.entries(r.locations).map(([key, loc]) => {
+        const swatches = (loc.colors || []).map(c => `<div class="color-swatch" style="background:${c}" title="${c}"></div>`).join('');
+        return `
+          <div class="location-card">
+            <div class="loc-name">${esc(loc.name)}</div>
+            <div class="loc-desc">${esc(loc.description)}</div>
+            <div class="loc-mood">${esc(loc.mood)}</div>
+            <div class="color-swatches" style="margin-top:8px;">${swatches}</div>
+          </div>`;
+      }).join('');
+    } catch (e) {
+      toast('Could not load world bible: ' + e.message, 'error');
+    }
+  },
+};
+
+// ── Episode History ────────────────────────────────────────────────────────
+
+const History = {
+  episodes: null,
+
+  async load() {
+    if (this.episodes) return this.render(this.episodes);
+    try {
+      const r = await api('/api/episodes');
+      this.episodes = r.episodes;
+      this.render(this.episodes);
+    } catch (e) {
+      toast('Could not load episodes: ' + e.message, 'error');
+    }
+  },
+
+  search(q) {
+    if (!this.episodes) return;
+    const filtered = q.trim()
+      ? this.episodes.filter(ep =>
+          ep.title.toLowerCase().includes(q.toLowerCase()) ||
+          (ep.lesson || '').toLowerCase().includes(q.toLowerCase()) ||
+          (ep.characters || []).join(' ').toLowerCase().includes(q.toLowerCase())
+        )
+      : this.episodes;
+    this.render(filtered);
+  },
+
+  render(eps) {
+    const list = document.getElementById('ep-list');
+    if (!list) return;
+    if (!eps.length) { list.innerHTML = '<div style="padding:40px;text-align:center;color:var(--text-muted)">No episodes found</div>'; return; }
+    list.innerHTML = eps.map(ep => `
+      <div class="ep-item" onclick="History.viewEpisode('${esc(ep.episode_id)}')">
+        <div class="ep-num">${esc(ep.episode_id)}</div>
+        <div>
+          <div class="ep-title">${esc(ep.title)}</div>
+          ${ep.lesson ? `<div style="font-size:11px;color:var(--text-muted);margin-top:2px;">💡 ${esc(ep.lesson)}</div>` : ''}
+        </div>
+        <div class="ep-meta">
+          <span class="ep-badge">${ep.scenes} scenes</span>
+          <span class="ep-badge">${ep.duration_min}min</span>
+        </div>
+      </div>`).join('');
+  },
+
+  async viewEpisode(id) {
+    try {
+      const ep = await api('/api/episodes/' + id);
+      Pipeline.displayEpisode(ep);
+      App.navigate('pipeline');
+    } catch (e) {
+      toast('Could not load episode: ' + e.message, 'error');
+    }
+  },
+};
+
+// ── Story Arc Planner ──────────────────────────────────────────────────────
+
+const Arc = {
+  async render() {
+    const grid = document.getElementById('arc-grid');
+    if (!grid) return;
+    // Load episodes to know what's done
+    let episodes = {};
+    try {
+      const r = await api('/api/episodes');
+      r.episodes.forEach(ep => { episodes[ep.episode_number] = ep; });
+    } catch (e) {}
+
+    const slots = Array.from({length: 50}, (_, i) => i + 1);
+    grid.innerHTML = slots.map(n => {
+      const ep = episodes[n];
+      const cls = ep ? 'written' : '';
+      return `
+        <div class="arc-slot ${cls}" onclick="Arc.clickSlot(${n})">
+          <div class="ep-label">EP${String(n).padStart(3,'0')}</div>
+          <div class="ep-name">${ep ? esc(ep.title.slice(0,40)) : '<em style="color:var(--text-muted);font-style:italic;font-size:11px">— empty slot —</em>'}</div>
+          ${ep ? `<div class="ep-badge" style="margin-top:4px;display:inline-block;">${ep.scenes} scenes</div>` : ''}
+        </div>`;
+    }).join('');
+  },
+
+  clickSlot(n) {
+    // Pre-fill pipeline with episode number, navigate there
+    document.getElementById('in-ep-num').value = n;
+    App.navigate('pipeline');
+    toast(`Episode slot EP${String(n).padStart(3,'0')} selected. Fill in the details and generate!`, 'info');
+  },
+};
+
+// ── Dashboard ──────────────────────────────────────────────────────────────
+
+const Dashboard = {
+  async load() {
+    try {
+      const status = await api('/api/status');
+      const stats = document.getElementById('dash-stats');
+      if (stats) {
+        stats.innerHTML = `
+          <div class="stat-card"><div class="stat-num">${status.episodes?.total || 0}</div><div class="stat-label">Episodes Scripted</div></div>
+          <div class="stat-card"><div class="stat-num" style="color:var(--green);">${status.ai.ollama.available ? '✓' : '✗'}</div><div class="stat-label">Ollama Status</div></div>
+          <div class="stat-card"><div class="stat-num" style="color:${status.ai.openai.available ? 'var(--green)' : 'var(--text-muted)'};">${status.ai.openai.available ? '✓' : '—'}</div><div class="stat-label">OpenAI Status</div></div>
+          <div class="stat-card"><div class="stat-num" style="color:var(--purple);">7</div><div class="stat-label">Core Characters</div></div>`;
+      }
+      const detail = document.getElementById('dash-ai-detail');
+      if (detail) {
+        detail.innerHTML = `
+          <div style="display:flex;flex-direction:column;gap:6px;">
+            <div><strong style="color:${status.ai.ollama.available ? 'var(--green)' : 'var(--red)'}">Ollama:</strong> ${esc(status.ai.ollama.message)}</div>
+            <div><strong style="color:${status.ai.openai.available ? 'var(--green)' : 'var(--text-muted)'}">OpenAI:</strong> ${esc(status.ai.openai.message)}</div>
+            <div style="margin-top:4px;font-size:11px;color:var(--text-muted)">AI Priority: Ollama (free local) → OpenAI (cloud) → Error</div>
+          </div>`;
+      }
+    } catch (e) {
+      toast('Dashboard load failed: ' + e.message, 'error');
+    }
+  },
+};
+
+// ═══════════════════════════════════════════════════════════════════════════
+// PRODUCTION PIPELINE
+// ═══════════════════════════════════════════════════════════════════════════
+
+const STEPS = [
+  { id: 'research',   icon: '🔬', label: 'Research',              desc: 'Mythology + educational angles' },
+  { id: 'outline',    icon: '📋', label: 'Story Outline',          desc: '3-act structure + scene briefs' },
+  { id: 'script',     icon: '📝', label: 'Full Script',            desc: 'Narration + dialogue + visuals' },
+  { id: 'images',     icon: '🖼️', label: 'Cartoon Image Prompts',  desc: '4 variants per scene, characters locked' },
+  { id: 'animation',  icon: '🎬', label: 'Animation Prompts',      desc: 'Higgsfield camera prompts per scene' },
+  { id: 'music',      icon: '🎵', label: 'Music Suggestions',      desc: 'Theme, per-scene mood, sources' },
+  { id: 'voice',      icon: '🎙️', label: 'Voice Script',          desc: 'Character-tagged cues + directions' },
+  { id: 'guide',      icon: '👪', label: 'Parent Guide',           desc: 'Talking points, activities, vocabulary' },
+  { id: 'seo',        icon: '📊', label: 'YouTube Metadata',       desc: 'Title, description, tags, chapters, shorts' },
+  { id: 'camera',    icon: '🎥', label: 'Camera Directions',      desc: 'Shot type + transition per scene' },
+  { id: 'sfx',       icon: '🔊', label: 'Sound Effects',          desc: 'Per-scene + character SFX guide' },
+  { id: 'music_ai',  icon: '🎹', label: 'AI Music Prompts',       desc: 'Suno/Udio ready prompts' },
+  { id: 'coloring',  icon: '🖍️', label: 'Coloring Page Prompt',   desc: 'B&W illustration for kids' },
+  { id: 'activity',  icon: '📋', label: 'Activity Sheet',         desc: 'Printable learning activities' },
+];
+
+const Pipeline = {
+  isRunning: false,
+  cancelled: false,
+  results: {},
+  episode: null,
+  startTime: null,
+  stepTimers: {},
+
+  getInputs() {
+    const chars = [...document.querySelectorAll('.char-chip.selected')].map(el => el.dataset.char);
+    const durationVal = parseInt(document.getElementById('in-duration').value) || 5;
+    return {
+      title: document.getElementById('in-title').value.trim(),
+      idea: document.getElementById('in-idea').value.trim(),
+      lesson: document.getElementById('in-lesson').value.trim(),
+      characters: chars.length ? chars : ['Little Zeus', 'Baby Hercules', 'Athena'],
+      duration_min: durationVal,
+      episode_number: parseInt(document.getElementById('in-ep-num').value) || 0,
+    };
+  },
+
+  async start() {
+    const inputs = this.getInputs();
+    if (!inputs.idea) { toast('Please enter an episode idea', 'error'); return; }
+
+    this.isRunning = true;
+    this.cancelled = false;
+    this.results = {};
+    this.episode = null;
+    this.startTime = Date.now();
+
+    document.getElementById('btn-generate').disabled = true;
+    document.getElementById('btn-cancel').style.display = 'block';
+    document.getElementById('pipeline-placeholder').style.display = 'none';
+    document.getElementById('pipeline-export-panel').style.display = 'none';
+    document.getElementById('pipeline-steps').style.display = 'block';
+    document.getElementById('pipeline-status-text').textContent = 'Running…';
+
+    this.renderSteps();
+
+    // Run each step sequentially
+    for (const step of STEPS) {
+      if (this.cancelled) break;
+      await this.runStep(step.id, inputs);
+      if (this.cancelled) break;
+    }
+
+    if (!this.cancelled) {
+      this.complete();
+    }
+
+    this.isRunning = false;
+    document.getElementById('btn-generate').disabled = false;
+    document.getElementById('btn-cancel').style.display = 'none';
+  },
+
+  cancel() {
+    this.cancelled = true;
+    this.isRunning = false;
+    document.getElementById('pipeline-status-text').textContent = 'Cancelled';
+    toast('Pipeline cancelled', 'info');
+  },
+
+  async runStep(stepId, inputs) {
+    const startTs = Date.now();
+    this.setStatus(stepId, 'running');
+
+    try {
+      let result;
+      const inp = inputs || this.getInputs();
+      const scenes = this.results.script?.scenes || [];
+      const outline = this.results.outline || {};
+      const title = this.results.outline?.title || inp.title || 'Untitled';
+      const lesson = this.results.outline?.lesson || inp.lesson;
+      const characters = inp.characters;
+
+      switch (stepId) {
+        case 'research':
+          result = await apiPost('/api/generate/research', { idea: inp.idea, characters, age_range: '3-10' });
+          break;
+
+        case 'outline':
+          result = await apiPost('/api/generate/outline', {
+            idea: inp.idea, title: inp.title, lesson: inp.lesson,
+            characters, scene_count: this.sceneCount(inp.duration_min),
+          });
+          break;
+
+        case 'script':
+          result = await apiPost('/api/generate/script', {
+            outline: outline.outline || [],
+            title, lesson, characters, duration_min: inp.duration_min,
+          });
+          break;
+
+        case 'images':
+          result = await apiPost('/api/generate/image-prompts', { scenes, characters });
+          // Store enhanced scenes back
+          if (result.scenes) this.results.script = { ...this.results.script, scenes: result.scenes };
+          break;
+
+        case 'animation':
+          // Animation prompts are embedded in image-prompts result
+          result = { animation_prompts: (this.results.images?.scenes || scenes).map(s => ({
+            scene_number: s.scene_number,
+            type: s.type,
+            prompt: s.higgsfield_prompt || `Little Olympus cartoon — ${s.type} — ${(s.visual_prompt||'').slice(0,120)}`,
+          }))};
+          break;
+
+        case 'music':
+          result = await apiPost('/api/generate/music', { title, lesson, scenes, tone: 'warm, adventurous, kid-friendly' });
+          break;
+
+        case 'voice':
+          result = await apiPost('/api/generate/voice-script', { scenes, title, characters });
+          break;
+
+        case 'guide':
+          result = await apiPost('/api/generate/parent-guide', { title, lesson, scenes, characters });
+          break;
+
+        case 'seo':
+          result = await apiPost('/api/generate/seo', {
+            title, lesson, characters, scenes: scenes.slice(0, 6),
+          });
+          break;
+
+        case 'camera':
+          result = await apiPost('/api/generate/camera', { scenes, title });
+          break;
+
+        case 'sfx':
+          result = await apiPost('/api/generate/sfx', { scenes, characters, title });
+          break;
+
+        case 'music_ai':
+          result = await apiPost('/api/generate/music-prompts', {
+            title, lesson, scenes,
+            music_data: this.results.music || {},
+          });
+          break;
+
+        case 'coloring':
+          result = await apiPost('/api/generate/coloring-page', { title, characters, lesson, scenes });
+          break;
+
+        case 'activity':
+               title, lesson, characters,
+            research_data: this.results.research || {},
+          });
+          break;
+      }
+
+      this.results[stepId] = result;
+      const elapsed = ((Date.now() - startTs) / 1000).toFixed(1);
+      this.setStatus(stepId, 'done', result, elapsed + 's');
+
+      // Build episode JSON after script step
+      if (stepId === 'script' && result.scenes) {
+        this.buildEpisode(inp, result.scenes);
+      }
+
+    } catch (e) {
+      console.error(`Step ${stepId} failed:`, e);
+      this.setStatus(stepId, 'error', null, null, e.message);
+    }
+  },
+
+  sceneCount(durationMin) {
+    if (durationMin <= 6) return 18;
+    if (durationMin <= 12) return 30;
+    return 54;
+  },
+
+  buildEpisode(inp, scenes) {
+    const outline = this.results.outline || {};
+    this.episode = {
+      channel: 'LO',
+      episode_number: inp.episode_number,
+      episode_id: inp.episode_number ? `LO_EP${String(inp.episode_number).padStart(3,'0')}` : `LO_DRAFT_${Date.now()}`,
+      series_name: 'Little Olympus',
+      title: outline.title || inp.title || 'Untitled',
+      tagline: outline.tagline || '',
+      duration_target_min: inp.duration_min,
+      lesson: outline.lesson || inp.lesson,
+      arc: outline.arc || '',
+      aesthetic: 'bright, warm, soft-edge cartoon, Olympus color palette, child-safe',
+      characters: inp.characters,
+      scenes: scenes,
+      music: 'warm orchestral with playful percussion, Greek-inspired instruments',
+      voice_style: 'warm storyteller narrator, expressive character voices',
+      generated_at: new Date().toISOString(),
+      generated_by: 'LO Studio v1.1',
+    };
+  },
+
+  complete() {
+    const elapsed = ((Date.now() - this.startTime) / 1000).toFixed(0);
+    document.getElementById('pipeline-status-text').textContent = `✓ Complete in ${elapsed}s`;
+    toast(`Episode package ready in ${elapsed}s!`, 'success');
+
+    if (this.episode && this.results.seo) {
+      Object.assign(this.episode, {
+        youtube_title: this.results.seo.youtube_title || this.episode.title,
+        youtube_description: this.results.seo.description || '',
+        tags: this.results.seo.tags || [],
+        thumbnail_concept: this.results.seo.thumbnail_concept || '',
+        shorts_ideas: this.results.seo.shorts_ideas || [],
+      });
+    }
+
+    this.showExportPanel();
+  },
+
+  showExportPanel() {
+    const panel = document.getElementById('pipeline-export-panel');
+    const scenes = this.episode?.scenes || [];
+    panel.style.display = 'block';
+    panel.innerHTML = `
+      <div class="export-panel">
+        <h3>📦 Production Package Ready</h3>
+        <p>${scenes.length} scenes · ${this.episode?.duration_target_min || 5} min target · Character appearances locked</p>
+        <div class="export-actions">
+          <button class="btn btn-gold btn-lg" onclick="Pipeline.downloadPackage()">📦 Download ZIP Package</button>
+          <button class="btn btn-primary" onclick="Pipeline.downloadJSON()">💾 Save Episode JSON</button>
+          <button class="btn btn-outline" onclick="Pipeline.saveProject()">🗂️ Save Project</button>
+        </div>
+        <div class="file-list">
+          <span>📄 01_episode.json — Render-ready script</span>
+          <span>📝 02_full_screenplay.md — Narration + dialogue + camera</span>
+          <span>🗂️ 03_scene_breakdown.md — Scene table + summaries</span>
+          <span>🖼️ 04_image_prompts.md — 4 variants per scene</span>
+          <span>🎬 05_animation_prompts.md — Higgsfield camera prompts</span>
+          <span>🎥 06_camera_directions.md — Shot type + transitions</span>
+          <span>🔊 07_sound_effects.md — Master SFX + per-scene guide</span>
+          <span>🎹 08_ai_music_prompts.md — Suno/Udio ready prompts</span>
+          <span>🎙️ 09_voice_script.md — Character-tagged voice cues</span>
+          <span>🎵 10_music_guide.md — Theme + mood guide</span>
+          <span>👪 11_parent_discussion_guide.md — Talking points + activities</span>
+          <span>🖍️ 12_coloring_page_prompt.md — B&W illustration prompt</span>
+          <span>📋 13_activity_sheet.md — Printable learning activities</span>
+          <span>📊 14_youtube_metadata.md — Title, tags, chapters, shorts</span>
+          <span>✅ 15_production_checklist.md — Everything to ship</span>
+        </div>
+        ${this.episode ? `<div style="margin-top:12px;font-size:11px;color:var(--text-muted)">Render command: <code style="color:var(--purple-light)">python little_olympus_render.py --episode ${this.episode.episode_id}</code></div>` : ''}
+      </div>`;
+    panel.scrollIntoView({ behavior: 'smooth' });
+  },
+
+  async downloadPackage() {
+    try {
+      toast('Building production package...', 'info');
+      const payload = {
+        episode:      this.episode,
+        research:     this.results.research  || {},
+        voice_script: this.results.voice     || {},
+        parent_guide: this.results.guide     || {},
+        seo:          this.results.seo       || {},
+        music:        this.results.music     || {},
+        camera:       this.results.camera    || {},
+        sfx:          this.results.sfx       || {},
+        music_ai:     this.results.music_ai  || {},
+        coloring:     this.results.coloring  || {},
+        activity:     this.results.activity  || {},
+      };
+      const res = await fetch('/api/export/package', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+      if (!res.ok) throw new Error('Export failed');
+      const blob = await res.blob();
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `${this.episode?.episode_id || 'LO_episode'}_production_package.zip`;
+      a.click();
+      URL.revokeObjectURL(url);
+      toast('Production package downloaded!', 'success');
+    } catch (e) {
+      toast('Download failed: ' + e.message, 'error');
+    }
+  },
+
+  async downloadJSON() {
+    if (!this.episode) { toast('No episode data yet', 'error'); return; }
+    try {
+      const res = await fetch('/api/export/json', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ episode: this.episode }),
+      });
+      const blob = await res.blob();
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `${this.episode.episode_id.toLowerCase()}.json`;
+      a.click();
+      URL.revokeObjectURL(url);
+      toast('Episode JSON saved!', 'success');
+    } catch (e) {
+      toast('Download failed: ' + e.message, 'error');
+    }
+  },
+
+  async saveProject() {
+    if (!this.episode) { toast('No episode data yet', 'error'); return; }
+    try {
+      const projectData = {
+        title: this.episode.title,
+        episode_id: this.episode.episode_id,
+        episode: this.episode,
+        results: this.results,
+      };
+      const r = await apiPost('/api/projects', projectData);
+      toast(`Project saved (ID: ${r.id})`, 'success');
+    } catch (e) {
+      toast('Save failed: ' + e.message, 'error');
+    }
+  },
+
+  displayEpisode(ep) {
+    document.getElementById('in-title').value = ep.title || '';
+    document.getElementById('in-lesson').value = ep.lesson || '';
+    document.getElementById('in-ep-num').value = ep.episode_number || '';
+    this.episode = ep;
+    this.results.script = { scenes: ep.scenes || [] };
+    document.getElementById('pipeline-placeholder').style.display = 'none';
+    document.getElementById('pipeline-steps').style.display = 'none';
+    this.showExportPanel();
+    toast(`Loaded: ${ep.title}`, 'info');
+  },
+
+  // ── UI rendering ────────────────────────────────────────────────────────
+
+  renderSteps() {
+    const container = document.getElementById('pipeline-steps');
+    container.innerHTML = STEPS.map(step => `
+      <div class="step-card" id="step-${step.id}">
+        <div class="step-header" onclick="Pipeline.toggleStep('${step.id}')">
+          <span class="step-icon">${step.icon}</span>
+          <div style="flex:1">
+            <div class="step-name">${step.label}</div>
+            <div style="font-size:11px;color:var(--text-muted)">${step.desc}</div>
+          </div>
+          <div class="step-status" id="status-${step.id}">⏳ Pending</div>
+          <span id="time-${step.id}" class="step-time"></span>
+        </div>
+        <div class="step-body" id="body-${step.id}"></div>
+      </div>`).join('');
+  },
+
+  setStatus(stepId, status, data, time, error) {
+    const card = document.getElementById('step-' + stepId);
+    const statusEl = document.getElementById('status-' + stepId);
+    const timeEl = document.getElementById('time-' + stepId);
+    const body = document.getElementById('body-' + stepId);
+    if (!card) return;
+
+    card.className = 'step-card ' + status;
+
+    if (status === 'running') {
+      statusEl.className = 'step-status running';
+      statusEl.innerHTML = '<span class="spinner"></span> Running…';
+    } else if (status === 'done') {
+      statusEl.className = 'step-status done';
+      statusEl.innerHTML = '✓ Done';
+      if (time) timeEl.textContent = time;
+      if (data) {
+        body.innerHTML = this.renderStepOutput(stepId, data);
+        body.classList.add('open');
+      }
+    } else if (status === 'error') {
+      statusEl.className = 'step-status error';
+      statusEl.innerHTML = '✗ Error';
+      body.innerHTML = `<div style="color:var(--red);font-size:12px;">⚠️ ${esc(error || 'Unknown error')}</div>`;
+      body.classList.add('open');
+    }
+  },
+
+  toggleStep(stepId) {
+    const body = document.getElementById('body-' + stepId);
+    if (body) body.classList.toggle('open');
+  },
+
+  renderStepOutput(stepId, data) {
+    if (!data) return '<div style="color:var(--text-muted);font-size:12px;">No output</div>';
+
+    switch (stepId) {
+      case 'research':
+        return `<div class="output-grid">
+          <div class="output-item"><h4>Mythology Background</h4><p>${esc(data.mythology_background || '')}</p></div>
+          ${(data.age_appropriate_facts||[]).slice(0,3).map(f => `<div class="output-item"><h4>Fact</h4><p>${esc(f)}</p></div>`).join('')}
+          ${(data.educational_angles||[]).slice(0,2).map(a => `<div class="output-item"><h4>Educational Angle</h4><p>${esc(a)}</p></div>`).join('')}
+        </div>`;
+
+      case 'outline':
+        return `<div class="output-grid">
+          <div class="output-item"><h4>Title</h4><p style="font-weight:600;color:var(--gold)">${esc(data.title||'')}</p></div>
+          <div class="output-item"><h4>Lesson</h4><p>${esc(data.lesson||'')}</p></div>
+          <div class="output-item"><h4>Arc</h4><p>${esc(data.arc||'')}</p></div>
+          <div class="output-item"><h4>Scenes (${(data.outline||[]).length})</h4>
+            <p style="font-size:11px">${(data.outline||[]).slice(0,5).map(s=>`<strong>S${s.scene}:</strong> [${s.type}] ${esc(s.brief||'')}`).join('<br>')}</p>
+          </div>
+        </div>`;
+
+      case 'script': {
+        const sc = data.scenes || [];
+        return `<div class="output-grid">
+          <div class="output-item"><h4>${sc.length} Scenes Generated</h4>
+            <p style="font-size:11px">${sc.slice(0,4).map(s=>`<strong>Scene ${s.scene_number}:</strong> ${esc((s.narration||'').slice(0,80))}…`).join('<br><br>')}</p>
+          </div>
+        </div>`;
+      }
+
+      case 'images': {
+        const sc = data.scenes || [];
+        return `<div class="output-grid">
+          <div class="output-item"><h4>${sc.length} Scenes with Character-Locked Prompts</h4>
+            <p style="font-size:11px;color:var(--green)">✓ Character appearances injected into all visual prompts</p>
+            <p style="font-size:11px;margin-top:4px">${sc.slice(0,2).map(s=>`<strong>S${s.scene_number}:</strong> ${esc((s.visual_prompt||'').slice(0,120))}…`).join('<br><br>')}</p>
+          </div>
+        </div>`;
+      }
+
+      case 'animation': {
+        const prompts = data.animation_prompts || [];
+        return `<div class="output-grid">
+          <div class="output-item"><h4>${prompts.length} Higgsfield Camera Prompts</h4>
+            <p style="font-size:11px">${prompts.slice(0,2).map(p=>`<strong>S${p.scene_number}:</strong> ${esc((p.prompt||'').slice(0,120))}`).join('<br><br>')}</p>
+          </div>
+        </div>`;
+      }
+
+      case 'music': {
+        const mt = data.main_theme || {};
+        return `<div class="output-grid">
+          <div class="output-item"><h4>Main Theme</h4><p>${esc(mt.style||'')} • ${esc(mt.tempo||'')} tempo<br>${esc((mt.instruments||[]).join(', '))}</p></div>
+          ${(data.sound_effects||[]).slice(0,4).map(sfx=>`<div class="output-item"><h4>SFX</h4><p>${esc(sfx)}</p></div>`).join('')}
+        </div>`;
+      }
+
+      case 'voice': {
+        const cues = data.cues || data;
+        const arr = Array.isArray(cues) ? cues : [];
+        return `<div class="output-grid">
+          <div class="output-item"><h4>${arr.length} Voice Cues • ${data.total_duration_sec||'?'}s total</h4>
+            <p style="font-size:11px">${arr.slice(0,4).map(c=>`<strong>${esc(c.character||'?')}:</strong> "${esc((c.text||'').slice(0,80))}" <em style="color:var(--text-muted)">[${esc(c.direction||'')}]</em>`).join('<br><br>')}</p>
+          </div>
+        </div>`;
+      }
+
+      case 'guide':
+        return `<div class="output-grid">
+          <div class="output-item"><h4>Lesson Summary</h4><p>${esc(data.lesson_summary||'')}</p></div>
+          ${(data.talking_points||[]).slice(0,2).map(tp=>`<div class="output-item"><h4>Q for Kids</h4><p>${esc(tp.question||'')}</p></div>`).join('')}
+          ${(data.activities||[]).slice(0,1).map(a=>`<div class="output-item"><h4>Activity: ${esc(a.name||'')}</h4><p>${esc(a.description||'')}</p></div>`).join('')}
+        </div>`;
+
+      case 'seo':
+        return `<div class="output-grid">
+          <div class="output-item"><h4>YouTube Title</h4><p style="font-weight:600">${esc(data.youtube_title||'')}</p></div>
+          <div class="output-item"><h4>Tags</h4><p style="font-size:11px">${(data.tags||[]).slice(0,8).map(t=>esc(t)).join(' • ')}</p></div>
+          <div class="output-item"><h4>Thumbnail Concept</h4><p>${esc(data.thumbnail_concept||'')}</p></div>
+          ${(data.shorts_ideas||[]).slice(0,2).map(s=>`<div class="output-item"><h4>Short Idea</h4><p>${esc(s)}</p></div>`).join('')}
+        </div>`;
+
+      case 'camera': {
+        const dirs = data.camera_directions || (Array.isArray(data) ? data : []);
+        return `<div class="output-grid">
+          <div class="output-item"><h4>${dirs.length} Camera Directions</h4>
+            <p style="font-size:11px">${dirs.slice(0,3).map(c=>`<strong>S${c.scene_number}:</strong> [${esc(c.shot_type||'')}] ${esc(c.camera_direction||'')} — <em>${esc(c.transition_in||'')} → ${esc(c.transition_out||'')}</em>`).join('<br><br>')}</p>
+          </div>
+        </div>`;
+      }
+
+      case 'sfx': {
+        const list = data.master_sfx_list || [];
+        return `<div class="output-grid">
+          <div class="output-item"><h4>${list.length} SFX in Master List</h4>
+            <p style="font-size:11px">${list.slice(0,4).map(s=>`<strong>${esc(s.name||'')}:</strong> ${esc(s.description||'')} [${esc(s.category||'')}]`).join('<br>')}</p>
+          </div>
+          ${(data.comedy_sfx||[]).slice(0,2).map(s=>`<div class="output-item"><h4>Comedy SFX</h4><p>${esc(s)}</p></div>`).join('')}
+        </div>`;
+      }
+
+      case 'music_ai':
+        return `<div class="output-grid">
+          <div class="output-item"><h4>Main Theme Prompt</h4><p style="font-size:11px;font-family:monospace">${esc((data.main_theme_prompt||'').slice(0,200))}</p></div>
+          <div class="output-item"><h4>Action Cue</h4><p style="font-size:11px">${esc((data.action_cue||'').slice(0,120))}</p></div>
+          <div class="output-item"><h4>Emotional Cue</h4><p style="font-size:11px">${esc((data.emotional_cue||'').slice(0,120))}</p></div>
+          <div class="output-item"><h4>Style Tags</h4><p style="font-size:11px">${(data.example_tags||[]).slice(0,6).map(t=>esc(t)).join(' • ')}</p></div>
+        </div>`;
+
+      case 'coloring':
+        return `<div class="output-grid">
+          <div class="output-item"><h4>Scene</h4><p>${esc(data.scene_description||'')}</p></div>
+          <div class="output-item"><h4>Caption</h4><p style="font-weight:600;color:var(--gold)">${esc(data.caption||'')}</p></div>
+          <div class="output-item"><h4>Difficulty</h4><p>${esc(data.difficulty||'')}</p></div>
+          <div class="output-item"><h4>Image Prompt</h4><p style="font-size:11px;font-family:monospace">${esc((data.coloring_page_prompt||'').slice(0,120))}…</p></div>
+        </div>`;
+
+      case 'activity': {
+        const acts = data.activities || [];
+        return `<div class="output-grid">
+          <div class="output-item"><h4>${esc(data.activity_sheet_title||'Activity Sheet')}</h4>
+            <p style="font-size:11px">${acts.slice(0,3).map(a=>`<strong>${esc(a.title||'')}:</strong> ${esc((a.instructions||'').slice(0,80))}`).join('<br><br>')}</p>
+          </div>
+          <div class="output-item"><h4>Fun Fact</h4><p>${esc(data.mythology_fun_fact||'')}</p></div>
+          <div class="output-item"><h4>Take-Home</h4><p style="color:var(--gold)">${esc(data.take_home_message||'')}</p></div>
+        </div>`;
+      }
+
+      default:
+        return `<pre>${esc(fmt(data))}</pre>`;
+    }
+  },
+};
+
+// ── Character chip selection ────────────────────────────────────────────────
+
+document.querySelectorAll('.char-chip').forEach(chip => {
+  chip.addEventListener('click', () => chip.classList.toggle('selected'));
+});
+
+// ── Initialize ─────────────────────────────────────────────────────────────
+
+(async function init() {
+  await System.checkStatus();
+  CharManager.load();
+  WorldBible.load();
+})();
+
+</script>
+</body>
+</html>
+───────────
+
+(async function init() {
+  await System.checkStatus();
+  CharBible.load();
+  WorldBible.load();
+})();
+
+</script>
+</body>
+</html>

@@ -27,7 +27,7 @@ from pathlib import Path
 BASE_DIR      = Path(__file__).resolve().parent
 PROMPTS_DIR   = BASE_DIR / "prompts"
 OLLAMA_URL    = os.environ.get("OLLAMA_URL",   "http://localhost:11434")
-OLLAMA_MODEL  = os.environ.get("OLLAMA_MODEL", "llama3")
+OLLAMA_MODEL  = os.environ.get("OLLAMA_MODEL", "qwen2.5-coder:7b")  # installed model as of 2026-07-04
 
 
 # ── Core Ollama call ───────────────────────────────────────────────────────

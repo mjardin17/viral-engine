@@ -322,6 +322,396 @@
         "#C9A227",
         "#8B8B6B"
       ]
+    },
+    {
+      "type": "history",
+      "title": "The Revolution \u2014 Six Years of Exhaustion",
+      "narration": "By 1781 the American Revolution had been grinding for six years. The Continental Army had survived Valley Forge, survived the loss of Philadelphia, survived the treason of Benedict Arnold. But survival was not victory. Washington had never won a decisive battle. The British held New York, Charleston, and Savannah. American finances were collapsing \u2014 Congress couldn't pay its soldiers, some units had mutinied. France had been an ally since 1778 but the alliance had produced limited results. The war appeared to be settling into a stalemate the Americans couldn't sustain.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The Continental Army in 1781 after six years of war \u2014 ragged soldiers, unpaid for months, the Revolution surviving but not winning, the stalemate that threatened to outlast American will. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#1A2A3D",
+        "#C9A227"
+      ],
+      "duration_sec": 52,
+      "scene_number": 25
+    },
+    {
+      "type": "biography",
+      "title": "Cornwallis \u2014 The British Commander in the South",
+      "narration": "General Charles Cornwallis had spent 1780-1781 conducting a brutal and ultimately pointless campaign through the Carolinas. He had won battles at Camden and Guilford Courthouse, but winning battles while losing the strategic war. The Patriot forces he defeated reformed. His victories cost men he couldn't replace. In the spring of 1781 he moved to Virginia, the colony he believed was the key to ending the rebellion. He had 7,500 soldiers, the largest British force in America. He was about to be caught in a trap he didn't know was closing.",
+      "visual_prompt": "Gods & Glory cinematic documentary. General Cornwallis in Virginia in 1781 \u2014 the British commander who won battles in the Carolinas but lost the campaign, now moving to Virginia with 7,500 soldiers. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#8B1A1A",
+        "#C9A227"
+      ],
+      "duration_sec": 52,
+      "scene_number": 26
+    },
+    {
+      "type": "detail",
+      "title": "Yorktown \u2014 Why Cornwallis Stopped There",
+      "narration": "Cornwallis chose Yorktown as his base at the instruction of British Commander-in-Chief Henry Clinton in New York. Clinton wanted a deep-water port where the Royal Navy could supply and reinforce his forces. Yorktown sat on a peninsula between the York and James Rivers \u2014 defensible, with good anchorage. It was also a trap: the only overland exit was a narrow neck of land, and the sea approaches were controlled by whoever had naval superiority. Cornwallis dug in at Yorktown in August 1781, unaware that a French fleet was sailing for the Chesapeake.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Yorktown peninsula in 1781 \u2014 the defensive position between the York and James Rivers that Clinton ordered Cornwallis to hold, the geography that would become a trap. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#C9A227",
+        "#1A2A3D"
+      ],
+      "duration_sec": 52,
+      "scene_number": 27
+    },
+    {
+      "type": "biography",
+      "title": "De Grasse \u2014 The Admiral Who Made It Possible",
+      "narration": "Admiral Fran\u00e7ois de Grasse commanded the French West Indies fleet \u2014 28 ships of the line, the most powerful French naval force in the western hemisphere. In August 1781 he received a message from Washington and Rochambeau: could he bring his fleet to the Chesapeake? De Grasse made the most consequential naval decision of the American Revolution: he would bring his entire fleet, 3,000 French soldiers, and enough supplies to sustain a siege. He would sail in August and could remain until mid-October. The window was fixed. Washington and Rochambeau had to move immediately.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Admiral de Grasse reviewing his fleet of 28 ships in the Caribbean \u2014 the French admiral whose decision to sail the entire fleet to the Chesapeake made the Yorktown campaign possible. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#1A2A3D"
+      ],
+      "duration_sec": 52,
+      "scene_number": 28
+    },
+    {
+      "type": "detail",
+      "title": "The March South \u2014 The Deception",
+      "narration": "Washington needed to move his army from New York to Virginia \u2014 450 miles \u2014 without the British in New York understanding what was happening. He ran an elaborate deception: fake letters were allowed to be captured suggesting an attack on New York, camps were built in New Jersey to suggest a siege, army units moved with deliberate visibility near Manhattan. British Commander Clinton watched the preparations for an attack that was never coming while Washington's army marched south. By the time Clinton realized what was happening, the French and American forces were in Virginia.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Washington's army marching south from New York while fake camps and captured letters deceive Clinton \u2014 the strategic deception that moved 9,000 men 450 miles without British interference. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#1A2A3D"
+      ],
+      "duration_sec": 52,
+      "scene_number": 29
+    },
+    {
+      "type": "battle",
+      "title": "The Battle of the Chesapeake \u2014 September 5",
+      "narration": "On September 5, 1781, the British fleet under Admiral Graves met de Grasse's French fleet outside the Chesapeake Bay. The Battle of the Chesapeake was tactically inconclusive \u2014 neither side lost a ship. But strategically it was decisive. Graves failed to break through to relieve Cornwallis. The French fleet controlled the Chesapeake. When Graves sailed back to New York for repairs, Cornwallis was sealed in Yorktown. The battle that decided the American Revolution was not at Yorktown \u2014 it was at sea on September 5, five weeks before Cornwallis surrendered.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The Battle of the Chesapeake on September 5, 1781 \u2014 British and French fleets exchanging fire outside the bay, the inconclusive action that sealed Cornwallis's fate by leaving France in control of the water. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#1A2A3D",
+        "#C9A227"
+      ],
+      "duration_sec": 52,
+      "scene_number": 30
+    },
+    {
+      "type": "battle",
+      "title": "The Siege Begins \u2014 October 6",
+      "narration": "The Franco-American force that arrived at Yorktown numbered approximately 17,000 \u2014 nearly twice Cornwallis's 7,500. Washington formally opened siege operations on October 6. The approach trenches were dug by 1,500 men working through the night \u2014 Washington himself reportedly turned the first shovelful of earth. By October 9, the first Allied batteries were in place. Washington fired the first American cannon. By October 10, Cornwallis's outer defenses were being systematically destroyed. The British had no cavalry to disrupt the siege works. The trap was closing.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The Yorktown siege opening on October 6 \u2014 1,500 men digging approach trenches overnight, Washington turning the first earth, the Allied batteries opening fire on October 9. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#1A2A3D"
+      ],
+      "duration_sec": 52,
+      "scene_number": 31
+    },
+    {
+      "type": "battle",
+      "title": "Redoubts 9 and 10 \u2014 The Night Attack",
+      "narration": "The key to Yorktown was two British earthwork fortifications \u2014 Redoubt 9 and Redoubt 10 \u2014 that flanked the British line. On the night of October 14, two columns attacked simultaneously. Alexander Hamilton led the American assault on Redoubt 10 with unloaded muskets \u2014 bayonets only, no shots to alert defenders until they were over the wall. The French took Redoubt 9 in a parallel attack. Both redoubts were taken in under 10 minutes. With the redoubts in Allied hands, the siege guns could advance to decisive range. Cornwallis's position was now hopeless.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Alexander Hamilton's column scaling Redoubt 10 at night with bayonets only \u2014 the simultaneous attacks on Redoubts 9 and 10 that broke the British defensive line at Yorktown. 16:9 cinematic.",
+      "bg_colors": [
+        "#8B1A1A",
+        "#0D1520",
+        "#C9A227"
+      ],
+      "duration_sec": 52,
+      "scene_number": 32
+    },
+    {
+      "type": "battle",
+      "title": "Cornwallis's Options \u2014 All Bad",
+      "narration": "After October 14, Cornwallis had three options. He could counterattack the Allied siege works \u2014 attempted on October 16 with 350 men, partially successful, ultimately reversed. He could attempt to cross the York River to Gloucester Point and escape north \u2014 attempted on October 16 with boats, storms scattered the crossing, he turned back. He could wait for Clinton's promised relief fleet from New York \u2014 it arrived October 24, six days after the surrender. Every option failed or arrived too late. On October 17, Cornwallis sent a message requesting a ceasefire to discuss terms.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Cornwallis's shrinking options in mid-October 1781 \u2014 the failed counterattack, the storm-scattered river crossing, the relief fleet that arrived too late, the converging catastrophe. 16:9 cinematic.",
+      "bg_colors": [
+        "#8B1A1A",
+        "#0D1520",
+        "#C9A227"
+      ],
+      "duration_sec": 52,
+      "scene_number": 33
+    },
+    {
+      "type": "battle",
+      "title": "The Surrender \u2014 October 19, 1781",
+      "narration": "The surrender ceremony was set for October 19, 1781. Cornwallis claimed illness and sent Brigadier General O'Hara in his place. O'Hara first approached Rochambeau to surrender \u2014 the French commander pointed him to Washington. Washington refused to accept the surrender from a subordinate and directed O'Hara to his own second, General Lincoln. The British band played a song called 'The World Turned Upside Down.' 7,087 British soldiers marched out and stacked their arms. The officer who commanded them reportedly avoided looking at the Allied lines, staring straight ahead as his army ended the American Revolution.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The Yorktown surrender ceremony October 19, 1781 \u2014 British soldiers marching out to stack their arms, the band playing The World Turned Upside Down, the moment the American Revolution was won. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#1A2A3D"
+      ],
+      "duration_sec": 52,
+      "scene_number": 34
+    },
+    {
+      "type": "detail",
+      "title": "The World Turned Upside Down",
+      "narration": "The song the British band played at the Yorktown surrender \u2014 'The World Turned Upside Down' \u2014 was an English ballad about disorder and impossibility. Its selection was either deeply ironic or deeply appropriate. A colonial militia army that had been losing for six years, funded by a bankrupted congress, fed by farmers and supported by a European ally, had defeated the most powerful military force on earth. The world had, in fact, turned upside down. The song the British chose to surrender to became the most appropriate epitaph for the most consequential military defeat in British history.",
+      "visual_prompt": "Gods & Glory cinematic documentary. British soldiers stacking arms at Yorktown while their band plays The World Turned Upside Down \u2014 the surrender ceremony that ended the American Revolution, the world literally changing as they marched. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#1A2A3D"
+      ],
+      "duration_sec": 52,
+      "scene_number": 35
+    },
+    {
+      "type": "detail",
+      "title": "Clinton's Relief Fleet \u2014 Six Days Late",
+      "narration": "Admiral Graves's relief fleet from New York arrived off the Chesapeake on October 24 \u2014 six days after the surrender. It carried 7,000 reinforcements that would have outnumbered the besieging Allied force if they had arrived before the capitulation. Graves had been delayed by slow repairs after the September 5 battle. Clinton had delayed sending the fleet by weeks of indecision. The margin of victory at Yorktown was six days. The American Revolution was decided by the difference between de Grasse arriving on time and Graves arriving late.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The British relief fleet arriving off the Chesapeake on October 24 \u2014 six days too late, 7,000 reinforcements that could have changed everything, the margin of the American Revolution's outcome. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#8B1A1A",
+        "#C9A227"
+      ],
+      "duration_sec": 52,
+      "scene_number": 36
+    },
+    {
+      "type": "analysis",
+      "title": "Why Britain Lost \u2014 The Strategic Failure",
+      "narration": "Britain lost the American Revolution not at Yorktown but through seven years of strategic failure. They never committed enough force consistently. They couldn't suppress rebellion in the north while fighting in the south. They couldn't maintain naval superiority across the Atlantic against France, Spain, and Holland simultaneously. They underestimated American resilience and French commitment. Yorktown was the military conclusion of a political failure: a government in London that never agreed on war aims, alternating between suppression and conciliation, never fully committing to either. The world's greatest empire lost thirteen colonies because it never decided how hard to try to keep them.",
+      "visual_prompt": "Gods & Glory cinematic documentary. British strategic failures mapped across seven years \u2014 the divided government, the insufficient forces, the naval overextension, the underestimation of American will, the structural reasons Britain lost the Revolution. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#C9A227",
+        "#1A2A3D"
+      ],
+      "duration_sec": 52,
+      "scene_number": 37
+    },
+    {
+      "type": "legacy",
+      "title": "The Treaty of Paris \u2014 What Yorktown Won",
+      "narration": "The Treaty of Paris, signed September 3, 1783, gave the United States everything it had fought for and more. Britain recognized American independence and ceded territory to the Mississippi River \u2014 far beyond what the original thirteen colonies had occupied. The United States received fishing rights off Newfoundland. The boundary with Canada was settled. Britain received only the promise that Congress would 'recommend' states treat loyalists fairly \u2014 a promise that was largely ignored. The treaty that ended the Revolution was extraordinarily generous to the Americans because Yorktown had made refusal impossible.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The Treaty of Paris 1783 \u2014 the map of American territory extending to the Mississippi River, the diplomatic victory that matched the military one at Yorktown. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#1A2A3D"
+      ],
+      "duration_sec": 52,
+      "scene_number": 38
+    },
+    {
+      "type": "legacy",
+      "title": "Washington and Power \u2014 The General Who Went Home",
+      "narration": "After Yorktown, Washington's officers proposed he become king. He refused with contempt. When he resigned his commission in December 1783, he did so before Congress in Annapolis, physically handing back the authority he had been given. The Roman general Cincinnatus had returned to his farm after saving Rome \u2014 Washington explicitly modeled himself on Cincinnatus. King George III, told that Washington would resign and return to his farm, reportedly said: 'If he does that, he will be the greatest man in the world.' He did. He was. The general who could have been king chose to be a citizen instead.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Washington resigning his commission before Congress in Annapolis in December 1783 \u2014 the general who refused a crown handing back his authority, the most consequential act of political self-denial in American history. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#1A2A3D"
+      ],
+      "duration_sec": 52,
+      "scene_number": 39
+    },
+    {
+      "type": "close",
+      "title": "October 19, 1781 \u2014 When the World Changed",
+      "narration": "On October 19, 1781, 7,087 British soldiers marched out of Yorktown and stacked their arms while their band played about a world turned upside down. It was. The colonies that had been British territory six years earlier were now a nation. The republic that would grow to become the most powerful state in human history was born in that moment \u2014 born from six years of desperate fighting, French money and ships, a march of 450 miles, a naval battle on September 5 that most people have never heard of, and two redoubts taken at bayonet point on October 14. The world the British band described had turned. It has not turned back.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Yorktown at dusk on October 19, 1781 \u2014 British soldiers stacking arms, Washington watching, the surrender that created the United States, the moment the modern world began to take its current shape. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#1A2A3D"
+      ],
+      "duration_sec": 56,
+      "scene_number": 40
+    },
+    {
+      "type": "detail",
+      "title": "Lafayette \u2014 The French Connection",
+      "narration": "The Marquis de Lafayette had been fighting with Washington since 1777, aged 19. By 1781 he commanded American forces in Virginia tasked with tracking Cornwallis. Too small to fight, he shadowed the British army and kept Washington informed of Cornwallis's movements. His intelligence reports were critical to Washington's planning. When Cornwallis settled at Yorktown, Lafayette tightened his cordon to prevent escape. The French aristocrat who had come to America for adventure at 19 was instrumental in trapping Cornwallis at 24. Lafayette's contribution to Yorktown is typically underweighted in American accounts.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Lafayette commanding American forces tracking Cornwallis through Virginia in 1781 \u2014 the 24-year-old French aristocrat whose intelligence reports and cordon helped trap the British at Yorktown. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#1A2A3D"
+      ],
+      "duration_sec": 54,
+      "scene_number": 41
+    },
+    {
+      "type": "detail",
+      "title": "The Siege Guns \u2014 French Artillery",
+      "narration": "The artillery that destroyed Cornwallis's defenses at Yorktown was predominantly French. Washington's Continental Army had been chronically short of heavy guns throughout the war. The French siege train brought to Yorktown included guns that could fire accurately at 1,000 yards \u2014 far beyond British return fire. French gunners were among the best in the world, trained in the scientific artillery tradition of the French army. When Washington fired the first cannon on October 9, he was firing a French gun. The firepower that forced Cornwallis to surrender was largely a French contribution.",
+      "visual_prompt": "Gods & Glory cinematic documentary. French siege guns positioned at Yorktown \u2014 the heavy artillery that Washington's Continental Army could never have assembled alone, the French firepower that made the siege decisive. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#C9A227",
+        "#1A2A3D"
+      ],
+      "duration_sec": 54,
+      "scene_number": 42
+    },
+    {
+      "type": "detail",
+      "title": "Hamilton's Charge \u2014 The Future Secretary's Last Battle",
+      "narration": "Alexander Hamilton had served as Washington's aide-de-camp for four years, repeatedly requesting a combat command. Washington kept refusing \u2014 Hamilton was too valuable as a staff officer. At Yorktown, Hamilton finally got his battle. He led the assault on Redoubt 10 on the night of October 14 with unloaded muskets and bayonets. The redoubt was taken in ten minutes. It was Hamilton's only major combat command. The man who would write the Federalist Papers, serve as the first Treasury Secretary, and shape American economic policy won his military reputation in ten minutes at Yorktown with a bayonet.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Alexander Hamilton leading the bayonet assault on Redoubt 10 at Yorktown \u2014 the future Treasury Secretary in his only major combat command, taking the fortification in ten minutes. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#8B1A1A",
+        "#0D1520"
+      ],
+      "duration_sec": 54,
+      "scene_number": 43
+    },
+    {
+      "type": "detail",
+      "title": "Cornwallis's Illness \u2014 Real or Convenient",
+      "narration": "Cornwallis claimed he was too ill to attend the surrender ceremony on October 19, sending Brigadier General O'Hara in his place. Whether the illness was genuine or diplomatic is debated by historians. Attending a surrender ceremony was the most humiliating experience an 18th century officer could undergo. Sending a subordinate was a recognized face-saving convention. O'Hara then compounded the insult by first approaching Rochambeau \u2014 implying Britain preferred to surrender to France than to its former colonies. Washington's response \u2014 refusing to deal with a subordinate and directing O'Hara to his own second \u2014 was a masterpiece of dignified protocol.",
+      "visual_prompt": "Gods & Glory cinematic documentary. General O'Hara approaching the surrender ceremony instead of Cornwallis \u2014 the British second-in-command attempting to surrender to Rochambeau, Washington's dignified redirect, the protocol of humiliation. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#C9A227",
+        "#1A2A3D"
+      ],
+      "duration_sec": 54,
+      "scene_number": 44
+    },
+    {
+      "type": "detail",
+      "title": "The Loyalists \u2014 The War's Forgotten Losers",
+      "narration": "Approximately one in five American colonists remained loyal to Britain during the Revolution. After Yorktown, approximately 60,000 Loyalists fled to Canada, Britain, or the Caribbean rather than live under the new republic. Their property was confiscated in most states. Families were torn apart. Communities that had been divided by the war remained divided after it. The Treaty of Paris promised Congress would 'recommend' fair treatment for Loyalists \u2014 a recommendation almost universally ignored. The American Revolution created America. It also created a refugee crisis of 60,000 people who had chosen the losing side of their own civil war.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Loyalist families departing for Canada after Yorktown \u2014 the 60,000 Americans who chose Britain and lost everything, the refugee crisis that followed the Revolution's victory. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#8B1A1A",
+        "#C9A227"
+      ],
+      "duration_sec": 54,
+      "scene_number": 45
+    },
+    {
+      "type": "detail",
+      "title": "France's Cost \u2014 Revolution Imported",
+      "narration": "France's support for the American Revolution cost approximately 1.3 billion livres \u2014 a sum that pushed France toward bankruptcy. The financial crisis triggered by war debt was a primary cause of the French Revolution of 1789. The soldiers who returned from America brought back ideas about liberty and republican government that combined explosively with French social grievances. Lafayette returned home and became a leader of the early French Revolution. The American Revolution that France helped finance exported its ideas back to France and helped create the revolution that overthrew the French monarchy. Yorktown's consequences reached Paris.",
+      "visual_prompt": "Gods & Glory cinematic documentary. France in 1789 \u2014 the financial crisis triggered by American war debt, Lafayette back home leading the French Revolution, the ideas from America combining with French grievances. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#8B1A1A"
+      ],
+      "duration_sec": 54,
+      "scene_number": 46
+    },
+    {
+      "type": "analysis",
+      "title": "The Constitutional Convention \u2014 Yorktown's Real Product",
+      "narration": "The Articles of Confederation that governed the United States after independence were so weak that Washington called them 'a rope of sand.' The Constitutional Convention of 1787 replaced them with the Constitution \u2014 the document that created the actual American government. The men who wrote it were shaped by the Revolution: Washington had seen an army starve for lack of congressional authority to raise funds. Hamilton had seen military decisions paralyzed by thirteen competing state governments. The Constitution was written by men who had experienced the consequences of weak central government at Valley Forge and Morristown. Yorktown made America. The Constitution made it governable.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The Constitutional Convention of 1787 \u2014 Washington presiding, Hamilton arguing for strong central government, the men shaped by Revolutionary War failures writing the document that made America work. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#1A2A3D"
+      ],
+      "duration_sec": 54,
+      "scene_number": 47
+    },
+    {
+      "type": "close",
+      "title": "What Yorktown Built",
+      "narration": "On October 19, 1781, the British Army marched out of Yorktown and the American Revolution was effectively over. What followed was not just a new country but a new idea: that government derives its authority from the consent of the governed, that rights precede government rather than being granted by it, that a written constitution can constrain power. These ideas had existed before America. America made them operational. The republic that stumbled through six years of war, that nearly starved at Valley Forge, that survived on French money and Washington's stubbornness \u2014 that republic became the template for every democratic constitution written in the two centuries that followed. Yorktown didn't just end a war. It started something that is still running.",
+      "visual_prompt": "Gods & Glory cinematic documentary. America after Yorktown \u2014 the Constitutional Convention, the new republic's first decades, the template for democratic government that spread across two centuries, the world still shaped by what was decided at a Virginia riverbank. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#1A2A3D"
+      ],
+      "duration_sec": 56,
+      "scene_number": 48
+    },
+    {
+      "type": "detail",
+      "title": "The Continental Army \u2014 What Washington Actually Had",
+      "narration": "The army Washington commanded at Yorktown was not the army most Americans imagine. The Continental regulars were well-trained by 1781 \u2014 Baron von Steuben's work at Valley Forge had transformed them \u2014 but they were chronically unpaid, sometimes unfed, and had experienced mutinies as recently as January 1781. The militia forces were unreliable in open battle. Washington's strategic genius throughout the Revolution was recognizing what his army could and couldn't do, and avoiding battles that would expose its weaknesses. At Yorktown, with French regulars beside him and siege operations replacing open battle, he finally had conditions that matched his army's strengths.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The Continental Army at Yorktown in 1781 \u2014 the well-drilled but chronically underpaid soldiers transformed by von Steuben, finally fighting under conditions that matched their capabilities. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#C9A227",
+        "#1A2A3D"
+      ],
+      "duration_sec": 54,
+      "scene_number": 49
+    },
+    {
+      "type": "detail",
+      "title": "The Siege \u2014 18th Century Warfare at Its Most Scientific",
+      "narration": "18th century siege warfare was among the most mathematically precise forms of military operation ever developed. Approach trenches were dug at precise angles to prevent enfilading fire. Parallel trenches were established at calculated distances. Artillery was positioned according to mathematical tables worked out over decades of European warfare. The French engineers who supervised the Yorktown siege were the best in the world \u2014 France had developed siege doctrine since Vauban in the 17th century. Cornwallis faced not just an army but a system, refined over a century, that was designed to make every defensive position eventually untenable.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The Yorktown siege works \u2014 mathematically precise approach trenches and parallel lines, French engineers applying a century of siege doctrine against Cornwallis's earthworks. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#1A2A3D"
+      ],
+      "duration_sec": 54,
+      "scene_number": 50
+    },
+    {
+      "type": "detail",
+      "title": "Rochambeau \u2014 The General Who Took Orders",
+      "narration": "General Rochambeau commanded the French Expeditionary Force in America \u2014 7,000 professional soldiers, the best-equipped force in the campaign. He was older than Washington, more experienced, and commanded forces that could arguably have operated independently. Instead, he consistently deferred to Washington's overall command while quietly providing expertise and resources that made Washington's plans executable. At Yorktown, it was Rochambeau who suggested the southern campaign and Rochambeau who facilitated the coordination with de Grasse. The man who made Yorktown possible chose throughout the campaign to be Washington's partner rather than his rival.",
+      "visual_prompt": "Gods & Glory cinematic documentary. General Rochambeau with Washington at Yorktown \u2014 the French commander who deferred to American overall command while quietly providing the expertise and resources that made victory possible. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#1A2A3D"
+      ],
+      "duration_sec": 57,
+      "scene_number": 51
+    },
+    {
+      "type": "detail",
+      "title": "The American Revolution's Global Context",
+      "narration": "The American Revolution was not fought in isolation. Britain was simultaneously at war with France, Spain, and Holland \u2014 a global conflict stretching from the Caribbean to India to the English Channel. British resources that might have crushed the American rebellion were diverted to protect Jamaica from France, Gibraltar from Spain, and Bengal from French-allied forces. Yorktown happened partly because Britain couldn't concentrate its navy in American waters while fighting everywhere else simultaneously. The American Revolution succeeded not just because of Valley Forge and Yorktown but because Britain was overextended across the entire globe.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Map of Britain's global wars 1778-1783 \u2014 conflicts in the Caribbean, Gibraltar, India, and the Channel simultaneously stretching British resources that could have ended the American rebellion. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#C9A227",
+        "#1A2A3D"
+      ],
+      "duration_sec": 57,
+      "scene_number": 52
+    },
+    {
+      "type": "analysis",
+      "title": "Why America Won \u2014 Five Real Reasons",
+      "narration": "America won the Revolution for five reasons that had little to do with the mythology. First, France's intervention in 1778 made it a world war Britain couldn't afford. Second, Washington's strategic patience avoided the decisive defeat that would have ended the rebellion. Third, the British government never agreed on how hard to fight \u2014 alternating between conciliation and suppression without fully committing to either. Fourth, the logistics of fighting a war 3,000 miles from home were unsustainable indefinitely. Fifth, at Yorktown specifically, de Grasse arrived and Graves arrived late. The Revolution was won by endurance, alliance, British indecision, and six days.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Five factors that won the American Revolution \u2014 French alliance, Washington's patience, British indecision, logistical overextension, and the six-day gap between de Grasse and Graves. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#1A2A3D"
+      ],
+      "duration_sec": 57,
+      "scene_number": 53
+    },
+    {
+      "type": "legacy",
+      "title": "The Declaration and the Constitution \u2014 What Yorktown Protected",
+      "narration": "The Declaration of Independence stated the principles. The Revolution fought for them. Yorktown secured them. The Constitution of 1787 institutionalized them. What emerged from this sequence was a set of ideas that spread across the world over the following two centuries: that all people possess inherent rights, that government exists to protect those rights, that when government fails this purpose the people may alter or abolish it. These ideas were not perfectly realized in 1781 \u2014 slavery continued for 84 more years, women couldn't vote for 139 more years. But the framework that eventually corrected these failures was built at Yorktown and Philadelphia. The tree planted in 1781 is still growing.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The Declaration, the Revolution, Yorktown, the Constitution \u2014 the sequence that created the framework for rights-based government, the imperfect but expanding arc of American democracy. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#1A2A3D"
+      ],
+      "duration_sec": 57,
+      "scene_number": 54
     }
   ]
 }

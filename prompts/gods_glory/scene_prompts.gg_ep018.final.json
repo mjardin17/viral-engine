@@ -322,6 +322,409 @@
         "#C9A227",
         "#4A3728"
       ]
+    },
+    {
+      "type": "history",
+      "title": "1066 \u2014 The Year England Died and Was Reborn",
+      "narration": "1066 is the most famous date in English history. In a single year, England experienced three claimants to the throne, two invasions, three major battles, and a complete change of ruling class. The England that existed before 1066 \u2014 Anglo-Saxon, English-speaking at every level of government, governed by an aristocracy with centuries of continuous culture \u2014 ceased to exist. The England that emerged was governed by French-speaking Normans, organized on feudal principles imported from northern France, and administered in a language that most English people couldn't understand. The change was as complete as any conquest in history.",
+      "visual_prompt": "Gods & Glory cinematic documentary. England in 1066 \u2014 Anglo-Saxon villages, English churches, the English royal court at Winchester, the culture that had existed continuously since the 5th century, the civilization about to be transformed completely by conquest. 16:9 cinematic.",
+      "bg_colors": [
+        "#3D3020",
+        "#1A2A1A",
+        "#C9A227"
+      ],
+      "duration_sec": 52,
+      "scene_number": 25
+    },
+    {
+      "type": "history",
+      "title": "Edward the Confessor's Problem",
+      "narration": "King Edward the Confessor died on January 5, 1066 with no clear heir. He had apparently promised the throne to multiple people at different times: his cousin Duke William of Normandy, possibly the Norwegian King Harald Hardrada, and Harold Godwinson, the most powerful English nobleman. On his deathbed, he reportedly gestured toward Harold Godwinson \u2014 or toward the attendants, depending on the source. Harold Godwinson was immediately crowned. William of Normandy claimed Harold had previously sworn an oath (on holy relics) to support William's claim. The war that followed was about who told the truth \u2014 a question that can never be definitively answered.",
+      "visual_prompt": "Gods & Glory cinematic documentary. King Edward the Confessor on his deathbed, Harold Godwinson and Norman ambassadors present, the ambiguous deathbed scene that launched the conquest of England, each claimant interpreting the dying king's gesture differently. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D0D0D",
+        "#1A1A1A",
+        "#C9A227"
+      ],
+      "duration_sec": 52,
+      "scene_number": 26
+    },
+    {
+      "type": "battle",
+      "title": "Stamford Bridge \u2014 Harold's First Victory",
+      "narration": "Three days before William landed in the south, Harold Godwinson won a brilliant battle in the north. Harald Hardrada of Norway had invaded Yorkshire with 300 ships and approximately 9,000 men, supported by Harold's exiled brother Tostig. Harold force-marched his army 190 miles in four days and caught the Norse army by surprise at Stamford Bridge on September 25. The battle was a complete English victory. Harald Hardrada and Tostig were both killed. Of the 300 ships that had brought the invasion fleet, only 24 were needed to carry the survivors home. Harold had just destroyed the finest Viking army of the era. Three days later, William landed.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The Battle of Stamford Bridge \u2014 Harold Godwinson's army catching the Norse invaders by surprise, the fierce fighting at the bridge, the complete English victory over Harald Hardrada's 9,000 Vikings, and the news three days later that William had landed. 16:9 cinematic.",
+      "bg_colors": [
+        "#8B1A1A",
+        "#2C1A00",
+        "#3D3020"
+      ],
+      "duration_sec": 52,
+      "scene_number": 27
+    },
+    {
+      "type": "detail",
+      "title": "William's Army \u2014 What He Brought",
+      "narration": "William's invasion force was approximately 7,000-8,000 men: Norman knights, infantry from Brittany and Flanders, and mercenaries from across northern France. Crucially, he brought cavalry \u2014 approximately 2,000 mounted knights \u2014 which the English didn't use in battle. He also brought archers. The English army under Harold relied on the housecarl \u2014 professional infantry fighting with the two-handed Dane axe \u2014 and the fyrd, conscript infantry of variable quality. The equipment match was close. What differed was the combination: Norman cavalry and archers working together in ways Harold's force couldn't counter.",
+      "visual_prompt": "Gods & Glory cinematic documentary. William the Conqueror reviewing his invasion force on the Normandy coast before embarkation \u2014 Norman knights in hauberks, Breton infantry, the mixed force of cavalry and archers that would introduce a new style of warfare to England. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#2C1A00"
+      ],
+      "duration_sec": 52,
+      "scene_number": 28
+    },
+    {
+      "type": "battle",
+      "title": "Senlac Hill \u2014 Harold's Position",
+      "narration": "Harold chose his position at Senlac Hill above Hastings with the eye of an experienced commander. The hill gave his infantry a defensive advantage: Norman cavalry charging uphill was cavalry at a disadvantage. His flanks were protected by marshy ground. He formed his army in a shield wall \u2014 the Anglo-Saxon defensive formation \u2014 and waited. The position was strong. What it couldn't compensate for was the simple fact that Harold's men were exhausted from Stamford Bridge and the 190-mile march south. William had been waiting at his beachhead for two weeks, resting. Fresh soldiers beat tired soldiers, all else being equal. All else was approximately equal.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Harold's Anglo-Saxon shield wall on Senlac Hill above Hastings, the housecarls with their Dane axes in the front rank, the fyrd filling out the formation, the strong defensive position that almost held through a full day of battle. 16:9 cinematic.",
+      "bg_colors": [
+        "#3D3020",
+        "#1A2A1A",
+        "#8B1A1A"
+      ],
+      "duration_sec": 52,
+      "scene_number": 29
+    },
+    {
+      "type": "battle",
+      "title": "The Feigned Retreat \u2014 William's Master Stroke",
+      "narration": "Three Norman feigned retreats at Hastings shaped the battle. Norman cavalry would withdraw, drawing English infantry to pursue downhill, breaking the shield wall. Then the Normans would wheel and cut down the pursuers. Whether these were planned feigned retreats or genuine routs that William exploited is debated. Medieval cavalry could not execute a controlled feigned retreat under battle conditions easily \u2014 it required extraordinary discipline. That William managed it at least once (possibly three times) either argues for exceptional tactical control or exceptional opportunism. The shield wall, broken by pursuit, became vulnerable to the combined arms assault it had repelled while intact.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Norman cavalry executing the feigned retreat at Hastings \u2014 wheeling back as if routed, drawing English housecarls downhill in pursuit, then turning to cut them down, the tactical maneuver that broke the Anglo-Saxon shield wall. 16:9 cinematic.",
+      "bg_colors": [
+        "#8B1A1A",
+        "#3D3020",
+        "#C9A227"
+      ],
+      "duration_sec": 52,
+      "scene_number": 30
+    },
+    {
+      "type": "detail",
+      "title": "The Bayeux Tapestry \u2014 230 Feet of History",
+      "narration": "The Bayeux Tapestry is 230 feet long and 20 inches wide, embroidered on linen with wool thread, and depicts the Norman Conquest from the English embassy to Normandy in 1064 through the Battle of Hastings in 1066. It is the most detailed visual record of 11th-century warfare in existence. Who made it is uncertain \u2014 possibly commissioned by William's half-brother Odo of Bayeux, possibly made in England by English embroiderers. It contains details \u2014 facial expressions, ship construction, battle positions \u2014 that no written source provides. It is also a piece of Norman propaganda, presenting the conquest from the Norman perspective. Its English embroiderers may have hidden subtle counter-narratives in the border scenes.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The Bayeux Tapestry's battle of Hastings scenes \u2014 the embroidered warriors, the falling horses, Harold receiving an arrow, William rallying his troops \u2014 the 230-foot visual record of the conquest, the most important document of 11th-century warfare. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#2C1A00",
+        "#0D1520"
+      ],
+      "duration_sec": 52,
+      "scene_number": 31
+    },
+    {
+      "type": "detail",
+      "title": "The Harrying of the North \u2014 The Atrocity After Victory",
+      "narration": "William's military victory in 1066 did not end English resistance. Northern England rebelled repeatedly in 1068-1070, supported by Danish forces. William's response \u2014 the Harrying of the North in 1069-1070 \u2014 was systematic devastation. Villages were burned. Livestock killed. Grain stores destroyed. The Domesday Book, compiled sixteen years later, still recorded vast areas of Yorkshire as 'waste.' Contemporary estimates suggest up to 100,000 people died, primarily from the famine that followed the destruction of agricultural capacity. The Harrying was William's deliberate choice to make further resistance impossible by making northern England incapable of supporting it. It worked.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The Harrying of the North 1069-1070 \u2014 Norman soldiers burning Anglo-Saxon villages in Yorkshire, livestock slaughtered, grain stores destroyed, the systematic devastation that killed more than the battle itself and ended English resistance permanently. 16:9 cinematic.",
+      "bg_colors": [
+        "#8B1A1A",
+        "#0D1520",
+        "#2C1A00"
+      ],
+      "duration_sec": 52,
+      "scene_number": 32
+    },
+    {
+      "type": "detail",
+      "title": "What the Normans Did to English",
+      "narration": "In 1066, English was the language of government, law, and literature in England. By 1200, the ruling class spoke French, legal proceedings were conducted in Latin and French, and English had been pushed to the peasantry. But English survived \u2014 and absorbed. The 10,000 French words that entered English between 1066 and 1300 are why English is what it is: a Germanic language with a Romance vocabulary overlay. Words associated with power and refinement came from French (government, justice, parliament, cuisine, fashion). Words associated with labor and animals came from English (work, eat, cow, pig). The class structure of the Norman conquest is preserved in the English dictionary.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Medieval English court where Norman French is spoken by the nobility while Anglo-Saxon serfs speak English, the linguistic stratification of the conquest visible in daily life, the two vocabularies that would merge into modern English. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#C9A227",
+        "#2C1A00"
+      ],
+      "duration_sec": 52,
+      "scene_number": 33
+    },
+    {
+      "type": "detail",
+      "title": "The Domesday Book \u2014 Counting Everything",
+      "narration": "In 1085, William I ordered a complete survey of England \u2014 who owned what, who held it from whom, what it was worth. The resulting Domesday Book (so named because there was no appeal from its findings, like the Day of Judgment) was compiled in 1086 and contained information on approximately 13,000 settlements. Nothing like it had existed in Western Europe since Roman tax records. The Domesday Book reveals the completeness of the Norman takeover: of the English landholders recorded in 1066, virtually none appear as landholders in 1086. The English ruling class had been entirely replaced.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Scribes compiling the Domesday Book in 1085-1086, the comprehensive survey of all English landholding, the evidence of how completely the Norman conquest had replaced the Anglo-Saxon ruling class in twenty years. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#2C2A1A"
+      ],
+      "duration_sec": 52,
+      "scene_number": 34
+    },
+    {
+      "type": "analysis",
+      "title": "The Last Successful Invasion \u2014 Why Never Again",
+      "narration": "Britain has not been successfully invaded since 1066. The Spanish Armada failed in 1588. Napoleon massed troops at Boulogne but never crossed. Hitler planned Operation Sea Lion but abandoned it. The Channel, combined with English (later British) naval power developed partly in response to the Norman experience, has made invasion impractical for 958 years. The specific lessons of 1066 \u2014 that control of the sea approaches was essential \u2014 drove British investment in naval power from the 12th century onward. The defeat that created the most powerful naval tradition in history is an irony English historians have noted since the 18th century.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Map showing failed invasion attempts of Britain after 1066 \u2014 the Spanish Armada's route, Napoleon's camp at Boulogne, the English Channel as protective moat, the naval power that Britain developed specifically because it had been conquered once. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#1A2A3D",
+        "#C9A227"
+      ],
+      "duration_sec": 52,
+      "scene_number": 35
+    },
+    {
+      "type": "legacy",
+      "title": "Norman Legacy \u2014 What They Left Behind",
+      "narration": "The Normans gave England the castle \u2014 before 1066, there were approximately six castles in England; by 1100 there were hundreds. They gave England a feudal system that tied military service to land ownership. They gave England a government administration that was more sophisticated than anything in contemporary Europe. They gave English common law its first systematic written codes. They gave the English language half its vocabulary. The Normans themselves disappeared: within four generations, Norman nobles identified as English rather than Norman. They conquered England and England absorbed them \u2014 the most complete cultural digestion of a conquering people in recorded European history.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Norman castle construction in post-conquest England \u2014 the White Tower of London, Warwick Castle, Durham Castle, the stone fortifications that transformed the English landscape and demonstrated Norman power, the architectural legacy of the conquest. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#3D3020"
+      ],
+      "duration_sec": 52,
+      "scene_number": 36
+    },
+    {
+      "type": "close",
+      "title": "1066 \u2014 The Hinge of English History",
+      "narration": "Every year in English history has a before and an after, but 1066 is where the hinge is. The England that Harold Godwinson governed on January 5, 1066 was a coherent continuation of the Anglo-Saxon civilization that had existed for 600 years. The England that William I governed on Christmas Day \u2014 when he was crowned in Westminster Abbey while his soldiers, mistaking the cheers inside for an attack, burned the surrounding buildings \u2014 was already something different. It would take two centuries for English to reassert itself as a language of power. But when it did, it carried the Norman inheritance within it. Modern English is what happens when the conquered language outlasts the conquerors.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Westminster Abbey on Christmas Day 1066 \u2014 William the Conqueror being crowned King of England while his soldiers burn buildings outside, the moment of conquest and the beginning of the transformation that would produce the English language, English common law, and the English nation. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#8B1A1A"
+      ],
+      "duration_sec": 56,
+      "scene_number": 37
+    },
+    {
+      "type": "detail",
+      "title": "Harold's Fatal Decision \u2014 Why He Marched South Immediately",
+      "narration": "After Stamford Bridge, Harold could have rested his army, reinforced with the southern fyrd, and waited for William at a defensive position of his choosing. He didn't. He force-marched back to London \u2014 arriving September 29 \u2014 rested barely five days, then marched south toward Hastings. Historians debate why. Some argue he feared William devastating Sussex, which was his personal earldom. Others argue he was surprised by William's landing position and felt speed was essential. Others argue he overestimated the quality of his exhausted army. Whatever the reason, Harold arrived at Senlac Hill with troops who had marched 350 miles in two weeks, fought a full battle, and marched another 200 miles. They were not ready.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Harold Godwinson force-marching his army south after Stamford Bridge, the exhausted soldiers on the road to Sussex, the decision to attack immediately rather than rest and reinforce that would cost him the kingdom and his life. 16:9 cinematic.",
+      "bg_colors": [
+        "#3D3020",
+        "#1A2A1A",
+        "#8B1A1A"
+      ],
+      "duration_sec": 52,
+      "scene_number": 38
+    },
+    {
+      "type": "detail",
+      "title": "The Papal Banner \u2014 God on William's Side",
+      "narration": "Pope Alexander II blessed William's invasion and sent him a papal banner to carry into battle. This was extraordinarily significant: it framed the Norman invasion as a holy war and Harold's defense as resistance to papal authority. Harold had been crowned by Stigand, the Archbishop of Canterbury, who was himself under papal suspension. William had a valid oath claim (Harold's alleged oath on holy relics), a papal blessing, and the moral authority of fighting against a schismatic king. The propaganda dimension of 1066 was as sophisticated as the military dimension. William understood that legitimacy mattered as much as victory \u2014 and sought both.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Norman troops carrying the papal banner blessed by Pope Alexander II as they advance at Hastings, the religious legitimization of the Norman invasion, the propaganda that framed William's dynastic claim as a holy cause. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#2C2A1A"
+      ],
+      "duration_sec": 52,
+      "scene_number": 39
+    },
+    {
+      "type": "detail",
+      "title": "The Housecarls \u2014 England's Professional Infantry",
+      "narration": "Harold's housecarls \u2014 his professional household troops \u2014 were the finest infantry in northern Europe. They were equipped with the two-handed Dane axe, capable of cutting through armor and killing horses. They were paid professional soldiers, loyal to Harold personally, trained continuously. The core of Harold's army at Hastings was perhaps 2,000-3,000 housecarls; the rest were fyrd \u2014 conscript infantry of variable quality. The housecarls held the ridge all day. Contemporary accounts describe them fighting with extraordinary ferocity even after Harold was killed. The shield wall was only broken when too few of them remained to maintain it. The English army at Hastings didn't lose because it was weak; it lost because it was outnumbered in a contest of attrition.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Anglo-Saxon housecarls in their chain mail and winged helmets, their two-handed Dane axes raised, the professional soldiers of Harold's household guard who were the finest infantry in northern Europe and held Senlac Hill all day. 16:9 cinematic.",
+      "bg_colors": [
+        "#3D3020",
+        "#2C1A00",
+        "#8B1A1A"
+      ],
+      "duration_sec": 52,
+      "scene_number": 40
+    },
+    {
+      "type": "battle",
+      "title": "The Battle \u2014 Dawn to Dusk",
+      "narration": "The battle lasted approximately nine hours, from roughly 9 AM to dusk on October 14, 1066. This was unusually long for a medieval engagement. The Normans made multiple attacks that failed; the feigned retreats that broke portions of the shield wall were repeated. Harold reportedly maintained the ridge's integrity for most of the day despite serious losses. The length of the battle suggests how strong the English defensive position was \u2014 and how competent William's tactical management needed to be to eventually break it. Nine hours of sustained combat is physically and organizationally extraordinary. Both armies demonstrated exceptional endurance. The battle was decided by marginal erosion of the English line rather than any single breakthrough.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The Battle of Hastings from dawn through dusk \u2014 Norman cavalry charges repeatedly breaking against the English shield wall on Senlac Hill, both armies exhausting themselves over nine hours, the longest medieval battle of the era. 16:9 cinematic.",
+      "bg_colors": [
+        "#8B1A1A",
+        "#3D2A1A",
+        "#0D1520"
+      ],
+      "duration_sec": 52,
+      "scene_number": 41
+    },
+    {
+      "type": "detail",
+      "title": "The Death of Harold \u2014 What Really Happened",
+      "narration": "Harold Godwinson's death is one of medieval history's most debated moments. The Bayeux Tapestry shows a figure with an arrow in his eye above the caption 'Harold Rex interfectus est' (King Harold is killed), but the identification is uncertain \u2014 the tapestry may show the same man twice, once with an arrow and once being cut down by a mounted knight. Later sources suggest he was cut down by Norman cavalry after being disabled. The specific manner doesn't change the military consequence: Harold died on the ridge, and with his death the command structure collapsed. The shield wall, which had held all day, broke within minutes of the king falling.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The death of Harold at the Battle of Hastings \u2014 the Bayeux Tapestry image of the figure with an arrow, the uncertainty about whether he died from the arrow or was cut down by cavalry, the moment the English resistance ended. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D0D0D",
+        "#1A0D00",
+        "#8B1A1A"
+      ],
+      "duration_sec": 52,
+      "scene_number": 42
+    },
+    {
+      "type": "detail",
+      "title": "Harold's Brothers \u2014 England's Last Leaders",
+      "narration": "Harold Godwinson's brothers Gyrth and Leofwine also died at Hastings. This was catastrophic: England's entire senior military and political leadership \u2014 the Godwinson family that had dominated English politics for thirty years \u2014 was destroyed in a single afternoon. Gyrth had reportedly argued against Harold's immediate march south, suggesting a scorched-earth strategy that would deny William supplies while a fresh army was assembled. Harold rejected the advice. Both men died on the ridge where Harold's rashness had placed them. The deaths of all three Godwinson brothers in a single battle left England without any obvious native leadership to organize continued resistance.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Harold's brothers Gyrth and Leofwine fighting and dying at Hastings, the complete destruction of the Godwinson family that had dominated English politics for thirty years, England's entire native leadership eliminated in one afternoon. 16:9 cinematic.",
+      "bg_colors": [
+        "#8B1A1A",
+        "#2C1A00",
+        "#0D1520"
+      ],
+      "duration_sec": 52,
+      "scene_number": 43
+    },
+    {
+      "type": "detail",
+      "title": "William's Coronation \u2014 The Burning Church",
+      "narration": "William was crowned King of England in Westminster Abbey on Christmas Day, 1066. During the ceremony, Norman guards outside the abbey misinterpreted the shouts of acclamation from inside \u2014 thinking it was an attack \u2014 and began burning surrounding buildings. The smoke entered the abbey. The congregation panicked. The coronation was completed in a burning, chaotic church with people fleeing. William was reportedly trembling throughout the ceremony. The symbolism is hard to ignore: the new king was crowned in a moment of self-created chaos, surrounded by the smoke of fire his own soldiers had started. It was an accurate preview of the conquest's method.",
+      "visual_prompt": "Gods & Glory cinematic documentary. William the Conqueror's coronation in Westminster Abbey on Christmas Day 1066 \u2014 Norman guards misinterpreting the acclamation shouts and burning surrounding buildings, the ceremony completed in smoke and panic, the king trembling. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D0D0D",
+        "#8B1A1A",
+        "#C9A227"
+      ],
+      "duration_sec": 52,
+      "scene_number": 44
+    },
+    {
+      "type": "detail",
+      "title": "The Motte and Bailey \u2014 Instant Domination",
+      "narration": "Within months of the conquest, William ordered the construction of motte-and-bailey castles across England. A motte was an artificial earthen mound; a bailey was an enclosed courtyard at its base. Both were surrounded by wooden palisades. A motte-and-bailey could be constructed in days by a labor force. They were military control points: visible, defensible, and positioned to dominate the local population. By 1100, there were approximately 500 castles in England. Before 1066, there had been six. The Norman military occupation expressed itself architecturally. The Normans didn't just defeat England; they built their dominance into the landscape in wood and earth.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Motte-and-bailey castle under construction in post-conquest England \u2014 the artificial mound rising, the wooden palisade going up, Norman soldiers watching over conscripted English laborers, the military architecture of occupation. 16:9 cinematic.",
+      "bg_colors": [
+        "#3D3020",
+        "#2C1A00",
+        "#8B1A1A"
+      ],
+      "duration_sec": 52,
+      "scene_number": 45
+    },
+    {
+      "type": "detail",
+      "title": "Resistance \u2014 The Last Anglo-Saxon Holdouts",
+      "narration": "English resistance after 1066 was real and sustained. Edgar \u00c6theling, the legitimate heir, was proclaimed king briefly after Hastings. Earls Edwin and Morcar revolted. Hereward the Wake held the Isle of Ely until 1071. The Welsh borders and northern England remained unstable for years. William's response was military suppression and strategic concession: he confirmed English laws in some areas while replacing the ruling class wholesale. The last Anglo-Saxon thegns were gradually dispossessed through legal mechanisms, military defeat, and strategic marriage. By 1086, the process was essentially complete. The Domesday Book is the administrative record of a completed conquest.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Hereward the Wake defending the Isle of Ely in the fenlands, the last significant Anglo-Saxon resistance to the Norman conquest, surrounded by the marshes that gave his small force its defensive advantage against William's army. 16:9 cinematic.",
+      "bg_colors": [
+        "#1A2A1A",
+        "#3D3020",
+        "#8B1A1A"
+      ],
+      "duration_sec": 52,
+      "scene_number": 46
+    },
+    {
+      "type": "detail",
+      "title": "The Norman Church \u2014 Replacing English Christianity",
+      "narration": "William replaced nearly every senior English churchman with Normans. Archbishop Lanfranc of Canterbury reorganized the English Church on continental lines \u2014 stricter discipline, stronger hierarchy, clearer subordination to Rome. Norman bishops built new cathedrals in the Romanesque style: Durham, Canterbury, Winchester, Ely \u2014 the largest buildings England had ever seen, designed to express the power of the new order. The English religious tradition \u2014 its saints, its liturgical peculiarities, its local devotions \u2014 was partly preserved and partly overwritten. The monasteries survived; their leadership changed. Christianity was continuous; English Christianity was transformed.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Construction of Durham Cathedral under Norman direction \u2014 the massive Romanesque structure dwarfing everything around it, the deliberate architectural statement of Norman ecclesiastical power replacing the Anglo-Saxon church's smaller tradition. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#3D3020",
+        "#0D1520"
+      ],
+      "duration_sec": 52,
+      "scene_number": 47
+    },
+    {
+      "type": "detail",
+      "title": "Common Law \u2014 England's Unique Legal Heritage",
+      "narration": "England developed a legal system \u2014 Common Law \u2014 that was distinct from the Roman law traditions of continental Europe. The distinction emerged partly from the Norman conquest: the Normans brought French legal customs but also had to manage an existing English legal tradition. The synthesis that emerged \u2014 trial by jury, writs, the distinction between law and equity \u2014 became the foundation of legal systems in the United States, Canada, Australia, and dozens of former British territories. The legal heritage that shapes governance across half the world was partly formed in the friction between Norman French legal concepts and Anglo-Saxon customary law. Conquest produced a legal hybrid that has proved more durable than either parent system.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Medieval English court with Norman judge and Anglo-Saxon plaintiff \u2014 the Common Law system emerging from the friction between Norman French legal customs and existing Anglo-Saxon law, the legal hybrid that would govern half the world. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#2C2A1A"
+      ],
+      "duration_sec": 52,
+      "scene_number": 48
+    },
+    {
+      "type": "detail",
+      "title": "The English Language \u2014 Survival and Triumph",
+      "narration": "After 1066, the English language had no official status. French was the language of the court, law, and literature. Latin was the language of the Church and scholarship. English was the language of peasants. And yet English survived. By 1200, Norman nobles born in England were starting to identify as English rather than Norman. By 1400, English had reasserted itself as a literary language \u2014 Chaucer's Canterbury Tales were written in English, not French. By 1500, English was the language of government. The language the Normans had reduced to peasant speech had absorbed 10,000 French words and emerged stronger, more flexible, and more expressive than either of its components.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Medieval English peasants speaking English while their Norman lords speak French above them, the class-stratified language situation of post-conquest England, the seeds of the hybrid language that would eventually dominate global communication. 16:9 cinematic.",
+      "bg_colors": [
+        "#3D3020",
+        "#C9A227",
+        "#0D1520"
+      ],
+      "duration_sec": 52,
+      "scene_number": 49
+    },
+    {
+      "type": "analysis",
+      "title": "Why Didn't England Stay Norman?",
+      "narration": "The Normans conquered England completely \u2014 replaced its ruling class, its language of power, its Church leadership, its architectural tradition. Within four generations, their descendants identified as English. The explanation is demographic: there were very few Normans and very many English. The Normans couldn't afford to rule a subject population of millions; they had to incorporate the English into their administrative system. They gave Norman names to their children, but the children grew up hearing English. They spoke French at court, but their estates were managed by English-speaking workers. Assimilation was inevitable once the conquest generation passed. The conquerors were absorbed by the culture they had conquered.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Norman lord of the third generation speaking both English and French to manage his estates, his children knowing English better than French, the inevitable assimilation of a small conquering elite into a large conquered population. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#3D3020"
+      ],
+      "duration_sec": 52,
+      "scene_number": 50
+    },
+    {
+      "type": "detail",
+      "title": "Magna Carta \u2014 The Conquest's Long-Term Consequence",
+      "narration": "Magna Carta (1215) was issued 149 years after the Norman Conquest. It was forced on King John by English barons \u2014 many of whom were Norman descendants \u2014 who were asserting limits on royal power. The document drew on Anglo-Saxon legal traditions and Norman feudal expectations simultaneously. It established that even kings were subject to law \u2014 a concept with roots in both traditions the conquest had fused. The English constitution that emerged from Magna Carta and its subsequent development into Parliament was a hybrid of conquered and conqueror. The specific freedoms that America's Founders cited as their heritage came from a document produced by the collision of two cultures at Hastings.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Runnymede 1215 \u2014 King John sealing Magna Carta surrounded by English and Norman barons, the document drawn from both Anglo-Saxon and Norman legal traditions, the constitutional milestone that traced ancestry to the conquest's cultural collision. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#2C2A1A"
+      ],
+      "duration_sec": 52,
+      "scene_number": 51
+    },
+    {
+      "type": "analysis",
+      "title": "What Harold's Victory Would Have Meant",
+      "narration": "If Harold had won at Hastings \u2014 rested his army, waited in a defensive position, or simply been luckier \u2014 England would have remained Anglo-Saxon. The feudal system would not have been imposed; England might have developed differently from continental Europe. The Norman influence on English law, language, and institutions would not have occurred. The English language would not have absorbed the French vocabulary that makes it what it is. Whether this alternative England would have been better or worse is unknowable. What is certain is that the world Harold would have left \u2014 and the world William created \u2014 were profoundly different. A few hours on Senlac Hill determined which one actually happened.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Counterfactual Anglo-Saxon England \u2014 the England that might have existed without the Norman conquest, the different language and different institutions that would have developed from a Harold victory on October 14, 1066. 16:9 cinematic.",
+      "bg_colors": [
+        "#3D3020",
+        "#1A2A1A",
+        "#C9A227"
+      ],
+      "duration_sec": 52,
+      "scene_number": 52
+    },
+    {
+      "type": "detail",
+      "title": "The Domesday Survey \u2014 A Census of Conquest",
+      "narration": "The Domesday Book of 1086 was the most comprehensive administrative document produced in Western Europe since Roman times. It surveyed every settlement, every landholding, every mill and fishpond in England \u2014 assessed for tax, recording who held it in 1066 and who held it in 1086. The change between those two columns is the Norman conquest in administrative form: almost every major English landholding changed hands. The book's informal name \u2014 Domesday, from the Day of Judgment \u2014 reflects how the English felt about it: an inescapable, final accounting from which there was no appeal. William needed it to know what he owned. The English needed it as evidence of what they had lost.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Domesday commissioners conducting their survey in an English village in 1086, recording landholdings for the royal record, the comprehensive census that documented the complete transfer of English property to Norman hands in twenty years. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#2C1A00",
+        "#0D1520"
+      ],
+      "duration_sec": 52,
+      "scene_number": 53
+    },
+    {
+      "type": "legacy",
+      "title": "1066 and the British Empire",
+      "narration": "The British Empire was built by people who spoke English, governed through Common Law, and operated institutions shaped by the Norman conquest. The language that became the world's dominant tongue was formed by the collision of Anglo-Saxon and Norman French at Hastings. The legal system that governed a quarter of the world's population at the empire's peak was shaped by the Magna Carta tradition, which traced ancestry to the conquest. The parliamentary system that the empire exported \u2014 imperfectly, selectively \u2014 to its territories drew on 800 years of post-conquest constitutional development. The Norman conquest didn't create the British Empire. But it created the cultural and institutional tools that the empire used.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Map of the British Empire at its peak, the English language and Common Law visible as organizing principles across every continent, the long institutional inheritance from the Norman conquest spreading globally. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#1A2A3D"
+      ],
+      "duration_sec": 52,
+      "scene_number": 54
+    },
+    {
+      "type": "close",
+      "title": "The Last Successful Invasion \u2014 What It Made",
+      "narration": "Britain has not been successfully invaded since October 14, 1066. The 958 years since Hastings have been spent partly in building the institutions \u2014 naval power, parliamentary government, Common Law \u2014 that make another such invasion inconceivable. But those institutions were built partly by the Norman conquerors and their descendants. The most important nation in the development of modern democracy, law, and language became what it was because of a defeat. The culture that produced Magna Carta, Shakespeare, parliamentary government, and the Common Law was assembled from two peoples \u2014 one who fought at Senlac Hill and won, one who fought and lost \u2014 both of whom became English. Hastings made England. England made the modern world.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Britain today \u2014 the Houses of Parliament, the common law courts, the English language spoken on every continent, the institutions built over 958 years since Hastings, all of it traceable in some measure to the October afternoon that made England. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#3D3020"
+      ],
+      "duration_sec": 56,
+      "scene_number": 55
     }
   ]
 }

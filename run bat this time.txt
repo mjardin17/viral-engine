@@ -1,0 +1,34 @@
+import os
+import pickle
+from google_auth_oauthlib.flow import InstalledAppFlow
+from google.auth.transport.requests import Request
+from googleapiclient.discovery import build
+
+SCOPES = ['https://www.googleapis.com/auth/youtube.upload', 'https://www.googleapis.com/auth/youtube.readonly']
+
+def get_credentials():
+    token_path = 'token_gg.pickle'
+    creds = None
+    if os.path.exists(token_path):
+        with open(token_path, 'rb') as token:
+            creds = pickle.load(token)
+    
+    if not creds or not creds.valid:
+        if creds and creds.expired and creds.refresh_token:
+            creds.refresh(Request())
+        else:
+            print("Open this URL in browser:")
+            flow = InstalledAppFlow.from_client_secrets_file('credentials.json', SCOPES)
+            creds = flow.run_console()  # Manual mode - copy the code it gives you
+        
+        with open(token_path, 'wb') as token:
+            pickle.dump(creds, token)
+        print("✅ Token saved!")
+    
+    return creds
+
+if __name__ == "__main__":
+    creds = get_credentials()
+    youtube = build('youtube', 'v3', credentials=creds)
+    resp = youtube.channels().list(part="snippet", mine=True).execute()
+    print("✅ Authenticated to:", resp['items'][0]['snippet']['title'])

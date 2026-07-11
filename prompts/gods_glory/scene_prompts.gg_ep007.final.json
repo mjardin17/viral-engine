@@ -3,10 +3,15 @@
   "channel": "GG",
   "title": "D-Day: The Day That Decided Europe",
   "tagline": "Five beaches. 156,000 men. One single sunrise.",
-  "duration_target_min": 20,
+  "duration_target_min": 50,
   "aesthetic": {
     "color_grade": "cinematic_pacific_dawn",
-    "primary_colors": ["#1C2B3A", "#6E7B5A", "#8B1A1A", "#C9A84C"],
+    "primary_colors": [
+      "#1C2B3A",
+      "#6E7B5A",
+      "#8B1A1A",
+      "#C9A84C"
+    ],
     "font_style": "serif_documentary_bold",
     "music_style": "hans_zimmer_conquest_epic",
     "narrator_tone": "authoritative_punchy_dramatic"
@@ -29,7 +34,11 @@
       "title": "The Largest Invasion in History",
       "narration": "June 6th, 1944. Before dawn, the largest invasion fleet ever assembled moved through darkness toward the coast of Normandy, France. Nearly seven thousand vessels. Over eleven thousand aircraft. By the time the sun rose, 156,000 Allied soldiers would be fighting their way onto five beaches against an enemy that had spent four years fortifying every inch of that coastline. This is the story of the day that decided whether Nazi-occupied Europe would ever be free.",
       "visual_prompt": "Gods & Glory cinematic historical documentary. Vast naval invasion fleet crossing the English Channel in pre-dawn darkness, thousands of ships silhouetted against a darkening sky, landing craft full of soldiers. Epic scale, tense atmosphere. 16:9.",
-      "bg_colors": ["#1C2B3A", "#C9A84C", "#8B1A1A"],
+      "bg_colors": [
+        "#1C2B3A",
+        "#C9A84C",
+        "#8B1A1A"
+      ],
       "duration_sec": 50
     },
     {
@@ -38,7 +47,11 @@
       "title": "Four Years of Occupation",
       "narration": "By 1944, Nazi Germany had occupied France for four years. The Allies — the United States, Britain, Canada, and exile forces from occupied nations — had been planning a return to the European mainland since the disastrous British evacuation at Dunkirk in 1940. Stalin had been demanding a second front for years to relieve pressure on the Soviet Union, which was absorbing the overwhelming majority of German military deaths on the Eastern Front. By 1944, the Allies were finally ready.",
       "visual_prompt": "Gods & Glory cinematic historical documentary. Occupied Paris under Nazi control, German soldiers patrolling French streets, oppressive atmosphere. Cut to Allied war room with generals planning around a large map table. 16:9.",
-      "bg_colors": ["#1C2B3A", "#6E7B5A", "#8B1A1A"],
+      "bg_colors": [
+        "#1C2B3A",
+        "#6E7B5A",
+        "#8B1A1A"
+      ],
       "duration_sec": 50
     },
     {
@@ -47,7 +60,11 @@
       "title": "The Ghost Army That Fooled Hitler",
       "narration": "Before a single soldier landed, the Allies ran one of the most elaborate deception operations in military history. Codenamed Operation Fortitude, it convinced German intelligence that the real invasion would land far to the northeast, at Pas-de-Calais. The Allies built an entire fictional army for the deception — the First US Army Group, supposedly 150,000 men strong and commanded by General George Patton, the German military's most feared American commander. It existed almost entirely on paper: inflatable rubber tanks, plywood aircraft, and fake radio traffic designed to be intercepted. German reconnaissance photographed the dummy equipment from the air and reported it as real. Hitler kept entire panzer divisions waiting near Calais for weeks after the actual landings began at Normandy, convinced the real attack was still to come.",
       "visual_prompt": "Gods & Glory cinematic historical documentary. A field full of inflatable rubber tanks and plywood dummy aircraft arranged to look like a real military buildup, soldiers carefully positioning decoys, a reconnaissance plane visible overhead. Clever, almost theatrical staging. 16:9.",
-      "bg_colors": ["#6E7B5A", "#1C2B3A", "#C9A84C"],
+      "bg_colors": [
+        "#6E7B5A",
+        "#1C2B3A",
+        "#C9A84C"
+      ],
       "duration_sec": 54
     },
     {
@@ -56,7 +73,11 @@
       "title": "The Atlantic Wall",
       "narration": "Germany had spent years building the Atlantic Wall, a network of bunkers, gun emplacements, mines, and obstacles stretching along the entire coast of occupied Europe. Field Marshal Erwin Rommel, tasked with defending against the expected invasion, had reinforced the beaches with millions of mines and underwater obstacles designed to shred landing craft at high tide. He believed, correctly, that the invasion had to be stopped on the beaches themselves — once Allied troops established a foothold inland, Germany would struggle to dislodge them.",
       "visual_prompt": "Gods & Glory cinematic historical documentary. German coastal bunkers and gun emplacements along a cliff-lined beach, rows of underwater obstacles and barbed wire visible at low tide, Rommel inspecting fortifications. Foreboding, methodical defense. 16:9.",
-      "bg_colors": ["#1C2B3A", "#8B1A1A", "#6E7B5A"],
+      "bg_colors": [
+        "#1C2B3A",
+        "#8B1A1A",
+        "#6E7B5A"
+      ],
       "duration_sec": 48
     },
     {
@@ -65,7 +86,11 @@
       "title": "Five Beaches, Five Armies",
       "narration": "The invasion targeted five beaches along sixty miles of Normandy coastline, each codenamed and assigned to different forces. American troops landed at Utah and Omaha. British forces landed at Gold and Sword. Canadian troops landed at Juno. Behind them, over thirteen thousand paratroopers had already dropped inland overnight, tasked with securing bridges and roads to prevent German reinforcements from reaching the beaches before the main landing force could get ashore.",
       "visual_prompt": "Gods & Glory cinematic historical documentary. Map-style cinematic visualization of the five Normandy beaches along the coastline, paratroopers descending inland under moonlight in the background. Strategic overview, epic scale. 16:9.",
-      "bg_colors": ["#1C2B3A", "#6E7B5A", "#C9A84C"],
+      "bg_colors": [
+        "#1C2B3A",
+        "#6E7B5A",
+        "#C9A84C"
+      ],
       "duration_sec": 48
     },
     {
@@ -74,7 +99,11 @@
       "title": "6:30 AM — The Landings Begin",
       "narration": "At 6:30 AM, the first landing craft ramps dropped on the beaches of Normandy. At Utah Beach, currents had pushed the landing force slightly off-target, accidentally putting them ashore at a less heavily defended stretch of coast — a navigational mistake that, for once, worked in the Allies' favor. At Gold, Juno, and Sword, British and Canadian forces fought through tough resistance but made steady progress inland by midday. At Omaha Beach, nothing went as planned.",
       "visual_prompt": "Gods & Glory cinematic historical documentary. Landing craft ramps dropping on a beach at dawn, soldiers wading through surf under fire, smoke and chaos. Wide shot establishing multiple beach landings simultaneously. 16:9.",
-      "bg_colors": ["#8B1A1A", "#1C2B3A", "#6E7B5A"],
+      "bg_colors": [
+        "#8B1A1A",
+        "#1C2B3A",
+        "#6E7B5A"
+      ],
       "duration_sec": 50
     },
     {
@@ -83,7 +112,11 @@
       "title": "Omaha Beach — The Disaster",
       "narration": "Pre-landing bombing and naval bombardment at Omaha Beach had largely missed the German defenses, leaving fortified positions on the bluffs above the beach almost entirely intact. American troops waded ashore into a kill zone of machine gun and artillery fire with almost no cover. Many landing craft were sunk or disabled before reaching the sand. Entire companies were pinned down on the open beach, unable to advance or retreat, taking catastrophic casualties in the first hour. For a period that morning, American commanders seriously considered whether Omaha Beach would have to be abandoned entirely.",
       "visual_prompt": "Gods & Glory cinematic historical documentary. Omaha Beach under heavy fire, soldiers pinned down behind beach obstacles, explosions and machine gun fire from fortified bluffs above. Chaotic, desperate, historically grounded intensity. 16:9.",
-      "bg_colors": ["#8B1A1A", "#1C2B3A", "#6E7B5A"],
+      "bg_colors": [
+        "#8B1A1A",
+        "#1C2B3A",
+        "#6E7B5A"
+      ],
       "duration_sec": 52
     },
     {
@@ -92,7 +125,11 @@
       "title": "The Men Who Broke the Deadlock",
       "narration": "Omaha Beach was eventually broken open not by a single grand maneuver but by small groups of soldiers and junior officers improvising under fire — finding gaps in the wire, working their way up the bluffs in small teams, and taking out individual machine gun positions one at a time. Naval destroyers moved dangerously close to shore, risking running aground, to provide direct fire support against the bunkers. By the end of the day, at terrible cost, American forces held the beach.",
       "visual_prompt": "Gods & Glory cinematic historical documentary. Small group of American soldiers climbing a bluff under fire, working together to flank a German machine gun position, destroyer firing from close offshore in the background. Gritty, determined. 16:9.",
-      "bg_colors": ["#6E7B5A", "#8B1A1A", "#1C2B3A"],
+      "bg_colors": [
+        "#6E7B5A",
+        "#8B1A1A",
+        "#1C2B3A"
+      ],
       "duration_sec": 48
     },
     {
@@ -101,7 +138,11 @@
       "title": "Pointe du Hoc",
       "narration": "At Pointe du Hoc, a clifftop position between Utah and Omaha, US Army Rangers carried out one of the most physically demanding assaults of the entire invasion: scaling sheer hundred-foot cliffs under direct enemy fire using ropes and ladders, to destroy what intelligence believed was a battery of heavy guns capable of hitting both beaches. When they reached the top, they discovered the guns had already been moved inland — but they pressed on, found them in a nearby orchard, and destroyed them anyway, fulfilling the mission despite the original target having been relocated.",
       "visual_prompt": "Gods & Glory cinematic historical documentary. US Army Rangers scaling a sheer cliff face using ropes and grappling hooks under enemy fire from above, dramatic vertical action against the chalky cliffs of Pointe du Hoc. 16:9.",
-      "bg_colors": ["#1C2B3A", "#6E7B5A", "#C9A84C"],
+      "bg_colors": [
+        "#1C2B3A",
+        "#6E7B5A",
+        "#C9A84C"
+      ],
       "duration_sec": 50
     },
     {
@@ -110,7 +151,11 @@
       "title": "The 320th — An Untold Unit",
       "narration": "Among the units that landed on D-Day was the 320th Barrage Balloon Battalion — the only all-Black combat unit to land on Omaha and Utah Beaches that day. Their job was to operate barrage balloons that deterred low-flying German aircraft from strafing the beaches, working in the open under the same artillery and small-arms fire as every other unit on the sand. Like most Black servicemen in the segregated US military of 1944, their contributions went largely unrecognized for decades afterward, mentioned in few histories of the invasion despite serving directly in the most dangerous sector of the entire landing.",
       "visual_prompt": "Gods & Glory cinematic historical documentary. Black American soldiers of the 320th Battalion operating barrage balloon equipment on a chaotic beach under fire, balloons rising overhead to deter aircraft. Respectful, historically accurate. 16:9.",
-      "bg_colors": ["#C9A84C", "#1C2B3A", "#6E7B5A"],
+      "bg_colors": [
+        "#C9A84C",
+        "#1C2B3A",
+        "#6E7B5A"
+      ],
       "duration_sec": 50
     },
     {
@@ -119,7 +164,11 @@
       "title": "The Paratroopers Inland",
       "narration": "Overnight, American and British paratroopers had dropped behind German lines, tasked with securing key bridges, crossroads, and causeways. High winds and poor visibility scattered many drops far from their intended landing zones — some American paratroopers landed many miles off target, in some cases alone. Despite the chaos, scattered small groups improvised, linked up with whoever they could find, and accomplished many of their objectives anyway, disrupting German communication and troop movement throughout the day.",
       "visual_prompt": "Gods & Glory cinematic historical documentary. Paratroopers descending through night sky lit by anti-aircraft tracer fire, scattered landings in dark fields and hedgerows, small groups regrouping by moonlight. Tense, chaotic night action. 16:9.",
-      "bg_colors": ["#1C2B3A", "#6E7B5A", "#8B1A1A"],
+      "bg_colors": [
+        "#1C2B3A",
+        "#6E7B5A",
+        "#8B1A1A"
+      ],
       "duration_sec": 48
     },
     {
@@ -128,7 +177,11 @@
       "title": "The Numbers",
       "narration": "By the end of June 6th, approximately 4,414 Allied soldiers were confirmed dead, with total casualties — killed, wounded, and missing — estimated above 10,000. German casualties that day are estimated between 4,000 and 9,000. Despite the catastrophic losses at Omaha, all five beachheads had been secured by nightfall, and 156,000 Allied troops were ashore in France.",
       "visual_prompt": "Gods & Glory cinematic historical documentary. Somber wide shot of Omaha Beach at dusk on D-Day, debris and equipment scattered across the sand, medics tending wounded, the human cost made visible without graphic detail. 16:9.",
-      "bg_colors": ["#1C2B3A", "#8B1A1A", "#6E7B5A"],
+      "bg_colors": [
+        "#1C2B3A",
+        "#8B1A1A",
+        "#6E7B5A"
+      ],
       "duration_sec": 44
     },
     {
@@ -137,7 +190,11 @@
       "title": "How Close It Came to Failing",
       "narration": "D-Day is often remembered as an inevitable Allied success, but at multiple points on June 6th, the operation came close to disaster. Had Omaha Beach actually been abandoned, as some commanders briefly considered, the entire invasion's timetable and cohesion would have been thrown into serious doubt. Eisenhower, the Allied supreme commander, had written a note to be released in the event of failure, taking full personal responsibility — a draft historians have pointed to ever since as evidence of how genuinely uncertain the outcome felt beforehand, even to the man in charge.",
       "visual_prompt": "Gods & Glory cinematic historical documentary. General Eisenhower alone in a tent or command post, writing by lamplight, the weight of command visible on his face. A handwritten note on the table. Quiet, human, historically grounded. 16:9.",
-      "bg_colors": ["#1C2B3A", "#6E7B5A", "#C9A84C"],
+      "bg_colors": [
+        "#1C2B3A",
+        "#6E7B5A",
+        "#C9A84C"
+      ],
       "duration_sec": 48
     },
     {
@@ -146,7 +203,11 @@
       "title": "The Weather Gamble",
       "narration": "The invasion had originally been scheduled for June 5th, but rough seas and poor weather forced a one-day postponement — a decision Eisenhower made on limited and uncertain forecasting, knowing that further delay risked losing the narrow window of tide and moonlight conditions the invasion required, possibly for weeks. Allied meteorologists identified a brief gap in the storm pattern on June 6th. German meteorologists, working with less data, predicted the bad weather would continue and concluded an invasion was unlikely in the immediate days ahead — which is part of why many senior German commanders, including Rommel, were away from their posts when the attack came.",
       "visual_prompt": "Gods & Glory cinematic historical documentary. Allied meteorologists studying weather charts and forecasts in a briefing room, Eisenhower listening intently, storm clouds visible through a window. Tense decision-making atmosphere. 16:9.",
-      "bg_colors": ["#1C2B3A", "#6E7B5A", "#8B1A1A"],
+      "bg_colors": [
+        "#1C2B3A",
+        "#6E7B5A",
+        "#8B1A1A"
+      ],
       "duration_sec": 50
     },
     {
@@ -155,7 +216,11 @@
       "title": "Breaking Out of Normandy",
       "narration": "Securing the beaches was only the first step. Allied forces spent the following weeks fighting through the dense hedgerows of the Normandy countryside, terrain perfectly suited to defense, in some of the bloodiest fighting of the entire Western European campaign. It wasn't until late July, during Operation Cobra, that American forces finally broke out of Normandy and began the rapid advance across France that would liberate Paris by the end of August.",
       "visual_prompt": "Gods & Glory cinematic historical documentary. American tanks and infantry fighting through dense Normandy hedgerow terrain, close brutal combat in tight farmland corridors. Grinding, attritional warfare. 16:9.",
-      "bg_colors": ["#6E7B5A", "#1C2B3A", "#8B1A1A"],
+      "bg_colors": [
+        "#6E7B5A",
+        "#1C2B3A",
+        "#8B1A1A"
+      ],
       "duration_sec": 46
     },
     {
@@ -164,7 +229,11 @@
       "title": "Liberation",
       "narration": "As Allied forces moved through Normandy and beyond, French civilians who had lived under occupation for four years came out to greet their liberators, even as fighting continued nearby. Photos and film from the period show French villagers offering food, flowers, and wine to exhausted soldiers passing through towns still partially in ruins. For many soldiers who had landed in the chaos of June 6th, it was the first tangible proof of what the invasion had actually been for.",
       "visual_prompt": "Gods & Glory cinematic historical documentary. French villagers greeting Allied soldiers passing through a liberated town, flowers and embraces, joyful but weary atmosphere amid war-damaged buildings. Warm, human, hopeful. 16:9.",
-      "bg_colors": ["#C9A84C", "#1C2B3A", "#6E7B5A"],
+      "bg_colors": [
+        "#C9A84C",
+        "#1C2B3A",
+        "#6E7B5A"
+      ],
       "duration_sec": 44
     },
     {
@@ -173,7 +242,11 @@
       "title": "Why D-Day Worked Despite Omaha",
       "narration": "Military historians point to several reasons the invasion succeeded despite the disaster at Omaha: total Allied air superiority that prevented German reinforcements from reaching the coast quickly, the deception operation that kept German reserves pinned near Calais for weeks, and overwhelming numerical and material advantage at the point of contact, even where individual units suffered devastating losses. No single factor decided it — it was the accumulation of years of planning meeting a German defense that, despite its strength, could not be everywhere at once.",
       "visual_prompt": "Gods & Glory cinematic historical documentary. Allied fighter aircraft patrolling overhead unopposed while ground forces advance below, German reinforcement columns stalled on roads far from the coast. Strategic overview visualization. 16:9.",
-      "bg_colors": ["#1C2B3A", "#6E7B5A", "#C9A84C"],
+      "bg_colors": [
+        "#1C2B3A",
+        "#6E7B5A",
+        "#C9A84C"
+      ],
       "duration_sec": 48
     },
     {
@@ -182,7 +255,11 @@
       "title": "The Cost in Context",
       "narration": "D-Day's casualties, while severe, were lower than many Allied planners had feared going in — some pre-invasion estimates had projected far higher losses, particularly among the airborne forces. That doesn't diminish what happened at Omaha Beach or among the scattered paratroopers, but it is part of why D-Day is remembered as a victory bought at acceptable, if brutal, cost rather than the catastrophic bloodbath some had feared and planned around.",
       "visual_prompt": "Gods & Glory cinematic historical documentary. Quiet, respectful shot of a field hospital tent on the Normandy coast in the days after the landing, medics working, wounded soldiers receiving care. Measured, non-graphic, dignified. 16:9.",
-      "bg_colors": ["#1C2B3A", "#8B1A1A", "#6E7B5A"],
+      "bg_colors": [
+        "#1C2B3A",
+        "#8B1A1A",
+        "#6E7B5A"
+      ],
       "duration_sec": 44
     },
     {
@@ -191,7 +268,11 @@
       "title": "The Beaches Today",
       "narration": "Today, the beaches of Normandy are quiet — Omaha Beach is a public beach where families spend summer afternoons, a short walk from the American Cemetery where 9,388 American service members are buried beneath rows of white crosses and Stars of David overlooking the water. Pointe du Hoc's cratered, bomb-scarred ground remains largely as it was left in 1944, preserved as a memorial to the Rangers who scaled it.",
       "visual_prompt": "Gods & Glory cinematic historical documentary. Wide aerial view of the Normandy American Cemetery, rows of white crosses overlooking Omaha Beach below, peaceful and solemn present-day scene. Respectful, elegiac. 16:9.",
-      "bg_colors": ["#C9A84C", "#1C2B3A", "#6E7B5A"],
+      "bg_colors": [
+        "#C9A84C",
+        "#1C2B3A",
+        "#6E7B5A"
+      ],
       "duration_sec": 46
     },
     {
@@ -200,7 +281,11 @@
       "title": "Why This Still Matters",
       "narration": "D-Day is studied not just as a feat of logistics and courage, but as the largest example in history of how deception, weather, and sheer human improvisation under fire can decide an outcome that planning alone cannot guarantee. The operation succeeded not because everything went according to plan — almost nothing did — but because the men on the ground kept adapting when the plan collapsed around them. That, as much as the scale of the fleet or the brilliance of the deception, is the actual lesson militaries still draw from it today.",
       "visual_prompt": "Gods & Glory cinematic historical documentary. Modern military historians and officers studying D-Day maps and after-action reports in a contemporary setting, the lesson translated into present-day military education. Thoughtful tone. 16:9.",
-      "bg_colors": ["#1C2B3A", "#6E7B5A", "#C9A84C"],
+      "bg_colors": [
+        "#1C2B3A",
+        "#6E7B5A",
+        "#C9A84C"
+      ],
       "duration_sec": 46
     },
     {
@@ -209,7 +294,11 @@
       "title": "What D-Day Actually Was",
       "narration": "D-Day was not a single clean victory. It was five separate, wildly different battles happening simultaneously, one of which very nearly failed outright, glued together by deception, air superiority, and thousands of individual acts of improvisation under fire. The version where everything goes smoothly according to a brilliant plan is the comfortable myth. The version where a beach nearly gets abandoned, paratroopers land miles off target and fight on anyway, and a Black battalion holds the line on the most dangerous stretch of sand in Europe with almost no historical recognition — that version is the real one, and it's the more remarkable story.",
       "visual_prompt": "Gods & Glory cinematic historical documentary. Composite cinematic shot blending the five beaches into one continuous coastline view at dusk on D-Day, smoke rising from multiple points along the shore. Reflective, summarizing tone. 16:9.",
-      "bg_colors": ["#1C2B3A", "#8B1A1A", "#6E7B5A"],
+      "bg_colors": [
+        "#1C2B3A",
+        "#8B1A1A",
+        "#6E7B5A"
+      ],
       "duration_sec": 50
     },
     {
@@ -218,16 +307,427 @@
       "title": "What Happened — The Summary",
       "narration": "June 6th, 1944. The Allies launch the largest amphibious invasion in history across five beaches in Normandy. Utah, Gold, Juno, and Sword fall with manageable resistance. Omaha Beach nearly fails, broken open only by desperate small-unit action under devastating fire. By nightfall, 156,000 troops are ashore. Within three months, Paris is liberated. Within eleven months, the war in Europe is over.",
       "visual_prompt": "Gods & Glory cinematic historical documentary. Summary title card sequence: key D-Day moments in bold text over historical imagery — the landings, Pointe du Hoc, the cemetery today. Final shot: the beaches at peaceful sunset in the present day. 16:9.",
-      "bg_colors": ["#1C2B3A", "#C9A84C", "#8B1A1A"],
+      "bg_colors": [
+        "#1C2B3A",
+        "#C9A84C",
+        "#8B1A1A"
+      ],
       "duration_sec": 48
     },
     {
-      "scene_number": 23,
+      "title": "Operation Fortitude — The Greatest Deception in Military History",
+      "type": "deep_dive",
+      "narration": "The success of D-Day depended on a lie. Operation Fortitude was the Allied deception campaign designed to convince Germany that the main invasion would come at Pas-de-Calais — the shortest crossing of the English Channel — rather than Normandy. It used every tool available: fake army groups, fake radio traffic, inflatable rubber tanks and landing craft visible to German reconnaissance aircraft, a network of double agents feeding false intelligence to Berlin. The centerpiece was FUSAG — the fictional First United States Army Group — allegedly commanded by General George Patton, the German general staff's most feared American commander. The deception worked so completely that even after the Normandy landings began on June 6, Hitler and the German high command believed for weeks that Normandy was a feint and the real invasion was still coming at Calais. Rommel's reserve panzer divisions, which could have pushed the Allied beachhead back into the sea in the first crucial days, were held back waiting for an invasion that would never come.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Operation Fortitude: the deception machinery in operation. Inflatable rubber tanks in Kent fields, visible from the air. Fake radio traffic: operators sending dummy messages in German-decodeable codes. The double agent network: Juan Pujol (Garbo), Eddie Chapman, others — feeding false intelligence to Berlin. FUSAG: the fictional army group's headquarters, Patton photographed and filmed to confirm his command. German intelligence maps showing the 'threat' at Calais. Hitler holding back panzers after June 6 — the deception still working. The greatest lie in military history, told simultaneously to millions of German eyes and ears. 16:9.",
+      "bg_colors": [
+        "#4A4A4A",
+        "#1A1A2E",
+        "#D4AF37"
+      ],
+      "duration_sec": 52,
+      "scene_number": 23
+    },
+    {
+      "title": "The Airborne Drops — Chaos That Somehow Worked",
+      "type": "battle",
+      "narration": "The night before the beach landings, over thirteen thousand American paratroopers from the 82nd and 101st Airborne Divisions dropped into Normandy. It was nearly a disaster. Heavy cloud cover, German anti-aircraft fire, and pilot inexperience with combat drops scattered the aircraft across hundreds of square miles. Soldiers landed in flooded fields, in trees, on German positions, miles from their objectives. Entire units never assembled. Some paratroopers fought in groups of two or three, not knowing where they were or where their units were, improvising by attacking whatever German positions they found. By every rational military standard, the operation was a failure. What saved it was the confusion the scattered drops created: German commanders trying to understand the pattern of the attack could not, because there was no pattern. The chaos that seemed catastrophic to Allied commanders looked, from the German side, like a deliberate multi-directional attack across the entire rear of the coastal defenses. The accident of the scattered drops created more disruption than a precisely executed operation might have.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. The airborne drops at night: C-47 transport planes in massive formations, paratroopers standing at the doors. The anti-aircraft fire beginning — orange tracers through the darkness, planes banking and weaving. The scattered drop: soldiers landing miles apart, in flooded fields, in trees, on rooftops. Individual paratroopers alone in the darkness, hearing German voices nearby. Small groups forming — two men, five men — attacking objectives alone. The German command post: officers with a map full of confusing reports, attack reports coming from everywhere, unable to identify the main thrust. The chaos as strategic asset. 16:9.",
+      "bg_colors": [
+        "#8B0000",
+        "#4A4A4A",
+        "#D4AF37"
+      ],
+      "duration_sec": 52,
+      "scene_number": 24
+    },
+    {
+      "title": "Bloody Omaha — Why One Beach Was a Catastrophe",
+      "type": "battle",
+      "narration": "Of the five landing beaches on D-Day, four were tough. Omaha was catastrophic. Three things went wrong simultaneously. The amphibious DD tanks — specially flotation-equipped Sherman tanks meant to provide fire support — were launched too far from shore in rough seas; most sank with their crews. The preliminary naval bombardment, designed to destroy German beach defenses, overshot and left them largely intact. And the specific German unit holding Omaha — the 352nd Infantry Division — was a veteran unit conducting training exercises that happened to be positioned exactly where the American assault was landing, rather than the second-rate garrison troops that Allied intelligence expected. The first waves of American infantry waded ashore with no tank support, against intact fortifications, defended by experienced soldiers. The sea was rough. Many men drowned before they reached shore. On the beach itself, there was nowhere to take cover. The tidal flat was mined. The casualty rate in the first hour was unlike anything else that day. The beach was taken not through tactical genius but through the accumulation of small individual acts of courage by men who had no option but to keep moving forward.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Omaha Beach: the terrain shown — a long exposed tidal flat, bluffs rising 30 meters above, German fortifications dug into the bluffs. The DD tanks launching and sinking — men in flotation-equipped tanks going under in rough seas. The naval bombardment overshooting — the German bunkers intact. The first wave landing: ramp down, men moving into waist-deep water, some hit immediately. The beach: mines, obstacles, no cover, German fire from above. The bodies in the surf. The stalemate for hours. Then: the accumulation of individuals who kept moving — sergeants pulling men off the beach, officers leading small groups up the bluffs. The beach taken one gully at a time. 16:9.",
+      "bg_colors": [
+        "#8B0000",
+        "#4A4A4A",
+        "#D4AF37"
+      ],
+      "duration_sec": 52,
+      "scene_number": 25
+    },
+    {
+      "title": "Pegasus Bridge — The Perfect Operation",
+      "type": "battle",
+      "narration": "While Omaha was going wrong, one operation that night went almost exactly right. Pegasus Bridge — the code name for the assault on two bridges over the Caen Canal and Orne River — was executed by D Company, Oxfordshire and Buckinghamshire Light Infantry, arriving in six Horsa gliders at approximately 12:16 AM on June 6. Major John Howard had trained his company specifically for this mission. The gliders landed so close to the bridge that the first soldiers across were within meters of the sentry post before the alarm was raised. The bridge was captured in ten minutes. The mission required these bridges intact so that British armored forces could advance from the beaches and German reinforcements could not cross the other direction. Eisenhower later called it 'the best executed small unit action of the war.' The bridges — both of which still exist — were held for sixteen hours until relieved by Commandos advancing from Sword Beach. One of them, the original Pegasus Bridge, was replaced in 1994 and is now displayed in a museum. The replacement bridge was the first European soil liberated from the west.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Pegasus Bridge: the Caen Canal on the night of June 5-6. Six Horsa gliders in the darkness, on a precise approach to the bridge. The landing: gliders touching down in the field adjacent to the bridge, soldiers pouring out within seconds. The sprint to the bridge. The German sentry, the first shot, the bridge taken in ten minutes. D Company holding the bridge in darkness, waiting for relief. The relief column arriving 16 hours later. The bridge today: the original structure in the museum, the replacement bearing the same name. The most precise small-unit operation of D-Day, executed by soldiers who had trained for months for these exact ten minutes. 16:9.",
+      "bg_colors": [
+        "#4A3728",
+        "#D4AF37",
+        "#1A1A2E"
+      ],
+      "duration_sec": 52,
+      "scene_number": 26
+    },
+    {
+      "title": "Eisenhower's Letter — What He Had Ready If It Failed",
+      "type": "deep_dive",
+      "narration": "Before the landings began, Dwight Eisenhower wrote a note and put it in his pocket. It read: 'Our landings in the Cherbourg-Havre area have failed to gain a satisfactory foothold and I have withdrawn the troops. My decision to attack at this time and place was based upon the best information available. The troops, the air and the Navy did all that bravery and devotion to duty could do. If any blame or fault attaches to the attempt it is mine alone.' He wrote it on June 5, the night before the landings. He never had to use it. His aide found it in his papers after the war and saved it. It is now in the Eisenhower Presidential Library. The note captures something essential about command at the highest level: the decision to launch Operation Overlord was Eisenhower's alone, made with incomplete information, in bad weather, with the entire outcome of the war depending on whether the first few hours went well enough. He accepted that accountability completely, in advance, in writing.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Eisenhower alone in his command caravan on the night of June 5: the final decision made, the operation launched, nothing to do now but wait. His hand writing the note. The note folded, placed in his pocket. The landings beginning. The reports coming in over hours — some good, Omaha catastrophic, the overall picture slowly clarifying as success. His aide discovering the note in his papers after the war. The note displayed in the Eisenhower Library: the handwriting, the words of complete accountability. The leader who held success and failure in the same moment — the note for failure already written while the operation for success was still unfolding. 16:9.",
+      "bg_colors": [
+        "#1A1A2E",
+        "#8B0000",
+        "#D4AF37"
+      ],
+      "duration_sec": 52,
+      "scene_number": 27
+    },
+    {
+      "title": "Hitler Sleeping — The Decision That Lost the Beach",
+      "type": "deep_dive",
+      "narration": "On the morning of June 6, the German high command knew something was happening in Normandy. They also believed it was probably a feint. The panzer reserves that could have pushed the Allied beachhead back into the sea — specifically the 1st SS Panzer Division Leibstandarte and the 12th SS Panzer Division Hitler Youth — were held under Hitler's personal authority. No one else could release them. Hitler had gone to sleep late the night of June 5 after dinner. His staff were under strict orders not to wake him for any reason. When the first reports of the Normandy landings reached the Wolfschanze, his headquarters, his chief of operations decided not to wake him. Hitler slept until noon. By the time he was briefed, the beachheads were established, the crisis point of the landings had passed, and the panzers were moving toward beaches where hundreds of thousands of Allied troops had already landed. Had the panzer reserves been released at 6 AM rather than mid-afternoon, the outcome at the beaches — particularly Omaha — might have been very different.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Hitler's Berghof at 3 AM on June 6: reports arriving, officers discussing in hushed voices whether to wake him. The strict orders: do not disturb. Hitler sleeping. The clock advancing: 4 AM, 5 AM, 6 AM — the critical hours at the beaches. The panzer commanders waiting for release authority that doesn't come. The beaches being consolidated in the hours Hitler sleeps. Hitler briefed at noon: his initial optimism that this is the feint, not the main invasion. The panzers finally moving at 4 PM. The Allied soldiers on the beaches they've been holding for ten hours. The decision unmade in a sleeping headquarters that lost Germany the beaches. 16:9.",
+      "bg_colors": [
+        "#8B0000",
+        "#4A4A4A",
+        "#D4AF37"
+      ],
+      "duration_sec": 52,
+      "scene_number": 28
+    },
+    {
+      "title": "Operation Cobra — The Breakout That Changed Everything",
+      "type": "battle",
+      "narration": "D-Day secured the beaches. Operation Cobra, six weeks later, broke the German line and opened France. On July 25, 1944, American bombers dropped over 4,000 tons of bombs on a narrow German defensive line west of Saint-Lô, followed by an armored charge by General Omar Bradley's First Army. Some bombs fell short, killing 111 American soldiers including General Lesley McNair, the highest-ranking American killed in the European theater. The German defenders who survived the bombardment were largely incapacitated. The American armor punched through. Patton's Third Army was activated and unleashed into the open country of Brittany and then eastward toward Paris. Within weeks, the German position in France was collapsing. The Falaise Pocket in August 1944 encircled and destroyed most of Army Group B. Paris was liberated on August 25. The operation that began in uncertainty at the beaches of Normandy on June 6 had, within eleven weeks, positioned the Western Allies to threaten Germany itself.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Operation Cobra: the massive air bombardment, 4,000 tons of bombs on a narrow strip of German defensive line. American bombers in formation, the bombs falling. The catastrophic short drops — American soldiers in the impact zone. General McNair killed. Then: the aftermath — the German defensive line obliterated. American armor advancing through a moonscape of craters. Patton's Third Army moving fast, the breakout into open France. The Falaise Pocket: German Army Group B surrounded, the pocket closing. The road to Paris open. Liberation: French crowds, Allied tanks, the Eiffel Tower behind. Six weeks from beachhead to Falaise. 16:9.",
+      "bg_colors": [
+        "#D4AF37",
+        "#1A1A2E",
+        "#8B0000"
+      ],
+      "duration_sec": 52,
+      "scene_number": 29
+    },
+    {
+      "title": "The Scale of Overlord — The Numbers That Defined an Era",
+      "type": "analysis",
+      "narration": "Operation Overlord was the largest amphibious military operation in human history. The numbers are almost incomprehensible: 156,000 troops landed on D-Day alone. 11,590 aircraft flew that day. 6,939 naval vessels participated. The logistical preparation required two years: building the landing craft, training the troops, manufacturing the equipment, assembling the supplies. The Mulberry harbors — prefabricated artificial harbors towed across the English Channel and assembled off the beaches — were engineering projects of a scale that had never been attempted. Over the eleven months from June 1944 to May 1945, roughly two million soldiers crossed from England to France through the Normandy beachhead. The infrastructure to support them — fuel pipelines, medical facilities, ammunition depots, communication networks — was built on beaches where, six months earlier, there had been nothing. D-Day was not just a battle. It was the largest logistical and organizational achievement in the history of warfare.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. The scale visualized: infographic of D-Day numbers — 156,000 troops, 11,590 aircraft, 6,939 ships. The two years of preparation: factories producing landing craft, training camps across Britain, supply depots filling. The Mulberry harbor being assembled: enormous concrete caissons towed across the Channel, sunk in position, creating an instant harbor. The fuel pipeline PLUTO running under the Channel. The two million soldiers who crossed over the following 11 months. Comparison to other operations: nothing in history comes close for scale. The organizational achievement as significant as the military one. The logistics of democracy at war. 16:9.",
+      "bg_colors": [
+        "#4A3728",
+        "#D4AF37",
+        "#1A1A2E"
+      ],
+      "duration_sec": 52,
+      "scene_number": 30
+    },
+    {
+      "title": "D-Day's Long Shadow — Why June 6 Still Matters",
+      "type": "analysis",
+      "narration": "D-Day is one of the most culturally processed events in American and British history, and the cultural processing has not always served the historical reality. The 'Greatest Generation' narrative — heroic American and British soldiers liberating Europe from tyranny — is not wrong, but it leaves out significant elements: the Soviet contribution, which had already broken the German army's spine at Kursk and Stalingrad; the role of Canadian and other Allied forces at the beaches; the French resistance whose intelligence was crucial. The veterans themselves — the men who were there — have consistently given the most measured accounts: they were afraid, many of their friends died, they did what was needed and wanted to go home. The memorialization has sometimes buried this reality under a layer of triumphalism. What D-Day genuinely demonstrates — stripped of mythology — is what a functioning democracy can accomplish when it actually decides to do something: the planning, the industrial capacity, the political will, and the individual soldiers who ran up a beach in France because someone had decided they would.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. D-Day in culture: the films, the memorials, the annual ceremonies at Normandy. The veterans: elderly men at the American cemetery above Omaha Beach, looking at the rows of white crosses. What they actually say about it — the fear, the friends lost, the wanting to go home. The elements the standard narrative omits: the Soviet front (shown in scale comparison — Eastern Front casualties vs. Western). Canadian and British contributions. The French resistance. Then: what is genuinely true — the scale of democratic mobilization, the political will, the individual soldiers. The Normandy American Cemetery: 9,388 graves on the bluff above Omaha Beach. The veterans who kept coming back to visit. 16:9.",
+      "bg_colors": [
+        "#4A3728",
+        "#D4AF37",
+        "#1A1A2E"
+      ],
+      "duration_sec": 52,
+      "scene_number": 31
+    },
+    {
+      "title": "The Road to Overlord — Two Years of Planning",
+      "type": "context",
+      "narration": "Operation Overlord was not improvised. From the moment the United States entered the war in December 1941, the logic of a cross-Channel invasion was clear — and the preparation required was enormous. The planning staff, COSSAC, began work in 1943. The key decisions: where to land, how wide a front, how to supply the force across an open beach without a port. The Mulberry harbors — prefabricated artificial harbors towed across the English Channel — were among the most ambitious engineering projects of the war. The decision to land at Normandy rather than the shorter Pas-de-Calais crossing was made partly because the Pas-de-Calais was too obviously expected, too heavily defended. Two years of planning — the deception operations, the logistical preparation, the training of over a million soldiers — represented an organizational effort that matched the military effort in scale and in importance.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. The COSSAC planning staff at work in 1943: the maps, the arguments, the alternative landing sites compared. The decision for Normandy vs. Pas-de-Calais: the map showing the shorter crossing and why it was rejected. The Mulberry harbor design process: the engineering drawings, the massive concrete caissons being built in British dockyards. The training camps across Britain: soldiers practicing amphibious landings on Scottish beaches. The deception operation planning: Operation Fortitude, the fake army groups. Two years of organizational effort to make one day possible. 16:9.",
+      "bg_colors": [
+        "#1A1A2E",
+        "#8B0000",
+        "#D4AF37"
+      ],
+      "duration_sec": 52,
+      "scene_number": 32
+    },
+    {
+      "title": "The Longest Day — What June 6 Actually Required",
+      "type": "context",
+      "narration": "June 6, 1944 was the largest single-day military operation in history. The numbers are almost incomprehensible in isolation: 156,000 troops landed in a single day, 11,590 aircraft flew, 6,939 naval vessels participated, crossing fifty miles of open ocean to attack five beaches simultaneously. The five beaches — Utah, Omaha, Gold, Juno, and Sword — covered fifty miles of Normandy coastline, each attacked by a different national force or combination of forces. The British attacked Sword and Gold. The Canadians attacked Juno. The Americans attacked Utah and Omaha. Behind the beaches, twelve thousand paratroopers from the American 82nd and 101st Airborne and six thousand from the British 6th Airborne had dropped in the night before. On a single day, more soldiers crossed the Channel than live in many countries.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. The scale of D-Day visualized: infographic of 156,000 troops, 11,590 aircraft, 6,939 ships. The five beaches on a map: Utah, Omaha, Gold, Juno, Sword — fifty miles of Normandy coastline. The national assignments: American, British, Canadian. The airborne operations the night before: the 82nd and 101st Airborne dropping in darkness. The comparison to give scale: more soldiers crossing the Channel on this single day than the population of many countries. The largest human organization ever pointed at a single day. 16:9.",
+      "bg_colors": [
+        "#D4AF37",
+        "#1A1A2E",
+        "#8B0000"
+      ],
+      "duration_sec": 52,
+      "scene_number": 33
+    },
+    {
+      "title": "Rommel's Atlantic Wall — What the Allies Were Attacking",
+      "type": "deep_dive",
+      "narration": "The defenses the Allies attacked on June 6 were called the Atlantic Wall — a line of fortifications stretching from Norway to the Spanish border that Hitler had ordered built after 1942. The Atlantic Wall was formidable in places, unfinished in others. The strongest sections were at Pas-de-Calais, where German commanders expected the main attack. Normandy's defenses, while dangerous, were not as thoroughly developed. The bunkers at Omaha Beach — concrete gun emplacements with interlocking fields of fire, reinforced to withstand bombardment — were among the most heavily defended positions. Field Marshal Rommel, placed in command of defending the coast in 1943, had significantly accelerated construction: laying millions of mines in the tidal zones, placing wooden stakes with explosives in potential landing zones. Rommel believed the battle would be decided in the first twenty-four hours, either by repelling the invasion at the water's edge or by the Allies securing a beachhead too strong to dislodge.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. The Atlantic Wall: the fortifications stretching from Norway to Spain. The Pas-de-Calais section: the most heavily defended, German expectation of the main landing. Normandy's defenses: concrete bunkers, interlocking fields of fire, the Omaha bluffs with guns covering the beach below. Rommel's acceleration: the millions of mines in the tidal zone, the wooden stakes with explosives. Rommel's Asparagus in the potential drop zones for paratroopers. Rommel's philosophy: defeat the invasion at the water's edge or not at all. The defenses that the Allied soldiers would hit on the morning of June 6. 16:9.",
+      "bg_colors": [
+        "#8B0000",
+        "#4A4A4A",
+        "#D4AF37"
+      ],
+      "duration_sec": 52,
+      "scene_number": 34
+    },
+    {
+      "title": "The Weather Decision — Eisenhower's 4 AM Choice",
+      "type": "deep_dive",
+      "narration": "The decision to launch Operation Overlord was made by one man, at approximately 4:15 AM on June 5, after a weather briefing in the library of Southwick House near Portsmouth. The original D-Day was June 5. The weather was too bad: high seas, low cloud, wind. Eisenhower postponed twenty-four hours. The next weather window was June 6, with a brief period of acceptable conditions predicted by his chief meteorologist, Group Captain James Stagg. Stagg told Eisenhower there would be a thirty-six-hour break in the storm, enough for the operation. His forecast was contested by other meteorologists. Eisenhower sat alone in a chair, head bowed, for several minutes. Then he said: 'OK, we'll go.' The alternative was a two-week delay for the next tidal and lunar conditions, which would have given the Germans more time to prepare. The most consequential military decision of the 20th century was made in a library, by one man in a chair, based on a contested weather forecast.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Southwick House library at 4:15 AM on June 5: the weather maps, the meteorologists presenting conflicting forecasts. Stagg's contested prediction: 36 hours of acceptable weather beginning June 6. Eisenhower's staff: Montgomery, Tedder, Ramsay, Leigh-Mallory around the table. The postponement decision on June 4. The library on June 5, the same men, the same table, the storm outside. Eisenhower sitting alone in the chair, head bowed. The silence before the decision. 'OK, we'll go.' The most consequential military decision of the 20th century, made in a library by one man based on a contested weather forecast. 16:9.",
+      "bg_colors": [
+        "#1A1A2E",
+        "#8B0000",
+        "#D4AF37"
+      ],
+      "duration_sec": 52,
+      "scene_number": 35
+    },
+    {
+      "title": "Operation Fortitude — The Greatest Deception in Military History",
+      "type": "deep_dive",
+      "narration": "The success of D-Day depended on a lie. Operation Fortitude was the Allied deception campaign designed to convince Germany that the main invasion would come at Pas-de-Calais. It used fake army groups, fake radio traffic, inflatable rubber tanks and landing craft visible to German reconnaissance aircraft, and a network of double agents feeding false intelligence to Berlin. The centerpiece was FUSAG — the fictional First United States Army Group — allegedly commanded by General George Patton, the German general staff's most feared American commander. The deception worked so completely that even after Normandy landings began on June 6, Hitler and the German high command believed for weeks that Normandy was a feint. Rommel's reserve panzer divisions, which could have pushed the Allied beachhead back into the sea in the first crucial days, were held back. The battle was won partly in the intelligence war, before a single soldier hit the beach.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Operation Fortitude in operation: inflatable rubber tanks in Kent fields, visible from the air. Fake radio traffic operators. The double agent network — Juan Pujol (Garbo), Eddie Chapman — feeding false intelligence to Berlin. FUSAG: the fictional army group's headquarters, Patton photographed and filmed to confirm his command. German intelligence maps showing the 'threat' at Calais. Hitler holding back panzers after June 6 — the deception still working. The greatest lie in military history, told simultaneously to millions of German eyes and ears. 16:9.",
+      "bg_colors": [
+        "#4A4A4A",
+        "#1A1A2E",
+        "#D4AF37"
+      ],
+      "duration_sec": 52,
+      "scene_number": 36
+    },
+    {
+      "title": "The Airborne Drops — Chaos That Somehow Worked",
+      "type": "battle",
+      "narration": "The night before the beach landings, over thirteen thousand American paratroopers from the 82nd and 101st Airborne Divisions dropped into Normandy. It was nearly a disaster. Heavy cloud cover, anti-aircraft fire, and pilot inexperience with combat drops scattered the aircraft across hundreds of square miles. Soldiers landed in flooded fields, in trees, on German positions, miles from their objectives. Entire units never assembled. Some paratroopers fought in groups of two or three, improvising by attacking whatever German positions they found. By every rational military standard, the operation was a failure. What saved it was the confusion the scattered drops created: German commanders could not identify the pattern of the attack because there was no pattern. The chaos that seemed catastrophic to Allied commanders looked, from the German side, like a deliberate multi-directional attack across the entire rear of the coastal defenses.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. The airborne drops at night: C-47 transport planes in massive formations, paratroopers standing at the doors. The anti-aircraft fire beginning — orange tracers through darkness. The scattered drop: soldiers landing miles apart, in flooded fields, in trees. Individual paratroopers alone in the darkness, hearing German voices nearby. Small groups forming — two men, five men — attacking objectives alone. The German command post: officers with a map full of confusing reports from everywhere, unable to identify the main thrust. The chaos as strategic asset. 16:9.",
+      "bg_colors": [
+        "#8B0000",
+        "#4A4A4A",
+        "#D4AF37"
+      ],
+      "duration_sec": 52,
+      "scene_number": 37
+    },
+    {
+      "title": "Bloody Omaha — Why One Beach Was a Catastrophe",
+      "type": "battle",
+      "narration": "Of the five landing beaches, four were tough. Omaha was catastrophic. Three things went wrong simultaneously: the amphibious DD tanks were launched too far from shore in rough seas and most sank with their crews; the preliminary naval bombardment overshot and left German beach defenses largely intact; and the specific German unit holding Omaha — the 352nd Infantry Division — was a veteran unit that happened to be positioned exactly where the American assault was landing, rather than the second-rate garrison troops Allied intelligence expected. The first waves waded ashore with no tank support, against intact fortifications, defended by experienced soldiers. The casualty rate in the first hour was unlike anything else that day. The beach was taken not through tactical genius but through the accumulation of small individual acts of courage by men who had no option but to keep moving forward.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Omaha Beach: the terrain — a long exposed tidal flat, bluffs rising 30 meters above, German fortifications in the bluffs. The DD tanks launching and sinking in rough seas. The naval bombardment overshooting — the German bunkers intact. The first wave: ramp down, men in waist-deep water, some hit immediately. The beach: mines, obstacles, no cover, German fire from above. The bodies in the surf. The stalemate for hours. Then: sergeants pulling men off the beach, small groups going up the bluffs. The beach taken one gully at a time. 16:9.",
+      "bg_colors": [
+        "#8B0000",
+        "#4A4A4A",
+        "#D4AF37"
+      ],
+      "duration_sec": 52,
+      "scene_number": 38
+    },
+    {
+      "title": "Pegasus Bridge — The Perfect Small-Unit Operation",
+      "type": "battle",
+      "narration": "While Omaha was going wrong, one operation that night went almost exactly right. Pegasus Bridge — the assault on two bridges over the Caen Canal and Orne River — was executed by D Company, Oxfordshire and Buckinghamshire Light Infantry, arriving in six Horsa gliders at approximately 12:16 AM on June 6. Major John Howard had trained his company specifically for this mission. The gliders landed so close to the bridge that the first soldiers were within meters of the sentry post before the alarm was raised. The bridge was captured in ten minutes. The mission required these bridges intact so that British armored forces could advance from the beaches and German reinforcements could not cross the other direction. Eisenhower later called it 'the best executed small unit action of the war.'",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Pegasus Bridge: the Caen Canal on the night of June 5-6. Six Horsa gliders on a precise approach to the bridge. The landing: gliders touching down adjacent to the bridge, soldiers pouring out within seconds. The sprint to the bridge. The German sentry, the first shot, the bridge taken in ten minutes. D Company holding the bridge in darkness, waiting for relief 16 hours later. The bridge today: the original structure in the museum, the replacement bearing the same name. The most precise small-unit operation of D-Day. 16:9.",
+      "bg_colors": [
+        "#4A3728",
+        "#D4AF37",
+        "#1A1A2E"
+      ],
+      "duration_sec": 52,
+      "scene_number": 39
+    },
+    {
+      "title": "Eisenhower's Letter — What He Had Ready If It Failed",
+      "type": "deep_dive",
+      "narration": "Before the landings began, Dwight Eisenhower wrote a note and put it in his pocket: 'Our landings in the Cherbourg-Havre area have failed to gain a satisfactory foothold and I have withdrawn the troops. My decision to attack at this time and place was based upon the best information available. The troops, the air and the Navy did all that bravery and devotion to duty could do. If any blame or fault attaches to the attempt it is mine alone.' He wrote it on June 5, the night before the landings. He never had to use it. His aide found it in his papers after the war. It is now in the Eisenhower Presidential Library. The note captures something essential about command at the highest level: the decision to launch Overlord was Eisenhower's alone, and he accepted that accountability completely, in advance, in writing.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Eisenhower alone in his command caravan on the night of June 5: the final decision made, the operation launched, nothing to do now but wait. His hand writing the note. The note folded, placed in his pocket. The landings beginning. The reports coming in over hours. His aide discovering the note in his papers after the war. The note displayed in the Eisenhower Library: the handwriting, the words of complete accountability. The leader who held success and failure in the same moment — the note for failure already written while the operation for success was still unfolding. 16:9.",
+      "bg_colors": [
+        "#1A1A2E",
+        "#8B0000",
+        "#D4AF37"
+      ],
+      "duration_sec": 52,
+      "scene_number": 40
+    },
+    {
+      "title": "Hitler Sleeping — The Decision That Lost the Beach",
+      "type": "deep_dive",
+      "narration": "On the morning of June 6, the German high command knew something was happening in Normandy. The panzer reserves that could have pushed the Allied beachhead back into the sea — specifically the 1st SS Panzer Division and the 12th SS Panzer — were held under Hitler's personal authority. Hitler had gone to sleep late on June 5. His staff were under strict orders not to wake him. When the first reports of the Normandy landings reached his headquarters, his operations chief decided not to wake him. Hitler slept until noon. By the time he was briefed, the beachheads were established. The panzers were released mid-afternoon. Had they been released at 6 AM, the outcome at the beaches — particularly Omaha — might have been very different.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Hitler's headquarters at 3 AM on June 6: reports arriving, officers discussing in hushed voices whether to wake him. The strict orders: do not disturb. Hitler sleeping. The clock advancing: 4 AM, 5 AM, 6 AM — the critical hours at the beaches. The panzer commanders waiting for release authority that doesn't come. The beaches being consolidated. Hitler briefed at noon: his initial belief this is the feint. The panzers finally moving at 4 PM. The Allied soldiers on the beaches they've held for ten hours. The decision unmade in a sleeping headquarters. 16:9.",
+      "bg_colors": [
+        "#8B0000",
+        "#4A4A4A",
+        "#D4AF37"
+      ],
+      "duration_sec": 52,
+      "scene_number": 41
+    },
+    {
+      "title": "Utah Beach — When Everything Went Right",
+      "type": "battle",
+      "narration": "Utah Beach, the westernmost of the American landing beaches, was a success that almost didn't happen as planned — but the mistake made it better. The first wave of the 4th Infantry Division landed approximately 2,000 meters south of their intended landing zone, having been pushed by current. Brigadier General Theodore Roosevelt Jr. — son of President Theodore Roosevelt, at 56 the oldest man in the first wave and the only general officer to land with the initial assault — surveyed the beach and made the decision: 'We'll start the war from right here.' The actual landing zone was less heavily defended than the planned zone. Utah Beach casualties were remarkably light by D-Day standards: about 197 American soldiers killed compared to over two thousand at Omaha. Sometimes a mistake is an improvement.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Utah Beach: the westernmost American landing zone. The current pushing the first wave 2,000 meters south of their planned landing point. Brigadier General Theodore Roosevelt Jr. on the beach — 56 years old, walking with a cane, the oldest man in the first wave. His survey of the new landing zone. His decision: 'We'll start the war from right here.' The actual landing zone less defended than the planned one. Utah's casualty count: 197 American dead compared to over 2,000 at Omaha. The mistake that worked. The general who turned a navigation error into a tactical advantage. 16:9.",
+      "bg_colors": [
+        "#D4AF37",
+        "#1A1A2E",
+        "#8B0000"
+      ],
+      "duration_sec": 52,
+      "scene_number": 42
+    },
+    {
+      "title": "The Canadian Landing — Juno's Forgotten Victory",
+      "type": "battle",
+      "narration": "The Canadian assault on Juno Beach on D-Day is among the most successful and least discussed of the five landings. The 3rd Canadian Infantry Division faced determined German resistance — the defenses at Juno were among the strongest on the Normandy coast — and took significant casualties in the first wave. But by the end of the day, the Canadians had penetrated further inland than any other Allied force: approximately thirteen kilometers from the beach. They were within three miles of the Caen airfield. The Canadian advance was too fast: their flanks were exposed, units were ahead of schedule, and the planned exploitation could not keep pace with the initial assault. For Canada, D-Day was the most significant military operation of the country's history to that point — twelve thousand Canadians landing in a single day, four thousand of them casualties, in a war that Canada had entered three years before the United States.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Juno Beach: the Canadian assault on one of the most heavily defended beaches. The 3rd Canadian Infantry Division landing in the teeth of German resistance. The casualties in the first wave — serious but not catastrophic. Then: the advance. Thirteen kilometers from the beach by the end of the day — further than any other Allied force. The Canadian penetration shown on a map: the exposed flanks, the advance too fast for exploitation. The Canadian context: twelve thousand men in a single day, fighting a war they entered three years before the Americans. Canada's D-Day: the largest single-day military operation in the country's history. 16:9.",
+      "bg_colors": [
+        "#4A3728",
+        "#D4AF37",
+        "#1A1A2E"
+      ],
+      "duration_sec": 52,
+      "scene_number": 43
+    },
+    {
+      "title": "The German Response — Why the Defense Failed",
+      "type": "battle",
+      "narration": "The German defense of Normandy on June 6 failed for reasons that went beyond the tactical. The fundamental problem was a strategic command dispute between Rommel and Panzer Group West commander Geyr von Schweppenburg about how to use the armored reserves. Rommel wanted the panzers close to the beaches, ready to counterattack within hours of any landing. Schweppenburg wanted to hold them back from the beaches, out of range of naval gunfire, and commit them when the landing site was confirmed. Hitler held the reserve panzers under his personal authority and released them too late. The result: the Germans responded to D-Day with exactly the wrong combination of Rommel's and Schweppenburg's strategies, with neither man's plan fully implemented. The Germans had excellent soldiers and formidable defensive positions. What they had were decision-making structures that prevented those assets from being used when the critical hours arrived.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. The German command structure on D-Day: Rommel in France, Schweppenburg with Panzer Group West, Hitler with the reserve panzers. The fundamental dispute: panzers at the beach (Rommel) vs. panzers held back from naval gunfire (Schweppenburg). Hitler as the decision-maker neither trusted. The day unfolding: the panzers held, the beachheads forming. The command dispute playing out in real time as the opportunity closed. Excellent German soldiers with formidable positions, unable to commit their decisive arm because three commanders couldn't agree and one of them was asleep. The organizational failure that turned tactical strength into strategic defeat. 16:9.",
+      "bg_colors": [
+        "#4A4A4A",
+        "#1A1A2E",
+        "#D4AF37"
+      ],
+      "duration_sec": 52,
+      "scene_number": 44
+    },
+    {
+      "title": "D-Day's Long Shadow — Why June 6 Still Matters",
+      "type": "analysis",
+      "narration": "D-Day is one of the most culturally processed events in American and British history, and the cultural processing has not always served the historical reality. The 'Greatest Generation' narrative — heroic American and British soldiers liberating Europe from tyranny — is not wrong, but it leaves out significant elements: the Soviet contribution, which had already broken the German army's spine at Kursk and Stalingrad; the role of Canadian and other Allied forces; the French resistance whose intelligence was crucial. The veterans themselves have consistently given the most measured accounts: they were afraid, many of their friends died, they did what was needed and wanted to go home. What D-Day genuinely demonstrates — stripped of mythology — is what a functioning democracy can accomplish when it actually decides to do something: the planning, the industrial capacity, the political will, and the individual soldiers who ran up a beach in France because someone had decided they would.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. D-Day in culture: the films, the memorials, the annual ceremonies at Normandy. The veterans: elderly men at the American cemetery above Omaha Beach. What they actually say about it — the fear, the friends lost, the wanting to go home. Elements the standard narrative omits: the Soviet front in scale comparison. Canadian and British contributions. The French resistance. What is genuinely true: the scale of democratic mobilization, the political will, the individual soldiers. The Normandy American Cemetery: 9,388 graves on the bluff above Omaha Beach. The meaning of what happened there. 16:9.",
+      "bg_colors": [
+        "#4A3728",
+        "#D4AF37",
+        "#1A1A2E"
+      ],
+      "duration_sec": 52,
+      "scene_number": 45
+    },
+    {
+      "title": "Operation Cobra — The Breakout Six Weeks Later",
+      "type": "battle",
+      "narration": "D-Day secured the beaches. Operation Cobra, six weeks later, broke the German line and opened France. On July 25, 1944, American bombers dropped over 4,000 tons of bombs on a narrow German defensive line west of Saint-Lô. Some bombs fell short, killing 111 American soldiers including General Lesley McNair, the highest-ranking American killed in the European theater. The German defenders who survived were largely incapacitated. American armor punched through. Patton's Third Army was activated and unleashed into the open country of Brittany and then eastward toward Paris. Within weeks, the German position in France was collapsing. The Falaise Pocket in August 1944 encircled and destroyed most of Army Group B. Paris was liberated on August 25. From beach landings to the liberation of Paris: eleven weeks.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Operation Cobra: the massive air bombardment, 4,000 tons of bombs on a narrow strip of German defensive line. American bombers in formation, the bombs falling. The catastrophic short drops — American soldiers in the impact zone. General McNair killed. The aftermath: the German defensive line obliterated. American armor advancing through a moonscape of craters. Patton's Third Army moving fast, the breakout into open France. The Falaise Pocket: German Army Group B surrounded. The road to Paris open. Liberation: French crowds, Allied tanks, August 25. From D-Day to Paris in eleven weeks. 16:9.",
+      "bg_colors": [
+        "#D4AF37",
+        "#1A1A2E",
+        "#8B0000"
+      ],
+      "duration_sec": 52,
+      "scene_number": 46
+    },
+    {
+      "title": "The Scale of Overlord — The Logistics of Liberation",
+      "type": "analysis",
+      "narration": "The logistical preparation for Operation Overlord required two years: building the landing craft, training the troops, manufacturing the equipment, assembling the supplies. The Mulberry harbors — prefabricated artificial harbors towed across the English Channel and assembled off the beaches — were engineering projects of a scale that had never been attempted. Over the eleven months from June 1944 to May 1945, roughly two million soldiers crossed from England to France through the Normandy beachhead. The infrastructure to support them — fuel pipelines, medical facilities, ammunition depots, communication networks — was built on beaches where, six months earlier, there had been nothing. The fuel pipeline PLUTO — Pipe Line Under The Ocean — ran under the English Channel. D-Day was not just a battle. It was the largest logistical and organizational achievement in the history of warfare.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. The two years of preparation: factories producing landing craft, training camps across Britain, supply depots filling. The Mulberry harbor assembly: enormous concrete caissons towed across the Channel, sunk in position, creating an instant harbor. The fuel pipeline PLUTO under the Channel. The two million soldiers who crossed over eleven months. The infrastructure built on beaches where nothing existed before: field hospitals, ammunition depots, communication networks. The organizational achievement as significant as the military one. The logistics of democracy at war at its most complete expression. 16:9.",
+      "bg_colors": [
+        "#4A3728",
+        "#D4AF37",
+        "#1A1A2E"
+      ],
+      "duration_sec": 52,
+      "scene_number": 47
+    },
+    {
+      "title": "D-Day's Psychological Turning Point — What the Battle Did to Germany",
+      "type": "analysis",
+      "narration": "The psychological impact of D-Day on the German war effort was enormous and immediate. German officers and soldiers who had spent years believing the Atlantic Wall was impregnable watched it fall on a single day. The subsequent speed of Allied consolidation and breakout demonstrated that the Wehrmacht's strategic position in the west had been irretrievably compromised. Simultaneously, on June 22, 1944 — two weeks after D-Day — the Soviet Union launched Operation Bagration on the Eastern Front, destroying Army Group Centre in what was arguably the most catastrophic single military defeat of the war. Germany was now being attacked simultaneously from west and east by the most powerful industrial nations in the world. The strategy that had allowed Germany to fight one enemy at a time — the core advantage that had produced its early victories — was over. June 1944 was the month when German military leadership understood, privately if not yet publicly, that the war was lost.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. The German response to D-Day: the officers who had believed in the Atlantic Wall watching it fall. The speed of Allied consolidation: the maps showing the beachhead growing. June 22, 1944: Operation Bagration on the Eastern Front — the map showing Army Group Centre being destroyed simultaneously. Germany under simultaneous attack from west and east. The military calculation: no longer fighting one enemy at a time. German staff officers in private — the conversations that begin to acknowledge what the public declarations still deny. The month of June 1944 as the month when German military leadership knew it was over. 16:9.",
+      "bg_colors": [
+        "#1A1A2E",
+        "#8B0000",
+        "#D4AF37"
+      ],
+      "duration_sec": 52,
+      "scene_number": 48
+    },
+    {
+      "title": "The Normandy American Cemetery — 9,388 Reasons",
+      "type": "analysis",
+      "narration": "The Normandy American Cemetery and Memorial stands on a bluff above Omaha Beach, on a site that France has granted to the United States in perpetuity. It contains 9,388 graves — white marble crosses and Stars of David in perfect rows, on 172 acres of manicured grass, overlooking the beach where many of the men buried there died. The average age of the dead is twenty-six. The youngest was sixteen — Private Charles Fouler of the 506th PIR, who had lied about his age to enlist. The oldest was sixty-one. Of the 9,388 buried there, 307 are unknowns: the graves marked with 'Here Rests in Honored Glory A Comrade in Arms Known But to God.' The cemetery is not only a memorial. It is an argument — about what countries owe to the men they send into harm's way, about what sacrifice means and what it costs, and about why the answer to 'was it worth it' is both easier and harder than any single answer can hold.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. The Normandy American Cemetery: the bluff above Omaha Beach, the 9,388 white marble crosses and Stars of David in perfect rows. The French land granted to the United States in perpetuity. The individual graves: Private Charles Fouler, sixteen years old, who lied about his age to enlist. The 307 unknowns: 'Known But to God.' The average age: twenty-six. The view from the cemetery to the beach below — Omaha Beach visible, peaceful, the water calm. The question the cemetery poses and refuses to answer: was it worth it? The graves that say, simply, that these men were here, and that they deserve to be remembered. 16:9.",
+      "bg_colors": [
+        "#D4AF37",
+        "#1A1A2E",
+        "#8B0000"
+      ],
+      "duration_sec": 52,
+      "scene_number": 49
+    },
+    {
+      "title": "D-Day and Democracy — What Overlord Demonstrates About Political Will",
+      "type": "analysis",
+      "narration": "Operation Overlord was ultimately a demonstration of what democratic societies can accomplish when they choose to do something completely. The United States in 1939 had an army smaller than Romania's. By June 1944, it had produced the largest amphibious invasion in history. The industrial capacity mobilized — three hundred thousand aircraft built, 86,000 tanks, food and fuel and ammunition for millions of men across an ocean — was the product of a democratic economy that converted from peacetime production within months of Pearl Harbor. The British contribution matched this: a nation that had stood alone in 1940, nearly defeated, had survived long enough to provide the base from which the largest military operation in history was launched. What D-Day demonstrates is that the operational and logistical factors — the planning, the equipment, the training — were decisive. Courage was necessary but not sufficient. The courage of the men on the beaches was enabled by the industrial and organizational choices made two years before.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. The democratic mobilization: America's army in 1939 vs. 1944 — the transformation visualized. The factories: car plants becoming tank plants, consumer goods plants becoming ammunition plants. The numbers: 300,000 aircraft, 86,000 tanks, the food and fuel and ammunition for millions. The British contribution: the nation that survived 1940 providing the base for the invasion. The political will: the decisions in Washington and London that made Overlord possible. The men on the beaches enabled by the industrial and organizational choices made two years before. D-Day as a demonstration not just of military excellence but of what democratic society can do when it decides. 16:9.",
+      "bg_colors": [
+        "#4A4A4A",
+        "#1A1A2E",
+        "#D4AF37"
+      ],
+      "duration_sec": 52,
+      "scene_number": 50
+    },
+    {
+      "title": "The Long Road from Normandy to Berlin — What D-Day Began",
+      "type": "analysis",
+      "narration": "D-Day secured a beachhead in France. The road from that beachhead to Berlin took eleven more months — from June 6, 1944 to May 8, 1945. The liberation of Paris came in August 1944. The liberation of Brussels in September. The Battle of the Bulge — Germany's last major offensive in the west — came in December 1944, briefly breaking Allied lines before being contained and reversed. The Rhine was crossed in March 1945. American and Soviet forces met on the Elbe River on April 25. Hitler died on April 30. Germany surrendered unconditionally on May 8. The campaign that began on the beaches of Normandy ended in the ruins of Berlin and the total destruction of the Nazi state. D-Day was the beginning of the end, not the end itself. But it was the beginning that made the end possible.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. The timeline from D-Day to Berlin: the map of Allied advance from Normandy to Germany. Paris liberated August 1944. Brussels September. The Battle of the Bulge December 1944 — the German counterattack, the American resistance at Bastogne, the bulge contained. The Rhine crossing March 1945. American and Soviet forces meeting on the Elbe, April 25. Hitler's death April 30. V-E Day May 8, 1945. Eleven months from the beach to the end. The arc from D-Day to final victory: the beginning that made the end possible, and the price paid in the eleven months between. 16:9.",
+      "bg_colors": [
+        "#8B0000",
+        "#4A4A4A",
+        "#D4AF37"
+      ],
+      "duration_sec": 52,
+      "scene_number": 51
+    },
+    {
+      "title": "The French Resistance — The Invisible Army",
+      "type": "deep_dive",
+      "narration": "The French Resistance contributed to D-Day in ways that are often underestimated. In the weeks before June 6, French resistance fighters — working with Allied special forces and the SOE and OSS intelligence networks — conducted coordinated sabotage operations across France. They cut railway lines to delay German troop movements. They destroyed telephone and telegraph communications. They provided the Allies with detailed intelligence about German dispositions, fortifications, and reserve positions. On D-Day itself, the Resistance executed Plan Vert — targeting the French railway network — and Plan Tortue — targeting road transport. The delays these operations caused to German reinforcement movements were militarily significant. The Resistance fighters who did this knew that failure or capture meant torture and execution. They were not soldiers in uniform with Geneva Convention protections. They were civilians who had chosen to fight, and many of them died for that choice.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. The French Resistance: the underground network — civilians who became fighters. A resistance cell in a cellar, the radio, the coded messages. Railway sabotage: a bridge blown at night, the tracks destroyed. German telephone lines cut. The intelligence flowing to London: the details of German positions, fortifications, reserve locations. D-Day: Plan Vert and Plan Tortue operations, coordinated with the landings. A resistance fighter being arrested by the Gestapo — the risk made flesh. The invisible army that fought without uniforms, without protections, for their country and their neighbors. The contribution to D-Day that doesn't appear in the official order of battle. 16:9.",
+      "bg_colors": [
+        "#4A3728",
+        "#D4AF37",
+        "#1A1A2E"
+      ],
+      "duration_sec": 55,
+      "scene_number": 52
+    },
+    {
+      "title": "Voices From the Beach — What the Survivors Said",
+      "type": "deep_dive",
+      "narration": "The oral testimony of D-Day veterans — recorded extensively before the last of them passed away — reveals something that the formal histories inevitably flatten: the individual human experience of one of history's largest events. Veterans describe the smell of the landing craft — diesel fuel, salt water, and vomit, because most of the men were seasick during the Channel crossing. They describe the weight of wet equipment — a soldier who went into the water at Omaha was carrying sixty to eighty pounds that immediately became heavier. They describe the sound as different from any training: louder, more continuous, with no direction from which it wasn't coming. They describe the men next to them, and what happened to them. And virtually every veteran who spoke about D-Day, when asked whether they were afraid, said yes. The heroism of D-Day was not the absence of fear. It was what the men did while they were afraid.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. D-Day veteran testimony: the faces of old men describing what they experienced. The landing craft: diesel fuel, salt water, the men seasick during the Channel crossing. The weight of wet equipment: a soldier shown carrying 60-80 pounds, going into waist-deep water. The sound of the beach: the continuous fire from all directions, louder than any training exercise. The man next to you: the specific, named individual, and what happened to him. Veterans' voices describing fear, and what they did while they were afraid. The heroism of D-Day as the gap between feeling fear and acting despite it. The voices that are now gone, preserved in the recordings that remain. 16:9.",
+      "bg_colors": [
+        "#1A1A2E",
+        "#8B0000",
+        "#D4AF37"
+      ],
+      "duration_sec": 55,
+      "scene_number": 53
+    },
+    {
+      "scene_number": 54,
       "type": "next_episode",
       "title": "Next Episode — Stalingrad",
       "narration": "Next episode on Gods and Glory: while the Western Allies were still years from landing in France, the Eastern Front was already deciding the war. In the ruins of a single Russian city, the German army would suffer the defeat that broke its momentum for good. Stalingrad — the battle that turned the tide of the entire Second World War.",
       "visual_prompt": "Gods & Glory cinematic historical documentary. Teaser shot: the bombed-out ruins of Stalingrad in winter, Soviet and German soldiers fighting amid rubble, snow falling. Bleak, epic anticipation. 16:9.",
-      "bg_colors": ["#1C2B3A", "#6E7B5A", "#8B1A1A"],
+      "bg_colors": [
+        "#1C2B3A",
+        "#6E7B5A",
+        "#8B1A1A"
+      ],
       "duration_sec": 40
     }
   ]

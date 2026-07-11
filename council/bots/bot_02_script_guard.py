@@ -12,8 +12,6 @@ from datetime import datetime
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 from council.bot_base import CouncilBot, BotResult, BASE_DIR
 
-PROMPTS_DIR = BASE_DIR / "prompts"
-REGISTRY_PATH = BASE_DIR / "script_registry.json"
 MIN_FULL_DURATION = 600
 
 
@@ -25,8 +23,10 @@ class ScriptGuardBot(CouncilBot):
 
     def _scan(self) -> list[dict]:
         results = []
-        for p in sorted(PROMPTS_DIR.rglob("*.json")):
-            if any(part.startswith("_") for part in p.relative_to(PROMPTS_DIR).parts[:-1]):
+        if not self.prompts_dir.exists():
+            return results
+        for p in sorted(self.prompts_dir.rglob("*.json")):
+            if any(part.startswith("_") for part in p.relative_to(self.prompts_dir).parts[:-1]):
                 continue
             try:
                 data = json.loads(p.read_text(encoding="utf-8"))
@@ -56,10 +56,11 @@ class ScriptGuardBot(CouncilBot):
 
     def run(self) -> BotResult:
         r = self.result
+        registry_path = BASE_DIR / f"script_registry_{self.channel}.json"
         reg = {}
-        if REGISTRY_PATH.exists():
+        if registry_path.exists():
             try:
-                reg = json.loads(REGISTRY_PATH.read_text())
+                reg = json.loads(registry_path.read_text())
             except Exception:
                 pass
 
@@ -100,6 +101,6 @@ class ScriptGuardBot(CouncilBot):
         })
 
         if downgrades:
-            r.next_action = "MANUAL: restore full scripts from prompts/gods_glory/ or backups"
+            r.next_action = f"MANUAL: restore full scripts from {self.prompts_dir} or backups"
 
         return r

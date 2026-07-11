@@ -1,0 +1,88 @@
+{
+  "allOk": true,
+  "failureCount": 0,
+  "services": [
+    {
+      "serviceId": "empire-os",
+      "serviceName": "Empire OS Server",
+      "status": "ok",
+      "latencyMs": 474,
+      "statusCode": 200,
+      "checkedAt": "2026-07-06T02:29:12.406Z"
+    },
+    {
+      "serviceId": "ollama",
+      "serviceName": "Ollama Local AI",
+      "status": "ok",
+      "latencyMs": 464,
+      "statusCode": 200,
+      "checkedAt": "2026-07-06T02:29:12.397Z"
+    },
+    {
+      "serviceId": "open-webui",
+      "serviceName": "Open WebUI",
+      "status": "ok",
+      "latencyMs": 459,
+      "statusCode": 200,
+      "checkedAt": "2026-07-06T02:29:12.393Z"
+    },
+    {
+      "serviceId": "empire-assistant",
+      "serviceName": "Empire Assistant",
+      "status": "ok",
+      "latencyMs": 463,
+      "statusCode": 200,
+      "checkedAt": "2026-07-06T02:29:12.397Z"
+    },
+    {
+      "serviceId": "health-monitor",
+      "serviceName": "Health Monitor",
+      "status": "ok",
+      "latencyMs": 463,
+      "statusCode": 200,
+      "checkedAt": "2026-07-06T02:29:12.397Z"
+    },
+    {
+      "serviceId": "knowledge-base",
+      "serviceName": "Knowledge Base",
+      "status": "ok",
+      "latencyMs": 462,
+      "statusCode": 200,
+      "checkedAt": "2026-07-06T02:29:12.397Z"
+    },
+    {
+      "serviceId": "video-factory",
+      "serviceName": "Video Factory",
+      "status": "ok",
+      "latencyMs": 462,
+      "statusCode": 200,
+      "checkedAt": "2026-07-06T02:29:12.397Z"
+    },
+    {
+      "serviceId": "executive",
+      "serviceName": "Autonomous Executive",
+      "status": "ok",
+      "latencyMs": 462,
+      "statusCode": 200,
+      "checkedAt": "2026-07-06T02:29:12.397Z"
+    },
+    {
+      "serviceId": "discovery-engine",
+      "serviceName": "Discovery Engine",
+      "status": "ok",
+      "latencyMs": 462,
+      "statusCode": 200,
+      "checkedAt": "2026-07-06T02:29:12.397Z"
+    },
+    {
+      "serviceId": "media-engine",
+      "serviceName": "Media Engine",
+      "status": "ok",
+      "latencyMs": 473,
+      "statusCode": 200,
+      "checkedAt": "2026-07-06T02:29:12.408Z"
+    }
+  ],
+  "checkedAt": "2026-07-06T02:29:12.409Z",
+  "nextCheckIn": 60
+}

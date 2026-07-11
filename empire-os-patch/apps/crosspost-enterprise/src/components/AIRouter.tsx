@@ -12,7 +12,7 @@ export default function AIRouter() {
   // Dynamic Routing Policies state
   const [policies, setPolicies] = useState([
     { id: 1, trigger: "SQL / database structure query", model: "Ollama (llama3)", priority: 1, active: true },
-    { id: 2, trigger: "Real-time search or grounding needed", model: "Gemini 3.5 Flash", priority: 2, active: true },
+    { id: 2, trigger: "Real-time search or grounding needed", model: "Gemini 2.5 Flash", priority: 2, active: true },
     { id: 3, trigger: "Multi-file systems architecture / deep reasoning", model: "Claude 3.5 Sonnet", priority: 3, active: true },
     { id: 4, trigger: "Standard text summarization / draft curation", model: "Ollama (gemma2)", priority: 4, active: true }
   ]);
@@ -45,45 +45,54 @@ export default function AIRouter() {
     setLoading(true);
     setResultTrace(null);
 
-    // Simulate real or cognitive routing handshake
-    setTimeout(() => {
-      let routedTo = "Ollama (llama3)";
-      let confidence = 0.94;
-      let latency = "240ms";
-      let reason = "Localized query matching database syntax logic - resolved offline to preserve credit thresholds.";
-      let content = "SELECT p.id, p.name, COUNT(f.id) FROM projects p JOIN files f ON f.project_id = p.id GROUP BY p.id HAVING COUNT(f.id) > 1;";
+    try {
+      const res = await fetch("/api/empire/ai-router", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ prompt: query, platformId: "general" })
+      });
+      const data = await res.json();
 
-      const lowerQuery = query.toLowerCase();
-      if (lowerQuery.includes("research") || lowerQuery.includes("grounding") || lowerQuery.includes("latest") || lowerQuery.includes("news")) {
-        routedTo = "Gemini 3.5 Flash";
-        confidence = 0.98;
-        latency = "580ms";
-        reason = "Context requires search grounding or live external retrieval.";
-        content = "Under dynamic Google Search parameters, the requested context is analyzed under real-time indexing models...";
-      } else if (lowerQuery.includes("architecture") || lowerQuery.includes("system") || lowerQuery.includes("modernization") || lowerQuery.includes("heavy")) {
-        routedTo = "Claude 3.5 Sonnet";
-        confidence = 0.96;
-        latency = "1200ms";
-        reason = "System requires highly structured multi-file reasoning / semantic dependency trees.";
-        content = "[Systems Architecture Report Blueprint]\n- Gateway Node: Node.js/Express (Port 3000)\n- Worker Pipeline: Temporal.io\n- Retrieval Cluster: pgvector/Postgres";
-      }
+      if (!res.ok || !data.success) throw new Error(data.error || "Router request failed.");
+
+      const metrics = data.metrics || {};
+      const isSimulated = metrics.isSimulated === true;
+      const modelUsed = metrics.modelUsed || "Gemini 2.5 Flash";
+      const latencyMs = metrics.latencyMs || 0;
 
       setResultTrace({
         query,
-        routedTo,
-        confidence,
-        latency,
-        reason,
-        content,
+        routedTo: modelUsed,
+        confidence: isSimulated ? 0.72 : 0.97,
+        latency: `${latencyMs}ms`,
+        reason: isSimulated
+          ? "Cognitive simulation mode — add GEMINI_API_KEY to .env to enable live routing."
+          : "Live Gemini routing succeeded. Response generated via Empire AI Gateway.",
+        content: data.text || "",
+        isSimulated,
         steps: [
           { name: "Parser Hook Activated", status: "COMPLETE", detail: "Scanned text for language markers & intent keys." },
           { name: "Active Routing Policies Evaluated", status: "COMPLETE", detail: `Matched query against ${policies.length} pipeline rules.` },
-          { name: "Performance/Telemetry Cost Check", status: "COMPLETE", detail: "Determined local model viability vs cloud API token expenditure." },
-          { name: "Cognitive Router Dispatch", status: "SUCCESS", detail: `Channeled query to ${routedTo} endpoint.` }
+          { name: "Performance/Telemetry Cost Check", status: "COMPLETE", detail: `Est. ${metrics.tokensCount || 0} tokens / $${(metrics.estimatedCostUsd || 0).toFixed(6)}` },
+          { name: "Cognitive Router Dispatch", status: "SUCCESS", detail: `Channeled to ${modelUsed}${isSimulated ? " (simulated)" : " (live)"}` }
         ]
       });
+    } catch (err: any) {
+      setResultTrace({
+        query,
+        routedTo: "ERROR",
+        confidence: 0,
+        latency: "—",
+        reason: err?.message || "Failed to reach Empire AI Router endpoint.",
+        content: "",
+        isSimulated: true,
+        steps: [
+          { name: "Connection Attempt", status: "FAILED", detail: "Could not reach /api/empire/ai-router." }
+        ]
+      });
+    } finally {
       setLoading(false);
-    }, 1200);
+    }
   };
 
   return (
@@ -144,10 +153,22 @@ export default function AIRouter() {
             <div className="bg-zinc-950 border border-zinc-850 rounded-lg p-4 space-y-4">
               <div className="flex justify-between items-center font-mono text-[10px] border-b border-zinc-900 pb-2">
                 <span className="text-slate-500 uppercase">Route Trace Results</span>
-                <span className="text-emerald-400 font-bold flex items-center gap-1">
-                  <CheckCircle className="w-3.5 h-3.5" />
-                  ROUTED SUCCESSFULLY
-                </span>
+                {resultTrace.routedTo === "ERROR" ? (
+                  <span className="text-rose-400 font-bold flex items-center gap-1 text-[9px] font-mono">
+                    <AlertCircle className="w-3.5 h-3.5" />
+                    ROUTER ERROR
+                  </span>
+                ) : resultTrace.isSimulated ? (
+                  <span className="text-amber-400 font-bold flex items-center gap-1 text-[9px] font-mono">
+                    <Cpu className="w-3.5 h-3.5" />
+                    SIMULATION MODE
+                  </span>
+                ) : (
+                  <span className="text-emerald-400 font-bold flex items-center gap-1 text-[9px] font-mono">
+                    <CheckCircle className="w-3.5 h-3.5" />
+                    LIVE — ROUTED
+                  </span>
+                )}
               </div>
 
               {/* High level stats */}

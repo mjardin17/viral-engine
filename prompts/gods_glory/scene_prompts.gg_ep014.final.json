@@ -6,7 +6,7 @@
   "subtitle": "June 18, 1815 \u2014 The Battle That Decided Europe",
   "tagline": "He had beaten every army in Europe. On one rainy Sunday in Belgium, one thing went wrong. Then everything did.",
   "villain_mandate": "Wellington and Bl\u00fccher \u2014 two generals who understood that surviving Napoleon was the only strategy that worked",
-  "duration_target_sec": 1150,
+  "duration_target_sec": 1696,
   "viral_hook": "Napoleon had won 60 battles in 20 years. Waterloo lasted 9 hours. One delay in the morning changed everything.",
   "youtube_title": "Waterloo 1815: The Day Napoleon's Genius Finally Failed",
   "lesson": "Even the greatest commanders run out of time. Brilliance is not the same as invincibility.",
@@ -16,7 +16,7 @@
       "scene_number": 1,
       "type": "cold_open",
       "title": "The Emperor Returns",
-      "duration_sec": 48,
+      "duration_sec": 53,
       "narration": "March 1, 1815. Napoleon Bonaparte lands on the French coast with one thousand soldiers after escaping exile on the island of Elba. He marches north. One by one, the regiments sent to stop him join him instead. Marshal Ney \u2014 sent by King Louis XVIII to bring Napoleon back in an iron cage \u2014 rides to meet Napoleon, sees his old emperor, and cannot do it. He shakes Napoleon's hand and his army follows. On March 20, Napoleon walks into the Tuileries Palace in Paris without firing a shot. The king flees. Europe is horrified. What follows is a hundred days that end on a muddy ridge in Belgium. This is the story of Waterloo.",
       "visual_prompt": "Gods & Glory cinematic documentary. Napoleon landing on the French coast at Golfe-Juan \u2014 one thousand men, the tricolor flying. His march north, regiments defecting to join him. Marshal Ney's dramatic moment of decision \u2014 riding to arrest Napoleon and instead shaking his hand. Napoleon entering Paris, the king fled. Europe watching in alarm. 16:9.",
       "bg_colors": [
@@ -29,7 +29,7 @@
       "scene_number": 2,
       "type": "context",
       "title": "Europe Against Napoleon",
-      "duration_sec": 46,
+      "duration_sec": 53,
       "narration": "The major European powers had been at war with Napoleon for over twenty years. They had defeated him, exiled him, and now watched him return. Within days of his landing, the allied powers \u2014 Britain, Prussia, Austria, Russia \u2014 mobilized. They agreed to invade France with over seven hundred thousand troops from multiple directions. Napoleon's only hope was speed. He had to destroy the nearest allied armies before the others arrived. Two allied forces were in Belgium: Wellington's British and Dutch army at Brussels, and Bl\u00fccher's Prussian army to the east. Napoleon's plan was brilliant: drive between them, destroy each in turn, and negotiate from a position of strength.",
       "visual_prompt": "Gods & Glory cinematic documentary. Map of Europe 1815 \u2014 allied armies mobilizing from all directions toward France. Napoleon in Paris, surrounded by maps, calculating time. His window: destroy Wellington and Bl\u00fccher before Austria and Russia arrive. The military logic clear, the task nearly impossible. 16:9.",
       "bg_colors": [
@@ -42,7 +42,7 @@
       "scene_number": 3,
       "type": "character_intro",
       "title": "Wellington: The Iron Duke",
-      "duration_sec": 46,
+      "duration_sec": 53,
       "narration": "Arthur Wellesley, Duke of Wellington, was the one general Napoleon had never beaten \u2014 because they had never met in battle. Wellington had built his reputation fighting the French in Spain, where he developed an expertise in defensive warfare that Napoleon would eventually find his answer to. Wellington was not flashy. He did not seek decisive engagements on ground of the enemy's choosing. He chose his ground, hid his troops on reverse slopes, and let the French exhaust themselves attacking before striking. He called his men the scum of the earth \u2014 enlisted for drink \u2014 and then trusted them absolutely to hold ground that no one else could hold. He was waiting for Napoleon on the ridge at Waterloo.",
       "visual_prompt": "Gods & Glory cinematic documentary. Wellington \u2014 tall, aquiline, controlled \u2014 surveying the ridge at Waterloo on his horse Copenhagen. He studies the ground with a professional eye. Behind him, his multinational army: British redcoats, Dutch-Belgian troops, Hanoverian Germans. His face is unreadable. He has been here before. 16:9.",
       "bg_colors": [
@@ -55,7 +55,7 @@
       "scene_number": 4,
       "type": "character_intro",
       "title": "Bl\u00fccher: The Old Hussar",
-      "duration_sec": 45,
+      "duration_sec": 53,
       "narration": "Field Marshal Gebhard Leberecht von Bl\u00fccher was seventy-two years old at Waterloo. He had been defeated by Napoleon at Ligny just two days earlier, thrown from his horse, ridden over by cavalry, and left for dead. He had recovered, reorganized his battered Prussian army, and on June 18 was marching to join Wellington. Bl\u00fccher had one outstanding quality that made him invaluable despite his age and his tactical shortcomings: he never, ever quit. He had been defeated by Napoleon more times than almost any other general alive. He kept coming back. His nickname was Marshal Vorw\u00e4rts \u2014 Marshal Forward. It described him perfectly.",
       "visual_prompt": "Gods & Glory cinematic documentary. Bl\u00fccher \u2014 old, fierce, indestructible \u2014 rallying his Prussian army after the defeat at Ligny. His battered face, his determination. The seventy-two year old marshal who would not stop. His army marching through rain and mud toward the sound of guns at Waterloo. Marshal Forward. 16:9.",
       "bg_colors": [
@@ -68,7 +68,7 @@
       "scene_number": 5,
       "type": "historical",
       "title": "The Fatal Morning Delay",
-      "duration_sec": 48,
+      "duration_sec": 53,
       "narration": "June 18, 1815. The battle that would decide Europe was delayed. Heavy rain the night before had soaked the ground, and Napoleon \u2014 against the advice of his corps commanders \u2014 decided to wait until the soil dried enough for his artillery to maneuver. He started the battle at 11:30 in the morning instead of dawn. Those four to six hours cost him everything. They gave Bl\u00fccher's Prussians \u2014 who had been marching through the night \u2014 time to close the distance. When the Prussians finally appeared on Napoleon's right flank late in the afternoon, the battle was already balanced on a knife-edge. The mud at Waterloo killed Napoleon as surely as any bullet.",
       "visual_prompt": "Gods & Glory cinematic documentary. Napoleon surveying the rain-soaked battlefield at dawn \u2014 the muddy ground, the heavy artillery stuck. His commanders urging him to attack. Napoleon's face: calculating, overconfident, waiting. Time passing. A clock face turning. Meanwhile, Prussian columns marching through the night toward the battle. The delay that changed history. 16:9.",
       "bg_colors": [
@@ -81,7 +81,7 @@
       "scene_number": 6,
       "type": "battle",
       "title": "Hougoumont Burns",
-      "duration_sec": 47,
+      "duration_sec": 53,
       "narration": "At 11:30 AM, the battle began with Napoleon sending a corps to attack the ch\u00e2teau of Hougoumont on Wellington's right flank \u2014 intended as a diversionary attack. Wellington had posted the Guards there to hold it. What followed was one of the most intense small-unit actions in military history. The French attacked Hougoumont relentlessly all day. A handful of British Guards closed the north gate against a French rush \u2014 the closing of the north gate of Hougoumont may have been the pivotal moment of the entire battle. Hougoumont burned but held. Thousands of French troops who should have been reinforcing the main attack spent the entire day attacking a ch\u00e2teau they could never take.",
       "visual_prompt": "Gods & Glory cinematic documentary. Hougoumont ch\u00e2teau under attack and burning \u2014 French infantry swarming the walls, British Guards defending with bayonets and musket fire. The iconic moment of the north gate closing against a French rush, a handful of defenders slamming it shut. The ch\u00e2teau in flames but the flag still flying above. 16:9.",
       "bg_colors": [
@@ -94,7 +94,7 @@
       "scene_number": 7,
       "type": "battle",
       "title": "The Grande Batterie",
-      "duration_sec": 46,
+      "duration_sec": 53,
       "narration": "At 1 PM, Napoleon unleashed his Grande Batterie \u2014 eighty cannon firing at once at Wellington's center. The ridge shook. But Wellington had put his infantry on the reverse slope \u2014 hidden behind the crest \u2014 so the cannonballs passed over most of them. When the French infantry attacked after the bombardment, they marched uphill into musket fire from troops they couldn't see until it was too late. The reverse slope tactic \u2014 which Wellington had perfected in Spain \u2014 worked perfectly. D'Erlon's corps attacked with eighteen thousand men and was repulsed by British infantry and then shattered by the heavy cavalry charge of the Union Brigade. Napoleon's first serious attack had failed.",
       "visual_prompt": "Gods & Glory cinematic documentary. The Grande Batterie firing \u2014 eighty cannon sending smoke across the valley. The French infantry advancing uphill in massive columns. Wellington's redcoats emerging from the reverse slope to meet them with volley fire. The Union Brigade cavalry charge smashing D'Erlon's corps. Chaos, smoke, the ridge holding. 16:9.",
       "bg_colors": [
@@ -107,7 +107,7 @@
       "scene_number": 8,
       "type": "battle",
       "title": "Ney's Cavalry Charge",
-      "duration_sec": 48,
+      "duration_sec": 53,
       "narration": "In the early afternoon, Marshal Ney \u2014 Napoleon's most aggressive commander \u2014 made one of history's most catastrophic errors. Seeing movement on the ridge, he misread it as a retreat and launched a massive cavalry charge without infantry or artillery support. Over five thousand horsemen charged the British center. Wellington's infantry formed squares \u2014 a defensive formation that cavalry cannot break \u2014 and the French horses crashed against them in wave after wave. It was spectacular and completely futile. Five thousand cavalry could not break infantry squares that held their nerve. Ney charged again and again, losing horses and men with every assault. By the end, French cavalry had been shattered by an attack that should never have happened.",
       "visual_prompt": "Gods & Glory cinematic documentary. Ney's massive cavalry charge \u2014 thousands of French cuirassiers and lancers sweeping up the ridge in a glittering, thunderous wave. British infantry forming into squares, bristling with bayonets. The horses breaking on the squares like water on rock. The charge happening again, and again, and again. Spectacular futility. 16:9.",
       "bg_colors": [
@@ -120,7 +120,7 @@
       "scene_number": 9,
       "type": "historical",
       "title": "The Prussians Arrive",
-      "duration_sec": 47,
+      "duration_sec": 53,
       "narration": "At around 4:30 PM, the first Prussian units appeared on Napoleon's right flank. Napoleon had sent Marshal Grouchy with thirty-three thousand men to pursue the Prussians after Ligny and prevent them from joining Wellington. Grouchy was miles away, following the wrong road, and would not arrive in time. The Prussians' arrival forced Napoleon to divert troops from his main attack to hold his flank. The window was closing. Napoleon needed to break Wellington's line before the Prussians fully engaged. He had one card left: the Imperial Guard, his most elite troops, who had never been beaten in over twenty years of war. He had held them in reserve all day.",
       "visual_prompt": "Gods & Glory cinematic documentary. Prussian columns emerging from the forest on Napoleon's right flank \u2014 their blue coats appearing out of the tree line. Napoleon on his horse, watching, calculating. Troops being diverted. Then the Imperial Guard \u2014 the Old Guard \u2014 visible in the distance, waiting, veterans of a hundred battles, Napoleon's final card. 16:9.",
       "bg_colors": [
@@ -133,7 +133,7 @@
       "scene_number": 10,
       "type": "pivotal_action",
       "title": "The Guard Attacks \u2014 and Fails",
-      "duration_sec": 48,
+      "duration_sec": 53,
       "narration": "At 7 PM, Napoleon sent the Imperial Guard \u2014 the Old Guard, the Middle Guard, the last reserve \u2014 up the ridge toward Wellington's line. It had never happened before. The Guard had been used to deliver finishing blows to already-broken enemies. Now they marched up into the smoke to save a battle that was already losing. Wellington had anticipated the attack. He shifted his best troops to meet it. When the Guard reached the crest and met the British Guards rising from the reverse slope and firing at close range, they stopped. Then they broke. The Imperial Guard, in twenty years of war, had never retreated. On the ridge at Waterloo, they ran.",
       "visual_prompt": "Gods & Glory cinematic documentary. The Imperial Guard advancing up the ridge \u2014 tall bearskin caps, the Old Guard veterans, the most feared soldiers in Europe. Wellington's troops rising from the reverse slope to meet them. The close-range volley fire. Then the unthinkable: the Guard wavering, stopping, breaking, running. Soldiers who had never retreated, running. 16:9.",
       "bg_colors": [
@@ -146,7 +146,7 @@
       "scene_number": 11,
       "type": "battle_climax",
       "title": "La Garde Recule \u2014 The Guard Retreats",
-      "duration_sec": 48,
+      "duration_sec": 53,
       "narration": "The cry went through the French army like a shock: La Garde recule. The Guard is retreating. In twenty years, those words had never been spoken. Soldiers who had fought since Marengo, since Austerlitz, since Jena, since Wagram \u2014 veterans who believed the Guard was unbeatable \u2014 broke and ran. Wellington ordered a general advance. The entire British line moved forward. On the right, the Prussians were now fully engaged. Napoleon's army didn't retreat \u2014 it disintegrated. Soldiers threw away their weapons and ran. A rout that had been a disciplined army in the morning became a mob by evening. Napoleon fled in his carriage until the road became too choked with fleeing soldiers to move.",
       "visual_prompt": "Gods & Glory cinematic documentary. The rout of the French army \u2014 from disciplined troops to chaos. Soldiers throwing down muskets and running, the Old Guard trying to form a rearguard, the British and Prussian armies converging. Napoleon in his carriage forcing its way through the flood of fleeing men. The greatest army of its era dissolving. 16:9.",
       "bg_colors": [
@@ -159,7 +159,7 @@
       "scene_number": 12,
       "type": "dramatic",
       "title": "Wellington's Worst Night",
-      "duration_sec": 47,
+      "duration_sec": 53,
       "narration": "Wellington rode across the battlefield as night fell. He had won the most important battle of his life. He wept. He said he hoped to God he had fought his last battle because nothing except a battle lost could be half so melancholy as a battle won. The dead and wounded lay across the ridge of Mont Saint-Jean in the thousands \u2014 French and British and Prussian and Dutch, killed for a few miles of Belgian farmland. Wellington spent the night identifying the bodies of men he had known. He could not eat. He could not sleep. The butcher's bill for Waterloo: approximately fifty thousand casualties, killed and wounded, on both sides. In nine hours.",
       "visual_prompt": "Gods & Glory cinematic documentary. Wellington after the battle \u2014 riding across the field of dead at dusk, his face haunted. The scale of the carnage: bodies of soldiers from multiple nations spread across the muddy ridge. Wellington weeping. His famous quote visible. The human cost of victory made viscerally real. 16:9.",
       "bg_colors": [
@@ -172,7 +172,7 @@
       "scene_number": 13,
       "type": "aftermath",
       "title": "Napoleon's Second Exile",
-      "duration_sec": 46,
+      "duration_sec": 53,
       "narration": "Napoleon abdicated four days after Waterloo. He had hoped to escape to America but British ships blockaded the ports. On July 15, he surrendered to HMS Bellerophon in the harbor of Rochefort \u2014 walking up the gangplank of a British warship wearing his gray overcoat and his signature hat, unarmed and unescorted. He was sent to Saint Helena \u2014 a tiny island in the South Atlantic, fifteen hundred miles from any continent. He would never leave. He died there in 1821, probably of stomach cancer, at fifty-one years old. The most consequential life of the nineteenth century ended on a rock in the middle of the ocean.",
       "visual_prompt": "Gods & Glory cinematic documentary. Napoleon boarding HMS Bellerophon \u2014 his famous silhouette walking up the gangplank, hat and gray coat, alone. The British sailors watching the most famous man in the world surrender. Then Saint Helena: the tiny island, the house where he would live and die. The exile and the end. 16:9.",
       "bg_colors": [
@@ -185,7 +185,7 @@
       "scene_number": 14,
       "type": "historical",
       "title": "What Napoleon Built",
-      "duration_sec": 47,
+      "duration_sec": 53,
       "narration": "Napoleon lost at Waterloo. He did not lose everything he had built. The Napoleonic Code \u2014 his legal legacy \u2014 is still the basis of law in France, Belgium, Louisiana, Quebec, and large parts of Latin America. The concept of careers open to talent, regardless of birth, that Napoleon promoted, became the foundation of modern meritocracy. The metric system, which Napoleon spread across Europe, is now the global standard except in three countries. Napoleon reorganized France's education system, its banking system, its roads. The man who destroyed republics to rule them also left behind institutions that outlasted him by centuries.",
       "visual_prompt": "Gods & Glory cinematic documentary. Napoleon's legal and institutional legacy: the Code Napoleon in printed form, used across continents. The metric system visualized. Schools, banks, roads built under his reign. The paradox of Napoleon: the tyrant who built institutions of liberty. 16:9.",
       "bg_colors": [
@@ -198,7 +198,7 @@
       "scene_number": 15,
       "type": "historical",
       "title": "The Hundred Days in Context",
-      "duration_sec": 46,
+      "duration_sec": 53,
       "narration": "The Hundred Days \u2014 Napoleon's return, campaign, and defeat \u2014 are a study in what happens when a defeated leader gets a second chance and uses it badly. Napoleon's return was militarily brilliant: he seized Paris, mobilized France, and nearly pulled off the impossible. But he was not the commander he had been in 1805. He was slower, more cautious, more willing to delay. He was ill \u2014 possibly with stomach ulcers or hemorrhoids that made riding painful. He trusted subordinates who had been competent under different conditions but couldn't handle independent command. Waterloo was not just a battle lost. It was the accumulation of two decades of war finally coming due.",
       "visual_prompt": "Gods & Glory cinematic documentary. Napoleon in 1815 compared to 1805: the same man, ten years older, visibly diminished. The contrast between his Austerlitz campaign and his Waterloo campaign. The physical toll of twenty years of war visible in his face and movements. Greatness fading even as it tries to reassert itself. 16:9.",
       "bg_colors": [
@@ -211,7 +211,7 @@
       "scene_number": 16,
       "type": "analysis",
       "title": "Could Napoleon Have Won?",
-      "duration_sec": 47,
+      "duration_sec": 53,
       "narration": "Historians have identified dozens of moments where Waterloo could have gone differently. If Napoleon had attacked at dawn instead of 11:30. If Grouchy had intercepted the Prussians. If Ney hadn't wasted the cavalry. If D'Erlon had attacked earlier and more decisively. If the Imperial Guard had been sent an hour earlier. Each counterfactual leads to a different Europe \u2014 Napoleon negotiating a peace, holding France, perhaps restoring the empire in a diminished form. But military history is full of 'if.' What actually happened was that every mistake Napoleon's commanders could make, they made. And Wellington made none. On that specific day, against that specific enemy, Napoleon ran out of options.",
       "visual_prompt": "Gods & Glory cinematic documentary. A series of decision points visualized: the morning delay, Grouchy's wrong road, Ney's cavalry charge. Each one as a branching moment in history. Alternate Napoleons winning. The actual Napoleon losing. The accumulation of small errors that added up to catastrophe. 16:9.",
       "bg_colors": [
@@ -224,7 +224,7 @@
       "scene_number": 17,
       "type": "historical",
       "title": "The Concert of Europe",
-      "duration_sec": 46,
+      "duration_sec": 53,
       "narration": "After Waterloo, the Congress of Vienna \u2014 already meeting before Napoleon's return \u2014 reorganized Europe. The settlement was remarkably durable. The great powers \u2014 Britain, Austria, Prussia, Russia, and eventually France \u2014 agreed to a system of consultation and balance of power that kept Europe from a major general war for nearly a century. The next great European war didn't come until 1914. The men who designed the post-Napoleonic order understood that another generation of wars like the ones they'd just survived might destroy European civilization entirely. They weren't entirely wrong. It took a century before Europe found out.",
       "visual_prompt": "Gods & Glory cinematic documentary. The Congress of Vienna \u2014 the great powers of Europe gathered around a table, maps spread before them. The redrawing of Europe's borders. The careful balance of power. Then a visual jump to 1914 \u2014 the world that failed when that system finally broke. 16:9.",
       "bg_colors": [
@@ -237,7 +237,7 @@
       "scene_number": 18,
       "type": "legacy",
       "title": "Napoleon in Memory",
-      "duration_sec": 46,
+      "duration_sec": 53,
       "narration": "Napoleon Bonaparte is the most written-about figure in Western history, with the possible exception of Jesus Christ. Over two hundred thousand books have been written about him. He appears in literature \u2014 Tolstoy, Hugo, Stendhal, Dickens. He appears in law. He appears in the street plans of cities he rebuilt. He appears in military academies that still study his campaigns. He appears in the English language: words like 'napoleonic,' phrases like 'not tonight, Josephine,' the description of anything small and aggressive as a 'Napoleon complex.' The man who died on a rock in the South Atlantic never stopped being the center of the story.",
       "visual_prompt": "Gods & Glory cinematic documentary. Napoleon's image across centuries: in paintings, in literature, in film, in modern military education. The two hundred thousand books visualized. His face in every medium. His name in the dictionary. His code in modern law books. The paradox of a man who lost his empire but won immortality. 16:9.",
       "bg_colors": [
@@ -250,7 +250,7 @@
       "scene_number": 19,
       "type": "legacy",
       "title": "Waterloo the Battlefield Today",
-      "duration_sec": 45,
+      "duration_sec": 53,
       "narration": "The battlefield of Waterloo still exists. The Lion's Mound \u2014 a massive artificial hill raised on the spot where Wellington's forces held \u2014 dominates the landscape. You can stand on the ridge where the British Guards fired into the Imperial Guard. You can walk through the orchard at Hougoumont, still pocked with cannonball marks. The farmhouse at La Haye Sainte, defended for the entire battle by German riflemen, still stands. Waterloo is forty minutes from Brussels \u2014 one of the best-preserved major battlefields in the world. Stand on the ridge on a quiet morning, and you can almost hear it.",
       "visual_prompt": "Gods & Glory cinematic documentary. Waterloo battlefield today \u2014 the Lion's Mound rising against the sky. A visitor standing on the ridge where the battle was decided. Hougoumont farm with its bullet-marked walls. La Haye Sainte still standing. The quiet fields that were once the most violent nine hours in Belgium's history. 16:9.",
       "bg_colors": [
@@ -263,7 +263,7 @@
       "scene_number": 20,
       "type": "historical",
       "title": "Wellington's Later Life",
-      "duration_sec": 46,
+      "duration_sec": 53,
       "narration": "Wellington became Prime Minister of Britain. He served twice \u2014 briefly in 1828, then in 1834. He opposed parliamentary reform so vigorously that his London house had its windows smashed by mobs. He was called the Iron Duke \u2014 a nickname that started as an insult about his iron shutters and became a term of respect. He lived until 1852, outliving Napoleon by thirty-one years. When he died, the funeral procession through London drew two million people \u2014 the largest crowd gathered in Britain in the nineteenth century. He had outlasted his greatest enemy, survived his greatest battle, and built something more durable than either: a reputation.",
       "visual_prompt": "Gods & Glory cinematic documentary. Wellington in his later years \u2014 Prime Minister, aging, authoritative. His London house with iron shutters. His state funeral procession through London \u2014 two million people lining the streets. The Iron Duke, the last man standing from Waterloo, given the farewell of a century. 16:9.",
       "bg_colors": [
@@ -276,7 +276,7 @@
       "scene_number": 21,
       "type": "modern_connection",
       "title": "The Last Great Battle",
-      "duration_sec": 47,
+      "duration_sec": 53,
       "narration": "Waterloo was the last great battle fought by armies commanded by a single general who personally rode the field and made every major decision in real time. After 1815, armies grew too large for one man to see \u2014 the American Civil War, the Franco-Prussian War, World War One \u2014 these were wars of staff systems and supply chains and industrial logistics. The age of the commander-genius was ending. Napoleon was the last of the great captains of the old style \u2014 Caesar, Alexander, Hannibal, Marlborough \u2014 men who could hold an entire battle in their heads and respond to its changes in real time. After Waterloo, war became a different thing entirely.",
       "visual_prompt": "Gods & Glory cinematic documentary. Napoleon on his horse at Waterloo, the last great commander-genius surveying his battle. Then a visual bridge to the mass armies of later wars \u2014 the American Civil War trenches, WWI artillery barrages. The personal, responsive warfare of Napoleon replaced by the industrial, systematic warfare that followed. 16:9.",
       "bg_colors": [
@@ -289,7 +289,7 @@
       "scene_number": 22,
       "type": "analysis",
       "title": "The Greatest Military Mind in History?",
-      "duration_sec": 47,
+      "duration_sec": 53,
       "narration": "Was Napoleon the greatest military commander in history? Alexander the Great never lost a battle. Julius Caesar was never defeated in the field. But Napoleon's record \u2014 sixty major battles, over fifty victories, against the combined armies of every major power in Europe over twenty years \u2014 has no equal in the modern era. He took command of a Revolutionary France that was being invaded from every direction and turned it into the continent's dominant power in less than five years. His campaigns of 1805 alone \u2014 Ulm, Austerlitz \u2014 are still studied in every military academy on Earth. Waterloo doesn't erase Austerlitz. It just ends the story.",
       "visual_prompt": "Gods & Glory cinematic documentary. A visual record of Napoleon's military career: sixty battles visualized as glowing points on a map of Europe. Austerlitz, Jena, Wagram, Marengo \u2014 the victories of a generation. Then Waterloo, the final point, extinguishing the light. The career of the greatest commander of the modern age, complete. 16:9.",
       "bg_colors": [
@@ -302,7 +302,7 @@
       "scene_number": 23,
       "type": "summary",
       "title": "Nine Hours in June",
-      "duration_sec": 46,
+      "duration_sec": 53,
       "narration": "On June 18, 1815, over one hundred and eighty thousand men fought on a few square miles of Belgian farmland. Fifty thousand of them were dead or wounded by nightfall. An empire that had dominated Europe for twenty years ended. A hundred years of relative European peace began. One man's career \u2014 the most extraordinary military career of the modern age \u2014 concluded on a muddy ridge in circumstances that could have gone a dozen different ways. Napoleon said, in exile: I wished to found a European system, a European code of laws, a European judiciary. That is what consolidated my reputation. He got the reputation. He did not get the rest.",
       "visual_prompt": "Gods & Glory cinematic documentary. The battlefield of Waterloo at dusk \u2014 the dead lying on the ridge, the survivors moving through the twilight. Wellington surveying the field. Napoleon in his fleeing carriage. The immensity of what has just happened visible in the expressions of the survivors. History turning on a June evening. 16:9.",
       "bg_colors": [
@@ -315,7 +315,7 @@
       "scene_number": 24,
       "type": "outro_cta",
       "title": "The Emperor's Last Word",
-      "duration_sec": 44,
+      "duration_sec": 53,
       "narration": "Napoleon's last word, according to those at his bedside on Saint Helena, was 't\u00eate d'arm\u00e9e' \u2014 head of the army. He was commanding troops in his final delirium. He died as he had lived: in the middle of a battle that existed only in his mind. Subscribe to Gods and Glory \u2014 history told the way it actually felt, from the people who were inside it. Next episode: The Battle of Marathon \u2014 the day three hundred miles and one morning changed the entire future of Western civilization.",
       "visual_prompt": "Gods & Glory cinematic documentary. Napoleon on his deathbed at Longwood House, Saint Helena \u2014 the island visible through the window, the ocean beyond. His final moments. His last word \u2014 't\u00eate d'arm\u00e9e' \u2014 visualized as a ghostly battle forming in his mind. The channel logo. Subscribe prompt. The emperor who ended a battlefield. 16:9.",
       "bg_colors": [
@@ -323,6 +323,396 @@
         "#4A3728",
         "#8B8B6B"
       ]
+    },
+    {
+      "scene_number": 25,
+      "type": "history",
+      "title": "Napoleon's Hundred Days \u2014 The Return Nobody Expected",
+      "narration": "On March 1, 1815, Napoleon Bonaparte landed in southern France with 1,000 men after escaping exile on Elba. The Bourbon King Louis XVIII sent an army to stop him. When Napoleon's force met the royal troops, he walked forward alone, opened his coat, and said: 'If any of you wishes to shoot his Emperor, here I am.' Not a shot was fired. The army defected to Napoleon on the spot. He entered Paris on March 20th. Louis XVIII fled. In twenty days, without firing a shot, Napoleon had reclaimed France. The Hundred Days had begun. The Allies had ninety-one days to stop him.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Napoleon walking alone toward a line of royal French soldiers on an Alpine road, opening his greatcoat, daring them to fire, the soldiers breaking ranks to join him, the impossible return that terrified Europe. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#1A2A3D",
+        "#C9A227"
+      ],
+      "duration_sec": 53
+    },
+    {
+      "scene_number": 26,
+      "type": "biography",
+      "title": "Wellington \u2014 The Man Who Beat Napoleon",
+      "narration": "Arthur Wellesley, Duke of Wellington, had never lost a battle. He had campaigned in India, Portugal, and Spain, developing a style of warfare built on defensive terrain use, logistics mastery, and absolute refusal to overextend. He was not flamboyant. He did not inspire through rhetoric. He inspired through competence \u2014 his men knew he would not waste them. When Wellington said 'It has been a damned nice thing \u2014 the nearest run thing you ever saw in your life' about Waterloo, he was being precise. He won by the smallest possible margin, and he knew it. Napoleon called him the best general in Europe. Wellington returned the compliment.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Duke of Wellington on horseback surveying the battlefield of Waterloo, calm and methodical, the anti-Napoleon \u2014 no theatrical gestures, just absolute tactical competence, studying ground that would decide the fate of Europe. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#C9A227",
+        "#1A2A3D"
+      ],
+      "duration_sec": 53
+    },
+    {
+      "scene_number": 27,
+      "type": "detail",
+      "title": "The Night Before \u2014 What Napoleon Didn't Know",
+      "narration": "On the night of June 17-18, 1815, Napoleon delayed his attack on Wellington's position at Waterloo to allow the ground to dry after heavy rain. The delay cost him irreplaceable hours. What he didn't know was that the Prussian army under Bl\u00fccher \u2014 which Napoleon believed he had knocked out of the fight at Ligny two days earlier \u2014 was marching hard toward Waterloo. Bl\u00fccher was 72 years old, had been knocked off his horse and trampled at Ligny, and had promised Wellington he would come. He kept his promise. The decisive factor at Waterloo was not tactical genius. It was a 72-year-old Prussian who refused to quit.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Prussian Field Marshal Bl\u00fccher, battered from Ligny, riding hard through the night toward Waterloo, his army marching through rain and mud, the 72-year-old's desperate promise to Wellington being kept against all odds. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#1A2A3D",
+        "#3D3020"
+      ],
+      "duration_sec": 53
+    },
+    {
+      "scene_number": 28,
+      "type": "battle",
+      "title": "The Imperial Guard's Last Charge",
+      "narration": "At 7:30 PM on June 18, 1815, Napoleon committed his last reserve \u2014 the Imperial Guard, the most elite soldiers in Europe, who had never been repulsed. If they broke through Wellington's center, the battle was over. They marched forward in formation under artillery fire, drummers beating, officers leading. Wellington's infantry, hidden behind the ridge crest, stood up at fifty yards and delivered a volley that stopped the Guard cold. The Guard retreated for the first time in its history. When the rest of Napoleon's army saw the Guard fall back, they broke. The cry went through the French army: 'La Garde recule!' \u2014 The Guard is retreating. Everything collapsed.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Napoleon's Imperial Guard in bearskin hats marching in tight formation up the ridge toward Wellington's hidden infantry, the devastating close-range volley that stops them, the Guard retreating for the first time ever, the French army breaking. 16:9 cinematic.",
+      "bg_colors": [
+        "#8B1A1A",
+        "#0D1520",
+        "#C9A227"
+      ],
+      "duration_sec": 54
+    },
+    {
+      "scene_number": 29,
+      "type": "detail",
+      "title": "Ney's Cavalry Charges \u2014 The Greatest Mistake of the Day",
+      "narration": "Marshal Michel Ney, commanding Napoleon's attack, made one of the war's most catastrophic tactical errors. Seeing British units moving behind Wellington's ridge and believing they were retreating, Ney ordered 5,000 heavy cavalry to charge \u2014 without infantry support \u2014 against Wellington's squares. British infantry formed squares \u2014 a formation of four ranks with bayonets pointing outward that no cavalry could penetrate without supporting musketry. The charges were magnificent and useless. Thousands of French cavalry died without breaking a single square. Ney's error bled away the offensive power Napoleon needed for the Imperial Guard's final assault.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Wave after wave of French heavy cavalry charging against impenetrable British infantry squares at Waterloo, the horses and riders dying against the bayonet walls, Ney leading another charge in desperate defiance of tactical reality. 16:9 cinematic.",
+      "bg_colors": [
+        "#8B1A1A",
+        "#3D2A1A",
+        "#C9A227"
+      ],
+      "duration_sec": 53
+    },
+    {
+      "scene_number": 30,
+      "type": "detail",
+      "title": "The Prussians Arrive \u2014 The Decisive Moment",
+      "narration": "At approximately 4:30 PM, the Prussians began arriving on Napoleon's right flank in force. Napoleon had sent Marshal Grouchy with 33,000 men to follow the Prussians and prevent them from reaching Waterloo. Grouchy heard the battle's cannon fire, correctly deduced that the main engagement was at Waterloo, and did nothing \u2014 following his orders literally rather than with judgment. The Prussians who arrived were the difference between a close French victory and a decisive French defeat. As Bl\u00fccher's forces pressed Napoleon's right flank, Wellington counter-attacked the center. The French army disintegrated.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Prussian columns arriving on the flank of Napoleon's army at Waterloo in late afternoon, blue uniforms flooding across the rolling Belgian farmland, the decisive reinforcement that tipped the balance at the most critical moment. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#1A2A3D",
+        "#8B1A1A"
+      ],
+      "duration_sec": 53
+    },
+    {
+      "scene_number": 31,
+      "type": "analysis",
+      "title": "What If Napoleon Had Won? \u2014 The Counterfactual",
+      "narration": "If Napoleon had broken Wellington's line before the Prussians arrived, he would have faced three more Allied armies advancing on France. He might have defeated them one by one \u2014 he had done it before. Or the coalition might have held together and eventually ground him down. Wellington believed Napoleon could have won Waterloo if he had attacked two hours earlier, before the ground dried. Napoleon believed he would have won if Grouchy had moved. The battle was decided by a sequence of contingencies \u2014 weather, a general's literal-mindedness, a 72-year-old's stubbornness \u2014 that swung the hinge of European history.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Napoleon studying battle maps at his command post at Waterloo, the moment of decision on whether to wait for the ground to dry, the contingency that changed history visible in hindsight, the near-thing of the most consequential battle in European history. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#C9A227",
+        "#1A1510"
+      ],
+      "duration_sec": 53
+    },
+    {
+      "scene_number": 32,
+      "type": "legacy",
+      "title": "St. Helena \u2014 Napoleon's End",
+      "narration": "After Waterloo, Napoleon was exiled to Saint Helena \u2014 a remote island in the South Atlantic, 1,200 miles from the nearest coast. The British chose it specifically because escape was impossible. Napoleon spent his last six years there, dictating memoirs that shaped how Europe would remember him. He crafted his legend with the same strategic intelligence he had applied to battles: emphasizing the revolutionary ideals, minimizing the million dead, reframing every defeat as the result of betrayal. He died in 1821, probably of stomach cancer, possibly of arsenic poisoning. The debate over his death is as contested as the debate over his life.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Napoleon in exile on Saint Helena, walking the cliffs overlooking the South Atlantic, the emperor who had ruled Europe from Moscow to Lisbon confined to a volcanic island, dictating his memoirs to shape his own legacy for posterity. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#1A2A3D",
+        "#1A1510"
+      ],
+      "duration_sec": 53
+    },
+    {
+      "scene_number": 33,
+      "type": "legacy",
+      "title": "The Napoleonic Code \u2014 What Actually Survived",
+      "narration": "Napoleon's military empire lasted fifteen years. His legal system has lasted two centuries. The Napoleonic Code \u2014 written during his Consulate period \u2014 established equality before the law, property rights, religious freedom, and the abolition of feudal privileges. It became the legal foundation of France, Belgium, the Netherlands, Spain, Portugal, Italy, Quebec, Louisiana, and every country they colonized. Half the world's legal systems trace ancestry to Napoleon's lawyers more than to Napoleon's generals. The man who lost at Waterloo arguably did more to shape how humans live \u2014 through law \u2014 than he did through conquest.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Napoleon presiding over the Conseil d'\u00c9tat during the drafting of the Napoleonic Code, lawyers and jurists around a long table, the legal revolution that would outlast the military empire by centuries, the law written to replace feudalism. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#2C1A00"
+      ],
+      "duration_sec": 53
+    },
+    {
+      "scene_number": 34,
+      "type": "analysis",
+      "title": "Was Napoleon Great? \u2014 The Honest Assessment",
+      "narration": "Napoleon Bonaparte killed approximately one million French soldiers and perhaps five million Europeans total in his wars. He also abolished serfdom across most of Europe, gave legal equality to Jewish populations excluded for centuries, codified a legal system that still governs hundreds of millions, and demonstrated that a person of talent could rise regardless of birth. Whether those achievements justify the cost is not a historical question \u2014 it's a moral one. Historians don't agree. They probably never will. What they agree on is that no single person between Julius Caesar and the 20th century changed the world as fundamentally, as rapidly, or as violently as Napoleon Bonaparte.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Napoleon portrait \u2014 the face of the most transformative and destructive leader of the modern era, the contradictions of his legacy written in that famous expression, history's most contested figure in the moment of contemplation. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#C9A227",
+        "#8B1A1A"
+      ],
+      "duration_sec": 54
+    },
+    {
+      "scene_number": 35,
+      "type": "close",
+      "title": "Waterloo's Lesson \u2014 The Battle That Ended an Era",
+      "narration": "Waterloo ended the era of Napoleon but it also ended something broader: the belief that one man with military genius could reshape the political order of Europe by force of will and arms. After 1815, European great powers built a concert system \u2014 the Concert of Europe \u2014 based on collective security and managed balance of power. It kept Europe from a general war for nearly a hundred years. The lesson of Waterloo wasn't just that Napoleon could be defeated. It was that the system that defeated him \u2014 coalition, persistence, willingness to absorb enormous cost \u2014 was stronger than any individual genius. That lesson held until 1914.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The battlefield of Waterloo today \u2014 gentle rolling Belgian farmland, the Lion's Mound memorial rising above it, tourists walking the ground where 50,000 men died in a single day, the peaceful landscape haunted by history. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#C9A227",
+        "#1A2A3D"
+      ],
+      "duration_sec": 55
+    },
+    {
+      "type": "detail",
+      "title": "The Grand Army \u2014 What Napoleon Built",
+      "narration": "Napoleon's Grande Arm\u00e9e at its height was the most formidable land force in European history. Its corps system \u2014 independent combined-arms units capable of operating alone or together \u2014 was a revolutionary organizational innovation copied by every major army afterward. Napoleon's troops marched faster, lived off the land more efficiently, and fought with an aggression and initiative that rigid Prussian drill-based armies couldn't match. By 1815, the army that arrived at Waterloo was a shadow of the 1805 force: older men, conscripts, veterans who had survived campaigns that had destroyed their units. Napoleon's genius was real. His army had been consumed by it.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Napoleon reviewing his Grande Arm\u00e9e before a campaign at its 1805 peak \u2014 the finest land force in the world, corps arranged in their formations, the military machine that conquered Europe before being ground down by a decade of continuous warfare. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#1A2A3D"
+      ],
+      "duration_sec": 53,
+      "scene_number": 36
+    },
+    {
+      "type": "detail",
+      "title": "Hougoumont \u2014 The Battle Within the Battle",
+      "narration": "The chateau of Hougoumont on Wellington's right flank was the scene of continuous fighting throughout June 18, 1815. Napoleon intended it as a diversionary attack to draw Wellington's reserves south. Wellington used it as an anchor. French forces attacked Hougoumont repeatedly for eight hours without capturing it. The North Gate, briefly opened by French soldiers with an axe, was shut by a handful of defenders in one of the war's most celebrated moments. Napoleon committed increasing numbers of troops to a secondary position that consumed resources needed elsewhere. Wellington later said that the battle of Waterloo turned on the closing of the gates of Hougoumont.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The chateau of Hougoumont under desperate attack, French troops flooding toward the walls while British and German defenders hold, the burning farm buildings, the North Gate being fought over by both sides, the microcosm of the larger battle. 16:9 cinematic.",
+      "bg_colors": [
+        "#8B1A1A",
+        "#2C1A00",
+        "#3D3020"
+      ],
+      "duration_sec": 53,
+      "scene_number": 37
+    },
+    {
+      "type": "detail",
+      "title": "The Grande Batterie \u2014 Napoleon's Artillery Doctrine",
+      "narration": "Napoleon used massed artillery as a battle-opening tool unlike any commander before him. At Waterloo, 80 guns of the Grande Batterie opened a preliminary bombardment designed to shatter Wellington's center before the infantry assault. The effect was diminished because Wellington had moved his infantry behind the ridge crest \u2014 they were largely invisible to French artillerists. The cannon balls that found their mark were devastating: soldiers in Wellington's squares saw comrades disappear in front of them. But the bombardment didn't break what it couldn't see. The ridge crest \u2014 terrain Wellington had chosen specifically to counter this \u2014 saved his army.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Napoleon's Grande Batterie of 80 guns firing in coordinated mass bombardment at Waterloo, the artillery doctrine that had shattered armies across Europe, the massive cannon fire that couldn't reach Wellington's infantry hidden behind the ridge crest. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#8B1A1A",
+        "#C9A227"
+      ],
+      "duration_sec": 53,
+      "scene_number": 38
+    },
+    {
+      "type": "biography",
+      "title": "Grouchy \u2014 The Marshal Who Followed Orders",
+      "narration": "Marshal Emmanuel de Grouchy was given 33,000 men and ordered to follow the Prussians after their defeat at Ligny. When he heard Waterloo's cannon fire on June 18, his subordinates urged him to march toward the battle. Grouchy refused \u2014 he had orders to follow the Prussians, and follow the Prussians he would. He followed them \u2014 away from Waterloo, in exactly the wrong direction. His literal obedience to orders when the situation demanded judgment was one of the decisive failures of the campaign. History has been unkind to Grouchy, perhaps unfairly \u2014 he did what he was told. What he was told to do turned out to be wrong.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Marshal Grouchy hesitating on a hill, hearing the cannon fire of Waterloo in the distance while his subordinates urge him to march toward the battle, his fatal decision to follow his orders literally rather than exercising the judgment the moment required. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#1A2A3D",
+        "#3D3020"
+      ],
+      "duration_sec": 53,
+      "scene_number": 39
+    },
+    {
+      "type": "detail",
+      "title": "Wellington's Ridge \u2014 The Terrain Decision",
+      "narration": "Wellington chose the ridge of Mont-Saint-Jean as his defensive position because he had reconnoitered it the year before. He knew its reverse slope would hide his infantry from French artillery. He knew its narrow frontage would limit French ability to overlap his flanks. He knew the farms of Hougoumont and La Haye Sainte could serve as defensive anchors. Every decision Wellington made at Waterloo was informed by thorough preparation. He didn't find the position during the battle \u2014 he had identified it months earlier and maneuvered his army to occupy it. Good fortune in battle usually traces back to preparation that wasn't luck.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Wellington on the reverse slope of the Mont-Saint-Jean ridge, studying the terrain he had selected months before, his infantry positioned behind the crest and invisible to French artillery, the masterful terrain selection that would decide the battle. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#1A2A3D",
+        "#3D3020"
+      ],
+      "duration_sec": 53,
+      "scene_number": 40
+    },
+    {
+      "type": "detail",
+      "title": "La Haye Sainte \u2014 The Farm That Almost Lost the Battle",
+      "narration": "The farm of La Haye Sainte, held by the King's German Legion, stood on the Brussels road in the center of Wellington's line. French infantry captured it in the afternoon after the defenders ran out of ammunition \u2014 the commander had been unable to resupply because the rifle's unique cartridge was incompatible with standard British supply. For an hour, French forces had a direct position in Wellington's center from which their riflemen could pick off his officers. It was the closest Napoleon came to winning. Wellington plugged the gap barely in time. The battle was decided by incompatible ammunition \u2014 logistics decides wars.",
+      "visual_prompt": "Gods & Glory cinematic documentary. La Haye Sainte farmhouse under final assault, King's German Legion defenders fighting without ammunition, the farm that anchored Wellington's center falling to French attack, the most dangerous hour of the battle when Napoleon nearly broke through. 16:9 cinematic.",
+      "bg_colors": [
+        "#8B1A1A",
+        "#2C1A00",
+        "#3D3020"
+      ],
+      "duration_sec": 53,
+      "scene_number": 41
+    },
+    {
+      "type": "analysis",
+      "title": "Clausewitz at Waterloo \u2014 What the Battle Taught",
+      "narration": "Carl von Clausewitz, the Prussian military theorist who wrote 'On War,' was present at the Waterloo campaign as a staff officer. His masterwork \u2014 written after the wars but drawing on his experience \u2014 contains observations clearly informed by watching Napoleon and Wellington. His concept of 'friction' \u2014 the constant small failures, miscommunications, and unexpected events that prevent plans from executing as intended \u2014 is visible throughout Waterloo. Grouchy's failure, the delay in attack, Ney's misjudgment, the Prussians' unexpected arrival \u2014 Waterloo is an extended illustration of Clausewitzian friction. The plan is always the first casualty.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Carl von Clausewitz on the Waterloo campaign as a Prussian staff officer, the military theorist observing the battle that would inform his masterwork On War, the friction of war visible in every direction as events refused to follow the plan. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#1A2A3D",
+        "#2C2A1A"
+      ],
+      "duration_sec": 53,
+      "scene_number": 42
+    },
+    {
+      "type": "detail",
+      "title": "The Aftermath \u2014 50,000 Casualties",
+      "narration": "When the firing stopped on June 18, 1815, approximately 50,000 men were dead, dying, or wounded across the battlefield. The wounded lay where they fell overnight \u2014 some until the following day. Surgeons worked continuously, amputating limbs that couldn't be saved. Looters picked over the dead. Horses, wounded and abandoned, screamed through the night. Wellington reportedly said it was the most terrible thing he had ever seen except a battle lost. He spent the night writing casualty reports \u2014 every man in the army who had died had to be accounted for. He wept over several of the names.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The Waterloo battlefield the morning after, 50,000 casualties across the rolling Belgian farmland, surgeons working without stopping, the terrible cost of the battle visible in the scale of the dead and dying, Wellington writing casualty reports through the night. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D0D0D",
+        "#1A1A0A",
+        "#2C2A1A"
+      ],
+      "duration_sec": 53,
+      "scene_number": 43
+    },
+    {
+      "type": "analysis",
+      "title": "Was Waterloo Decisive? \u2014 The Historical Debate",
+      "narration": "Some historians argue that even if Napoleon had won at Waterloo, he would eventually have lost. Three more Allied armies were converging on France. The economic resources of the coalition \u2014 Britain's wealth, Russia's manpower, Austria's territorial depth \u2014 dwarfed what France could sustain. Napoleon in 1815 was fighting with a fraction of the army and the political support that had sustained him in 1805. A Waterloo victory would have bought months, perhaps a year. Others argue that Napoleon's political skill at negotiation was so superior to his opponents' that a victory at Waterloo might have fractured the coalition. The debate reveals more about how we think about historical necessity than about what would have happened.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Map of Europe in June 1815 showing the three other Allied armies converging on France even as Napoleon fought at Waterloo, the strategic impossibility of his position even if he won the battle, the question of whether Waterloo was decisive or merely final. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#C9A227",
+        "#1A2A3D"
+      ],
+      "duration_sec": 53,
+      "scene_number": 44
+    },
+    {
+      "type": "legacy",
+      "title": "The Waterloo Effect \u2014 Europe's Century of Peace",
+      "narration": "The Concert of Europe established after Waterloo \u2014 the Quadruple Alliance of Britain, Austria, Prussia, and Russia \u2014 maintained the principle of collective action against any power attempting hegemony. It produced Europe's longest period without a general war: from 1815 to 1914 \u2014 ninety-nine years. The system wasn't perfect: there were wars, revolutions, and colonial violence. But the great power conflict that had consumed Europe since the French Revolution was contained. Waterloo made the Congress of Vienna possible, and Vienna made the century of relative peace possible. The battle that ended Napoleon indirectly enabled the most prosperous century in European history.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The Congress of Vienna 1815 \u2014 European statesmen establishing the international order that would prevent a general war for nearly a century, Metternich and Castlereagh and Tsar Alexander I shaping the post-Napoleonic world, the peace that Waterloo made possible. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#1A2A3D"
+      ],
+      "duration_sec": 53,
+      "scene_number": 45
+    },
+    {
+      "type": "detail",
+      "title": "The Prussians at Waterloo \u2014 The Forgotten Victors",
+      "narration": "British accounts of Waterloo tend to minimize the Prussian contribution. Prussian accounts emphasize it. The truth is that Wellington held the line against Napoleon for the entire day \u2014 an extraordinary defensive achievement \u2014 and the Prussians arrived to deliver the finishing blow. Without Wellington holding, the Prussians arriving late wouldn't have mattered. Without the Prussians arriving, Wellington couldn't have counterattacked. The victory was joint. The Anglo-Prussian alliance that produced it was the model for the coalition that would defeat Germany in two more wars. Waterloo was won by the combination \u2014 neither army alone would have been sufficient.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Prussian infantry arriving in force on Napoleon's flank in the late afternoon at Waterloo, Bl\u00fccher's battered army delivering the blow that broke the French, the joint Anglo-Prussian victory that British histories have sometimes attributed primarily to Wellington. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#1A2A3D",
+        "#C9A227"
+      ],
+      "duration_sec": 53,
+      "scene_number": 46
+    },
+    {
+      "type": "detail",
+      "title": "The Long Shadow of the French Revolution",
+      "narration": "Napoleon didn't create the French Revolution. He exported it. The Napoleonic Wars spread the revolutionary principles of legal equality, abolition of feudalism, and meritocracy across Europe. Even countries that defeated Napoleon reformed in response to the ideas his armies carried. The German states that would become Prussia's core began modernizing their armies and legal systems specifically to compete with France. The revolutions of 1830 and 1848 drew on the revolutionary tradition Napoleon had spread. Waterloo stopped Napoleon. It could not stop the ideas his armies had transmitted. The French Revolution's second act played out across the 19th century without Napoleon.",
+      "visual_prompt": "Gods & Glory cinematic documentary. French soldiers carrying the tricolor and revolutionary ideals into Italian, German, and Spanish cities, the spread of liberty, equality, and fraternity that accompanied the bayonets, the political revolution that accompanied the military one. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#8B1A1A",
+        "#0D1520"
+      ],
+      "duration_sec": 53,
+      "scene_number": 47
+    },
+    {
+      "type": "detail",
+      "title": "The Duke of Wellington's Later Career",
+      "narration": "Wellington lived until 1852 \u2014 37 years after Waterloo. He served as British Prime Minister twice, oversaw Catholic emancipation (which he personally opposed but implemented as necessary), and opposed parliamentary reform so vigorously that his London house was stoned. He became a symbol of conservative resistance to change \u2014 somewhat ironic for a man who had defeated the most transformative force in European history. He was voted out of office in 1830, proving that winning wars doesn't necessarily translate to political skill. He remained respected \u2014 his funeral was a state occasion \u2014 but his political legacy is considerably more ambiguous than his military one.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The Duke of Wellington in later life as British Prime Minister, the Iron Duke governing Britain with the same rigid authority he had used to command armies, his political conservatism making him the opponent of the liberal reforms that post-Napoleonic Europe demanded. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#C9A227",
+        "#2C2A1A"
+      ],
+      "duration_sec": 53,
+      "scene_number": 48
+    },
+    {
+      "type": "detail",
+      "title": "Victor Hugo's Waterloo \u2014 Literature and the Battle",
+      "narration": "Victor Hugo dedicated a substantial portion of 'Les Mis\u00e9rables' (1862) to a detailed description of the Battle of Waterloo \u2014 19 chapters, often criticized as digressions from the novel's narrative. Hugo's account is historically inaccurate in details but captures something real about the battle's meaning: the collapse of an era, the end of a world. Hugo saw Waterloo as the moment when the revolutionary ideal Napoleon represented was crushed by the conservative order. 'Les Mis\u00e9rables' is partly a meditation on what happened to France after Waterloo \u2014 the question of whether revolutionary values could survive the battle that ended their most powerful champion.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Victor Hugo writing the Waterloo section of Les Mis\u00e9rables, the novelist using the battle as a meditation on the death of an era, the fictional and historical mingling in the most famous literary treatment of the battle. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#C9A227",
+        "#2C2A1A"
+      ],
+      "duration_sec": 53,
+      "scene_number": 49
+    },
+    {
+      "type": "detail",
+      "title": "Napoleon's Marshals \u2014 The Men Who Won His Wars",
+      "narration": "Napoleon's marshals were arguably the finest collection of military talent ever assembled under one command. Davout, Mass\u00e9na, Ney, Soult, Lannes, Bernadotte \u2014 each commanded forces that would have been dominant armies in any earlier era. By 1815, half were dead, retired, or fighting for the other side. Bernadotte had become Crown Prince of Sweden and fought against Napoleon. Ney had served the Bourbon restoration before rejoining Napoleon and was executed for treason after Waterloo. The marshals' fates \u2014 brilliant men cast from success to failure to death to glory and back \u2014 mirror the extraordinary instability of an era defined by one man's ambition.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Napoleon's marshals in formal portrait \u2014 the greatest collection of military talent ever assembled under one command, the men who built and sustained the empire, each of whose fates after Waterloo traced the collapse of the world Napoleon had created. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#8B1A1A"
+      ],
+      "duration_sec": 55,
+      "scene_number": 50
+    },
+    {
+      "type": "detail",
+      "title": "The Exiled Emperor \u2014 Napoleon in the Atlantic",
+      "narration": "Saint Helena was chosen for Napoleon's final exile precisely because it was inescapable. The island, 1,200 miles from the nearest land, was already a British East India Company possession with a natural harbor impossible to approach secretly. Napoleon arrived in October 1815 and spent six years there under British supervision that ranged from courteous to petty depending on the governor. He was allowed servants, a household, and exercise. He was not allowed to wander freely or receive visitors without approval. He spent the years dictating his version of events to followers who published them after his death \u2014 the foundation of the Napoleonic legend.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Napoleon on Saint Helena surrounded by his small household, dictating his memoirs to the faithful followers who would publish his version of events after his death, the strategic construction of his own legend in the prison that couldn't contain his influence. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#1A2A3D",
+        "#1A1510"
+      ],
+      "duration_sec": 55,
+      "scene_number": 51
+    },
+    {
+      "type": "detail",
+      "title": "The Battlefield Today \u2014 200,000 Visitors a Year",
+      "narration": "The battlefield of Waterloo outside Brussels receives approximately 200,000 visitors annually. The Lion's Mound \u2014 a conical earthwork erected by the Dutch in 1826 \u2014 sits at the center of Wellington's line and is the battlefield's most visible feature. It was built using earth from the battlefield itself, significantly altering the original terrain. The farmhouses of Hougoumont and La Haye Sainte still stand. The battlefield is smaller than visitors expect \u2014 the decisive fighting occurred over an area roughly two miles wide and one mile deep. Historians complain that the Lion's Mound destroyed the terrain features that made Wellington's position defensible. Tourism and history don't always coexist gracefully.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The Waterloo battlefield today \u2014 the Lion's Mound dominating the landscape, tourists climbing the 226 steps to the summit, the preserved farmhouses of Hougoumont and La Haye Sainte below, the Belgian farmland where 50,000 men died on a June Sunday. 16:9 cinematic.",
+      "bg_colors": [
+        "#3D3020",
+        "#5C7A3D",
+        "#C9A227"
+      ],
+      "duration_sec": 55,
+      "scene_number": 52
+    },
+    {
+      "type": "detail",
+      "title": "The Congress of Vienna \u2014 Redrawing Europe After Napoleon",
+      "narration": "The Congress of Vienna (1814-1815) was the most comprehensive reordering of European geography since the Roman Empire. Diplomats from every major and minor power met to reconstruct the map after Napoleon had redrawn it. The key architects \u2014 Metternich of Austria, Castlereagh of Britain, Talleyrand of France \u2014 built a system based on legitimacy and balance of power rather than national self-determination. The arrangement worked remarkably well: the boundaries set at Vienna largely held for a century. It also frustrated nationalist movements across Europe \u2014 the revolutions of 1848 were partly a reaction against the Vienna settlement's suppression of national aspirations.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The Congress of Vienna 1815 \u2014 the famous ballroom gathering of European statesmen where Metternich, Castlereagh, Tsar Alexander I, and Talleyrand negotiated the map of post-Napoleonic Europe, the most consequential diplomatic gathering between Westphalia and Versailles. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#1A2A3D"
+      ],
+      "duration_sec": 55,
+      "scene_number": 53
+    },
+    {
+      "type": "close",
+      "title": "Waterloo's Enduring Resonance",
+      "narration": "'Meet your Waterloo' has entered the language as a phrase for the defeat that ends a career. The battle that lasted nine hours became a cultural reference point that has lasted two centuries. Why? Because Waterloo was the collision of the old world and the new \u2014 tradition against revolution, coalition against genius, endurance against brilliance. Wellington was everything Napoleon was not: unflamboyant, methodical, unglamorous. He won anyway. The lesson \u2014 that genius without judgment loses, that preparation beats inspiration, that coalitions outlast individual greatness \u2014 has been applied to everything from corporate competition to military planning ever since. Waterloo teaches what it taught: even the greatest can be beaten by the good enough, if the good enough doesn't break.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The Waterloo battlefield at sunset, the Lion's Mound rising against the orange sky, the farmhouses of Hougoumont and La Haye Sainte still standing after two centuries, the ground where Napoleon's genius finally ran out against Wellington's iron patience. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#8B1A1A",
+        "#0D1520"
+      ],
+      "duration_sec": 55,
+      "scene_number": 54
     }
   ]
 }

@@ -1,0 +1,142 @@
+{
+  "channel": "IL",
+  "episode_id": "IL_EP001",
+  "title": "Iron Legends — Episode 1: The Last Signal",
+  "scenes": [
+    {
+      "scene_number": 1,
+      "type": "cold_open",
+      "title": "Something Is Coming",
+      "narration": "Somewhere in the Nevada desert, a signal has been dormant for thirty years. Tonight, it woke up. And the Iron Council is watching.",
+      "visual_prompt": "Dark Nevada desert night, mysterious glowing signal tower in the distance, electric blue pulse radiating outward, 80s retro cartoon anime style, dramatic wide shot, cel-shaded art",
+      "bg_colors": ["#0a0020", "#1a0040"],
+      "duration_sec": 18
+    },
+    {
+      "scene_number": 2,
+      "type": "hero_intro",
+      "title": "Meet Axon",
+      "narration": "His name is Axon. Once the greatest guardian the Iron Legion ever produced. Now rusting in a salvage yard outside Reno, Nevada. But rust doesn't stop what was built to last.",
+      "visual_prompt": "Heroic robot Axon standing tall in a junkyard at sunrise, chrome blue armor with battle scars, glowing amber eyes, 80s G1 Transformers anime cel-shaded style, cinematic low angle shot",
+      "bg_colors": ["#100a00", "#2a1800"],
+      "duration_sec": 22
+    },
+    {
+      "scene_number": 3,
+      "type": "narration",
+      "title": "The Iron Legion",
+      "narration": "Thousands of years ago, before humanity built its first city, a race of ancient mechanical beings called the Iron Legion arrived on Earth. Protectors. Builders. Warriors. They chose to stay hidden — watching, waiting — until the day they'd be needed most.",
+      "visual_prompt": "Ancient Iron Legion mechs standing among Egyptian pyramids under construction, colossal chrome giants dwarfing human workers, glowing runes on their armor, retro anime art style, sweeping aerial view",
+      "bg_colors": ["#0a0800", "#1a1200"],
+      "duration_sec": 28
+    },
+    {
+      "scene_number": 4,
+      "type": "narration",
+      "title": "The Iron Council",
+      "narration": "The Iron Council — nine ancient mech gods — governs from the Vault: an underground fortress buried beneath the Sahara. They decide everything. Who gets activated. Who stays dormant. And who is deemed too dangerous to ever wake up again.",
+      "visual_prompt": "Underground fortress hall, nine massive armored mech gods seated on thrones of steel and crystal, the Iron Council chamber glowing with ancient energy, dramatic overhead shot, 80s anime style",
+      "bg_colors": ["#050510", "#0f0f2a"],
+      "duration_sec": 26
+    },
+    {
+      "scene_number": 5,
+      "type": "villain_intro",
+      "title": "The Null",
+      "narration": "His name is Null. He was the Iron Legion's greatest general — before the Fracture. Before he decided that protecting humanity was a waste of a perfect machine. Null doesn't want to destroy the world. He wants to reprogram it.",
+      "visual_prompt": "Villain Null — massive black and crimson mech general, cracked visor with red glowing eye, torn Iron Legion insignia on his chest, standing on a mountain of wreckage at night, lightning storm behind him, intimidating cel-shaded anime art",
+      "bg_colors": ["#100000", "#300010"],
+      "duration_sec": 25
+    },
+    {
+      "scene_number": 6,
+      "type": "narration",
+      "title": "The Signal",
+      "narration": "The signal that woke up tonight is an emergency beacon — one that only broadcasts when a Fracture Node is opening. Fracture Nodes are what Null uses to pull rogue Iron Legion units back under his control. There's one opening in Las Vegas. Right now.",
+      "visual_prompt": "Holographic map display showing Las Vegas with a glowing red fracture crack splitting open downtown, energy tendrils spreading outward, control room environment with Iron Legion techs watching in alarm, retro anime style",
+      "bg_colors": ["#000a10", "#001a20"],
+      "duration_sec": 24
+    },
+    {
+      "scene_number": 7,
+      "type": "hero_reveal",
+      "title": "Axon Transforms",
+      "narration": "Axon hasn't transformed in eleven years. His joints are corroded. His reactor is running at forty percent. None of that matters now. Someone has to go. And there's nobody left but him.",
+      "visual_prompt": "Axon mid-transformation sequence, chrome panels unfolding and reshaping, sparks flying from rusty joints, amber eyes blazing back to full power, classic 80s cartoon transformation sequence style, dynamic action composition",
+      "bg_colors": ["#080808", "#181818"],
+      "duration_sec": 22
+    },
+    {
+      "scene_number": 8,
+      "type": "narration",
+      "title": "The Kid",
+      "narration": "Maya Chen is fourteen. She wasn't supposed to be in the desert tonight. She was supposed to be grounded. But Maya has a habit of following signals that don't make sense — and this one led her straight to a wrecked robot who just opened his eyes and called her by name.",
+      "visual_prompt": "Teenage girl Maya Chen standing face to face with the massive robot Axon, her flashlight beam illuminating his chest, shocked expression, desert night sky full of stars behind them, cel-shaded anime art, warm adventurous composition",
+      "bg_colors": ["#050510", "#101028"],
+      "duration_sec": 26
+    },
+    {
+      "scene_number": 9,
+      "type": "narration",
+      "title": "Why She Matters",
+      "narration": "Maya's father was Dr. David Chen — the human engineer who helped rebuild Axon twenty years ago. He disappeared three years ago. The last thing he told Maya before he vanished: if you ever meet a robot named Axon, trust him with everything.",
+      "visual_prompt": "Flashback — scientist Dr. David Chen working on the giant robot Axon in a secret lab, holographic blueprints surrounding him, father and daughter Maya as a small child watching from a doorway, warm nostalgic lighting, 80s anime art",
+      "bg_colors": ["#100800", "#201000"],
+      "duration_sec": 25
+    },
+    {
+      "scene_number": 10,
+      "type": "crisis",
+      "title": "Las Vegas Falls",
+      "narration": "The Fracture Node opens at exactly midnight. Three Iron Legion units in Vegas — dormant for decades, reprogrammed by Null — turn on the city all at once. Cars flip. Buildings crack. The city's power grid goes dark. And the Iron Council is still debating what to do.",
+      "visual_prompt": "Three rogue mechs rampaging through Las Vegas strip at night, neon signs exploding, casino facades crumbling, crowds fleeing in panic, the robots' eyes glowing red under Null's control, dramatic anime action scene",
+      "bg_colors": ["#100000", "#200000"],
+      "duration_sec": 28
+    },
+    {
+      "scene_number": 11,
+      "type": "darkest_moment",
+      "title": "Axon's Warning",
+      "narration": "Axon tells Maya the truth: he's too damaged to fight three Null-class drones alone. His weapons systems are offline. His armor is at thirty percent integrity. If he goes in there without a human partner to reroute his power core — he won't come back out.",
+      "visual_prompt": "Damaged Axon kneeling in the desert, one arm hanging loose, internal lights flickering, Maya standing before him with a determined expression, dramatic spotlight from the moon, emotional anime moment",
+      "bg_colors": ["#080818", "#101028"],
+      "duration_sec": 24
+    },
+    {
+      "scene_number": 12,
+      "type": "turning_point",
+      "title": "Maya Goes In",
+      "narration": "Maya Chen has never hacked a mech before. She's never even changed the oil in a car. But she's memorized every blueprint her father ever sent her. Every line. Every diagram. Every failsafe. She tells Axon: I know exactly where to plug in.",
+      "visual_prompt": "Maya climbing up Axon's back using handholds in his armor plating, determination on her face, city of Las Vegas glowing in the distance behind them, 80s Saturday morning cartoon energy, dynamic action composition",
+      "bg_colors": ["#000a18", "#001a30"],
+      "duration_sec": 24
+    },
+    {
+      "scene_number": 13,
+      "type": "narration",
+      "title": "Iron to the Bone",
+      "narration": "The connection completes. Maya's interface cable plugs into Axon's power core. For one second, she sees everything — thirty thousand years of Iron Legion history flowing through her like electricity. Then Axon stands up. Full power. Full weapons. And he says: Let's go remind Null what this Legion was built for.",
+      "visual_prompt": "Axon rising to full height, fully powered, armor glowing brilliant blue, Maya visible in a cockpit window on his chest, Las Vegas skyline ahead of them, epic heroic anime pose, widescreen cinematic frame",
+      "bg_colors": ["#000820", "#001040"],
+      "duration_sec": 28
+    },
+    {
+      "scene_number": 14,
+      "type": "cliffhanger",
+      "title": "The Council Watches",
+      "narration": "Deep in the Vault, the Iron Council watches Axon's energy signature light up their display screens. One council member breaks the silence: 'He bonded with a human child. That hasn't happened in ten thousand years.' Another responds: 'The last time it did... the world changed forever.' Null is already watching too. And he's smiling.",
+      "visual_prompt": "Iron Council chamber, nine ancient mech gods staring at a glowing holographic display showing Axon and Maya charging into Las Vegas together, ominous red glow in the corner where Null observes remotely, tension-filled dramatic anime composition",
+      "bg_colors": ["#050508", "#0a0a18"],
+      "duration_sec": 30
+    },
+    {
+      "scene_number": 15,
+      "type": "outro",
+      "title": "Iron Legends",
+      "narration": "Iron Legends. New episodes every week. Subscribe now — and find out what happens when the past refuses to stay buried, and a fourteen-year-old girl becomes the most important person on Earth.",
+      "visual_prompt": "Iron Legends logo reveal, Axon and Maya silhouetted against a massive electric blue sunrise, classic 80s cartoon logo style with lightning bolt styling, epic cinematic final frame, subscribe button overlay",
+      "bg_colors": ["#000010", "#000030"],
+      "duration_sec": 15
+    }
+  ]
+}

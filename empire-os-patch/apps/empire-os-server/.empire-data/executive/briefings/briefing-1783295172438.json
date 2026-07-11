@@ -1,0 +1,300 @@
+{
+  "id": "briefing-1783295172438",
+  "generatedAt": "2026-07-05T23:46:12.400Z",
+  "period": "Sunday, July 5, 2026",
+  "headline": "Good morning, Josh. Viral Engine has 7 tasks in queue. 1 require attention. EP006 needs fixing and Season 3 is ready to render.",
+  "health": "yellow",
+  "sections": [
+    {
+      "title": "Top Priorities",
+      "icon": "🎯",
+      "priority": "critical",
+      "content": [
+        {
+          "label": "Fix EP006 Pearl Harbor — Run render_ep006.bat",
+          "value": "🔴 NEEDS YOUR APPROVAL",
+          "details": "EP006 is broken. Josh must run render_ep006.bat from C:\\Users\\jjard\\claude\\video-bot-pipeline\\ to re-render it from scratch.",
+          "action": "Approve: POST /executive/tasks/task-1783190876567-4gl1rg/approve",
+          "urgency": "now"
+        }
+      ]
+    },
+    {
+      "title": "Blocked Projects",
+      "icon": "🚫",
+      "priority": "high",
+      "content": [
+        {
+          "label": "No blocked projects",
+          "value": "Pipeline is flowing cleanly",
+          "urgency": "fyi"
+        }
+      ]
+    },
+    {
+      "title": "Worker Performance",
+      "icon": "🤖",
+      "priority": "medium",
+      "content": [
+        {
+          "label": "CEO — Chief Executive Officer",
+          "value": "0 done | 0 running | 1 queued",
+          "urgency": "fyi"
+        },
+        {
+          "label": "Project Manager — Head of Production Operations",
+          "value": "0 done | 0 running | 2 queued",
+          "urgency": "fyi"
+        },
+        {
+          "label": "Research Lead — Director of Research & Intelligence",
+          "value": "0 done | 0 running | 0 queued",
+          "urgency": "fyi"
+        },
+        {
+          "label": "Creative Director — Chief Creative Officer",
+          "value": "0 done | 0 running | 0 queued",
+          "urgency": "fyi"
+        },
+        {
+          "label": "Engineering Lead — Head of Production Technology",
+          "value": "0 done | 0 running | 4 queued",
+          "urgency": "fyi"
+        },
+        {
+          "label": "Marketing Director — Head of Audience Growth & Marketing",
+          "value": "0 done | 0 running | 0 queued",
+          "urgency": "fyi"
+        },
+        {
+          "label": "Publishing Director — Head of Content Publishing & Distribution",
+          "value": "0 done | 0 running | 0 queued",
+          "urgency": "fyi"
+        },
+        {
+          "label": "Analytics Director — Head of Data & Performance Analytics",
+          "value": "0 done | 0 running | 0 queued",
+          "urgency": "fyi"
+        },
+        {
+          "label": "Financial Advisor — Chief Financial Advisor",
+          "value": "0 done | 0 running | 0 queued",
+          "urgency": "fyi"
+        },
+        {
+          "label": "QA Director — Director of Quality Assurance",
+          "value": "0 done | 0 running | 0 queued",
+          "urgency": "fyi"
+        }
+      ]
+    },
+    {
+      "title": "Revenue Opportunities",
+      "icon": "💰",
+      "priority": "medium",
+      "content": [
+        {
+          "label": "YouTube AdSense — Gods & Glory",
+          "value": "Potential: $5-15 RPM once channel grows",
+          "details": "Historical documentary niche has one of the highest CPMs on YouTube. Priority: publish S3 episodes.",
+          "urgency": "this-week"
+        },
+        {
+          "label": "YouTube AdSense — Machine Learning",
+          "value": "Potential: $10-25 RPM (tech/finance niche)",
+          "details": "AI content has the highest CPM on YouTube right now. EP001 launch is high priority.",
+          "urgency": "this-week"
+        },
+        {
+          "label": "Channel Memberships",
+          "value": "Enable once channels reach 500+ subscribers",
+          "details": "Set up channel membership tiers: $2.99, $4.99, $9.99/month. Perks: early access, behind-scenes content.",
+          "urgency": "fyi"
+        },
+        {
+          "label": "History Sponsor Categories",
+          "value": "VPN, audiobooks, online learning, e-commerce",
+          "details": "Gods & Glory audience is prime for Audible, NordVPN, MasterClass, Skillshare sponsorships.",
+          "urgency": "fyi"
+        }
+      ]
+    },
+    {
+      "title": "Trending Topics",
+      "icon": "📈",
+      "priority": "medium",
+      "content": [
+        {
+          "label": "AI & Automation in 2025-2026",
+          "value": "TRENDING: Machine Learning channel opportunity",
+          "details": "Every major AI announcement is driving search traffic. GPT-5, Gemini Ultra, Claude 4 — all high-search topics right now.",
+          "urgency": "this-week"
+        },
+        {
+          "label": "Ancient Greece content boom",
+          "value": "TRENDING: Little Olympus alignment",
+          "details": "Mythology content is surging on YouTube. Little Olympus is perfectly positioned. Launch EP001 now.",
+          "urgency": "this-week"
+        },
+        {
+          "label": "Historical battles anniversary content",
+          "value": "UPCOMING: Research Lead should check 2026 battle anniversaries",
+          "details": "Major battle anniversaries drive search traffic spikes. Research upcoming anniversaries to plan content.",
+          "urgency": "this-week"
+        }
+      ]
+    },
+    {
+      "title": "New Content Ideas",
+      "icon": "💡",
+      "priority": "low",
+      "content": [
+        {
+          "label": "Gods & Glory: \"The Battle That Saved Western Civilization\" (Tours 732 AD)",
+          "value": "Script exists: EP017 Battle of Tours",
+          "details": "Already scripted in S3. Render and publish. High-virality topic.",
+          "urgency": "this-week"
+        },
+        {
+          "label": "Machine Learning: \"The AI That Learned to Lie\" (Hallucination explained)",
+          "value": "New episode concept — high search volume",
+          "details": "AI hallucination is a trending topic. Can be explained accessibly for the ML channel.",
+          "urgency": "this-week"
+        },
+        {
+          "label": "Little Olympus: \"The Day Zeus Lost a Bet\" (Prometheus story)",
+          "value": "Strong children's mythology angle",
+          "details": "Prometheus stealing fire is a universal story with high search interest. Perfect for LO.",
+          "urgency": "this-week"
+        }
+      ]
+    },
+    {
+      "title": "Marketplace Opportunities",
+      "icon": "🏪",
+      "priority": "low",
+      "content": [
+        {
+          "label": "Merch: Gods & Glory clothing line",
+          "value": "Opportunity: Print-on-demand warrior/historical designs",
+          "details": "Redbubble or Printful integration. Zero upfront cost. 20-30% margin per sale.",
+          "urgency": "fyi"
+        },
+        {
+          "label": "Courses: \"How I Make AI Documentaries\" (Machine Learning)",
+          "value": "Monetize the production process itself",
+          "details": "The audience interested in AI will pay $49-199 for a course on AI video production. Sell on Gumroad.",
+          "urgency": "fyi"
+        },
+        {
+          "label": "eBook: \"100 Greatest Battles in History\" (Gods & Glory)",
+          "value": "Companion content to the channel",
+          "details": "AI-written, AI-illustrated ebook. Sell on Gumroad for $9.99. Low effort, recurring revenue.",
+          "urgency": "fyi"
+        }
+      ]
+    },
+    {
+      "title": "System Health",
+      "icon": "⚙️",
+      "priority": "high",
+      "content": [
+        {
+          "label": "Empire OS Server",
+          "value": "http://localhost:3001 — Check if running",
+          "details": "Run START_EMPIRE_OS.bat to start the server. Should auto-start with LAUNCH_EMPIRE.bat.",
+          "urgency": "today"
+        },
+        {
+          "label": "EP006 Pearl Harbor",
+          "value": "🔴 BROKEN — needs render_ep006.bat",
+          "details": "Run render_ep006.bat from C:\\Users\\jjard\\claude\\video-bot-pipeline\\ to fix.",
+          "action": "Run: render_ep006.bat",
+          "urgency": "now"
+        },
+        {
+          "label": "Season 3 Render Status",
+          "value": "EP012-EP025 scripts complete — render_season3.bat ready",
+          "details": "All 14 S3 scripts are written. Run render_season3.bat to produce all episodes.",
+          "action": "Run: render_season3.bat",
+          "urgency": "today"
+        },
+        {
+          "label": "Council Bot System",
+          "value": "Should be running — verify with council_run.bat",
+          "details": "9 bots monitoring pipeline. Run council_run.bat to start if not running.",
+          "urgency": "today"
+        },
+        {
+          "label": "Video Factory",
+          "value": "✅ Online — 19 departments, 20-stage pipeline",
+          "details": "http://localhost:3001/video-factory/ — ready for first project.",
+          "urgency": "fyi"
+        },
+        {
+          "label": "Autonomous Executive",
+          "value": "✅ Online — 10 workers, Master Queue seeded",
+          "details": "http://localhost:3001/executive/ — Daily briefings enabled.",
+          "urgency": "fyi"
+        }
+      ]
+    },
+    {
+      "title": "Completed Work (Last 7 Days)",
+      "icon": "✅",
+      "priority": "low",
+      "content": [
+        {
+          "label": "No completions in the last 7 days",
+          "value": "The queue was just initialized — tasks are pending.",
+          "urgency": "fyi"
+        }
+      ]
+    },
+    {
+      "title": "Suggested Next Actions",
+      "icon": "➡️",
+      "priority": "critical",
+      "content": [
+        {
+          "label": "① Run COMMIT_SERVER.ps1",
+          "value": "Deploy Video Factory + Autonomous Executive to empire-os",
+          "details": "Right-click COMMIT_SERVER.ps1 → Run with PowerShell. Copies all new modules to empire-os and pushes to GitHub.",
+          "action": "Run: COMMIT_SERVER.ps1",
+          "urgency": "now"
+        },
+        {
+          "label": "② Start Empire OS",
+          "value": "Run LAUNCH_EMPIRE.bat for full system",
+          "details": "Double-click LAUNCH_EMPIRE.bat to kill old processes and start Empire OS + CrossPost.",
+          "action": "Run: LAUNCH_EMPIRE.bat",
+          "urgency": "now"
+        },
+        {
+          "label": "③ Fix EP006 Pearl Harbor",
+          "value": "Run render_ep006.bat",
+          "details": "Broken episode. Run render_ep006.bat from video-bot-pipeline folder.",
+          "action": "Run: render_ep006.bat",
+          "urgency": "today"
+        },
+        {
+          "label": "④ Render Season 3",
+          "value": "Run render_season3.bat",
+          "details": "14 complete scripts waiting to become episodes. Run overnight.",
+          "action": "Run: render_season3.bat",
+          "urgency": "today"
+        },
+        {
+          "label": "⑤ Create first Video Factory project",
+          "value": "Test the pipeline with ML EP001 or LO EP001",
+          "details": "POST /video-factory/projects with channel: machine-learning, mode: educational-courses",
+          "urgency": "this-week"
+        }
+      ]
+    }
+  ],
+  "topAction": "① Run COMMIT_SERVER.ps1",
+  "totalTasks": 7,
+  "criticalCount": 1,
+  "recentCompletions": 0
+}

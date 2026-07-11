@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viral Engine • Three Channels. One Mission.</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Georgia:ital,wght@400;700&family=Inter:wght@400;500;600&display=swap');
+
+        :root {
+            --bg: #0a0a0a;
+            --gold: #C8942A;
+            --red: #8B1A1A;
+            --text: #e5e5e5;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 { font-family: Georgia, serif; }
+
+        .nav {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid #222;
+        }
+
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-family: Georgia, serif;
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--gold);
+            text-decoration: none;
+            letter-spacing: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover { color: var(--gold); }
+
+        .hero {
+            height: 100vh;
+            min-height: 700px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            background: linear-gradient(rgba(10,10,10,0.85), rgba(10,10,10,0.9)),
+                        url('https://picsum.photos/id/1015/2000/1200') center/cover;
+            text-align: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(45deg, rgba(200,148,42,0.08) 25%, transparent 25%) -50px 0 / 40px 40px,
+                        linear-gradient(-45deg, rgba(200,148,42,0.08) 25%, transparent 25%) -50px 0 / 40px 40px;
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .hero h1 {
+            font-size: 4.5rem;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            max-width: 700px;
+            margin: 0 auto 3rem;
+            color: #ccc;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--gold);
+            color: #111;
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: all 0.3s;
+            margin: 0.5rem;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(200,148,42,0.4);
+        }
+
+        .stats {
+            background: #111;
+            padding: 2rem 0;
+            border-top: 1px solid #222;
+            border-bottom: 1px solid #222;
+        }
+
+        .stats-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 2rem;
+            padding: 0 2rem;
+        }
+
+        .stat { text-align: center; }
+
+        .stat-number {
+            font-size: 2.25rem;
+            font-weight: 700;
+            color: var(--gold);
+        }
+
+        .stat-label {
+            font-size: 0.95rem;
+            color: #aaa;
+            margin-top: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .channels, .latest-releases {
+            max-width: 1200px;
+            margin: 6rem auto;
+            padding: 0 2rem;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .hr {
+            height: 2px;
+            background: linear-gradient(to right, transparent, var(--gold), transparent);
+            border: none;
+            margin: 3rem auto;
+            max-width: 200px;
+        }
+
+        .channel-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+            gap: 2rem;
+        }
+
+        .channel-card {
+            background: #111;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border-top: 5px solid transparent;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .channel-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.6);
+        }
+
+        .gods-card { border-top-color: var(--gold); }
+        .olympus-card { border-top-color: #4a90d9; }
+        .ml-card { border-top-color: #a67bff; }
+
+        .card-header {
+            height: 220px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .card-emoji {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            font-size: 4rem;
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.6));
+        }
+
+        .card-content { padding: 2rem; }
+
+        .channel-title {
+            font-size: 1.6rem;
+            margin-bottom: 0.75rem;
+            color: white;
+        }
+
+        .handle {
+            color: var(--gold);
+            font-size: 1.05rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .description {
+            color: #ccc;
+            margin-bottom: 1.5rem;
+            min-height: 100px;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tag {
+            background: #222;
+            color: #ddd;
+            padding: 0.35rem 0.9rem;
+            border-radius: 9999px;
+            font-size: 0.8rem;
+            letter-spacing: 0.5px;
+        }
+
+        .latest-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .video-card {
+            background: #111;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .video-card:hover { transform: translateY(-8px); }
+
+        .video-thumbnail {
+            position: relative;
+            padding-top: 56.25%;
+        }
+
+        .video-thumbnail img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .video-play {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 3rem;
+            color: rgba(255,255,255,0.9);
+            text-shadow: 0 2px 10px rgba(0,0,0,0.6);
+        }
+
+        .video-info {
+            padding: 1.25rem;
+        }
+
+        .video-title {
+            font-size: 1.1rem;
+            line-height: 1.4;
+            margin-bottom: 0.75rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .video-meta {
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        .newsletter {
+            background: #111;
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+
+        .newsletter-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .newsletter h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .form-group {
+            display: flex;
+            max-width: 420px;
+            margin: 2rem auto 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .email-input {
+            flex: 1;
+            padding: 1.1rem 1.5rem;
+            background: #1a1a1a;
+            border: 1px solid #333;
+            border-right: none;
+            color: white;
+            font-size: 1.05rem;
+            border-radius: 4px 0 0 4px;
+        }
+
+        .subscribe-btn {
+            background: var(--gold);
+            color: #111;
+            border: none;
+            padding: 0 2.5rem;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 0 4px 4px 0;
+            transition: all 0.3s;
+        }
+
+        .subscribe-btn:hover { background: #e0a23a; }
+
+        .success-message {
+            display: none;
+            margin-top: 1rem;
+            color: var(--gold);
+            font-weight: 500;
+        }
+
+        .socials {
+            padding: 4rem 2rem;
+            text-align: center;
+            background: var(--bg);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .social-links a {
+            color: #aaa;
+            font-size: 1.8rem;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover { color: var(--gold); }
+
+        footer {
+            background: #050505;
+            padding: 3rem 2rem 2rem;
+            text-align: center;
+            border-top: 1px solid #222;
+            font-size: 0.95rem;
+            color: #666;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 3.2rem; }
+            .hero p { font-size: 1.3rem; }
+            .nav-links { gap: 1.25rem; font-size: 0.95rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- NAV -->
+    <nav class="nav">
+        <div class="nav-content">
+            <a href="#" class="logo">VIRAL ENGINE</a>
+            <ul class="nav-links">
+                <li><a href="#channels">Channels</a></li>
+                <li><a href="#newsletter">Newsletter</a></li>
+                <li><a href="https://jardins-outpost.pages.dev" target="_blank">Outpost</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Three channels.<br>One mission.</h1>
+            <p>History's greatest battles. Mythology for the next generation.<br>The technology shaping everything.</p>
+            <div>
+                <a href="#channels" class="cta-button">EXPLORE THE EMPIRE</a>
+                <button onclick="downloadHandoff()" class="cta-button" style="background: transparent; border: 2px solid var(--gold); color: var(--gold);">📦 DOWNLOAD HANDOFF ZIP</button>
+            </div>
+        </div>
+    </section>
+    <!-- STATS -->
+    <section class="stats">
+        <div class="stats-container">
+            <div class="stat"><div class="stat-number">25</div><div class="stat-label">Episodes in Production</div></div>
+            <div class="stat"><div class="stat-number">3</div><div class="stat-label">Channels Launched Today</div></div>
+            <div class="stat"><div class="stat-number">40+</div><div class="stat-label">Scripts Written</div></div>
+            <div class="stat"><div class="stat-number">45</div><div class="stat-label">Minutes per Episode</div></div>
+        </div>
+    </section>
+    <!-- CHANNELS -->
+    <section id="channels" class="channels">
+        <div class="section-header">
+            <h2>Our Channels</h2>
+            <hr class="hr">
+        </div>
+        <div class="channel-grid">
+            <div class="channel-card gods-card">
+                <div class="card-header" style="background-image: url('https://picsum.photos/id/1016/800/400');"><div class="card-emoji">⚔️</div></div>
+                <div class="card-content">
+                    <div class="channel-title">Gods &amp; Glory</div>
+                    <div class="handle">@GodsAndGloryAI</div>
+                    <div class="description">History's greatest battles, sourced and fact-checked. Thermopylae to Vietnam.</div>
+                    <div class="tags"><span class="tag">History</span><span class="tag">Military</span><span class="tag">Documentary</span></div>
+                </div>
+            </div>
+            <div class="channel-card olympus-card">
+                <div class="card-header" style="background-image: url('https://picsum.photos/id/1018/800/400');"><div class="card-emoji">⚡</div></div>
+                <div class="card-content">
+                    <div class="channel-title">Little Olympus</div>
+                    <div class="handle">@LittleOlympusTV</div>
+                    <div class="description">Greek mythology retold for kids ages 3–10. Little Zeus, Baby Hercules, Epic Adventures.</div>
+                    <div class="tags"><span class="tag">Kids</span><span class="tag">Mythology</span><span class="tag">Ages 3-10</span></div>
+                </div>
+            </div>
+            <div class="channel-card ml-card">
+                <div class="card-header" style="background-image: url('https://picsum.photos/id/1074/800/400');"><div class="card-emoji">🤖</div></div>
+                <div class="card-content">
+                    <div class="channel-title">Machine Learning</div>
+                    <div class="handle">@MachineLearnAI</div>
+                    <div class="description">The AI revolution documented. What's actually happening inside the models reshaping every industry.</div>
+                    <div class="tags"><span class="tag">AI</span><span class="tag">Tech</span><span class="tag">Documentary</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- LATEST RELEASES -->
+    <section class="latest-releases">
+        <div class="section-header">
+            <h2>Latest Releases</h2>
+            <hr class="hr">
+            <p style="color: #aaa; max-width: 600px; margin: 1rem auto 0;">Fresh from the Empire — new episodes dropping now</p>
+        </div>
+        <div id="latest-grid" class="latest-grid"></div>
+    </section>
+    <!-- NEWSLETTER -->
+    <section id="newsletter" class="newsletter">
+        <div class="newsletter-content">
+            <h2>Join the Legion</h2>
+            <p style="color:#bbb; max-width: 500px; margin: 0 auto 1.5rem;">Weekly dispatches from the frontlines of history, myth, and the AI frontier.</p>
+            <form id="newsletter-form" class="form-group">
+                <input type="email" id="email" class="email-input" placeholder="your@email.com" required>
+                <button type="submit" class="subscribe-btn">SUBSCRIBE</button>
+            </form>
+            <div id="success" class="success-message">✅ You're in. Welcome to the Empire.</div>
+        </div>
+    </section>
+    <!-- SOCIALS -->
+    <section class="socials">
+        <h3 style="margin-bottom: 1rem; color: #888;">Follow the Empire</h3>
+        <div class="social-links">
+            <a href="https://youtube.com/@GodsAndGloryAI" target="_blank" title="Gods & Glory">▶️</a>
+            <a href="https://youtube.com/@LittleOlympusTV" target="_blank" title="Little Olympus">▶️</a>
+            <a href="https://tiktok.com/@godsandgloryhistory" target="_blank" title="TikTok">♬</a>
+            <a href="https://instagram.com/godsandgloryhistory" target="_blank" title="Instagram">📷</a>
+            <a href="https://jardins-outpost.pages.dev" target="_blank" title="Jardin's Outpost">🏛️</a>
+        </div>
+    </section>
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 Jardin's Outpost · Three channels. One mission.</p>
+        <button onclick="downloadHandoff()" style="margin-top: 1.5rem; background: transparent; border: 2px solid var(--gold); color: var(--gold); padding: 0.75rem 1.5rem; border-radius: 4px; cursor: pointer;">📦 Download Full Handoff ZIP</button>
+    </footer>
+    <script>
+        // CONFIG: Replace PLACEHOLDER_ with real channel_ids
+        const CHANNELS = [
+            { name: "Gods & Glory", handle: "@Godsandgloryai", emoji: "⚔️", color: "#C8942A", rssUrl: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7bNdZSXGmh6K8B5kt9TWOg", youtubeUrl: "https://youtube.com/@Godsandgloryai" },
+            { name: "Little Olympus", handle: "@LittleOlympusai", emoji: "⚡", color: "#4a90d9", rssUrl: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrZ71XCkuTcu3QrSrrD2vKQ", youtubeUrl: "https://youtube.com/@LittleOlympusai" },
+            { name: "Echoes of Eternity", handle: "@EchosofEternitiai", emoji: "🌊", color: "#7b9e87", rssUrl: "https://www.youtube.com/feeds/videos.xml?channel_id=UCg42Fq2C1X6JFWVCptHN3ZQ", youtubeUrl: "https://youtube.com/@EchosofEternitiai" }
+        ];
+        // Newsletter
+        document.getElementById('newsletter-form').addEventListener('submit', e => {
+            e.preventDefault();
+            const success = document.getElementById('success');
+            success.style.display = 'block';
+            document.getElementById('email').value = '';
+            setTimeout(() => success.style.display = 'none', 5000);
+        });
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(a => {
+            a.addEventListener('click', e => {
+                if (a.getAttribute('href') !== '#') {
+                    e.preventDefault();
+                    document.querySelector(a.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+        // Fetch latest videos
+        async function fetchLatestVideos() {
+            const grid = document.getElementById('latest-grid');
+            grid.innerHTML = '<p style="grid-column:1/-1;text-align:center;color:#666;padding:3rem;">Loading latest episodes...</p>';
+
+            for (const ch of CHANNELS) {
+                try {
+                    const res = await fetch(`https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(ch.rssUrl)}`);
+                    const data = await res.json();
+                    if (data.items?.length) {
+                        const v = data.items[0];
+                        const date = new Date(v.pubDate).toLocaleDateString('en-US', {year:'numeric', month:'short', day:'numeric'});
+                        grid.innerHTML += `
+                            <div class="video-card">
+                                <div class="video-thumbnail">
+                                    <img src="${v.thumbnail || 'https://picsum.photos/id/1074/600/340'}" alt="${v.title}">
+                                    <div class="video-play">▶</div>
+                                </div>
+                                <div class="video-info">
+                                    <div class="video-title" style="color:${ch.color}">${v.title}</div>
+                                    <div class="video-meta">${ch.name} • ${date}</div>
+                                    <a href="${v.link}" target="_blank" style="display:inline-block;margin-top:1rem;color:var(--gold);text-decoration:none;font-weight:500;">WATCH →</a>
+                                </div>
+                            </div>`;
+                    } else throw new Error();
+                } catch {
+                    grid.innerHTML += `
+                        <div class="video-card">
+                            <div class="video-thumbnail"><img src="https://picsum.photos/id/${ch.name.includes('Gods')?1016:ch.name.includes('Olympus')?1018:1074}/600/340" alt="${ch.name}"><div class="video-play">▶</div></div>
+                            <div class="video-info">
+                                <div class="video-title" style="color:${ch.color}">First Episode Dropping Soon</div>
+                                <div class="video-meta">${ch.name} • Launch Day</div>
+                                <a href="${ch.youtubeUrl}" target="_blank" style="display:inline-block;margin-top:1rem;color:var(--gold);text-decoration:none;font-weight:500;">VISIT CHANNEL →</a>
+                            </div>
+                        </div>`;
+                }
+            }
+        }
+        // Download Handoff ZIP
+        async function downloadHandoff() {
+            const zip = new JSZip();
+            zip.file("viral-engine-landing.html", document.documentElement.outerHTML);
+            const readme = `# Viral Engine Handoff Package\n\n## Quick Start\n1. Upload viral-engine-landing.html to Cloudflare Pages\n2. Replace PLACEHOLDER channel_ids in the <script> section\n3. Deploy & launch\n\nFull docs in comments. Empire OS integration ready.`;
+            zip.file("README-HANDOFF.md", readme);
+            const blob = await zip.generateAsync({type:"blob"});
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = "viral-engine-handoff.zip";
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+        // Init
+        window.onload = () => {
+            fetchLatestVideos();
+        };
+    </script>
+
+    <!-- SERVICES SECTION -->
+    <style>
+        .services { background: #0d0d0d; padding: 6rem 2rem; border-top: 1px solid #222; }
+        .services-header { text-align: center; margin-bottom: 4rem; }
+        .services-header h2 { font-size: 2.8rem; color: var(--gold); margin-bottom: 1rem; }
+        .services-header p { color: #aaa; font-size: 1.1rem; max-width: 600px; margin: 0 auto; }
+        .services-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; }
+        .service-card { background: #111; border: 1px solid #222; border-radius: 12px; padding: 2rem; transition: transform 0.3s, border-color 0.3s; }
+        .service-card:hover { transform: translateY(-6px); border-color: var(--gold); }
+        .service-tier { font-size: 0.7rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 0.75rem; }
+        .tier-auto { color: #4ade80; }
+        .tier-semi { color: #60a5fa; }
+        .tier-premium { color: var(--gold); }
+        .service-card h3 { font-size: 1.2rem; color: #fff; margin-bottom: 0.5rem; font-family: Georgia, serif; }
+        .service-card p { color: #888; font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.25rem; }
+        .service-price { font-size: 0.95rem; font-weight: 600; color: var(--gold); margin-bottom: 1.25rem; }
+        .service-cta { display: inline-block; padding: 0.5rem 1.25rem; background: transparent; border: 1px solid var(--gold); color: var(--gold); border-radius: 6px; font-size: 0.85rem; text-decoration: none; cursor: pointer; transition: background 0.2s, color 0.2s; }
+        .service-cta:hover { background: var(--gold); color: #000; }
+        .services-bottom { text-align: center; margin-top: 3rem; }
+        .services-bottom p { color: #666; font-size: 0.95rem; }
+        .services-bottom a { color: var(--gold); text-decoration: none; }
+    </style>
+
+    <section class="services">
+        <div class="services-header">
+            <h2>AI Services for Your Business</h2>
+            <p>Fully automated content, video, and tech solutions — built and delivered by Empire OS.</p>
+        </div>
+        <div class="services-grid">
+
+            <div class="service-card">
+                <div class="service-tier tier-auto">⚡ Fully Automatic</div>
+                <h3>AI Video Production</h3>
+                <p>Done-for-you documentary and explainer videos. Script to finished MP4, delivered weekly.</p>
+                <div class="service-price">$500–$2,500 / episode</div>
+                <a class="service-cta" href="mailto:jardinsempire@gmail.com?subject=AI Video Production">Get Started →</a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-tier tier-auto">⚡ Fully Automatic</div>
+                <h3>Social Media Automation</h3>
+                <p>Your brand posting daily across Instagram, TikTok, Facebook and X — without you lifting a finger.</p>
+                <div class="service-price">$500–$1,500 / month</div>
+                <a class="service-cta" href="mailto:jardinsempire@gmail.com?subject=Social Media Automation">Get Started →</a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-tier tier-auto">⚡ Fully Automatic</div>
+                <h3>SEO Content Machine</h3>
+                <p>Weekly blog posts and landing page copy that ranks on Google and drives inbound leads.</p>
+                <div class="service-price">$300–$800 / month</div>
+                <a class="service-cta" href="mailto:jardinsempire@gmail.com?subject=SEO Content">Get Started →</a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-tier tier-auto">⚡ Fully Automatic</div>
+                <h3>Email Marketing Sequences</h3>
+                <p>Welcome flows, nurture campaigns, and promos that convert — written once, running forever.</p>
+                <div class="service-price">$750–$2,500 / sequence</div>
+                <a class="service-cta" href="mailto:jardinsempire@gmail.com?subject=Email Sequences">Get Started →</a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-tier tier-semi">🔧 Semi-Automatic</div>
+                <h3>Website Design</h3>
+                <p>Professional, mobile-ready business websites built fast and deployed to the web in days, not weeks.</p>
+                <div class="service-price">$1,500–$5,000 + $200/mo</div>
+                <a class="service-cta" href="mailto:jardinsempire@gmail.com?subject=Website Design">Get Started →</a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-tier tier-semi">🔧 Semi-Automatic</div>
+                <h3>AI Chatbots</h3>
+                <p>A 24/7 AI sales rep or customer service agent embedded on your website — trained on your business.</p>
+                <div class="service-price">$1,000–$3,000 + $150/mo</div>
+                <a class="service-cta" href="mailto:jardinsempire@gmail.com?subject=AI Chatbot">Get Started →</a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-tier tier-semi">🔧 Semi-Automatic</div>
+                <h3>YouTube Channel Management</h3>
+                <p>Full channel operation — scripted, produced, and delivered upload-ready every single week.</p>
+                <div class="service-price">$2,000–$6,000 / month</div>
+                <a class="service-cta" href="mailto:jardinsempire@gmail.com?subject=YouTube Management">Get Started →</a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-tier tier-semi">🔧 Semi-Automatic</div>
+                <h3>Ad Copy Packages</h3>
+                <p>10–20 ready-to-run ad variations for Facebook, Google, and TikTok — hooks, headlines, CTAs.</p>
+                <div class="service-price">$500–$1,500 / campaign</div>
+                <a class="service-cta" href="mailto:jardinsempire@gmail.com?subject=Ad Copy">Get Started →</a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-tier tier-premium">👑 Premium Build</div>
+                <h3>Custom AI Automation Pipeline</h3>
+                <p>Your own Empire OS. A custom AI system built around your business that runs your operation on autopilot.</p>
+                <div class="service-price">$5,000–$25,000</div>
+                <a class="service-cta" href="mailto:jardinsempire@gmail.com?subject=Custom AI Pipeline">Get Started →</a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-tier tier-premium">👑 Premium Build</div>
+                <h3>Inventory & Reseller Apps</h3>
+                <p>Custom cross-listing and inventory management tools built for your reselling operation.</p>
+                <div class="service-price">$3,000–$10,000</div>
+                <a class="service-cta" href="mailto:jardinsempire@gmail.com?subject=Reseller App">Get Started →</a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-tier tier-premium">👑 Premium Build</div>
+                <h3>AI Brand Identity Package</h3>
+                <p>Brand voice, messaging pillars, taglines, and a 30-day content strategy built around your business.</p>
+                <div class="service-price">$1,500–$4,000</div>
+                <a class="service-cta" href="mailto:jardinsempire@gmail.com?subject=Brand Identity">Get Started →</a>
+            </div>
+
+        </div>
+        <div class="services-bottom">
+            <p>Every service runs on Empire OS — AI systems built to deliver results at scale.<br>
+            <a href="mailto:jardinsempire@gmail.com">jardinsempire@gmail.com</a></p>
+        </div>
+    </section>
+
+</body>
+</html>

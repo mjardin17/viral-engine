@@ -14,7 +14,6 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 from council.bot_base import CouncilBot, BotResult, BASE_DIR
 
-OUTPUT_DIR = BASE_DIR / "output"
 FALLBACK_BYTES = 20_000
 POLL_URL = "https://image.pollinations.ai/prompt/{prompt}?width=1920&height=1080&nologo=true&seed={seed}"
 
@@ -67,7 +66,11 @@ class ImageHealerBot(CouncilBot):
         api_key = os.environ.get("GEMINI_API_KEY", "")
         episodes_needing_rebuild = []
 
-        ep_dirs = sorted(d for d in OUTPUT_DIR.iterdir()
+        if not self.output_dir.exists():
+            r.ok(f"No output dir yet for {self.channel_name} — nothing to heal")
+            return r
+
+        ep_dirs = sorted(d for d in self.output_dir.iterdir()
                         if d.is_dir() and not d.name.startswith("_"))
 
         for ep_dir in ep_dirs:

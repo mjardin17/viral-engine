@@ -6,7 +6,7 @@
   "topic": "300 Spartans vs. The World",
   "title": "300 Spartans vs. The World",
   "tagline": "One pass. Three days. The most famous last stand in history.",
-  "duration_target_min": 17,
+  "duration_target_min": 50,
   "aesthetic": {
     "color_grade": "cinematic_spartan_epic",
     "primary_colors": [
@@ -47,7 +47,46 @@
       "duration_sec": 52
     },
     {
-      "scene_number": 3,
+      "type": "context",
+      "title": "The Ionian Revolt — The Origin of Everything",
+      "narration": "Thermopylae did not come out of nowhere. It had a beginning, and that beginning was twenty years earlier, five hundred miles east, when the Greek cities of Ionia — on the coast of what is now Turkey — rose up against Persian rule. The Ionians asked mainland Greece for help. Most city-states said no. Athens sent twenty warships. The revolt failed. The Persians burned Miletus, sold its population into slavery, and turned to Athens. You sent ships. We remember. Darius, father of Xerxes, reportedly had a servant whose sole job was to repeat three times at every dinner: 'Master, remember the Athenians.' That is why Persia came for Greece. Not ambition. Not expansion. Revenge.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Map of the eastern Mediterranean: Greek cities of Ionia marked on the Turkish coastline, Persian empire inland. Animation shows Ionian revolt flaring up, then being crushed. Cut to: Persian court scene, Darius I on the throne, visibly angry, receiving news of the revolt's failure and Athens's involvement. A servant whispering in his ear. The empire deciding it has a score to settle. Epic documentary lighting. 16:9.",
+      "bg_colors": [
+        "#1A1A2E",
+        "#8B0000",
+        "#D4AF37"
+      ],
+      "duration_sec": 50,
+      "scene_number": 3
+    },
+    {
+      "type": "context",
+      "title": "Marathon 490 BC — The First Time Greece Said No",
+      "narration": "Darius didn't wait long. In 490 BC, he sent six hundred ships and twenty-five thousand soldiers to crush Athens. The Athenians, with a single Plataean ally and no Spartans — the Spartans were busy with a religious festival — faced them at a town called Marathon. What happened there became one of the most analyzed military upsets in history. The Athenians charged. Across a mile of open ground, at a full run, in heavy bronze armor, they hit the Persian line before the Persian archers could get enough arrows in the air to stop them. The Persians broke. Sixty-four hundred of them died. One hundred and ninety-two Athenians died. The messenger who ran the twenty-six miles back to Athens to announce the victory — that is where the marathon race comes from. Greece had said no. Persia had not forgotten.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. The Battle of Marathon: Greek hoplites charging at a full run across a flat plain toward the Persian line, bronze armor catching the morning sun. Map overlay showing the battlefield at Marathon — the marsh, the plain, the Persian ships. Then: the aftermath, Athenians standing over the Persian dead. Cut to: a lone runner (Pheidippides) sprinting across the Attic landscape toward Athens, exhausted, bearing news. 16:9.",
+      "bg_colors": [
+        "#8B0000",
+        "#D4AF37",
+        "#1A1A2E"
+      ],
+      "duration_sec": 52,
+      "scene_number": 4
+    },
+    {
+      "type": "context",
+      "title": "The Decade Between — How Greece Knew It Was Coming",
+      "narration": "Between Marathon in 490 BC and Thermopylae in 480 BC, Greece had ten years to prepare. Most didn't bother. Athens did — specifically one Athenian: Themistocles, who had the rare combination of strategic vision and political cunning needed to actually do something with it. When Athens found a massive silver deposit at Laurion in 483 BC, every other politician said: divide it among the citizens. Themistocles said: build warships. He won the argument by exactly enough votes to change history. Athens built two hundred triremes. Sparta had the army. Athens had the fleet. Together, that combination was the only thing capable of stopping what was coming — a Persian invasion Xerxes had spent four years assembling, the largest military force the ancient world had ever seen.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Themistocles in the Athenian assembly, arguing passionately, maps behind him. Cut to: the silver mines of Laurion, slaves working deep shafts. Then: the shipyards of Athens building triremes — the long sleek warships taking shape one by one, two hundred of them over three years. Timeline animation: 490 BC Marathon to 480 BC Thermopylae. The Greeks knew what was coming. 16:9.",
+      "bg_colors": [
+        "#4A3728",
+        "#D4AF37",
+        "#1A1A2E"
+      ],
+      "duration_sec": 50,
+      "scene_number": 5
+    },
+    {
+      "scene_number": 6,
       "type": "character_intro",
       "title": "Who Were the Spartans",
       "narration": "Sparta was not like any other city in Greece. Or anywhere else in the ancient world. The Spartan system, called the agoge, took boys from their families at age seven and put them through thirteen years of military training so brutal that modern special forces training looks approachable by comparison. Boys slept on reeds they cut themselves, were deliberately underfed to sharpen their hunting instincts, were routinely beaten — not as punishment, but as training — and were taught that death in battle was the highest honor available to them. By the time a Spartan male became a full citizen warrior at thirty, he had been optimized for one purpose: combat. A Spartan soldier was not just a soldier. He was a weapon that had spent thirty years being sharpened.",
@@ -60,7 +99,46 @@
       "duration_sec": 52
     },
     {
-      "scene_number": 4,
+      "type": "deep_dive",
+      "title": "The Agoge — What Spartan Training Actually Looked Like",
+      "narration": "The word agoge means 'the upbringing.' It is an inadequate name for what it actually was. At age seven, Spartan boys were taken from their families and placed into communal barracks. They slept on reeds they cut themselves from the river — reeds, not blankets, because discomfort built toughness. They were deliberately given too little food and encouraged to steal more — not because Sparta endorsed theft, but because getting caught was the real punishment: beaten for being incompetent, not for stealing. At twelve, they were stripped of all clothing except a single cloak, regardless of season. At eighteen, they began five years of active patrol duty, sometimes hunting helots — Sparta's enslaved population — at night, alone, as a final test. The men who completed all of this were not soldiers. They were the product of the most deliberately brutal educational system in recorded history.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. The agoge: young Spartan boys — age 7 — being taken from weeping mothers into military barracks. Training sequences: cutting river reeds, sleeping on thin mats in cold conditions, physical drilling, wrestling, weapons training. Older youths on the krypteia — lone patrol at night. A graphic timeline: age 7 to 30, each phase of Spartan male life. The contrast: a Spartan child's spartan world vs. Athenian children at school with scrolls. 16:9.",
+      "bg_colors": [
+        "#8B0000",
+        "#4A4A4A",
+        "#D4AF37"
+      ],
+      "duration_sec": 52,
+      "scene_number": 7
+    },
+    {
+      "type": "deep_dive",
+      "title": "The Helots — The Dark Secret Behind Spartan Power",
+      "narration": "Sparta's military excellence had a foundation that Spartans themselves rarely discussed with outsiders: the helots. The helots were an enslaved population, descendants of the people Sparta had conquered centuries earlier. There were seven of them for every one Spartan citizen. They did all the farming, all the labor, all the work that allowed Sparta's male citizens to spend their entire lives training for war. The Spartans managed this terrifying ratio through systematic terror. Every year, Sparta formally declared war on its own helots, which legally permitted any Spartan to kill any helot who seemed dangerously capable. The krypteia — the young soldiers sent out on solo patrols — killed helots who showed too much initiative. Sparta wasn't just a warrior culture. It was a warrior culture sustained by the constant threat of uprising from below. The 300 at Thermopylae each left behind approximately seven helots who could revolt the moment the army left.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Helots in the fields: enslaved Messenians working Spartan-owned land, overseen by armed Spartans. Map showing Messenia vs Laconia — the territory Sparta conquered. Graphic showing ratio: 7 helots per Spartan citizen. Cut to: Spartan elders annually declaring the formal 'war' on helots — a legal fiction that allowed killing. The krypteia in action at night. Then: the tension at Thermopylae — Spartan warriors far from home, their enslaved population watching. 16:9.",
+      "bg_colors": [
+        "#4A4A4A",
+        "#8B0000",
+        "#1A1A2E"
+      ],
+      "duration_sec": 52,
+      "scene_number": 8
+    },
+    {
+      "type": "deep_dive",
+      "title": "Spartan Women — The Other Half of the Spartan Machine",
+      "narration": "While the men were at the agoge, the girls of Sparta were doing something no other Greek women were allowed to do: exercising publicly. Running, wrestling, throwing the discus. Spartan women were trained physically because Sparta believed that strong mothers produced strong sons. They were educated. They managed estates and finances — entirely, because their husbands spent most of their adult lives in military barracks. They had a reputation for saying exactly what they thought, which the rest of Greece found alarming. When a Spartan mother sent her son to war and handed him his shield, the expected parting words were: 'Come back with it or on it.' Not sentiment. Not fear. A cultural mandate. The Spartans at Thermopylae were not just soldiers. They were the product of a society that had decided, top to bottom, that the only acceptable outcome was glory or death.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Spartan women: training outdoors in the agora — running, wrestling — while Athenian women watch, confined indoors. A Spartan mother handing her son his shield at departure. The famous line carved in stone: 'H TAN H EPI TAS' — with it or on it. Women managing the estate, making decisions, commanding helots. The contrast with Athenian women restricted to the domestic sphere. 16:9.",
+      "bg_colors": [
+        "#D4AF37",
+        "#8B0000",
+        "#1A1A2E"
+      ],
+      "duration_sec": 50,
+      "scene_number": 9
+    },
+    {
+      "scene_number": 10,
       "type": "character_intro",
       "title": "Leonidas — King of Sparta",
       "narration": "The commander of the Greek force was Leonidas, King of Sparta. He was approximately sixty years old in 480 BC — old, by ancient standards, for a man who had spent his life as a warrior. He had not been expected to become king; two older brothers had died ahead of him. He was not the most famous Spartan of his generation when he took the throne around 489 BC. He had nine years of kingship before the Persians came. What we know about his actual personality is frustratingly limited — our sources are mostly written decades or centuries later. What we know is this: when he marched to Thermopylae, he brought three hundred men. Every one of them was a full Spartan citizen. Every one of them had living sons. He left behind every man who didn't.",
@@ -73,7 +151,46 @@
       "duration_sec": 52
     },
     {
-      "scene_number": 5,
+      "type": "character_intro",
+      "title": "Xerxes — The Man Behind the Army",
+      "narration": "Xerxes is usually portrayed as a monster, a tyrant, a god-king demanding worship. The reality, as usual, is more interesting. Xerxes was by all ancient accounts highly educated, genuinely religious, and politically astute enough to hold together the largest empire in world history. He was also, by his own account in his inscriptions, fully aware of the weight of legacy on him: his father Darius had failed at Marathon, and Xerxes needed to finish it. Ancient sources describe him weeping at the sight of his own army crossing the Hellespont — not from fear, but from the sudden comprehension that every one of those hundreds of thousands of men would be dead within a hundred years. Then he composed himself and crossed with them. That is not the portrait of a monster. That is the portrait of a man who understood exactly what he was doing.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Xerxes: depicted from Persian sources and archaeology — tall, bearded, crown and royal robes, commanding presence. His throne at Persepolis: the actual archaeological palace complex. Xerxes watching his army cross the Hellespont, the famous moment of weeping — philosophical awareness of mortality. His royal inscriptions translated on screen (the Daiva inscription). Persian art of Xerxes contrasted with Greek artistic depictions. The king of the largest empire on earth, personally leading his army because this was personal. 16:9.",
+      "bg_colors": [
+        "#D4AF37",
+        "#1A1A2E",
+        "#8B0000"
+      ],
+      "duration_sec": 52,
+      "scene_number": 11
+    },
+    {
+      "type": "character_intro",
+      "title": "Mardonius — The General Who Actually Ran the War",
+      "narration": "Behind Xerxes was the man who actually controlled Persian military strategy: Mardonius, Xerxes's cousin and the most experienced general in the Persian army. Mardonius had led the previous campaign into Europe. He was the one who argued most forcefully to Xerxes that the invasion should proceed. He was the one who understood Greece's weaknesses — its fractured city-states, its inability to agree on anything, its tendency to fight each other. Mardonius's intelligence was accurate. He was not wrong about Greece's divisions. What he could not account for was Thermopylae — not as a military position, but as a symbol. After the invasion failed and Xerxes retreated to Persia, Mardonius stayed behind with an army to finish the job. He died at Plataea. His prediction about Greece was right. His timeline was wrong.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Mardonius: Persian general in battle armor, war council with Xerxes and other commanders. Maps of the Persian campaign strategy spread before them. Mardonius pointing to the Greek city-states — showing their divisions, their rivalries. Then: the decision made, the army mobilized. Flash-forward to Plataea, where Mardonius dies. The architect of the invasion who outlasted Xerxes on Greek soil. 16:9.",
+      "bg_colors": [
+        "#4A3728",
+        "#D4AF37",
+        "#8B0000"
+      ],
+      "duration_sec": 50,
+      "scene_number": 12
+    },
+    {
+      "type": "character_intro",
+      "title": "Themistocles — The Athenian Who Changed Everything",
+      "narration": "If Leonidas is the hero of Thermopylae, Themistocles is the architect of Greek survival. He was the Athenian politician who built the fleet, who correctly identified that Greece could not match Persia on land but could defeat it at sea in a narrow channel. He was the one who evacuated Athens entirely before the Persians arrived — a political decision of staggering boldness, leaving the city to burn rather than defend it and lose the fleet. He was the one who manipulated both the Greeks and the Persians into fighting at Salamis, a narrow strait where Persian numbers didn't matter and Athenian seamanship did. Without Themistocles, Thermopylae was just a delay. With him, it was part of a plan. He was eventually exiled from Athens — the city's way of dealing with men who become too important. He died in Persian service, which is one of history's stranger endings.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Themistocles: shrewd, calculating, the political operator of Athens. The Athenian assembly debating the silver mines — Themistocles arguing for warships while others argue for coin distribution. The shipyards building triremes. Then: Athens evacuated, citizens loading onto boats, the Acropolis visible behind them, about to be burned. Themistocles sending his secret message to Xerxes manipulating the battle of Salamis. The man who saved Greece through cunning, not courage. 16:9.",
+      "bg_colors": [
+        "#1A1A2E",
+        "#4A3728",
+        "#D4AF37"
+      ],
+      "duration_sec": 52,
+      "scene_number": 13
+    },
+    {
+      "scene_number": 14,
       "type": "historical",
       "title": "Why Only 300 Spartans",
       "narration": "Here is the part the movie didn't explain. Sparta could have sent more soldiers. Sparta had thousands of trained warriors. The reason Leonidas brought only three hundred comes down to two things: timing and politics. The Olympic Games were happening. The Carneia — a Spartan religious festival — was also being observed. Both events, by ancient Greek tradition, required military forces to stand down. Sparta sent three hundred as an advance guard — technically enough to honor the commitment to defend Greece without violating religious law. The plan, on paper, was that Leonidas would hold the pass with his advance force while the full Spartan army mobilized. What the plan didn't account for was what would happen if the pass couldn't be held. Leonidas may have understood this from the beginning. The three hundred he chose had all fathered sons. He wasn't planning to bring them home.",
@@ -86,7 +203,20 @@
       "duration_sec": 52
     },
     {
-      "scene_number": 6,
+      "type": "deep_dive",
+      "title": "The Thespians — 700 Men Who Chose to Die",
+      "narration": "History remembers the 300 Spartans. It rarely mentions the 700 Thespians who died with them. Thespiae was a small city in Boeotia, directly in the Persian line of march. Its people knew that if Persia overran Greece, their city would be destroyed — Xerxes had already demanded their surrender and they had refused. The Thespians who stayed at Thermopylae on the final day did not stay because they had to. They stayed because they understood that retreating served no purpose: their city would burn either way. When Leonidas sent the rest of the Greeks away on the final morning, the Thespians refused to leave. Seven hundred of them. They fought and died alongside the 300 Spartans, unnamed in most historical accounts, remembered on no monument that matched the Spartans' fame. Herodotus mentions them. Almost everyone else forgot them. Their city was burned anyway.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Thespiae on a map: small city in Boeotia, directly in the Persian path. The Thespian contingent at Thermopylae: 700 hoplites, their equipment similar to the Spartans but their motivation different — not duty to a warrior culture, but the clear-eyed recognition that retreat meant the same fate. The final morning: Leonidas dismissing allies, the Thespians refusing to go, standing in formation beside the Spartans. Their city's fate: burned by the Persians afterward. A monument showing only 300 Spartans, the Thespians absent. 16:9.",
+      "bg_colors": [
+        "#4A4A4A",
+        "#8B0000",
+        "#D4AF37"
+      ],
+      "duration_sec": 50,
+      "scene_number": 15
+    },
+    {
+      "scene_number": 16,
       "type": "historical",
       "title": "The Allied Greeks — The Other 6,700",
       "narration": "The three hundred Spartans were not alone at Thermopylae. This is important and consistently underplayed. With them were approximately four thousand Peloponnesians from various city-states, three hundred Thespians who would fight to the last man alongside the Spartans, four hundred Thebans whose loyalty was questionable from the start, and others. Around seven thousand total. The Spartans are remembered because of what happened on the final day. But for the first two days, it was the full allied force holding the pass. The Thespians, in particular, deserve more than a footnote in the history books. They had no famous movie. Their city would be razed by the Persians in retaliation. Every one of their three hundred fighters died at the pass. Nobody made a film about them.",
@@ -99,7 +229,46 @@
       "duration_sec": 52
     },
     {
-      "scene_number": 7,
+      "type": "deep_dive",
+      "title": "The Geography — How a Narrow Pass Made 300 Men Possible",
+      "narration": "To understand why seven thousand Greeks could stop an army of hundreds of thousands, you have to understand the physics of the Hot Gates. In 480 BC, the pass of Thermopylae was roughly fifteen meters wide at its narrowest point — barely wide enough for a cart. On one side: the cliff face of the mountain Callidromus. On the other: the sea. The Greeks had also built a wall across the pass at a slightly wider section, further funneling any attack. In this space, numbers meant almost nothing. An army of a million men still had to attack fifteen meters at a time. The Greek phalanx — a formation of overlapping shields and extended spears — worked perfectly in exactly this kind of constrained space. The Persians' numerical advantage, their cavalry, their archers, their flanking tactics: none of it applied in a space the width of a large living room. Leonidas wasn't brave. He was a military engineer who found the one place in Greece where his 300 could fight on equal terms.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Detailed geography of Thermopylae: overhead satellite view of the pass location (modern coastline vs. 480 BC coastline — significantly different due to silting). Animated cross-section showing the original 15-meter width, cliff face, sea. The Phocian wall across the pass. Then: the physics shown — Persian troops funneled to 15m, Greek phalanx filling that exact width, shield wall impenetrable in close quarters. The contrast: open plain (Persian advantage), narrow pass (Greek advantage). Mathematical visualization of why numbers didn't matter. 16:9.",
+      "bg_colors": [
+        "#1A1A2E",
+        "#4A4A4A",
+        "#D4AF37"
+      ],
+      "duration_sec": 52,
+      "scene_number": 17
+    },
+    {
+      "type": "deep_dive",
+      "title": "The Phocians on the Mountain — The Second Defense Line",
+      "narration": "The mountain path that Ephialtes betrayed was not undefended. Leonidas had positioned a thousand Phocian soldiers on the ridge above the pass specifically to guard the Anopaea trail. When the Persians found Ephialtes and he led them up the path at night, it was the Phocians who first discovered the advance. They heard the Persian column moving through the oak trees, scrambled into a defensive position — and then watched as the massive Persian force simply walked around them toward the pass below. The Phocians did not break and run in cowardice. They took up position on high ground, expecting a fight. The Persians had what they needed — the pass, not the mountain — and kept moving. The Phocians, finding themselves outflanked and irrelevant, sent a runner to Leonidas. That runner's warning gave the Greeks one final night to prepare, to send the allies away, to choose their end.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. The mountain above Thermopylae: the Anopaea path winding through oak forest on the ridge. The Phocian soldiers posted there, setting up camp, confident they are guarding the approach. At night: Persian torches snaking up the mountain trail, Ephialtes leading. The Phocians jolting awake to the sound of Persian troops moving through fallen leaves. Their defensive formation, shields raised — and then the Persians flowing around them. A Phocian runner sprinting down the mountain to Leonidas in the darkness. 16:9.",
+      "bg_colors": [
+        "#4A4A4A",
+        "#1A1A2E",
+        "#8B0000"
+      ],
+      "duration_sec": 50,
+      "scene_number": 18
+    },
+    {
+      "type": "context",
+      "title": "Artemisium — The Naval Battle No One Talks About",
+      "narration": "While the battle at the Hot Gates was happening on land, an equally ferocious engagement was occurring ten miles away at sea. The Greek fleet under Themistocles was fighting a running naval engagement against the Persian fleet at Artemisium, a headland on the northern tip of Euboea. Three days of fighting. The Greeks took heavy casualties. The Persians took heavier ones — partly from battle, partly from two consecutive storms that destroyed enormous portions of their fleet. The Greeks could not hold Artemisium indefinitely, but they didn't need to. They needed to hold it as long as Thermopylae held. When news came that the pass had fallen, the fleet withdrew south to Salamis. The land and sea battles were not separate events. They were one coordinated defensive strategy, designed by Themistocles, executed simultaneously. Thermopylae bought time. Artemisium bought more.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. The naval battle at Artemisium: Greek triremes in the kyklos formation (circular defensive ring), Persian fleet attacking from multiple angles. Stormy seas — two actual storms battering the Persian fleet over these three days. Map showing the coordinated strategy: Thermopylae on land, Artemisium at sea, both holding the same line. The Persian fleet's losses to storm as significant as battle losses. Greek triremes withdrawing south in formation after receiving news of the pass. The two battles as one strategic event. 16:9.",
+      "bg_colors": [
+        "#1A1A2E",
+        "#4A3728",
+        "#D4AF37"
+      ],
+      "duration_sec": 52,
+      "scene_number": 19
+    },
+    {
+      "scene_number": 20,
       "type": "historical",
       "title": "Day One — The Persians Arrive",
       "narration": "Xerxes arrived at Thermopylae and waited four days before attacking. Ancient sources say he couldn't believe what he was seeing — that the Greeks intended to hold the pass with this force against his army. He reportedly sent scouts who returned with information that the Spartans outside the wall were exercising and combing their hair. Xerxes called in a Spartan exile named Demaratus and asked: why are they combing their hair? Demaratus said: this is what Spartans do before a battle they don't expect to survive. Xerxes found this difficult to believe. He sent an envoy to the Greeks with an offer: surrender your weapons. The Greeks' reply — attributed to Leonidas, though possibly apocryphal — was two words. Molon labe. Come and take them. Xerxes attacked.",
@@ -112,7 +281,7 @@
       "duration_sec": 52
     },
     {
-      "scene_number": 8,
+      "scene_number": 21,
       "type": "battle",
       "title": "Day One — The Phalanx at Work",
       "narration": "Xerxes sent his Median infantry first — good soldiers, experienced, well-equipped. They hit the Greek phalanx and discovered the problem immediately. The pass at Thermopylae was so narrow that Persian numerical superiority was completely irrelevant. You could only fit so many men across the pass at once. The Greeks could rotate their front line — fresh soldiers replacing tired ones while the Persians couldn't rotate effectively in the confined space. The Greek phalanx — overlapping shields, eight-foot spears extending beyond the shield wall — was nearly impenetrable from the front. The Medes attacked in waves. They died in waves. Xerxes watched from his throne as his soldiers were driven back repeatedly. Ancient sources say he leapt to his feet three times in horror at the losses.",
@@ -125,7 +294,20 @@
       "duration_sec": 52
     },
     {
-      "scene_number": 9,
+      "type": "deep_dive",
+      "title": "The Physics of the Phalanx — Why It Was Unstoppable in a Narrow Pass",
+      "narration": "The Greek phalanx was not a complicated technology. It was eight men deep, each man holding an eight-foot spear and a large round shield, the edge of his shield overlapping his neighbor's. The man in front absorbed the impact of enemy weapons on his shield. The man behind him pushed. The third man pushed the second. The seventh pushed the sixth. The enemy, attacking from outside, faced not one man's strength but the compressed mechanical force of eight men in a column. In open terrain, the phalanx had weaknesses — flanks, gaps, exhaustion, terrain. In the pass of Thermopylae, it had no weaknesses. There were no flanks. The wall was on one side, the sea on the other. The rotation system Leonidas used — fresh units cycling in every hour while tired ones rested — meant the Greek line never weakened while the Persians had to keep attacking across piles of their own dead. It was an engineering solution, not a courage solution.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Technical breakdown of the phalanx: overhead diagram showing the 8-deep formation, shield overlap, spear reach. Animation of the push dynamics — eight men's combined force. The rotation system: one unit fighting, another resting behind the wall, third recovering. Then: the physics in the pass — the Persian attack hitting a wall of bronze, no flanking room, nowhere to go. Individual combat shown: Greek spearman's technique vs. Persian lighter infantry. The mechanical advantage that made the pass impenetrable for two days. 16:9.",
+      "bg_colors": [
+        "#8B0000",
+        "#4A4A4A",
+        "#D4AF37"
+      ],
+      "duration_sec": 52,
+      "scene_number": 22
+    },
+    {
+      "scene_number": 23,
       "type": "battle",
       "title": "Day One — The Immortals Fail",
       "narration": "On the afternoon of the first day, Xerxes sent his best soldiers: the Immortals. Ten thousand elite Persian infantry who were called Immortals because whenever one died, another took his place, keeping the number always at exactly ten thousand. They were the Persian king's personal guard, the finest soldiers in the empire, equipped with the best weapons and armor available. The Immortals attacked the pass. The Immortals were repelled. They died in significant numbers. The Greeks had an additional tactical advantage: their spears were longer than Persian spears by roughly two feet. By the time a Persian soldier got close enough to use his weapon, he had already been stabbed. The Immortals went back. Day one ended with Persian dead stacked in the pass and Xerxes facing a situation he had not planned for.",
@@ -138,7 +320,20 @@
       "duration_sec": 52
     },
     {
-      "scene_number": 10,
+      "type": "deep_dive",
+      "title": "The Immortals — Who They Actually Were",
+      "narration": "The Immortals were real. The name was not mystical — it came from their system of replacement: when one died, another took his place immediately, so the number always remained exactly ten thousand. They were Persia's elite royal guard, drawn from the best Persian, Median, and Elamite soldiers in the empire. Their equipment was actually superior to most of the Persian infantry — wicker shields, short spears with apple-shaped counterweights, composite bows. They were the unit Xerxes sent in after his front-line troops failed twice. In the confined space of the Hot Gates, their quality did not matter. You can only put so many men in fifteen meters. When the Immortals attacked the pass, they faced the same problem every Persian unit had faced: a wall of shields and spears with nowhere to go around it. They took heavy casualties. They withdrew. For Xerxes, this was the moment he understood the problem was not the quality of his troops. The problem was the geography.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. The Immortals: Persian elite warriors — their actual archaeological depictions from the Persepolis reliefs, tiled palace walls showing them in procession. Their equipment detailed: wicker shields, spears with bronze apple counterweights, composite bows, richly decorated quivers. The Immortals advancing through the pass in formation — confident, elite — hitting the Greek wall. The same result as the conscript infantry: broken against the shield wall. Xerxes watching from his golden throne above the pass, silent, recognizing the problem is not his men. 16:9.",
+      "bg_colors": [
+        "#D4AF37",
+        "#1A1A2E",
+        "#8B0000"
+      ],
+      "duration_sec": 52,
+      "scene_number": 24
+    },
+    {
+      "scene_number": 25,
       "type": "battle",
       "title": "Day Two — Same Result",
       "narration": "Day two was essentially a repeat of day one. Xerxes sent different units. They attacked. They died. The Greek rotation kept fresh fighters at the front. Persian soldiers, fighting in a pass so cramped that some reportedly fell into the sea, could not bring numbers to bear. Leonidas reportedly used a tactical feint on the second day — having the Greek line appear to flee, drawing Persian soldiers forward, then turning and cutting them down from both sides. This is the detail that tells you these were not desperate men making a last stand. They were professional soldiers executing a tactical plan. By the end of the second day, the Greeks were still holding the pass. Xerxes had lost thousands of men. He had gained nothing. He was reported to be in a state of genuine rage. Then, on the second night, a local Greek shepherd named Ephialtes came to his camp.",
@@ -151,7 +346,7 @@
       "duration_sec": 52
     },
     {
-      "scene_number": 11,
+      "scene_number": 26,
       "type": "turning_point",
       "title": "The Traitor — Ephialtes",
       "narration": "Ephialtes of Malis told Xerxes about a mountain path — the Anopaia Path — that went up and over the mountains and came out behind the Greek position. The Greeks knew about this path. Leonidas had posted a force of a thousand Phocian soldiers to guard it. Xerxes sent the Immortals up the path that night. The Phocians heard them coming and took up position on higher ground, expecting the Persians to attack them. The Persians ignored them and went around. By dawn, the Immortals were behind the Greek position. A runner reached Leonidas with the news. He called a council of the Greek allied commanders. What happened next in that council — who made which arguments, what was said — we don't know. What we know is the decision: the allied forces would retreat. The three hundred Spartans would not.",
@@ -164,7 +359,20 @@
       "duration_sec": 52
     },
     {
-      "scene_number": 12,
+      "type": "deep_dive",
+      "title": "The Oracle of Delphi — What the Prophecy Actually Said",
+      "narration": "Before Leonidas marched to Thermopylae, he consulted the Oracle at Delphi. Oracles were not magic in the ancient Greek worldview — they were interpreted statements from Apollo, ambiguous enough to be confirmed by almost any outcome. The Oracle told Sparta one of two things would happen: either the city of Sparta would be destroyed, or a Spartan king would die. Leonidas, by the time he had assembled his three hundred, had almost certainly decided this was a death mission. Herodotus specifically notes that he selected men who had living sons — so the Spartan bloodline would continue after the 300 were gone. This changes how we read the battle. Leonidas was not a man surprised by his fate. He was a man who had calculated the oracle's meaning, planned accordingly, and chosen to die in a way that would serve his city even in its death. The 300 were not accidentally martyred. They were deliberately offered.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. The Oracle at Delphi: the sanctuary at Delphi, the Pythia (oracle priestess) in her chamber, the laurel smoke, Leonidas's delegation receiving the prophecy. The ambiguous words rendered in Greek text. Then: Leonidas in deliberation — the calculation behind the selection of the 300, specifically men with living sons. A visual of the selection process: men chosen not for being best, but for having heirs. The oracle fulfilled: not Sparta destroyed, but a Spartan king dead. The prophecy as a frame for the entire mission. 16:9.",
+      "bg_colors": [
+        "#D4AF37",
+        "#4A4A4A",
+        "#1A1A2E"
+      ],
+      "duration_sec": 52,
+      "scene_number": 27
+    },
+    {
+      "scene_number": 28,
       "type": "dramatic",
       "title": "Why the Spartans Stayed",
       "narration": "Why did the Spartans stay? This is the question that has made Thermopylae famous for two and a half thousand years. The practical answer: someone had to cover the retreat of the allied army. If the entire Greek force tried to run at once, the Persian cavalry would run them down from behind. A rear guard was needed. The Spartan law forbade retreat from battle — to leave the field with your shield, meaning you'd dropped it and run, was the deepest dishonor possible. There is also a Delphic oracle prophecy, delivered before the campaign: either Sparta would be sacked, or a Spartan king would die. Leonidas appears to have believed this and chosen the second option. He sent his squire away with a message for Sparta. He ordered the allies to retreat. He and the three hundred stayed.",
@@ -177,7 +385,20 @@
       "duration_sec": 52
     },
     {
-      "scene_number": 13,
+      "type": "deep_dive",
+      "title": "The Last Night — What the 300 Did Before the Final Day",
+      "narration": "After the runner came down from the mountain — after Leonidas learned the pass was flanked and the Persians would be behind them by morning — there was a night. The accounts of what happened in those hours are fragmentary but consistent. Leonidas dismissed most of the Greek allies, telling them they had fulfilled their obligation and should leave. The Spartans could not leave — their law and their culture made retreat unthinkable. The Thespians refused to leave. The Thebans stayed, but under compulsion, as suspected Persian sympathizers. And in those remaining hours, according to Herodotus, the Spartans did what Spartans did: they ate, they maintained their equipment, and some of them combed their hair. A Persian spy reported this behavior back to Xerxes, who asked a Spartan deserter for an explanation. The deserter explained: it is what Spartan warriors do before a battle they do not expect to survive. Xerxes, for the first time, was afraid.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. The last night at Thermopylae: campfires at the Phocian wall, sparse and quiet. The dismissal of the Greek allies — men picking up their shields and walking south in the dark. The 300 Spartans remaining, calm, eating by firelight. Close on their hands: combing long hair, methodically oiling and sharpening weapons. The Persian spy watching from a distance, unseen, confused by what he sees. Xerxes in his throne, receiving the spy's report, hearing the explanation: they do this before a battle they don't expect to survive. The fear crossing his face. 16:9.",
+      "bg_colors": [
+        "#1A1A2E",
+        "#4A4A4A",
+        "#D4AF37"
+      ],
+      "duration_sec": 52,
+      "scene_number": 29
+    },
+    {
+      "scene_number": 30,
       "type": "battle",
       "title": "Day Three — The Final Stand",
       "narration": "The morning of the third day. The Greek rear guard knew the Immortals were coming from behind and the main Persian army was coming from the front. They moved forward — away from the wall, out into the wider part of the pass — to kill as many Persians as possible before the end. The ancient historian Herodotus describes what followed in terms that feel almost reverential. The Greeks fought with spears until the spears broke. Then with swords. Then, when the swords broke or were lost, with hands and teeth. Leonidas was killed during the fighting. The Greeks fought over his body to keep it from the Persians — who reportedly tried to capture it four times. The stand continued until they were overrun from both sides. Of the three hundred Spartans, two survived — both had been sent away before the final day due to illness. Both were dishonored back in Sparta for surviving.",
@@ -190,7 +411,20 @@
       "duration_sec": 60
     },
     {
-      "scene_number": 14,
+      "type": "battle",
+      "title": "The Final Charge — How the Last Battle Actually Ended",
+      "narration": "The final battle of Thermopylae was not a defensive stand. Leonidas chose to do the opposite. Rather than hold the wall and let the Persians close in from both sides, he led the Spartans forward — out of the pass, into the wider area beyond the wall. An attack. The reasoning was clear: if they were going to die anyway, they would die taking as many Persians with them as possible. Ancient accounts describe the fighting as the most ferocious of the three days — the Spartans fighting in the open, their formation broken down to smaller groups as their spears shattered and they drew their swords. Leonidas was killed in this phase of the battle. The Persians reportedly four times tried to reach his body and four times were driven back. The remaining Spartans dragged his body back and formed a final circle on a small hill at the pass entrance, fighting with swords, then fists, and then hands and teeth. The Persians eventually killed them with arrows, from a distance, because getting close was still too costly.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. The final charge: Leonidas leading the Spartans forward out of the wall, not retreating into it — an offensive charge into the wider space. Brutal close-quarters combat, spears shattering, swords drawn. Leonidas falling in the press of battle. Fierce fighting over his body — Persians charging four times, being repulsed four times. The final circle on the low hill: the last Spartans, exhausted, back to back. The Persian archers advancing into range. The arrow volley ending it from a distance. 16:9.",
+      "bg_colors": [
+        "#8B0000",
+        "#1A1A2E",
+        "#4A4A4A"
+      ],
+      "duration_sec": 52,
+      "scene_number": 31
+    },
+    {
+      "scene_number": 32,
       "type": "aftermath",
       "title": "Xerxes's Revenge",
       "narration": "When it was over, Xerxes ordered Leonidas's body found and beheaded. His head was displayed on a stake. This was an extraordinary violation of Persian royal tradition — Xerxes had been notably generous with fallen enemies in previous campaigns. The fact that he ordered this for Leonidas tells you how much the three days at Thermopylae had cost him, not just in soldiers but in something harder to measure. Xerxes then marched on Athens. The city was empty — the Athenians had evacuated. He burned it. And then he marched his remaining army to the coast opposite the island of Salamis, where the Greek fleet was waiting. He sat on a golden throne to watch the final destruction of Greek resistance. We know how that went.",
@@ -203,7 +437,33 @@
       "duration_sec": 52
     },
     {
-      "scene_number": 15,
+      "type": "deep_dive",
+      "title": "The Battle of Salamis — The Sea Victory That Ended the Invasion",
+      "narration": "Thermopylae was September of 480 BC. Salamis was one month later. Themistocles, who had evacuated Athens and let it burn, now engineered perhaps the most audacious naval trap in military history. He sent a secret message to Xerxes — through his own slave — claiming to be a Persian sympathizer. The message advised Xerxes to close the exit of the Salamis strait at night, to trap the Greek fleet before it escaped. Xerxes believed it. He ordered his fleet into the narrow strait overnight. In the morning, three hundred and seventy-one Greek warships fought in waters so tight that Persian numbers, again, were useless. The Greeks rammed and sank over two hundred Persian ships. Xerxes watched the entire battle from a golden throne on a hilltop. He saw his fleet destroyed. He marched home to Persia three weeks later. The invasion was over. One clever Athenian had outsmarted the largest empire in the world.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. The Strait of Salamis: map showing the narrow channel, Greek fleet massed on one side, Persian fleet entering in the darkness. Dawn breaking over the strait: Greek triremes ramming Persian vessels, the narrow channel turning into a chaotic kill zone. Persian ships unable to maneuver, ramming each other. Xerxes on his golden throne on the hilltop above the strait, watching his fleet being destroyed. The remaining Persian fleet in retreat. Xerxes's march home. The invasion decided in a single morning. 16:9.",
+      "bg_colors": [
+        "#1A1A2E",
+        "#4A3728",
+        "#D4AF37"
+      ],
+      "duration_sec": 52,
+      "scene_number": 33
+    },
+    {
+      "type": "deep_dive",
+      "title": "The Battle of Plataea — Where the Persians Finally Lost the Land War",
+      "narration": "Salamis ended the naval invasion. Plataea, in August of 479 BC, ended the land war. Mardonius, who had stayed behind with the Persian army while Xerxes retreated, spent the winter in northern Greece, trying to split the Greek alliance diplomatically. He failed. At Plataea, roughly forty thousand Greeks under Spartan command faced one hundred thousand Persians — and won. The Persian cavalry, which had been devastating in open terrain, was drawn into a trap. The Spartan phalanx, given room to maneuver, proved as deadly in open battle as at Thermopylae. Mardonius was killed. The Persian army disintegrated. On the same day — according to ancient sources, though this may be legendary — the remaining Persian fleet was destroyed at Mycale. The Persian Wars were over. Greece had won. The battle Thermopylae delayed had been fought, and the Persians had lost it.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. The Battle of Plataea: Greek hoplite army in the hills of Boeotia, facing the Persian camp on the plain. The Greek advance under Spartan command. Persian cavalry charge meeting the Greek shield wall. The killing of Mardonius in the press of battle — the Persian command collapsing. Map showing the simultaneous battle of Mycale destroying the Persian fleet. The Persian army retreating north. The Greek commanders after victory: Pausanias the Spartan regent, the Greek allies together. The end of the Persian Wars. 16:9.",
+      "bg_colors": [
+        "#D4AF37",
+        "#8B0000",
+        "#1A1A2E"
+      ],
+      "duration_sec": 50,
+      "scene_number": 34
+    },
+    {
+      "scene_number": 35,
       "type": "analysis",
       "title": "Did Thermopylae Matter?",
       "narration": "Here is the honest historical assessment. Thermopylae was a military defeat. The Persians got through the pass. Athens was burned. On a tactical level, it failed. But it bought something the Greek alliance needed more than a victory: time. The delay at Thermopylae gave the Athenian navy time to complete preparations at Salamis. It gave the Spartan army time to mobilize fully — the religious festivals were over. It gave the Greek alliance time to organize. And it did something harder to quantify: it proved that Persian soldiers, including the Immortals, could be killed. That the Persian army was beatable in the right conditions. Xerxes arrived at Salamis with an army that had just spent three days failing to break three hundred men. His soldiers knew it. So did he.",
@@ -216,7 +476,33 @@
       "duration_sec": 52
     },
     {
-      "scene_number": 16,
+      "type": "analysis",
+      "title": "The Strategic Debate — Was Thermopylae Militarily Necessary?",
+      "narration": "Military historians have argued for two thousand five hundred years about whether Thermopylae was strategically necessary. The case against: it delayed the Persians by perhaps three days, and they still burned Athens anyway. The Greeks could have retreated south, massed their forces at the Isthmus of Corinth, and defended there without any sacrifice. The case for: Thermopylae bought exactly enough time for Themistocles to complete the evacuation of Athens and prepare the trap at Salamis. Without the delay, the Greek fleet might have been forced into less favorable waters. Beyond the military calculus: Thermopylae showed every wavering Greek city-state what resistance looked like. When three hundred men could hold an army for three days, the case for surrender became harder to make. The battle's strategic value may have been psychological more than operational. Sometimes the act of fighting matters more than the outcome.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Strategic analysis visualization: two timelines side by side — one where Greece fights at Thermopylae, one where it doesn't. Map of the evacuation of Athens: ships, citizens, timing. The Isthmus of Corinth defensive alternative: different terrain, different outcome? Then: the psychological effect shown as a chain reaction — news of Thermopylae spreading to wavering city-states, the alliance holding together. A military historian at a modern briefing table analyzing ancient strategy. The question left open: did three days matter? 16:9.",
+      "bg_colors": [
+        "#4A4A4A",
+        "#1A1A2E",
+        "#D4AF37"
+      ],
+      "duration_sec": 50,
+      "scene_number": 36
+    },
+    {
+      "type": "deep_dive",
+      "title": "Leonidas's Bones — The Forty-Year Wait",
+      "narration": "Xerxes ordered Leonidas's body beheaded and crucified — a profound violation of Persian religious custom that showed how much the three-day delay had cost him personally. Forty years later, the Spartans came back for the body. In 440 BC, Spartan ambassadors traveled to Thermopylae, located the remains — identified, according to ancient accounts, by markings — and carried them home to Sparta, where they were interred with full royal honors. A hero cult developed at his tomb. For centuries, Spartans would sacrifice at his grave before major campaigns. The man had been dead for forty years. The city he died for was declining. The wars he helped win were ancient history. And yet the body mattered enough to retrieve, the sacrifice mattered enough to commemorate. Sparta, for all its harshness, understood one thing: what a man dies for defines what his people live for.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Xerxes at Thermopylae after the battle: ordering the beheading and crucifixion of Leonidas's body — his fury made visible in this desecration. Time passage: forty years later, Spartan ambassadors at Thermopylae, carefully recovering remains. The journey back to Sparta. A royal Spartan funeral: fire, ceremony, the remains interred in the center of the city. The hero shrine: Spartans making sacrifice before the tomb over the following decades. The meaning of honoring what cannot be taken back. 16:9.",
+      "bg_colors": [
+        "#1A1A2E",
+        "#8B0000",
+        "#D4AF37"
+      ],
+      "duration_sec": 50,
+      "scene_number": 37
+    },
+    {
+      "scene_number": 38,
       "type": "historical",
       "title": "The Monument — What the Greeks Said",
       "narration": "The Greeks erected a monument at the site of the final stand. The inscription on it became one of the most famous epitaphs in history. The poet Simonides wrote it in the original Greek. In translation it reads: Go tell the Spartans, stranger passing by, that here, obedient to their laws, we lie. That's it. No boasting. No claim of victory. No exaggeration. Just the statement of fact: we were here, we did our duty, we are gone. The Greeks understood exactly what had happened. They didn't call it a victory. They called it an example. Within a year, Thermopylae had become the defining story of what it meant to be Spartan — and what it meant to resist an empire. The story spread across Greece and didn't stop. It's still spreading.",
@@ -229,7 +515,46 @@
       "duration_sec": 52
     },
     {
-      "scene_number": 17,
+      "type": "deep_dive",
+      "title": "Simonides — The Poet Who Made Thermopylae Immortal",
+      "narration": "Thermopylae would be a footnote in history if not for one poet. Simonides of Ceos was the most celebrated lyric poet in Greece, the man who essentially invented the genre of commissioned commemoration — what we might now call the war memorial inscription. He wrote epitaphs for the fallen at Marathon. He wrote the famous epigram for Thermopylae. The Greek version of that epigram — four lines, twenty-eight words — is one of the most analyzed short texts in Western literature. Simonides understood something that Xerxes did not: battles are won by generals and armies, but they are remembered by poets. He gave Thermopylae a frame that made it intelligible to every generation that followed. The Spartans died in the pass. Simonides made sure history would never stop talking about it.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Simonides of Ceos: an elderly Greek poet in a marble-columned setting, writing by lamplight. The process of commissioning: Greek officials meeting with Simonides after the battle. The epigram being composed, then carved into stone. The actual archaeological stele at Thermopylae: ancient Greek text on stone. The poem rendered in Greek and English on screen, word by word. The poet as much a part of history as the general — the words surviving when everything else is gone. 16:9.",
+      "bg_colors": [
+        "#D4AF37",
+        "#1A1A2E",
+        "#4A4A4A"
+      ],
+      "duration_sec": 52,
+      "scene_number": 39
+    },
+    {
+      "type": "deep_dive",
+      "title": "The Epitaph — Four Lines That Changed How Humans Think About Sacrifice",
+      "narration": "The full epitaph Simonides wrote, translated from ancient Greek, reads: 'Go, tell the Spartans, stranger passing by, that here, obedient to their laws, we lie.' Four lines. The debate over the exact translation has occupied classicists for centuries — specifically the word 'obedient,' which in Greek is 'peithomenoi' and carries connotations closer to 'faithful to' or 'trusting in' rather than mere rule-following. The deeper point is this: the epitaph does not say we died bravely. It does not say we died gloriously. It asks a stranger to carry a message. The message is not heroic proclamation — it is a simple statement of fact: we were here, we did what our laws asked, we are lying here now. The restraint of those four lines is what makes them hit harder than any triumphalist war poetry. They do not ask you to admire. They ask you to witness.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Close-up of the ancient inscription stone at Thermopylae: Greek letters carved in marble, weathered by time. Slow zoom in on the text. Word-by-word translation in both ancient Greek and modern English. The debate: classicists at a seminar arguing over 'peithomenoi' vs 'obedient' vs 'faithful to.' Multiple translations overlaid. Then: the full emotional weight — this was not written for kings or gods. It was written for a stranger walking past a grave. A modern visitor at the monument, reading the words, stopping. 16:9.",
+      "bg_colors": [
+        "#D4AF37",
+        "#1A1A2E",
+        "#4A4A4A"
+      ],
+      "duration_sec": 52,
+      "scene_number": 40
+    },
+    {
+      "type": "deep_dive",
+      "title": "Molon Labe — Three Words That Still Echo",
+      "narration": "Before the battle began, when Xerxes sent a messenger demanding the Greeks lay down their weapons, Leonidas responded with three words in ancient Greek: Molon labe. Come and take them. Two and a half thousand years later, those three words appear on military insignia around the world — the Greek Special Operations Command, the United States Special Operations Command patch, on firearms, on military monuments. They became the shorthand for armed refusal, for the idea that surrender of weapons is surrender of everything. There is something worth examining in the fact that a phrase said at a battle most of the people using it cannot locate on a map has become the preeminent expression of armed resistance in the modern world. Leonidas probably said it without imagining it would still be said. Most of the things that last are like that.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. The moment: Leonidas receiving Xerxes's ultimatum, the words 'Molon Labe' rendered in ancient Greek letters. Then: a montage of modern usage — the Greek Special Forces emblem, US Special Operations patches, the phrase on firearms, on monument inscriptions. Map showing the global spread of those three words. The phrase in ancient Greek, in transliteration, in multiple languages. The contrast: a battlefield exchange 2,500 years ago now emblazoned on modern military equipment worldwide. The strangeness of ancient words in modern contexts. 16:9.",
+      "bg_colors": [
+        "#8B0000",
+        "#D4AF37",
+        "#1A1A2E"
+      ],
+      "duration_sec": 50,
+      "scene_number": 41
+    },
+    {
+      "scene_number": 42,
       "type": "historical",
       "title": "Sparta's Aftermath",
       "narration": "The two Spartans who survived — Aristodemus, who had been sent back with an eye infection, and a man named Pantites, who had been dispatched as a messenger — returned to Sparta. Aristodemus was called 'Aristodemus the coward' by the other Spartans despite having been ordered to leave. He fought at the Battle of Plataea the following year with what the sources describe as reckless abandon, dying in the front of the action. Spartan opinion was split: some thought he died well. Others said it didn't count because he was clearly seeking death rather than fighting to win. Spartan society was not designed for survivors of moments like Thermopylae. It was designed to produce men who didn't become survivors.",
@@ -242,7 +567,7 @@
       "duration_sec": 52
     },
     {
-      "scene_number": 18,
+      "scene_number": 43,
       "type": "historical",
       "title": "What Happened to Ephialtes",
       "narration": "Ephialtes, the Greek traitor who showed the Persians the mountain path, fled into Thessaly after the Persian defeat at Salamis and Plataea. The Greeks put a price on his head. He lived in exile for years. He was eventually killed — not for the betrayal at Thermopylae, but in what appears to have been an unrelated personal dispute. His killer was rewarded by Sparta anyway. His name has come down through history as the archetype of the traitor. In Greece today, Ephialtes is still used as a word for nightmare. The man who helped destroy the three hundred is, literally, the word Greeks use for a bad dream. Two and a half thousand years later. The Greeks held a grudge.",
@@ -255,7 +580,7 @@
       "duration_sec": 52
     },
     {
-      "scene_number": 19,
+      "scene_number": 44,
       "type": "analysis",
       "title": "The Numbers — How Many Persians Actually Died?",
       "narration": "Ancient sources give wildly different numbers for Persian casualties at Thermopylae. Herodotus, our primary source, was writing decades after the battle and had reasons to maximize the drama. Modern historians estimate somewhere between five thousand and twenty thousand Persian dead over three days. Against three hundred Spartans and their allies. Even the lowest estimate represents an extraordinary exchange rate. The Greeks lost approximately two to four thousand total — primarily on the final day. What we know for certain: Xerxes was so bothered by the Persian body count that he ordered the majority of the dead buried before showing the pass to his troops. He wanted to hide how many Persians had died trying to get through a gap barely wide enough for a cart.",
@@ -268,7 +593,7 @@
       "duration_sec": 52
     },
     {
-      "scene_number": 20,
+      "scene_number": 45,
       "type": "historical",
       "title": "Thermopylae in History — From Ancient to Modern",
       "narration": "Thermopylae became the story the Western world told itself about courage in the face of overwhelming odds. The Romans referenced it. Medieval knights knew it. The founders of the United States cited it in debates about resistance to tyranny. When the Texans died at the Alamo in 1836, newspapers immediately compared it to Thermopylae. When Churchill gave his 'we shall fight on the beaches' speech in 1940, the shadow of Thermopylae was in every line. And in 2007, Zack Snyder released a film that introduced the three hundred to an entirely new generation — with muscles that were historically questionable and Persians that were cinematically inventive — but that got the emotional core right: three hundred men, a narrow pass, an impossible situation, and a choice.",
@@ -281,7 +606,46 @@
       "duration_sec": 52
     },
     {
-      "scene_number": 21,
+      "type": "deep_dive",
+      "title": "Thermopylae in World War II — When History Repeated Itself",
+      "narration": "In April 1941, German and Italian forces invaded Greece. The Allied defensive line — Australian, New Zealand, and British troops alongside Greeks — was positioned at Thermopylae. The same pass. The same geography. The same problem: an overwhelming force coming from the north through the only road in the mountains. The Allied commanders were fully aware of the historical parallel. They held the line long enough to allow the evacuation of most Allied forces to Crete and Egypt. Like the original, it was a fighting withdrawal that served a larger strategic purpose. Unlike the original, most of the men lived. The Greek soldiers who remained behind to cover the evacuation fought alongside the historical ghosts of Leonidas's men. Two and a half thousand years had passed. The pass hadn't changed. The math of holding it against superior numbers hadn't changed either.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. World War II at Thermopylae: German panzers and infantry advancing toward the pass from the north, April 1941. Allied (ANZAC) troops at defensive positions in the same narrow pass where the 300 stood. Map showing the same geographic chokepoint used twice, 2,500 years apart. Archival-style photographs of the WWII battle at Thermopylae. Allied troops evacuating southward — the same strategic withdrawal. The modern pass: rusted WWII defensive works visible near the ancient monument. The geography unchanged, the strategic calculation identical. 16:9.",
+      "bg_colors": [
+        "#4A4A4A",
+        "#1A1A2E",
+        "#8B0000"
+      ],
+      "duration_sec": 52,
+      "scene_number": 46
+    },
+    {
+      "type": "analysis",
+      "title": "The 300 (2006) — What Frank Miller Got Right and Wrong",
+      "narration": "The 2006 film 300 is historically accurate on perhaps five percent of its content and dramatically effective on ninety-five percent of it. What it got right: the phalanx formation, the general numerical disproportion, Ephialtes as the traitor, the location and duration of the battle, the combing of hair before the final day. What it invented: the supernatural monsters, Xerxes's godlike appearance — he was a tall Persian man in Persian dress, not a bald giant with facial piercings. The Immortals actually had faces. The Persians used archers, not fantasy creatures. The Thespians are entirely absent. Gorgo's role is fictional. What this matters: the film introduced more people to Thermopylae than any history book has since Herodotus. It also, for a generation, replaced the real story — which is more interesting — with a version optimized for visual spectacle. The real Thermopylae needs no invention. It is already one of the strangest true stories in military history.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Split-screen documentary analysis: scenes from what the movie shows vs. historical reality side by side. Movie Xerxes (tall, bald, pierced) vs. actual Persian royal depictions from Persepolis (bearded, robed, fully human). Movie 'Immortals' with monstrous masks vs. actual Persian Immortal depictions from archaeological friezes. The movie's omission of the 700 Thespians. Box office figures and cultural impact of the film. The paradox: Hollywood fiction introducing millions to real history. What the real story offers that the movie doesn't. 16:9.",
+      "bg_colors": [
+        "#8B0000",
+        "#D4AF37",
+        "#4A4A4A"
+      ],
+      "duration_sec": 52,
+      "scene_number": 47
+    },
+    {
+      "type": "deep_dive",
+      "title": "The Archaeological Record — What We've Actually Found",
+      "narration": "Archaeology has not been kind to the romantic version of Thermopylae. The most dramatic discovery came in 1939, when Spyridon Marinatos excavated the area of the final stand and found a large number of Persian arrowheads — the physical confirmation of how the battle ended, not in glorious hand-to-hand combat, but under an arrow storm. More recently, analysis of the pass itself revealed how much the geography has changed: the ancient coastline, due to millennia of river silting, is now several kilometers inland from where it was in 480 BC. The famous 'Hot Gates' — the thermal springs that gave Thermopylae its name — are still there, still hot, still flowing. The monument stele, a reconstruction of the ancient original, still stands on the mound thought to be where the final stand occurred. The bones of the 300, if they were ever buried there, have not been definitively identified. The pass is now a highway.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Archaeological dig site at Thermopylae, 1939: Spyridon Marinatos excavating, the discovery of hundreds of Persian arrowheads — physical evidence displayed in a museum case. Map showing ancient coastline vs. modern coastline — the dramatic geographic change. The thermal springs: actual footage of the hot springs at the pass, still active, the same springs Greeks knew. The modern Leonidas monument: the bronze statue, the inscription stone. A highway running through where the battle was. The ancient and modern overlapping. 16:9.",
+      "bg_colors": [
+        "#4A3728",
+        "#4A4A4A",
+        "#D4AF37"
+      ],
+      "duration_sec": 50,
+      "scene_number": 48
+    },
+    {
+      "scene_number": 49,
       "type": "anecdote",
       "title": "The Words That Echoed for Centuries",
       "narration": "Herodotus, writing within living memory of the battle, recorded the lines that made Thermopylae immortal. Before the fighting began, a Spartan was warned that Persian arrows would be so thick they would block out the sun. His reply: good, then we'll fight in the shade. When Xerxes sent a final demand for the Greeks to lay down their weapons, the answer that came back, according to later tradition, was two words: molon labe. Come and take them. And on the morning of the third day, knowing the end had arrived, the Spartans did something that stunned the watching Persians. They combed and arranged their long hair, calmly, in full view of an army about to kill them. It was a Spartan ritual normally performed before going into battle or before dying. They did both that morning. These weren't lines written for a movie. They came from a historian who talked to people who were there.",
@@ -294,7 +658,7 @@
       "duration_sec": 52
     },
     {
-      "scene_number": 22,
+      "scene_number": 50,
       "type": "modern_connection",
       "title": "Why This Still Matters",
       "narration": "The reason Thermopylae refuses to die is not that it was a military victory. It wasn't. It's not that the Spartans were perfect heroes — Spartan society was built on slavery, operated a brutal apartheid system called the Helot system, and was in many ways deeply repugnant by modern standards. The reason Thermopylae persists is the specific shape of the choice Leonidas made. He chose a position that couldn't be held indefinitely, with a force that couldn't survive, knowing this, and held it anyway as long as it needed to be held. That is a very specific kind of courage. Not the courage of men who think they might win. The courage of men who know they won't, who fight anyway because someone has to. Every culture that has faced overwhelming odds has reached for this story. It's still reaching.",
@@ -307,7 +671,33 @@
       "duration_sec": 52
     },
     {
-      "scene_number": 23,
+      "type": "analysis",
+      "title": "The Template for Every Last Stand Since",
+      "narration": "Something happened at Thermopylae that changed how humans construct meaning from military defeat. Before Thermopylae, the accepted understanding was simple: you win or you lose. Defeat was failure. The Spartans at Thermopylae — and Simonides, who gave them their language — created a third option: honorable sacrifice in service of a larger cause. Every last stand in recorded military history since then has been consciously or unconsciously built on the Thermopylae template. The Alamo referenced it. Rorke's Drift was described in its terms. The defense of Bastogne was framed through it. The British at Dunkirk. The Soviets at Stalingrad. Each culture constructed its own version of the story where defeat is reframed as sacrifice, where dying in the right place at the right time is not failure but the highest possible success. Leonidas did not create this idea. He became its founding example.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. The Thermopylae template as a branching tree: Thermopylae at the root, branches spreading across history. The Alamo: the famous last stand in Texas. Rorke's Drift: British soldiers in South Africa. Bastogne: American paratroopers surrounded in the snow. The Warsaw Ghetto Uprising. Each one framed in visual montage as a deliberate cultural echo of Thermopylae. A diagram showing the narrative structure: outnumbered, holding ground, buying time, dying with meaning. The idea of sacrificial last stand as one of humanity's most persistent and portable stories. 16:9.",
+      "bg_colors": [
+        "#1A1A2E",
+        "#8B0000",
+        "#D4AF37"
+      ],
+      "duration_sec": 52,
+      "scene_number": 51
+    },
+    {
+      "type": "deep_dive",
+      "title": "The Pass Today — What Thermopylae Looks Like Now",
+      "narration": "If you visit Thermopylae today, you will find a four-lane highway. The river silting of two and a half millennia has pushed the coastline four kilometers north of where it was in 480 BC. Where the Hot Gates were, where the narrowest point of the pass once forced an empire to fight fifteen men at a time, is now a flat coastal plain. The hills are still there. The mountains of Callidromus are still there. The thermal springs are still there, still steaming, sulfur-smelling and hot, right beside the modern road. The monument is there: a bronze Leonidas, shield out, spear raised, the inscription stone beside him. Tourists stop. They take photographs. Most of them have seen the movie. Some of them have read Herodotus. A few of them know about the 700 Thespians whose city was burned and whose names appear on no monument of equivalent fame. The pass that changed the world is now a rest stop on the E75 motorway.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Modern Thermopylae: the actual location today — a four-lane highway, flat farmland where the sea once was. The hills of Callidromus rising behind. The thermal springs steaming beside the road (actual footage). The modern monument: the Leonidas statue and inscription stele. Tourists photographing the site. Map overlay: ancient 480 BC coastline vs. modern coastline, the dramatic difference. The motorway traffic passing where the phalanx once stood. The springs unchanged for 2,500 years. The strange coexistence of ancient meaning and modern infrastructure. 16:9.",
+      "bg_colors": [
+        "#4A3728",
+        "#4A4A4A",
+        "#D4AF37"
+      ],
+      "duration_sec": 50,
+      "scene_number": 52
+    },
+    {
+      "scene_number": 53,
       "type": "anecdote",
       "title": "The Soldiers History Forgot to Blame",
       "narration": "Not every Greek at Thermopylae died there. Thebes had been reluctant to join the resistance at all, and the four hundred Thebans sent to the pass were widely suspected of having divided loyalties. On the third day, as the Spartans and Thespians moved out to make their final stand, the Thebans did not. They surrendered. Xerxes did not execute them. He chose something that was meant to humiliate rather than kill: his men branded the Thebans with the king's royal mark, the same brand used on Persian slaves, burned into their skin while the army watched. It worked exactly as intended. For centuries afterward, the Thebans who survived Thermopylae were remembered not as victims of a brutal punishment, but as the men who quit. History is rarely as clean as three hundred heroes and one villain. At Thermopylae, there was a whole spectrum in between.",
@@ -320,7 +710,20 @@
       "duration_sec": 52
     },
     {
-      "scene_number": 24,
+      "type": "analysis",
+      "title": "The Full Accounting — What Three Days Actually Cost Both Sides",
+      "narration": "After three days at Thermopylae: approximately four thousand Greek dead — the 300 Spartans, seven hundred Thespians, four hundred Thebans, and Greek soldiers from multiple other cities who died in the first two days before being dismissed. On the Persian side, Herodotus claims twenty thousand dead. Modern historians consider this a significant overcount — Persian propaganda ran both directions, and Herodotus was writing for a Greek audience. The real figure was probably in the range of five to ten thousand Persian dead over three days, possibly more. In a force of two hundred thousand or more, those losses were sustainable. What was not sustainable was the time. Thermopylae cost Xerxes roughly three weeks — the battle itself, plus the delays before he committed to the assault. That time window is when Themistocles completed the evacuation of Athens, positioned the Greek fleet at Salamis, and set the trap that broke the Persian navy. Three days at the pass. Three weeks total. The price of Greece: four thousand Greek soldiers and one king.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. The cost visualization: two columns — Greek casualties and Persian casualties. Numbers laid out carefully with sources cited. The timeline: three days at Thermopylae → three weeks of strategic delay → Athenian evacuation completed → Salamis trap set. The causal chain from the pass to Persian defeat. Herodotus's numbers shown with modern historian revisions. The final accounting: what was bought and at what price. The decision tree: without those three days, does Salamis happen as planned? The strategic math that makes four thousand deaths potentially worth it. 16:9.",
+      "bg_colors": [
+        "#1A1A2E",
+        "#D4AF37",
+        "#8B0000"
+      ],
+      "duration_sec": 52,
+      "scene_number": 54
+    },
+    {
+      "scene_number": 55,
       "type": "outro_cta",
       "title": "Next Episode — Salamis",
       "narration": "Next episode on Gods and Glory: Thermopylae bought the time. But could Greece actually win the war? Three hundred and seventy-one Greek ships. Over six hundred Persian ships. One narrow strait. And one Athenian general with a plan so audacious it should not have worked. The Battle of Salamis — how Greece stopped the Persian Empire for good. Subscribe now. New episode every week. If you know someone who thinks they already know this story — send them this one first. This has been Gods and Glory.",

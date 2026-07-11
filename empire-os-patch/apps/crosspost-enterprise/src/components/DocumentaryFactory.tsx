@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import {
-  Video, Sparkles, Volume2, Music, Mic, Clock, Plus, Trash, Play, Layers, AlertCircle, FileAudio, RefreshCw
+  Video, Sparkles, Volume2, Music, Mic, Clock, Plus, Trash, Play, Layers, AlertCircle, FileAudio, RefreshCw, Cpu, CheckCircle
 } from "lucide-react";
 
 export default function DocumentaryFactory() {
@@ -8,32 +8,33 @@ export default function DocumentaryFactory() {
   const [narrationStyle, setNarrationStyle] = useState<string>("Investigative & Dramatic (BBC-style)");
   const [voiceCloning, setVoiceCloning] = useState<string>("British Historian (AI Voice #4)");
   const [backgroundTrack, setBackgroundTrack] = useState<string>("Subtle Retro Sub-bass Synth");
-  
+
   const [loading, setLoading] = useState<boolean>(false);
   const [productionTimeline, setProductionTimeline] = useState<any | null>(null);
+  const [apiMode, setApiMode] = useState<"live" | "simulated">("simulated");
+  const [apiError, setApiError] = useState<string | null>(null);
 
-  const handleAssembleFactory = () => {
+  const handleAssembleFactory = async () => {
     if (!topic.trim()) return;
     setLoading(true);
     setProductionTimeline(null);
+    setApiError(null);
 
-    // Simulate assembling deep narrative acts & visual audio cue timeline
-    setTimeout(() => {
-      setProductionTimeline({
-        title: "SHADOW SERVERS: ARBITRAGE DEPTHS",
-        acts: [
-          { name: "ACT I: THE UNSEEN DISPATCH", duration: "2m 30s", description: "Establishes the hidden scale of localized physical datacenters placed millimetres away from exchange hubs." },
-          { name: "ACT II: THE MICROSECOND WAR", duration: "5m 15s", description: "Peels back technical layers. Analyzes automated router loops and fiber optic pathways." },
-          { name: "ACT III: INTEGRATED EXITS", duration: "3m 45s", description: "The philosophical outcome. Machine learning models taking complete control of micro-second wealth allocations." }
-        ],
-        cues: [
-          { timestamp: "00:00 - 00:30", audio: "Narration over low sub-bass rumble.", narration: "Beneath the asphalt of New Jersey, light travels through glass at 200,000 kilometers per second. But for the algorithms of Wall Street, that speed is tragically slow.", visual: "Close-up macro lens of fiber optic cables glowing. Stroboscopic orange lights." },
-          { timestamp: "00:30 - 01:45", audio: "Music swells into structured retro drums.", narration: "In this documentary, we unveil the architectures of Empire OS: the quiet platforms that audit and orchestrate everything.", visual: "Drone shot moving over concrete financial datacenters during rain. Transition to high-tech server map diagrams." },
-          { timestamp: "01:45 - 03:00", audio: "Narration fades. Ambient drone holds.", narration: "If the systems governing our data are offline, who is truly inspecting the machine? Marcus pulls the mainframe power cord...", visual: "Flickering terminal close up. A finger hovers over a heavy manual power breaker switch." }
-        ]
+    try {
+      const res = await fetch("/api/documentary/assemble", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ topic, narrationStyle, voiceCloning, backgroundTrack })
       });
+      const data = await res.json();
+      if (!res.ok || !data.success) throw new Error(data.error || "Assembly request failed.");
+      setProductionTimeline({ title: data.title, acts: data.acts, cues: data.cues });
+      setApiMode(data.isSimulated ? "simulated" : "live");
+    } catch (err: any) {
+      setApiError(err?.message || "Failed to reach Documentary Factory API.");
+    } finally {
       setLoading(false);
-    }, 1400);
+    }
   };
 
   return (
@@ -48,9 +49,22 @@ export default function DocumentaryFactory() {
               Documentary Factory Pipeline
             </h3>
           </div>
-          <span className="text-[9px] font-mono font-bold text-rose-400 bg-rose-950/40 border border-rose-900/30 px-2 py-0.5 rounded">
-            PRODUCTION CONSOLE
-          </span>
+          <div className="flex items-center gap-2">
+            {productionTimeline && (
+              apiMode === "live" ? (
+                <span className="text-[9px] font-mono font-bold text-emerald-400 bg-emerald-950/40 border border-emerald-900/30 px-2 py-0.5 rounded flex items-center gap-1">
+                  <CheckCircle className="w-2.5 h-2.5" /> GEMINI LIVE
+                </span>
+              ) : (
+                <span className="text-[9px] font-mono font-bold text-amber-400 bg-amber-950/40 border border-amber-900/30 px-2 py-0.5 rounded flex items-center gap-1">
+                  <Cpu className="w-2.5 h-2.5" /> SIMULATION MODE
+                </span>
+              )
+            )}
+            <span className="text-[9px] font-mono font-bold text-rose-400 bg-rose-950/40 border border-rose-900/30 px-2 py-0.5 rounded">
+              PRODUCTION CONSOLE
+            </span>
+          </div>
         </div>
         <p className="text-xs text-slate-400 mt-1">
           Generate professional act structures, voiceover scripts, visual prompt directions, and sound queues for high-yield investigative documentaries.
@@ -125,6 +139,13 @@ export default function DocumentaryFactory() {
                 </select>
               </div>
             </div>
+
+            {apiError && (
+              <div className="flex items-center gap-2 text-xs text-rose-300 bg-rose-950/20 border border-rose-900/40 rounded p-2.5">
+                <AlertCircle className="w-3.5 h-3.5 text-rose-400 shrink-0" />
+                <span>{apiError}</span>
+              </div>
+            )}
 
             <button
               onClick={handleAssembleFactory}

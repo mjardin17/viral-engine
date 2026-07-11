@@ -11,7 +11,6 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 from council.bot_base import CouncilBot, BotResult, BASE_DIR, STATE_DIR
 
-OUTPUT_DIR = BASE_DIR / "output"
 MIN_CLIP_BYTES = 500_000
 W, H = 1920, 1080
 
@@ -114,9 +113,13 @@ class ClipRebuilderBot(CouncilBot):
         ffmpeg = _find_ffmpeg()
         ffprobe = _find_ffprobe()
 
-        # Read guardian state to know which episodes to check
+        if not self.output_dir.exists():
+            r.ok(f"No output dir yet for {self.channel_name} — nothing to rebuild")
+            return r
+
+        # Read guardian state (channel-scoped) to know which episodes to check
         guardian_state = {}
-        guardian_state_path = STATE_DIR / "bot_guardian.json"
+        guardian_state_path = self.state_dir / "bot_guardian.json"
         if guardian_state_path.exists():
             import json
             try:
@@ -130,12 +133,12 @@ class ClipRebuilderBot(CouncilBot):
             r.ok(f"Guardian flagged {len(ep_ids)} episode(s): {', '.join(ep_ids)}")
         else:
             # Fallback: scan all
-            ep_ids = [d.name for d in sorted(OUTPUT_DIR.iterdir())
+            ep_ids = [d.name for d in sorted(self.output_dir.iterdir())
                      if d.is_dir() and not d.name.startswith("_")]
 
         episodes_rebuilt = []
         for ep_id in ep_ids:
-            ep_dir = OUTPUT_DIR / ep_id
+            ep_dir = self.output_dir / ep_id
             if not ep_dir.exists():
                 continue
 

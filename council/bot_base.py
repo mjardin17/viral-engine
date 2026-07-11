@@ -6,6 +6,10 @@ To create a new bot:
   1. Create council/bots/bot_yourname.py
   2. class YourBot(CouncilBot): ...
   3. It auto-registers on next council run — no config needed.
+
+Channel support:
+  Pass channel="gg"|"il"|"lo"|"ed" to CouncilBot.__init__() (or council.py --channel flag).
+  Each channel gets its own output/, renders/, prompts/, and council/state/{channel}/ dirs.
 """
 
 from __future__ import annotations
@@ -20,6 +24,52 @@ from typing import Optional
 BASE_DIR = Path(__file__).parent.parent
 STATE_DIR = BASE_DIR / "council" / "state"
 STATE_DIR.mkdir(parents=True, exist_ok=True)
+
+# ── Per-channel configuration ─────────────────────────────────────────────────
+CHANNEL_CONFIGS: dict[str, dict] = {
+    "gg": {
+        "output_dir":    BASE_DIR / "output",
+        "renders_dir":   BASE_DIR / "renders",
+        "prompts_dir":   BASE_DIR / "prompts" / "gods_glory",
+        "token_file":    BASE_DIR / "token_gg.pickle",
+        "channel_name":  "Gods & Glory",
+        "tts_rate":      "-35%",
+        "ep_prefix":     "GG_EP",
+        "min_final_sec": 2700,   # 45 min
+    },
+    "il": {
+        "output_dir":    BASE_DIR / "output_il",
+        "renders_dir":   BASE_DIR / "renders_il",
+        "prompts_dir":   BASE_DIR / "prompts" / "iron_legends",
+        "token_file":    BASE_DIR / "token_il.pickle",
+        "channel_name":  "Iron Legends",
+        "tts_rate":      "+8%",
+        "ep_prefix":     "IL_EP",
+        "min_final_sec": 1200,   # 20 min (shorter anime-style)
+    },
+    "lo": {
+        "output_dir":    BASE_DIR / "output_lo",
+        "renders_dir":   BASE_DIR / "renders_lo",
+        "prompts_dir":   BASE_DIR / "prompts" / "little_olympus",
+        "token_file":    BASE_DIR / "token_lo.pickle",
+        "channel_name":  "Little Olympus",
+        "tts_rate":      "-10%",
+        "ep_prefix":     "LO_EP",
+        "min_final_sec": 1200,   # 20 min
+    },
+    "ed": {
+        "output_dir":    BASE_DIR / "output_ed",
+        "renders_dir":   BASE_DIR / "renders_ed",
+        "prompts_dir":   BASE_DIR / "prompts" / "empire_decoded",
+        "token_file":    BASE_DIR / "token_ed.pickle",
+        "channel_name":  "Empire Decoded",
+        "tts_rate":      "+5%",
+        "ep_prefix":     "ED_EP",
+        "min_final_sec": 1800,   # 30 min
+    },
+}
+
+ALL_CHANNELS = list(CHANNEL_CONFIGS.keys())
 
 
 @dataclass
@@ -64,7 +114,11 @@ class BotResult:
 
 
 class CouncilBot(ABC):
-    """Base class for all council bots."""
+    """Base class for all council bots.
+
+    Channel-aware: pass channel="gg"|"il"|"lo"|"ed" to scope all paths
+    to the correct directories for that channel.
+    """
 
     # Override in subclass
     name: str = "unnamed_bot"
@@ -72,9 +126,26 @@ class CouncilBot(ABC):
     priority: int = 50       # lower = runs first (0-100)
     auto_fix: bool = True    # if False, only reports — never mutates
 
-    def __init__(self, base_dir: Path = BASE_DIR, verbose: bool = True):
+    def __init__(self, base_dir: Path = BASE_DIR, verbose: bool = True,
+                 channel: str = "gg"):
         self.base_dir = base_dir
         self.verbose = verbose
+        self.channel = channel
+
+        cfg = CHANNEL_CONFIGS.get(channel, CHANNEL_CONFIGS["gg"])
+        self.output_dir:    Path = cfg["output_dir"]
+        self.renders_dir:   Path = cfg["renders_dir"]
+        self.prompts_dir:   Path = cfg["prompts_dir"]
+        self.token_file:    Path = cfg["token_file"]
+        self.channel_name:  str  = cfg["channel_name"]
+        self.tts_rate:      str  = cfg["tts_rate"]
+        self.ep_prefix:     str  = cfg["ep_prefix"]
+        self.min_final_sec: int  = cfg["min_final_sec"]
+
+        # Channel-scoped state dir: council/state/{channel}/
+        self.state_dir: Path = STATE_DIR / channel
+        self.state_dir.mkdir(parents=True, exist_ok=True)
+
         self.result = BotResult(bot_name=self.name)
 
     @abstractmethod
@@ -83,8 +154,8 @@ class CouncilBot(ABC):
         ...
 
     def save_state(self, data: dict):
-        """Persist bot-specific state to council/state/{name}.json"""
-        path = STATE_DIR / f"{self.name}.json"
+        """Persist bot-specific state to council/state/{channel}/{name}.json"""
+        path = self.state_dir / f"{self.name}.json"
         existing = {}
         if path.exists():
             try:
@@ -96,7 +167,8 @@ class CouncilBot(ABC):
         path.write_text(json.dumps(existing, indent=2))
 
     def load_state(self) -> dict:
-        path = STATE_DIR / f"{self.name}.json"
+        """Load bot-specific state from council/state/{channel}/{name}.json"""
+        path = self.state_dir / f"{self.name}.json"
         if path.exists():
             try:
                 return json.loads(path.read_text())
@@ -107,4 +179,4 @@ class CouncilBot(ABC):
     def log(self, msg: str):
         if self.verbose:
             ts = datetime.now().strftime("%H:%M:%S")
-            print(f"  [{ts}] [{self.name}] {msg}")
+            print(f"  [{ts}] [{self.channel.upper()}] [{self.name}] {msg}")

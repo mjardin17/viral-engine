@@ -322,6 +322,422 @@
         "#C9A227",
         "#2C3E1A"
       ]
+    },
+    {
+      "type": "history",
+      "title": "Kublai Khan \u2014 The Emperor Who Wanted Everything",
+      "narration": "Kublai Khan, grandson of Genghis Khan, ruled the Mongol Empire at its height from 1260 to 1294. He had conquered China, controlled the Silk Road, and received tribute from Korea, Vietnam, and Burma. He sent embassies to Japan demanding submission. Japan refused \u2014 twice. Japan's refusal was extraordinary: no power that had refused the Mongols had survived to discuss its decision. Korea had submitted. Persia had been destroyed. The great Song Dynasty of China had been conquered over forty years. When Japan's second embassy was killed, Kublai Khan began building the largest invasion fleet the medieval world had ever seen.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Kublai Khan on his throne in Khanbaliq (Beijing), maps of his vast empire spread before him, the letter demanding Japan's submission being written, the ruler who had never been refused anything sending his ultimatum to an island empire that would refuse him twice. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#2C1A00",
+        "#0D1520"
+      ],
+      "duration_sec": 52,
+      "scene_number": 25
+    },
+    {
+      "type": "history",
+      "title": "Medieval Japan \u2014 The Samurai System",
+      "narration": "Japan in 1274 was governed by the Kamakura Shogunate \u2014 a military dictatorship in which the emperor was a ceremonial figure and real power belonged to the shogun. The warrior class \u2014 samurai \u2014 operated under an honor code that emphasized individual combat and personal valor over coordinated tactics. Samurai fought each other with rituals: announcing their names and lineage before engaging, preferring single combat to mass formations. Against the Mongol army \u2014 which fought as coordinated units using noise, fire weapons, and poisoned arrows, with no interest in honorable single combat \u2014 this approach was at first catastrophic. Japanese warriors who rode forward to announce themselves were shot with arrows before they finished speaking.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Japanese samurai of the Kamakura period in full armor \u2014 the ornate lacquered armor, the daish\u014d swords, the warrior culture built for honorable individual combat, the military system that would face Mongol mass tactics and initially find them baffling. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#8B1A1A",
+        "#2C1A00"
+      ],
+      "duration_sec": 52,
+      "scene_number": 26
+    },
+    {
+      "type": "battle",
+      "title": "The First Invasion \u2014 1274",
+      "narration": "On November 2, 1274, a Mongol-Korean fleet of 900 ships landed approximately 40,000 troops at Hakata Bay in Kyushu. The Japanese defenders were shocked by Mongol tactics: mass archery, explosive projectiles, poison arrows, coordinated unit maneuvers. The samurai system of individual combat was militarily irrelevant against this force. Japanese defenders were driven back. By nightfall, the situation appeared catastrophic. Then the fleet's Korean commanders, fearing weather, ordered re-embarkation. That night, a storm struck. When it passed, approximately 13,000 Mongol soldiers had drowned and 200 ships were lost. The invasion fleet sailed home. The Japanese had survived \u2014 barely, and with significant help from the weather.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The First Mongol invasion of Japan 1274 \u2014 the enormous fleet at Hakata Bay, Mongol soldiers with coordinated mass tactics overwhelming surprised samurai, the explosive projectiles and arrows that the Japanese had never encountered, then the storm that saved them. 16:9 cinematic.",
+      "bg_colors": [
+        "#8B1A1A",
+        "#0D1520",
+        "#3D3020"
+      ],
+      "duration_sec": 52,
+      "scene_number": 27
+    },
+    {
+      "type": "detail",
+      "title": "The Japanese Response \u2014 Seven Years of Preparation",
+      "narration": "Between 1274 and 1281, Japan prepared. The Kamakura Shogunate supervised the construction of a stone wall along the entire Hakata Bay coastline \u2014 three miles long, five feet high. It forced a change in samurai tactics toward more coordinated defense. It built a larger naval force of small, fast ships capable of harassing a landing fleet. Regent Hojo Tokimune, who governed Japan, understood that a second invasion was coming and prepared with whatever seven years could provide. The wall was the key innovation: it denied the Mongols their beachhead and forced them to fight from ships against defenders who had high ground.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The stone defensive wall being constructed along Hakata Bay coastline, thousands of Japanese workers building the barrier that would prevent the Mongol army from establishing a beachhead, the systematic preparation that transformed Japan's defensive capacity. 16:9 cinematic.",
+      "bg_colors": [
+        "#3D3020",
+        "#1A2A1A",
+        "#C9A227"
+      ],
+      "duration_sec": 52,
+      "scene_number": 28
+    },
+    {
+      "type": "battle",
+      "title": "The Second Invasion \u2014 1281 \u2014 Scale Never Seen Before",
+      "narration": "The 1281 invasion was the largest naval operation in history before D-Day. Kublai Khan sent two fleets: the Eastern Route Army of 900 ships and 40,000 men from Korea, and the Jiangnan Army of 3,500 ships and 100,000 men from southern China. Total: approximately 4,400 ships and 140,000 troops. The combined force was larger than the entire population of most European kingdoms. The Eastern Route Army arrived first and was held back by the stone wall at Hakata Bay. For seven weeks, the Mongol army fought from ships, unable to establish the beachhead they needed. The Jiangnan fleet arrived late \u2014 delayed by logistics \u2014 and the combined force sat offshore waiting for conditions to improve.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The Second Mongol invasion fleet assembled off Kyushu \u2014 4,400 ships stretching to the horizon, the largest naval force the medieval world had seen, held at bay by the stone wall the Japanese had built in seven years of preparation. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#1A2A3D",
+        "#8B1A1A"
+      ],
+      "duration_sec": 52,
+      "scene_number": 29
+    },
+    {
+      "type": "battle",
+      "title": "The Japanese Counterattacks \u2014 Small Ships Against the Giant Fleet",
+      "narration": "Japanese commanders adapted their tactics for the second invasion. Rather than massed defense on the beach, they sent small fast boats at night to attack the anchored Mongol fleet. Teams of samurai would row alongside Mongol vessels, board them, fight the crew, set fires, and escape. These were essentially commando raids \u2014 individual samurai valor applied in a context where it was actually effective. The raids disrupted Mongol morale, killed soldiers, and prevented the fleet from resting. For seven weeks, the Mongol force sat offshore \u2014 too large to be defeated in open battle, unable to break through the wall, harassed continuously at night.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Japanese samurai in small fast boats conducting night raids on the anchored Mongol fleet \u2014 boarding Mongol vessels, fighting in darkness, setting fires, the tactical adaptation that applied samurai individual courage in a context where it was effective. 16:9 cinematic.",
+      "bg_colors": [
+        "#8B1A1A",
+        "#2C1A00",
+        "#0D1520"
+      ],
+      "duration_sec": 52,
+      "scene_number": 30
+    },
+    {
+      "type": "detail",
+      "title": "Typhoon Season \u2014 What the Mongols Didn't Know",
+      "narration": "The Mongol commanders chose August-September for their invasion \u2014 the height of Japan's typhoon season. Korean sailors warned them. The warning was apparently ignored or overruled. On the night of August 15-16, 1281, a typhoon struck Kyushu. The storm lasted two days. When it ended, estimates of the dead range from 100,000 to 130,000 Mongol soldiers \u2014 most of them drowned. Of the 4,400 ships, approximately 200 survived. The Jiangnan fleet, assembled from river boats and fishing vessels unsuited to open ocean, was almost entirely destroyed. The Eastern Route fleet lost most of its ships to the rocky coastline. Kublai Khan's army simply ceased to exist.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The 1281 typhoon destroying the Mongol fleet \u2014 massive storm waves overwhelming thousands of ships, soldiers drowning in the dark, the rock coastline smashing vessels that had survived the Japanese night raids, the divine wind that ended the largest medieval invasion fleet. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#0A1020",
+        "#8B1A1A"
+      ],
+      "duration_sec": 52,
+      "scene_number": 31
+    },
+    {
+      "type": "detail",
+      "title": "Kamikaze \u2014 The Divine Wind in Context",
+      "narration": "The Japanese named the storms 'kamikaze' \u2014 divine wind \u2014 interpreting the typhoons as supernatural protection from an enemy that human effort alone could not have defeated. This was not mere superstition: the storms saved Japan in a situation where human resistance had reached its limit. The theological interpretation had practical consequences: it reinforced Japanese belief in their islands' divine protection and the emperor's sacred status. Seven centuries later, Japanese pilots in World War II took the same name for their suicide attacks \u2014 invoking the storms that had saved Japan to describe their own self-sacrifice. The word traveled from a natural phenomenon to a theological concept to a military tactic across 700 years.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Japanese monks praying as the typhoon strikes the Mongol fleet, the religious interpretation of natural disaster as divine protection, the moment that created the kamikaze mythology that would persist for seven centuries to World War II. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#2C1A00"
+      ],
+      "duration_sec": 52,
+      "scene_number": 32
+    },
+    {
+      "type": "history",
+      "title": "Kublai Khan's Response \u2014 The Third Invasion That Wasn't",
+      "narration": "After two catastrophic failures, Kublai Khan ordered preparations for a third invasion. He was overruled by his advisors, who argued that the logistical costs had been ruinous \u2014 the 1281 invasion had required stripping southern China of its shipbuilding capacity \u2014 and that a third attempt risked the same meteorological fate. The third invasion was canceled around 1286. Japan was never invaded again by the Mongols. Kublai Khan died in 1294. His successors had other problems \u2014 the Mongol Empire was fragmenting, China was restive, the Silk Road was disrupted. The island that defied the Mongols twice was simply left alone.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Kublai Khan in old age receiving the reports of the second fleet's destruction, the aging emperor who had conquered everything unable to conquer an island, his advisors arguing against a third attempt, the decision to abandon the Japan project. 16:9 cinematic.",
+      "bg_colors": [
+        "#2C1A00",
+        "#C9A227",
+        "#0D1520"
+      ],
+      "duration_sec": 52,
+      "scene_number": 33
+    },
+    {
+      "type": "analysis",
+      "title": "Why Japan Survived \u2014 The Real Factors",
+      "narration": "Japan survived the Mongol invasions for three reasons. The stone wall denied a beachhead. The Japanese navy's night raids degraded Mongol fighting capacity. And the typhoons destroyed what human effort had weakened. Without the wall, the 1281 fleet might have landed before the storm arrived. Without the raids, the Mongol army might have been in better condition to survive. Without the storms, the wall and the raids would eventually have been overcome \u2014 140,000 soldiers is a lot of soldiers. The three factors worked together. Japan was also helped by Mongol command decisions \u2014 the choice to wait offshore for conditions to improve rather than forcing the wall at all costs \u2014 that may have reflected overconfidence born from never having been beaten.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Map of the three factors that saved Japan \u2014 the Hakata Bay stone wall, the Japanese night raid patterns on the fleet, and the typhoon track that struck the assembled ships \u2014 each necessary, none sufficient alone, the combination that stopped the Mongols. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#1A2A3D",
+        "#3D3020"
+      ],
+      "duration_sec": 52,
+      "scene_number": 34
+    },
+    {
+      "type": "detail",
+      "title": "The Underwater Discovery \u2014 The Mongol Fleet Found",
+      "narration": "In 2011, Japanese and American archaeologists found significant portions of the 1281 Mongol fleet in Imari Bay, preserved under sediment at depths of 25 meters. Ships' timbers, weapons, ceramic bombs, armor, and human remains have been recovered. The ceramic bombs \u2014 hollow spheres filled with gunpowder and iron shards \u2014 confirmed what Japanese chronicles described but historians had questioned: the Mongols used explosive projectiles in 1274 and 1281, making their invading force the most technologically advanced the Japanese had ever faced. The archaeology has changed understanding of the battle significantly.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Underwater archaeology revealing Mongol fleet remains on the seabed of Imari Bay \u2014 ship timbers, ceramic bomb fragments, weapons and armor from the 1281 invasion, the physical evidence that confirmed what Japanese chronicles had described. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#1A2A3D",
+        "#3D3020"
+      ],
+      "duration_sec": 52,
+      "scene_number": 35
+    },
+    {
+      "type": "legacy",
+      "title": "Japan's Isolation \u2014 The Long Consequence",
+      "narration": "The Mongol invasions reinforced Japan's sense of divine protection and uniqueness \u2014 a belief that the islands were not merely a country but a sacred space under supernatural guardianship. This contributed to the isolationist policies that would keep Japan largely closed to the outside world from the 17th century until 1853. The samurai class that had defended against the Mongols but failed to win their expected land rewards from the Kamakura Shogunate became politically destabilized \u2014 one of the causes of the shogunate's eventual collapse in 1333. The invasions that failed militarily had significant domestic political consequences.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Japan's Edo period isolation \u2014 the closed ports, the sakoku policy that kept Japan sealed from the outside world for over 200 years, the long-term consequence of the divine protection mythology the Mongol invasions had created. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#C9A227",
+        "#2C2A1A"
+      ],
+      "duration_sec": 52,
+      "scene_number": 36
+    },
+    {
+      "type": "close",
+      "title": "The Storms That Saved Civilization",
+      "narration": "The Mongol invasions of Japan are a study in the role of contingency in history. The two most powerful military forces the medieval world had produced \u2014 the Mongol army and navy at the peak of their capability \u2014 were defeated partly by stone walls and samurai courage, and decisively by weather. History is not purely the product of human will and capability. Sometimes a typhoon decides. The Japanese understood this and called it divine. The Mongols, who had never been beaten by anyone, apparently had no theological framework for storms that sided with the enemy. What is certain is that the 140,000 soldiers who drowned in August 1281 were never replaced, and Japan was never invaded again until 1945.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The coastline of Kyushu today \u2014 peaceful fishing villages where the Mongol fleet once assembled, the stone wall's remnants visible in museum displays, the tranquil sea that twice destroyed the largest naval force of the medieval world. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#1A2A3D",
+        "#3D3020"
+      ],
+      "duration_sec": 56,
+      "scene_number": 37
+    },
+    {
+      "type": "history",
+      "title": "Korea's Role \u2014 The Reluctant Staging Ground",
+      "narration": "Korea \u2014 the Goryeo kingdom \u2014 was essential to both Mongol invasions of Japan. Kublai Khan had conquered Korea in 1231 after a decade of brutal warfare; the country was devastated and its population decimated. When Kublai ordered the invasion of Japan, Korea provided the ships, the sailors, the ports, and a significant portion of the soldiers. Korean craftsmen built the fleet. Korean navigators knew the waters between Korea and Japan. Korean soldiers died in Hakata Bay. Korea had no choice in any of this \u2014 it was a conquered territory providing forced resources to its conqueror. The toll on Korean society of building two invasion fleets while already devastated by conquest was enormous.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Korean shipbuilders under Mongol supervision constructing the invasion fleet for Japan \u2014 the devastated Goryeo kingdom forced to provide ships, sailors, and soldiers for a conquest it had no interest in, the hidden cost of the Japanese defense. 16:9 cinematic.",
+      "bg_colors": [
+        "#3D3020",
+        "#2C1A00",
+        "#8B1A1A"
+      ],
+      "duration_sec": 52,
+      "scene_number": 38
+    },
+    {
+      "type": "detail",
+      "title": "The Japanese Intelligence System",
+      "narration": "Japan was not caught entirely by surprise in 1281. Regent Hojo Tokimune had informants in Korea who reported on fleet construction progress. He knew a second invasion was coming years before it arrived. The seven-year preparation period between the first and second invasions was used systematically: building the wall, training soldiers, constructing fast attack boats, and establishing a military command structure capable of coordinating a multi-island defense. Japanese Buddhist monks in Korea sent information through trade channels. The defense of Japan in 1281 was the product of seven years of intelligence-informed preparation, not improvisation. Defensive victory requires as much planning as offensive success.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Japanese agents in Korea observing the Mongol fleet construction and sending intelligence back to Japan through trade ships, the seven-year warning period that allowed Japan to build the wall and prepare its naval counterattack. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#1A2A3D",
+        "#3D3020"
+      ],
+      "duration_sec": 52,
+      "scene_number": 39
+    },
+    {
+      "type": "detail",
+      "title": "The Stone Wall \u2014 Engineering Against Empire",
+      "narration": "The Hakata Bay coastal defense wall was approximately 3 miles long, 5 feet high, and constructed of cut stone. It was built by forced labor from Kyushu domain lords \u2014 a significant political imposition that caused resentment. The wall served multiple functions: it blocked direct beach landings, channeled any landing force into prepared killing grounds, gave Japanese archers elevated positions over any beachhead, and denied the Mongols the space to deploy their cavalry. The wall was the correct solution to the specific tactical problem the Mongols presented. Regent Hojo Tokimune, who ordered it, understood what the 1274 battle had demonstrated and built the one tool that would neutralize it.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The stone defensive wall at Hakata Bay under construction and then complete \u2014 three miles of cut stone five feet high built by conscripted Kyushu laborers, the engineering solution to the Mongol cavalry and beachhead problem. 16:9 cinematic.",
+      "bg_colors": [
+        "#3D3020",
+        "#2C2010",
+        "#C9A227"
+      ],
+      "duration_sec": 52,
+      "scene_number": 40
+    },
+    {
+      "type": "detail",
+      "title": "Disease in the Fleet \u2014 The Enemy Kublai Couldn't Control",
+      "narration": "The 1281 Mongol fleet sat anchored offshore for seven weeks before the typhoon struck. Anchored fleets in warm water, packed with men, were disease factories. Contemporary accounts describe significant illness among the fleet's soldiers during the weeks before the storm. The combination of cramped conditions, inadequate sanitation, tropical water, and the physical stress of night raids and combat operations degraded the fleet's fighting capacity before the weather finished the job. The typhoon that destroyed the fleet struck an army already weakened by weeks of disease, failed combat operations, and the demoralization of being unable to break through a wall that should have been easy to overcome.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Mongol soldiers in the fleet's hold \u2014 cramped, sick, weeks offshore unable to land, the disease spreading through the packed ships in the summer heat before the typhoon arrived to complete what illness had begun. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#8B1A1A",
+        "#2C1A00"
+      ],
+      "duration_sec": 52,
+      "scene_number": 41
+    },
+    {
+      "type": "detail",
+      "title": "The Night Raiders \u2014 Samurai on Water",
+      "narration": "Japanese fast-boat raids on the anchored Mongol fleet were conducted by small crews of 10-20 men rowing light vessels under cover of darkness. They would approach silently, throw grappling hooks over the hull, board with swords, kill as many crew as possible, set fires, and escape before reinforcements arrived. These raids combined the samurai warrior ethos \u2014 close combat, personal courage, individual skill \u2014 with a tactical context where those qualities were actually effective. The Mongols had trouble defending against a threat that came from the water at night with no warning. Japanese records suggest these raids killed thousands over the seven-week standoff. They also destroyed the fleet's morale systematically.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Japanese samurai boarding a Mongol ship at night \u2014 grappling hooks catching the hull, warriors climbing silently, the brutal close-quarters combat in the darkness, the tactical innovation that turned samurai individual courage into an effective naval strategy. 16:9 cinematic.",
+      "bg_colors": [
+        "#8B1A1A",
+        "#0D1520",
+        "#3D3020"
+      ],
+      "duration_sec": 52,
+      "scene_number": 42
+    },
+    {
+      "type": "detail",
+      "title": "River Boats in Ocean Swells \u2014 The Fleet's Structural Weakness",
+      "narration": "The Jiangnan fleet \u2014 3,500 ships from southern China \u2014 was assembled largely from river boats and flat-bottomed coastal vessels never designed for open ocean travel. Southern China had the shipbuilding capacity but not the appropriate ship types for a transoceanic military operation. The flat-bottomed river boats were unstable in ocean swells, their joints opened in wave action, and they rode low in the water. When the typhoon struck, these vessels were the most vulnerable in the fleet: no deep keel to provide stability, no structural integrity against wave action, no sea-keeping ability. Kublai Khan had assembled the largest invasion fleet in history with the wrong ships. The typhoon exploited a structural flaw built into the enterprise from the beginning.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Flat-bottomed Chinese river boats being loaded with soldiers and pushed into the open ocean, their structural unsuitability for ocean travel visible in how they handle the swells \u2014 the engineering mistake that made the 1281 typhoon catastrophic. 16:9 cinematic.",
+      "bg_colors": [
+        "#2C2010",
+        "#0D1520",
+        "#3D3020"
+      ],
+      "duration_sec": 52,
+      "scene_number": 43
+    },
+    {
+      "type": "detail",
+      "title": "Kamikaze in World War II \u2014 The Circle Closes",
+      "narration": "In October 1944, Japanese pilots began flying suicide missions against the American fleet in the Philippines. Their commanding officer, Vice Admiral Onishi Takijiro, named the tactic 'kamikaze' \u2014 divine wind \u2014 explicitly invoking the storms that had saved Japan in 1274 and 1281. The pilots believed they were embodying the same principle: sacrificing themselves as Japan had been saved by sacrifice before. Between October 1944 and August 1945, approximately 3,860 kamikaze pilots died. They sank 34 American ships and damaged 368 more. The tactic was insufficient to change the war's outcome, but the mythology it drew on \u2014 the idea that Japan possessed divine protection \u2014 was 700 years old and had genuine historical roots.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Japanese kamikaze pilots receiving their mission briefing in 1944, the Zero fighters loaded with explosives, the pilots explicitly invoking the divine wind of 1281 as they prepared their suicide missions against the American fleet. 16:9 cinematic.",
+      "bg_colors": [
+        "#8B1A1A",
+        "#0D1520",
+        "#C9A227"
+      ],
+      "duration_sec": 52,
+      "scene_number": 44
+    },
+    {
+      "type": "detail",
+      "title": "Kublai Khan's Other Failed Invasions",
+      "narration": "Japan was not Kublai Khan's only failed invasion. In 1257-1258 he conquered Vietnam's Dai Viet kingdom \u2014 briefly. Vietnamese guerrilla resistance forced Mongol withdrawal three times. In 1293, a Mongol expedition to Java was outmaneuvered and forced to retreat. In 1277-1287, Burma was invaded and held temporarily before the cost of occupation proved prohibitive. The pattern is consistent: Mongol armies were devastating in open steppe warfare. In jungles, islands, and monsoon-soaked rice paddy terrain, they struggled. Japan was one of several places where the specific tactical advantages of Mongol warfare were neutralized by terrain, climate, and the absence of the open ground their cavalry needed.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Map of Kublai Khan's failed military campaigns \u2014 Japan twice, Vietnam three times, Java, Burma \u2014 the pattern of Mongol military limits emerging, the specific terrain and climate conditions that neutralized their tactical advantages. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#C9A227",
+        "#1A2A3D"
+      ],
+      "duration_sec": 52,
+      "scene_number": 45
+    },
+    {
+      "type": "analysis",
+      "title": "The Political Fallout \u2014 Japan Destabilized",
+      "narration": "The Mongol invasions destabilized Japan politically even though they failed militarily. The samurai who had defended Japan expected land grants as reward \u2014 the standard payment for military service. The Kamakura Shogunate had no new lands to distribute; they had defended existing territory, not conquered new territory. Thousands of warriors who had spent their own resources defending Japan received nothing. The resulting resentment weakened the Kamakura Shogunate, which fell in 1333. The invasions that failed militarily succeeded in beginning the political destabilization that destroyed the government that had defended Japan. Victory sometimes sows the seeds of the victor's subsequent collapse.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Japanese samurai presenting their claims for land grants after the Mongol invasions and receiving nothing, the resentment spreading through the warrior class, the political consequence of military success with no territorial gain to distribute. 16:9 cinematic.",
+      "bg_colors": [
+        "#3D3020",
+        "#C9A227",
+        "#8B1A1A"
+      ],
+      "duration_sec": 52,
+      "scene_number": 46
+    },
+    {
+      "type": "detail",
+      "title": "The Sengoku Period \u2014 Indirect Consequence",
+      "narration": "The fall of the Kamakura Shogunate in 1333 \u2014 partly destabilized by the Mongol invasion's political aftershocks \u2014 led to decades of civil war, multiple competing courts, and eventually the Sengoku period (1467-1615): 150 years of continuous internal warfare. This era produced Japan's most famous military figures \u2014 Oda Nobunaga, Toyotomi Hideyoshi, Tokugawa Ieyasu. The samurai culture that had defended against the Mongols turned inward, fighting each other in increasingly sophisticated ways. The military technology developed in the Sengoku period \u2014 including adoption of Portuguese firearms \u2014 made Japan militarily dominant in East Asia by 1600. The failed Mongol invasion chain-linked to Japan's military revolution three centuries later.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Japan during the Sengoku period \u2014 rival warlords fighting across a fractured country, the military culture the Mongol defense had strengthened now turned inward, producing the warriors and weapons that would dominate East Asia. 16:9 cinematic.",
+      "bg_colors": [
+        "#8B1A1A",
+        "#2C1A00",
+        "#3D3020"
+      ],
+      "duration_sec": 52,
+      "scene_number": 47
+    },
+    {
+      "type": "detail",
+      "title": "Hojo Tokimune \u2014 The Regent Who Saved Japan",
+      "narration": "Hojo Tokimune was eighteen years old when he became regent in 1268, and twenty when the first Mongol emissaries arrived demanding Japan's submission. He executed the emissaries. He was twenty-eight during the second invasion. His response was to order the death sentence for the second set of Mongol emissaries as well \u2014 which Japanese sources record he did to prevent his own officers from counseling submission. After the storms of 1281, he remained regent until his death in 1284 at age thirty-four. He had faced down the Mongol Empire twice before his thirty-fourth birthday, built the wall that stopped them, and organized the defense that held. He is one of history's most consequential men that Western audiences have never heard of.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Hojo Tokimune, regent of Japan, young and determined, ordering the execution of Mongol emissaries who demanded submission \u2014 the eighteen-year-old who would face down the Mongol Empire twice before his thirty-fourth birthday. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#2C1A00"
+      ],
+      "duration_sec": 52,
+      "scene_number": 48
+    },
+    {
+      "type": "detail",
+      "title": "The Archaeological Finds \u2014 Mongol Weapons Recovered",
+      "narration": "Since 2011, extensive underwater archaeology at Imari Bay and nearby sites has recovered over 3,800 artifacts from the Mongol fleet. Among the finds: iron bombs with surviving explosive residue, stone cannonballs, bronze mirrors, armor fragments, and most significantly, ceramic explosive projectiles (tetsuhau) \u2014 hollow ceramic spheres packed with iron shards, explosive charge, and sometimes incendiary material. These were among the most advanced weapons in the medieval world. Their recovery confirmed Japanese chronicle accounts that had been treated with skepticism. The Mongols weren't just numerically superior; they brought weapons Japan had never encountered. That Japan stopped them anyway makes the defense more remarkable.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Japanese and American archaeologists on the Imari Bay seabed, recovering Mongol artifacts from the 1281 fleet \u2014 iron bombs, ceramic explosive projectiles, armor fragments, the physical evidence of the most advanced weapons of the medieval world. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#1A2A3D",
+        "#3D3020"
+      ],
+      "duration_sec": 52,
+      "scene_number": 49
+    },
+    {
+      "type": "detail",
+      "title": "The Buddhist Response \u2014 Religion and Military Victory",
+      "narration": "Japanese Buddhist temples claimed credit for the typhoons through prayer. The Mongol invasions produced an enormous outpouring of religious activity: prayer campaigns at major temples, appeals to specific deities, ritual performances intended to invoke divine protection. After the storms destroyed the fleet, the temples that had prayed received imperial patronage. The narrative that prayer had produced the kamikaze became officially sanctioned. This created a self-reinforcing cycle: military crisis produced religious intensity, the crisis ended, the religious intensity was credited with the ending. Japanese Buddhism in the Kamakura period was profoundly shaped by the Mongol invasions \u2014 both in its organization and in its political influence.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Japanese Buddhist monks at Tofukuji temple performing emergency prayers during the Mongol fleet's offshore presence, the religious response to military crisis, the storm that answered the prayers and gave the temples enormous political credit. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#2C2A1A"
+      ],
+      "duration_sec": 52,
+      "scene_number": 50
+    },
+    {
+      "type": "legacy",
+      "title": "Japan's Isolation \u2014 The Sakoku Policy",
+      "narration": "In 1633, Tokugawa Japan implemented sakoku \u2014 literally 'chained country' \u2014 forbidding Japanese from traveling abroad and foreign ships from entering most Japanese ports. The policy lasted over 200 years until the American Commodore Matthew Perry forced it open in 1853. The mythology of divine protection \u2014 Japan as a sacred island that foreign powers could not enter \u2014 was one cultural foundation of sakoku. The Mongol invasions had been repelled; subsequent contacts with the outside world had been on Japan's terms. The policy that kept Japan closed to the world was partly built on the belief that Japan's isolation was divine rather than strategic. The typhoons of 1281 contributed to 200 years of deliberate isolation.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Edo period Japan under sakoku \u2014 the empty ports, the expelled foreign traders, the closed country, the deliberate isolation policy that the divine protection mythology the Mongol invasions had created helped sustain for over two centuries. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#C9A227",
+        "#2C2A1A"
+      ],
+      "duration_sec": 52,
+      "scene_number": 51
+    },
+    {
+      "type": "detail",
+      "title": "The Black Ships \u2014 1853 as Sequel",
+      "narration": "When Commodore Perry arrived in Tokyo Bay in 1853 with steam-powered warships \u2014 which the Japanese called 'black ships' \u2014 Japan had been closed for 220 years. The shock was immediate and profound: here was a foreign fleet that no divine wind was going to destroy. Within fifteen years, Japan had abolished the Shogunate, restored the Emperor, and begun the Meiji Restoration \u2014 the fastest industrialization in history. The country that had relied on storms to defeat a medieval fleet learned from the black ships that it needed to build its own modern military. Japan went from feudal to industrial in fifty years specifically because the divine protection model had been exposed as insufficient.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Commodore Perry's black steam warships in Tokyo Bay 1853 \u2014 the moment that demonstrated the divine protection mythology was insufficient against modern technology, the shock that triggered the Meiji Restoration and Japan's fastest-in-history industrialization. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#1A2A3D",
+        "#C9A227"
+      ],
+      "duration_sec": 52,
+      "scene_number": 52
+    },
+    {
+      "type": "detail",
+      "title": "Genghis Khan's Grandsons \u2014 The Empire at Its Limits",
+      "narration": "Kublai Khan's attempts to conquer Japan represented the final expansion of an empire his grandfather had built. Genghis Khan had conquered from the Pacific to Poland; his grandsons ruled from China to Persia. But the expansion had limits \u2014 limits defined by terrain, by climate, and by the increasing distance from the Mongolian steppe that was the empire's power base. Japan was too far. Vietnam was too wet. Java was too remote. The empire that had seemed limitless ran into physical constraints that no amount of organizational genius could overcome. Japan's survival was one data point in the larger story of the Mongol Empire's encounter with its own limits.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Map of the full Mongol Empire at its peak \u2014 from Korea to Poland, from China to Persia \u2014 with Japan marked as one of the places the empire could not reach, the limits of the world's largest contiguous empire visible in its blank spaces. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#2C1A00"
+      ],
+      "duration_sec": 52,
+      "scene_number": 53
+    },
+    {
+      "type": "close",
+      "title": "The Island That Said No to Everything",
+      "narration": "Japan said no to the Mongol Empire \u2014 twice \u2014 and was saved by weather it called divine. It said no to the outside world for 200 years after that. When the black ships of 1853 forced it to say yes, it responded by becoming the first non-Western country to industrialize successfully. When the kamikaze pilots of 1944 invoked the divine wind of 1281, they were reaching back to the deepest story in Japanese national mythology: that Japan was protected, that its enemies would be destroyed, that the island was unconquerable. That mythology was built on real storms in 1274 and 1281. The storms were real. The protection was real. The mythology outlasted the conditions that had created it.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Japan today \u2014 Mount Fuji reflected in a still lake, the ancient and modern coexisting, a nation whose deepest national myth was written by typhoons in 1281 and whose history since has been a conversation with that origin story. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#C9A227",
+        "#3D3020"
+      ],
+      "duration_sec": 56,
+      "scene_number": 54
+    },
+    {
+      "type": "legacy",
+      "title": "Japan's Modern Military \u2014 The Self-Defense Force",
+      "narration": "Article 9 of Japan's postwar constitution, written under American occupation in 1947, renounced war and prohibited maintaining military forces. Japan built the Self-Defense Force instead \u2014 technically not a military, though equipped and trained as one. The constitutional debate over Article 9 has continued for 75 years. The Mongol invasions of 1274 and 1281 are part of this conversation: Japan had been invaded before, had survived through a combination of human courage and natural disaster, and the question of whether to rely on divine protection or build conventional military capacity has run through Japanese strategic thinking ever since. The storms of 1281 created a mythology that took nuclear bombs and occupation to begin revising.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Japan's postwar Self-Defense Force in training \u2014 the constitutional debate over Article 9 visible in the tension between a nation with a warrior tradition and a constitution that renounced war, the long shadow of the kamikaze mythology in modern Japanese strategic identity. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#C9A227",
+        "#1A2A3D"
+      ],
+      "duration_sec": 52,
+      "scene_number": 55
+    },
+    {
+      "type": "close",
+      "title": "The Sea That Saved the World \u2014 1281's Legacy",
+      "narration": "In August 1281, approximately 140,000 soldiers sat on ships in Hakata Bay waiting for conditions to improve. They had the largest fleet ever assembled. They had the most powerful army of the medieval world. They had already proven they could defeat Japanese land forces. And then the ocean killed them. The same sea that isolated Japan also protected it. The storm that destroyed Kublai Khan's fleet was not miraculous \u2014 typhoons are predictable in the Sea of Japan in August. What was remarkable was that the Mongols ignored the prediction. Japan survived because the greatest conqueror of the medieval world made a planning error about weather. Sometimes civilization is saved by a calendar.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The Sea of Japan in typhoon season \u2014 the waves that destroyed 4,400 ships, the coastline of Kyushu where 140,000 soldiers drowned, the natural barrier that protected Japan when human defenders could not. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#1A2A3D",
+        "#3D3020"
+      ],
+      "duration_sec": 56,
+      "scene_number": 56
     }
   ]
 }

@@ -3,10 +3,15 @@
   "channel": "GG",
   "title": "Stalingrad: The City That Broke an Empire",
   "tagline": "Two million casualties. One ruined city. The battle that turned the war.",
-  "duration_target_min": 20,
+  "duration_target_min": 50,
   "aesthetic": {
     "color_grade": "cinematic_eastern_front_winter",
-    "primary_colors": ["#1A1F26", "#8B1A1A", "#5C6B73", "#C9A84C"],
+    "primary_colors": [
+      "#1A1F26",
+      "#8B1A1A",
+      "#5C6B73",
+      "#C9A84C"
+    ],
     "font_style": "serif_documentary_bold",
     "music_style": "hans_zimmer_conquest_epic",
     "narrator_tone": "authoritative_punchy_dramatic"
@@ -29,7 +34,11 @@
       "title": "The Deadliest Battle in History",
       "narration": "Between August 1942 and February 1943, in and around a single city on the banks of the Volga River, the German and Soviet armies fought a battle that would kill more people than any other single battle in recorded history. Estimates of total casualties — soldiers and civilians, killed, wounded, captured, and missing — run past two million. The city was Stalingrad. By the time it was over, it would break the German army's momentum on the Eastern Front for good.",
       "visual_prompt": "Gods & Glory cinematic historical documentary. Aerial view of the ruined city of Stalingrad, rubble and skeletal building frames stretching to the horizon along the Volga River, smoke rising. Bleak, devastating scale. 16:9.",
-      "bg_colors": ["#1A1F26", "#8B1A1A", "#5C6B73"],
+      "bg_colors": [
+        "#1A1F26",
+        "#8B1A1A",
+        "#5C6B73"
+      ],
       "duration_sec": 50
     },
     {
@@ -38,7 +47,11 @@
       "title": "Why Stalingrad Mattered",
       "narration": "By the summer of 1942, Germany's invasion of the Soviet Union had stalled short of its main objectives, and Hitler shifted strategy south, aiming to seize the Caucasus oil fields that Germany's war machine desperately needed. Stalingrad itself was a secondary objective at first — an industrial city on the Volga, important as a transport hub, but not the original primary target. It became central almost by accident, then took on overwhelming symbolic weight because it carried Stalin's name. Neither dictator could afford to be seen losing a city named after himself.",
       "visual_prompt": "Gods & Glory cinematic historical documentary. German military planning room with a map of southern Russia and the Caucasus oil fields, officers debating strategy. Cut to a wide shot of Stalingrad's industrial skyline before the destruction. 16:9.",
-      "bg_colors": ["#1A1F26", "#5C6B73", "#8B1A1A"],
+      "bg_colors": [
+        "#1A1F26",
+        "#5C6B73",
+        "#8B1A1A"
+      ],
       "duration_sec": 50
     },
     {
@@ -47,7 +60,11 @@
       "title": "The City on the Volga",
       "narration": "Stalingrad stretched for nearly twenty-five miles along the western bank of the Volga River, a narrow industrial city built around factories that, even as the battle raged, continued producing tanks and weapons for the Soviet defenders. Its geography meant that German forces, attacking from the west, had to fight through the entire depth of the city to reach the river — and Soviet reinforcements had to be ferried across that same river under constant German fire to reach the fighting at all.",
       "visual_prompt": "Gods & Glory cinematic historical documentary. Wide cinematic view of Stalingrad's narrow layout along the Volga River, factories and apartment blocks compressed against the riverbank, the geography that would decide the battle. 16:9.",
-      "bg_colors": ["#5C6B73", "#1A1F26", "#C9A84C"],
+      "bg_colors": [
+        "#5C6B73",
+        "#1A1F26",
+        "#C9A84C"
+      ],
       "duration_sec": 46
     },
     {
@@ -56,7 +73,11 @@
       "title": "The Luftwaffe Levels the City",
       "narration": "On August 23rd, 1942, German bombers carried out a massive air raid on Stalingrad, killing thousands of civilians and reducing much of the city to rubble in a single day. Paradoxically, this devastation helped the eventual Soviet defense — the wreckage created an endless maze of rubble, basements, and shattered buildings that turned every street into a defensible position and neutralized Germany's advantages in open mobile warfare.",
       "visual_prompt": "Gods & Glory cinematic historical documentary. German bombers releasing payloads over Stalingrad, the city erupting into flame and smoke below, buildings collapsing into rubble. Devastating aerial destruction. 16:9.",
-      "bg_colors": ["#8B1A1A", "#1A1F26", "#5C6B73"],
+      "bg_colors": [
+        "#8B1A1A",
+        "#1A1F26",
+        "#5C6B73"
+      ],
       "duration_sec": 46
     },
     {
@@ -65,7 +86,11 @@
       "title": "The Rat War",
       "narration": "German soldiers who fought in Stalingrad's ruins began calling the urban combat Rattenkrieg — the rat war. Fighting collapsed into brutal, close-quarters combat through basements, sewers, and the shells of apartment buildings, sometimes with Germans and Soviets holding different floors of the same building simultaneously. Distances between combatants frequently shrank to a few yards. German general Friedrich Paulus's own staff noted that the conventional tactics his army had used to conquer most of Europe were almost useless here — there was no room to maneuver, only room to crawl forward room by room and kill the men in front of you.",
       "visual_prompt": "Gods & Glory cinematic historical documentary. Close, claustrophobic urban combat inside a ruined apartment building, German and Soviet soldiers fighting through rubble-strewn rooms and stairwells at point-blank range. Gritty, intense. 16:9.",
-      "bg_colors": ["#1A1F26", "#5C6B73", "#8B1A1A"],
+      "bg_colors": [
+        "#1A1F26",
+        "#5C6B73",
+        "#8B1A1A"
+      ],
       "duration_sec": 52
     },
     {
@@ -74,7 +99,11 @@
       "title": "Pavlov's House",
       "narration": "One of the most famous episodes of the siege centers on a four-story apartment building that came to be known as Pavlov's House, after the sergeant who led roughly two dozen Soviet soldiers in defending it. The small garrison held the building for nearly two months against repeated German assaults, turning it into a fortified strongpoint overlooking a key square. Soviet propaganda later claimed, with some exaggeration, that German forces lost more men trying to take Pavlov's House than they lost capturing Paris.",
       "visual_prompt": "Gods & Glory cinematic historical documentary. Soviet soldiers defending a fortified apartment building, sandbags and barricades in shattered windows, repelling a German assault outside. Determined, fortress-like atmosphere. 16:9.",
-      "bg_colors": ["#5C6B73", "#1A1F26", "#C9A84C"],
+      "bg_colors": [
+        "#5C6B73",
+        "#1A1F26",
+        "#C9A84C"
+      ],
       "duration_sec": 48
     },
     {
@@ -83,7 +112,11 @@
       "title": "The Snipers",
       "narration": "Stalingrad's ruins created ideal conditions for sniper warfare, and the Soviet Union actively trained and promoted sniper units to exploit it. The most famous, Vasily Zaitsev, was credited with hundreds of confirmed kills and became a celebrated propaganda figure used to boost Soviet morale. The psychological effect of snipers on German troops was significant — soldiers became afraid to expose themselves even briefly in areas snipers were known to be operating, slowing German movement through contested zones of the city.",
       "visual_prompt": "Gods & Glory cinematic historical documentary. Soviet sniper concealed in rubble, scoped rifle aimed through a gap in a destroyed wall, patient and still. Tense, quiet menace amid the city's ruins. 16:9.",
-      "bg_colors": ["#1A1F26", "#5C6B73", "#8B1A1A"],
+      "bg_colors": [
+        "#1A1F26",
+        "#5C6B73",
+        "#8B1A1A"
+      ],
       "duration_sec": 46
     },
     {
@@ -92,7 +125,11 @@
       "title": "Clinging to the Riverbank",
       "narration": "By mid-October 1942, German forces had pushed Soviet defenders back to a thin strip of the city along the Volga's western bank, in some places less than a few hundred yards deep. Soviet General Vasily Chuikov, commanding the defense, deliberately kept his front lines extremely close to German positions — sometimes only a building or a street apart — to deny German aircraft and artillery the room to bombard his men without risking their own troops. It was a desperate, exhausting strategy, and it worked.",
       "visual_prompt": "Gods & Glory cinematic historical documentary. Soviet defenders dug into a narrow strip along the Volga riverbank, German positions visible just streets away, the river behind them as the last line. Desperate, compressed defense. 16:9.",
-      "bg_colors": ["#5C6B73", "#1A1F26", "#8B1A1A"],
+      "bg_colors": [
+        "#5C6B73",
+        "#1A1F26",
+        "#8B1A1A"
+      ],
       "duration_sec": 48
     },
     {
@@ -101,7 +138,11 @@
       "title": "Operation Uranus",
       "narration": "On November 19th, 1942, the Soviet Union launched Operation Uranus — a massive counteroffensive that had been secretly planned and assembled for weeks while German attention remained fixed on the grinding fight inside the city. Soviet forces struck not at the strong German Sixth Army directly, but at the weaker Romanian and Italian forces protecting its flanks. Those flanks collapsed within days. Three days later, the Soviet pincers met west of the city, sealing roughly 250,000 Axis soldiers inside a pocket with no way out.",
       "visual_prompt": "Gods & Glory cinematic historical documentary. Soviet tank columns breaking through weak flank positions on the snow-covered steppe, pincer movements converging on a map-style overlay showing the encirclement closing. Decisive, sweeping counterattack. 16:9.",
-      "bg_colors": ["#5C6B73", "#1A1F26", "#C9A84C"],
+      "bg_colors": [
+        "#5C6B73",
+        "#1A1F26",
+        "#C9A84C"
+      ],
       "duration_sec": 50
     },
     {
@@ -110,7 +151,11 @@
       "title": "Hitler's Fatal Order",
       "narration": "With the Sixth Army surrounded, Hitler refused to authorize a breakout, insisting the army hold its position while Germany attempted to resupply it by air and mount a relief operation from outside. The airlift never came close to delivering the supplies the trapped army needed to survive a Russian winter. The relief operation failed to break through. Trapped, freezing, and running out of ammunition and food, the Sixth Army's situation deteriorated through December and January with no realistic path to rescue.",
       "visual_prompt": "Gods & Glory cinematic historical documentary. German soldiers trapped in frozen trenches and ruined buildings inside the pocket, supply crates parachuting down inadequately from transport planes overhead, brutal winter conditions. Bleak, desperate. 16:9.",
-      "bg_colors": ["#1A1F26", "#5C6B73", "#8B1A1A"],
+      "bg_colors": [
+        "#1A1F26",
+        "#5C6B73",
+        "#8B1A1A"
+      ],
       "duration_sec": 50
     },
     {
@@ -119,7 +164,11 @@
       "title": "The Promotion Designed to Kill Him",
       "narration": "On January 30th, 1943, with his Sixth Army on the brink of total collapse, Hitler promoted General Friedrich Paulus to Field Marshal. It was not a reward. No German field marshal had ever surrendered or been captured in the history of the rank, and Hitler's promotion was widely understood — by Paulus, by his own staff, and by history since — as a calculated message: die by your own hand rather than become the first. The next day, January 31st, 1943, Paulus surrendered to Soviet forces anyway. When Hitler learned of it, he reportedly flew into a rage and vowed never to promote another field marshal for the rest of the war.",
       "visual_prompt": "Gods & Glory cinematic historical documentary. Field Marshal Paulus in a freezing basement headquarters, exhausted and resigned, reading the promotion order with a grim expression, the weight of the implied message visible on his face. Somber, historically precise. 16:9.",
-      "bg_colors": ["#1A1F26", "#5C6B73", "#C9A84C"],
+      "bg_colors": [
+        "#1A1F26",
+        "#5C6B73",
+        "#C9A84C"
+      ],
       "duration_sec": 54
     },
     {
@@ -128,7 +177,11 @@
       "title": "The Surrender",
       "narration": "Ninety-one thousand German and Axis soldiers were taken prisoner in the final surrender, the survivors of an army that had numbered nearly 300,000 at its peak inside the pocket. Most were already starving, frostbitten, and sick by the time they surrendered. Of those 91,000 men marched into Soviet captivity, only an estimated five to six thousand ever returned home — the rest died in Soviet prison camps over the following years from disease, exhaustion, and the conditions of captivity in a country whose own civilians had suffered immensely under the German invasion.",
       "visual_prompt": "Gods & Glory cinematic historical documentary. Long columns of defeated, frostbitten German soldiers being marched into captivity across the snow-covered steppe, grim and exhausted. Somber, historically weighty. 16:9.",
-      "bg_colors": ["#5C6B73", "#1A1F26", "#8B1A1A"],
+      "bg_colors": [
+        "#5C6B73",
+        "#1A1F26",
+        "#8B1A1A"
+      ],
       "duration_sec": 48
     },
     {
@@ -137,7 +190,11 @@
       "title": "Paulus After Stalingrad",
       "narration": "Friedrich Paulus spent the rest of the war in Soviet captivity, where he eventually became a vocal critic of Hitler and the Nazi regime, joining a Soviet-sponsored committee of German officers calling for an end to the war. He testified against former colleagues at the Nuremberg trials and lived out the remainder of his life in East Germany. Whether this was genuine conviction or survival under pressure remains debated by historians, but the man Hitler had tried to manipulate into a symbolic death spent the rest of his life working against the regime that had promoted him in order to kill him.",
       "visual_prompt": "Gods & Glory cinematic historical documentary. Paulus in later years in East Germany, an older man in plain clothes, a quiet and reflective scene contrasting sharply with his earlier military command. Reflective, historically grounded. 16:9.",
-      "bg_colors": ["#5C6B73", "#C9A84C", "#1A1F26"],
+      "bg_colors": [
+        "#5C6B73",
+        "#C9A84C",
+        "#1A1F26"
+      ],
       "duration_sec": 46
     },
     {
@@ -146,7 +203,11 @@
       "title": "The Civilian Toll",
       "narration": "Civilian casualties at Stalingrad were catastrophic and are often overlooked next to the military death toll. An estimated forty thousand civilians were killed in the initial bombing alone, and Soviet authorities did not fully evacuate the city before the fighting began, leaving much of the civilian population trapped in the crossfire for months. Survivors lived in basements and ruins alongside soldiers, with almost no food, through one of the coldest and most violent urban battles of the entire war.",
       "visual_prompt": "Gods & Glory cinematic historical documentary. Civilians huddled in a ruined basement shelter amid the ongoing battle above, makeshift living conditions, quiet suffering depicted with dignity and restraint. Somber, human-scale tragedy. 16:9.",
-      "bg_colors": ["#1A1F26", "#5C6B73", "#8B1A1A"],
+      "bg_colors": [
+        "#1A1F26",
+        "#5C6B73",
+        "#8B1A1A"
+      ],
       "duration_sec": 46
     },
     {
@@ -155,7 +216,11 @@
       "title": "Why Germany Lost the City",
       "narration": "Military historians generally point to several compounding German failures: underestimating Soviet reserves and the scale of the planned counteroffensive, overextending supply lines deep into Soviet territory, relying on weaker allied Romanian and Italian forces to hold critical flanks, and Hitler's refusal to authorize a breakout once encirclement became obvious. No single mistake caused the disaster — it was the accumulation of overconfidence at almost every level of command, compounded by a Soviet army that had learned, at enormous cost, how to fight a war of attrition in terrain Germany could not out-maneuver.",
       "visual_prompt": "Gods & Glory cinematic historical documentary. Strategic map-style visualization showing German overextension, weak flanks, and the encirclement, narrated analysis made visual through dynamic cinematic map graphics. 16:9.",
-      "bg_colors": ["#1A1F26", "#5C6B73", "#C9A84C"],
+      "bg_colors": [
+        "#1A1F26",
+        "#5C6B73",
+        "#C9A84C"
+      ],
       "duration_sec": 48
     },
     {
@@ -164,7 +229,11 @@
       "title": "The Turning Point",
       "narration": "Stalingrad did not end the war on the Eastern Front — fighting would continue for another two and a half brutal years, all the way to Berlin. But it marked the last major strategic German offensive in the east and the point at which the strategic initiative permanently shifted to the Soviet Union. From Stalingrad onward, the German army in the east was almost always reacting to Soviet offensives rather than launching its own. Historians widely consider it the single battle that broke the back of Germany's eastern campaign, even though the war ground on for years afterward.",
       "visual_prompt": "Gods & Glory cinematic historical documentary. Soviet forces beginning their long westward advance from the ruins of Stalingrad, tanks and infantry moving forward against a winter horizon, the strategic shift made visual. Resolute, momentous. 16:9.",
-      "bg_colors": ["#5C6B73", "#1A1F26", "#C9A84C"],
+      "bg_colors": [
+        "#5C6B73",
+        "#1A1F26",
+        "#C9A84C"
+      ],
       "duration_sec": 48
     },
     {
@@ -173,7 +242,11 @@
       "title": "The Human Cost in Full",
       "narration": "Total casualties at Stalingrad — German, Romanian, Italian, Hungarian, and Soviet forces combined, plus civilians — are estimated at well over two million people killed, wounded, captured, or missing across the roughly six-month battle. It remains, by most estimates, the single deadliest battle in human history. The city itself was almost completely destroyed; postwar reconstruction took years, and the rebuilt city was renamed Volgograd in 1961.",
       "visual_prompt": "Gods & Glory cinematic historical documentary. Wide devastating panorama of Stalingrad's near-total destruction at the battle's end, snow covering rubble and wreckage as far as the eye can see. The true scale of the cost. 16:9.",
-      "bg_colors": ["#1A1F26", "#8B1A1A", "#5C6B73"],
+      "bg_colors": [
+        "#1A1F26",
+        "#8B1A1A",
+        "#5C6B73"
+      ],
       "duration_sec": 44
     },
     {
@@ -182,7 +255,11 @@
       "title": "The City Today",
       "narration": "Today, the rebuilt city of Volgograd is home to one of the largest war memorials in the world: the Motherland Calls statue, towering over the site of some of the heaviest fighting on Mamayev Hill. Veterans' associations and memorial services continue to mark the anniversary of the battle every year. For Russia, Stalingrad remains one of the central, defining events of the entire Second World War, taught and commemorated with a weight matched by few other battles in the country's history.",
       "visual_prompt": "Gods & Glory cinematic historical documentary. The massive Motherland Calls statue overlooking modern Volgograd, present-day memorial ceremonies, the city rebuilt and peaceful where ruins once stood. Monumental, reverent. 16:9.",
-      "bg_colors": ["#C9A84C", "#1A1F26", "#5C6B73"],
+      "bg_colors": [
+        "#C9A84C",
+        "#1A1F26",
+        "#5C6B73"
+      ],
       "duration_sec": 44
     },
     {
@@ -191,7 +268,11 @@
       "title": "Why This Still Matters",
       "narration": "Stalingrad is studied today as the definitive case study in the limits of military overextension, the danger of underestimating an opponent's capacity to absorb losses and rebuild, and the brutal effectiveness of urban combat in neutralizing a technologically superior attacking force. It also stands as a stark warning about what happens when political leaders, rather than military commanders, make decisions about when an encircled army should be allowed to retreat. Hitler's refusal to authorize a breakout is still cited in military academies as a textbook example of political interference overriding sound military judgment, at a catastrophic cost.",
       "visual_prompt": "Gods & Glory cinematic historical documentary. Modern military strategists and historians studying the Stalingrad encirclement in a contemporary academic or war-college setting, the lesson translated into present-day analysis. Thoughtful, analytical. 16:9.",
-      "bg_colors": ["#1A1F26", "#5C6B73", "#C9A84C"],
+      "bg_colors": [
+        "#1A1F26",
+        "#5C6B73",
+        "#C9A84C"
+      ],
       "duration_sec": 48
     },
     {
@@ -200,7 +281,11 @@
       "title": "What Stalingrad Actually Was",
       "narration": "Stalingrad was not a single dramatic battle but a six-month war of attrition fought street by street, then a sudden, decisive Soviet counterstroke that turned a German siege into a German catastrophe almost overnight. It was Rattenkrieg in the ruins, a field marshal promoted specifically to be pressured into suicide, and a death toll that still stands, by most counts, as the worst of any single battle in human history. The honest version is bleaker than the legend — and the legend doesn't need exaggeration to be staggering.",
       "visual_prompt": "Gods & Glory cinematic historical documentary. Final reflective wide shot blending the ruined wartime city with its peaceful modern reconstruction, day turning to dusk, the weight of history settling. Contemplative, summarizing tone. 16:9.",
-      "bg_colors": ["#1A1F26", "#8B1A1A", "#5C6B73"],
+      "bg_colors": [
+        "#1A1F26",
+        "#8B1A1A",
+        "#5C6B73"
+      ],
       "duration_sec": 48
     },
     {
@@ -209,16 +294,440 @@
       "title": "What Happened — The Summary",
       "narration": "August 1942. Germany attacks the city of Stalingrad, intending a quick secondary objective on the way to the Caucasus oil fields. Brutal urban combat grinds on for months, costing both sides enormous casualties. In November, the Soviet Union launches Operation Uranus, encircling roughly 250,000 Axis troops. Hitler refuses a breakout. The trapped army starves through the winter. On January 31st, 1943, newly-promoted Field Marshal Paulus surrenders against Hitler's explicit wishes. Total casualties exceed two million. The strategic initiative on the Eastern Front shifts to the Soviet Union for good.",
       "visual_prompt": "Gods & Glory cinematic historical documentary. Summary title card sequence: key Stalingrad moments in bold text over historical imagery — the siege, the encirclement, the surrender, the modern memorial. Final shot: the Motherland Calls statue at sunset. 16:9.",
-      "bg_colors": ["#1A1F26", "#C9A84C", "#8B1A1A"],
+      "bg_colors": [
+        "#1A1F26",
+        "#C9A84C",
+        "#8B1A1A"
+      ],
       "duration_sec": 50
     },
     {
-      "scene_number": 22,
+      "title": "Case Blue — Hitler's Last Gamble in the East",
+      "type": "context",
+      "narration": "By the summer of 1942, the German army on the Eastern Front had been fighting for a year and had failed to achieve its primary objective: the destruction of the Soviet military. The initial 1941 campaign had inflicted catastrophic losses on the Red Army but had not broken it. For the 1942 summer offensive, Hitler abandoned the original strategy of destroying Soviet forces and replaced it with an economic objective: capture the Caucasus oil fields, which supplied seventy percent of Soviet petroleum, and cut the Volga River, the main supply artery for the entire Soviet southern front. Case Blue — the operational plan — required two army groups to advance simultaneously southeast. It was a bold plan with a fatal flaw: it assumed the Soviet army was too weak to respond effectively. The same assumption had guided planning in 1941. It had been wrong then. It would be wrong again.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. The Eastern Front in summer 1942: the enormous scale of the theater. German army group dispositions. Case Blue planning maps: the arrows reaching southeast toward the Caucasus and the Volga. The oil fields of Baku shown as the strategic prize. Hitler's confidence: briefings showing Germany will win before winter. The fundamental assumption: Soviet resistance is nearly broken. Then: the Soviet side — factories relocated to the Urals producing T-34s faster than Germany expected. The flaw in the assumption made visible. Two armies advancing southeast. The city on the Volga that one of them will approach. Its name on the map. 16:9.",
+      "bg_colors": [
+        "#1A1A2E",
+        "#8B0000",
+        "#D4AF37"
+      ],
+      "duration_sec": 52,
+      "scene_number": 22
+    },
+    {
+      "title": "The T-34 — The Tank That Changed the War",
+      "type": "deep_dive",
+      "narration": "The German tanks that drove toward Stalingrad in 1942 were numerically superior but qualitatively vulnerable to a weapon they had first encountered in 1941 and had not yet solved: the Soviet T-34. The T-34 was designed by Mikhail Koshkin in the late 1930s and combined three advantages no other tank had simultaneously: sloped armor that deflected shells rather than absorbing them, a wide track that allowed movement in mud and snow where German tanks bogged down, and a diesel engine that did not catch fire when hit the way German gasoline engines did. German tank commanders confronting T-34s in 1941 filed urgent reports about the new tank. The German response — upgunning the Panzer IV and developing the Tiger and Panther — took time. At Stalingrad, the T-34 was becoming available in larger numbers. Inside the city's rubble, its main advantages — speed and range — mattered less than its mechanical reliability. But the fact of Soviet industrial production keeping pace with German losses was the strategic fact the German high command had not incorporated into its planning.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. The T-34: the tank's design shown — the sloped armor demonstrated with ballistics, shells deflecting rather than penetrating. The wide tracks in mud vs. German narrow tracks bogging. The diesel engine vs. the German gasoline engine catching fire. Mikhail Koshkin's design process. The German high command receiving the first T-34 encounter reports in 1941 — the alarm. The German response: upgunning the Panzer IV, developing the Tiger. The timeline problem: the gap between encountering the T-34 and fielding an answer. The Soviet factories in the Urals producing T-34s in vast numbers. The industrial equation that would decide the Eastern Front. 16:9.",
+      "bg_colors": [
+        "#4A4A4A",
+        "#1A1A2E",
+        "#D4AF37"
+      ],
+      "duration_sec": 52,
+      "scene_number": 23
+    },
+    {
+      "title": "Vasily Chuikov — The General Who Wouldn't Leave",
+      "type": "character_intro",
+      "narration": "The Soviet defense of Stalingrad was organized by one man more than any other: Vasily Chuikov, commander of the 62nd Army. Chuikov was given command of the Stalingrad garrison on September 10, 1942, with the city already partially in German hands and his army pressed against the western bank of the Volga with no room to retreat. He made a decision that became the tactical foundation of the entire battle: he moved his headquarters to within six hundred meters of the front line. This was not symbolism. It was functional. Close proximity to the fighting meant faster communication in a city where telephone wires lasted hours before being cut by artillery. It meant Chuikov understood immediately what his men needed. It meant that surrender — the option always available but never taken — was genuinely impossible. His soldiers were fighting with the Volga behind them. Chuikov told them: 'The Volga is our grave or our glory.' He meant it. For five months, he held.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Vasily Chuikov: his command post — a dugout on the Volga bank, 600 meters from the front lines, shellfire landing close enough to shake the walls. The command structure: phone lines cut by artillery within hours, runners replacing them. Chuikov moving the command post repeatedly as German advances closed in. His statements to his men: 'The Volga is our grave or our glory.' The map on his wall: the thin strip of Soviet-held ground on the west bank, at some points barely 100 meters deep. The man who had nowhere to go except forward, making that an operational principle. The 62nd Army's identity as the force that held Stalingrad. 16:9.",
+      "bg_colors": [
+        "#8B0000",
+        "#4A4A4A",
+        "#D4AF37"
+      ],
+      "duration_sec": 52,
+      "scene_number": 24
+    },
+    {
+      "title": "Pavlov's House — 58 Men Who Held for 58 Days",
+      "type": "battle",
+      "narration": "One building in Stalingrad has become the symbol of the entire battle: Pavlov's House, a four-story apartment building in the city center that a platoon of Soviet soldiers held from September 1942 to February 1943. Sergeant Yakov Pavlov led the initial assault that captured the building from German defenders. He then organized its defense — mining the approaches, building firing positions for machine guns and anti-tank rifles, connecting the building to neighboring positions through trenches and tunnels. Twenty-five to thirty men, from at least eight different Soviet nationalities, held it continuously. German forces never captured it. Chuikov later observed, with grim satisfaction, that the Germans lost more men trying to take Pavlov's House than they lost capturing Paris. The building's rubble-strewn facade has been preserved in modern Volgograd exactly as it was in 1943 — the bullet holes, the shell damage, the commemorative plaque. The defenders who survived became Heroes of the Soviet Union.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Pavlov's House: the four-story apartment building in Stalingrad's center, surrounded by rubble. The initial assault: Sergeant Pavlov and a small force taking it from the Germans. The defense built: mines laid around the perimeter, machine gun positions in every window, anti-tank rifles covering the street approaches. The multinational garrison: Russians, Ukrainians, Kazakhs, Uzbeks, Georgians, Abkhazians, Tatars. German assault after German assault repulsed. The building holding for 58 days. Chuikov's comparison: the Germans lost more men here than capturing Paris. The building today in Volgograd: preserved with its battle damage, a memorial plaque, still standing. 16:9.",
+      "bg_colors": [
+        "#8B0000",
+        "#4A4A4A",
+        "#D4AF37"
+      ],
+      "duration_sec": 52,
+      "scene_number": 25
+    },
+    {
+      "title": "Operation Uranus — Zhukov's Masterstroke",
+      "type": "battle",
+      "narration": "While the German 6th Army was being bled white inside Stalingrad, the Soviet high command — Stavka — was planning something the Germans had not expected: not the relief of Stalingrad but the encirclement of the army attacking it. Operation Uranus was conceived by Georgy Zhukov and Aleksandr Vasilevsky and approved by Stalin in September 1942, while the city was still under assault. The plan targeted the weakest points in the German line: the Romanian and Italian armies holding the flanks of the 6th Army. These were Germany's allied forces, less well equipped, less experienced, and thinly spread over enormous frontages. The Soviet buildup for Uranus was conducted in strict secrecy, at night, in the November cold. On November 19, over a million Soviet soldiers attacked simultaneously from the north and south. Within four days, the encirclement was complete. The German 6th Army — nearly three hundred thousand men — was trapped inside Stalingrad. The besiegers had become the besieged.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. The Soviet planning for Uranus: Zhukov and Vasilevsky presenting the plan to Stalin — their confidence, Stalin's approval. The secret buildup: Soviet forces moving at night, maintaining radio silence, the German intelligence failing to detect the scale. The Romanian and Italian armies on the German flanks: their thin lines, their inadequate equipment. November 19: the two-pronged attack launched simultaneously — south of Stalingrad from the north, 6th Army from the south. The pincers closing over four days. The encirclement complete: the map showing 300,000 Germans surrounded inside Stalingrad and the land corridor it controlled. The hunter become the hunted. 16:9.",
+      "bg_colors": [
+        "#1A1A2E",
+        "#8B0000",
+        "#D4AF37"
+      ],
+      "duration_sec": 52,
+      "scene_number": 26
+    },
+    {
+      "title": "The Airlift That Couldn't — Goering's Broken Promise",
+      "type": "deep_dive",
+      "narration": "After the encirclement, Paulus requested permission to break out. Hitler refused: Stalingrad must not be surrendered. Hermann Goering, head of the Luftwaffe, made a promise: the air force could supply the 6th Army from the air, delivering the 700 tons of supplies per day required. Goering's staff told him 700 tons was impossible. He promised it anyway. The actual average daily delivery was about 100 tons — less than a sixth of what was needed. The temperatures dropped to minus thirty Celsius. Transport aircraft froze on runways. Soviet anti-aircraft guns took steady toll. The German soldiers inside Stalingrad's kessel — the pocket — began to starve. Their daily rations were eventually cut to about 300 calories per day, less than a quarter of minimum sustenance. Horses were slaughtered for meat, then the leather of harnesses. Soldiers died from hypothermia, from starvation, from the wounds that couldn't be treated because medical supplies weren't there. The airlift was not a failure of execution. It was a failure of honesty: Goering promised something he knew was impossible.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Goering's promise: the conference where he commits to supplying Stalingrad by air, the Luftwaffe staff officers knowing it's impossible, no one contradicting him. The airlift in practice: Ju-52 transport planes in the extreme cold, Soviet AA fire taking them down, the loads arriving at a fraction of the promise. Temperature gauges at minus 30 Celsius. The 6th Army's ration reduction visualized: 1800 calories to 1200 to 300. Soldiers cooking horse harnesses for leather soup. The medical situation: wounded men dying for lack of basic supplies. The contrast: Goering's confident promise vs. the reality of men starving inside the pocket. The gap between what leaders say and what soldiers live. 16:9.",
+      "bg_colors": [
+        "#4A4A4A",
+        "#1A1A2E",
+        "#D4AF37"
+      ],
+      "duration_sec": 52,
+      "scene_number": 27
+    },
+    {
+      "title": "Paulus's Surrender — A Field Marshal Who Should Have Fought",
+      "type": "deep_dive",
+      "narration": "On January 30, 1943 — the tenth anniversary of Hitler's seizure of power — Hitler promoted Friedrich Paulus to Field Marshal. It was a calculated signal: no German Field Marshal had ever surrendered. The next day, Paulus surrendered. He was captured in the basement of the Univermag department store with his staff. He was thin, sick, and had made no attempt to fight his way out when the Soviet forces finally closed in. His surrender was the largest capitulation of German forces in the war. Ninety-one thousand soldiers — all that remained of the original three hundred thousand — marched into Soviet captivity. Most would not return. Paulus spent eleven years as a Soviet prisoner, eventually joining the German Democratic Republic's military advisory committee. Hitler, when he heard of the surrender, was reportedly speechless with rage, then made a long speech about how a Field Marshal's pistol had six bullets and one of them was meant for himself. Paulus had chosen differently. He lived until 1957.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Paulus's last days: the basement of the Univermag department store, his staff around him, Soviet forces closing on the building from all sides. His condition: haggard, ill, having not slept properly in weeks. The surrender negotiation. Paulus being led out into the snow, captured — photographs that circled the world. The 91,000 survivors marching into captivity across frozen Stalingrad streets. Hitler receiving the news: his rage, his speech about the pistol. Paulus in Soviet captivity: the years passing, 11 years before repatriation. His decision to live and its long aftermath. The German Field Marshal who survived the battle he lost. 16:9.",
+      "bg_colors": [
+        "#8B0000",
+        "#4A4A4A",
+        "#D4AF37"
+      ],
+      "duration_sec": 52,
+      "scene_number": 28
+    },
+    {
+      "title": "The Turning Point Debate — Did Stalingrad Win the War?",
+      "type": "analysis",
+      "narration": "Stalingrad is universally called the turning point of World War II on the Eastern Front. This is partially true and worth examining carefully. By February 1943, Germany had lost an entire army — nearly three hundred thousand men, with all their equipment — and had suffered a defeat so obvious and so public that even German propaganda could not fully conceal it. But the war in the East continued for two and a half more years. Germany launched one more major offensive — at Kursk in July 1943 — and failed. After Kursk, the strategic initiative on the Eastern Front belonged to the Soviet Union and never returned to Germany. Stalingrad broke the psychological and material momentum of the German advance. Kursk confirmed that the turning point was real and durable. Together, they mark the point after which German victory in the East was no longer possible. But the war from February 1943 to May 1945 killed more soldiers and civilians than all the fighting before Stalingrad. Turning points do not mean endings.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. The turning point debate: a timeline of the Eastern Front from June 1941 to May 1945. Stalingrad marked on it. The trajectory before: German advance, Soviet retreats. The trajectory after: Soviet advance, German retreats. Kursk in July 1943 as the confirmation of the turn. The years of fighting remaining after Stalingrad: the distances, the casualty figures continuing to mount. The question: if Stalingrad was the turning point, why did it take 28 more months? The answer: turning points are rarely endings. They are changes in trajectory that play out over time. The Eastern Front's immense scale making even a decisive battle a first step rather than a final one. 16:9.",
+      "bg_colors": [
+        "#4A3728",
+        "#D4AF37",
+        "#1A1A2E"
+      ],
+      "duration_sec": 52,
+      "scene_number": 29
+    },
+    {
+      "title": "The Stalingrad Memorial — Rodina Mat Calls",
+      "type": "deep_dive",
+      "narration": "The city of Stalingrad was renamed Volgograd in 1961, as part of Khrushchev's de-Stalinization program. On the Mamayev Kurgan hill — the strategic height that changed hands many times during the battle and where the bones of thousands of soldiers still lie in the ground — the Soviet Union built the largest freestanding statue in the world when it was completed in 1967. The Motherland Calls — Rodina Mat Zovyot — is a concrete and steel figure of a woman, sword raised, calling her children to battle. She stands 85 meters tall, taller than the Statue of Liberty from base to torch. Her sword alone is 33 meters. Around the base, the names of those who fell are inscribed. The eternal flame burns below. The hall at the base contains the names of seven thousand soldiers. At the foot of the Mamayev Kurgan, new bodies are still found during construction work — Soviet and German soldiers who have been in the ground for eighty years. Volgograd is quiet now. The bones beneath it are not.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Volgograd today and the Mamayev Kurgan: the hill above the city where the fiercest fighting occurred. The Rodina Mat statue: 85 meters tall, concrete and steel, sword raised, the face expressing fierce call to battle. Scale comparison: taller than the Statue of Liberty from base to torch. The Hall of Military Glory at the base: the eternal flame, the inscribed names of 7,000 soldiers. Construction workers in modern Volgograd finding bones — German and Soviet soldiers still in the ground after 80 years. The quiet city over a battlefield. The memorial as the city's identity: the city that stopped the German advance, the city rebuilt over the dead. 16:9.",
+      "bg_colors": [
+        "#1A1A2E",
+        "#8B0000",
+        "#D4AF37"
+      ],
+      "duration_sec": 52,
+      "scene_number": 30
+    },
+    {
+      "title": "Case Blue — Hitler's Last Gamble in the East",
+      "type": "context",
+      "narration": "By the summer of 1942, the German army on the Eastern Front had failed to achieve its primary objective: the destruction of the Soviet military. The initial 1941 campaign inflicted catastrophic losses on the Red Army but had not broken it. For the 1942 summer offensive, Hitler abandoned the original strategy of destroying Soviet forces and replaced it with an economic objective: capture the Caucasus oil fields, which supplied seventy percent of Soviet petroleum, and cut the Volga River, the main supply artery for the Soviet southern front. Case Blue assumed the Soviet army was too weak to respond effectively. The same assumption had guided planning in 1941. It had been wrong then. It would be wrong again.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. The Eastern Front in summer 1942: the enormous scale of the theater. Case Blue planning maps: the arrows reaching southeast toward the Caucasus and the Volga. The oil fields of Baku as the strategic prize. Hitler's confidence: briefings showing Germany will win before winter. The fundamental assumption: Soviet resistance is nearly broken. Then: Soviet factories in the Urals producing T-34s faster than Germany expected. The flaw in the assumption. The city on the Volga that one army will approach. Its name on the map. 16:9.",
+      "bg_colors": [
+        "#1A1A2E",
+        "#8B0000",
+        "#D4AF37"
+      ],
+      "duration_sec": 52,
+      "scene_number": 31
+    },
+    {
+      "title": "The T-34 — The Tank That Changed the War",
+      "type": "deep_dive",
+      "narration": "The German tanks that drove toward Stalingrad in 1942 were qualitatively vulnerable to a weapon they had first encountered in 1941: the Soviet T-34. Designed by Mikhail Koshkin in the late 1930s, the T-34 combined three advantages no other tank had simultaneously: sloped armor that deflected shells rather than absorbing them, a wide track that allowed movement in mud and snow where German tanks bogged down, and a diesel engine that did not catch fire when hit the way German gasoline engines did. German tank commanders filing urgent reports about the T-34 in 1941 discovered that the German response — upgunning the Panzer IV and developing the Tiger and Panther — would take time. At Stalingrad, the T-34 was becoming available in larger numbers. Soviet industrial production keeping pace with German losses was the strategic fact the German high command had not incorporated into its planning.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. The T-34: the sloped armor demonstrated with ballistics, shells deflecting. The wide tracks in mud vs. German narrow tracks bogging. The diesel engine vs. German gasoline engines catching fire. Mikhail Koshkin's design process. German high command receiving the first T-34 encounter reports in 1941 — the alarm. The German response timeline: the gap between encountering the T-34 and fielding an answer. Soviet factories in the Urals producing T-34s in vast numbers. The industrial equation that would decide the Eastern Front. 16:9.",
+      "bg_colors": [
+        "#4A4A4A",
+        "#1A1A2E",
+        "#D4AF37"
+      ],
+      "duration_sec": 52,
+      "scene_number": 32
+    },
+    {
+      "title": "The Eastern Front's Scale — A War Within a War",
+      "type": "context",
+      "narration": "The Eastern Front of World War II was a conflict so vast that it dwarfs every other theater of the war. Between June 1941 and May 1945, the Soviet Union suffered approximately 27 million deaths — military and civilian combined. Germany lost approximately 4 to 5 million soldiers killed on the Eastern Front alone. The distance from the front lines at Stalingrad to Berlin was over two thousand miles. The front at its greatest extent stretched from the Arctic Ocean to the Black Sea — a line approximately two thousand miles long. When Western audiences watch films about D-Day and the liberation of Western Europe, they are watching approximately fifteen percent of the land war in Europe. The other eighty-five percent happened on the Eastern Front. The decisions made at Stalingrad — by Hitler, by Stalin, by Paulus, by Zhukov — were the decisions that determined the outcome of World War II.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. The Eastern Front's scale: the map showing the full extent of the front from Arctic Ocean to Black Sea — two thousand miles of battle line. The casualty numbers: 27 million Soviet dead, 4-5 million German. Compared to the Western Front and Pacific Theater. The percentage breakdown: the Eastern Front as eighty-five percent of the European land war. The Western narrative showing fifteen percent. The cities destroyed, the populations displaced, the scale of destruction that has no parallel in human history. Stalingrad as the center of gravity of this immense conflict. 16:9.",
+      "bg_colors": [
+        "#8B0000",
+        "#4A4A4A",
+        "#D4AF37"
+      ],
+      "duration_sec": 52,
+      "scene_number": 33
+    },
+    {
+      "title": "Vasily Chuikov — The General Who Wouldn't Leave",
+      "type": "character_intro",
+      "narration": "The Soviet defense of Stalingrad was organized by one man more than any other: Vasily Chuikov, commander of the 62nd Army. Given command on September 10, 1942, with the city already partially in German hands, Chuikov made a decision that became the tactical foundation of the entire battle: he moved his headquarters to within six hundred meters of the front line. This was not symbolism. It was functional. Close proximity to the fighting meant faster communication in a city where telephone wires lasted hours before being cut by artillery. It meant Chuikov understood immediately what his men needed. It meant that surrender was genuinely impossible for anyone who might have contemplated it. His soldiers were fighting with the Volga behind them. Chuikov told them: 'The Volga is our grave or our glory.' For five months, he held.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Vasily Chuikov: his command post — a dugout on the Volga bank, 600 meters from the front lines, shellfire landing close enough to shake the walls. Phone lines cut by artillery within hours, runners replacing them. Chuikov moving the command post repeatedly as German advances closed in. His statements to his men: 'The Volga is our grave or our glory.' The map on his wall: the thin strip of Soviet-held ground on the west bank, at some points barely 100 meters deep. The man who had nowhere to go except forward, making that an operational principle. 16:9.",
+      "bg_colors": [
+        "#8B0000",
+        "#4A4A4A",
+        "#D4AF37"
+      ],
+      "duration_sec": 52,
+      "scene_number": 34
+    },
+    {
+      "title": "Pavlov's House — 58 Men Who Held for 58 Days",
+      "type": "battle",
+      "narration": "One building in Stalingrad has become the symbol of the entire battle: Pavlov's House, a four-story apartment building that a platoon of Soviet soldiers held from September 1942 to February 1943. Sergeant Yakov Pavlov led the initial assault that captured the building, then organized its defense — mining the approaches, building firing positions for machine guns and anti-tank rifles. Twenty-five to thirty men, from at least eight different Soviet nationalities, held it continuously. German forces never captured it. Chuikov later observed, with grim satisfaction, that the Germans lost more men trying to take Pavlov's House than they lost capturing Paris. The building's rubble-strewn facade has been preserved in modern Volgograd exactly as it was in 1943. The defenders who survived became Heroes of the Soviet Union.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Pavlov's House: the four-story apartment building in Stalingrad's center, surrounded by rubble. The initial assault: Sergeant Pavlov taking it from the Germans. The defense built: mines, machine gun positions in every window, anti-tank rifles covering the street approaches. The multinational garrison: Russians, Ukrainians, Kazakhs, Uzbeks, Georgians, Abkhazians, Tatars. German assault after assault repulsed. The building holding for 58 days. Chuikov's comparison: more men lost here than taking Paris. The building today in Volgograd: preserved with its battle damage. 16:9.",
+      "bg_colors": [
+        "#8B0000",
+        "#4A4A4A",
+        "#D4AF37"
+      ],
+      "duration_sec": 52,
+      "scene_number": 35
+    },
+    {
+      "title": "Hugging the Enemy — Chuikov's Tactical Innovation",
+      "type": "deep_dive",
+      "narration": "Chuikov's most important tactical innovation at Stalingrad was the one he called 'hugging the enemy.' The German military advantage over Soviet forces included overwhelming superiority in close air support — Stuka dive bombers that could destroy any Soviet position that was identified and marked. Chuikov's solution: move Soviet positions so close to German positions that Stuka attacks would hit German soldiers too. If Soviet and German soldiers were separated by only thirty meters, the Luftwaffe could not safely bomb the Soviets. The same logic applied to artillery: fighting in close quarters negated the advantage of the heavier German guns. By turning Stalingrad into a close-quarters street-fighting battle — precisely the kind of warfare that negated German advantages in air power and artillery — Chuikov turned German technological superiority into irrelevance in the rubble of the city. The battle was won, in part, by refusing to fight the kind of battle the Germans were better at fighting.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Chuikov's 'hugging the enemy' tactic demonstrated: the German Stuka dive-bomber approaching a position marked for attack. Soviet and German soldiers shown 30 meters apart — the bomb impact zone that would kill both sides. The Stuka's attack aborted. The same logic for artillery: close quarters negating heavy German guns. The rubble of Stalingrad shown as tactical terrain: the destroyed buildings providing cover and fighting positions. The city that the Germans assumed would fall quickly, turned into a killing ground that negated every German advantage. The genius of fighting in the one way that made technology irrelevant. 16:9.",
+      "bg_colors": [
+        "#4A4A4A",
+        "#1A1A2E",
+        "#D4AF37"
+      ],
+      "duration_sec": 52,
+      "scene_number": 36
+    },
+    {
+      "title": "Operation Uranus — Zhukov's Masterstroke",
+      "type": "battle",
+      "narration": "While the German 6th Army was being bled white inside Stalingrad, the Soviet high command was planning something the Germans had not expected: not the relief of Stalingrad but the encirclement of the army attacking it. Operation Uranus was conceived by Georgy Zhukov and Aleksandr Vasilevsky and approved by Stalin in September 1942. The plan targeted the weakest points in the German line: the Romanian and Italian armies holding the flanks. These were Germany's allied forces, less well equipped, less experienced, and thinly spread. The Soviet buildup was conducted in strict secrecy, at night, in the November cold. On November 19, over a million Soviet soldiers attacked simultaneously from the north and south. Within four days, the encirclement was complete. The German 6th Army — nearly three hundred thousand men — was trapped inside Stalingrad. The besiegers had become the besieged.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Soviet planning for Uranus: Zhukov and Vasilevsky presenting the plan to Stalin — their confidence, Stalin's approval. The secret buildup: Soviet forces moving at night, maintaining radio silence. The Romanian and Italian armies on the German flanks: their thin lines, inadequate equipment. November 19: the two-pronged attack launched simultaneously. The pincers closing over four days. The encirclement complete: the map showing 300,000 Germans surrounded inside Stalingrad. The hunter become the hunted. 16:9.",
+      "bg_colors": [
+        "#1A1A2E",
+        "#8B0000",
+        "#D4AF37"
+      ],
+      "duration_sec": 52,
+      "scene_number": 37
+    },
+    {
+      "title": "The Airlift That Couldn't — Goering's Broken Promise",
+      "type": "deep_dive",
+      "narration": "After the encirclement, Paulus requested permission to break out. Hitler refused: Stalingrad must not be surrendered. Hermann Goering promised he could supply the 6th Army from the air, delivering 700 tons of supplies per day. His own staff told him 700 tons was impossible. He promised it anyway. The actual average daily delivery was about 100 tons. The temperatures dropped to minus thirty Celsius. Transport aircraft froze on runways. The German soldiers inside Stalingrad began to starve. Their daily rations were eventually cut to about 300 calories — less than a quarter of minimum sustenance. Horses were slaughtered for meat, then the leather of harnesses. Soldiers died from hypothermia, starvation, wounds that couldn't be treated. The airlift was not a failure of execution. It was a failure of honesty: Goering promised something he knew was impossible.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Goering's promise: the conference where he commits to supplying Stalingrad by air, the Luftwaffe staff knowing it's impossible, no one contradicting him. The airlift in practice: Ju-52 transport planes in extreme cold, Soviet AA fire taking them down. Temperature gauges at minus 30 Celsius. The 6th Army's ration reduction: 1800 calories to 1200 to 300. Soldiers cooking horse harnesses for leather soup. The medical situation: wounded men dying for lack of supplies. Goering's confident promise vs. the reality of men starving inside the pocket. 16:9.",
+      "bg_colors": [
+        "#4A4A4A",
+        "#1A1A2E",
+        "#D4AF37"
+      ],
+      "duration_sec": 52,
+      "scene_number": 38
+    },
+    {
+      "title": "The Kessel — Life Inside the Stalingrad Pocket",
+      "type": "deep_dive",
+      "narration": "The Kessel — the 'cauldron' or pocket — that contained the German 6th Army after Operation Uranus was approximately forty miles wide and twenty miles deep. Inside it, conditions deteriorated rapidly through November and December 1942 and January 1943. The cold was the most immediate enemy: temperatures dropping to minus forty Celsius or below. Frostbite casualties mounted. Medical supplies were depleted. Food became the central preoccupation of every waking hour. German soldiers who had arrived in the Soviet Union in summer uniforms — because the German high command had assumed the war would be over before winter — were reduced to wearing whatever could be stripped from the dead, Soviet or German. The letters home that German soldiers wrote from the Kessel, many of which were collected by the Wehrmacht before the final surrender, describe a methodical psychological dissolution: first anger, then resignation, then a focus on the smallest details of daily survival.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. The Kessel in winter: the pocket shown on the map — forty miles wide, twenty miles deep, 300,000 men inside. The temperature: minus 40 Celsius. German soldiers in summer uniforms, wrapping themselves in strips of Soviet greatcoats stripped from the dead. Frostbite casualties: men losing fingers, toes, hands. The food calculation: the rations showing what 300 calories per day looks like. The letters home: German soldiers writing from inside the pocket. The psychological stages: anger, resignation, focus on daily survival. The Kessel as a world unto itself, cut off from the rest of the war, existing on its own terms. 16:9.",
+      "bg_colors": [
+        "#4A3728",
+        "#D4AF37",
+        "#1A1A2E"
+      ],
+      "duration_sec": 52,
+      "scene_number": 39
+    },
+    {
+      "title": "Paulus's Surrender — A Field Marshal Who Should Have Fought",
+      "type": "deep_dive",
+      "narration": "On January 30, 1943 — the tenth anniversary of Hitler's seizure of power — Hitler promoted Friedrich Paulus to Field Marshal. It was a calculated signal: no German Field Marshal had ever surrendered. The next day, Paulus surrendered. He was captured in the basement of the Univermag department store with his staff. Ninety-one thousand soldiers — all that remained of the original three hundred thousand — marched into Soviet captivity. Most would not return. Paulus spent eleven years as a Soviet prisoner, eventually joining the German Democratic Republic's military advisory committee. Hitler, when he heard of the surrender, made a long speech about how a Field Marshal's pistol had six bullets and one of them was meant for himself. Paulus had chosen differently. He lived until 1957.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Paulus's last days: the basement of the Univermag department store, his staff, Soviet forces closing on the building. His condition: haggard, ill, not having slept properly in weeks. The surrender negotiation. Paulus led out into the snow — photographs that circled the world. The 91,000 survivors marching into captivity across frozen Stalingrad streets. Hitler receiving the news: his rage, his speech about the pistol. Paulus in Soviet captivity: the years passing, 11 years before repatriation. The German Field Marshal who survived the battle he lost. 16:9.",
+      "bg_colors": [
+        "#8B0000",
+        "#4A4A4A",
+        "#D4AF37"
+      ],
+      "duration_sec": 52,
+      "scene_number": 40
+    },
+    {
+      "title": "The Stalingrad Turning Point — What Changed After February 1943",
+      "type": "analysis",
+      "narration": "Stalingrad is universally called the turning point of the Eastern Front. By February 1943, Germany had lost an entire army — nearly three hundred thousand men, with all their equipment — and had suffered a defeat so public that even German propaganda could not fully conceal it. But the war in the East continued for two and a half more years. Germany launched one more major offensive — at Kursk in July 1943 — and failed. After Kursk, the strategic initiative on the Eastern Front belonged to the Soviet Union and never returned to Germany. Stalingrad broke the psychological and material momentum of the German advance. Kursk confirmed that the turning point was real and durable. Together, they mark the point after which German victory in the East was no longer possible. But the war from February 1943 to May 1945 killed more soldiers and civilians than all the fighting before Stalingrad. Turning points do not mean endings.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. The turning point: a timeline of the Eastern Front from June 1941 to May 1945. Stalingrad marked on it. The trajectory before: German advance, Soviet retreats. The trajectory after: Soviet advance, German retreats. Kursk in July 1943 as the confirmation. The years of fighting remaining after Stalingrad: the distances, the casualty figures continuing to mount. The question: if Stalingrad was the turning point, why did it take 28 more months? The answer: turning points are changes in trajectory that play out over time. 16:9.",
+      "bg_colors": [
+        "#4A3728",
+        "#D4AF37",
+        "#1A1A2E"
+      ],
+      "duration_sec": 52,
+      "scene_number": 41
+    },
+    {
+      "title": "Zhukov — Stalin's Indispensable General",
+      "type": "character_intro",
+      "narration": "Georgy Zhukov is the most important Soviet military figure of World War II and one of the great commanders of the 20th century. He had survived Stalin's purges of the military high command in 1937-1938, which had eliminated the majority of the Red Army's experienced officers and contributed directly to the catastrophe of 1941. After the German invasion, Zhukov emerged as the general who could be relied upon: he organized the defense of Leningrad in September 1941, then was moved to organize the defense of Moscow in October. He planned and executed the December 1941 counteroffensive that pushed the Germans back from Moscow's outskirts — the first major German defeat of the war. He planned Operation Uranus, the encirclement at Stalingrad. He planned Operation Bagration in 1944, the destruction of Army Group Centre. He accepted Germany's surrender in Berlin on May 8, 1945. In any other country, Zhukov would be a national icon without complication. In the Soviet Union, Stalin's jealousy kept him in the shadows.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Zhukov: the face of the Soviet Union's most important general. The purges of 1937-1938 in the background: the eliminated officers. Zhukov's survival and rise. Leningrad September 1941: organizing the defense. Moscow October 1941: the city nearly surrounded. The December 1941 counteroffensive: the first major German defeat. Stalingrad: Operation Uranus planned. Kursk. Operation Bagration. Berlin: Zhukov accepting Germany's surrender on May 8, 1945. Stalin's jealousy keeping him from full recognition. The general who saved the Soviet Union, overshadowed by the man he saved it for. 16:9.",
+      "bg_colors": [
+        "#1A1A2E",
+        "#8B0000",
+        "#D4AF37"
+      ],
+      "duration_sec": 52,
+      "scene_number": 42
+    },
+    {
+      "title": "The Soviet Industrial Miracle — How Stalin Moved Factories East",
+      "type": "deep_dive",
+      "narration": "The most consequential decision of the first months of the war on the Eastern Front was not made on a battlefield. It was made in Moscow, in the chaos of the German advance: the decision to relocate Soviet industrial capacity east of the Ural Mountains, beyond the reach of the advancing Wehrmacht and the Luftwaffe. Between July and November 1941, over fifteen hundred industrial enterprises were dismantled and shipped east by rail. The machines were loaded onto flatcars and moved across thousands of miles of railroad. Many factories resumed production before their new buildings were completed — machinery operating in the open air in Siberian winter while the walls were being built around them. By 1943, the Soviet industrial base east of the Urals was producing more tanks, aircraft, and artillery than Germany. The factories that Hitler planned to capture were already gone. The industrial war that Germany had to win to achieve victory was already lost.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. The relocation decision: Moscow in summer 1941, the German advance, the choice to move the factories. The process: factories dismantled, machinery loaded onto flatcars. The rail lines east — the Trans-Siberian Railroad carrying industrial capacity away from the front. Machines operating in the open air in Siberian winter while buildings are constructed around them. Workers living in barracks adjacent to production lines. By 1943: the production comparison — Soviet tanks and aircraft output exceeding Germany's. The factories that Hitler planned to capture, already 2,000 miles east of his front lines. The industrial war decided not by any battle but by the trains that moved the machines. 16:9.",
+      "bg_colors": [
+        "#4A4A4A",
+        "#1A1A2E",
+        "#D4AF37"
+      ],
+      "duration_sec": 52,
+      "scene_number": 43
+    },
+    {
+      "title": "German Soldiers' Experience — The Eastern Front From Below",
+      "type": "deep_dive",
+      "narration": "The experience of German soldiers on the Eastern Front was unlike anything the Wehrmacht had experienced in its rapid conquests of Western Europe. The distances were incomprehensible: soldiers who had marched from the Rhine to the Channel in a few weeks found themselves marching hundreds of miles across Russia without reaching the objectives that seemed to recede into the horizon. The Soviet Union was not like France — it did not collapse when its armies were defeated, did not surrender when its capital was threatened. The German soldier's letters home from the Eastern Front, collected in archives and published in multiple languages, describe a gradual disillusionment: the certainty of quick victory in summer 1941, the shock of the first Soviet winter, the growing awareness that this war was different in kind from what had come before. At Stalingrad, the most extreme version of this experience played out: soldiers who had conquered Europe fighting for individual buildings in a ruined city in a Russian winter.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. German soldiers' experience on the Eastern Front: the letters home, the diaries. Summer 1941: the confidence, the rapid advance. The first Soviet winter: the shock of temperatures that German equipment and uniforms were not designed for. The distances: the maps showing how far from home. The Soviet Union not collapsing when its armies were defeated. The growing disillusionment recorded in the letters. Stalingrad: the most extreme version — soldiers who conquered France fighting for individual rooms in a ruined building in minus 30 Celsius. The human experience at the bottom of the most destructive conflict in history. 16:9.",
+      "bg_colors": [
+        "#4A3728",
+        "#D4AF37",
+        "#1A1A2E"
+      ],
+      "duration_sec": 52,
+      "scene_number": 44
+    },
+    {
+      "title": "Civilians in Stalingrad — The Population That Stayed",
+      "type": "deep_dive",
+      "narration": "When the battle of Stalingrad began, approximately 600,000 civilians lived in the city. Many were evacuated across the Volga during the late summer and fall of 1942 — but not all. Some stayed by choice, some could not leave, some were not permitted to leave by Soviet authorities who wanted civilian workers available for defense construction. During the battle, civilians sheltered in basements, in the ruins, in the sewer systems. Some were used as labor by both Soviet and German forces. An unknown number died: from bombs, from artillery, from hunger, from cold. The civilian experience of Stalingrad — trapped between two armies in a city being systematically destroyed — was one of the worst civilian experiences of the entire war. The German soldiers called the battle Rattenkrieg — the Rat War — for the basement-to-basement, room-to-room nature of the fighting. For the civilians who lived in those basements and rooms, the name had a different resonance.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Stalingrad before the battle: the city of 600,000, the industrial center on the Volga, normal life. The evacuation: families crossing the Volga on barges under German attack. Those who stayed: in basements, in ruins, in the sewer system. Civilians used as labor by both sides. The civilian deaths: from bombs, from artillery, from hunger, from the cold that killed as efficiently as any weapon. The Rattenkrieg — the Rat War — seen from civilian eyes: not tactics but survival. The gap between the tactical accounts of Stalingrad and the experience of the people who lived in the city being destroyed. 16:9.",
+      "bg_colors": [
+        "#8B0000",
+        "#4A4A4A",
+        "#D4AF37"
+      ],
+      "duration_sec": 52,
+      "scene_number": 45
+    },
+    {
+      "title": "The Volga River — The Lifeline That Couldn't Be Cut",
+      "type": "deep_dive",
+      "narration": "The Volga River — the longest river in Europe, running over two thousand miles from northwest Russia to the Caspian Sea — was the logistical spine of the Soviet southern front and the reason Hitler identified Stalingrad as a strategic objective. Control of the Volga would cut the supply of oil from the Caucasus to the industrial heartland and block the route by which troops and supplies could reach the southern front. For the entire battle of Stalingrad, Soviet forces held a thin strip of the western bank — at some points barely one hundred meters deep — and maintained a crossing of the Volga under constant German attack. The crossing under fire, conducted at night by Soviet river flotillas, kept the 62nd Army supplied and reinforced. The Germans never fully controlled the western bank. The Volga never fell. The strategic objective that justified the entire campaign was never achieved.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. The Volga River: the longest river in Europe, the strategic objective of Case Blue. The crossing under fire: Soviet river flotillas crossing at night, ferrying ammunition and men to the defenders on the west bank. German artillery and aircraft attacking the crossing. The casualties: men and boats sunk in the Volga. The strip of western bank that the Soviets held — at some points barely 100 meters deep — and never surrendered. The river that Hitler needed to cut to win his strategic objective. The river that never fell. The strategic failure that made every tactical success on the streets of Stalingrad ultimately meaningless. 16:9.",
+      "bg_colors": [
+        "#D4AF37",
+        "#1A1A2E",
+        "#8B0000"
+      ],
+      "duration_sec": 52,
+      "scene_number": 46
+    },
+    {
+      "title": "The Rodina Mat Memorial — A Statue as Big as Victory",
+      "type": "analysis",
+      "narration": "The city of Stalingrad was renamed Volgograd in 1961, as part of Khrushchev's de-Stalinization program. On the Mamayev Kurgan hill — where the bones of thousands of soldiers still lie in the ground — the Soviet Union built the largest freestanding statue in the world when it was completed in 1967. The Motherland Calls — Rodina Mat Zovyot — is a concrete and steel figure of a woman, sword raised, calling her children to battle. She stands 85 meters tall, taller than the Statue of Liberty from base to torch. Her sword alone is 33 meters. Around the base, the names of those who fell are inscribed. The eternal flame burns below. At the foot of the Mamayev Kurgan, new bodies are still found during construction work — Soviet and German soldiers who have been in the ground for eighty years. Volgograd is quiet now. The bones beneath it are not.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. The Mamayev Kurgan hill: where the fiercest Stalingrad fighting occurred, where bones are still found in the ground. The Rodina Mat statue: 85 meters tall, concrete and steel, sword raised, the face expressing fierce call to battle. Scale comparison: taller than the Statue of Liberty from base to torch. The Hall of Military Glory at the base: the eternal flame, the inscribed names of 7,000 soldiers. Construction workers in modern Volgograd finding bones. The quiet city over a battlefield. The memorial as the city's identity. 16:9.",
+      "bg_colors": [
+        "#1A1A2E",
+        "#8B0000",
+        "#D4AF37"
+      ],
+      "duration_sec": 52,
+      "scene_number": 47
+    },
+    {
+      "title": "Why Stalingrad Matters — The Battle That Changed Everything",
+      "type": "analysis",
+      "narration": "Stalingrad decided the fate of the 20th century in ways that are still playing out. The German defeat there was not just a military setback — it was the puncture of the Wehrmacht's psychological invincibility. Before Stalingrad, German soldiers and German generals had reason to believe that no enemy could ultimately stop them. After Stalingrad, that belief was gone. The Soviet Union's victory demonstrated that a state willing to absorb unimaginable losses and deploy unlimited industrial capacity could defeat the most sophisticated military machine in the world. The political consequences: the postwar Soviet Union emerged with a confidence born of having saved itself and won the most destructive land war in human history. The German defeat at Stalingrad was the hinge on which the 20th century turned — away from fascist conquest and toward the postwar order that, for all its imperfections, defined the world we live in.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Stalingrad's significance assessed: the puncture of Wehrmacht invincibility. German soldiers before and after — the psychological change made visible. The Soviet demonstration: unlimited industrial capacity plus unlimited willingness to absorb losses can defeat even the most sophisticated military machine. The political consequences: the Soviet Union emerging from Stalingrad with the confidence that would define it as a superpower. The postwar order: Stalingrad as the hinge on which the 20th century turned. The world we live in, shaped by the battle fought in the ruins of a city on the Volga in the winter of 1942-1943. 16:9.",
+      "bg_colors": [
+        "#D4AF37",
+        "#1A1A2E",
+        "#8B0000"
+      ],
+      "duration_sec": 52,
+      "scene_number": 48
+    },
+    {
+      "title": "The Sniper War — Stalingrad's Invisible Conflict",
+      "type": "battle",
+      "narration": "The battle of Stalingrad produced one of the most distinctive tactical innovations of the Eastern Front: the systematic use of snipers as a primary weapon in urban warfare. In the ruins of Stalingrad, the open terrain combat that made German artillery and air power decisive was replaced by an environment where the distance between opposing positions was often measured in meters. In this environment, the individual soldier with a rifle and scope, capable of operating independently in rubble, became a primary combat asset. The most famous Soviet sniper, Vasily Zaitsev, was credited with over two hundred confirmed kills during the battle and became a propaganda figure used to motivate Soviet soldiers. The duel between Zaitsev and a supposed German master sniper — immortalized in film — may be partly mythologized. What is real is the systematic development of sniper doctrine at Stalingrad that influenced Soviet and later military sniper programs for decades.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. The sniper war in Stalingrad's ruins: the tactical environment where distance between opponents is measured in meters, not hundreds of meters. The Soviet snipers operating in the rubble: the individual skill that urban warfare valorizes. Vasily Zaitsev: the propaganda figure, his confirmed kills, his training program for other Soviet snipers. The sniper duel — the mythology and what may be real beneath it. The tactical doctrine being developed in real time: how to use individual riflemen in urban environments. The innovation that came from necessity: when tanks and artillery can't operate effectively, the individual soldier with a rifle becomes the decisive weapon. 16:9.",
+      "bg_colors": [
+        "#4A3728",
+        "#D4AF37",
+        "#1A1A2E"
+      ],
+      "duration_sec": 52,
+      "scene_number": 49
+    },
+    {
+      "title": "German Veterans and the Question of Honor",
+      "type": "analysis",
+      "narration": "The German soldiers who fought at Stalingrad occupy a complex place in postwar German memory. Unlike the veterans of the Holocaust and its machinery, the Wehrmacht soldiers at Stalingrad are generally remembered as soldiers who fought in brutal conditions, many of them with genuine courage, in a battle their leadership condemned them to by refusing to allow a breakout. The debate about German military honor — about whether it is possible to serve honorably in an unjust cause — runs through German postwar culture. The soldiers at Stalingrad were fighting for Hitler's Germany, for a regime conducting genocide simultaneously with the military operations. Some of them were also personally brave men who looked after their comrades and fought professionally. Both things can be true simultaneously. The question of how to remember Stalingrad's German dead — with what combination of recognition and condemnation — is a question German society is still working through eighty years later.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. German Stalingrad veterans in postwar Germany: the old men who survived the captivity returning to a defeated, divided country. The German debate about Wehrmacht honor: the men who fought at Stalingrad vs. the regime they fought for. The two truths that cannot be separated: personal courage in brutal conditions, service to a genocidal state. The memorials in Germany: how they commemorate the dead without endorsing the cause. The comparison with Soviet commemoration, with American D-Day commemoration. The question without a clean answer: how to remember soldiers who fought well for a side that should not have won. German society still working through what Stalingrad means, eighty years later. 16:9.",
+      "bg_colors": [
+        "#4A4A4A",
+        "#1A1A2E",
+        "#D4AF37"
+      ],
+      "duration_sec": 52,
+      "scene_number": 50
+    },
+    {
+      "title": "Operation Winter Storm — The Failed Rescue",
+      "type": "battle",
+      "narration": "After the encirclement, Field Marshal Erich von Manstein launched Operation Winter Storm on December 12, 1942 — a relief attempt by the 4th Panzer Army to break through to the trapped 6th Army. The relief force advanced to within thirty miles of the Kessel. At that point, Manstein asked Hitler for permission to have Paulus begin a breakout — Operation Thunderclap. Hitler refused. The distance between the relief force and Paulus's army was never closed. Then a new Soviet offensive — Operation Little Saturn — threatened Manstein's flank and he had to withdraw. Paulus, following Hitler's orders, did not attempt to break out toward the relief force. The relief that almost worked, blocked by the same command decision that had created the disaster in the first place.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. Operation Winter Storm: the 4th Panzer Army's route on a map — the advance toward Stalingrad. The distance closing: 100 miles, 75, 50, 30. Manstein's request to Hitler: Operation Thunderclap, Paulus breaking out. Hitler's refusal. Paulus in the Kessel, the relief force 30 miles away, the order not to move. Operation Little Saturn: the new Soviet offensive threatening Manstein's flank. The relief force withdrawing. The last chance, blocked by the same man who created the necessity for it. 16:9.",
+      "bg_colors": [
+        "#1A1A2E",
+        "#8B0000",
+        "#D4AF37"
+      ],
+      "duration_sec": 55,
+      "scene_number": 51
+    },
+    {
+      "title": "The Rattenkrieg — Street By Street Room By Room",
+      "type": "battle",
+      "narration": "The German soldiers fighting in Stalingrad called it the Rattenkrieg — the Rat War — because it had devolved into combat conducted in the basements, sewers, and rubble of a destroyed city, where the tactical unit was not the platoon but the small assault group, and the objective was not a city block but a single building or a single floor. In this environment, formal military virtues were replaced by something more primitive: the ability to navigate darkness, to move through gaps in rubble, to fight when separated from your unit by a collapsed ceiling. Both German and Soviet forces developed specialized tactics: grenades to clear a room before entering it, demolition charges through interior walls rather than covered doorways. The Rattenkrieg was a form of warfare that neither army had trained for and both had to invent in real time.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. The Rattenkrieg in the ruins of Stalingrad: the tactical environment — collapsed buildings, basements, rubble piles. The scale of combat: groups of 5-8 men instead of platoons. The objective: a single building, a single floor. The specialized tactics: grenades before entry, demolition charges through interior walls. German and Soviet soldiers separated by walls and rubble rather than open ground. The darkness and confusion of interior combat. The Rat War as a form of warfare invented in Stalingrad by soldiers who had no prior training for it. 16:9.",
+      "bg_colors": [
+        "#8B0000",
+        "#4A4A4A",
+        "#D4AF37"
+      ],
+      "duration_sec": 55,
+      "scene_number": 52
+    },
+    {
+      "title": "After Stalingrad — The Long Road to Berlin",
+      "type": "analysis",
+      "narration": "The Soviet victory at Stalingrad was the pivot of the Eastern Front, but it was only the beginning of the long road west. From February 1943 to May 1945, the Soviet Union drove the German army approximately two thousand miles from Stalingrad to Berlin. The campaigns that followed — Kursk in July 1943, Operation Bagration in June 1944, the Vistula-Oder offensive in January 1945, the Berlin operation in April 1945 — were each enormous operations that would individually have been the defining event of any other theater. The road from Stalingrad to Berlin was paid for in blood at a scale the Western world has never fully reckoned with: approximately twenty million more Soviet lives lost in the twenty-seven months after Stalingrad. The victory at Stalingrad was real and decisive. The cost of completing it was almost beyond comprehension.",
+      "visual_prompt": "Gods & Glory cinematic historical documentary. The road from Stalingrad to Berlin: the map of the Eastern Front showing the 2,000-mile advance from February 1943 to May 1945. Kursk July 1943. Operation Bagration June 1944: Army Group Centre destroyed. The Vistula-Oder offensive January 1945. The Berlin operation April 1945: the Soviet flag over the Reichstag. The cost: casualty figures continuing to mount, twenty million more Soviet lives in twenty-seven months. Victory that was real, decisive, and paid for at a scale the world still struggles to comprehend. 16:9.",
+      "bg_colors": [
+        "#4A4A4A",
+        "#1A1A2E",
+        "#D4AF37"
+      ],
+      "duration_sec": 55,
+      "scene_number": 53
+    },
+    {
+      "scene_number": 54,
       "type": "next_episode",
       "title": "Next Episode — Iwo Jima and the Pacific",
       "narration": "Next episode on Gods and Glory: while Europe's battles raged, an entirely different kind of war was being fought across the islands of the Pacific. Tiny volcanic islands, dug-in defenders who refused to surrender, and a flag-raising photograph that became one of the most famous images of the entire war. Iwo Jima and the island-hopping campaign — the brutal arithmetic of taking the Pacific back, one island at a time.",
       "visual_prompt": "Gods & Glory cinematic historical documentary. Teaser shot: US Marines storming a volcanic black-sand beach under fire, a distant mountain peak looming over the battlefield. Epic anticipation. 16:9.",
-      "bg_colors": ["#1A1F26", "#5C6B73", "#8B1A1A"],
+      "bg_colors": [
+        "#1A1F26",
+        "#5C6B73",
+        "#8B1A1A"
+      ],
       "duration_sec": 40
     }
   ]

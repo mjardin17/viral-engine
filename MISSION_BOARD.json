@@ -1,0 +1,41 @@
+{
+  "updated_at": "2026-07-10T00:00:00Z",
+  "missions": [
+    {
+      "id": "m001",
+      "type": "upload",
+      "status": "pending",
+      "assigned_to": "claude-code",
+      "channel": "gg",
+      "target": "GG_EP002,GG_EP005,GG_EP007",
+      "priority": 1,
+      "notes": "Good length episodes ready to upload. Verify token first.",
+      "result": "",
+      "error": ""
+    },
+    {
+      "id": "m002",
+      "type": "render",
+      "status": "pending",
+      "assigned_to": "claude-code",
+      "channel": "gg",
+      "target": "GG_EP003,GG_EP004,GG_EP008,GG_EP009,GG_EP010,GG_EP011",
+      "priority": 2,
+      "notes": "Short episodes rendered at wrong TTS rate. Re-render with fixed -35% rate.",
+      "result": "",
+      "error": ""
+    },
+    {
+      "id": "m003",
+      "type": "render",
+      "status": "pending",
+      "assigned_to": "claude-code",
+      "channel": "gg",
+      "target": "GG_EP012,GG_EP013,GG_EP014,GG_EP015,GG_EP016,GG_EP017,GG_EP018,GG_EP019,GG_EP020,GG_EP021,GG_EP022,GG_EP023,GG_EP024,GG_EP025",
+      "priority": 3,
+      "notes": "Season 3 scripts written, not yet rendered. Run render_season3.bat",
+      "result": "",
+      "error": ""
+    }
+  ]
+}

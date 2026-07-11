@@ -322,6 +322,409 @@
         "#1A1A2E",
         "#4A3728"
       ]
+    },
+    {
+      "type": "history",
+      "title": "The Ottoman Empire at Its Height",
+      "narration": "In 1683, the Ottoman Empire was the most powerful state in the Western world. It controlled three continents and its capital Constantinople had over 700,000 inhabitants \u2014 the largest city west of China. The empire had been expanding westward for 250 years, absorbing Byzantine Greece, Hungary, and the Balkans. Vienna had been besieged once before in 1529 and barely survived. The Habsburgs paid annual tribute to Constantinople rather than risk open war. Grand Vizier Kara Mustafa Pasha saw Vienna not as a risk but as an opportunity \u2014 the prize that would make him the most powerful man in the Islamic world.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Map of the Ottoman Empire at its 1683 peak spanning three continents, Constantinople gleaming as the world's largest city, the western border pressing against Habsburg Austria. 16:9 cinematic.",
+      "bg_colors": [
+        "#1A0A00",
+        "#2C1500",
+        "#C9A227"
+      ],
+      "duration_sec": 52,
+      "scene_number": 25
+    },
+    {
+      "type": "biography",
+      "title": "Kara Mustafa \u2014 The Grand Vizier's Gamble",
+      "narration": "Kara Mustafa Pasha was brilliant, ambitious, and reckless. He had accumulated power comparable to the Sultan himself. The Vienna campaign was his personal project \u2014 argued for against experienced commanders who counseled against strategic overreach. His plan was siege rather than assault: starve Vienna into surrender, preserving the city's wealth intact. This decision \u2014 refusing to storm when assault might have succeeded \u2014 gave the relief army time to arrive. Kara Mustafa's caution about property preservation contributed directly to the catastrophe that followed.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Kara Mustafa Pasha in his Grand Vizier's robes reviewing maps of Vienna, the Ottoman court's most powerful man planning the campaign that would define his legacy. 16:9 cinematic.",
+      "bg_colors": [
+        "#1A0A00",
+        "#8B1A1A",
+        "#C9A227"
+      ],
+      "duration_sec": 52,
+      "scene_number": 26
+    },
+    {
+      "type": "history",
+      "title": "150,000 Men \u2014 The March to Vienna",
+      "narration": "The Ottoman army that marched toward Vienna in spring 1683 numbered approximately 150,000 men \u2014 the largest force assembled in Europe since the fall of Rome. The column stretched sixty miles when marching. Its logistical requirements were staggering: 30,000 camels, 40,000 supply wagons. As the army crossed Hungary, Habsburg territories fell without battle. Vienna had approximately 15,000 defenders against 150,000 attackers.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The vast Ottoman army marching across the Hungarian plain toward Vienna \u2014 the sixty-mile column of soldiers, cavalry, camels, and siege equipment stretching to the horizon. 16:9 cinematic.",
+      "bg_colors": [
+        "#2C1500",
+        "#8B1A1A",
+        "#0D1520"
+      ],
+      "duration_sec": 52,
+      "scene_number": 27
+    },
+    {
+      "type": "detail",
+      "title": "Count Starhemberg \u2014 Vienna's Defender",
+      "narration": "Count Ernst R\u00fcdiger von Starhemberg commanded Vienna's defense with 15,000 soldiers and 60,000 civilians. Emperor Leopold I had fled rather than be captured \u2014 preserving political leadership to assemble a relief army. Starhemberg, 36 years old, organized defenses systematically: reinforcing walls with earthen bastions, destroying suburbs that would give engineers cover, rationing food. He held Vienna for 60 days against forces eight times his strength, wounded twice, never breaking.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Count Starhemberg directing Vienna's defense from the city walls, the smoking suburbs demolished on his orders, defenders reinforcing bastions while the Ottoman army approaches. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#1A2A3D",
+        "#C9A227"
+      ],
+      "duration_sec": 52,
+      "scene_number": 28
+    },
+    {
+      "type": "battle",
+      "title": "The Siege \u2014 July 14 to September 12",
+      "narration": "The Ottoman army reached Vienna on July 14, 1683 and began siege operations immediately. Engineers constructed parallel approach trenches advancing toward the walls under earthen cover. Ottoman miners tunneled beneath the most critical bastion and detonated explosive charges creating breaches. By late August, Starhemberg's garrison was running out of men and ammunition. He sent desperate messages: the city could hold days, not weeks. The relief army had to come now.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Ottoman siege trenches advancing toward Vienna's walls in the summer heat, miners working underground while artillery pounds the city above. 16:9 cinematic.",
+      "bg_colors": [
+        "#8B1A1A",
+        "#2C1500",
+        "#0D1520"
+      ],
+      "duration_sec": 52,
+      "scene_number": 29
+    },
+    {
+      "type": "biography",
+      "title": "Jan Sobieski \u2014 Poland's Warrior King",
+      "narration": "Jan III Sobieski, King of Poland, was 53 years old in 1683 and had spent his entire adult life fighting Ottomans. He had won the Battle of Khotin so decisively he was elected king. Over six feet tall, personally courageous, he insisted on commanding the entire relief army himself. He marched from Warsaw with 27,000 Poles \u2014 not because Poland was directly threatened, but because he understood Vienna was civilization's hinge.",
+      "visual_prompt": "Gods & Glory cinematic documentary. King Jan Sobieski of Poland \u2014 massive, battle-scarred, commanding \u2014 reviewing his Polish hussars before the march to Vienna. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#2C1A00"
+      ],
+      "duration_sec": 52,
+      "scene_number": 30
+    },
+    {
+      "type": "detail",
+      "title": "The Winged Hussars \u2014 Europe's Finest Cavalry",
+      "narration": "The Polish winged hussars were the most powerful cavalry in the world. They rode large armor-bred horses, wore armor that stopped musket balls at distance, and carried 18-foot lances capable of driving through multiple infantry ranks. Most distinctively, wooden frames bearing eagle feathers above their shoulders made a terrifying sound at full gallop. A hussar formation covered 200 yards in under ten seconds. The psychological impact of 3,000 hussars charging was sufficient to break formations that hadn't yet been touched. Sobieski had 3,000 of them at Vienna.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Polish winged hussars at full gallop, eagle feather wings rattling, 18-foot lances lowered, the most powerful cavalry in Europe charging toward the Ottoman army. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#3D3020",
+        "#8B1A1A"
+      ],
+      "duration_sec": 52,
+      "scene_number": 31
+    },
+    {
+      "type": "history",
+      "title": "The Holy League \u2014 Europe United",
+      "narration": "The relief force was unprecedented in post-Reformation Europe: Catholic and Protestant princes fighting together under single command. The Holy Roman Emperor contributed 20,000 troops. Saxony, Bavaria, and smaller German states sent forces. Poland brought 27,000. Total: 70,000 \u2014 outnumbered two to one. Sobieski was granted supreme command over Habsburg objections. Religious and dynastic rivalries that had torn Europe apart for a century were set aside for eight weeks.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The Holy League relief army assembled above Vienna \u2014 Polish, German, Austrian forces under different banners standing together, the unprecedented European coalition. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#1A2A3D"
+      ],
+      "duration_sec": 52,
+      "scene_number": 32
+    },
+    {
+      "type": "battle",
+      "title": "September 12 \u2014 The Battle Begins",
+      "narration": "The relief army descended from the Kahlenberg heights on the morning of September 12. Kara Mustafa made a catastrophic decision: divided his army, continuing the siege with part while sending the rest to fight the relief force. He had refused to storm the city when it was weakest and now faced battle on unfavorable terms. Infantry and artillery fighting along a three-mile front lasted until early afternoon. Then Sobieski ordered the cavalry.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The relief army descending from Kahlenberg heights, the three-mile battle front, infantry and artillery exchanging fire across slopes above the besieged city. 16:9 cinematic.",
+      "bg_colors": [
+        "#8B1A1A",
+        "#2C1500",
+        "#C9A227"
+      ],
+      "duration_sec": 52,
+      "scene_number": 33
+    },
+    {
+      "type": "battle",
+      "title": "The Great Charge \u2014 Largest in History",
+      "narration": "At approximately 5 PM, Jan Sobieski led the largest cavalry charge in recorded history. Approximately 18,000 horsemen \u2014 3,000 Polish hussars at the tip \u2014 swept down from the heights into the Ottoman right flank. Contemporary accounts describe the sound audible a mile away. The Ottoman formations collapsed. Kara Mustafa's tent was abandoned. The Ottoman camp \u2014 with its treasure, food, siege equipment \u2014 was left intact as the army fled south. Vienna was saved in forty-five minutes.",
+      "visual_prompt": "Gods & Glory cinematic documentary. 18,000 horsemen sweeping down the slopes, the Polish winged hussars at the front in gleaming armor and eagle feathers, the Ottoman army breaking before the impact. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#8B1A1A",
+        "#0D1520"
+      ],
+      "duration_sec": 56,
+      "scene_number": 34
+    },
+    {
+      "type": "detail",
+      "title": "The Coffee Beans \u2014 Civilization's Accident",
+      "narration": "The abandoned Ottoman camp contained 500 sacks of coffee beans. The Viennese didn't know what coffee was. Polish soldiers who had encountered it in Ottoman territories explained it. The first Viennese coffee house opened within weeks using beans from Kara Mustafa's abandoned supply. The cafe culture that shaped European intellectual life was a byproduct of military defeat. Every coffee house, caf\u00e9, and coffee shop on Earth traces ancestry to the sacks left behind when an Ottoman army fled in September 1683.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The abandoned Ottoman camp \u2014 silk tents, mountains of treasure, and the sacks of coffee beans that would change European social culture, spread across the ground after the Turkish withdrawal. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#2C1500",
+        "#0D1520"
+      ],
+      "duration_sec": 52,
+      "scene_number": 35
+    },
+    {
+      "type": "detail",
+      "title": "The Croissant \u2014 Eating Your Enemy",
+      "narration": "The croissant was invented in Vienna to celebrate the siege's defeat. Viennese bakers shaped their bread into crescent moons \u2014 the symbol on the Ottoman flag \u2014 so Viennese could symbolically eat their enemies at breakfast. The crescent-shaped pastry spread from Vienna to Paris through Austrian-born Marie Antoinette, and from Paris to the world. Every croissant eaten anywhere on Earth is a small commemorative monument to September 12, 1683.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Viennese bakers shaping crescent-shaped pastries in the aftermath of the siege, the crescent moon of the Ottoman flag their inspiration, the birth of the croissant as an edible victory celebration. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#2C1500",
+        "#3D3020"
+      ],
+      "duration_sec": 52,
+      "scene_number": 36
+    },
+    {
+      "type": "detail",
+      "title": "Kara Mustafa's Execution \u2014 Christmas Day",
+      "narration": "Kara Mustafa Pasha was executed by strangulation on December 25, 1683 \u2014 Christmas Day \u2014 in Belgrade. The Sultan sent the executioner with a silk cord: noble execution rather than beheading. His head was sent to Constantinople. The vizier who had gambled everything on Vienna had lost everything. He had commanded the largest army in the world and failed to take a city it outnumbered eight to one. The punishment was proportional.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Kara Mustafa Pasha receiving the Sultan's silk cord of execution in Belgrade, the Grand Vizier who gambled the Ottoman Empire's western ambitions and lost. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D0D0D",
+        "#1A0D00",
+        "#8B1A1A"
+      ],
+      "duration_sec": 52,
+      "scene_number": 37
+    },
+    {
+      "type": "history",
+      "title": "The Ottoman Retreat \u2014 50 Years of Losses",
+      "narration": "Vienna began the end of Ottoman expansion in Europe. The Holy League recaptured Hungary, Transylvania, and large portions of the Balkans. The Treaty of Karlowitz in 1699 formalized the largest territorial loss in Ottoman history \u2014 Hungary, Ottoman for 150 years, returned to Habsburg rule. The Ottomans had been the expanding power in Europe for 250 years. After Vienna, they became the retreating power. The process continued 240 years until the empire's final collapse after World War I.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Map showing the Ottoman retreat from Europe 1683-1699 \u2014 Hungary returning to Habsburg control, the Balkans shifting, the empire contracting systematically. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#C9A227",
+        "#1A2A3D"
+      ],
+      "duration_sec": 52,
+      "scene_number": 38
+    },
+    {
+      "type": "analysis",
+      "title": "Why Vienna Held \u2014 Three Factors",
+      "narration": "Vienna survived for three reasons: Starhemberg's disciplined defense, Sobieski's tactical brilliance, and Kara Mustafa's strategic errors. The Grand Vizier's decision to besiege rather than storm was the first error. His failure to fortify the heights above Vienna was the second. His division of his army on September 12 was the third. Against a more cautious Ottoman commander, Vienna might have fallen regardless of the defense or cavalry. The battle that saved Western civilization was decided partly by the enemy's mistakes.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Three-panel analysis of Vienna \u2014 Starhemberg's preparations, the heights Kara Mustafa left undefended, Sobieski's cavalry charge \u2014 the three factors that determined the outcome. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#C9A227",
+        "#1A2A3D"
+      ],
+      "duration_sec": 52,
+      "scene_number": 39
+    },
+    {
+      "type": "detail",
+      "title": "Jan Sobieski \u2014 The King Who Got Nothing",
+      "narration": "Jan Sobieski saved Vienna and received almost nothing for it. Emperor Leopold I refused to meet him as an equal, greeting him on horseback rather than on foot. The Habsburg court minimized Poland's role. Sobieski's territorial requests were denied. He returned home a hero to everyone except the people whose capital he had saved. Within twenty-five years of Vienna, Poland began the decline that would lead to its partition and disappearance from the map in 1795. The country that saved Europe could not save itself.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The cold meeting between Sobieski and Emperor Leopold I \u2014 the emperor refusing to dismount in acknowledgment, the hero of Vienna receiving Habsburg ingratitude. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#3D3020"
+      ],
+      "duration_sec": 52,
+      "scene_number": 40
+    },
+    {
+      "type": "detail",
+      "title": "Vienna Rebuilt \u2014 Baroque Capital",
+      "narration": "Vienna after the siege was transformed. No longer needing every resource for defense, Habsburg emperors began building the Baroque city that still stands today. The Sch\u00f6nbrunn Palace, the Hofburg expansion, the Karlskirche \u2014 all built in the decades after 1683, financed by the confidence that the Ottoman threat's removal released. The city that had cowered behind medieval walls became the Baroque capital of Europe. The beauty of modern Vienna is partly the expression of a civilization that no longer needed to fortify everything it built.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Vienna's Baroque transformation \u2014 the Sch\u00f6nbrunn Palace rising, the Karlskirche under construction, the medieval fortress city becoming the ornate Baroque capital of Europe. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#2C2A1A"
+      ],
+      "duration_sec": 52,
+      "scene_number": 41
+    },
+    {
+      "type": "analysis",
+      "title": "What If Vienna Had Fallen",
+      "narration": "If Vienna had fallen in 1683, the Habsburg Empire would have been fatally weakened. Budapest, Prague, and Munich were within reach of an Ottoman army operating from Vienna. The Enlightenment that produced Jefferson, Madison, and the American founding documents was a product of Viennese and Parisian intellectual culture. The constitutional systems that govern most of the democratic world trace ancestry to the intellectual climate that Vienna's survival helped create. The counterfactual is not that Europe would have become Muslim \u2014 it is that the specific civilization that produced the modern world might not have developed as it did.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Counterfactual map of Europe under expanded Ottoman control \u2014 Vienna fallen, Budapest and Prague within reach, the trajectory toward the Enlightenment fundamentally altered. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#8B1A1A",
+        "#1A2A3D"
+      ],
+      "duration_sec": 52,
+      "scene_number": 42
+    },
+    {
+      "type": "legacy",
+      "title": "The Winged Hussars Today",
+      "narration": "Poland celebrates the Battle of Vienna annually on September 12. The winged hussars remain a national symbol \u2014 their image appears on currency, military insignia, and Polish popular culture. In 2010, a hussar cavalry charge was reenacted at the Vienna battlesite with thousands of spectators. The Polish soldiers who marched 500 miles to save an ungrateful emperor are remembered as Poland's defining act of national heroism. Poland saved Europe. Europe did not save Poland.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Modern Polish military ceremony honoring the winged hussars \u2014 the cavalry reenactment at Vienna, Polish flags beside the memorial, the living memory of the battle. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#8B1A1A"
+      ],
+      "duration_sec": 52,
+      "scene_number": 43
+    },
+    {
+      "type": "close",
+      "title": "The Morning That Changed Everything",
+      "narration": "On September 13, 1683, Vienna's survivors looked out over abandoned tents and dead horses where the Ottoman army had stood the day before. Sixty days of siege had ended in a single afternoon. The largest army assembled against Christian Europe in two centuries had been broken. Starhemberg organized the cleaning of the city. Sobieski held a thanksgiving Mass in the abandoned Ottoman tent. The Grand Vizier was a fugitive. And in the abandoned camp, in sacks no one in Vienna had seen before, was the coffee that would fuel the civilization that had just survived. Some victories carry everything inside them.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Vienna the morning after \u2014 survivors overlooking the abandoned Ottoman camp, Sobieski's thanksgiving Mass in the Grand Vizier's tent, the coffee sacks that would change European culture. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#3D3020"
+      ],
+      "duration_sec": 56,
+      "scene_number": 44
+    },
+    {
+      "type": "detail",
+      "title": "The Sappers \u2014 Ottoman Mining Operations",
+      "narration": "Ottoman military engineering was among the most sophisticated in the 17th century world. At Vienna, specialized units called sappers dug approach trenches systematically under the cover of earth berms, advancing toward the walls without exposing themselves to Austrian fire. Miners tunneled beneath the most critical bastion \u2014 the L\u00f6belbastei \u2014 and detonated charges of black powder creating a breach 12 meters wide. Three times they breached the walls. Three times Starhemberg's men counter-attacked and sealed them under fire. The engineering duel beneath Vienna's streets was as decisive as the fighting above them.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Ottoman sappers digging approach trenches by night, miners tunneling beneath the bastion walls, the engineering battle for Vienna fought underground. 16:9 cinematic.",
+      "bg_colors": [
+        "#1A0A00",
+        "#2C1500",
+        "#0D1520"
+      ],
+      "duration_sec": 52,
+      "scene_number": 45
+    },
+    {
+      "type": "detail",
+      "title": "The Garrison's Losses \u2014 60 Days of Attrition",
+      "narration": "When the siege began, Starhemberg had 15,000 soldiers. By September 12 he had fewer than 5,000 fit for combat. Disease, wounds, and the constant effort of repairing breaches had consumed two thirds of his force in 60 days. The civilian population did labor \u2014 carrying rubble, filling sandbags, tending wounded. Women and children worked the walls under fire. Starhemberg himself was wounded twice. His dispatches to the relieving army, smuggled through Ottoman lines by swimmers in the Danube, became increasingly desperate: come now, there are no more men.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The exhausted Vienna garrison \u2014 fewer than 5,000 defenders after 60 days of siege, the walls crumbling, the defenders gaunt and wounded, the city still holding. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#1A2A3D",
+        "#8B1A1A"
+      ],
+      "duration_sec": 52,
+      "scene_number": 46
+    },
+    {
+      "type": "history",
+      "title": "The Holy Roman Emperor \u2014 Fled Vienna",
+      "narration": "Emperor Leopold I fled Vienna on July 7 \u2014 a week before the Ottoman army arrived \u2014 taking the court and treasury with him to Passau. The decision was militarily sound: a captured emperor would have handed Kara Mustafa the ultimate prize. But it was deeply unpopular. Citizens felt abandoned by the man whose armies they were holding the city for. Leopold's absence also freed Starhemberg from political interference: he could burn the suburbs, demolish buildings, make tactical decisions without court approval. The emperor who fled may have helped save the city he abandoned.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Emperor Leopold I departing Vienna in his carriage, the court and treasury following, the city's inhabitants watching in anger and fear as their emperor evacuated. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#2C2A1A"
+      ],
+      "duration_sec": 52,
+      "scene_number": 47
+    },
+    {
+      "type": "detail",
+      "title": "Starhemberg's Message System \u2014 Rocket Signals",
+      "narration": "Cut off from relief forces by the Ottoman ring, Starhemberg developed a signaling system using rockets fired from the cathedral tower. One rocket meant: we are holding. Two rockets: attack is imminent. Three rockets: breach in the walls, attack underway. Swimmers also crossed the Danube at night carrying written dispatches to Habsburg commanders in the north. On September 6, Starhemberg fired three rockets \u2014 the signal for immediate breach. Sobieski saw the three rockets from the Kahlenberg heights. He ordered the relief army to march the following morning.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The Vienna cathedral tower at night with signal rockets ascending \u2014 Starhemberg's communication system across the Ottoman siege lines, Sobieski watching from the distant heights. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#1A0A00"
+      ],
+      "duration_sec": 52,
+      "scene_number": 48
+    },
+    {
+      "type": "analysis",
+      "title": "The Ottoman Logistics Breakdown",
+      "narration": "The Ottoman army that arrived at Vienna in July 1683 had marched 1,200 kilometers from Belgrade. Its supply lines stretched through hostile territory. By September, after 60 days of siege operations, ammunition was running low, animals were dying, disease was spreading through the camp. Kara Mustafa's refusal to storm when the army was at full strength in July and August meant the siege dragged into autumn when Ottoman forces were already degraded. The logistical reality gave Sobieski a degraded enemy even before the cavalry charged on September 12.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The vast Ottoman supply train broken down \u2014 dead animals, empty ammunition wagons, the 1,200-kilometer supply line to Belgrade crumbling after 60 days of siege operations. 16:9 cinematic.",
+      "bg_colors": [
+        "#2C1500",
+        "#1A0A00",
+        "#0D1520"
+      ],
+      "duration_sec": 52,
+      "scene_number": 49
+    },
+    {
+      "type": "detail",
+      "title": "The Aftermath \u2014 Looting the Camp",
+      "narration": "The abandoned Ottoman camp was one of the richest prizes in military history. Kara Mustafa left behind his personal treasury, his correspondence, his harem, 300 war banners, 10,000 tents, 15,000 cattle, and enough food for three months. The Holy League soldiers looted methodically. The Grand Vizier's personal tent was sent to Vienna as a trophy. Gold and silver worth millions in today's values was distributed as prize money. The Christian soldiers who stripped the camp found they had not just won a battle but captured the portable wealth of the world's richest empire.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Holy League soldiers exploring the vast abandoned Ottoman camp \u2014 silk tents, war banners, treasure chests, cattle, the portable wealth of the Ottoman empire left behind in retreat. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#2C1500",
+        "#3D3020"
+      ],
+      "duration_sec": 52,
+      "scene_number": 50
+    },
+    {
+      "type": "history",
+      "title": "The Ottoman Army \u2014 Where Did 150,000 Men Go",
+      "narration": "Of the approximately 150,000 soldiers who marched on Vienna, perhaps 10,000 were killed in the September 12 battle. The rest fled south toward Hungary. They were not pursued effectively \u2014 Sobieski's army was exhausted and his cavalry horses needed rest. The disintegration of cohesion was as damaging as casualties: units separated, supply connections broke, discipline dissolved. The army that reached Belgrade was a shadow of the force that had left it. The Grand Vizier arrived ahead of his army, trying to reach Constantinople before the Sultan learned the full extent of the catastrophe.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The remnants of the Ottoman army retreating south through Hungary \u2014 broken formations, abandoned equipment, the rearguard of 150,000 men reduced to scattered fugitives. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#8B1A1A",
+        "#2C1500"
+      ],
+      "duration_sec": 52,
+      "scene_number": 51
+    },
+    {
+      "type": "detail",
+      "title": "Pope Innocent XI \u2014 The Banker of the Crusade",
+      "narration": "Pope Innocent XI financed the Holy League with 1.5 million florins \u2014 an enormous sum in 1683. He had spent years building the coalition, managing Habsburg and Polish pride, smoothing over religious conflicts between Catholic and Protestant princes. When Vienna was saved, he declared September 12 the Feast of the Holy Name of Mary. The battle was fought on that date. The papal role in financing and organizing the relief effort is largely forgotten \u2014 Innocent XI's contribution to the survival of Central Europe was as significant as Sobieski's cavalry charge.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Pope Innocent XI presiding over the financing of the Holy League \u2014 the papal treasury funding the relief army, the Vatican's role as banker and diplomat of European civilization's defense. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#2C2A1A"
+      ],
+      "duration_sec": 52,
+      "scene_number": 52
+    },
+    {
+      "type": "detail",
+      "title": "The Siege's Cultural Impact \u2014 Fear and Art",
+      "narration": "The siege of Vienna terrified European civilization and produced an explosion of art. Paintings, engravings, broadsheets, and commemorative medals recorded every detail. The Ottoman threat crystallized European identity in a way nothing else had. For the first time since the Reformation, Catholics and Protestants identified as Europeans first. The Turkish imagery \u2014 the crescent moon, the turban, the scimitar \u2014 entered European iconography as symbols of existential threat. The cultural trauma of 1683 echoes in European politics three centuries later.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Commemorative engravings and paintings of the Vienna siege spreading across Europe \u2014 the cultural trauma and triumph of 1683 crystallizing European identity in art and broadsheets. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#1A2A3D"
+      ],
+      "duration_sec": 52,
+      "scene_number": 53
+    },
+    {
+      "type": "legacy",
+      "title": "The Concert of Europe \u2014 Vienna's Long Shadow",
+      "narration": "The Congress of Vienna in 1815, which reorganized Europe after Napoleon, was held in Vienna specifically because Vienna represented the defense of European civilization's continuity. The Habsburgs hosted the congress because their dynasty had held when it mattered most. The diplomatic culture of the Congress of Vienna \u2014 great power consultation, mutual recognition of spheres of influence \u2014 became the template for the modern international order. The city that survived 1683 became the city where Europe decided its future in 1815. Some victories cast very long shadows.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The Congress of Vienna 1815 \u2014 diplomats of Europe gathered in the city that had survived Ottoman siege, the long shadow of 1683 visible in Vienna's authority to host civilization's reconstruction. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#2C2A1A"
+      ],
+      "duration_sec": 52,
+      "scene_number": 54
+    },
+    {
+      "type": "close",
+      "title": "1683 \u2014 Why It Still Matters",
+      "narration": "On September 12, 1683, an Ottoman army that outnumbered its enemies eight to one was broken by cavalry that charged from high ground at exactly the right moment. The largest siege force assembled against Christian Europe in two centuries dissolved in an afternoon. The coffee and croissant, two of civilization's small daily pleasures, were born that day. The intellectual culture that produced the Enlightenment, the American republic, and the constitutional democracies of the modern world continued its development in cities that would have fallen. History turns on specific days. September 12, 1683, was one of them. And you had your coffee this morning because of it.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Vienna at dusk after the siege \u2014 the city intact, the cathedral rising above the cleared camp, the civilization that survived beginning its Baroque transformation, the long arc of history bending because of one autumn afternoon. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#3D3020"
+      ],
+      "duration_sec": 56,
+      "scene_number": 55
     }
   ]
 }

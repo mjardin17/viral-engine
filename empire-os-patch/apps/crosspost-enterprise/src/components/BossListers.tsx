@@ -13,40 +13,47 @@ export default function BossListers() {
   const [loading, setLoading] = useState<boolean>(false);
   const [optimizedListing, setOptimizedListing] = useState<any | null>(null);
 
-  const handleOptimizeListing = () => {
+  const [apiMode, setApiMode] = useState<"live" | "simulated">("simulated");
+  const [apiError, setApiError] = useState<string | null>(null);
+
+  const handleOptimizeListing = async () => {
     if (!productName.trim()) return;
     setLoading(true);
     setOptimizedListing(null);
+    setApiError(null);
 
-    // Simulate sales copywriting AI logic
-    setTimeout(() => {
-      setOptimizedListing({
-        headlines: [
-          "Stop Paying Cloud Rents: Own Your Business Intelligence Layer with Empire OS",
-          "The Self-Auditing Cognitive Operating System Built for High-Scale Founders"
-        ],
-        bossBullets: [
-          { label: "LOCAL DISPATCH SPEED", text: "Zero network latency routing. Runs deepseek-r1 locally over standard hardware pools, slashing monthly cloud tokens bill by 85%." },
-          { label: "AUTOMATED MODERNIZATION SWEEPS", text: "Empire Inspector runs continuously in background. Instantly flags tech-debt, pinpoints duplicate layers, and recommends code cleanup vectors." },
-          { label: "MULTI-CHANNEL INGRESS PIPELINE", text: "Allows simultaneous deployment to X/Twitter, LinkedIn, and WordPress with zero staging. Keep social channels synced 24/7." }
-        ],
-        metaTags: {
-          title: "Empire OS | Local Cognitive Infrastructure for High-Ticket Businesses",
-          description: "Maximize operational throughput and reduce licensing costs. Audit codebases, optimize copywriting hooks, and leverage local LLMs locally with our all-in-one system.",
-          keywords: "SaaS infrastructure, local LLM routing, technical debt optimizer, high-ticket copywriting tools, local AI models"
-        },
-        pricingModels: [
-          { tier: "ENTERPRISE ONE-OFF", price: "$9,850", detail: "Permanent local license. Includes 12 months priority security patches and source-code integration access." },
-          { tier: "MANAGED CLOUD NODE", price: "$1,450/mo", detail: "Zero hardware required. We host and manage your local Ollama clusters on isolated Cloud Run instances." }
-        ],
-        salesFunnel: [
-          { step: "1. COGNITIVE HOOK (Ingress)", action: "Promote the 'Local Tech-Debt Audit Report' via automated LinkedIn post with real technical indicators." },
-          { step: "2. INTERACTIVE DEMO (Value Delivery)", action: "Drop the leads into the Empire Inspector playground page to show them their repository's actual code duplications." },
-          { step: "3. HIGH-TICKET CLOSE (Conversion)", action: "Present the One-Off licensing model with an instant cost-savings calculator compared to Claude API rents." }
-        ]
+    try {
+      const res = await fetch("/api/boss-listers/optimize", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          productName,
+          targetPrice,
+          nicheCategory,
+          productFeatures,
+          copyTone
+        })
       });
+
+      const data = await res.json();
+
+      if (!res.ok || !data.success) {
+        throw new Error(data.error || "Optimization request failed.");
+      }
+
+      setOptimizedListing({
+        headlines: data.headlines,
+        bossBullets: data.bossBullets,
+        pricingModels: data.pricingModels,
+        salesFunnel: data.salesFunnel,
+        metaTags: data.metaTags
+      });
+      setApiMode(data.isSimulated ? "simulated" : "live");
+    } catch (err: any) {
+      setApiError(err?.message || "Failed to reach Boss Listers API.");
+    } finally {
       setLoading(false);
-    }, 1300);
+    }
   };
 
   return (
@@ -61,9 +68,18 @@ export default function BossListers() {
               Boss Listers Listing Optimizer
             </h3>
           </div>
-          <span className="text-[9px] font-mono font-bold text-emerald-400 bg-emerald-950/40 border border-emerald-900/30 px-2 py-0.5 rounded">
-            CONVERSION COPYWRITER
-          </span>
+          <div className="flex items-center gap-2">
+            <span className={`text-[9px] font-mono font-bold px-2 py-0.5 rounded border ${
+              apiMode === "live"
+                ? "text-emerald-400 bg-emerald-950/40 border-emerald-900/30"
+                : "text-indigo-400 bg-indigo-950/30 border-indigo-900/30"
+            }`}>
+              {apiMode === "live" ? "GEMINI LIVE" : "SIMULATION MODE"}
+            </span>
+            <span className="text-[9px] font-mono font-bold text-emerald-400 bg-emerald-950/40 border border-emerald-900/30 px-2 py-0.5 rounded">
+              CONVERSION COPYWRITER
+            </span>
+          </div>
         </div>
         <p className="text-xs text-slate-400 mt-1">
           Generate premium headlines, dynamic benefit-focused bullet structures, optimized SEO meta tags, and high-ticket pricing models built on tested conversion methodologies.
@@ -138,6 +154,12 @@ export default function BossListers() {
                 <option value="Indirect & Story-driven">Indirect & Story-driven</option>
               </select>
             </div>
+
+            {apiError && (
+              <div className="bg-rose-950/30 border border-rose-900/50 rounded p-2.5 text-[10px] font-mono text-rose-300">
+                ⚠ {apiError}
+              </div>
+            )}
 
             <button
               onClick={handleOptimizeListing}

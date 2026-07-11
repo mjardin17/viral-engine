@@ -311,7 +311,423 @@
       ]
     },
     {
-      "scene_number": 24,
+      "type": "history",
+      "title": "The Persian Empire \u2014 What Greece Was Facing",
+      "narration": "At Marathon, Greece faced the largest empire the world had yet produced. The Achaemenid Persian Empire under Darius I stretched from the Indus River in the east to the Aegean Sea in the west \u2014 roughly 3 million square miles, encompassing 44 percent of the ancient world's population. Persia was not a primitive enemy. It had professional soldiers, sophisticated logistics, a network of roads, and a postal system that could transmit information across the empire in days. Athens in 490 BC had a population of perhaps 30,000 free male citizens. The mismatch was almost incomprehensible.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Persian Achaemenid Empire at its height under Darius I \u2014 maps showing its vast extent from India to Greece, the royal road system, the disciplined Persian army, the scale of what the Greek city-states faced at Marathon. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#2C1A00"
+      ],
+      "duration_sec": 52,
+      "scene_number": 24
+    },
+    {
+      "type": "history",
+      "title": "The Ionian Revolt \u2014 Why Persia Came",
+      "narration": "Athens sent 20 ships to support the Ionian Revolt \u2014 Greek cities on the coast of modern Turkey that had risen against Persian rule in 499 BC. Those ships helped burn Sardis, the Persian regional capital. Darius had a servant whose sole job was to remind him three times at every dinner: 'Master, remember the Athenians.' The Ionian Revolt was crushed. The Athenian ships went home. But the slight \u2014 Athens challenging Persia at the edge of empire \u2014 demanded a response. Marathon was Darius's response. The ten thousand Greeks who met his army understood exactly what they were dealing with.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Athenian warships sailing to support the Ionian Revolt, the burning of Sardis visible in the background, the Persian satrap watching the Greek ships \u2014 the act of defiance that would bring the Persian Empire to the plain of Marathon eleven years later. 16:9 cinematic.",
+      "bg_colors": [
+        "#8B1A1A",
+        "#2C1A00",
+        "#0D1520"
+      ],
+      "duration_sec": 52,
+      "scene_number": 25
+    },
+    {
+      "type": "biography",
+      "title": "Miltiades \u2014 The Man Who Had Fought Persians",
+      "narration": "Miltiades was not an ordinary Athenian general. He had served the Persians as a client ruler in the Chersonese for years and had commanded Ionian Greek troops in Darius's Scythian campaign. He had watched the Persian army operate. He knew its strengths and its weaknesses. When the Persian force landed at Marathon, Miltiades was one of ten Athenian generals \u2014 decisions required a majority vote. He argued for immediate attack rather than waiting behind Athens's walls. Four generals sided with him, four against. The deciding vote came from the war-archon Callimachus, whom Miltiades persuaded with an argument about glory and history. The speech that saved Western civilization was a persuasion job.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Miltiades addressing the Athenian council of generals at Marathon, his intimate knowledge of Persian tactics evident in his argument, the ten generals debating whether to attack or wait, the democratic decision that would determine the fate of Athens. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#2C1A00"
+      ],
+      "duration_sec": 52,
+      "scene_number": 26
+    },
+    {
+      "type": "battle",
+      "title": "The Plain of Marathon \u2014 Why the Ground Mattered",
+      "narration": "The Persian commanders chose the plain of Marathon specifically for its open terrain, which suited their cavalry. But at the time of the battle, the Persian cavalry was not present \u2014 either re-embarking for a sea attack on Athens, or temporarily corralled. The Athenians attacked in the window when the cavalry was absent. Miltiades also chose to attack across the narrowest part of the plain, limiting the Persians' ability to use their numerical advantage. The battle of Marathon was won partly by terrain and partly by timing. The Athenians attacked when circumstances, for approximately one hour, were in their favor.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The plain of Marathon showing its geography \u2014 the mountains narrowing toward the sea, the marsh on one side, the route the Athenian hoplites took at a run across the open ground toward the Persian lines, the terrain that Miltiades exploited. 16:9 cinematic.",
+      "bg_colors": [
+        "#3D3020",
+        "#1A2A1A",
+        "#0D1520"
+      ],
+      "duration_sec": 52,
+      "scene_number": 27
+    },
+    {
+      "type": "battle",
+      "title": "The Double Envelopment \u2014 A Tactical Masterpiece",
+      "narration": "Miltiades strengthened his flanks and thinned his center deliberately \u2014 the opposite of normal Greek formation. When the phalanx hit the Persian line, the strong flanks swept the Persian wings while the thin center bent back under Persian pressure. The flanks then turned inward, surrounding the Persian center from both sides. This maneuver \u2014 centuries before Cannae, where Hannibal used the same tactic to destroy a Roman army \u2014 required precise coordination from soldiers running in heavy armor, hitting a disciplined enemy line, and immediately pivoting to execute an encirclement. It worked. Militarily, it remains one of the most elegant tactical solutions in military history.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Aerial tactical diagram of the Battle of Marathon \u2014 the Athenian double-envelopment visible as the strong flanks sweep around the Persian center, the Persian wings collapsing, the surrounded Persian center fighting desperately to escape to the sea. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#C9A227",
+        "#1A2A3D"
+      ],
+      "duration_sec": 52,
+      "scene_number": 28
+    },
+    {
+      "type": "detail",
+      "title": "The Hoplite \u2014 What Greek Infantry Actually Was",
+      "narration": "The Greek hoplite was a citizen-soldier who provided his own equipment. The full panoply \u2014 bronze helmet, breastplate, greaves, large round shield (aspis), spear, short sword \u2014 weighed approximately 70 pounds. A man in this equipment running approximately a mile into an enemy formation was doing something physically extreme. Hoplites fought in the phalanx \u2014 a close formation where each man's shield protected the man to his left. The formation worked only if everyone held. It was a collective technology: it required that every man trust every other man not to break. Athens was a democracy fighting for its democracy. That gave the phalanx an advantage that equipment alone couldn't explain.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Greek hoplite warriors in full bronze panoply \u2014 helmets, breastplates, round shields with lambda or owl symbols, long spears \u2014 the citizen-soldiers of Athens whose equipment, training, and cohesion would defeat the Persian Empire's professional army. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#3D3020",
+        "#2C1A00"
+      ],
+      "duration_sec": 52,
+      "scene_number": 29
+    },
+    {
+      "type": "detail",
+      "title": "Pheidippides \u2014 The Real Story",
+      "narration": "The marathon race is named after a run Pheidippides almost certainly did not make. Ancient sources record that before the battle, Pheidippides was sent from Athens to Sparta \u2014 140 miles in two days \u2014 to request military assistance. The Spartans said they would come after their religious festival ended (they were too late). The run from Marathon to Athens that gave the modern race its name appears in only one source, written 600 years after the fact, and was likely invented. The real heroism was the 140-mile run to Sparta that failed, not the 26-mile run that probably didn't happen. History prefers the tidier story.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Pheidippides the Athenian herald running through the rocky Greek landscape toward Sparta, 140 miles in two days, the real Marathon runner whose actual journey was longer and less famous than the legend that replaced it. 16:9 cinematic.",
+      "bg_colors": [
+        "#3D3020",
+        "#1A2A1A",
+        "#5C7A3D"
+      ],
+      "duration_sec": 52,
+      "scene_number": 30
+    },
+    {
+      "type": "battle",
+      "title": "The Pursuit to the Ships",
+      "narration": "After the Persian center broke, Miltiades refused to allow pursuit into the sea. He held his army together \u2014 preventing the breakdown into looting that followed most ancient battles \u2014 and marched them back to Athens at speed. The Persian fleet had already sailed, attempting to reach Athens by sea while the army tied up the Athenians at Marathon. Miltiades's infantry arrived on the beach south of Athens before the Persian fleet could land. The Persians, seeing the Athenian army waiting for them, turned away. The battle of Marathon was won twice: once on the plain, and once by the march back that denied the Persians their second chance.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The Athenian hoplite army marching at double-time back toward Athens after the battle, racing the Persian fleet sailing around the cape, arriving to defend the beaches before the Persians can land, the second victory that completed the first. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#1A2A3D",
+        "#3D3020"
+      ],
+      "duration_sec": 52,
+      "scene_number": 31
+    },
+    {
+      "type": "analysis",
+      "title": "Why Athens Won \u2014 The Real Factors",
+      "narration": "Marathon's Greek victory over Persia had several causes historians still debate. The Persian cavalry's absence was critical. Miltiades's tactical innovation of the double-envelopment was decisive. The absence of Persian archers' usual effectiveness against men running at close range quickly. But underlying all tactical factors was something harder to quantify: the Athenians were fighting for their city, their families, and a way of life they had invented. The Persians were fighting for pay and for an empire they had no stake in. Motivation doesn't win battles alone. But when everything else is approximately equal, it can decide the margin.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Athenian hoplites fighting with the intensity of men defending their homes versus Persian soldiers fighting as professionals for a distant empire, the intangible difference in motivation visible in their combat, the factor that tilted a tactically close battle. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#1A2A3D"
+      ],
+      "duration_sec": 52,
+      "scene_number": 32
+    },
+    {
+      "type": "detail",
+      "title": "The Spartans Arrive \u2014 Too Late",
+      "narration": "The Spartans arrived at Marathon two days after the battle ended. They inspected the field, counted the dead, congratulated the Athenians, and went home. The story is small but significant: the Spartans had the finest army in Greece and chose a religious festival over an ally's existential crisis. Athens won Marathon alone \u2014 without Sparta. The political relationship between Athens and Sparta after Marathon was shaped by this fact. Athens had proved it could defend Greece without Sparta. Sparta had proved it valued ritual over alliance. The tension that would eventually produce the Peloponnesian War was seeded at Marathon.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Spartan warriors arriving two days late at the Marathon battlefield, surveying the Persian dead, the Athenian survivors looking at them with pride and resentment, the moment that shaped Athens-Sparta relations for the next century. 16:9 cinematic.",
+      "bg_colors": [
+        "#3D3020",
+        "#1A2A3D",
+        "#C9A227"
+      ],
+      "duration_sec": 52,
+      "scene_number": 33
+    },
+    {
+      "type": "legacy",
+      "title": "The Golden Age \u2014 What Marathon Made Possible",
+      "narration": "The decade after Marathon was Athens's most productive. The silver discovered at Laurion in 483 BC funded a fleet that would win Salamis. Aeschylus \u2014 who fought at Marathon \u2014 began writing the plays that founded Western drama. Themistocles built the walls and the navy. The confidence generated by Marathon \u2014 that Athens could stand alone against the Persian Empire \u2014 was the psychological foundation of everything that followed: the Parthenon, democracy, philosophy, tragedy, comedy, the intellectual revolution that still shapes how we think. Marathon didn't cause the Golden Age. But it made Athenians believe they deserved one.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Athens in its Golden Age \u2014 the Parthenon under construction on the Acropolis, philosophers debating in the agora, Athenian democracy functioning, the theatrical performances that founded Western drama \u2014 all built on the confidence that Marathon created. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#1A2A3D"
+      ],
+      "duration_sec": 52,
+      "scene_number": 34
+    },
+    {
+      "type": "detail",
+      "title": "The Persians at Marathon \u2014 Their Perspective",
+      "narration": "Persian sources don't mention Marathon. The defeat was too small to record for an empire that ruled 44 percent of the world's population. From Persia's perspective, the expedition was a minor punitive action that ran into unexpected resistance. Darius sent another, larger expedition \u2014 which his son Xerxes led to Thermopylae and Salamis \u2014 without apparently being strategically altered by Marathon. The battle that Athenians remembered as their finest hour barely registered for the people who lost it. Historical significance is always asymmetric.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Persian scribes in Persepolis recording the empire's history, the Marathon expedition mentioned only briefly as a minor setback before larger operations, the battle that changed Greek history invisible in the Persian imperial record. 16:9 cinematic.",
+      "bg_colors": [
+        "#2C1A00",
+        "#C9A227",
+        "#0D1520"
+      ],
+      "duration_sec": 52,
+      "scene_number": 35
+    },
+    {
+      "type": "detail",
+      "title": "The Tumulus \u2014 The Burial Mound of Marathon",
+      "narration": "The 192 Athenians who died at Marathon were buried on the battlefield under a mound called the Soros \u2014 still visible today. This was extraordinary: Greeks normally returned their dead to their home cities for burial. Burying them at Marathon was a deliberate statement that these men had earned the honor of resting where they fell. The mound became a sacred site almost immediately. Dreams about Marathon became common in Athens. The men who fought there \u2014 the Marathonomachoi \u2014 were venerated as semi-divine. Their descendants cited the battle as qualification for public honor for generations. Marathon invented the secular martyrdom of the soldier who dies for his city.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The Soros burial mound at Marathon \u2014 the earthen monument over the 192 Athenian dead, still standing after 2500 years, flowers placed on it by visitors, the sacred ground where Athens buried its heroes on the battlefield rather than carrying them home. 16:9 cinematic.",
+      "bg_colors": [
+        "#3D3020",
+        "#1A2A1A",
+        "#5C7A3D"
+      ],
+      "duration_sec": 52,
+      "scene_number": 36
+    },
+    {
+      "type": "detail",
+      "title": "Aeschylus at Marathon \u2014 The Playwright Who Fought",
+      "narration": "Aeschylus, who would become the father of Western drama, fought at Marathon as a soldier. His epitaph \u2014 reportedly written by himself \u2014 does not mention his plays. It mentions only that he fought at Marathon. The Oresteia, the Persians, the Seven Against Thebes \u2014 works that invented dramatic form \u2014 were written by a man who had personally killed Persians with a spear. His play 'The Persians,' written 8 years after Salamis, is the oldest surviving play in Western literature and is about the Persian Wars. The man who fought at Marathon understood that war's meaning lasted longer than its outcome.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Aeschylus in hoplite armor at the Battle of Marathon, the playwright and soldier whose epitaph would mention only his military service, the man whose experience of war produced the plays that founded Western drama \u2014 tragedy born from battle. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#2C1A00"
+      ],
+      "duration_sec": 52,
+      "scene_number": 37
+    },
+    {
+      "type": "analysis",
+      "title": "Marathon's Place in History \u2014 The Debate",
+      "narration": "Was Marathon decisive? Some historians argue it was a minor skirmish in a war that was never going to be settled in one battle. Others argue that an Athenian defeat at Marathon would have ended Athenian democracy before it had produced a single masterpiece. If Persia had taken Athens in 490 BC \u2014 fifteen years before the Parthenon was begun, thirty years before Socrates was born \u2014 the intellectual revolution that shaped Western civilization might never have happened. We can't know what a Persian-dominated Athens would have produced. We know what a free Athens produced. The difference between those two worlds may have been decided on a plain in Attica on a September morning in 490 BC.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The Parthenon, Socrates teaching in the agora, the theater of Dionysus, the Athenian Assembly in democratic debate \u2014 the civilization that Marathon's outcome made possible, the things that might not exist if the battle had gone differently. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#1A2A3D"
+      ],
+      "duration_sec": 52,
+      "scene_number": 38
+    },
+    {
+      "type": "legacy",
+      "title": "The Marathon Race \u2014 What It Actually Commemorates",
+      "narration": "The modern marathon race \u2014 26.2 miles \u2014 was formalized at the 1896 Athens Olympics, the first modern games. The French scholar Michel Br\u00e9al proposed a race honoring the legendary run from Marathon to Athens. The distance wasn't standardized until 1908, when the British Olympic Committee set it at 26 miles 385 yards to allow the race to finish in front of the royal box at Windsor. The story the race commemorates \u2014 Pheidippides dying after announcing victory \u2014 is probably fiction. But the race itself has become one of the world's most popular athletic events, run by millions of people who are unknowingly participating in a myth their civilization created to honor its first great victory.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Runners in the 1896 Athens Olympic marathon \u2014 the first modern Games held in the city that had survived Marathon 2500 years before, the race that turned a battle into a permanent part of human athletic culture. 16:9 cinematic.",
+      "bg_colors": [
+        "#3D3020",
+        "#1A2A3D",
+        "#C9A227"
+      ],
+      "duration_sec": 52,
+      "scene_number": 39
+    },
+    {
+      "type": "legacy",
+      "title": "What Marathon Proved About Democracy",
+      "narration": "Marathon was fought by a democracy that was less than twenty years old. Athenian democracy was instituted by Cleisthenes in 508 BC. The battle was in 490 BC. The same institutions that made Athens unusual \u2014 citizen assembly, elected generals, collective decision-making \u2014 produced the strategic judgment and military cohesion that won the battle. The ten elected generals debated and voted. The citizen-soldiers held a formation that required mutual trust. The decisive choice to attack was made by a democratic process. Marathon didn't just save democracy \u2014 it demonstrated that democracy could defend itself. That demonstration mattered as much as the military outcome.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The Athenian democratic assembly in session \u2014 citizens debating and voting on the decision to fight at Marathon, the same democratic institutions that made Athens unusual also making the military decision that would save it. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#1A2A3D"
+      ],
+      "duration_sec": 52,
+      "scene_number": 40
+    },
+    {
+      "type": "close",
+      "title": "Marathon's Echo \u2014 2,500 Years Later",
+      "narration": "In 490 BC, 10,000 Athenians and their Plataean allies ran toward the largest empire in the world with bronze spears and the belief that what they were defending was worth dying for. They were right. Western democracy, philosophy, drama, the Olympic Games, the concept of citizenship \u2014 all trace ancestry, however indirectly, to the civilization that survived because of what happened at Marathon. The battle lasted perhaps two hours. Its consequences have lasted two and a half millennia. Some mornings in September, looking at the plain where it happened, you can understand why the ancient Greeks believed that the gods occasionally took an interest in human affairs. On this one morning, something decided to let civilization continue.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The plain of Marathon at dawn today \u2014 peaceful farmland and sea, Mount Pentelicus in the background, the Soros burial mound on the horizon, the place where Western civilization was saved by ten thousand men who chose to run toward what frightened them. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#3D3020"
+      ],
+      "duration_sec": 56,
+      "scene_number": 41
+    },
+    {
+      "type": "biography",
+      "title": "Hippias \u2014 The Tyrant Who Led Persia to Marathon",
+      "narration": "The Persian fleet didn't stumble onto Marathon by accident. It was guided there by Hippias, the exiled tyrant of Athens who had ruled the city before the democratic revolution. Hippias was approximately 80 years old in 490 BC, returning with a foreign army to reclaim the city his family had held for generations. He chose Marathon because his family had political connections in the region and the terrain suited cavalry. The man who knew Athens best was the one helping its enemies. Athenian democracy was, from its first major test, defending itself against someone who had once governed it.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Hippias the aged exiled Athenian tyrant guiding the Persian fleet toward Marathon Bay, an old man pointing to familiar coastline, his family's political base territory, the intimate local knowledge he gave the Persian commanders. 16:9 cinematic.",
+      "bg_colors": [
+        "#2C1A00",
+        "#8B1A1A",
+        "#0D1520"
+      ],
+      "duration_sec": 52,
+      "scene_number": 42
+    },
+    {
+      "type": "history",
+      "title": "The Plataeans \u2014 Athens's Only Ally",
+      "narration": "Athens marched to Marathon with one ally: Plataea, a small Boeotian city that had sought Athenian protection years earlier. The Plataeans sent their entire military force \u2014 approximately 1,000 hoplites \u2014 to stand beside Athens. Their presence on the left flank was militarily significant. Marathon was not Athens alone against Persia; it was the beginning of a Greek coalition. Athens repaid Plataea across generations: defending its independence, granting Plataean soldiers burial honors alongside Athenian dead, and reciting their names in the annual memorial ceremonies. A small city's loyalty was honored for two centuries.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Plataean hoplites arriving to join the Athenian army before Marathon, the small Boeotian city-state's entire military force marching as allies, taking their position on the left flank beside Athens. 16:9 cinematic.",
+      "bg_colors": [
+        "#3D3020",
+        "#1A2A1A",
+        "#C9A227"
+      ],
+      "duration_sec": 52,
+      "scene_number": 43
+    },
+    {
+      "type": "detail",
+      "title": "Callimachus \u2014 The Vote That Decided History",
+      "narration": "The decision to attack at Marathon required a majority of the ten Athenian generals. The vote was five to five. The war-archon Callimachus held the deciding vote. Miltiades argued that a Greek city that had defied Persia and survived would be the beginning of something; a city that submitted would be the end. Callimachus voted to attack. He died in the battle, killed on the right flank where the fighting was heaviest. His name appears on the victory column at Athens. The man who cast the deciding vote paid for it with his life, and the vote he cast changed the world.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The council of ten Athenian generals debating whether to attack at Marathon, Miltiades making his argument to the war-archon Callimachus, the moment of decision that required one man's courage to convert into a majority. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#2C1A00"
+      ],
+      "duration_sec": 52,
+      "scene_number": 44
+    },
+    {
+      "type": "detail",
+      "title": "Datis and Artaphernes \u2014 The Persian Commanders",
+      "narration": "The Persian expedition was commanded by two men: Datis, a Mede who was Darius's most experienced naval commander, and Artaphernes the Younger, the king's nephew. They were not incompetent \u2014 they had successfully subdued the Cycladic islands and captured Eretria, enslaving its population, before landing at Marathon. The failure at Marathon was not poor generalship in a vacuum; it was a tactical situation where the absence of cavalry at the critical moment combined with Greek terrain advantages. Datis returned to Persia and remained in royal service. He was a competent commander who encountered a situation his army couldn't solve.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Persian commanders Datis and Artaphernes surveying the plain of Marathon from the heights, their experienced professional army deployed along the shore, the moment before the Athenian charge that would end their expedition. 16:9 cinematic.",
+      "bg_colors": [
+        "#2C1A00",
+        "#0D1520",
+        "#C9A227"
+      ],
+      "duration_sec": 52,
+      "scene_number": 45
+    },
+    {
+      "type": "biography",
+      "title": "Miltiades's End \u2014 The General Who Saved Greece",
+      "narration": "Miltiades died in prison the year after Marathon, at approximately age 55. His subsequent campaign against the island of Paros failed; he was wounded, accused of deceiving the people, and fined a ruinous sum he couldn't pay. His son Cimon paid the debt after his death. The man who had saved Athens at Marathon was prosecuted for a failed follow-on campaign and died disgraced. Athens was a democracy, which meant it gave its citizens both the power to make the crucial decision and the power to punish the man who made it. There is no comfortable narrative about how democracies treat their heroes.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Miltiades in prison in Athens, the hero of Marathon broken by a subsequent failure, his son Cimon at the cell door, the uncomfortable truth of how democratic Athens treated the general who had saved it. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D0D0D",
+        "#1A1A1A",
+        "#C9A227"
+      ],
+      "duration_sec": 52,
+      "scene_number": 46
+    },
+    {
+      "type": "detail",
+      "title": "The Stoa Poikile \u2014 Painting the Victory",
+      "narration": "Athens commemorated Marathon with a painted stoa \u2014 a covered walkway \u2014 in the Agora, decorated with a large mural depicting the battle. The Stoa Poikile (Painted Porch) was constructed around 460 BC, thirty years after the battle, and its Marathon painting was considered one of the masterpieces of ancient art. The painting is lost, but ancient descriptions survive. It depicted the battle's three phases, identified named heroes, and showed the gods watching from above. The Stoic philosophy was founded under this porch \u2014 its name gives Stoicism its name. The building that commemorated Marathon also gave birth to one of Western philosophy's most durable traditions.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The Stoa Poikile in the Athens Agora \u2014 the painted portico with its massive mural depicting the Battle of Marathon, Athenian citizens walking past, the building that commemorated the victory and later gave Stoic philosophy its name. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#2C1A00"
+      ],
+      "duration_sec": 52,
+      "scene_number": 47
+    },
+    {
+      "type": "detail",
+      "title": "Herodotus \u2014 The Father of History at Marathon",
+      "narration": "Our primary source for Marathon is Herodotus, who wrote his Histories approximately fifty years after the battle. He interviewed survivors and their children, visited Marathon, and produced the most detailed account we have. But Herodotus is also our problem: he includes stories that are clearly legendary, numbers that are demonstrably exaggerated, and speeches that are literary creations. The Persian army of 'two million' is impossible to supply. The speech Miltiades gave exists only in Herodotus. We can't separate the documentary from the literary. Marathon comes to us filtered through a man who understood that great stories require great telling, and acted accordingly.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Herodotus writing at his desk, scrolls spread around him, interviewing an elderly Athenian veteran of Marathon fifty years after the battle, the historian who preserved the story and shaped it for all time. 16:9 cinematic.",
+      "bg_colors": [
+        "#3D3020",
+        "#2C2010",
+        "#C9A227"
+      ],
+      "duration_sec": 52,
+      "scene_number": 48
+    },
+    {
+      "type": "detail",
+      "title": "The Persian Archers \u2014 What Greece Faced",
+      "narration": "Persian archers were professionals, equipped with composite bows with ranges of up to 175 yards. They could loose six to eight aimed arrows per minute. A standard Persian tactic was to begin battle with sustained arrow volleys that broke enemy formations before the infantry engaged. Against most armies, this worked. Against hoplites running at full speed across 200 yards, it worked for approximately thirty seconds. The Greeks had calculated \u2014 or Miltiades had calculated \u2014 that moving fast enough would reduce the window of effective archery to the point where the hoplite formation could strike before being decimated. The sprint was the tactical solution to the arrow.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Persian composite archers in formation at Marathon, their arrows filling the air toward the charging Athenian hoplites, the brief window of effective archery before the Greek phalanx closed the distance and made the bows useless. 16:9 cinematic.",
+      "bg_colors": [
+        "#8B1A1A",
+        "#2C1A00",
+        "#3D3020"
+      ],
+      "duration_sec": 52,
+      "scene_number": 49
+    },
+    {
+      "type": "detail",
+      "title": "The Night March \u2014 Getting Into Position",
+      "narration": "The Athenians didn't simply appear at Marathon. They marched approximately 26 miles from Athens in full armor, arriving at the sanctuary of Heracles where they made camp on the hills overlooking the plain. They held this position for several days, waiting. The delay was tactical: Miltiades was waiting for the cavalry to be absent. He was also managing a political coalition \u2014 some Athenian leaders wanted to wait for the Spartans, who never came in time. The battle was fought after days of hesitation, at a moment of opportunity that Miltiades recognized and the war-archon Callimachus enabled. The sprint at Marathon came after a week of waiting.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Athenian hoplites marching by night toward Marathon, the dark hills of Attica around them, arriving at the sanctuary of Heracles and setting up camp on the high ground overlooking the Persian position below. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D0D0D",
+        "#1A2A1A",
+        "#3D3020"
+      ],
+      "duration_sec": 52,
+      "scene_number": 50
+    },
+    {
+      "type": "analysis",
+      "title": "The Cavalry Question \u2014 What We Know and Don't",
+      "narration": "Why wasn't the Persian cavalry present at the decisive moment? Two explanations compete. The traditional view is that the cavalry had re-embarked on ships for a sea attack on Athens while the infantry was occupied at Marathon \u2014 a strategic division of forces. The alternative is that the cavalry was being watered and corralled in a natural enclosure and wasn't available when the Athenians attacked. Both explanations appear in ancient sources. Both could be partially true. What is certain is that without cavalry, the Persian tactical system \u2014 which depended on cavalry to exploit infantry breakthroughs \u2014 could not function as designed. Marathon was won partly because Miltiades attacked in the window when it couldn't.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Persian cavalry horses being led away from the battlefield, either re-embarking on ships or being corralled away from the fighting, the key absence that made the Athenian phalanx charge survivable. 16:9 cinematic.",
+      "bg_colors": [
+        "#3D3020",
+        "#C9A227",
+        "#0D1520"
+      ],
+      "duration_sec": 52,
+      "scene_number": 51
+    },
+    {
+      "type": "detail",
+      "title": "The Victory at Delphi",
+      "narration": "After Marathon, Athens dedicated offerings at Delphi, the pan-Hellenic sanctuary that served as the closest thing the Greek world had to a shared religious institution. The Athenian Treasury at Delphi \u2014 a small building housing offerings \u2014 was either built or expanded after Marathon. The bronze Nike (Victory) statue and other dedications told every Greek who visited Delphi that Athens had fought Persia alone and won. Delphi had predicted Persian victory before Marathon. The Delphic oracle's reputation suffered from the defeat. Athens, whose victory contradicted the oracle's advice, used Delphi's prestige to publicize its achievement to the entire Greek world.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The Athenian Treasury at Delphi glittering with victory offerings after Marathon, Greek pilgrims from across the Hellenic world reading the inscriptions recording Athens's victory over Persia, the deliberate broadcast of Athenian achievement. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#2C1A00"
+      ],
+      "duration_sec": 52,
+      "scene_number": 52
+    },
+    {
+      "type": "detail",
+      "title": "Marathon and the Ten Tribes",
+      "narration": "Athenian democracy organized its citizens into ten tribes created by the reforms of Cleisthenes in 508 BC. Each tribe contributed one general to the council of ten. The tribal system was designed to break the political power of aristocratic clans. At Marathon, each tribe also contributed a regiment of soldiers. The victory was therefore simultaneously a democratic achievement \u2014 won by citizens organized through democratic institutions \u2014 and a validation of Cleisthenes's reforms. When the Athenians built their victory monument listing the dead by tribe, they were also publishing a statement about what kind of political system had just defeated the Persian Empire.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The Athenian victory stele at Marathon listing the 192 dead organized by their ten democratic tribes, the political statement embedded in the memorial, democracy's certificate of military competence carved in marble. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#3D3020"
+      ],
+      "duration_sec": 52,
+      "scene_number": 53
+    },
+    {
+      "type": "analysis",
+      "title": "What Persia Wanted \u2014 The Real Goals",
+      "narration": "Darius's goal at Marathon was not the conquest of Greece. He wanted to punish Athens for supporting the Ionian Revolt, install Hippias as a friendly tyrant, and establish Persian influence in the Aegean. Greece was a peripheral interest \u2014 useful as a trading partner and buffer zone, but not worth a full imperial commitment. The resources Persia sent to Marathon were significant but not the empire's full weight. Xerxes's later invasion was different: it was conceived as a full conquest. Marathon's significance is therefore partly that it convinced Darius's son to commit more fully, which led to Thermopylae and Salamis \u2014 where Greece's survival was more genuinely at stake.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Map showing Persia's actual strategic interests \u2014 the Ionian coast, Aegean trade routes, Athens as a peripheral target \u2014 the limited scope of the 490 BC expedition versus the full-scale invasion that Marathon provoked ten years later. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#1A2A3D",
+        "#C9A227"
+      ],
+      "duration_sec": 52,
+      "scene_number": 54
+    },
+    {
+      "type": "legacy",
+      "title": "The Marathonomachoi \u2014 What Their Descendants Claimed",
+      "narration": "For generations after Marathon, Athenians who could claim descent from the men who fought there \u2014 the Marathonomachoi \u2014 used that descent as a qualification for public honor, political office, and social status. The battle created an aristocracy of service that cut across the traditional aristocracy of birth. Men whose fathers had been craftsmen but fought at Marathon could claim status equal to men of ancient lineage. In a democracy, military service had replaced ancestry as the primary claim to respect. This transformation \u2014 from aristocratic to civic honor \u2014 is one of the deepest changes Athens's victory produced. It took one morning to win. It took a century to understand what had changed.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Athenian citizens in the assembly invoking their fathers' service at Marathon as qualification for public honor, the democratic revaluation of status from birth to battlefield service, the social transformation Marathon produced. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#3D3020",
+        "#0D1520"
+      ],
+      "duration_sec": 52,
+      "scene_number": 55
+    },
+    {
+      "scene_number": 56,
       "type": "outro_cta",
       "title": "Subscribe \u2014 History That Actually Matters",
       "duration_sec": 44,

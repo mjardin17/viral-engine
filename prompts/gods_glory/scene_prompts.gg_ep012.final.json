@@ -6,7 +6,7 @@
   "subtitle": "476 AD \u2014 The End of a Thousand-Year Empire",
   "tagline": "One boy emperor. One barbarian general. A thousand years of Rome \u2014 gone by sunset.",
   "villain_mandate": "Odoacer \u2014 the barbarian who decided an empire wasn't worth keeping",
-  "duration_target_sec": 1140,
+  "duration_target_sec": 1693,
   "viral_hook": "The Roman Empire didn't fall with a bang. It ended with a teenage boy handing over a crown.",
   "youtube_title": "The Last Emperor: How Rome Fell in a Single Day (476 AD)",
   "lesson": "Empires don't collapse \u2014 they are abandoned by the people who should have defended them.",
@@ -323,6 +323,409 @@
         "#1A1A2E",
         "#8B1A1A"
       ]
+    },
+    {
+      "scene_number": 25,
+      "type": "history",
+      "title": "The Third Century Crisis \u2014 Rome Nearly Dies Early",
+      "narration": "Before Romulus Augustulus, Rome almost fell two centuries earlier. Between 235 and 284 AD, the Roman Empire suffered through 50 emperors in 50 years \u2014 most died violently. External invasions, economic collapse, and pandemic swept the empire simultaneously. The Plague of Cyprian killed 5,000 people a day in Rome alone. The empire fragmented into three pieces. That it survived was due almost entirely to the military reforms of Diocletian and Constantine, who rebuilt Rome from near-ruin. The fall of 476 was the second time Rome nearly died. The first time, it saved itself. The second time, it didn't.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Roman Empire map fracturing into three pieces \u2014 the Gallic Empire in the west, Palmyrene Empire in the east, the rump Roman state in the center. Barbarian incursions from every direction, flames spreading across the empire, the near-death of Rome in the Third Century. 16:9 cinematic.",
+      "bg_colors": [
+        "#8B1A1A",
+        "#2C1A00",
+        "#5C4A2A"
+      ],
+      "duration_sec": 52
+    },
+    {
+      "scene_number": 26,
+      "type": "history",
+      "title": "Constantine \u2014 The Emperor Who Changed Everything",
+      "narration": "Constantine I, who ruled from 306 to 337 AD, made two decisions that shaped the next thousand years of European history. He made Christianity the favored religion of the Roman Empire \u2014 transforming a persecuted sect into an institutional power. And he moved the empire's capital to Constantinople \u2014 the city on the Bosphorus that would outlive Rome itself by nearly a thousand years. By moving east, Constantine essentially conceded the west. The western provinces, always poorer and harder to defend, were left to survive with fewer resources and less imperial attention. The fall of 476 is partly Constantine's legacy.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Emperor Constantine in golden armor before the new city of Constantinople under construction, the Bosphorus behind him, Christian chi-rho symbol on his banner, the momentous decision to move the empire's center of gravity eastward. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#2C1A00",
+        "#0D1520"
+      ],
+      "duration_sec": 52
+    },
+    {
+      "scene_number": 27,
+      "type": "history",
+      "title": "The Visigoths Sack Rome \u2014 410 AD",
+      "narration": "In 410 AD, sixty-six years before the official fall, Visigoths under Alaric sacked Rome for the first time in eight centuries. The shock was theological as well as political \u2014 if Rome, the eternal city, could be sacked, what was permanent? Saint Augustine of Hippo began writing 'The City of God' in direct response, arguing that the true imperishable city was not Rome but the kingdom of God. The sack of 410 was a trauma that reoriented how educated Romans understood their civilization. It planted the idea that Rome might not be eternal. Romulus Augustulus completed what Alaric began.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Visigoth warriors of Alaric streaming through the gates of Rome in 410 AD, looting temples and palaces, Roman citizens fleeing, the eternal city violated for the first time in 800 years, smoke rising over the Forum. 16:9 cinematic.",
+      "bg_colors": [
+        "#8B1A1A",
+        "#2C1A00",
+        "#3D3020"
+      ],
+      "duration_sec": 52
+    },
+    {
+      "scene_number": 28,
+      "type": "history",
+      "title": "The Huns \u2014 The Force That Set Everything in Motion",
+      "narration": "The Huns did not conquer Rome. They caused everyone else to. Arriving from the Central Asian steppes in the 370s AD, the Huns were such ferocious fighters that they drove entire peoples \u2014 Visigoths, Ostrogoths, Vandals, Burgundians \u2014 off their traditional lands and into Roman territory. Rome had absorbed barbarian peoples before. But never this many, this fast, all demanding land simultaneously. Attila the Hun, who terrorized Europe from 434 to 453 AD, is the ghost behind the fall of Rome \u2014 not the cause, but the force that made the cause inevitable.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Hunnic cavalry charging across the Central Asian steppe, driving Gothic refugees westward toward Roman borders, the great migration of peoples that would overwhelm Rome's capacity to absorb and defend, the chain reaction of displacement. 16:9 cinematic.",
+      "bg_colors": [
+        "#3D2A1A",
+        "#1A1510",
+        "#5C4A2A"
+      ],
+      "duration_sec": 52
+    },
+    {
+      "scene_number": 29,
+      "type": "analysis",
+      "title": "The Economic Collapse \u2014 What Really Killed Rome",
+      "narration": "Military failure is the dramatic story of Rome's fall. Economic collapse is the real one. By the 5th century, Rome's tax base had shrunk catastrophically. Wealthy landowners had consolidated agricultural land, reducing the free farmer class that paid taxes and provided soldiers. The empire was debasing its currency \u2014 reducing silver content \u2014 to pay bills, causing inflation. Trade routes disrupted by invasions reduced commerce. The military, always expensive, was increasingly composed of barbarian federates who had to be paid in land rather than coin. Rome went bankrupt before it fell. The barbarians were the collection agency.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Roman market in late Imperial period, coins being weighed and found light, debased currency visible, merchants arguing over values, the economic decay of a civilization that had run out of the financial resources to sustain itself. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#2C1A00",
+        "#1A1510"
+      ],
+      "duration_sec": 52
+    },
+    {
+      "scene_number": 30,
+      "type": "analysis",
+      "title": "The Military Crisis \u2014 Defending 10,000 Miles of Border",
+      "narration": "The Roman Empire at its height maintained roughly 10,000 miles of fortified frontier \u2014 Hadrian's Wall in Britain, the Rhine-Danube line across central Europe, desert forts in North Africa and Syria. Defending it required an army of 300,000-500,000 men. By the 5th century, Rome couldn't recruit or pay enough soldiers. The solution \u2014 hiring barbarian foederati to defend Roman territory \u2014 was sensible and fatal simultaneously. The barbarians defending the borders were the same peoples crossing them. Loyalty went to commanders, not emperors. When Odoacer's men decided they wanted land in Italy rather than pay, they had both the weapons and the numbers to take it.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Aerial view of vast Roman frontier fortifications \u2014 Hadrian's Wall, Rhine fortresses, Danube forts \u2014 the impossible perimeter that Rome could no longer defend, barbarian pressure visible on every border simultaneously. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#1A2A3D",
+        "#3D3020"
+      ],
+      "duration_sec": 54
+    },
+    {
+      "scene_number": 31,
+      "type": "detail",
+      "title": "Romulus Augustulus \u2014 The Irony of the Last Name",
+      "narration": "The last Western Roman Emperor's name combined the names of Rome's founder and its first emperor: Romulus, who founded Rome in 753 BC, and Augustus, the first emperor. It was almost too perfect \u2014 as if history had arranged it deliberately. Romulus Augustulus had no power and probably knew it. He had been placed on the throne by his father Orestes, a Roman general of barbarian origin who was the real power. When Odoacer killed Orestes and demanded the throne, Romulus \u2014 just sixteen \u2014 was spared because he was too young to be a threat. He lived out his days in a Campanian villa on a pension provided by the man who ended his empire.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Young Romulus Augustulus in lavish but empty Roman palace in Ravenna, the imperial regalia overwhelming his teenage frame, the pathos of a boy-emperor who is the last of a 1200-year line, awaiting the end he cannot stop. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#8B1A1A",
+        "#2C1A00"
+      ],
+      "duration_sec": 52
+    },
+    {
+      "scene_number": 32,
+      "type": "analysis",
+      "title": "Was 476 Actually the Fall?",
+      "narration": "Most Romans living through 476 AD did not know they were witnessing the fall of an empire. Life in Italy continued. The Roman Senate still sat. Roman law still operated. Churches still held services. The main visible change was that the man sitting in Ravenna was a German rather than a Roman. Historians in later centuries identified 476 as the end date because it was clean and symbolic. The Eastern Roman Empire \u2014 Byzantium \u2014 continued for another thousand years, until 1453. Many historians now argue that Rome didn't fall \u2014 it transformed, slowly, over centuries, into the medieval world. The fall of 476 is a narrative convenience more than a single moment of collapse.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Roman city in 480 AD continuing to function \u2014 markets open, Senate meeting, Christian churches operating, Roman law administered \u2014 life unchanged despite the change of rulers, the gradual transformation rather than sudden collapse. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#2C1A00",
+        "#3D3020"
+      ],
+      "duration_sec": 54
+    },
+    {
+      "scene_number": 33,
+      "type": "legacy",
+      "title": "Byzantium \u2014 Rome That Refused to Die",
+      "narration": "When historians say Rome fell in 476, they mean the Western Roman Empire. The Eastern half \u2014 centered on Constantinople \u2014 continued for another 977 years. Byzantium preserved Roman law, Roman administration, Greek philosophy, and the Greek New Testament through the centuries when western Europe fragmented into feudal kingdoms. Byzantine scholars fleeing the Ottoman conquest of Constantinople in 1453 carried Greek manuscripts to Italy, helping ignite the Renaissance. Rome didn't fall in 476. One half of it fell. The other half kept Rome alive long enough to pass it to the civilization that followed.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Constantinople in its Byzantine glory \u2014 Hagia Sophia, the Golden Horn harbor, the Theodosian walls, the continuation of Roman civilization in Greek form, the empire that lasted a thousand years after Rome's western half fell. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#1A2A3D"
+      ],
+      "duration_sec": 52
+    },
+    {
+      "scene_number": 34,
+      "type": "legacy",
+      "title": "What Rome Left Behind \u2014 The Full Inventory",
+      "narration": "Rome's physical legacy is everywhere. The English language is roughly 60 percent Latin-derived. The legal systems of France, Italy, Spain, Portugal, and their former colonies descend directly from Roman law. The Catholic Church inherited Rome's administrative structure, its language, and its geographic reach. Roman concrete \u2014 opus caementicium \u2014 was so advanced that some Roman structures are stronger today than when built. The calendar we use is Caesar's. The months are named for Roman gods and emperors. The idea of a republic \u2014 elected representatives, separation of powers, checks and balances \u2014 is Rome's gift to every democracy that followed.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Montage of Roman legacy \u2014 the US Capitol echoing Roman architecture, English and Spanish legal codes derived from Roman law, the Catholic Church in Rome, the Pantheon still standing after 2000 years, Roman roads still in use. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#3D3020"
+      ],
+      "duration_sec": 54
+    },
+    {
+      "scene_number": 35,
+      "type": "close",
+      "title": "What Rome Teaches About Every Empire Since",
+      "narration": "Every civilization that has called itself the successor of Rome \u2014 the Holy Roman Empire, the British Empire, the American republic \u2014 has been reading the same warning. Overextension. Debasement of currency. Reliance on outsourced military. Concentration of wealth. Political dysfunction that makes collective action impossible. The Roman historian Livy said Rome could bear neither its diseases nor their cures. Twenty-first-century readers find that sentence uncomfortably familiar. Rome fell not because barbarians were strong. It fell because Rome became unable to respond to its own contradictions. That is not an ancient problem. It is the human problem.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The Colosseum in Rome at sunset, tourists walking where emperors once paraded, the eternal city outlasting its empire, the 2000-year-old monument to human ambition and its limits, the lesson of Rome written in stone for anyone who looks. 16:9 cinematic.",
+      "bg_colors": [
+        "#8B1A1A",
+        "#C9A227",
+        "#2C1A00"
+      ],
+      "duration_sec": 55
+    },
+    {
+      "scene_number": 36,
+      "type": "detail",
+      "title": "The Western Roman Army \u2014 Who Actually Fought for Rome",
+      "narration": "By the 5th century, the Roman army bore little resemblance to the legions of Caesar. Most soldiers were Germanic federates \u2014 hired barbarian warriors fighting under Roman pay for Roman commanders. Many were loyal. Many were not. The distinction between 'Roman soldier' and 'barbarian invader' had blurred to near invisibility. Odoacer's men who deposed Romulus Augustulus were not invaders arriving from outside \u2014 they were soldiers already inside Italy, demanding what they believed they had earned. The fall of Rome was partly a military mutiny.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Roman military camp in 5th century Italy showing Germanic foederati soldiers \u2014 barbarian features, Roman equipment, the blurred identity of the late Roman army that was both Rome's defense and its eventual undoing. 16:9 cinematic.",
+      "bg_colors": [
+        "#3D3020",
+        "#1A1510",
+        "#5C4A2A"
+      ],
+      "duration_sec": 52
+    },
+    {
+      "scene_number": 37,
+      "type": "detail",
+      "title": "Odoacer \u2014 The First King of Italy",
+      "narration": "Odoacer ruled Italy from 476 to 493 with considerable competence. He maintained Roman administrative structures, kept the Senate functioning, and ruled in nominal submission to the Eastern Emperor in Constantinople. He was murdered by Theodoric the Ostrogoth, who had been sent by Constantinople specifically to depose him. Theodoric then ruled Italy even more effectively than Odoacer, presiding over a period historians call the Gothic Renaissance. The 'fall' of 476 led to rulers who were, in many ways, better administrators than the late Roman emperors they replaced.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Odoacer on the throne of Italy in Ravenna, Germanic warrior now sovereign ruler, maintaining Roman administration around him, the Senate of Rome continuing to function under a barbarian king, the continuity beneath the dramatic change. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#2C1A00",
+        "#3D3020"
+      ],
+      "duration_sec": 52
+    },
+    {
+      "scene_number": 38,
+      "type": "detail",
+      "title": "The Roman Senate After Rome",
+      "narration": "The Roman Senate continued meeting after 476 AD. It had no real power \u2014 it had been losing power for centuries \u2014 but it continued as an institution of prestige and administration. Senators served as governors, judges, and diplomats under Odoacer and then Theodoric. The Senate's role evolved slowly into what eventually became medieval noble families and eventually the Catholic hierarchy. The Senate of Rome outlasted the Roman Empire by centuries, finally disappearing as an institution in the 8th or 9th century. Institutions built over centuries resist sudden termination.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The Roman Senate meeting in its traditional chamber under the reign of the Gothic king Theodoric, senators in togas conducting business as they had for centuries, the remarkable persistence of Roman institutions long after the empire's political end. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#2C1A00",
+        "#0D1520"
+      ],
+      "duration_sec": 52
+    },
+    {
+      "scene_number": 39,
+      "type": "analysis",
+      "title": "The Role of Christianity in Rome's Fall",
+      "narration": "Edward Gibbon, the 18th-century historian, famously argued that Christianity weakened Rome by redirecting the martial energies of its citizens toward pacifism and the next world. Modern historians largely reject this thesis. Christianity was Rome's state religion during much of the military crisis. Christian bishops like Ambrose of Milan were more powerful political actors than many emperors. The Church preserved literacy, administration, and legal tradition through the collapse. Whether Christianity helped or hurt is probably the wrong question \u2014 the empire and the faith were so intertwined that separating them is historically artificial.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Saint Ambrose of Milan confronting Emperor Theodosius, the bishop wielding power the emperor must acknowledge, the Christian Church both inheriting from and reshaping the Roman state it was transforming. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#2C1A00"
+      ],
+      "duration_sec": 52
+    },
+    {
+      "scene_number": 40,
+      "type": "legacy",
+      "title": "Charlemagne \u2014 Rome's Self-Appointed Heir",
+      "narration": "On Christmas Day, 800 AD, Pope Leo III crowned Charlemagne as Emperor of the Romans in St. Peter's Basilica. The coronation was a deliberate act of historical imagination: recreating a Western Roman Empire that had been gone for 324 years. The Holy Roman Empire that descended from Charlemagne's coronation lasted \u2014 in increasingly nominal form \u2014 until Napoleon abolished it in 1806. For a thousand years, European rulers justified their power by claiming Roman descent or Roman inheritance. Rome's ghost was more powerful than Rome's reality had been.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Charlemagne kneeling before Pope Leo III in St. Peter's Basilica on Christmas 800 AD, the coronation that claimed to revive the Western Roman Empire 324 years after its fall, the most durable piece of historical mythology in European history. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#2C1A00"
+      ],
+      "duration_sec": 52
+    },
+    {
+      "scene_number": 41,
+      "type": "legacy",
+      "title": "Roman Law's Global Reach",
+      "narration": "Roman law's most direct descendant is the European Union's legal system. The EU's civil law tradition \u2014 as opposed to the common law tradition of England and its former colonies \u2014 derives from the Corpus Juris Civilis compiled under Emperor Justinian in the 6th century. Legal concepts that appear in every EU member state court \u2014 property rights, contract law, the distinction between public and private law \u2014 were formulated by Roman jurists who have been dead for 1,800 years. The Roman Empire ended. Roman law never did.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Modern EU court in Brussels, judges applying legal principles that trace directly to Roman jurisprudence, the 2000-year chain of legal inheritance visible in the formal proceedings, Rome's greatest legacy functioning in the 21st century. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#2C2C2C"
+      ],
+      "duration_sec": 52
+    },
+    {
+      "scene_number": 42,
+      "type": "detail",
+      "title": "Boethius \u2014 Rome's Last Philosopher",
+      "narration": "Anicius Manlius Severinus Boethius was a Roman senator, philosopher, and translator who served under the Ostrogoth king Theodoric. He was imprisoned and executed in 524 AD on charges of treason. In prison, awaiting death, he wrote 'The Consolation of Philosophy' \u2014 a dialogue between himself and the personification of Philosophy. It became one of the most widely read books in medieval Europe, translated into Old English by King Alfred, into Middle English by Chaucer. Boethius represents the last moment when one person could comprehend the entirety of Greco-Roman knowledge. After him, it took centuries to recover.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Boethius writing the Consolation of Philosophy in his prison cell in 524 AD, the last great Roman intellectual composing his masterwork while awaiting execution, the final flame of classical learning before the medieval centuries. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D0D0D",
+        "#1A1A1A",
+        "#C9A227"
+      ],
+      "duration_sec": 52
+    },
+    {
+      "scene_number": 43,
+      "type": "detail",
+      "title": "Augustine of Hippo \u2014 Making Sense of the Fall",
+      "narration": "Saint Augustine of Hippo wrote 'The City of God' (413-426 AD) partly in response to the sack of Rome by Alaric in 410. Pagans blamed Rome's fall on the abandonment of the old gods. Augustine answered that Rome was a human city \u2014 always imperfect, always mortal. The only imperishable city was the City of God. His answer reframed disaster as theologically irrelevant to what actually mattered. 'The City of God' became the foundational text of medieval Christian political theology. Augustine turned Rome's fall from a catastrophe into a footnote in a larger story. Medieval Europe lived in that footnote for a thousand years.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Saint Augustine writing in his study in Hippo, North Africa, the intellectual giant of the late Roman church crafting the theological framework that would make sense of Rome's collapse for a thousand years of medieval civilization. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#2C1A00",
+        "#0D0D0D"
+      ],
+      "duration_sec": 52
+    },
+    {
+      "scene_number": 44,
+      "type": "detail",
+      "title": "The Vandals \u2014 The Original Vandals",
+      "narration": "The word 'vandal' comes from the Vandal tribe that sacked Rome in 455 AD \u2014 but the reputation is somewhat undeserved. The Vandal sack was relatively controlled: no mass killings, systematic looting rather than random destruction. Their leader Gaiseric had a deal with Pope Leo I to spare lives. The 'vandalism' reputation came from Catholic writers who objected to Vandal Arianism \u2014 a form of Christianity condemned as heretical. The Vandals established a kingdom in North Africa that lasted a century and was known for religious tolerance. Their reputation was written by their enemies. Most reputations are.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Vandal warriors entering Rome in 455 AD, relatively disciplined looting rather than the random destruction the name implies, Pope Leo I negotiating with Gaiseric to spare lives, the complex reality behind the word that entered the language as meaning destruction. 16:9 cinematic.",
+      "bg_colors": [
+        "#3D2A1A",
+        "#1A1510",
+        "#8B1A1A"
+      ],
+      "duration_sec": 52
+    },
+    {
+      "scene_number": 45,
+      "type": "legacy",
+      "title": "The Roman Roads \u2014 Infrastructure That Outlasted the Empire",
+      "narration": "The Roman road network \u2014 50,000 miles of engineered stone highways \u2014 continued to be the primary transportation infrastructure of Europe for over a thousand years after Rome fell. Medieval armies, merchants, and pilgrims traveled Roman roads. Some are still in use today as the foundations of modern highways. The roads were built to last: layers of gravel, sand, and stone, cambered for drainage, maintained by a system of road stations. When the maintenance ended, the roads lasted anyway. Rome built for permanence because it expected to be permanent. The roads outlasted the expectation.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Aerial view of a Roman road stretching arrow-straight across the English countryside, the extraordinary engineering visible from above, the same road used by Roman legions then medieval pilgrims then modern cars, the 2000-year infrastructure of empire. 16:9 cinematic.",
+      "bg_colors": [
+        "#3D3020",
+        "#1A2A1A",
+        "#5C7A3D"
+      ],
+      "duration_sec": 52
+    },
+    {
+      "scene_number": 46,
+      "type": "analysis",
+      "title": "Gibbon's 'Decline and Fall' \u2014 The Book That Defined the Question",
+      "narration": "Edward Gibbon's 'The History of the Decline and Fall of the Roman Empire' (1776-1789) is still the starting point for any serious discussion of Rome's end. Gibbon's argument \u2014 that Christianity and barbarism together brought down Rome \u2014 has been largely rejected by modern historians. But his framing of the question, his gathering of sources, and his extraordinary prose made the fall of Rome a matter of serious historical inquiry rather than simple narrative. Every historian who disagrees with Gibbon is, in a sense, still working within the framework he created. The greatest histories generate their own successors for centuries.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Edward Gibbon writing his masterwork in his Geneva study, the monumental project that took 12 years and 6 volumes, the historian who made Rome's fall the central question of Western historical consciousness. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#2C2A1A"
+      ],
+      "duration_sec": 52
+    },
+    {
+      "scene_number": 47,
+      "type": "detail",
+      "title": "The Western Empire's Last Decades \u2014 A Parade of Disasters",
+      "narration": "The decades before 476 were a parade of emperors who lasted months, armies that defeated and installed them, and territories that fell away one by one. Britain was abandoned in 410. Spain was lost to the Visigoths. North Africa fell to the Vandals, severing Rome's grain supply. Gaul was contested. The empire was being eaten alive from the outside while being hollowed from within. The miracle is not that it fell in 476. The miracle is that it lasted as long as it did after 400 AD. The final collapse was not a sudden catastrophe but the culmination of eighty years of compounding failures.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Map of the Western Roman Empire losing territory decade by decade \u2014 Britain abandoned, North Africa falling to Vandals, Gaul contested by Germanic tribes, Spain lost, the systematic shrinkage of empire over eighty years before the final collapse. 16:9 cinematic.",
+      "bg_colors": [
+        "#8B1A1A",
+        "#2C1A00",
+        "#3D3020"
+      ],
+      "duration_sec": 52
+    },
+    {
+      "scene_number": 48,
+      "type": "detail",
+      "title": "Attila the Hun \u2014 What He Actually Was",
+      "narration": "Attila ruled the Hunnic Empire from 434 to 453 AD and terrorized both halves of the Roman Empire. He extracted massive tribute payments, invaded Gaul, invaded Italy, and turned back from Rome itself \u2014 possibly due to plague in his army, possibly due to the intervention of Pope Leo I (a meeting immortalized in art). Attila died in 453, on his wedding night, of a nosebleed. His empire immediately fragmented among his sons. He was the most feared man in Europe for two decades. His impact on Rome was not through conquest but through terror that accelerated the empire's fiscal and military exhaustion.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Attila the Hun at the peak of his power receiving tribute from Roman ambassadors, the most feared ruler in Europe extracting gold from both Eastern and Western Rome, his Hunnic warriors surrounding the scene, the power asymmetry of the mid-5th century. 16:9 cinematic.",
+      "bg_colors": [
+        "#3D2A1A",
+        "#1A1510",
+        "#8B1A1A"
+      ],
+      "duration_sec": 52
+    },
+    {
+      "scene_number": 49,
+      "type": "legacy",
+      "title": "Rome and America \u2014 The Comparison That Won't Die",
+      "narration": "Every American generation has compared the United States to Rome \u2014 the republic that became an empire, the empire that overextended, the civilization that declined through internal decay. The comparison appears in the Federalist Papers, in 19th-century political debate, and in every year since. It is overused and often facile. But it contains something real: large, successful civilizations face structural pressures that successful civilizations create. Inequality, political dysfunction, military overextension, cultural fragmentation \u2014 Rome had them and fell. Whether America faces them in the same way, and whether the trajectory is the same, is the argument that never ends.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The US Capitol building and the Roman Colosseum in visual comparison, the architectural and symbolic debt American democracy owes to Rome, the parallel that has animated political debate since the founding, the question of whether history rhymes. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#1A2A3D"
+      ],
+      "duration_sec": 52
+    },
+    {
+      "scene_number": 50,
+      "type": "close",
+      "title": "476 AD \u2014 A Good Day to End a Story",
+      "narration": "History doesn't have clean endings. Empires don't fall on a single day. But September 4, 476 AD \u2014 when Odoacer told Romulus Augustulus to remove his crown and live quietly in Campania \u2014 is as clean an ending as history provides. A thousand-year story reached its last chapter. The greatest state the ancient world produced, which had absorbed every challenge for a millennium, finally ran out of the capacity to renew itself. Its children \u2014 the Catholic Church, European law, the Romance languages, the idea of the republic \u2014 went on without it. Rome is still here. Just not as Rome.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The sun setting over the Roman Forum on September 4, 476 AD, the empty throne in Ravenna, the eternal city continuing its life after its empire's end, the last light of the Western Roman Empire giving way to the long medieval night and the civilization that followed. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#8B1A1A",
+        "#2C1A00"
+      ],
+      "duration_sec": 55
+    },
+    {
+      "type": "detail",
+      "title": "Germanic Tribes \u2014 Not Barbarians, Just Different",
+      "narration": "The word 'barbarian' meant 'foreigner' to Greeks and Romans \u2014 someone who spoke a language that sounded like 'bar bar.' The Germanic peoples who dismantled the Western Empire were not culturally inferior to Romans. They had complex social structures, sophisticated metalwork, legal traditions, and agricultural systems. They admired Rome \u2014 many had served in Roman armies, lived in Roman cities, and wanted to be Romans. They didn't destroy Rome because they hated it. They dismantled it because the system stopped functioning and they filled the vacuum with what they knew. The 'barbarian' framing is a Roman perspective, not a historical one.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Ostrogoth craftsmen at work \u2014 intricate goldwork and metalwork, sophisticated Germanic artistry, the skilled culture that Romans called barbarian, Theodoric's court combining Roman and Gothic traditions in Ravenna. 16:9 cinematic.",
+      "bg_colors": [
+        "#3D3020",
+        "#5C4A2A",
+        "#C9A227"
+      ],
+      "duration_sec": 52,
+      "scene_number": 51
+    },
+    {
+      "type": "detail",
+      "title": "The Eastern Empire's Survival \u2014 Why Constantinople Held",
+      "narration": "The Eastern Roman Empire survived the 5th century crisis that destroyed the West because it had structural advantages the West lacked. Constantinople's position on the Bosphorus made it nearly impregnable \u2014 it was never successfully sieged for a thousand years. The East was wealthier, more urbanized, and had better agricultural productivity. It had a professional bureaucracy that survived political instability. When barbarian pressure came, the East could pay tribute, buy off threats, and redirect invaders westward. The East's survival was not military genius. It was geography, wealth, and the willingness to be diplomatically flexible rather than militarily rigid.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Constantinople's Theodosian walls from the outside \u2014 the triple fortification that made the city impregnable for a thousand years, the Bosphorus behind it, the strategic geography that allowed the Eastern Empire to survive when the West collapsed. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#1A2A3D"
+      ],
+      "duration_sec": 52,
+      "scene_number": 52
+    },
+    {
+      "type": "analysis",
+      "title": "When Did Rome Actually Fall? \u2014 The Historian's Debate",
+      "narration": "Different historians give different end dates for Rome. 410 AD \u2014 the sack by Alaric. 455 AD \u2014 the sack by the Vandals. 476 AD \u2014 the deposition of Romulus Augustulus. 480 AD \u2014 the death of Julius Nepos, the last legitimate Western Emperor. 529 AD \u2014 the closure of Plato's Academy by Justinian. 568 AD \u2014 the Lombard invasion of Italy. 1453 AD \u2014 the fall of Constantinople. Each date has a argument behind it. The debate itself is instructive: Rome didn't have a single end because it wasn't a single thing. It was an idea, a system, a civilization \u2014 and ideas, systems, and civilizations don't have clean deaths.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Timeline visualization of Rome's various 'endings' \u2014 410, 455, 476, 568, 1453 \u2014 each with its own claim to being the end of Rome, the debate visualized as overlapping circles of interpretation, history resisting simple conclusions. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#C9A227",
+        "#2C2A1A"
+      ],
+      "duration_sec": 52,
+      "scene_number": 53
+    },
+    {
+      "type": "legacy",
+      "title": "The Pantheon \u2014 Still Standing After 2,000 Years",
+      "narration": "The Pantheon in Rome was completed around 125 AD under Emperor Hadrian. Its dome \u2014 142 feet in diameter \u2014 remained the world's largest concrete dome for 1,300 years. It is still in use today as a Catholic church. The Roman concrete used in its construction \u2014 opus caementicium mixed with volcanic ash \u2014 has proven more durable than modern concrete because it actually strengthens over time as seawater or moisture causes chemical reactions. Modern engineers study it. The Pantheon represents everything the fall of Rome was not: permanence, mastery, the capacity of human achievement to outlast the civilization that created it.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The Pantheon in Rome \u2014 the perfect dome open to the sky at its center, the oculus pouring light into the 2000-year-old space, tourists and worshippers moving through what emperors built, the most complete ancient building still standing. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#2C1A00",
+        "#0D1520"
+      ],
+      "duration_sec": 52,
+      "scene_number": 54
+    },
+    {
+      "type": "detail",
+      "title": "The Last Legions \u2014 What Happened to the Soldiers",
+      "narration": "When the Western Empire fell, its soldiers didn't disappear. Many became the military backbone of the Germanic kingdoms that replaced Rome. Odoacer's soldiers were the former Roman army \u2014 they simply stopped being paid in coin and started being paid in Italian farmland. Roman officers served Gothic kings. Roman administrative skills were too valuable to discard. The 'barbarian kingdoms' that replaced Rome were not replacements \u2014 they were continuations with different leadership. The soldiers who had defended Rome became the soldiers who defended the kingdoms that called themselves Rome's heirs. The institution outlasted the empire.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Former Roman legionaries now serving under the banner of an Ostrogoth king, Roman military discipline and equipment combined with Germanic leadership, the continuity of military institutions across the empire's political collapse. 16:9 cinematic.",
+      "bg_colors": [
+        "#3D3020",
+        "#1A1510",
+        "#C9A227"
+      ],
+      "duration_sec": 52,
+      "scene_number": 55
     }
   ]
 }

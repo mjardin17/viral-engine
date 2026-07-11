@@ -6,7 +6,7 @@
   "subtitle": "1096\u20131291 AD \u2014 Two Hundred Years of Faith, Blood, and Sand",
   "tagline": "They marched two thousand miles to reclaim a city. They held it for two hundred years. Then Saladin came.",
   "villain_mandate": "Saladin \u2014 the Kurdish general who reunited Islam and shattered the Crusader dream",
-  "duration_target_sec": 1150,
+  "duration_target_sec": 1699,
   "viral_hook": "For 200 years, French knights ruled Jerusalem. Then one man took it back in a single battle.",
   "youtube_title": "The Crusader Kingdoms: How Europe Built an Empire in the Holy Land (1096-1291)",
   "lesson": "You can conquer almost anything. Keeping it requires something conquest can't give you.",
@@ -29,7 +29,7 @@
       "scene_number": 2,
       "type": "context",
       "title": "Why They Came",
-      "duration_sec": 47,
+      "duration_sec": 55,
       "narration": "In 1095, Pope Urban II gave a sermon at Clermont, France. He called on Christians to take back Jerusalem from Muslim rule. He promised that those who died on the journey would have their sins forgiven \u2014 a spiritual reward that was, for medieval people, literally life-changing. The response was overwhelming. Hundreds of thousands of people across Europe volunteered: knights looking for land and glory, peasants looking for adventure or salvation, merchants looking for trade routes. The First Crusade was part religious movement, part land grab, part the medieval equivalent of a gold rush. They called it the Pilgrimage. History calls it the beginning of two hundred years of war.",
       "visual_prompt": "Gods & Glory cinematic documentary. Pope Urban II at Clermont \u2014 crowd of thousands responding to his sermon, crosses sewn onto their clothing, weapons raised. Knights kneeling. Peasants weeping with religious fervor. The massive scale of the First Crusade's mobilization \u2014 an army of believers setting out from every corner of Europe. 16:9.",
       "bg_colors": [
@@ -211,7 +211,7 @@
       "scene_number": 16,
       "type": "analysis",
       "title": "Why Did They Fail?",
-      "duration_sec": 47,
+      "duration_sec": 55,
       "narration": "The Crusader states lasted two hundred years \u2014 longer than the United States has existed. Why did they fail? Historians point to structural problems: they never had enough settlers to fill the land they conquered. They depended on military reinforcements from Europe that came in waves, won battles, then left. They were surrounded on all sides by populations that never accepted their rule. They feuded internally at critical moments \u2014 like after Baldwin IV died. They made strategic errors \u2014 like refusing the Mongol alliance. But most fundamentally, they were a colony sustained by a mission that Europe eventually stopped believing in urgently enough to keep funding.",
       "visual_prompt": "Gods & Glory cinematic documentary. Visual analysis of Crusader weakness: the thin strip of coastal Crusader territory surrounded by Muslim lands. Ships arriving from Europe with reinforcements then sailing away. Internal feuding visualized as Crusader lords arguing while the enemy gathers outside the walls. The structural fragility of a colony sustained by faith. 16:9.",
       "bg_colors": [
@@ -323,6 +323,396 @@
         "#1A1A2E",
         "#8B4500"
       ]
+    },
+    {
+      "scene_number": 25,
+      "type": "history",
+      "title": "Pope Urban II \u2014 The Speech That Changed History",
+      "narration": "On November 27, 1095, Pope Urban II addressed a crowd at Clermont, France and launched the First Crusade. His speech \u2014 of which no verbatim record survives, only later accounts \u2014 called on Christian knights to march to Jerusalem and liberate the Holy Land from Muslim rule. The crowd responded with cries of 'Deus vult' \u2014 God wills it. Urban's motivations were complex: genuine religious fervor, a desire to reunite Eastern and Western Christianity, and the practical goal of redirecting the violent energy of European knights outward. He unleashed something he could not control and that he did not live to see resolved.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Pope Urban II at the Council of Clermont addressing thousands of knights and clergy, his speech electrifying the crowd, the massive gathering of medieval Europe's military class hearing the call to Holy War, 'Deus Vult' rising from the crowd. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#2C1A00",
+        "#0D1520"
+      ],
+      "duration_sec": 52
+    },
+    {
+      "scene_number": 26,
+      "type": "history",
+      "title": "The People's Crusade \u2014 The Disaster Before the Disaster",
+      "narration": "Before the knights arrived, the peasants went first. Peter the Hermit, a wandering preacher, organized an army of 40,000 mostly unarmed peasants who marched for Jerusalem without supplies, strategy, or military training. They massacred Jewish communities in the Rhineland along the way \u2014 the first of many anti-Jewish pogroms associated with the Crusades. When they reached Anatolia, the Seljuk Turks killed most of them. The People's Crusade accomplished nothing militarily. It is remembered as the uncontrolled, dark underside of the religious enthusiasm that Urban II had tried to channel into organized warfare.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Ragged peasant army of the People's Crusade marching through medieval Europe, Peter the Hermit on a donkey leading them, poorly armed and desperate, the first doomed wave of the Crusading movement heading toward catastrophe. 16:9 cinematic.",
+      "bg_colors": [
+        "#3D2A1A",
+        "#1A1510",
+        "#5C4A2A"
+      ],
+      "duration_sec": 52
+    },
+    {
+      "scene_number": 27,
+      "type": "battle",
+      "title": "The Siege of Antioch \u2014 Nearly Breaking Before Breaking Through",
+      "narration": "The First Crusade's most desperate moment was the eight-month siege of Antioch in 1097-1098. The Crusaders besieged the city while being besieged themselves by a relieving Muslim army. They were starving, diseased, and cut off from resupply. What broke the deadlock was a combination of treachery \u2014 a Crusader leader bribed an Armenian gate captain \u2014 and religious hysteria: a monk claimed to have found the Holy Lance that pierced Christ's side. Whether the relic was genuine or invented, the subsequent battle saw the starving Crusader army fight with extraordinary ferocity and win. Faith as a force multiplier is real, whatever its theological basis.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Crusader knights desperate and starving outside Antioch's massive walls, siege works visible, Muslim relief army threatening from the rear, the impossible position that nearly ended the First Crusade before Jerusalem was reached. 16:9 cinematic.",
+      "bg_colors": [
+        "#8B1A1A",
+        "#2C1A00",
+        "#3D3020"
+      ],
+      "duration_sec": 52
+    },
+    {
+      "scene_number": 28,
+      "type": "battle",
+      "title": "The Fall of Jerusalem \u2014 1099",
+      "narration": "On July 15, 1099, Crusader forces breached Jerusalem's walls after a five-week siege. What followed was a massacre. Crusader chronicles describe the carnage in terms that shocked even contemporaries: blood up to the horses' knees in the Temple Mount area. Modern estimates of those killed range from a few thousand to tens of thousands \u2014 Muslim defenders, Jewish inhabitants, and Eastern Christian communities caught in the violence. The Crusaders wept and prayed at the Church of the Holy Sepulchre while the streets ran with blood. The capture of Jerusalem was the First Crusade's military triumph and its moral catastrophe.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Crusader knights breaching Jerusalem's walls in 1099, the city's fall after 400 years of Muslim rule, the violence and religious fervor mixed together, Crusaders reaching the Church of the Holy Sepulchre through the chaos of battle. 16:9 cinematic.",
+      "bg_colors": [
+        "#8B1A1A",
+        "#C9A227",
+        "#2C1A00"
+      ],
+      "duration_sec": 54
+    },
+    {
+      "scene_number": 29,
+      "type": "history",
+      "title": "Godfrey of Bouillon \u2014 The Man Who Wouldn't Be King",
+      "narration": "After Jerusalem fell, Godfrey of Bouillon was chosen as its ruler. He refused the title of King, saying he would not wear a crown of gold where Christ had worn a crown of thorns. He took the title 'Defender of the Holy Sepulchre' instead. Godfrey is one of the First Crusade's most admirable figures \u2014 genuinely pious, effective in battle, and reluctant about power in ways that made him unusual among medieval rulers. He died in 1100, one year after Jerusalem's capture. His brother Baldwin I took the title of King and built the kingdom that would endure \u2014 precariously \u2014 for nearly a century.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Godfrey of Bouillon in Jerusalem refusing the crown, kneeling before the Church of the Holy Sepulchre instead, the humility of the Crusade's victorious general in the moment of triumph, the holy city around him. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#2C1A00",
+        "#0D1520"
+      ],
+      "duration_sec": 50
+    },
+    {
+      "scene_number": 30,
+      "type": "history",
+      "title": "The Military Orders \u2014 Monks Who Fought",
+      "narration": "The Crusader kingdoms created something unprecedented: military orders of warrior monks. The Knights Templar, founded around 1119, protected pilgrims and eventually became the medieval world's first international banking system. The Knights Hospitaller began as a hospital organization and became elite heavy cavalry. The Teutonic Knights operated primarily in the Baltic. These orders combined monastic discipline \u2014 vows of poverty, chastity, obedience \u2014 with military training and accumulated wealth that made them more powerful than many kingdoms. The Templars' eventual dissolution in 1312 \u2014 their leaders burned as heretics by a French king who owed them money \u2014 is one of history's great cautionary tales about institutional power.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Knights Templar in white mantles with red crosses riding in formation through the Holy Land, the warrior monks who combined religious devotion with military professionalism, guarding pilgrim routes through hostile territory. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#C9A227",
+        "#8B1A1A"
+      ],
+      "duration_sec": 52
+    },
+    {
+      "scene_number": 31,
+      "type": "biography",
+      "title": "Saladin \u2014 The Enemy Who Made the Crusaders Look Bad",
+      "narration": "Salah ad-Din Yusuf ibn Ayyub \u2014 Saladin \u2014 is one of the most admired military commanders in history, celebrated not just by Muslims but by European chroniclers who were his enemies. When he recaptured Jerusalem in 1187, he forbade massacres \u2014 a direct contrast to what the Crusaders had done in 1099. He ransomed Christian prisoners rather than killing them. He allowed Christian pilgrims to continue visiting holy sites. His chivalry was strategic \u2014 it undermined the Crusaders' claim to be the civilized party \u2014 but it was also genuine. Richard I of England and Saladin, who never met in person, developed a relationship of mutual respect that became the stuff of legend.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Saladin in golden armor receiving the surrender of Jerusalem in 1187, ordering his troops to spare civilian lives, the contrast with the 1099 massacre deliberate, the most admired warrior of the medieval world at his greatest moment. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#2C1A00"
+      ],
+      "duration_sec": 54
+    },
+    {
+      "scene_number": 32,
+      "type": "battle",
+      "title": "Hattin 1187 \u2014 How the Kingdom Fell in One Day",
+      "narration": "The Battle of Hattin on July 4, 1187 effectively destroyed the Kingdom of Jerusalem in a single afternoon. King Guy of Jerusalem led his army \u2014 nearly every knight in the kingdom \u2014 away from water sources to relieve a besieged Tiberias. Saladin's forces set fire to the dry grass, then surrounded the dehydrated, smoke-choked Crusader army on the Horns of Hattin. Nearly every Crusader knight was killed or captured. The True Cross \u2014 the Crusaders' most sacred relic \u2014 was taken. Jerusalem, stripped of defenders, fell three months later. Hattin is the strategic defeat that the rest of the Crusading period spent trying to reverse, and never did.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Battle of Hattin \u2014 Crusader army surrounded on volcanic plateau, Saladin's forces closing in, smoke from burning grass choking the knights, the Kingdom of Jerusalem's entire military destroyed in the afternoon heat, the True Cross falling. 16:9 cinematic.",
+      "bg_colors": [
+        "#8B1A1A",
+        "#3D2A1A",
+        "#C9A227"
+      ],
+      "duration_sec": 54
+    },
+    {
+      "scene_number": 33,
+      "type": "history",
+      "title": "Richard the Lionheart \u2014 The Crusader Who Almost Won",
+      "narration": "Richard I of England arrived for the Third Crusade in 1191 and proved himself the most militarily gifted commander of the Crusading era. At the Battle of Arsuf, his disciplined march along the coast under constant harassment from Saladin's cavalry demonstrated tactical mastery. He recaptured Acre and the coastal cities. He came within miles of Jerusalem \u2014 twice. But he never attacked it, calculating correctly that even if captured, he couldn't hold it without a garrison he didn't have. Richard understood strategic reality. His failure to take Jerusalem was militarily rational and politically ruinous. He went home without the prize. The kingdom limped on without him.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Richard I Lionheart leading Crusader column along Mediterranean coast, his disciplined army marching in formation despite constant arrow fire from Saladin's cavalry, the tactical brilliance of the commander who came closest to reversing Hattin. 16:9 cinematic.",
+      "bg_colors": [
+        "#8B1A1A",
+        "#C9A227",
+        "#0D1520"
+      ],
+      "duration_sec": 52
+    },
+    {
+      "scene_number": 34,
+      "type": "analysis",
+      "title": "The Fourth Crusade \u2014 When the Crusades Ate Themselves",
+      "narration": "The Fourth Crusade, launched in 1202, never reached the Holy Land. Venetian financiers rerouted the Crusading army \u2014 first to sack the Christian city of Zara in Dalmatia, then to Constantinople itself. In 1204, Crusaders sacked Constantinople \u2014 the capital of Eastern Orthodox Christianity, their nominal ally \u2014 looting it more thoroughly than any previous invader. The Fourth Crusade destroyed what remained of the Byzantine Empire's strength, setting up its eventual fall to the Ottomans in 1453. It also permanently severed the Catholic-Orthodox schism. A military movement launched to defend Christianity spent its greatest effort destroying it.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Crusader knights sacking Constantinople in 1204, looting the Hagia Sophia and imperial treasury, the monstrous irony of Crusaders destroying the Christian civilization they were meant to defend, the city's treasures being loaded onto Venetian ships. 16:9 cinematic.",
+      "bg_colors": [
+        "#8B1A1A",
+        "#C9A227",
+        "#0D1520"
+      ],
+      "duration_sec": 54
+    },
+    {
+      "scene_number": 35,
+      "type": "close",
+      "title": "The Crusades' Legacy \u2014 What They Left Behind",
+      "narration": "The Crusades lasted from 1095 to 1291 \u2014 nearly two centuries of military expeditions. They failed in their stated objective: the Holy Land has been governed by Muslim powers almost continuously since Saladin. What they left behind is more complicated. They accelerated the transfer of Greek and Arabic scientific knowledge to Western Europe \u2014 the mathematical, medical, and philosophical texts that helped produce the Renaissance. They created trade networks that enriched Venice and Genoa. They deepened Muslim-Christian hostility in ways still active today. They demonstrated what organized religious violence can do and what it cannot. Both lessons are still being learned.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The Crusader castle of Krak des Chevaliers in modern Syria, standing nearly intact after 900 years, the stone legacy of the Crusading kingdoms, the Holy Land today with its layered history of Muslim, Christian, and Jewish presence. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#2C1A00",
+        "#0D1520"
+      ],
+      "duration_sec": 55
+    },
+    {
+      "type": "history",
+      "title": "The Leper King \u2014 Baldwin IV",
+      "narration": "Baldwin IV of Jerusalem was diagnosed with leprosy as a child and was told he would not live to rule. He did both. He ruled the Kingdom of Jerusalem from 1174 to 1185, fighting Saladin to a standstill despite progressive physical deterioration. By his final years he was blind, unable to walk, and had to be carried on a litter. He continued directing battles from the litter. His victory at Montgisard in 1177, where a small force routed Saladin's much larger army, was the high point of his reign. He was 16 years old at the time. He died at 24, having delayed the kingdom's fall by a decade through sheer will.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Baldwin IV the Leper King directing the Battle of Montgisard from horseback despite his disease, young and determined, the white bandages of leprosy visible, his army routing Saladin's much larger force, the most remarkable ruler of the Crusader kingdoms. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#8B1A1A",
+        "#2C1A00"
+      ],
+      "duration_sec": 52,
+      "scene_number": 36
+    },
+    {
+      "type": "detail",
+      "title": "The Kingdom of Jerusalem's Constitution",
+      "narration": "The Kingdom of Jerusalem had one of the most sophisticated constitutional systems of the medieval world. The king could not act without the consent of the High Court of barons. No law could be passed without noble approval. The legal code \u2014 the Assizes of Jerusalem \u2014 was more detailed and more protective of rights than anything in contemporary Europe. The kingdom was a political experiment as well as a military one: a multi-ethnic state in which Muslim, Jewish, and Eastern Christian populations lived under Crusader law. Its political sophistication made its eventual destruction all the more striking.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The High Court of the Kingdom of Jerusalem meeting \u2014 Crusader nobles, church officials, and the king in formal legal deliberation, the sophisticated constitutional monarchy that governed the Holy Land, more legally advanced than contemporary European kingdoms. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#2C1A00"
+      ],
+      "duration_sec": 52,
+      "scene_number": 37
+    },
+    {
+      "type": "detail",
+      "title": "The Assassins \u2014 The Other Power in the Holy Land",
+      "narration": "The Order of Assassins \u2014 Hashshashin \u2014 was a Shia Muslim sect led by Hassan-i Sabbah from their mountain fortresses in Syria and Persia. They operated as political assassins, killing enemies of their sect and sometimes accepting contracts from other parties. Both Crusaders and Saladin dealt with them \u2014 sometimes as enemies, sometimes as useful partners. The Assassins killed Conrad of Montferrat, the newly elected King of Jerusalem, in 1192. Whether Saladin or Richard I ordered the killing is still debated. The Assassins were the third force in a three-way struggle that Crusader histories often reduce to two sides.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The Assassin fortress of Masyaf in Syria on its mountain peak, the mysterious Nizari Ismaili sect that operated as political killers in the Crusader period, their fortified mountain castles visible in the Syrian landscape. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D0D0D",
+        "#1A1A0A",
+        "#2C2A1A"
+      ],
+      "duration_sec": 52,
+      "scene_number": 38
+    },
+    {
+      "type": "battle",
+      "title": "The Siege of Acre \u2014 1189-1191",
+      "narration": "The Siege of Acre lasted two years and nearly broke the Third Crusade before it began. Crusader forces besieged the city while being besieged themselves by Saladin's army surrounding them. Disease killed more soldiers than combat. The siege became a self-contained war: Crusaders and Muslims exchanging positions daily in trenches outside a city whose garrison was slowly starving. When Richard I arrived in 1191, he reorganized the siege methodically and Acre fell within weeks. The two-year ordeal before his arrival showed what the Crusaders could endure. It also showed what the cost of the enterprise really was.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Crusader siege lines around Acre during the two-year siege, Crusader forces besieging the city while Saladin's army besieges them from behind, disease and starvation visible in both camps, the extraordinary endurance of both sides in the grinding siege. 16:9 cinematic.",
+      "bg_colors": [
+        "#8B1A1A",
+        "#2C1A00",
+        "#3D3020"
+      ],
+      "duration_sec": 52,
+      "scene_number": 39
+    },
+    {
+      "type": "history",
+      "title": "The Children's Crusade \u2014 History's Strangest Episode",
+      "narration": "In 1212, a French shepherd boy named Stephen of Cloyes led thousands of children from France toward the Mediterranean, claiming God had promised the sea would part for them. It didn't. Many turned back. Those who reached Marseille and boarded ships were reportedly sold into slavery in North Africa. A similar movement in Germany ended in disaster. The Children's Crusade probably didn't involve as many children as later accounts claimed \u2014 'paupers' is the more likely translation of the Latin. But it happened, in some form, and it represents the Crusading movement at its most fanatical and most tragic.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The Children's Crusade of 1212 \u2014 young people and poor pilgrims marching toward the Mediterranean, their faith enormous and their resources nonexistent, the tragic innocence of those who believed God would miraculously open the sea for them. 16:9 cinematic.",
+      "bg_colors": [
+        "#3D2A1A",
+        "#1A1510",
+        "#5C4A2A"
+      ],
+      "duration_sec": 52,
+      "scene_number": 40
+    },
+    {
+      "type": "history",
+      "title": "Frederick II \u2014 The Crusader Who Never Fought",
+      "narration": "Holy Roman Emperor Frederick II was excommunicated by the Pope when he launched the Sixth Crusade in 1228. He was literally cursed by the Church while leading a crusade. He spoke Arabic, was deeply influenced by Islamic scholarship, and had extensive diplomatic relationships with Sultan Al-Kamil of Egypt. Rather than fighting, Frederick negotiated a treaty that gave Christians Jerusalem, Bethlehem, Nazareth, and a corridor to the sea for ten years. Both Christians and Muslims condemned him: Christians because he dealt with infidels, Muslims because Al-Kamil gave away holy places. Frederick recovered Jerusalem without a battle. It was abandoned fifteen years later.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Frederick II in diplomatic meeting with Sultan Al-Kamil of Egypt, the excommunicated emperor who recovered Jerusalem by negotiation rather than warfare, the extraordinary scene of a Christian crusader and Muslim sultan negotiating over holy cities in Arabic. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#2C1A00"
+      ],
+      "duration_sec": 52,
+      "scene_number": 41
+    },
+    {
+      "type": "detail",
+      "title": "The Mamluks \u2014 The Warriors Who Finally Ended It",
+      "narration": "The Mamluks were former slave soldiers from the Turkish steppe who had overthrown their Ayyubid masters and established their own sultanate in Egypt. They were the finest heavy cavalry in the medieval world and the first force to defeat the Mongols in open battle (Ain Jalut, 1260). When they turned on the remaining Crusader states, the outcome was predictable. Baybars I systematically dismantled Crusader fortifications one by one throughout the 1260s-1270s. His successor Qalawun continued. The Mamluks didn't just beat the Crusaders \u2014 they demolished the infrastructure that made their presence possible.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Mamluk heavy cavalry in battle formation under Sultan Baybars, the former slave soldiers who overthrew their masters and became the most formidable force in the medieval Middle East, systematically dismantling the remaining Crusader fortifications. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#1A2A3D",
+        "#3D3020"
+      ],
+      "duration_sec": 52,
+      "scene_number": 42
+    },
+    {
+      "type": "battle",
+      "title": "The Fall of Acre \u2014 1291",
+      "narration": "On May 18, 1291, Acre \u2014 the last major Crusader city \u2014 fell to the Mamluk Sultan Khalil. The final defense lasted three weeks. When the walls were breached, the remaining defenders retreated to the fortified headquarters of the Teutonic Knights and fought until the building collapsed on defenders and attackers alike. The last Hospitaller garrison escaped by sea. The last civilians were enslaved or killed. The Crusader presence in the Holy Land \u2014 192 years after the First Crusade captured Jerusalem \u2014 was over. The ships that carried the last refugees west passed the ships bringing the next generation's supplies. They turned back without landing.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The final fall of Acre in 1291 \u2014 Mamluk forces breaching the last Crusader walls, desperate defenders fighting in the streets, the last ships leaving the harbor carrying the survivors of the Crusader kingdoms, 192 years of Christian presence in the Holy Land ending. 16:9 cinematic.",
+      "bg_colors": [
+        "#8B1A1A",
+        "#2C1A00",
+        "#0D0D0D"
+      ],
+      "duration_sec": 52,
+      "scene_number": 43
+    },
+    {
+      "type": "analysis",
+      "title": "Why the Crusades Failed \u2014 The Root Causes",
+      "narration": "The Crusades failed for reasons that were structural from the beginning. The Kingdom of Jerusalem could not survive without continuous reinforcement from Europe. European monarchs came, fought, and left \u2014 they had their own kingdoms to govern. The permanent resident population of Crusaders was never large enough to defend the territory. Supply lines 3,000 miles long were inherently fragile. The Muslim world, initially divided, gradually unified under leaders like Zengi, Nur ad-Din, and Saladin. The Crusades were militarily viable only while the Muslim world was fragmented. When it wasn't, the arithmetic was insurmountable.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Strategic map showing the Kingdom of Jerusalem's impossible position \u2014 a thin coastal strip surrounded by Muslim territory, dependent on supply lines across the Mediterranean, the structural impossibility of permanent Christian control in the Holy Land visible in the geography. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#1A2A3D",
+        "#3D3020"
+      ],
+      "duration_sec": 55,
+      "scene_number": 44
+    },
+    {
+      "type": "legacy",
+      "title": "Islamic Architecture \u2014 What the Crusaders Left Behind",
+      "narration": "Krak des Chevaliers in Syria, Belvoir Castle in Israel, the Citadel of Jerusalem \u2014 the Crusaders built military architecture that influenced both European castle design and regional building traditions. The pointed arch, which Europeans called Gothic, may have been transmitted from Islamic architecture through Crusader contacts. The ribbed vault that defines Gothic cathedrals appears in crusader structures in the Holy Land. The architectural exchange was mutual and extensive. The stone fortresses the Crusaders built still stand because they built to last, in the tradition of Romans who came before them.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Krak des Chevaliers in Syria \u2014 the best-preserved Crusader castle, its massive concentric walls visible against the Syrian sky, the architectural legacy of the Crusading kingdoms that influenced both European and regional building traditions. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#3D3020",
+        "#2C1A00"
+      ],
+      "duration_sec": 52,
+      "scene_number": 45
+    },
+    {
+      "type": "detail",
+      "title": "The Templars' Money \u2014 Medieval Banking",
+      "narration": "The Knights Templar invented the medieval banking system. A pilgrim could deposit funds in a Templar house in France and withdraw equivalent value in the Holy Land \u2014 without carrying gold across pirate-infested seas. The Templar network of houses across Europe became the first international bank, making loans to kings and financing trade. When Philip IV of France arrested the Templars in 1307 \u2014 partly to cancel debts he owed them \u2014 he destroyed an institution that had been the financial backbone of European commerce. Modern banking systems trace ancestry to the warrior monks who needed to move pilgrim funds securely across a dangerous world.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Knights Templar in their Paris headquarters counting funds and issuing letters of credit, the warrior monks who invented international banking, their financial innovation as consequential as their military role in the Holy Land. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#2C1A00"
+      ],
+      "duration_sec": 52,
+      "scene_number": 46
+    },
+    {
+      "type": "detail",
+      "title": "Muslim Perspectives on the Crusades",
+      "narration": "Arabic historical sources treated the Crusades as a minor irritant for centuries. Ibn al-Athir wrote about them; most Arabic historians mentioned them in passing. The major threats to the Islamic world in the 11th-13th centuries were the Mongols from the east, not Crusaders from the west. The Mongols killed perhaps a million people when they sacked Baghdad in 1258. Crusader atrocities in Jerusalem barely registered by comparison. The Crusades' significance as a historical pivot was largely a Western construction. In the Arab world, the Crusades only became a major historical reference point in the 19th century, when European colonial powers began invoking them to justify their own presence in the Middle East.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Arabic scholars in medieval Cairo studying and writing history, their perspective on the Crusades as a minor western disturbance compared to the Mongol threat from the east, the different historical significance the Crusades held for the two civilizations they divided. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#2C1A00",
+        "#0D1520"
+      ],
+      "duration_sec": 52,
+      "scene_number": 47
+    },
+    {
+      "type": "detail",
+      "title": "Acre and the Trade Networks \u2014 What the Crusades Enabled",
+      "narration": "For all their violence, the Crusader states created trade networks that enriched Europe. Acre was one of the busiest ports in the Mediterranean. Spices, silks, and Eastern goods that had previously traveled overland through multiple middlemen now came through Crusader ports directly to Italian merchants. Venice, Genoa, and Pisa funded crusades partly to secure trading privileges in Crusader cities. The commercial revolution of 12th-13th century Europe \u2014 the rise of Italian banking, the expansion of long-distance trade \u2014 was partly built on Crusader commerce. The Crusades were a spiritual enterprise financed by economic calculation. As usual, the economists understood the real stakes better than the theologians.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The harbor of Acre in the 12th century bustling with trade \u2014 Venetian, Genoese, and Pisan merchant ships loading Eastern goods, spices and silks changing hands, the commercial wealth that the Crusader presence created alongside the violence. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#C9A227",
+        "#1A2A3D"
+      ],
+      "duration_sec": 52,
+      "scene_number": 48
+    },
+    {
+      "type": "detail",
+      "title": "Bernard of Clairvaux \u2014 The Voice of the Second Crusade",
+      "narration": "The Second Crusade (1147-1149) was largely organized through the preaching of Saint Bernard of Clairvaux, the most influential churchman of the 12th century. His rhetoric was compelling enough to send two kings \u2014 Louis VII of France and Conrad III of Germany \u2014 on a crusade that accomplished virtually nothing. The Second Crusade failed to retake Edessa (its stated purpose), failed in its siege of Damascus, and returned having lost significant numbers of men. Bernard spent the rest of his life explaining why God had allowed a crusade he had guaranteed would succeed to fail spectacularly. The theology of failure is harder than the theology of victory.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Saint Bernard of Clairvaux preaching the Second Crusade to enormous crowds, his charismatic oratory sending two kings and thousands of knights on a crusade that would fail completely, the most influential preacher of the era launching the most embarrassing disaster. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#2C1A00"
+      ],
+      "duration_sec": 52,
+      "scene_number": 49
+    },
+    {
+      "type": "legacy",
+      "title": "The Crusades and Modern Memory",
+      "narration": "The Crusades became politically loaded in the modern era in ways the medieval participants could not have anticipated. 19th-century European colonialists invoked them to justify presence in the Middle East. 20th-century Arab nationalists invoked them as a template for Western imperialism. Osama bin Laden's rhetoric was saturated with Crusade references. Western leaders who used the word 'crusade' (George W. Bush after 9/11) faced immediate backlash because of how the word read in the Arab world. The medieval religious wars acquired a second life as rhetorical weapons in modern conflicts that have almost nothing to do with their original context. History is never just history.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Modern Middle East where the memory of the Crusades shapes political rhetoric \u2014 historical artifacts alongside current conflict, the medieval wars living in contemporary political language, the long shadow of 11th-13th century events on 21st-century conflicts. 16:9 cinematic.",
+      "bg_colors": [
+        "#8B1A1A",
+        "#0D1520",
+        "#C9A227"
+      ],
+      "duration_sec": 55,
+      "scene_number": 50
+    },
+    {
+      "type": "detail",
+      "title": "The Poor Fellow-Soldiers \u2014 The First Templars",
+      "narration": "The Knights Templar began with nine knights who took up residence in the Temple Mount in Jerusalem around 1119 and pledged to protect pilgrims on the road from Jaffa to Jerusalem. Their poverty was genuine at first \u2014 the nine knights shared two horses, which became their seal. Within two decades, through donations from nobility across Europe and papal endorsement at the Council of Troyes in 1129, they had become one of the wealthiest institutions in Christendom. The Templars' transformation from nine poor knights sharing horses to international bankers worth more than some kingdoms is one of the most extraordinary institutional stories in medieval history.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The original nine Knights Templar \u2014 poor, two to a horse, guarding the dangerous road to Jerusalem, the humble beginning of what would become the most powerful military order in medieval Europe, their famous seal of two knights on one horse. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#3D3020"
+      ],
+      "duration_sec": 55,
+      "scene_number": 51
+    },
+    {
+      "type": "detail",
+      "title": "Reynald of Ch\u00e2tillon \u2014 The Man Who Wrecked the Kingdom",
+      "narration": "Reynald of Ch\u00e2tillon was a Crusader lord whose provocations against Muslim caravans \u2014 including attacks on the trade routes between Egypt and Syria that Saladin depended on \u2014 made the war that led to Hattin inevitable. He attacked a caravan that reportedly included Saladin's sister. When captured at Hattin, Saladin personally executed him. Reynald represents the self-destructive wing of the Crusader leadership: men who understood personal honor but not strategic reality, who provoked wars they couldn't win to satisfy codes of conduct that only made sense within a culture that was already losing. Many kingdoms have been destroyed by their most courageous idiots.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Reynald of Ch\u00e2tillon leading his knights in a raid on a Muslim caravan, the Crusader lord whose repeated violations of truce made the war with Saladin inevitable, his short-sighted courage destroying the strategic position the kingdom needed to survive. 16:9 cinematic.",
+      "bg_colors": [
+        "#8B1A1A",
+        "#2C1A00",
+        "#3D3020"
+      ],
+      "duration_sec": 55,
+      "scene_number": 52
+    },
+    {
+      "type": "detail",
+      "title": "Nur ad-Din \u2014 The Unifier Before Saladin",
+      "narration": "Saladin gets the credit for defeating the Crusaders, but Nur ad-Din built the platform Saladin stood on. As ruler of Syria from 1146 to 1174, Nur ad-Din unified the Muslim response to the Crusader presence, established a stable administration, and began the ideological project of making jihad against the Crusaders a religious obligation rather than a political option. He sent Saladin's father to govern Egypt specifically to bring it under Syrian control. He was preparing a coordinated campaign against the Crusaders when he died. Saladin, his subordinate, inherited a unified Muslim Syria and Egypt \u2014 and used it to do what Nur ad-Din had planned.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Nur ad-Din on his throne in Damascus, the Syrian ruler who unified the Muslim world against the Crusaders, the architect of the coalition Saladin would command, his strategic vision clear in his expression as he studies the maps of the Crusader states. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#1A2A3D",
+        "#C9A227"
+      ],
+      "duration_sec": 55,
+      "scene_number": 53
+    },
+    {
+      "type": "close",
+      "title": "The Crusader Legacy \u2014 What Two Centuries Changed",
+      "narration": "The Crusades lasted from 1095 to 1291 and accomplished their stated goal \u2014 Christian control of Jerusalem \u2014 for roughly 88 years. What they left behind was more complicated than success or failure. Trade networks that accelerated European commercial development. Transmission of Greek and Arabic scholarship that helped produce the Renaissance. An enduring fracture between Christianity and Islam that is still visible in geopolitics. Castle architecture that defined the medieval landscape. The military orders whose banking innovations echo in modern finance. The Crusades were a catastrophe, a commerce, a cultural exchange, and a long-running wound. Like most major historical events, they were all of these simultaneously.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Jerusalem today \u2014 the Dome of the Rock, the Church of the Holy Sepulchre, the Western Wall, the city that three religions claim and that the Crusades tried and failed to assign permanently to one of them, the layered history of the world's most contested city. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#8B1A1A"
+      ],
+      "duration_sec": 55,
+      "scene_number": 54
     }
   ]
 }

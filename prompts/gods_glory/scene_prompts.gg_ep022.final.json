@@ -322,6 +322,409 @@
         "#8B8B6B",
         "#C9A227"
       ]
+    },
+    {
+      "type": "history",
+      "title": "December 1944 \u2014 The War Almost Won",
+      "narration": "By December 1944, the Allied armies in Western Europe had liberated France, Belgium, and most of the Netherlands in four months of advance. Germany was being bombed around the clock by thousands of aircraft. Soviet armies were pressing from the east. Most Allied commanders expected Germany to collapse before Christmas. Eisenhower's armies stretched along an 800-mile front with 70 divisions. The Ardennes \u2014 a forest region on the Belgian-German border \u2014 was held thinly by four divisions, considered a quiet sector. It was quiet because it was exactly where Hitler had chosen to attack.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The Allied front lines in December 1944 stretching 800 miles across Western Europe, the Ardennes sector showing as thinly defended \u2014 the quiet forest about to become the war's last desperate German counterattack. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#1A2A3D",
+        "#C9A227"
+      ],
+      "duration_sec": 52,
+      "scene_number": 25
+    },
+    {
+      "type": "biography",
+      "title": "Field Marshal Model \u2014 The Firefighter",
+      "narration": "Field Marshal Walter Model commanded Army Group B, which would execute the Ardennes offensive. Model was known as Hitler's Firefighter \u2014 the commander sent to crisis sectors to stabilize collapsing fronts. He had done it repeatedly on the Eastern Front. When presented with Hitler's plan for a drive to Antwerp, Model privately told staff it was unrealistic. The fuel required didn't exist. The forces were inadequate. He proposed a smaller operation. Hitler overruled him. Model executed the order he disagreed with, nearly achieving what he considered impossible.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Field Marshal Model reviewing the Ardennes offensive plan with his staff \u2014 the pragmatist who knew the plan was too ambitious, executing Hitler's order with professional thoroughness. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#8B1A1A",
+        "#1A2A3D"
+      ],
+      "duration_sec": 52,
+      "scene_number": 26
+    },
+    {
+      "type": "detail",
+      "title": "The V-1 Army \u2014 Germany's Hidden Reserve",
+      "narration": "The German offensive force assembled in secret. Trainloads of fuel, ammunition, and men moved at night under strict radio silence. American aerial reconnaissance saw nothing suspicious \u2014 the Ardennes was considered a German rest area where battered divisions recovered before going back to the front. The assault force totaled 30 divisions including four SS Panzer divisions, 1,900 artillery pieces, and 600 tanks. It was assembled in two weeks under complete radio silence. Allied intelligence had no idea. The Americans in the Ardennes were about to be attacked by a force six times their strength.",
+      "visual_prompt": "Gods & Glory cinematic documentary. German armored divisions assembling in the Eifel forests in secret \u2014 tanks and troops moving by night, radio silence maintained, the assault force invisible to Allied aerial reconnaissance. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#8B1A1A",
+        "#C9A227"
+      ],
+      "duration_sec": 52,
+      "scene_number": 27
+    },
+    {
+      "type": "battle",
+      "title": "December 16 \u2014 The Guns Open",
+      "narration": "At 5:30 AM on December 16, 1944, 1,900 artillery pieces opened simultaneously along an 80-mile front. The thunder woke American soldiers who had no context for what was happening. Then came the searchlights \u2014 German planners used searchlights bounced off low clouds to create artificial moonlight for their infantry advance. Then came the infantry \u2014 200,000 soldiers walking out of the forest. American units that had been holding a quiet sector found themselves facing the full weight of Hitler's last offensive. Many were overrun before sunrise.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The Ardennes front at dawn on December 16 \u2014 1,900 artillery pieces firing simultaneously, searchlights illuminating the forest, 200,000 German soldiers advancing out of the trees. 16:9 cinematic.",
+      "bg_colors": [
+        "#8B1A1A",
+        "#0D1520",
+        "#1A2A3D"
+      ],
+      "duration_sec": 52,
+      "scene_number": 28
+    },
+    {
+      "type": "detail",
+      "title": "Skorzeny's Ghost Brigade \u2014 The Infiltrators",
+      "narration": "SS Colonel Otto Skorzeny commanded Operation Greif: 150 English-speaking German soldiers in American uniforms and captured American jeeps who would infiltrate behind Allied lines. They carried orders to assassinate Eisenhower, spread confusion, and misdirect traffic. The actual infiltrators caused limited damage. But the rumor of them was devastating \u2014 American checkpoints became paranoid, commanders were locked down, false reports of assassins near Eisenhower's headquarters consumed military police resources for weeks. The psychological impact of 150 men exceeded any realistic military contribution.",
+      "visual_prompt": "Gods & Glory cinematic documentary. German infiltrators in American uniforms at captured jeeps, the Skorzeny special operations team that caused more confusion through rumor than through action. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#8B1A1A",
+        "#C9A227"
+      ],
+      "duration_sec": 52,
+      "scene_number": 29
+    },
+    {
+      "type": "battle",
+      "title": "The 106th Infantry \u2014 Two Regiments Captured",
+      "narration": "The 106th Infantry Division had been in the Ardennes for five days when the offensive began. It was their first combat. Two of its three regiments \u2014 approximately 8,000 men \u2014 were surrounded on the Schnee Eifel ridge and captured on December 19. It was the largest mass surrender of American soldiers since Corregidor in 1942. The survivors of the 106th, along with remnants of other shattered units, retreated through the forest in cold and chaos. The German advance was tearing a hole 50 miles wide and growing in the American lines.",
+      "visual_prompt": "Gods & Glory cinematic documentary. American soldiers of the 106th Infantry surrendering on the Schnee Eifel \u2014 8,000 men captured, the largest American surrender since Corregidor, the German breakthrough tearing open the Allied front. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#8B1A1A",
+        "#1A2A3D"
+      ],
+      "duration_sec": 52,
+      "scene_number": 30
+    },
+    {
+      "type": "battle",
+      "title": "Malmedy \u2014 The SS Massacre",
+      "narration": "On December 17, SS Kampfgruppe Peiper \u2014 the leading edge of the German advance \u2014 shot approximately 80 American prisoners of war in a field at Malmedy, Belgium. The Malmedy Massacre spread through the American Army within hours. Eisenhower issued orders: SS prisoners need not be taken. Units that had been retreating in confusion found themselves angry. The massacre galvanized American resistance in a way that German tactical success had not. Some of the hardest fighting of the Bulge was driven by men who had heard about Malmedy and intended to settle the account.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The Malmedy field where 80 American prisoners were executed by SS forces \u2014 the massacre that spread through the American Army as news and transformed confused retreat into determined resistance. 16:9 cinematic.",
+      "bg_colors": [
+        "#8B1A1A",
+        "#0D1520",
+        "#C9A227"
+      ],
+      "duration_sec": 52,
+      "scene_number": 31
+    },
+    {
+      "type": "biography",
+      "title": "Anthony McAuliffe \u2014 Nuts",
+      "narration": "Brigadier General Anthony McAuliffe commanded the 101st Airborne Division defending Bastogne. The 101st had been rushed to Bastogne by truck \u2014 they arrived without winter equipment, without artillery ammunition, in some cases without rifles. German forces surrounded Bastogne on December 21 and sent a formal ultimatum demanding surrender. McAuliffe's reply: Nuts. The German officers who received it asked for clarification \u2014 what does Nuts mean? An American officer explained: it means go to hell. McAuliffe had reduced the entire German position to a single word.",
+      "visual_prompt": "Gods & Glory cinematic documentary. General McAuliffe composing his one-word reply to the German surrender demand \u2014 the Bastogne command post surrounded, the 101st Airborne holding a critical crossroads against six German divisions. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#1A2A3D"
+      ],
+      "duration_sec": 52,
+      "scene_number": 32
+    },
+    {
+      "type": "battle",
+      "title": "Bastogne \u2014 The Crossroads That Mattered",
+      "narration": "Bastogne sat at the intersection of seven roads through the Ardennes. Control of Bastogne meant control of logistics for any advance toward the Meuse River. The 101st Airborne with attached armor and artillery held a perimeter approximately five miles in diameter against elements of six German divisions. With no air supply possible in the overcast weather and ammo down to a handful of artillery rounds per gun per day, the paratroopers held for eight days. They held because losing Bastogne would have meant the entire German offensive had a viable route of advance.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Bastogne under siege \u2014 the 101st Airborne perimeter in the snow, seven roads converging on the town, German forces pressing from all sides against paratroopers running short of everything. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#8B1A1A",
+        "#C9A227"
+      ],
+      "duration_sec": 52,
+      "scene_number": 33
+    },
+    {
+      "type": "biography",
+      "title": "Patton \u2014 90 Degrees in 48 Hours",
+      "narration": "General George Patton's Third Army was attacking east, toward Germany, when the Bulge began. Patton called his staff together and gave them three plans: options to turn his army north depending on how fast Eisenhower wanted to move. He had anticipated a German offensive. When Eisenhower asked at a December 19 conference how long to turn Third Army and attack north, Patton said 48 hours. The room laughed. Patton had already given the order. Turning a 300,000-man army 90 degrees in winter, over icy roads, in the dark, in 48 hours, was logistically nearly impossible. Patton did it in 60.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Patton's Third Army turning 90 degrees north in winter \u2014 tank columns on icy roads, the massive logistical pivot that moved 300,000 men from one direction of attack to another in 60 hours. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#8B1A1A",
+        "#0D1520"
+      ],
+      "duration_sec": 52,
+      "scene_number": 34
+    },
+    {
+      "type": "detail",
+      "title": "The Weather \u2014 God's Vote",
+      "narration": "For the first eight days of the Bulge, the skies over the Ardennes were overcast. Allied airpower \u2014 which had crushed German ground forces everywhere in 1944 \u2014 was grounded. The weather was Germany's ally. On December 23, the skies cleared. Within 24 hours, 5,000 Allied aircraft were over the Ardennes. Supply aircraft dropped ammunition and medical supplies into Bastogne. Fighter-bombers destroyed German tank columns on the roads. Fuel shortages that had already stopped some German units became catastrophic as supply lines were interdicted from the air. When the weather broke, the Bulge's outcome was decided.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Allied aircraft flooding the Ardennes skies on December 23 \u2014 fighter-bombers attacking German columns, supply aircraft dropping into Bastogne, the clear weather that ended Germany's chance of success. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#1A2A3D"
+      ],
+      "duration_sec": 52,
+      "scene_number": 35
+    },
+    {
+      "type": "battle",
+      "title": "The German Fuel Crisis",
+      "narration": "Hitler's plan required capturing Allied fuel depots to sustain the advance. The 1st SS Panzer Division's lead element, Kampfgruppe Peiper, reached within five miles of a fuel depot holding 2.5 million gallons of gasoline. American engineers burned it rather than let it be captured. Without captured fuel, the German advance would consume its supply and stop. By December 23, Kampfgruppe Peiper was out of fuel and surrounded, abandoning its vehicles and escaping on foot. The entire German plan had assumed they could seize what they couldn't carry. They couldn't.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Kampfgruppe Peiper's tanks running out of fuel in the Ardennes, the SS division's advance halted, the 2.5 million gallons of gasoline burned by American engineers barely visible on the horizon. 16:9 cinematic.",
+      "bg_colors": [
+        "#8B1A1A",
+        "#0D1520",
+        "#C9A227"
+      ],
+      "duration_sec": 52,
+      "scene_number": 36
+    },
+    {
+      "type": "battle",
+      "title": "Patton Reaches Bastogne \u2014 December 26",
+      "narration": "At 4:45 PM on December 26, the first tank of Patton's 4th Armored Division drove into Bastogne. The siege was broken. The 101st Airborne had held for eight days, surrounded, outnumbered, undersupplied, in temperatures that reached minus 20 Fahrenheit. McAuliffe met the relieving column: the paratroopers were gaunt, frostbitten, and extraordinarily proud. Bastogne remained contested \u2014 German forces attacked to close the corridor for weeks. But the strategic moment had passed. The German offensive had been stopped at Bastogne and the weather had ended its air cover.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Patton's tanks rolling into Bastogne on December 26 \u2014 the 4th Armored Division breaking the siege, the 101st Airborne paratroopers meeting their relievers after eight days of surrounded combat. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#1A2A3D"
+      ],
+      "duration_sec": 52,
+      "scene_number": 37
+    },
+    {
+      "type": "detail",
+      "title": "The Cold \u2014 The Other Enemy",
+      "narration": "The Battle of the Bulge was fought in some of the worst winter weather in European history. Temperatures dropped to minus 20 Fahrenheit. American soldiers had been in the Ardennes sector before winter clothing was distributed \u2014 they fought in summer uniforms. Frostbite casualties equaled combat casualties in some units. Tanks froze. Rifle bolts froze. Medical supplies froze. Artillery fired less effectively in extreme cold. Approximately 15,000 Americans were treated for cold injuries during the Bulge \u2014 roughly the same as killed in action. The cold killed men on both sides, but Americans were less prepared.",
+      "visual_prompt": "Gods & Glory cinematic documentary. American soldiers in the Ardennes in minus 20 temperatures \u2014 summer uniforms, frozen weapons, frostbite casualties equaling combat wounds, the cold as lethal as German fire. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#1A2A3D",
+        "#8B1A1A"
+      ],
+      "duration_sec": 52,
+      "scene_number": 38
+    },
+    {
+      "type": "analysis",
+      "title": "Why the Bulge Failed",
+      "narration": "The Ardennes offensive failed because three of its four essential requirements were never met. It needed surprise \u2014 partially achieved. It needed rapid advance to reach the Meuse in 48 hours \u2014 never achieved. It needed captured fuel \u2014 never captured. And it needed bad weather long enough to prevent Allied air superiority \u2014 achieved for 8 days, then lost. When the weather broke on December 23, the offensive was already dying of fuel shortage. Allied airpower finished it. The offensive that was supposed to split the Allied armies and force a negotiated peace instead consumed Germany's last armored reserve.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Analysis diagram of the Bulge offensive \u2014 four requirements mapped against what Germany achieved and failed, the structural reasons the boldest German gamble of 1944 was destined to fall short. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#C9A227",
+        "#1A2A3D"
+      ],
+      "duration_sec": 52,
+      "scene_number": 39
+    },
+    {
+      "type": "detail",
+      "title": "The Waffen-SS \u2014 Committed and Gone",
+      "narration": "Hitler had committed his strategic reserve \u2014 four elite SS Panzer divisions \u2014 to the Bulge. The Leibstandarte, Das Reich, Totenkopf, and Hohenstaufen divisions were the best-equipped, most experienced armored formations Germany had left. The Bulge consumed them. By February 1945 these divisions existed on paper but were hollow \u2014 the tanks were gone, the veterans were dead or wounded, the fuel was exhausted. When the Soviet winter offensive began in January 1945, Hitler had no strategic reserve to oppose it. He had spent everything on the Bulge.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The SS Panzer divisions in the Ardennes \u2014 elite armor and veterans committed to Hitler's final gamble, the formations that survived the Bulge returning to the Eastern Front as shadows of their former strength. 16:9 cinematic.",
+      "bg_colors": [
+        "#8B1A1A",
+        "#0D1520",
+        "#C9A227"
+      ],
+      "duration_sec": 52,
+      "scene_number": 40
+    },
+    {
+      "type": "legacy",
+      "title": "The End \u2014 From Bulge to Berlin",
+      "narration": "The Battle of the Bulge was officially over on January 25, 1945. Germany had suffered approximately 100,000 casualties, lost 700 tanks and 1,600 aircraft. America had suffered approximately 75,000 casualties. The difference: America could replace its losses. Germany could not. The Soviet Vistula-Oder offensive began January 12 \u2014 while the Bulge was still being eliminated \u2014 and drove 300 miles to the Oder River, 40 miles from Berlin, in three weeks. Germany had no reserve to oppose it. From the Rhine to the Elbe, American forces crossed Germany in April 1945. Berlin fell in May. The last German offensive had not delayed the end by a day.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Map showing the Allied advance after the Bulge \u2014 the Soviet Vistula-Oder offensive driving to within 40 miles of Berlin, American forces crossing the Rhine, the final collapse of Germany. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#1A2A3D"
+      ],
+      "duration_sec": 52,
+      "scene_number": 41
+    },
+    {
+      "type": "detail",
+      "title": "The 101st Airborne \u2014 Legend Made at Bastogne",
+      "narration": "The 101st Airborne Division at Bastogne became the most celebrated American unit of the European war. The story of the surrounded paratroopers telling German forces Nuts and holding for eight days became an American national myth. Easy Company, 506th Regiment \u2014 later depicted in Band of Brothers \u2014 was at Bastogne. The division's commander Maxwell Taylor was actually in Washington during the siege \u2014 he arrived after the relief. McAuliffe commanded the defense. The 101st's reputation, earned at Normandy and Market Garden, was cemented at Bastogne permanently.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The 101st Airborne's perimeter at Bastogne \u2014 the paratroopers who became an American legend, holding without adequate ammunition or winter clothing against six German divisions for eight days. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#1A2A3D"
+      ],
+      "duration_sec": 52,
+      "scene_number": 42
+    },
+    {
+      "type": "legacy",
+      "title": "Eisenhower's Finest Hour",
+      "narration": "General Eisenhower's response to the Bulge is considered his finest command performance. In the first hours of confusion, while other commanders were uncertain, Eisenhower recognized the attack as a major offensive and began shifting reserves immediately. He held a crucial conference on December 19, declared the situation a great opportunity rather than a crisis, and extracted specific commitments from his commanders. His decision to give Montgomery command of northern forces temporarily caused political controversy but was militarily sound. The man criticized for slow advances through 1944 made every correct decision in the Bulge's critical first week.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Eisenhower's December 19 conference at Verdun \u2014 the Supreme Commander reframing the German offensive as opportunity, extracting commitments from Patton, the command decisions that shaped the battle's outcome. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#1A2A3D"
+      ],
+      "duration_sec": 52,
+      "scene_number": 43
+    },
+    {
+      "type": "close",
+      "title": "The Bulge \u2014 Last Light of the Third Reich",
+      "narration": "The Battle of the Bulge was the last time Germany would mount a strategic offensive in the west. From December 16, 1944 to January 25, 1945, it consumed what remained of Germany's capacity to resist. The cold that froze American soldiers also slowed German tanks. The fuel that Peiper couldn't capture stopped his division cold. The weather that grounded Allied airpower for eight days cleared on December 23 and never closed again. And at Bastogne, 15,000 paratroopers told the Wehrmacht to go to hell in a single word. The Bulge was Hitler's last roll of the dice. He'd been running on luck for eleven years. It ran out in the Ardennes.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The Ardennes in January 1945 \u2014 the German offensive spent, the snow-covered battlefield littered with burned-out tanks, the road to Berlin open, the last German offensive becoming the last German monument to failed ambition. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#8B1A1A",
+        "#0D1520"
+      ],
+      "duration_sec": 56,
+      "scene_number": 44
+    },
+    {
+      "type": "detail",
+      "title": "The 7th Armored \u2014 St. Vith",
+      "narration": "While the world focused on Bastogne, the 7th Armored Division held St. Vith \u2014 a critical road junction north of Bastogne \u2014 for six days against three German corps. The 7th Armored and attached units formed a horseshoe defensive line that bent but didn't break, forcing German forces to detour around them and delaying the advance for days that proved crucial. When they finally withdrew on December 23, St. Vith's defenders had disrupted the German timetable beyond recovery. The 7th Armored's stand is less famous than Bastogne but equally decisive.",
+      "visual_prompt": "Gods & Glory cinematic documentary. The 7th Armored Division's horseshoe defense at St. Vith \u2014 the six-day stand that forced German forces around it, disrupting the critical advance timeline north of Bastogne. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#8B1A1A",
+        "#C9A227"
+      ],
+      "duration_sec": 52,
+      "scene_number": 45
+    },
+    {
+      "type": "detail",
+      "title": "Sergeant Barfoot \u2014 One Soldier's Bulge",
+      "narration": "Staff Sergeant Van Barfoot of the 45th Infantry Division had won the Medal of Honor in Italy in 1944. At the Bulge he was a platoon sergeant holding the line in Belgium. On December 17, his position was overrun and he led his men through German lines at night, crossing the Salm River. Stories like Barfoot's \u2014 individual soldiers and small units making decisions in the fog and cold that determined whether lines held or broke \u2014 were replicated thousands of times across 80 miles of Ardennes front. The Bulge was won by generals planning and by sergeants deciding in the dark.",
+      "visual_prompt": "Gods & Glory cinematic documentary. American soldiers moving through snow and forest in the Ardennes at night \u2014 the small-unit actions that held the line while generals made plans, the sergeants and lieutenants who actually fought the Bulge. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#C9A227",
+        "#1A2A3D"
+      ],
+      "duration_sec": 52,
+      "scene_number": 46
+    },
+    {
+      "type": "detail",
+      "title": "The German Prisoners \u2014 120,000 Captured",
+      "narration": "The Ardennes offensive ultimately cost Germany approximately 60,000-100,000 killed or wounded and another 60,000 captured. The captured men revealed a portrait of German military collapse: many were teenagers from the Volksgrenadier divisions, others were veterans clearly exhausted by years of war, some were Luftwaffe ground crews who had never trained as infantry. The Waffen-SS divisions that had begun the offensive with elite equipment and veterans ended it with replacement troops and damaged vehicles. Germany's army in the west was being bled to death even as it attacked.",
+      "visual_prompt": "Gods & Glory cinematic documentary. German prisoners captured during the Bulge counteroffensive \u2014 teenagers from new divisions, exhausted veterans, the cross-section of a collapsing military captured in the Ardennes snow. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#8B1A1A",
+        "#1A2A3D"
+      ],
+      "duration_sec": 52,
+      "scene_number": 47
+    },
+    {
+      "type": "analysis",
+      "title": "Hitler's Logic \u2014 Why the Bulge Made Sense to Him",
+      "narration": "Hitler's rationale for the Ardennes offensive was not delusional within his own framework. He had used surprise armored offensives to win in 1939, 1940, and 1941. His advisers who said it was impossible were the same advisers who had said Dunkirk was impossible in 1940. The Western Allies had shown political disunity \u2014 a major defeat might fracture the Anglo-American alliance and produce a negotiated peace in the west, freeing Germany to deal with the Soviets. The plan was desperate. It was not irrational. Hitler was wrong about what was possible. He was not wrong about what was necessary.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Hitler reviewing the Ardennes offensive plan \u2014 the strategic logic of a desperate gamble, the same advisers who said 1940 was impossible now saying 1944 was impossible, the methodology that had once worked. 16:9 cinematic.",
+      "bg_colors": [
+        "#8B1A1A",
+        "#0D1520",
+        "#C9A227"
+      ],
+      "duration_sec": 52,
+      "scene_number": 48
+    },
+    {
+      "type": "detail",
+      "title": "Christmas 1944 \u2014 Carols in the Snow",
+      "narration": "Christmas Day 1944 fell while the Bulge was still being fought. American soldiers in foxholes in the Ardennes snow heard carols on radios. German soldiers had been told the offensive would be over before Christmas. In hospitals across Belgium, wounded from both sides lay in adjacent beds. Chaplains held services in frozen barns. Families in America and Germany waited for news. The war had the quality of a nightmare that Christmas \u2014 too cold, too exhausting, too senseless for the holiday it interrupted. The men in the snow celebrated what they could and buried who they had to.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Christmas in the Ardennes 1944 \u2014 American soldiers in snow-covered foxholes, chaplains holding services in frozen barns, the surreal intersection of holiday and combat in the Belgian winter. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#1A2A3D",
+        "#C9A227"
+      ],
+      "duration_sec": 52,
+      "scene_number": 49
+    },
+    {
+      "type": "legacy",
+      "title": "The Bulge Veterans \u2014 The Forgotten Battle",
+      "narration": "Veterans of the Battle of the Bulge called themselves the Bulge veterans for the rest of their lives. The battle produced 19,000 American dead \u2014 the highest American combat losses of the European war in any single engagement. It produced three Congressional Medals of Honor, including one for McAuliffe. For decades the Bulge was overshadowed by D-Day in American memory. Beginning in the 1990s, with the Band of Brothers television series, Bastogne and the 101st Airborne entered American popular consciousness. The men who held in the cold finally got the recognition they had earned.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Bulge veterans at reunions decades later, the men who held in the Ardennes cold receiving recognition after years of being overshadowed by D-Day in the American memory of World War II. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#1A2A3D"
+      ],
+      "duration_sec": 52,
+      "scene_number": 50
+    },
+    {
+      "type": "detail",
+      "title": "The Road After the Bulge \u2014 Crossing the Rhine",
+      "narration": "After the Bulge, the Allied advance resumed with an army that had been tested, angered, and hardened. The Rhine crossing at Remagen on March 7, 1945 \u2014 where an intact bridge was captured by chance \u2014 began Germany's final collapse. Patton crossed the Rhine on March 22. By April, American forces were driving 50 miles a day through collapsing German resistance. The Wehrmacht that had launched 30 divisions at the Bulge in December could barely field coherent units by March. The battle that Hitler hoped would split the Allies instead finished his army's ability to resist.",
+      "visual_prompt": "Gods & Glory cinematic documentary. American forces crossing the Rhine at Remagen in March 1945 \u2014 the rapid advance through collapsing German resistance that followed the Bulge, the last weeks of the European war. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#1A2A3D"
+      ],
+      "duration_sec": 52,
+      "scene_number": 51
+    },
+    {
+      "type": "analysis",
+      "title": "What the Bulge Revealed \u2014 American Resilience",
+      "narration": "The Battle of the Bulge revealed something about the American military that surprised German planners: it absorbed shock and adapted quickly. The initial collapse of the 106th Division was real. The confusion in the first 72 hours was real. But within four days, American units were consolidating, reserves were moving, and Eisenhower was holding a conference to plan the counterattack. German intelligence had predicted American units would need two weeks to respond. Patton's Third Army turned north in 60 hours. The institutional resilience that allowed rapid adaptation proved as decisive as any single tactical action.",
+      "visual_prompt": "Gods & Glory cinematic documentary. American commanders responding to the Bulge crisis \u2014 the rapid adaptation from shock to counterattack, the institutional resilience that German planners had underestimated. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#1A2A3D"
+      ],
+      "duration_sec": 52,
+      "scene_number": 52
+    },
+    {
+      "type": "detail",
+      "title": "Model's Execution \u2014 Professional to the End",
+      "narration": "Field Marshal Model, who had argued against the offensive's scope, executed it with complete professional competence. When it failed, he remained at his post as Allied forces closed in on Army Group B in the Ruhr pocket in April 1945. On April 21, 1945, with his army surrounded and no possibility of escape, Model disbanded the units he commanded to prevent pointless casualties. He then walked into a forest and shot himself. His last act was to spare his soldiers a final useless battle. The general who thought Hitler's plan was unrealistic died with the precision and finality he had brought to every command.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Field Marshal Model in the Ruhr in April 1945 \u2014 the professional soldier who executed an order he disagreed with, disbanded his army to spare his men, and chose his own end in a German forest. 16:9 cinematic.",
+      "bg_colors": [
+        "#0D1520",
+        "#8B1A1A",
+        "#C9A227"
+      ],
+      "duration_sec": 54,
+      "scene_number": 53
+    },
+    {
+      "type": "detail",
+      "title": "The Veterans of Bastogne \u2014 A Reunion",
+      "narration": "Every five years survivors of the Bastogne siege return to Belgium. Belgian civilians who were children during the siege attend. The gratitude is not ceremonial \u2014 Belgian families still know the individual American units that held the towns and forests of the Ardennes in 1944. Flowers are placed on American graves in the Henri-Chapelle cemetery where 7,992 American soldiers are buried. The Belgians have maintained the graves since 1944. In some Belgian villages, families have adopted a grave \u2014 cleaning it, placing flowers, telling visitors whose soldier is buried there. Memory maintained by people who weren't there is the deepest form of honor.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Bastogne veteran reunions with Belgian civilians \u2014 American survivors and Belgian families at the graves, the Henri-Chapelle cemetery, the 80-year relationship between a liberated people and the soldiers who held their land. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#0D1520",
+        "#1A2A3D"
+      ],
+      "duration_sec": 54,
+      "scene_number": 54
+    },
+    {
+      "type": "legacy",
+      "title": "The Last German Offensive \u2014 What It Meant",
+      "narration": "The Battle of the Bulge was the last time Germany would attempt to seize the initiative in any theater of the war. After January 1945, German strategy became purely reactive: hold as long as possible, delay the Soviets from reaching Berlin, hope for something \u2014 a split in the Allied coalition, a new weapon, a political miracle. None came. The Bulge had consumed the reserves that might have stabilized the Eastern Front when the Soviets attacked in January. Berlin fell in May. The regime that had launched the most destructive war in human history ended in a bunker. The last gamble was gone, and with it, the gambler.",
+      "visual_prompt": "Gods & Glory cinematic documentary. Germany January-May 1945 \u2014 the reactive defensive strategy after the Bulge spent Germany's last reserves, the Soviet advance to Berlin, the end of the Third Reich in a bunker. 16:9 cinematic.",
+      "bg_colors": [
+        "#C9A227",
+        "#8B1A1A",
+        "#0D1520"
+      ],
+      "duration_sec": 54,
+      "scene_number": 55
     }
   ]
 }

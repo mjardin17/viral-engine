@@ -119,15 +119,15 @@ EP_FILE_MAP: dict[str, str] = {
 
 # ── Auth ──────────────────────────────────────────────────────────────────────
 
-def _open_chrome(url: str) -> None:
-    print(f"\nOpen this URL in Chrome:\n{url}\n")
-    for path in [
-        r"C:\Program Files\Google\Chrome\Application\chrome.exe",
-        r"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe",
-    ]:
-        if os.path.exists(path):
-            subprocess.Popen([path, url])
-            return
+def _open_chrome(url: str, incognito: bool = False) -> None:
+    print("\n" + "="*60)
+    print("  COPY THIS URL — open it in Edge (NOT Chrome)")
+    print("  Sign in as: godsandgloryai@gmail.com")
+    print("="*60)
+    print(f"\n  {url}\n")
+    print("="*60)
+    print("  After signing in, come back here and wait for 'Token saved'")
+    print("="*60 + "\n")
 
 
 def get_service(channel_key: str, force_reauth: bool = False):
@@ -158,8 +158,14 @@ def get_service(channel_key: str, force_reauth: bool = False):
 
             flow = InstalledAppFlow.from_client_secrets_file(str(CREDS_PATH), SCOPES)
             _orig = webbrowser.open
-            webbrowser.open = lambda url, **_: _open_chrome(url) or True  # type: ignore[assignment]
-            creds = flow.run_local_server(port=8080, open_browser=True)
+            webbrowser.open = lambda url, **_: _open_chrome(url, incognito=True) or True  # type: ignore[assignment]
+            login_email = ch.get("sign_in_as", "")
+            creds = flow.run_local_server(
+                port=8080,
+                open_browser=True,
+                prompt="select_account",
+                login_hint=login_email if "@gmail.com" in login_email else "",
+            )
             webbrowser.open = _orig
 
         with open(token_path, "wb") as f:

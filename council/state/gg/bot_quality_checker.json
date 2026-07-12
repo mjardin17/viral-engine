@@ -56,6 +56,11 @@
       "value": 0.0
     },
     {
+      "episode": "GG_EP012",
+      "issue": "too_short",
+      "value": 0.0
+    },
+    {
       "episode": "GG_TRAILER",
       "issue": "too_short",
       "value": 0.0
@@ -71,6 +76,6 @@
       "value": 0.0
     }
   ],
-  "finals_checked": 14,
-  "last_updated": "2026-07-11T15:57:47.667361"
+  "finals_checked": 15,
+  "last_updated": "2026-07-11T20:34:08.186764"
 }

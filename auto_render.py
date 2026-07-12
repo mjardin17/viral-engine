@@ -122,11 +122,11 @@ CHANNEL_LABELS: dict[str, str] = {
 # Kokoro voices — run voice-music-factory/run_factory.py to preview
 # am_* = American male  |  af_* = American female
 CHANNEL_VOICE: dict[str, str] = {
-    "GG": "am_adam",    # Deep authoritative male — documentary narrator
+    "GG": "bm_george",  # British male — BBC documentary authority, best for historical narration
     "ML": "am_adam",    # Energetic male — action energy
     "LO": "af_bella",   # Warm female — storyteller/kids
     "EO": "am_adam",    # Cinematic deep male — Echoes of Eternity
-    "IL": "am_adam",    # High-energy male — Saturday morning cartoon
+    "IL": "am_fenrir",  # Dramatic American male — Saturday morning cartoon energy
 }
 # Kokoro speed multipliers (1.0 = normal; <1.0 = slower; >1.0 = faster)
 # Mirrors old edge-tts rate percentages: -35% → 0.65, +8% → 1.08, etc.

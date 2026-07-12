@@ -47,7 +47,7 @@ Josh Jardin (justifiedmagnificent@gmail.com). Building a multi-channel AI conten
 | gods_glory/ | Subdirectory where full GG scripts live (auto_render picks these over root stubs) |
 | StoryForge | Book generation system — built into Empire OS |
 | Grok / Gronk | Grok Build CLI (xAI coding agent) — installed, runs in terminal |
-| Boss Listers | Reseller cross-listing app (eBay/Poshmark/Mercari etc.) — separate product |
+| Boss Listers | Reseller cross-listing app (eBay/Poshmark/Mercari etc.) — Josh's eBay is live on it. Goal: link website storefront (jardins-outpost.pages.dev) to eBay through Boss Listers |
 | ngrok | Tunnels local server so agents can hit it via public URL |
 | channel_uploader.py | Per-channel uploader with --verify — replaces easy_youtube_uploader.py |
 | token_gg.pickle | Correct GG token — NEVER use token.pickle (wrong account) |
@@ -93,7 +93,8 @@ Josh is launching everything today:
 - Apps Josh has built (need names/links from Josh)
 - Newsletter signup
 - Social media opening day posts for all platforms
-**STILL NEED FROM JOSH:** website URL, store URL, app names/links
+**Website:** https://jardins-outpost.pages.dev (Cloudflare Pages)
+**STILL NEED FROM JOSH:** store URL, app names/links
 
 ## Glass Box Protocol (use before answering complex questions)
 Before answering any non-trivial question, show Josh:
@@ -121,7 +122,7 @@ Then give the answer.
 - **IL + LO (cartoons):** Higgsfield essential — Soul Cast (character consistency), Wan 2.7 (animation), Hailuo (dialogue), AutoSprite (IL mechs)
 - **Grok Video 1.5** — available via Higgsfield MCP for physics/action shots on any channel
 - Runway — deprioritized (Veo 3.1 + Cinema Studio 3.0 covers it at lower cost)
-- **ElevenLabs** — Josh has an API key (stored in .env as ELEVENLABS_API_KEY). Ready to replace edge-tts for higher quality narration. Default voice ID: JBFqnCBsd6RMkjVDRZzb (George — deep cinematic male). ViralVox (Base44 app ID: 6a341ca3df11ec718fefd246) is the voiceover UI — currently on edge-tts, needs upgrade to 11Labs.
+- **ElevenLabs** — Josh has an API key (stored in .env as ELEVENLABS_API_KEY). NOT the primary pipeline voice — Voice Music Factory (Kokoro, local/unlimited/free) is. ElevenLabs may be used for ViralVox UI (Base44 app 6a341ca3df11ec718fefd246) as a sellable product, but auto_render.py uses Kokoro exclusively.
 
 ## Base44 Apps
 | App | ID | Purpose |
@@ -129,6 +130,13 @@ Then give the answer.
 | VORTEX PRO | 6a40e3f3d7e4713876f492d6 | Multi-channel video pipeline dashboard (Channel/Episode/Shot/Social entities) |
 | VORTEX | 6a40dbc726e8b86d7150350e | Earlier version of VORTEX PRO |
 | ViralVox | 6a341ca3df11ec718fefd246 | Voiceover generator — currently edge-tts, upgrade to 11Labs pending |
+
+## Josh's Apps (for Viral Engine Launch)
+| App | Location | Purpose |
+|-----|----------|---------|
+| Voice Music Factory | `voice-music-factory/` in repo | Kokoro TTS — runs LOCAL, UNLIMITED, FREE. Better than ElevenLabs for pipeline scale. Already wired into auto_render.py via tts_cli.py. This is the primary voice engine. |
+| Boss Listers AI | `boss-listers-ai.zip` in repo | Cross-listing dashboard (8 platforms: eBay/Poshmark/Mercari/Depop/Grailed/Etsy/Shopify/TikTok) — needs hosting |
+| ViralVox | Base44 `6a341ca3df11ec718fefd246` | Voiceover generator — launch after ElevenLabs upgrade |
 
 ## Preferences
 - Direct and concise answers

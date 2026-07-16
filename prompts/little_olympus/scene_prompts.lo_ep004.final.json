@@ -2,144 +2,265 @@
   "channel": "Little Olympus",
   "episode_number": 4,
   "episode_id": "LO_EP004",
-  "title": "Athena's Big Idea",
-  "tagline": "She had a perfect plan. It was genuinely perfect. And then Baby Hercules helped.",
-  "duration_target_min": 5,
+  "title": "Little Medusa's Bad Hair Day",
+  "tagline": "Your most embarrassing thing might be someone else's favourite thing about you.",
+  "duration_target_min": 17,
   "aesthetic": {
     "color_grade": "bright_kids_cartoon",
-    "primary_colors": ["#FFD700", "#B0C4DE", "#90EE90", "#FF6B35"],
+    "primary_colors": ["#FFD700", "#1A1060", "#00B4E6", "#FF6B35"],
     "font_style": "rounded_chunky_bold",
     "music_style": "upbeat_kids_adventure",
     "narrator_tone": "warm_playful_encouraging"
   },
   "characters": {
-    "focus_hero": {
-      "name": "Athena",
-      "role": "This is HER episode. Her plan is right. Being right isn't always enough.",
-      "visual": "Grey-streaked braid, round glasses, owl Archie on shoulder, scroll — this episode she also has a large blueprint she keeps consulting",
-      "personality": "Three steps ahead, patient, competitive with herself — this episode she learns that the best plan sometimes has to be abandoned mid-execution"
+    "hero": {
+      "name": "Little Medusa",
+      "visual": "Small girl with wild curly green hair made of friendly cartoon snakes — cute wide eyes, big bows, always getting tangled. Purple dress with snake-scale pattern. Big warm eyes behind round glasses. Always embarrassed about her hair but secretly the snakes are adorable."
     },
-    "chaos_agent": {
-      "name": "Baby Hercules",
-      "role": "Helps. Enthusiastically. Catastrophically.",
-      "visual": "Chubby toddler, lion cape, enormous arms, honey smear on face (always)"
-    },
-    "support_1": {
+    "friend_1": {
       "name": "Little Zeus",
-      "role": "Assigned a specific job. Does a different job. Means well.",
-      "visual": "Curly white hair, tiny bent crown, thunderbolt"
+      "visual": "Small boy with wild curly white hair, tiny golden crown, big bright blue eyes, white toga with gold trim"
     },
-    "support_2": {
-      "name": "Little Perseus",
-      "role": "The one who actually follows the plan. Completely ignored as a result.",
-      "visual": "Dark shaggy hair, green tunic, bronze shield, leather satchel"
+    "friend_2": {
+      "name": "Baby Hercules",
+      "visual": "Chubby toddler with enormous arms, tiny lion-skin cape, confused happy expression, always accidentally breaking things"
     },
-    "problem": {
-      "name": "The Olympus Great Games Committee",
-      "role": "Three minor gods (Hermes, Hephaestus, Ares) who need someone to organize the first-ever Olympus Games in 24 hours. They picked Athena without asking her.",
-      "note": "Not villains — just chaotic adults who created a crisis through poor planning and complete confidence"
+    "mentor": {
+      "name": "Athena",
+      "visual": "Girl with grey-streaked hair, tiny owl on shoulder, big glasses, holding a scroll, always three steps ahead"
     }
   },
+  "voice_style": {
+    "tone": "warm_playful_encouraging",
+    "pacing": "punchy — keeps kids engaged, quick on comedy beats",
+    "character": "fun storyteller reading a picture book, with real reactions"
+  },
+  "lesson": "What you're most embarrassed about is often what makes you the most special.",
+  "youtube_title": "Little Medusa's Bad Hair Day! | Little Olympus | Kids Greek Mythology",
+  "youtube_description": "Little Medusa's snake hair is causing ALL kinds of trouble today! Her snakes keep getting into EVERYTHING and she just wants to fit in. But maybe being different is actually the best thing ever? A funny, sweet Little Olympus adventure introducing a brand new character!",
   "scenes": [
     {
       "scene_number": 1,
-      "type": "hook",
-      "title": "Athena Has Been Put In Charge",
-      "narration": "The First Annual Olympus Great Games was happening tomorrow. Someone needed to organize it. The committee had voted. The vote was unanimous. Athena found out about this at breakfast, via a very official scroll delivered by Hermes who was already gone by the time she unrolled it. She read it twice. Then she tapped her chin four times. Four taps meant serious.",
-      "visual_prompt": "Little Olympus kids cartoon style. Athena at breakfast, reading a very official-looking golden scroll with an expression of controlled disbelief. Hermes is already visible as a blur in the background — already gone. Archie on her shoulder reads the scroll too and his eyes go wide. Athena taps her chin — we see four taps, not the usual three. The others (Zeus, Hercules, Perseus) are eating breakfast and haven't noticed yet. Morning light. 16:9.",
-      "bg_colors": ["#FFD700", "#87CEEB", "#FFFFFF"],
-      "accent": "#B0C4DE",
-      "camera": "push_in",
-      "duration_sec": 9,
-      "higgsfield_prompt": "Cute kids cartoon style, smart girl with grey-streaked braid reading official golden scroll at breakfast with controlled disbelief expression, owl on shoulder also reading with wide eyes, Hermes already gone as blur in background, other kids eating and not noticing, morning light, girl tapping chin four times, 16:9"
+      "type": "cold_open",
+      "title": "Meet Little Medusa",
+      "narration": "This is Little Medusa. She has glasses. She has a purple dress. She has a very cheerful personality. And she has twelve snakes for hair. Now before you say anything — they are VERY friendly snakes. Small, colorful, each with a tiny bow. Their names are: Noodle, Wiggle, Pretzel, Dot, Sunny, Mr. Hiss, Biscuit, Captain, Twirl, Zigzag, Pebble, and Gerald. Gerald was her favourite. Don't tell the others.",
+      "visual_prompt": "Little Olympus kids cartoon style. Introduction shot of Little Medusa: small girl with twelve friendly cartoon snakes as hair, each snake a different pastel color with tiny bow on its head. Purple dress with snake-scale pattern. Round glasses. Big warm friendly eyes. Each snake has its own little personality — some waving at camera, one asleep, one eating something. Very cute, not scary at all. Bright morning light. 16:9.",
+      "bg_colors": ["#9370DB", "#FFD700", "#87CEEB"],
+      "duration_sec": 48
     },
     {
       "scene_number": 2,
       "type": "setup",
-      "title": "The Perfect Plan",
-      "narration": "By the time the others finished breakfast, Athena had a complete plan. It was twelve pages. Color-coded. With a timeline, a backup timeline, and a backup to the backup timeline. She assigned everyone a specific job. Perseus would handle the track. Zeus would handle the opening ceremony torches. Hercules would — and this was crucial — stand very still and not touch anything.",
-      "visual_prompt": "Little Olympus kids cartoon style. Athena stands before her friends holding an enormous color-coded blueprint, pointing to each section efficiently. Perseus looks attentive and ready. Zeus looks confident (suspiciously so). Baby Hercules is nodding very seriously at his assignment — STAND STILL, DO NOT TOUCH — which is shown on the blueprint with a very clear drawing of Hercules with a big X through him touching things. Archie approves. 16:9.",
-      "bg_colors": ["#B0C4DE", "#FFD700", "#FFFFFF"],
-      "accent": "#FFD700",
-      "camera": "pull_back",
-      "duration_sec": 9,
-      "higgsfield_prompt": "Cute kids cartoon style, smart girl presenting enormous color-coded blueprint to friends, pointing to each section, attentive dark-haired boy ready, confident curly-haired boy, chubby toddler nodding very seriously at his assignment which shows a drawing of him with X through touching things, small owl approving, organized planning scene, 16:9"
+      "title": "A Normal Medusa Morning",
+      "narration": "Every morning, Medusa tried to get ready like a normal kid. Step one: brush her hair. She reached for the brush. Noodle ate the brush. Step two: put in a hair tie. Gerald untied it. Step three: a nice hat. The snakes knocked the hat off in three seconds flat. By the time Medusa was ready for school, she had tried eleven hairstyles, zero of which worked.",
+      "visual_prompt": "Little Olympus kids cartoon style. Medusa's colorful bedroom. Split panel morning chaos: first panel she reaches for brush but Noodle the snake has already eaten it. Second panel Gerald untying a hair tie with tiny snake teeth. Third panel snakes collectively flicking a hat off her head. Medusa looking frazzled in the mirror, snakes looking pleased. 16:9.",
+      "bg_colors": ["#9370DB", "#FFD700", "#FF69B4"],
+      "duration_sec": 44
     },
     {
       "scene_number": 3,
-      "type": "attempt",
-      "title": "Zeus Improvises the Torch Ceremony",
-      "narration": "Zeus had one job: light the ceremonial torch. Athena's plan said: one small controlled lightning bolt, directly at the torch. What Zeus did was: a slightly bigger lightning bolt that also lit the decorative banners, the announcer's podium, and accidentally started a small rain cloud above the refreshments. The good news: the torch was lit. The bad news: so was everything else.",
-      "visual_prompt": "Little Olympus kids cartoon style. Comic disaster — Zeus aiming his thunderbolt with huge confidence, fires it at the ceremonial torch. A massive bolt that's WAY bigger than planned hits the torch and immediately also catches the decorative gold banners on fire, zaps the announcer's podium (the announcer — a small minor god — is frozen mid-speech with crackling hair), and accidentally creates a tiny rain cloud that starts drizzling on the refreshment table. The torch IS lit. Perfectly. Everything else is chaos. 16:9.",
-      "bg_colors": ["#FFD700", "#FF6B35", "#87CEEB"],
-      "accent": "#FF6B35",
-      "camera": "pull_back",
-      "duration_sec": 9,
-      "higgsfield_prompt": "Cute kids cartoon style, small boy with crown firing massive thunderbolt at ceremonial torch, bolt also catching gold banners on fire, zapping announcer's podium leaving announcer with crackling static hair, tiny rain cloud appearing over refreshment table, torch perfectly lit in center of chaos, boy looking proud while everything else is wrong, 16:9"
+      "type": "problem_setup",
+      "title": "Today Is Picture Day",
+      "narration": "And today was the absolute worst possible day for bad hair. Today was Mount Olympus Picture Day. Once a year, everyone on the mountain got their portrait painted. And the portrait went up in the Hall of the Gods. Forever. Medusa had been planning her picture for six months. She had the perfect pose. She had the perfect smile. And now Gerald was eating her bow.",
+      "visual_prompt": "Little Olympus kids cartoon style. Medusa standing in front of a calendar with PICTURE DAY circled in gold. Her expression is pure dread. Gerald the snake is indeed eating her bow with a tiny happy snake expression. The other snakes are staring at her sympathetically or making things worse by styling themselves like tiny crowns. Medusa's glasses are slightly askew. 16:9.",
+      "bg_colors": ["#9370DB", "#FFD700", "#FF6B35"],
+      "duration_sec": 43
     },
     {
       "scene_number": 4,
-      "type": "problem",
-      "title": "Hercules Helps With the Track",
-      "narration": "Baby Hercules had been doing so well. Standing still. Not touching things. For almost four minutes — a personal record. Then he noticed the running track needed smoothing. He decided to help Perseus. He flattened the track. Completely. Also part of the hill next to the track. Also the hill on the other side. The track was very smooth now. It was also now a valley.",
-      "visual_prompt": "Little Olympus kids cartoon style. Overhead view of the running track — which is now an impossibly flat, perfectly smooth valley between two flattened hills. Baby Hercules stands in the middle looking extremely proud, arms crossed. Perseus stands next to him, staring at what was supposed to be a gently undulating running track and is now a geological feature. Hercules: 'I helped!' Perseus: slowly opens his mouth. Nothing comes out. 16:9.",
-      "bg_colors": ["#90EE90", "#8B4513", "#87CEEB"],
-      "accent": "#FF6B35",
-      "camera": "pull_back",
-      "duration_sec": 9,
-      "higgsfield_prompt": "Cute kids cartoon style, overhead view of running track now impossibly flat valley between two flattened hills, chubby toddler standing proudly in middle with arms crossed, dark-haired boy standing next to him staring at geological disaster with mouth slowly opening, total accidental landscape alteration, bright colors, 16:9"
+      "type": "meet_friends",
+      "title": "Little Zeus Has Opinions",
+      "narration": "Little Zeus and Baby Hercules waited for Medusa outside. Zeus had managed to get his crown on straight for once, which he was very proud of. 'Your hair looks great!' said Zeus, because that's what you say. 'It does NOT look great,' said Medusa. 'Twirl is tangled with Zigzag and neither of them will cooperate.' Zeus looked at the tangled snakes. 'I think it looks cool,' he said honestly.",
+      "visual_prompt": "Little Olympus kids cartoon style. Outside on a sunny Mount Olympus path. Little Zeus with crown impressively straight, grinning. Baby Hercules beside him waving one enormous arm. Medusa arriving with snakes Twirl and Zigzag clearly tangled together in a knot on the left side of her head, both looking grumpy at each other. Zeus looking at the tangle with genuine interest. 16:9.",
+      "bg_colors": ["#FFD700", "#87CEEB", "#9370DB"],
+      "duration_sec": 44
     },
     {
       "scene_number": 5,
-      "type": "solution",
-      "title": "Athena Abandons the Plan",
-      "narration": "Athena looked at her twelve-page color-coded plan. She looked at the burning banners. The drizzling refreshments. The valley that used to be a track. She rolled up the plan. She put it under her arm. She tapped her chin once — just once. Then she said: 'New plan. Everyone do what they're actually good at. Now.'",
-      "visual_prompt": "Little Olympus kids cartoon style. KEY CHARACTER MOMENT — Athena surveys the chaos (burning banners in background, drizzle over refreshments, valley visible in distance). She looks at her perfect rolled-up plan. A beat. She tucks it under her arm. ONE chin tap. Then her expression shifts — from 'my plan' to 'what actually works.' The others look at her. She's calm. Actually calm, not performatively calm. She points. 'Zeus — rain. Perseus — use the valley as the finish line. Hercules — that boulder, that boulder, and that boulder need to move.' 16:9.",
-      "bg_colors": ["#FFD700", "#87CEEB", "#90EE90"],
-      "accent": "#FFD700",
-      "camera": "push_in",
-      "duration_sec": 9,
-      "higgsfield_prompt": "Cute kids cartoon style, smart girl with glasses surveying chaos with burning banners and drizzle in background, looking at rolled-up plan in her hand, tucking it under arm with one chin tap, expression shifting from perfect planning to practical problem-solving, friends looking at her ready, calm genuine confidence not performance, 16:9"
+      "type": "attempt_1",
+      "title": "The Hat Plan",
+      "narration": "Medusa's plan was: big hat. She produced a very wide golden hat that could cover all twelve snakes completely. She put it on. It stayed on for four seconds. Then one snake poked out. Then another. Then another. Within thirty seconds all twelve snakes had poked their heads out from under the brim of the hat, looking around curiously. Medusa looked like a very lively hat shop.",
+      "visual_prompt": "Little Olympus kids cartoon style. Medusa wearing an enormous golden sunhat. Sequence: first it looks perfect, then one little snake head pokes out from the brim, then more and more, until all twelve snakes have their heads out around the brim looking around happily, Medusa underneath looking defeated. Little Zeus and Baby Hercules watching and trying not to laugh. 16:9.",
+      "bg_colors": ["#FFD700", "#9370DB", "#87CEEB"],
+      "duration_sec": 45
     },
     {
       "scene_number": 6,
-      "type": "resolution",
-      "title": "The Best Games in Olympus History",
-      "narration": "Zeus made it rain in exactly the right places — keeping the crowd cool and the torches burning at the same time. Perseus turned the valley into the most dramatic finish line anyone had ever seen. And Baby Hercules moved three boulders to create the best obstacle course in history. The Games Committee declared it the best opening day ever. They asked Athena to plan next year's. She said she would think about it. Archie looked at the camera.",
-      "visual_prompt": "Little Olympus kids cartoon style. TRIUMPHANT MONTAGE FINAL SHOT — The Olympus Games in full swing! Beautiful dramatic setting: Zeus's controlled rain making rainbows, the valley finish line with a crowd cheering, three enormous boulders now forming an epic obstacle course, Hercules cheering from the sideline having set up his boulders perfectly. Athena watches it all working — her rolled-up original plan still under her arm, but she's smiling. Archie turns directly to camera and blinks slowly. 16:9.",
-      "bg_colors": ["#FFD700", "#87CEEB", "#90EE90"],
-      "accent": "#FFD700",
-      "camera": "pull_back",
-      "duration_sec": 9,
-      "higgsfield_prompt": "Cute kids cartoon style, triumphant Olympus Games in full swing, controlled rainbow rain, dramatic valley finish line with cheering crowd, three enormous boulders as epic obstacle course, chubby toddler cheering from sideline proud, smart girl watching everything work with original rolled-up plan under arm finally smiling, small owl turning directly to viewer blinking slowly, joyful success, 16:9"
+      "type": "attempt_2",
+      "title": "The Braid Plan",
+      "narration": "Athena appeared, because she always appears. 'Have you tried braiding them?' she asked. Medusa thought this was a very reasonable idea. She asked Baby Hercules to help braid. Baby Hercules was very gentle — by his standards. Within forty-five seconds he had braided Noodle, Wiggle, AND his own finger into a single knot that took Athena twelve minutes and a pair of scissors to get apart.",
+      "visual_prompt": "Little Olympus kids cartoon style. Baby Hercules concentrating intensely on braiding snake hair, tongue sticking out, enormous fingers doing their best to be delicate. The result: a chaotic knot containing two snakes AND one of his own fingers, all tangled together. Athena arriving with scissors and measuring the situation. Medusa holding very still, expression pained. 16:9.",
+      "bg_colors": ["#9370DB", "#FFD700", "#7CFC00"],
+      "duration_sec": 44
     },
     {
       "scene_number": 7,
-      "type": "lesson_and_cta",
-      "title": "What Did We Learn?",
-      "narration": "And here's what Athena learned that day. The best plan isn't the one that goes perfectly. It's the one you can change when it needs to change. She kept the twelve-page plan. She still thinks it was excellent. It was. It just wasn't the plan they ended up needing. See you next time on Little Olympus!",
-      "visual_prompt": "Little Olympus kids cartoon style. Final card — all four friends together at the Olympus Games. Athena waves at camera, rolled-up plan tucked proudly under arm. Perseus gives a thumbs up. Zeus has slightly singed eyebrows but is grinning. Baby Hercules waves with both enormous arms — the crowd behind him accidentally parts from the wind this creates. Rainbow sky, golden Olympus. Fun and warm. 16:9.",
-      "bg_colors": ["#1A1060", "#FFD700", "#87CEEB"],
-      "accent": "#FFD700",
-      "camera": "pull_back",
-      "duration_sec": 9,
-      "higgsfield_prompt": "Cute kids cartoon style, four friends together at Olympus Games waving at camera, smart girl with rolled-up plan under arm, dark-haired boy thumbs up, curly-haired boy with slightly singed eyebrows grinning, chubby toddler waving both enormous arms causing crowd to part behind him, rainbow sky, warm golden light, title card energy, 16:9"
+      "type": "low_point",
+      "title": "I Don't Want to Go",
+      "narration": "Medusa sat down on the steps of the Hall of the Gods where the pictures would be taken. 'I'm just not going,' she said. 'My hair does whatever it wants. It always does whatever it wants. Picture day is going to be a disaster.' Gerald put his little snake head on her shoulder. She looked at him. He blinked his tiny eyes. It was sweet. But it was not a hairdo.",
+      "visual_prompt": "Little Olympus kids cartoon style. Medusa sitting on the golden steps of the Hall of the Gods, arms crossed, glasses slightly down her nose, snakes draped sadly around her head. Gerald resting his chin on her shoulder with tiny sympathetic snake eyes. The grand entrance to picture day visible behind her. Late morning warm light. Sad but cozy. 16:9.",
+      "bg_colors": ["#9370DB", "#B0C4DE", "#FFD700"],
+      "duration_sec": 43
+    },
+    {
+      "scene_number": 8,
+      "type": "unexpected_help",
+      "title": "The Painter Has a Different Idea",
+      "narration": "The portrait painter — an old god named Daedalus with a long grey beard and extremely good taste — came out to find Medusa on the steps. He looked at her. He looked at the twelve snakes. He tilted his head. He pulled out his sketchbook. And he started drawing very fast. 'Oh,' said Daedalus. 'Oh, this is WONDERFUL.'",
+      "visual_prompt": "Little Olympus kids cartoon style. An older artistic god (Daedalus) with paint-stained robes and a very long grey beard crouching down to look at Medusa's snake hair with pure artistic delight. His eyes are wide with inspiration. He's already sketching rapidly in his sketchbook. Medusa looking baffled and suspicious. Snakes watching the sketchbook with curiosity. 16:9.",
+      "bg_colors": ["#FFD700", "#9370DB", "#87CEEB"],
+      "duration_sec": 44
+    },
+    {
+      "scene_number": 9,
+      "type": "turn",
+      "title": "The Artist Sees What Others Miss",
+      "narration": "'In forty years of painting gods,' said Daedalus, 'I have never seen anything like this. Twelve different personalities. Twelve different colors. Each one living and moving and — oh, Gerald's making a tiny crown shape — look at THAT.' Gerald had arranged himself into a very impressive tiny crown. Medusa had not noticed this before. Daedalus was already painting.",
+      "visual_prompt": "Little Olympus kids cartoon style. Close view of Medusa's snakes: Gerald has arranged himself perfectly into a crown shape on top of her head. Other snakes in beautiful natural formations around it without even trying. All their tiny bows bright and colorful. It is genuinely very beautiful and original. Medusa slowly reaching up to touch Gerald who holds his crown pose proudly. 16:9.",
+      "bg_colors": ["#9370DB", "#FFD700", "#00B4E6"],
+      "duration_sec": 44
+    },
+    {
+      "scene_number": 10,
+      "type": "picture_day",
+      "title": "The Most Interesting Portrait",
+      "narration": "Medusa sat for her portrait. She sat very still. The snakes, for the first time all day, also sat very still. Gerald stayed in crown formation. Noodle and Wiggle framed her face symmetrically. Pretzel made a nice curl. Dot, being the smallest snake, winked at the painter. Daedalus painted for twenty minutes without stopping once. He had never worked this fast.",
+      "visual_prompt": "Little Olympus kids cartoon style. Medusa sitting perfectly for her portrait, snakes all arranged beautifully. Gerald as a crown. Noodle and Wiggle framing her face on each side elegantly. Tiny Dot winking. Daedalus painting furiously with a huge smile. Medusa's expression shifting from nervous to quietly proud. Beautiful composed portrait-sitting energy. 16:9.",
+      "bg_colors": ["#9370DB", "#FFD700", "#FFF8DC"],
+      "duration_sec": 45
+    },
+    {
+      "scene_number": 11,
+      "type": "reveal",
+      "title": "The Finished Portrait",
+      "narration": "When Daedalus turned the portrait around, there was a silence. Then Little Zeus said 'WHOA.' Baby Hercules said nothing because his mouth was open. Even Athena nodded slowly, which meant a lot because Athena's standards were extremely high. The portrait showed Medusa with twelve wonderful colorful snakes and she looked like the most interesting person on Mount Olympus. Because she was.",
+      "visual_prompt": "Little Olympus kids cartoon style. Daedalus holding up a stunning painting of Medusa — her snake hair beautifully depicted, colorful and vibrant, Gerald in crown formation gleaming at the top. It is clearly the best portrait anyone has seen. Little Zeus jaw dropped. Baby Hercules staring. Athena nodding slowly with raised eyebrows. Medusa looking at her own portrait for the first time. 16:9.",
+      "bg_colors": ["#FFD700", "#9370DB", "#00B4E6"],
+      "duration_sec": 45
+    },
+    {
+      "scene_number": 12,
+      "type": "public_reaction",
+      "title": "The Hall Goes Wild",
+      "narration": "When the portrait went up in the Hall of the Gods, it stopped every single person who walked past. All the other portraits were very nice — very gold, very serious, very standard. Medusa's portrait had Gerald. People kept stopping just to look at Gerald. By afternoon, three other gods had asked Medusa if they could meet the snakes in person. Gerald was extremely pleased with himself.",
+      "visual_prompt": "Little Olympus kids cartoon style. The Hall of the Gods with many gold-framed portraits of very serious-looking gods. Medusa's portrait in the center is clearly different — colorful, vibrant, alive-looking with the snakes. A stream of gods stopping to stare at it, pointing at Gerald specifically. Medusa standing nearby watching the reaction, beginning to smile. 16:9.",
+      "bg_colors": ["#FFD700", "#9370DB", "#1A1060"],
+      "duration_sec": 44
+    },
+    {
+      "scene_number": 13,
+      "type": "medusa_owns_it",
+      "title": "Introductions",
+      "narration": "For the very first time, Medusa introduced her snakes to people without apologizing first. 'This is Noodle. She likes berries. This is Gerald, he does the crown thing, he's very proud of it. This is Biscuit, she's shy. This is Wiggle, she isn't shy at all.' People kept asking questions. What did they eat? Did they have names? Did Gerald really make himself into a crown? He did. He was doing it right now.",
+      "visual_prompt": "Little Olympus kids cartoon style. Medusa introducing her snakes to a small admiring crowd of Olympus characters. Each named snake doing their signature thing: Noodle reaching toward berries someone is holding, Gerald in crown formation looking regal, little Biscuit hiding slightly behind Medusa's ear, Wiggle getting pet by someone and wiggling enthusiastically. Medusa smiling naturally for the first time all episode. 16:9.",
+      "bg_colors": ["#9370DB", "#FFD700", "#7CFC00"],
+      "duration_sec": 45
+    },
+    {
+      "scene_number": 14,
+      "type": "friend_moment",
+      "title": "Zeus Finally Admits Something",
+      "narration": "Walking home, Little Zeus said, 'I always thought your hair was the coolest thing on the mountain.' 'You never SAID that,' said Medusa. 'I didn't want you to think I was weird,' said Zeus. Medusa stared at him. She had a crown of living colorful snakes on her head. She looked at Zeus. 'I was worried about YOU thinking I was weird,' she said. They both started laughing and couldn't stop.",
+      "visual_prompt": "Little Olympus kids cartoon style. Zeus and Medusa walking home together on the golden path at afternoon light. Zeus looking sideways at her with his honest expression. Both of them mid-laugh at the absurdity of worrying what the other thought. Baby Hercules walking behind them not entirely following but laughing too just in case. Warm and genuinely funny friendship moment. 16:9.",
+      "bg_colors": ["#FFD700", "#9370DB", "#87CEEB"],
+      "duration_sec": 44
+    },
+    {
+      "scene_number": 15,
+      "type": "athena_lesson",
+      "title": "Athena's Scroll Says",
+      "narration": "Athena caught up with them. Her scroll was already open. It said: 'What you're most embarrassed about is often what makes you the most interesting. The trick is to let someone else see it first. Then you'll see it too.' Medusa read it. Gerald looked at the scroll. Gerald tried to eat the scroll. Athena moved the scroll away very fast. Gerald was still Gerald.",
+      "visual_prompt": "Little Olympus kids cartoon style. Athena walking alongside Medusa and Zeus, scroll open. Medusa reading the lesson thoughtfully. Gerald stretching his neck toward the scroll clearly about to eat it. Athena doing a subtle quick scroll-rescue. Gerald looking innocent. Athena maintaining her philosophical expression despite the snake situation. Warm afternoon light. 16:9.",
+      "bg_colors": ["#9370DB", "#FFD700", "#87CEEB"],
+      "duration_sec": 43
+    },
+    {
+      "scene_number": 16,
+      "type": "funny_subplot_resolution",
+      "title": "Noodle Had the Brush the Whole Time",
+      "narration": "When Medusa got home, she found the hairbrush she had been missing that morning. It was in Noodle's little sleeping coil, perfectly safe. Noodle hadn't eaten it. Noodle had SAVED it for her. Medusa stared at this for a long time. 'You were keeping it safe?' Noodle blinked very slowly, which is snake for yes. Medusa did not know whether to be annoyed or grateful. She decided: grateful.",
+      "visual_prompt": "Little Olympus kids cartoon style. Medusa's bedroom evening. Noodle curled up in her nighttime sleeping spot with the hairbrush tucked carefully inside her coil like a treasure. Medusa crouching down looking at this discovery. Noodle doing the slow proud blink. The other snakes asleep in their various resting positions around Medusa's room. Warm cozy evening light. 16:9.",
+      "bg_colors": ["#9370DB", "#1A1060", "#FFF8DC"],
+      "duration_sec": 43
+    },
+    {
+      "scene_number": 17,
+      "type": "night_scene",
+      "title": "Good Night, All Twelve",
+      "narration": "That night, Medusa looked in her mirror before bed. Her snakes were settling in for the night — Noodle and Wiggle going to sleep. Dot was already snoring. Gerald was doing his crown shape one more time, just in case anyone was watching. For the first time, Medusa didn't wish her hair was different. She just thought: okay. This is me. And it's pretty great.",
+      "visual_prompt": "Little Olympus kids cartoon style. Medusa's bedroom at night, soft glow. Medusa looking in her mirror, snakes drowsy and settling — Noodle and Wiggle drooping, tiny Dot snoring with little 'z' above her, Gerald making his crown shape one final time very sleepily. Medusa smiling at her reflection with genuine contentment. Cozy and warm nighttime scene. 16:9.",
+      "bg_colors": ["#1A1060", "#9370DB", "#191970"],
+      "duration_sec": 44
+    },
+    {
+      "scene_number": 18,
+      "type": "lesson_recap",
+      "title": "The Thing You're Most Embarrassed About",
+      "narration": "Here is something that is true: the thing you are most embarrassed about is usually the most interesting thing about you. Not always. But very often. Maybe it's something about how you look, or how you talk, or something you're really good at that seems weird. Don't hide it under a hat. Or if you do put it under a hat, all twelve of them will poke back out anyway. Trust the snakes.",
+      "visual_prompt": "Little Olympus kids cartoon style. Warm direct storytelling moment. Medusa asleep, snakes all asleep around her head in a colorful wreath. Cozy and peaceful. Her portrait copy from Picture Day is on her wall, Gerald in crown formation visible in it. Her round glasses on the nightstand. The most content scene of the episode. 16:9.",
+      "bg_colors": ["#1A1060", "#9370DB", "#4169E1"],
+      "duration_sec": 44
+    },
+    {
+      "scene_number": 19,
+      "type": "next_day",
+      "title": "The Next Morning",
+      "narration": "The next morning, Medusa woke up and reached for her hairbrush. Noodle handed it to her. Wiggle helped comb out two of the others. Gerald settled into crown position without being asked. By the time Medusa was ready for school, her hair was doing something completely its own — and she walked out the door thinking: yeah. This is the good version.",
+      "visual_prompt": "Little Olympus kids cartoon style. Bright morning scene. Medusa's bedroom with morning light. Noodle handing the hairbrush to Medusa with a tiny snake helping gesture. Wiggle gently assisting with another snake's styling. Gerald already in perfect crown formation looking proud. Medusa smiling at herself in the mirror looking genuinely ready and confident. 16:9.",
+      "bg_colors": ["#FFD700", "#9370DB", "#87CEEB"],
+      "duration_sec": 43
+    },
+    {
+      "scene_number": 20,
+      "type": "funny_callback",
+      "title": "Gerald's New Habit",
+      "narration": "Gerald, for the record, never stopped doing the crown thing. He did it everywhere. At breakfast: crown. During school: crown. While Medusa was trying to sleep: crown. The other gods had started specifically coming to see Gerald do the crown thing. He had his own visitors now. He was, without question, the most famous snake on Mount Olympus. He was absolutely insufferable about it.",
+      "visual_prompt": "Little Olympus kids cartoon style. Montage of Gerald doing his crown formation in increasingly inappropriate and funny places: during breakfast, during a school lesson (while Medusa tries to concentrate), while she's asleep, while various impressed gods come specifically to see it and point and gasp. Gerald completely regal and pleased in every single panel. 16:9.",
+      "bg_colors": ["#FFD700", "#9370DB", "#FF6B35"],
+      "duration_sec": 43
+    },
+    {
+      "scene_number": 21,
+      "type": "friend_group",
+      "title": "The Little Olympus Crew Is Complete",
+      "narration": "And that's how Little Medusa joined the Little Olympus crew. Little Zeus with his crown that was always sideways. Baby Hercules with his enormous arms and accidental destruction. Athena who was always three steps ahead. Pegasus Junior who sneezed glitter. And now Little Medusa, with twelve snakes and one of them who did a crown thing. They were, without question, the best group on the mountain.",
+      "visual_prompt": "Little Olympus kids cartoon style. Full crew group shot on Mount Olympus at golden afternoon: Little Zeus (crown sideways), Baby Hercules (enormous arms, huge grin), Athena (scroll and owl), Pegasus Junior (mid-glitter-sneeze), and now Medusa (snakes including Gerald in crown, round glasses, big smile). All standing together proudly. The complete Little Olympus ensemble. 16:9.",
+      "bg_colors": ["#FFD700", "#9370DB", "#00B4E6"],
+      "duration_sec": 45
+    },
+    {
+      "scene_number": 22,
+      "type": "lesson_final",
+      "title": "You Are the Most Interesting Thing Here",
+      "narration": "Whatever makes you different from everyone else? That's the thing. That's your thing. It might take picture day or an old painter or a best friend saying the obvious thing for you to see it. But it's there. It was always there. And someone, somewhere, is going to look at your thing and say 'Oh. Oh, this is wonderful.' Just like Daedalus did. Just like Gerald knew all along.",
+      "visual_prompt": "Little Olympus kids cartoon style. Final wisdom moment. Medusa sitting on a sunny ledge overlooking Mount Olympus, Gerald in his crown formation, other snakes peacefully arranged. She looks happy and settled in who she is. Little Zeus sitting beside her. Warm golden sunset light. Quiet and reflective after a big day. 16:9.",
+      "bg_colors": ["#FFA500", "#FFD700", "#9370DB"],
+      "duration_sec": 44
+    },
+    {
+      "scene_number": 23,
+      "type": "outro_song",
+      "title": "The Little Olympus Song",
+      "narration": "Up on Mount Olympus, the kids are the best! Little Zeus has his crown and Baby Herc has the rest! Athena's got the scroll and Pegasus has wings! Little Medusa has twelve snakes who do their own things! Little Olympus! Little Olympus! The funniest place in the sky! Little Olympus! Little Olympus! Where Gerald's crown is very high!",
+      "visual_prompt": "Little Olympus kids cartoon style. Full cast outro shot: all five crew members (Zeus, Hercules, Athena, Pegasus Junior, and new addition Medusa) posing together. Medusa front and center, Gerald in crown formation gleaming. Everyone in their signature pose. Show logo appears. Confetti, sparkles, tiny bows. Maximum fun energy. Kids show outro. 16:9.",
+      "bg_colors": ["#9370DB", "#FFD700", "#00B4E6"],
+      "duration_sec": 45
+    },
+    {
+      "scene_number": 24,
+      "type": "end_card",
+      "title": "See You Next Time!",
+      "narration": "That's all for today on Little Olympus! If you loved meeting Little Medusa, subscribe so you don't miss her next adventure! And tell us in the comments — which is your favourite snake? We're pretty sure it's Gerald. Bye from Little Olympus! Be yourself!",
+      "visual_prompt": "Little Olympus kids cartoon style. End card. Medusa and Little Zeus waving at camera, Medusa's snakes waving their tiny tails. Gerald in crown formation right at camera level. Subscribe button animated. Little Olympus logo prominent. @littleolympusai visible. Bright fun colors with purple-gold scheme. Kids YouTube end card energy. 16:9.",
+      "bg_colors": ["#9370DB", "#FFD700", "#1A1060"],
+      "duration_sec": 40
     }
   ],
   "music": {
-    "style": "upbeat_kids_adventure",
-    "notes": "Opening: organized, slightly march-like (Athena's planning energy). Scene 3-4: comedic chaos music, quick tempo. Scene 5: brief silence then warm build when Athena makes her decision. Scene 6: full triumphant kids adventure theme. End: warm and satisfied."
-  },
-  "voice_style": {
-    "tone": "warm_playful_encouraging",
-    "pacing": "Speed up through the chaos scenes. SLOW DOWN on 'She rolled up the plan.' That beat needs space. Then pick up again for the solution.",
-    "character": "A narrator who deeply respects what Athena did in scene 5 — that took more courage than the plan itself"
-  },
-  "lesson": "The best plan is the one you can change when you need to.",
-  "bible_reference": "Little_Olympus_Master_Bible.md — Athena: four chin taps (serious), abandoning the plan is her hardest thing, Archie looks at camera, running joke of plan being ignored. Hercules: 'I helped!', accidental destruction, personal record of standing still.",
-  "archie_camera_note": "Scene 6 is the designated Archie-looks-at-camera moment for this episode. Her advice WAS followed — just not the way she wrote it.",
-  "youtube_title": "Athena's PERFECT Plan Goes WRONG! 😅 | Little Olympus Episode 4",
-  "youtube_description": "Athena has a PERFECT plan for the First Annual Olympus Games! 📋\n\nIt is twelve pages. Color-coded. With THREE backup timelines.\n\nZeus has ONE job. Baby Hercules has ONE job (stand still). Nothing can go wrong.\n\n(Everything goes wrong.)\n\nIn today's adventure:\n🦉 Athena's most perfect plan ever\n⚡ Zeus improvises the torch ceremony (it's fine, it's totally fine)\n💪 Baby Hercules accidentally creates a valley\n✨ The best Olympus Games ever — just not the ones anyone planned\n\n📺 Watch ALL our adventures: [playlist link]\n🔔 SUBSCRIBE for new episodes every week!\n\n#LittleOlympus #Athena #BabyHercules #KidsCartoon #GreekMythology #KidsYouTube",
-  "next_episode_preview": "Episode 5 — The First Olympic Games! Achilles is racing. Against everyone. At the same time. He thinks this is fair.",
-  "higgsfield_style_notes": "Bright warm cartoon throughout. The chaos scenes should be visually funny — layered disasters happening simultaneously in background. Athena's ONE chin tap in scene 5 is visually distinct from her usual three — show it clearly."
+    "intro": "upbeat_kids_adventure_fanfare",
+    "main": "playful_orchestral_comedy_with_quirky_woodwinds",
+    "emotional": "gentle_warm_strings",
+    "action": "comedic_strings_and_flute",
+    "outro": "little_olympus_theme_song"
+  }
 }

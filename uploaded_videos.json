@@ -1,67 +1,52 @@
 {
-  "EP001": "rHOW8hdTJCw",
-  "EP002": "JxIrUFRCSAc",
-  "EP003": "WPU9q3BnXKA",
-  "EP004": "b4KH47c_6dI",
-  "EP005": "kAqR0AGYLv8",
-  "GG_EP001": {
-    "video_id": "xWphXtjZoUQ",
-    "channel": "Gods and glory ai",
-    "url": "https://youtu.be/xWphXtjZoUQ"
-  },
-  "GG_EP002": {
-    "video_id": "owc7ysK6KfM",
-    "channel": "Gods and glory ai",
-    "url": "https://youtu.be/owc7ysK6KfM"
-  },
-  "GG_EP003": {
-    "video_id": "BmJdSFdmk1Q",
-    "channel": "Gods & Glory",
-    "url": "https://youtu.be/BmJdSFdmk1Q"
-  },
-  "GG_EP004": {
-    "video_id": "6dQkbqYSDlA",
-    "channel": "Gods & Glory",
-    "url": "https://youtu.be/6dQkbqYSDlA"
-  },
-  "GG_EP005": {
-    "video_id": "4HmVROX9E8c",
-    "channel": "Gods and glory ai",
-    "url": "https://youtu.be/4HmVROX9E8c"
-  },
-  "GG_EP007": {
-    "video_id": "B-3DD-PQoW0",
-    "channel": "Gods & Glory",
-    "url": "https://youtu.be/B-3DD-PQoW0"
-  },
-  "GG_EP008": {
-    "video_id": "YEdqGXKSe5o",
-    "channel": "Gods & Glory",
-    "url": "https://youtu.be/YEdqGXKSe5o"
-  },
-  "GG_EP009": {
-    "video_id": "TGi8yA9GrtA",
-    "channel": "Gods & Glory",
-    "url": "https://youtu.be/TGi8yA9GrtA"
-  },
-  "GG_EP010": {
+  "GG_EP013": {
     "video_id": "yT5gjWxHH3M",
-    "channel": "Gods & Glory",
+    "channel": "Gods and glory ai",
     "url": "https://youtu.be/yT5gjWxHH3M"
   },
-  "GG_EP006": {
-    "video_id": "BGFMik2kxsY",
+  "GG_EP002": {
+    "video_id": "uaSIBC-rfgs",
     "channel": "Gods and glory ai",
-    "url": "https://youtu.be/BGFMik2kxsY"
+    "url": "https://youtu.be/uaSIBC-rfgs"
+  },
+  "GG_EP005": {
+    "video_id": "IXCS1CVyaUs",
+    "channel": "Gods and glory ai",
+    "url": "https://youtu.be/IXCS1CVyaUs"
+  },
+  "GG_EP006": {
+    "video_id": "Y28_34nigFw",
+    "channel": "Gods and glory ai",
+    "url": "https://youtu.be/Y28_34nigFw"
+  },
+  "GG_EP007": {
+    "video_id": "iPCwl1-kUds",
+    "channel": "Gods and glory ai",
+    "url": "https://youtu.be/iPCwl1-kUds"
   },
   "GG_EP012": {
-    "video_id": "W2SV34U5BqA",
+    "video_id": "s2tLWAelf9I",
     "channel": "Gods and glory ai",
-    "url": "https://youtu.be/W2SV34U5BqA"
+    "url": "https://youtu.be/s2tLWAelf9I"
   },
-  "GG_EP013": {
-    "video_id": "oELOJd6rx-0",
+  "GG_EP015": {
+    "video_id": "9ltHRKMexsc",
     "channel": "Gods and glory ai",
-    "url": "https://youtu.be/oELOJd6rx-0"
+    "url": "https://youtu.be/9ltHRKMexsc"
+  },
+  "GG_EP010": {
+    "video_id": "eCr73T3IXwE",
+    "channel": "Gods and glory ai",
+    "url": "https://youtu.be/eCr73T3IXwE"
+  },
+  "GG_EP016": {
+    "video_id": "wCD7x85K-Y8",
+    "channel": "Gods and glory ai",
+    "url": "https://youtu.be/wCD7x85K-Y8"
+  },
+  "GG_EP011": {
+    "video_id": "1K6xeiGtHoI",
+    "channel": "Gods and glory ai",
+    "url": "https://youtu.be/1K6xeiGtHoI"
   }
 }

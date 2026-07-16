@@ -1,0 +1,81 @@
+{
+  "last_checked": "2026-07-13 13:37:19",
+  "active_renders": [],
+  "renders_ready_to_upload": [
+    "GG_EP002",
+    "GG_EP005",
+    "GG_EP006",
+    "GG_EP007",
+    "GG_EP012"
+  ],
+  "uploaded": [
+    "GG_EP013"
+  ],
+  "all_renders": {
+    "GG_EP001": {
+      "duration_min": 20.3,
+      "size_mb": 242.7,
+      "modified": "2026-07-08 14:09"
+    },
+    "GG_EP002": {
+      "duration_min": 45.2,
+      "size_mb": 433.8,
+      "modified": "2026-07-08 15:41"
+    },
+    "GG_EP003": {
+      "duration_min": 18.7,
+      "size_mb": 212.7,
+      "modified": "2026-06-21 06:15"
+    },
+    "GG_EP004": {
+      "duration_min": 19.2,
+      "size_mb": 248.2,
+      "modified": "2026-06-21 06:58"
+    },
+    "GG_EP005": {
+      "duration_min": 41.4,
+      "size_mb": 467.5,
+      "modified": "2026-07-09 00:10"
+    },
+    "GG_EP006": {
+      "duration_min": 41.0,
+      "size_mb": 334.9,
+      "modified": "2026-07-09 02:25"
+    },
+    "GG_EP007": {
+      "duration_min": 39.5,
+      "size_mb": 284.2,
+      "modified": "2026-07-09 03:33"
+    },
+    "GG_EP008": {
+      "duration_min": 12.8,
+      "size_mb": 122.8,
+      "modified": "2026-06-23 11:59"
+    },
+    "GG_EP009": {
+      "duration_min": 10.9,
+      "size_mb": 106.3,
+      "modified": "2026-06-23 20:13"
+    },
+    "GG_EP010": {
+      "duration_min": 13.2,
+      "size_mb": 131.0,
+      "modified": "2026-06-23 21:23"
+    },
+    "GG_EP011": {
+      "duration_min": 10.1,
+      "size_mb": 98.9,
+      "modified": "2026-06-24 08:29"
+    },
+    "GG_EP012": {
+      "duration_min": 39.4,
+      "size_mb": 184.6,
+      "modified": "2026-07-11 17:37"
+    },
+    "GG_EP013": {
+      "duration_min": 39.0,
+      "size_mb": 420.6,
+      "modified": "2026-07-12 16:52"
+    }
+  }
+}

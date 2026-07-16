@@ -106,9 +106,10 @@ def assemble_scene(ffmpeg: str, video: Path, audio: Path, out: Path, target_dur:
     if out.exists() and out.stat().st_size > 10000:
         print(f"  [skip] {out.name}")
         return
-    # Get audio duration
+    # Get audio duration — use ffprobe at same bin dir as ffmpeg
+    ffprobe = ffmpeg.replace("ffmpeg.exe", "ffprobe.exe")
     probe = subprocess.run(
-        [ffmpeg.replace("ffmpeg", "ffprobe"), "-v", "quiet",
+        [ffprobe, "-v", "quiet",
          "-show_entries", "format=duration", "-of", "default=noprint_wrappers=1:nokey=1",
          str(audio)], capture_output=True
     )
@@ -123,7 +124,7 @@ def assemble_scene(ffmpeg: str, video: Path, audio: Path, out: Path, target_dur:
         "-c:v", "libx264", "-crf", "20", "-preset", "fast",
         "-c:a", "aac", "-b:a", "192k",
         str(out)
-    ], check=True, capture_output=True)
+    ], check=True)
     print(f"  [ok] {out.name}")
 
 

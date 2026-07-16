@@ -1,0 +1,19 @@
+=== DRY RUN — no changes will be made ===
+
+Channel: Gods and glory ai (UC7bNdZSXGmh6K8B5kt9TWOg)
+Found 20 videos.
+
+✅ Already private (9):
+   EP011-stub — EP012 | The Last Emperor of Rome | Fall of Constantinople 1453 | Gods & Glory (already private)
+   EP011-stub — EP005 | Constantinople 1453: The End of an Age (already private)
+   EP007-stub — EP007 | Alexander's Gamble: 47,000 vs 1,000,000 | Battle of Gaugamela | Gods & Glory (already private)
+   EP006-stub — EP006 | Greece's Impossible Comeback | Salamis & Plataea | Gods & Glory (already private)
+   EP006-stub — Greece's Impossible Comeback | Salamis & Plataea | Gods & Glory (already private)
+   EP011-stub — EP005 | The Last Emperor of Rome | Fall of Constantinople 1453 | Gods & Glory (already private)
+   EP011-stub — EP005 | Constantinople 1453: The End of an Age (already private)
+   EP011-stub — EP005 | Constantinople 1453: The End of an Age (already private)
+   EP007-stub — Alexander's Gamble: 47,000 vs 1,000,000 | Battle of Gaugamela | Gods & Glory (already private)
+
+🔒 Will set to Private (0):
+
+Nothing to do!

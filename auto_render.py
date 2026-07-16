@@ -192,10 +192,18 @@ def find_episode_json(episode_id: str) -> Path:
         p for p in PROMPTS_DIR.rglob("*.json")
         if not any(part.startswith("_") for part in p.relative_to(PROMPTS_DIR).parts[:-1])
     ]
-    for p in sorted(candidates):
+
+    def _prefer_final(p: Path) -> tuple:
+        """Sort key: .final files first, then alphabetical. Never pick captions_source."""
+        name = p.stem.lower()
+        is_final = "final" in name
+        is_captions = "captions" in name or "source" in name
+        return (0 if is_final else 2 if is_captions else 1, str(p))
+
+    for p in sorted(candidates, key=_prefer_final):
         if p.stem.lower() == eid_low:
             return p
-    for p in sorted(candidates):
+    for p in sorted(candidates, key=_prefer_final):
         if eid_low in p.stem.lower():
             return p
     raise FileNotFoundError(f"No episode JSON found for '{episode_id}' in {PROMPTS_DIR}")

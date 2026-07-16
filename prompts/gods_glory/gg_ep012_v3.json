@@ -1,0 +1,111 @@
+{
+  "channel": "Gods and Glory AI",
+  "episode_id": "GG_EP012",
+  "title": "The Last Emperor: How Rome Fell in One Night",
+  "battle_date": "476 AD",
+  "lower_third_default": "Fall of the Roman Empire | 476 AD",
+  "duration_target_min": 10,
+  "format": "v3_short_punchy",
+  "youtube_title": "How Rome Fell in One Night | Gods and Glory",
+  "youtube_description": "The most powerful empire in history collapsed in a single night. Here's exactly what happened — and why nobody saw it coming.",
+  "scenes": [
+    {
+      "scene_number": 1,
+      "type": "hook",
+      "title": "The Night Rome Died",
+      "narration": "On September 4th, 476 AD, a teenage barbarian king walked into the throne room of the Western Roman Empire. He sat down. And just like that — a civilization that had ruled the world for a thousand years was over. No epic final battle. No heroic last stand. Just a barbarian sitting in a Roman chair. This is how it happened.",
+      "wikimedia_query": "Fall of Roman Empire Romulus Augustulus deposed",
+      "visual_prompt": "dramatic oil painting Roman throne room barbarian warrior sitting on emperor throne Roman legionaries watching",
+      "lower_third": "Fall of the Roman Empire | September 4, 476 AD",
+      "duration_sec": 42
+    },
+    {
+      "scene_number": 2,
+      "type": "context",
+      "title": "The Boy Emperor",
+      "narration": "The last emperor of Rome was a teenager named Romulus Augustulus — meaning 'little Augustus'. The name was almost a joke. He was placed on the throne by his father Orestes, a powerful general who wanted to rule from the shadows. Romulus was maybe 15 years old. He had no real power. And he was about to lose everything.",
+      "wikimedia_query": "Romulus Augustulus Roman emperor child portrait",
+      "visual_prompt": "young Roman emperor boy on throne, ornate Roman palace, looking uncertain",
+      "lower_third": "Romulus Augustulus | Last Emperor of Western Rome",
+      "duration_sec": 40
+    },
+    {
+      "scene_number": 3,
+      "type": "rising_action",
+      "title": "Odoacer's Demand",
+      "narration": "The real threat came from inside the walls. Odoacer was a Germanic mercenary general commanding Rome's own army — an army that hadn't been paid in months. He made one demand: give his soldiers one third of Italy's land. Orestes refused. It was the last decision he ever made.",
+      "wikimedia_query": "Odoacer Germanic king Italy medieval illustration",
+      "visual_prompt": "Germanic warrior general in Roman armor addressing troops, Italy landscape behind him",
+      "lower_third": "Odoacer | Germanic Mercenary General",
+      "duration_sec": 40
+    },
+    {
+      "scene_number": 4,
+      "type": "conflict",
+      "title": "The Army Turns",
+      "narration": "Odoacer's forces marched on Ravenna — the last capital of the Western Empire. Orestes fled, was captured, and was executed in hours. The Roman army didn't fight back. Most of them were Germanic mercenaries themselves. They had no loyalty to Rome. They had no reason to die for a throne they didn't believe in.",
+      "wikimedia_query": "Germanic tribes marching Italy barbarian invasion Roman army",
+      "visual_prompt": "barbarian army marching on Roman city gates at dusk, Roman soldiers lowering weapons",
+      "duration_sec": 42
+    },
+    {
+      "scene_number": 5,
+      "type": "climax",
+      "title": "The Abdication",
+      "narration": "Odoacer entered Ravenna unopposed. He walked to the throne room. And instead of killing Romulus Augustulus, he did something remarkable — he felt sorry for him. The boy was too young, too powerless to execute. Odoacer sent him into exile in a comfortable villa in southern Italy with a pension. Rome's last emperor lived out his days as a nobody. The empire simply... stopped.",
+      "wikimedia_query": "Odoacer receiving Romulus surrender Roman throne abdication",
+      "visual_prompt": "barbarian king standing before Roman boy emperor, Roman court watching, solemn moment",
+      "lower_third": "September 4, 476 AD | The Western Empire Ends",
+      "duration_sec": 48
+    },
+    {
+      "scene_number": 6,
+      "type": "analysis",
+      "title": "Why Nobody Stopped It",
+      "narration": "Here's the part history books skip: nobody actually noticed. No Roman citizen woke up the next morning and said 'the empire fell today.' Taxes still got collected. Bishops still ran their churches. Merchants still traded. Odoacer simply declared himself King of Italy — not emperor — and life went on. The Roman Empire didn't explode. It dissolved. Slowly. Then all at once.",
+      "wikimedia_query": "Roman city daily life late antiquity merchants forum",
+      "visual_prompt": "Roman marketplace carrying on normally, merchants trading, life continuing after empire fall",
+      "duration_sec": 46
+    },
+    {
+      "scene_number": 7,
+      "type": "deeper_context",
+      "title": "A Century of Collapse",
+      "narration": "The truth is 476 AD was just the final chapter of a collapse that had been happening for a hundred years. Waves of Goths, Vandals, and Huns had carved the empire apart. The economy had rotted from currency debasement. Military commanders had replaced emperors so many times nobody could keep track. In the 50 years before Odoacer, there were over 20 different 'emperors'. None lasted long.",
+      "wikimedia_query": "Barbarian invasions Roman Empire map 4th 5th century",
+      "visual_prompt": "map of Roman Empire showing barbarian invasions arrows from multiple directions, territories falling",
+      "duration_sec": 45
+    },
+    {
+      "scene_number": 8,
+      "type": "twist",
+      "title": "The East Survived",
+      "narration": "And here's what most people don't know: Rome didn't actually die in 476. Only the Western half did. The Eastern Roman Empire — what we call Byzantium — kept going. For another thousand years. Constantinople stood until 1453. The Eastern emperors still called themselves Roman. Still used Roman law. Still spoke Greek and called it Roman. Rome lasted until the Ottoman cannons finally brought the walls down.",
+      "wikimedia_query": "Constantinople Byzantine Empire Eastern Roman Empire Hagia Sophia",
+      "visual_prompt": "Constantinople skyline Hagia Sophia Byzantine Empire thriving city Eastern Rome",
+      "lower_third": "Eastern Roman Empire | Survived Until 1453 AD",
+      "duration_sec": 44
+    },
+    {
+      "scene_number": 9,
+      "type": "lesson",
+      "title": "What Actually Kills Empires",
+      "narration": "The real lesson of Rome's fall isn't about one night or one emperor. Empires don't get destroyed from the outside. They hollow out from the inside — through corruption, through paying enemies to not attack instead of building armies strong enough to fight, through leaders who care more about keeping power than using it. Sound familiar? Every great civilization that ever fell followed the same pattern.",
+      "wikimedia_query": "Roman Senate corruption late empire historical painting",
+      "visual_prompt": "dramatic painting Roman Senate in chaos, corrupt politicians arguing, empire crumbling around them",
+      "duration_sec": 46
+    },
+    {
+      "scene_number": 10,
+      "type": "outro",
+      "title": "Subscribe for More",
+      "narration": "Rome wasn't built in a day — and it didn't fall in one either. But one teenager being sent to a villa changed the course of Western civilization forever. If you want to understand how the world's greatest empires rose and fell — subscribe to Gods and Glory. New battle every week. History that actually matters.",
+      "wikimedia_query": "Roman Colosseum ancient Rome majesty",
+      "visual_prompt": "majestic Roman Colosseum golden sunset, Gods and Glory logo overlay",
+      "duration_sec": 35
+    }
+  ],
+  "music_recommendation": "epic_orchestral_dramatic",
+  "tags": ["Roman Empire", "Fall of Rome", "Odoacer", "Romulus Augustulus", "history", "ancient history", "empire"],
+  "thumbnail_concept": "Split image: Roman soldier vs barbarian warrior, text 'HOW ROME REALLY FELL' in blood red"
+}

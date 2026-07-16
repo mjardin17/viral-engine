@@ -19,10 +19,11 @@ Josh Jardin (justifiedmagnificent@gmail.com). Building a multi-channel AI conten
 ## Projects
 | Name | What | Status |
 |------|------|--------|
-| **Gods & Glory (GG)** | History/battle documentary channel | Season 1 ✅ Season 2 partial Season 3 scripting |
+| **Gods & Glory (GG)** | History/battle documentary channel — NEW FORMAT: 10-min punchy episodes, one battle, Wikimedia images + Ken Burns + Kokoro + music | EP006-007 uploaded (old 45-min format) · NEW FORMAT starts EP012+ · YouTube: @godsandgloryai ("Gods and Glory AI") ✅ · TikTok: @godsgloryai · Instagram: @godsandgloryai · Facebook: @godsandgloryai |
 | **Empire Decoded (ED)** | Second channel — AI/tech, rebranded from ML | EP001 scripted |
-| **Little Olympus (LO)** | Third channel (Little Zeus) | EP001 scripted |
-| **Iron Legends (IL)** | 80s mech anime channel | EP001 scripted · YouTube: @IronLegendsai ✅ |
+| **Echoes of Eternity (EOE)** | New channel — YouTube: @echosofeternitiai ("Echoes of Eternity AI") ✅ | EP001 pending |
+| **Little Olympus (LO)** | Third channel (Little Zeus) | EP001 ✅ rendered (455MB Higgsfield) · YouTube: @littleolympusai ✅ · Facebook: @littleolympusai · Instagram: @littleolympusai · TikTok: @little.olympusai · EP002-004 ✅ scripted (24-scene full scripts) |
+| **Iron Legends (IL)** | 80s mech anime channel | EP001 scripted · YouTube: @ironlegendsai ("Iron Legends AI") ✅ |
 | **WW Channel (WW)** | WW1 & WW2 documentary channel | Planned — starts after GG EP020-025 done |
 | **Council Bot System** | Self-healing pipeline monitor (9 bots) | Live |
 | **Viral Engine Launch** | Website + YouTube + Store + Apps + Newsletter | Opening day pending |
@@ -37,7 +38,8 @@ Josh Jardin (justifiedmagnificent@gmail.com). Building a multi-channel AI conten
 | LO / Little Zeus | Little Olympus channel |
 | EP006 | Pearl Harbor — broken, needs re-render |
 | Council | The 9-bot self-healing pipeline system |
-| Full script | 54–72 scenes, ≥2700s (≥45 min) — NEW STANDARD v2.0 |
+| GG Full script | 12–15 scenes, ~600s (~10 min) — NEW FORMAT v3.0 (short punchy wins algorithm) |
+| LO Full script | 24 scenes, ~17 min — kids content standard |
 | Stub | Short script, <10 scenes, unusable |
 | auto_render.py | Core pipeline: JSON → images → TTS → FFmpeg → MP4 |
 | patch_fallbacks.py | Surgical fix for broken/tiny images |
@@ -45,9 +47,10 @@ Josh Jardin (justifiedmagnificent@gmail.com). Building a multi-channel AI conten
 | council_run.bat | Launches all 9 council bots |
 | PROMPTS_DIR | prompts/ — all episode JSON scripts live here |
 | gods_glory/ | Subdirectory where full GG scripts live (auto_render picks these over root stubs) |
-| StoryForge | Book generation system — built into Empire OS |
-| Grok / Gronk | Grok Build CLI (xAI coding agent) — installed, runs in terminal |
-| Boss Listers | Reseller cross-listing app (eBay/Poshmark/Mercari etc.) — Josh's eBay is live on it. Goal: link website storefront (jardins-outpost.pages.dev) to eBay through Boss Listers |
+| StoryForge | Book generation system — built into Empire OS by Google AI Studio |
+| Grok | xAI outside builder — builds external projects/apps. NOT Google. NOT Gemini. |
+| Google AI Studio (Gemini) | Built: Boss Listers, Crosspost, Empire OS — internal empire tools |
+| Boss Listers | Cross-listing app built by Google AI Studio. GOAL: eBay inventory → jardins-outpost.pages.dev storefront → other platforms (Poshmark, Mercari, etc.). Pipeline not fully working yet — eBay connected, website + other platforms pending. |
 | ngrok | Tunnels local server so agents can hit it via public URL |
 | channel_uploader.py | Per-channel uploader with --verify — replaces easy_youtube_uploader.py |
 | token_gg.pickle | Correct GG token — NEVER use token.pickle (wrong account) |
@@ -59,9 +62,9 @@ Josh Jardin (justifiedmagnificent@gmail.com). Building a multi-channel AI conten
 | Season | Episodes | Status |
 |--------|----------|--------|
 | S1 GG | EP001–EP005 | ✅ Finals in renders/ (187–260MB each) |
-| S2 GG | EP006–EP011 | EP007–011 finals in renders/ (stubs); EP006 BROKEN — run render_ep006.bat |
+| S2 GG | EP006–EP011 | EP006 (Pearl Harbor 41min) ✅ uploaded · EP007 (D-Day 39min) ✅ uploaded · EP008–EP011 RENDERING NOW from full 54-scene scripts via RENDER_S2_MISSING.bat |
 | S3 GG | EP012–EP025 | ✅ ALL 14 SCRIPTS WRITTEN — run render_season3.bat to render |
-| ML S1 | EP001 | Scripted only |
+| ED S1 | EP001 | Scripted only |
 | LO S1 | EP001 | Scripted only |
 
 ## S3 Script Index (all in prompts/gods_glory/)
@@ -85,16 +88,12 @@ EP024 Inchon | EP025 Yorktown
 | bot_09_quality_checker | 55 | ffprobe duration + audio RMS check |
 | bot_10_frame_inspector | 56 | Visual QC: frame every 30s, catches red/black/white/frozen screens, auto-queues re-render |
 
-## Viral Engine Launch (TODAY)
-Josh is launching everything today:
-- YouTube channels (already created)
-- Website / landing page (needs building)
-- Store (platform TBD — need URL from Josh)
-- Apps Josh has built (need names/links from Josh)
-- Newsletter signup
-- Social media opening day posts for all platforms
-**Website:** https://jardins-outpost.pages.dev (Cloudflare Pages)
-**STILL NEED FROM JOSH:** store URL, app names/links
+## Viral Engine Launch
+**Website:** https://jardins-outpost.pages.dev (Cloudflare Pages) — LIVE, looks great, dark gold theme. Has Apps/Store/Services/Workspace/Contact nav. App cards currently point to locally-running servers (not public yet).
+**NEXT:** Link jardins-outpost.pages.dev Store/Apps/Services pages to the Base44 storefront (built 2026-07-13 — see Lessons). Paste real Stripe keys into the Base44 app to make checkout live.
+**Grok built landing pages** for various offer packs — files location unknown, need to find them.
+**Empire OS Hub:** Running at localhost:5173 — React+Vite app, dark theme, agent dispatch tabs (Claude/Gemini/Grok/ChatGPT/DeepSeek), Gods & Glory pipeline view. Needs extension to cover all empire pillars (Books, Merch, Store, Services, Revenue).
+**STILL NEED:** Find Grok's landing pages + offer packs, store platform decision, merch setup.
 
 ## Glass Box Protocol (use before answering complex questions)
 Before answering any non-trivial question, show Josh:
@@ -156,6 +155,13 @@ Then give the answer.
 - Duration + audio RMS checks are NOT enough — a red screen at 13min passes both. bot_10_frame_inspector is MANDATORY before any upload. Visual QC = non-negotiable.
 - GitHub push protection (public repo) cannot be disabled — always use PUSH_NOW.bat for pushes; it runs push_bypass.py which auto-opens bypass URLs when GitHub blocks on secret scanning
 - token_gg.pickle + credentials.json were in early git history and are now publicly visible — Josh must rotate these Google OAuth credentials (revoke in Google Cloud Console, re-auth via channel_uploader.py --reauth)
+- When rotating OAuth credentials (new GCP project), YouTube Data API v3 MUST be manually enabled at console.cloud.google.com before any uploads will work — new projects have it disabled by default. Project ID is in credentials.json under "project_id".
+- empire-os-hub is a Replit monorepo app: requires vite.config.local.ts (no PORT/BASE_PATH env vars, no Replit plugins) + standalone tsconfig.json (no ../../tsconfig.base.json extends, no workspace references) + package.json with pinned versions (no catalog: syntax). Use npm install --legacy-peer-deps, NOT pnpm (undici UND_ERR_DESTROYED on Josh's machine).
+- Empire OS Hub launch: run PNPM_INSTALL.bat first (npm install), then START_HUB.bat → Vite at localhost:5173.
+- `py` launcher is not in PATH in this Windows environment — always use full Python path `C:\Users\jjard\AppData\Local\Programs\Python\Python314\python.exe` in bat files, never `py` or `python`.
+- Base44 free plan caps at 5 apps and has no delete/status-poll tool available via MCP — when the cap is hit, repurpose an existing app instead of asking Josh to free a slot blind. 2026-07-13: repurposed ViralVox (6a341ca3df11ec718fefd246) into the full storefront (Product/Order entities + Store/Apps/Services pages) rather than creating a new app.
+- Don't price a product as sellable ("Buy Now") without checking whether the underlying feature actually matches the sales pitch — caught after the fact that ViralVox was priced as launch-ready while still running edge-tts, not the ElevenLabs upgrade this doc says is required before launch.
+- Empire OS pipeline (static PNGs + Kokoro TTS) CANNOT produce watchable LO or IL content — tested on LO EP001, result was blue screen with robot voice. Higgsfield is non-negotiable for cartoon channels. Never attempt to replace Higgsfield for LO/IL with the static pipeline again.
 
 → Full pipeline docs: memory/context/pipeline.md
 → Full episode backlog: memory/projects/viral-engine.md

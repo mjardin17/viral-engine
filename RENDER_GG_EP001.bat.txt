@@ -1,0 +1,6 @@
+@echo off
+cd /d C:\Users\jjard\claude\video-bot-pipeline
+"C:\Users\jjard\AppData\Local\Programs\Python\Python314\python.exe" render_gg_v3.py --script prompts\gods_glory\gg_ep001_v3.json --music music\gg_battle_theme.mp3
+echo.
+echo === RENDER COMPLETE - check output above for errors ===
+pause

@@ -610,4 +610,58 @@ def render_episode(channel: str, episode_id: str, script_path: Path,
     return final_path
 
 
-# ── CLI ───────────────────────�
+# ── CLI ────────────────────────────────────────────────────────────────────────
+def main() -> None:
+    """Parse arguments and render the requested episode."""
+    parser = argparse.ArgumentParser(description="Empire OS unified renderer (GG/LO/IL)")
+    parser.add_argument("--channel", required=True, choices=sorted(CHANNEL_OUTPUT_DIR),
+                        help="Channel code: GG, LO, or IL")
+    parser.add_argument("--episode", required=True, help="Episode ID, e.g. GG_EP012")
+    parser.add_argument("--script", default=None,
+                        help="Explicit episode JSON path (auto-located in prompts/ if omitted)")
+    parser.add_argument("--music", default=None,
+                        help="Background music file (GG defaults to music/gg_battle_theme.mp3)")
+    parser.add_argument("--clips-dir", default=None,
+                        help="Higgsfield clips directory (LO/IL; default higgsfield_clips/{episode}/)")
+    args = parser.parse_args()
+
+    channel: str = args.channel.upper()
+    episode_id: str = args.episode.upper()
+
+    # Resolve script
+    script_path = Path(args.script) if args.script else find_episode_script(channel, episode_id)
+    if not script_path or not script_path.exists():
+        print(f"{TAG} ❌ Episode script not found for {episode_id} "
+              f"(looked in prompts/{CHANNEL_PROMPT_DIR[channel]}/)", file=sys.stderr)
+        sys.exit(1)
+
+    # Resolve music
+    music_path: Path | None = Path(args.music) if args.music else None
+    if music_path is None and channel == "GG" and DEFAULT_GG_MUSIC.exists():
+        music_path = DEFAULT_GG_MUSIC
+
+    # Resolve clips dir for LO/IL.
+    # --clips-dir given        → must exist (original Higgsfield flow)
+    # not given, default exists → use it
+    # not given, no default    → auto-generate via provider waterfall
+    clips_dir: Path | None = None
+    if channel in ("LO", "IL"):
+        if args.clips_dir:
+            clips_dir = Path(args.clips_dir)
+            if not clips_dir.exists():
+                print(f"{TAG} ❌ --clips-dir not found: {clips_dir}", file=sys.stderr)
+                sys.exit(1)
+        else:
+            default_dir = BASE_DIR / "higgsfield_clips" / episode_id
+            if default_dir.exists():
+                clips_dir = default_dir
+            else:
+                print(f"{TAG} No pre-made clips at {default_dir} — "
+                      f"clips will be auto-generated via the provider waterfall.")
+
+    result = render_episode(channel, episode_id, script_path, music_path, clips_dir)
+    sys.exit(0 if result else 1)
+
+
+if __name__ == "__main__":
+    main()

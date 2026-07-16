@@ -51,7 +51,13 @@ _Last updated: 2026-07-12_
 Everything below is for the public launch. Still need info from Josh (marked ⚠️):
 
 - [ ] **YouTube** — channels already created ✅
+- [ ] **Cross-posting GG** — crosspost_bridge.py is built and ready. Need from Josh:
+  - GG Instagram handle/account ID
+  - GG TikTok handle/account ID
+  - Confirm: using Zernio for posting?
+  Once you have those → fill in crosspost_config.json and it's live
 - [ ] **Website / Landing Page** — https://jardins-outpost.pages.dev (Cloudflare Pages) — needs content built out
+- [x] **Store/Apps/Services buyable content** — Base44 storefront built 2026-07-13 in the ViralVox app (6a341ca3df11ec718fefd246): Product + Order entities, 10 real product cards (ViralVox, ViralVox Pro, Boss Listers AI, 4x channel sponsorships, bundle package, 2x merch pre-orders), Stripe checkout flow requested via edit_base44_app. ⚠️ Needs: (1) real Stripe keys pasted into the app, (2) link from jardins-outpost.pages.dev Store/Apps/Services pages to the Base44 app, (3) ViralVox priced as sellable but still on edge-tts — hold at "Coming Soon" or ship with honest quality framing until ElevenLabs upgrade lands.
 - [ ] **Store** — eBay store live on Boss Listers ✅ Website storefront (jardins-outpost.pages.dev) needs to be linked to eBay via Boss Listers
 - [ ] **Apps to launch:**
   - **Voice Music Factory** — Kokoro TTS voice + music/video generation tool — lives in `voice-music-factory/` in the repo — needs to be deployed/hosted
@@ -78,6 +84,84 @@ Everything below is for the public launch. Still need info from Josh (marked ⚠
   - Runs N episodes simultaneously, live status, auto-retries, logs to render_log.json
 - [ ] **Wire crosspost_bridge.py** — fill in `crosspost_config.json` → auto-publish to Instagram/TikTok/Facebook after upload
 - [ ] **bot_10_frame_inspector** — already in council; make sure it runs before every upload (visual QC mandatory)
+
+---
+
+---
+
+## 📅 DAILY BRIEFING (Every Session Starts Here)
+Before anything else, check:
+1. What rendered overnight → ready to upload?
+2. What uploaded → live on YouTube?
+3. What failed → needs attention?
+4. What's the single most important thing to do today?
+
+---
+
+## 📚 STORYFORGE — Book Publishing Empire
+
+StoryForge is 94% complete. Lives in Empire OS Creative Console.
+Takes a premise → generates full script blueprint with scenes, characters, pacing.
+
+**Plan:**
+- [ ] Audit StoryForge live — test it, find the gaps
+- [ ] Fix 3 duplicate functions flagged by Empire Inspector
+- [ ] Build export to Amazon KDP-ready format (EPUB/PDF)
+- [ ] Connect to Claude for long-form prose generation (premise → full book)
+- [ ] Auto-publish pipeline: StoryForge → formatted book → upload to platforms
+
+**Target book platforms (in order):**
+1. Amazon KDP — biggest, do this first
+2. Draft2Digital — one upload distributes to Apple Books, B&N, Kobo, Google Play
+3. Google Play Books
+4. Smashwords
+
+**Book ideas to start:**
+- History books tied to GG episodes (built-in audience)
+- Mythology books tied to LO
+- Mech/sci-fi tied to IL
+
+---
+
+## 👕 MERCH — Automated Print-on-Demand
+
+Use AI to generate designs → auto-list on print-on-demand platforms → zero inventory.
+
+**Plan:**
+- [ ] Pick platform: Printify (connects to Etsy/Shopify/eBay) or Printful
+- [ ] Generate designs tied to channel brands: GG (battle/history), IL (mech/anime), LO (greek mythology kids)
+- [ ] Auto-trigger new designs when new episodes drop
+- [ ] List on Etsy + eBay through Boss Listers
+
+---
+
+## 🛒 BOSS LISTERS — Cross-Platform Rollout
+
+Built by Google AI Studio. Goal: eBay inventory flows to website, then to every resale platform.
+Pipeline is NOT fully working yet — needs to be debugged and connected step by step.
+
+- [x] eBay — connected ✅
+- [ ] **NEXT: Fix eBay → website (jardins-outpost.pages.dev) connection** — debug why it's not working
+- [ ] Poshmark
+- [ ] Mercari
+- [ ] Depop
+- [ ] Grailed
+- [ ] Etsy
+- [ ] TikTok Shop
+
+---
+
+## 💰 OTHER MONEY STREAMS
+
+| Stream | Status | Action Needed |
+|--------|--------|---------------|
+| YouTube ad revenue (GG) | 🟡 Episodes uploading | Hit 1K subs + 4K watch hours to monetize |
+| Boss Listers as SaaS | 🔵 App built | Deploy + add subscription billing |
+| Voice Music Factory as SaaS | 🔵 App built | Deploy + pricing page |
+| Empire OS services (client pipelines) | 🔵 Ready to sell | Landing page + outreach |
+| Merch (print-on-demand) | ⚪ Not started | Pick Printify/Printful |
+| Books (StoryForge → KDP) | ⚪ Not started | Audit StoryForge first |
+| Patreon (early episode access) | ⚪ Not started | Set up after YouTube grows |
 
 ---
 

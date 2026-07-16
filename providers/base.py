@@ -59,4 +59,24 @@ class ProviderBase(ABC):
         Download a finished clip/asset from output_url to dest_path.
         Returns True on success (file exists and is >10KB). Never raises.
         """
-        d
+        dest = Path(dest_path)
+        try:
+            dest.parent.mkdir(parents=True, exist_ok=True)
+            req = urllib.request.Request(output_url, headers={"User-Agent": "EmpireOS/1.0"})
+            with urllib.request.urlopen(req, timeout=300) as resp:
+                data = resp.read()
+            if len(data) < 10_000:
+                return False
+            dest.write_bytes(data)
+            return True
+        except Exception:
+            dest.unlink(missing_ok=True)
+            return False
+
+    def not_connected_response(self, operation: str) -> dict:
+        return {
+            "status": "not_connected",
+            "job_id": None,
+            "operation": operation,
+            "message": f"Provider '{self.__class__.__name__}' not connected — set the required API key.",
+        }

@@ -2,140 +2,265 @@
   "channel": "Little Olympus",
   "episode_number": 3,
   "episode_id": "LO_EP003",
-  "title": "Perseus and the Tiny Medusa",
-  "tagline": "She turns things to stone. He has a mirror. This won't end well for anyone.",
-  "duration_target_min": 5,
+  "title": "Little Zeus and the Giant Sneeze",
+  "tagline": "Sometimes the biggest messes teach you the most important lessons.",
+  "duration_target_min": 17,
   "aesthetic": {
     "color_grade": "bright_kids_cartoon",
-    "primary_colors": ["#FFD700", "#6A0DAD", "#00B4E6", "#FF6B35"],
+    "primary_colors": ["#FFD700", "#1A1060", "#00B4E6", "#FF6B35"],
     "font_style": "rounded_chunky_bold",
     "music_style": "upbeat_kids_adventure",
     "narrator_tone": "warm_playful_encouraging"
   },
   "characters": {
     "hero": {
-      "name": "Little Perseus",
-      "role": "Brave kid who gets scared but does it anyway — audience surrogate",
-      "visual": "Dark shaggy hair, green eyes, earthy green tunic, leather satchel, small bronze shield (reflective), winged sandals that activate randomly",
-      "personality": "Genuinely brave (scared first, then acts), polite to a fault, terrible sense of direction, resourceful"
-    },
-    "villain_debut": {
-      "name": "Mini Medusa",
-      "role": "First appearance — turns things to stone but is secretly lonely",
-      "visual": "Small pale green girl with seven snake-hair (Hissy, Slick, Noodle, Chomp, Dreamy, Zigzag, Tiny), large golden round sunglasses, purple and gold wraps, shell jewelry",
-      "personality": "Dramatic proclamations, secretly sad, competitive with herself, has a stone garden she's proud of, snakes argue constantly"
-    },
-    "support_1": {
       "name": "Little Zeus",
-      "role": "Sends Perseus on the mission, causes one problem",
-      "visual": "Curly white hair, tiny bent crown, white toga, thunderbolt"
+      "visual": "Small boy with wild curly white hair, tiny golden crown, big bright blue eyes, white toga with gold trim"
     },
-    "support_2": {
+    "sidekick": {
+      "name": "Baby Hercules",
+      "visual": "Chubby toddler with enormous arms, tiny lion-skin cape, confused happy expression, always accidentally breaking things"
+    },
+    "mentor": {
       "name": "Athena",
-      "role": "Gives Perseus the key insight — the shield as a mirror",
-      "visual": "Grey-streaked braid, round glasses, owl Archie on shoulder, scroll"
+      "visual": "Girl with grey-streaked hair, tiny owl on shoulder, big glasses, holding a scroll, always three steps ahead"
+    },
+    "friend": {
+      "name": "Pegasus Junior",
+      "visual": "Very small white winged horse, fluffy feathers, big sparkly eyes, always sneezes glitter"
     }
   },
+  "voice_style": {
+    "tone": "warm_playful_encouraging",
+    "pacing": "punchy — keeps kids engaged, quick on comedy beats",
+    "character": "fun storyteller reading a picture book, with real reactions"
+  },
+  "lesson": "When you make a mess, own it and help fix it. Saying sorry is the first step.",
+  "youtube_title": "Little Zeus and the Giant Sneeze! | Little Olympus | Kids Greek Mythology",
+  "youtube_description": "Little Zeus has the BIGGEST sneeze in history and accidentally electrifies all of Mount Olympus! Can he fix the mess before the Sunshine Festival is ruined? A hilarious and heartwarming Little Olympus adventure for kids!",
   "scenes": [
     {
       "scene_number": 1,
-      "type": "hook",
-      "title": "Everything at the Fountain Is Stone",
-      "narration": "Something strange was happening at the Olympus fountain. The fish were stone. The frogs were stone. The bucket was stone. Even the water — somehow — was stone. And in the middle of it all, one golden sunglasses case sat on the edge. With a note: 'This is MY fountain now. —M'",
-      "visual_prompt": "Little Olympus kids cartoon style. The beautiful Olympus fountain — but everything in and around it has been turned to grey stone. Stone fish mid-jump. Stone frogs. Even stone water droplets frozen in the air. Little Zeus and Perseus stand staring at it in shock. On the fountain edge: a small golden sunglasses case and a dramatic note. Bright cheerful surroundings contrast with the stone chaos. 16:9.",
-      "bg_colors": ["#87CEEB", "#A9A9A9", "#FFD700"],
-      "accent": "#6A0DAD",
-      "camera": "pull_back",
-      "duration_sec": 9,
-      "higgsfield_prompt": "Cute kids cartoon style, beautiful Greek fountain with everything turned to grey stone — stone fish, stone frogs, frozen stone water droplets, small curly-haired boy with crown and dark-haired boy staring in shock, golden sunglasses case on fountain edge, bright colors contrasting stone grey, 16:9"
+      "type": "cold_open",
+      "title": "The Sunshine Festival Is Coming",
+      "narration": "Once a year on Mount Olympus, everyone got together for the most important event of the whole year. The Sunshine Festival. There was sunshine pie. There was sunshine dancing. There was a sunshine parade with baby animals wearing tiny flower crowns. It was, without any doubt, the absolute best day of the year. And Little Zeus was going to ruin ALL of it with a sneeze.",
+      "visual_prompt": "Little Olympus kids cartoon style. Mount Olympus decorated with colorful banners, flower garlands, and golden sunshine flags for the Sunshine Festival. Baby animals in flower crowns practicing for the parade. Everyone bustling with happy preparation. Little Zeus in the foreground holding a banner, smiling big. Bright festive morning colors. 16:9.",
+      "bg_colors": ["#FFD700", "#FF6B35", "#87CEEB"],
+      "duration_sec": 45
     },
     {
       "scene_number": 2,
       "type": "setup",
-      "title": "Perseus Gets the Mission",
-      "narration": "Zeus had a plan. Perseus would find whoever left that note and ask them very nicely to un-stone the fountain. Perseus asked if Zeus wanted to come along. Zeus said absolutely not and immediately pretended to be busy with something else. Perseus was on his own.",
-      "visual_prompt": "Little Olympus kids cartoon style. Little Zeus points dramatically at Perseus while clearly backing away himself — pointing at the path toward the mountains, expression saying 'you've got this!' while his feet are shuffling backwards. Perseus looks nervous but determined, adjusting his satchel strap and gripping his bronze shield. Bright Olympus setting. 16:9.",
-      "bg_colors": ["#87CEEB", "#90EE90", "#FFD700"],
-      "accent": "#FF6B35",
-      "camera": "push_in",
-      "duration_sec": 9,
-      "higgsfield_prompt": "Cute kids cartoon style, small boy with crown pointing dramatically at brave dark-haired boy while clearly shuffling backwards away from mission himself, brave boy looking nervous but determined holding bronze shield and leather satchel, bright Olympus path, funny cowardly king expression, 16:9"
+      "title": "Something Tickles",
+      "narration": "It started on the morning of the festival. Little Zeus woke up and noticed his nose felt... funny. Tingly. Like a tiny thunderbolt was building up right behind his nostrils. 'Uh oh,' said Little Zeus. He rubbed his nose. The tingle got bigger. He held his nose with both hands. The tingle laughed at him.",
+      "visual_prompt": "Little Olympus kids cartoon style. Little Zeus's bedroom on Mount Olympus, morning light. Zeus sitting up in bed with both hands pressed to his nose, eyes squinting, face doing the pre-sneeze scrunch. Small lightning sparks crackling around his nostrils. His tiny golden crown askew from sleep. Very funny expression. 16:9.",
+      "bg_colors": ["#FFF8DC", "#FFD700", "#87CEEB"],
+      "duration_sec": 42
     },
     {
       "scene_number": 3,
-      "type": "clue",
-      "title": "Athena's One Piece of Advice",
-      "narration": "Before he left, Athena stopped Perseus. She tapped her chin three times. Then she said five words. 'Do not look directly.' Perseus didn't understand yet. Archie the owl looked at him. Very meaningfully. Perseus still didn't understand. He would.",
-      "visual_prompt": "Little Olympus kids cartoon style. Athena stands with Perseus, tapping her chin thoughtfully (three taps). She holds up one finger and speaks those important words. Perseus looks confused. Archie the owl on her shoulder turns to look directly at Perseus with a deeply meaningful stare. Perseus squints, not getting it. Athena sighs. Warm afternoon light. 16:9.",
-      "bg_colors": ["#B0C4DE", "#FFD700", "#FFFFFF"],
-      "accent": "#6A0DAD",
-      "camera": "push_in",
-      "duration_sec": 9,
-      "higgsfield_prompt": "Cute kids cartoon style, smart girl with grey-streaked braid and glasses holding up one finger giving advice to dark-haired boy, small grey owl on her shoulder staring very meaningfully at the boy, boy looking confused and not getting it, girl sighing, warm afternoon light, 16:9"
+      "type": "setup",
+      "title": "Baby Hercules Is Not Helpful",
+      "narration": "Baby Hercules came to check on him. 'You don't look good,' said Baby Hercules. 'I feel a sneeze coming,' said Zeus. 'A THUNDER sneeze.' Baby Hercules's eyes went very wide. Everyone on Mount Olympus knew about thunder sneezes. When little gods sneezed, sometimes their powers came out. And Zeus's power was lightning. Lots and lots of lightning.",
+      "visual_prompt": "Little Olympus kids cartoon style. Baby Hercules standing in Zeus's doorway looking at Zeus with extremely wide eyes. Zeus pressing both hands over his nose and mouth, sparks flying anyway. Baby Hercules's enormous arms are held very stiff at his sides in frozen worry. The room is already slightly sparky. Morning light with crackle effects. 16:9.",
+      "bg_colors": ["#FFD700", "#1A1060", "#87CEEB"],
+      "duration_sec": 44
     },
     {
       "scene_number": 4,
-      "type": "problem",
-      "title": "Mini Medusa's Stone Garden",
-      "narration": "Perseus followed the sunglasses case clue to a valley behind Olympus. And there she was: Mini Medusa. She had turned an entire meadow into a stone sculpture garden. It was, actually, extremely beautiful. Mini Medusa was in the middle of it giving a tour to nobody.",
-      "visual_prompt": "Little Olympus kids cartoon style. A breathtaking stone sculpture garden in a valley — dozens of beautifully detailed stone animals, flowers, and mythical creatures all frozen mid-motion. Mini Medusa — small girl with seven animated snake-hair and big golden round sunglasses — stands in the center dramatically gesturing to her art as if presenting to a crowd. Nobody is there. Perseus peeks around a rock, amazed. 16:9.",
-      "bg_colors": ["#A9A9A9", "#6A0DAD", "#FFD700"],
-      "accent": "#6A0DAD",
-      "camera": "pull_back",
-      "duration_sec": 9,
-      "higgsfield_prompt": "Cute kids cartoon style, breathtaking stone sculpture garden with dozens of beautifully detailed frozen stone animals and flowers, small pale green girl with animated snake-hair and large golden round sunglasses dramatically gesturing to her art collection for nobody, dark-haired boy peeking amazed from behind a rock, purple and gold colors, 16:9"
+      "type": "attempt_1",
+      "title": "The Sneeze Blockers",
+      "narration": "They had to stop the sneeze before the festival. Baby Hercules brought pepper — that would definitely not help. Athena brought a small glass of water. 'Sip this,' she said. Zeus sipped. The tingle retreated... for three entire seconds. Then it came back twice as strong. The lightning sparks around his nose were now the size of grapes.",
+      "visual_prompt": "Little Olympus kids cartoon style. Zeus sitting in a chair surrounded by failed sneeze remedies: a glass of water, Baby Hercules holding a pepper grinder (looking embarrassed), Athena's scroll with suggested remedies crossed out. Lightning sparks around Zeus's nose now visibly larger. Everyone looking worried. Chaotic funny problem-solving energy. 16:9.",
+      "bg_colors": ["#FFD700", "#9370DB", "#FF6B35"],
+      "duration_sec": 43
     },
     {
       "scene_number": 5,
-      "type": "attempt",
-      "title": "Perseus Steps Out — and the Snakes Spot Him",
-      "narration": "Perseus stepped forward to talk to Medusa. He said 'Excuse me, very sorry to interrupt your tour—' and then Medusa spun around. Her sunglasses slipped. Just slightly. Perseus's left sandal turned to stone. He hopped on his right foot. The winged sandal activated. He went straight up.",
-      "visual_prompt": "Little Olympus kids cartoon style. Comic chaos — Perseus steps out politely, Medusa spins and her golden sunglasses tilt sideways, a beam of petrification zaps his left foot which turns to stone. Perseus looks down at his stone foot with horror, hops on the other foot, the winged sandal activates with a burst of feathers and wind — he shoots vertically upward like a rocket, expression of complete surprise. Medusa watches, slightly offended. 16:9.",
-      "bg_colors": ["#6A0DAD", "#A9A9A9", "#87CEEB"],
-      "accent": "#FFD700",
-      "camera": "push_in",
-      "duration_sec": 9,
-      "higgsfield_prompt": "Cute kids cartoon style, boy stepping out politely, small green girl's golden sunglasses tilting sideways accidentally, boy's foot turning to stone, boy hopping, winged sandal activating with burst of feathers launching boy straight upward like rocket with surprised expression, girl watching offended, stone garden setting, 16:9"
+      "type": "attempt_2",
+      "title": "The Pinched Nose Walk",
+      "narration": "Zeus decided to pinch his nose shut and just walk through the whole festival without sneezing. It was a great plan. Athena gave it a 3% chance of working, which she helpfully announced out loud. Zeus pinched his nose and walked outside. He made it past the flower garlands. He made it past the pie stand. He made it almost to the parade. And then. AH.",
+      "visual_prompt": "Little Olympus kids cartoon style. Little Zeus walking very stiffly through the Sunshine Festival with both fingers pinching his nose, eyes watering, face bright red from holding it in. Festival decorations all around him. Baby Hercules tiptoeing behind him nervously. Everyone at the festival staring. Zeus is making it through... barely. Lightning crackling around his head. Mounting comedy tension. 16:9.",
+      "bg_colors": ["#FFD700", "#FF6B35", "#7CFC00"],
+      "duration_sec": 45
     },
     {
       "scene_number": 6,
-      "type": "solution",
-      "title": "The Shield Mirror",
-      "narration": "From very high up, Perseus remembered Athena's words. Do not look directly. He looked at his bronze shield. He could see Medusa's reflection perfectly in it. He called down: 'Your garden is genuinely beautiful. Could I see it? Without the turning-to-stone part?' Medusa's snakes went quiet. That was new. Nobody had ever said that before.",
-      "visual_prompt": "Little Olympus kids cartoon style. Perseus floating high above (winged sandal still active, one foot still stone), holding up his polished bronze shield to use as a mirror. In the shield's reflection we can see Mini Medusa below looking up. Perseus calls down with a friendly expression. Below, Mini Medusa stands surrounded by her stone garden — all seven of her snakes have gone completely still and are looking at each other. Something shifted. 16:9.",
-      "bg_colors": ["#87CEEB", "#FFD700", "#6A0DAD"],
-      "accent": "#FFD700",
-      "camera": "pull_back",
-      "duration_sec": 9,
-      "higgsfield_prompt": "Cute kids cartoon style, boy floating high up with one stone foot and one winged sandal, holding polished bronze shield as mirror showing small green girl's reflection below, boy calling down with friendly expression, girl below looking up with all seven snakes suddenly still and looking at each other in surprise, something changed, 16:9"
+      "type": "disaster",
+      "title": "AAAH-CHOOOOOO",
+      "narration": "AH. AH. AAAAH-CHOOOOOO. The sneeze came out. It was the biggest sneeze in the history of Mount Olympus. Lightning shot in seventeen directions at once. The sunshine pie flew off the table. Three flower crowns went airborne. The parade banner wrapped around a tree. Pegasus Junior sneezed glitter in sympathy. And every single sunshine decoration on Mount Olympus turned bright electric blue.",
+      "visual_prompt": "Little Olympus kids cartoon style. EPIC sneeze panel: Little Zeus mid-enormous-sneeze, lightning radiating out in all directions, shockwave rings expanding. Sunshine pie flying through the air. Flower crowns spinning off. Banner wrapped around a tree. Pegasus Junior sneezing glitter cloud. All the yellow festival decorations now glowing electric blue. Total cartoon chaos. 16:9.",
+      "bg_colors": ["#1A1060", "#00B4E6", "#FFD700"],
+      "duration_sec": 46
     },
     {
       "scene_number": 7,
-      "type": "lesson_and_cta",
-      "title": "The Tour (Sort Of)",
-      "narration": "Medusa didn't un-stone the fountain. Not right away. But she did give Perseus a tour of her garden — him floating above, her pointing things out below, using the shield as a mirror the whole time. And when he landed, his foot un-stoned on its own. She said it does that sometimes. He said thank you. She said 'SILENCE' but then showed him her favorite sculpture. See you next time on Little Olympus.",
-      "visual_prompt": "Little Olympus kids cartoon style. Heartwarming awkward scene — Perseus floats slowly above using his shield-mirror while Mini Medusa points out different sculptures below with genuine pride. His foot is slowly un-stoning. He's smiling down at the shield reflection. She's pointing to her FAVORITE sculpture — a tiny stone owl that looks exactly like Archie. Perseus laughs. Medusa tries not to smile. Golden afternoon light. Both are awkward about this new thing. 16:9.",
-      "bg_colors": ["#1A1060", "#FFD700", "#6A0DAD"],
-      "accent": "#FFD700",
-      "camera": "pull_back",
-      "duration_sec": 9,
-      "higgsfield_prompt": "Cute kids cartoon style, boy floating slowly above using bronze shield as mirror smiling, small green girl below pointing to her favorite stone sculpture (tiny stone owl) with genuine pride, his stone foot slowly returning to normal, girl trying not to smile, golden afternoon light, awkward sweet first friendship moment, 16:9"
+      "type": "aftermath",
+      "title": "Blue. Everything Is Blue.",
+      "narration": "There was a long silence on Mount Olympus. Everyone looked around. The sunshine decorations were blue. The sunshine flags were blue. The sunshine pie had a blue crust. Even the baby animals' flower crowns had turned faintly blue. The festival was in forty-five minutes. And Little Zeus had just turned the Sunshine Festival... electric.",
+      "visual_prompt": "Little Olympus kids cartoon style. Mount Olympus after the sneeze. Everything that was yellow is now glowing electric blue. Blue decorations, blue banners, slightly glowing blue baby animal flower crowns. Everyone standing still looking around at the blue chaos. Zeus in the middle, hand over his mouth, looking absolutely horrified at what he did. 16:9.",
+      "bg_colors": ["#1A1060", "#00B4E6", "#4169E1"],
+      "duration_sec": 44
+    },
+    {
+      "scene_number": 8,
+      "type": "guilt",
+      "title": "Zeus Hides Under a Cloud",
+      "narration": "Little Zeus crawled under a cloud and stayed there. He pulled the cloud down over himself like a blanket. He could hear people outside being very confused about the blue pies. He felt terrible. Not sick-terrible. Worse than that. The kind of terrible where you know YOU did it and you can't pretend you didn't.",
+      "visual_prompt": "Little Olympus kids cartoon style. A fluffy cloud on the ground with two tiny feet visible sticking out from under it. Zeus is hiding under the cloud like a blanket. His golden crown is slightly poking out the side. Around him the festival chaos continues — people carrying blue pies, looking at blue decorations in confusion. Funny but sad. 16:9.",
+      "bg_colors": ["#87CEEB", "#FFFFFF", "#B0C4DE"],
+      "duration_sec": 43
+    },
+    {
+      "scene_number": 9,
+      "type": "mentor_arrives",
+      "title": "The Cloud Gets Lifted",
+      "narration": "Baby Hercules very gently lifted the cloud — or tried to. He accidentally launched it into the sky. So now Zeus was sitting on the ground with nowhere to hide. Athena sat down next to him. 'You know what you need to do,' she said. Zeus knew. He really really really did not want to. But he knew.",
+      "visual_prompt": "Little Olympus kids cartoon style. Baby Hercules looking up guiltily as the cloud goes flying into the sky. Zeus now sitting exposed on the ground, knees pulled to chest, crown askew. Athena sitting cross-legged beside him, very calm, her owl nodding on her shoulder. Zeus looking at the ground. The blue festival chaos continues around them. 16:9.",
+      "bg_colors": ["#87CEEB", "#FFD700", "#9370DB"],
+      "duration_sec": 44
+    },
+    {
+      "scene_number": 10,
+      "type": "doing_the_right_thing",
+      "title": "Sorry Is a Hard Word",
+      "narration": "Little Zeus stood up. He smoothed down his toga. He straightened his tiny golden crown. He walked to the center of the festival where everyone was standing around looking at the blue everything. And he said — in his smallest voice — 'I'm sorry. I sneezed. I turned everything blue. I'm really really sorry and I want to help fix it.'",
+      "visual_prompt": "Little Olympus kids cartoon style. Little Zeus standing in the center of the Mount Olympus festival square, surrounded by confused people looking at blue decorations. Zeus's hands clasped in front of him, looking genuinely sorry, speaking to the crowd. His voice shown as a tiny speech bubble. Everyone looking at him. Very sincere small boy energy. 16:9.",
+      "bg_colors": ["#FFD700", "#1A1060", "#87CEEB"],
+      "duration_sec": 45
+    },
+    {
+      "scene_number": 11,
+      "type": "response",
+      "title": "What Happens When You Say Sorry",
+      "narration": "There was a pause. Then Apollo started laughing. Not mean laughing — surprised laughing. 'The pies are BLUE!' he said. 'They still taste like sunshine pie.' Someone tasted a blue pie. It DID still taste like sunshine pie. Actually... maybe even better? The crowd looked at the blue decorations again. With the lightning in them, they were sort of... sparkly.",
+      "visual_prompt": "Little Olympus kids cartoon style. Apollo laughing and holding a blue pie, taking a big bite. Other Olympus characters cautiously tasting blue festival foods and looking pleasantly surprised. The electric blue decorations are now noticed to be actually quite sparkly and beautiful in the sunshine. Mood shifting from confused to delighted. 16:9.",
+      "bg_colors": ["#1A1060", "#00B4E6", "#FFD700"],
+      "duration_sec": 44
+    },
+    {
+      "scene_number": 12,
+      "type": "plot_twist",
+      "title": "The Blue Festival Is Actually Amazing",
+      "narration": "Hermes ran the parade route. The baby animals with their glowing blue flower crowns looked INCREDIBLE in the sunlight. Like tiny royalty. The electric blue banners lit up the whole mountain. Pegasus Junior flew overhead sneezing glitter against the blue background and it looked like fireworks. Someone said 'This is the BEST Sunshine Festival ever.' And they were not wrong.",
+      "visual_prompt": "Little Olympus kids cartoon style. The Sunshine Festival now in full swing with the accidental blue theme. Baby animals in glowing electric blue flower crowns looking absolutely majestic. Blue-lit banners sparkling. Pegasus Junior overhead sneezing golden glitter against the blue, looking like fireworks. Everyone dancing and laughing. It is genuinely beautiful and festive. 16:9.",
+      "bg_colors": ["#1A1060", "#00B4E6", "#FFD700"],
+      "duration_sec": 45
+    },
+    {
+      "scene_number": 13,
+      "type": "hero_joins_in",
+      "title": "Zeus Has the Best Day",
+      "narration": "Little Zeus ate four slices of blue sunshine pie. He danced in the parade. He sneezed twice more — very small sneezes, very controlled — and made two of the flowers sparkle blue on purpose. Everyone cheered. Baby Hercules joined the parade and accidentally knocked over a float but mostly caught it, which counted as helping.",
+      "visual_prompt": "Little Olympus kids cartoon style. Little Zeus dancing happily in the parade, crown perfectly straight for once, surrounded by blue sparkle. He sneezes a small controlled sneeze making two flowers glow blue — crowd cheering. Baby Hercules in the parade behind him holding a float that is slightly but not completely knocked over, grinning. Full joy energy. 16:9.",
+      "bg_colors": ["#FFD700", "#00B4E6", "#FF6B35"],
+      "duration_sec": 44
+    },
+    {
+      "scene_number": 14,
+      "type": "athena_lesson",
+      "title": "What Athena Wrote in Her Scroll",
+      "narration": "At the end of the festival, Athena showed Zeus what she had written in her scroll. It said: 'Today's lesson — When you make a mess, say sorry and help fix it. The mess might turn into something better than what you had before. But you have to say sorry first. That part is not optional.' Zeus read it twice. He folded it up and put it in his pocket.",
+      "visual_prompt": "Little Olympus kids cartoon style. Athena showing her open scroll to Zeus at the end of the festival. Zeus reading it carefully in the blue-lit evening. The scroll has the lesson written in neat handwriting with a small drawing of a blue sunshine festival at the bottom. Zeus looking thoughtful and genuinely changed. Warm blue-gold evening light. 16:9.",
+      "bg_colors": ["#1A1060", "#9370DB", "#FFD700"],
+      "duration_sec": 44
+    },
+    {
+      "scene_number": 15,
+      "type": "funny_ending",
+      "title": "Next Year's Festival",
+      "narration": "The very next morning, the festival committee held a meeting. They voted unanimously to make BLUE the official color of the Sunshine Festival from now on. They renamed it the Sunshine AND Lightning Festival. They made Zeus the official Festival Sneeze Artist. He would sneeze the decorations blue on purpose every year. He practiced for six months. He was very good at it.",
+      "visual_prompt": "Little Olympus kids cartoon style. Official festival committee of cartoon Greek gods sitting at a golden table voting with hands raised. A sign behind them reads SUNSHINE AND LIGHTNING FESTIVAL — OFFICIAL. Zeus at a separate small table with a sign saying OFFICIAL SNEEZE ARTIST. He is practicing a controlled sneeze in a jar. Baby Hercules watching proudly. Very funny official-bureaucracy comedy. 16:9.",
+      "bg_colors": ["#FFD700", "#1A1060", "#00B4E6"],
+      "duration_sec": 45
+    },
+    {
+      "scene_number": 16,
+      "type": "callback",
+      "title": "The First Official Lightning Sneeze",
+      "narration": "The following year, Little Zeus stood at the center of the festival square. Everyone gathered. The decorations were ready to be electrified. Baby Hercules was in the front row. Athena had her scroll out. Pegasus Junior had glitter on standby. Little Zeus inhaled. He felt the tingle. He aimed very carefully. And then... AAAH-CHOO.",
+      "visual_prompt": "Little Olympus kids cartoon style. Little Zeus standing on a small stage at the festival center in official festival pose, everyone gathered watching. He aims a dramatic pre-sneeze pose like a conductor about to start an orchestra. Baby Hercules front row, arms up excited. Athena pencil ready. Pegasus Junior fluffing his glitter. Maximum anticipation energy. 16:9.",
+      "bg_colors": ["#FFD700", "#FF6B35", "#1A1060"],
+      "duration_sec": 43
+    },
+    {
+      "scene_number": 17,
+      "type": "payoff",
+      "title": "The Perfect Sneeze",
+      "narration": "The lightning went EXACTLY where Zeus wanted it to go. Every decoration turned brilliant electric blue all at once. The crowd erupted. Pegasus Junior released the glitter. Baby Hercules cheered so hard he accidentally knocked down a banner — but caught it — which everyone agreed counted. It was the most beautiful Sunshine AND Lightning Festival that Mount Olympus had ever seen.",
+      "visual_prompt": "Little Olympus kids cartoon style. Perfect triumphant moment: all Mount Olympus decorations turning brilliant electric blue simultaneously from Zeus's directed sneeze. Crowd cheering and throwing their hands up. Pegasus Junior releasing a golden glitter cloud overhead. Baby Hercules catching a banner while cheering. Zeus taking a proud bow. Festival at peak joy. 16:9.",
+      "bg_colors": ["#1A1060", "#FFD700", "#00B4E6"],
+      "duration_sec": 45
+    },
+    {
+      "scene_number": 18,
+      "type": "quiet_moment",
+      "title": "Later That Night",
+      "narration": "That night, sitting on the edge of a cloud watching the blue-lit mountain glow below, Baby Hercules said, 'You know what the best thing you did today was?' 'The perfect sneeze?' said Zeus. 'Nope,' said Baby Hercules. 'The sorry.' Zeus thought about that. His tiny golden crown glowed in the blue light. 'Yeah,' he said. 'That part was the hardest.'",
+      "visual_prompt": "Little Olympus kids cartoon style. Little Zeus and Baby Hercules sitting together on the edge of a fluffy cloud, legs dangling, looking down at the glowing blue-lit Mount Olympus below. Night sky with stars. Zeus's crown reflecting blue light. Both of them quiet and content. A small warm intimate scene after a big fun day. 16:9.",
+      "bg_colors": ["#1A1060", "#00B4E6", "#191970"],
+      "duration_sec": 44
+    },
+    {
+      "scene_number": 19,
+      "type": "lesson_moment",
+      "title": "The Hardest and the Most Important",
+      "narration": "And here's the thing about saying sorry. It IS hard. It's actually one of the hardest things to do, especially when everyone is staring at you and the pies are blue and you really really want to just hide under a cloud forever. But it's also the most important thing. Because sorry opens up everything that comes after. Including, sometimes, a much better party.",
+      "visual_prompt": "Little Olympus kids cartoon style. Warm direct storytelling moment. Zeus and Baby Hercules on their cloud against the starry sky, the glowing blue festival visible below. Zeus looking thoughtful and a little older than he started the episode. Baby Hercules nodding slowly with surprising wisdom. The stars above them twinkling. Cozy and reflective. 16:9.",
+      "bg_colors": ["#1A1060", "#191970", "#4169E1"],
+      "duration_sec": 43
+    },
+    {
+      "scene_number": 20,
+      "type": "funny_postscript",
+      "title": "The Blue Pie Recipe",
+      "narration": "Oh, and the blue sunshine pie. After the festival, three different families asked for the recipe. Which was awkward because the recipe was just regular sunshine pie plus one Zeus sneeze. The head baker put it in the official cookbook anyway. Under the ingredient list it just said: one small lightning sneeze, aimed carefully. The cookbook was a bestseller.",
+      "visual_prompt": "Little Olympus kids cartoon style. Official Mount Olympus cookbook shown with a blue pie on the cover. Open to the recipe page showing all normal ingredients then at the bottom: '1 small lightning sneeze (aim carefully).' Zeus signing copies of the cookbook looking very pleased with himself. Baby Hercules eating a slice of the blue pie. 16:9.",
+      "bg_colors": ["#FFD700", "#00B4E6", "#FFF8DC"],
+      "duration_sec": 42
+    },
+    {
+      "scene_number": 21,
+      "type": "callback_gag",
+      "title": "Pegasus Junior's Contribution",
+      "narration": "And Pegasus Junior. Nobody asked Pegasus Junior to sneeze glitter. He just did it. He was very proud of himself. He sneezed on things for the rest of the week. He sneezed on the fountain. He sneezed on Apollo's lyre. He sneezed on the official festival committee. Nobody said thank you. He sneezed on them again.",
+      "visual_prompt": "Little Olympus kids cartoon style. Pegasus Junior mid-sneeze making everything around him sparkle with golden glitter. First the fountain now gold and sparkly, then Apollo's lyre glittering, then the very serious-looking festival committee covered in glitter while trying to maintain dignity. Pegasus Junior looking incredibly pleased with himself each time. 16:9.",
+      "bg_colors": ["#FFD700", "#FFA500", "#87CEEB"],
+      "duration_sec": 42
+    },
+    {
+      "scene_number": 22,
+      "type": "lesson_recap",
+      "title": "What Zeus Learned",
+      "narration": "Little Zeus learned that messes happen — especially when you're a little god with a big sneeze. But the mess is never the worst part. The worst part is hiding under a cloud and not saying sorry. The best part? Saying sorry opens the door. And sometimes on the other side of that door is a blue sunshine pie and a better party than you planned.",
+      "visual_prompt": "Little Olympus kids cartoon style. Warm closing sunset scene. Zeus walking on the mountain path, crown perfectly on for once, looking confident and content. Baby Hercules and Athena walking beside him. The mountain behind them still faintly glowing blue. A cozy golden evening after a big adventurous day. 16:9.",
+      "bg_colors": ["#FFA500", "#FFD700", "#1A1060"],
+      "duration_sec": 44
+    },
+    {
+      "scene_number": 23,
+      "type": "outro_song",
+      "title": "The Little Olympus Song",
+      "narration": "Up on Mount Olympus, the kids are the best! Little Zeus has his crown and Baby Herc has the rest! Athena's got the scroll and Pegasus has wings! Little Olympus is the place where everybody brings their very best thing! Little Olympus! Little Olympus! The funniest place in the sky! Little Olympus! Little Olympus! Where even the pies are blue!",
+      "visual_prompt": "Little Olympus kids cartoon style. Full cast title card shot. Little Zeus, Baby Hercules, Athena, and Pegasus Junior all posed together on fluffy blue-glowing clouds at colorful sunset. Each character in signature pose. Show logo appears. Blue and gold confetti and sparkles everywhere. Maximum fun outro energy. Kids show ending vibe. 16:9.",
+      "bg_colors": ["#1A1060", "#FFD700", "#00B4E6"],
+      "duration_sec": 45
+    },
+    {
+      "scene_number": 24,
+      "type": "end_card",
+      "title": "See You Next Time!",
+      "narration": "That's all for today on Little Olympus! Subscribe so you don't miss the next adventure! Next time — someone is having a VERY bad hair day. And we're not talking about Zeus's curls. Subscribe and find out! Bye from Little Olympus! Don't forget to say sorry!",
+      "visual_prompt": "Little Olympus kids cartoon style. End card screen. Little Zeus waving at camera with his signature crown askew. Baby Hercules beside him with enormous arm wave. Subscribe button animated and bouncing. Little Olympus logo prominent. Channel handle @littleolympusai visible. Blue and gold color scheme. Friendly and direct to camera. Kids YouTube end card. 16:9.",
+      "bg_colors": ["#1A1060", "#FFD700", "#00B4E6"],
+      "duration_sec": 40
     }
   ],
   "music": {
-    "style": "upbeat_kids_adventure",
-    "notes": "Playful mystery theme in scenes 1-3. Slightly dramatic comedic sting when the sunglasses slip. Warm, slightly tentative music in scenes 6-7 — something new is starting."
-  },
-  "voice_style": {
-    "tone": "warm_playful_encouraging",
-    "pacing": "Slow down on 'Do not look directly' — let it land. Speed up during the sandal chaos. Gentle and warm in scene 7.",
-    "character": "A storyteller who finds it genuinely funny that Perseus said thank you to the person who turned his foot to stone"
-  },
-  "lesson": "Sometimes the bravest thing isn't fighting — it's seeing someone the way nobody else has.",
-  "bible_reference": "Little_Olympus_Master_Bible.md — Mini Medusa debut (grumpy because lonely, stone garden is beautiful, dramatic exits), Perseus (polite to fault, shield as mirror, winged sandals activate randomly), Athena chin-tap (3x) in scene 3.",
-  "medusa_arc_note": "EP003: Antagonist. Defeated by Perseus's mirror trick. BUT — she didn't fully lose. The tour happened. Something started. This is her first step toward the group.",
-  "youtube_title": "Perseus vs MINI MEDUSA! 🐍👀 | Little Olympus Episode 3",
-  "youtube_description": "Someone turned the Olympus fountain to STONE! 😱\n\nThe note says it was Mini Medusa — but nobody can look directly at her or they'll turn to stone too! Perseus volunteers (Zeus definitely didn't volunteer). But Perseus has a secret weapon — his shiny shield works as a mirror!\n\nIn today's adventure:\n🛡️ Perseus gets a very dangerous mission\n👀 Athena's five most important words\n🐍 Mini Medusa's stone sculpture garden (it's actually really beautiful?)\n🪨 Perseus's foot turns to stone and his sandal launches him into the sky\n\n📺 Watch ALL our adventures: [playlist link]\n🔔 SUBSCRIBE for new episodes every week!\n\n#LittleOlympus #Perseus #MiniMedusa #KidsCartoon #GreekMythology #KidsYouTube",
-  "next_episode_preview": "Episode 4 — Athena's Big Idea! She has a plan. It's perfect. Nothing can go wrong. (Something goes wrong.)",
-  "higgsfield_style_notes": "ALL scenes bright colorful cute cartoon. Mini Medusa's snakes must look animated and expressive — they argue and react. Golden sunglasses always present. Stone effects look interesting and sculptural, NOT scary. Perseus's bronze shield should gleam."
+    "intro": "upbeat_kids_adventure_fanfare",
+    "main": "playful_orchestral_comedy",
+    "emotional": "gentle_warm_strings",
+    "action": "electric_crackle_comedy",
+    "outro": "little_olympus_theme_song"
+  }
 }

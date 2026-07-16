@@ -87,3 +87,10 @@ desktop.ini
 
 # --- EMPIRE OS STAGING (separate repo) ---
 empire-os/
+
+# --- NODE / JS BUILD ARTIFACTS (never commit — Windows symlinks break git status) ---
+node_modules/
+dist/
+.next/
+.turbo/
+*.tsbuildinfo

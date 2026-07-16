@@ -1,0 +1,9 @@
+gradio
+numpy
+soundfile
+kokoro
+diffusers
+torch
+torchvision
+imageio
+accelerate

@@ -2,12 +2,12 @@
   "channel": "Little Olympus",
   "episode_number": 2,
   "episode_id": "LO_EP002",
-  "title": "Baby Hercules and the Giant Snake",
-  "tagline": "He's the strongest kid on Olympus. That's the problem.",
-  "duration_target_min": 5,
+  "title": "Baby Hercules Is Too Strong",
+  "tagline": "Being different can be the best thing ever — if you use it at the right moment.",
+  "duration_target_min": 17,
   "aesthetic": {
     "color_grade": "bright_kids_cartoon",
-    "primary_colors": ["#FFD700", "#228B22", "#FF6B35", "#00B4E6"],
+    "primary_colors": ["#FFD700", "#1A1060", "#00B4E6", "#FF6B35"],
     "font_style": "rounded_chunky_bold",
     "music_style": "upbeat_kids_adventure",
     "narrator_tone": "warm_playful_encouraging"
@@ -15,128 +15,252 @@
   "characters": {
     "hero": {
       "name": "Baby Hercules",
-      "role": "The strongest little kid on Olympus — who doesn't know how strong he is",
-      "visual": "Chubby toddler with enormous arms, tiny lion-skin cape, big warm brown eyes, always looks surprised when he breaks something",
-      "personality": "Sweet, loving, incredibly strong, zero awareness of his strength, food-motivated, genuinely tries to help"
+      "visual": "Chubby toddler with enormous arms, tiny lion-skin cape, confused happy expression, always accidentally breaking things"
     },
-    "support_1": {
+    "sidekick": {
       "name": "Little Zeus",
-      "role": "Best friend — gives Hercules a mission he immediately makes worse",
-      "visual": "Small curly white-haired boy with tiny golden crown, holding thunderbolt, electric blue eyes",
-      "personality": "Brave, impulsive, loyal, always has a plan (usually the wrong one)"
+      "visual": "Small boy with wild curly white hair, tiny golden crown, big bright blue eyes, white toga with gold trim"
     },
-    "support_2": {
+    "mentor": {
       "name": "Athena",
-      "role": "The one who sees the real solution",
-      "visual": "Girl with grey-streaked braided hair, tiny round glasses, small owl (Archie) on shoulder, scroll under arm",
-      "personality": "Calm, three steps ahead, patient — her solution always requires Hercules to be gentle"
+      "visual": "Girl with grey-streaked hair, tiny owl on shoulder, big glasses, holding a scroll, always three steps ahead"
     },
-    "villain_of_the_week": {
-      "name": "Drako the Giant Snake",
-      "role": "An enormous serpent who has wrapped himself around the base of Mount Olympus and won't move",
-      "visual": "Massive green and gold snake, big grumpy yellow eyes, coiled around the mountain base, actually just COLD — snakes are cold-blooded",
-      "note": "Overwhelming at first — so big the kids can't see his head when they stand at his tail. Ultimately lonely and cold. NOT scary — comically huge."
+    "friend": {
+      "name": "Pegasus Junior",
+      "visual": "Very small white winged horse, fluffy feathers, big sparkly eyes, always sneezes glitter"
     }
   },
+  "voice_style": {
+    "tone": "warm_playful_encouraging",
+    "pacing": "punchy — keeps kids engaged, quick on comedy beats",
+    "character": "fun storyteller reading a picture book, with real reactions"
+  },
+  "lesson": "Your differences make you special. Use your gifts at the right moment.",
+  "youtube_title": "Baby Hercules Is Too Strong! | Little Olympus | Kids Greek Mythology",
+  "youtube_description": "Baby Hercules just wants to help but keeps breaking EVERYTHING on Mount Olympus! Can he find a way to use his incredible strength before the big problem arrives? A funny, heartwarming Little Olympus adventure for kids!",
   "scenes": [
     {
       "scene_number": 1,
-      "type": "hook",
-      "title": "Something Has Wrapped Around the Mountain",
-      "narration": "One morning on Mount Olympus, everyone woke up to a very unusual problem. Something ENORMOUS had wrapped itself around the bottom of the mountain. Something green. Something scaly. Something that went on for MILES.",
-      "visual_prompt": "Little Olympus kids cartoon style. Wide shot of bright colorful Mount Olympus at sunrise. Around the base of the mountain, a massive green and gold snake is coiled — so huge you can only see his enormous scaly body, not his head. Little Zeus and Baby Hercules stand at the edge looking down at the giant snake coils with shocked expressions. Big expressive cartoon eyes. Bright warm morning colors. 16:9.",
-      "bg_colors": ["#87CEEB", "#90EE90", "#FFD700"],
-      "accent": "#228B22",
-      "camera": "pull_back",
-      "duration_sec": 9,
-      "higgsfield_prompt": "Cute kids cartoon style, colorful Mount Olympus at sunrise, enormous green and gold snake coiled around base of mountain, two small cartoon kids looking down shocked — one with curly white hair and crown, one chubby toddler, big expressive eyes, bright morning colors, 16:9"
+      "type": "cold_open",
+      "title": "The Strongest Baby on the Mountain",
+      "narration": "On Mount Olympus, there lived the strongest baby in the entire world. His name was Hercules. Baby Hercules. He was about two and a half feet tall, wore a tiny lion-skin cape, and had the BIGGEST arms you have ever seen on a toddler. The problem? He had absolutely no idea how strong he was. None. Zero. Zilch.",
+      "visual_prompt": "Little Olympus kids cartoon style. Mount Olympus at bright sunny morning. Baby Hercules standing proudly in a field of sunflowers, wearing tiny lion-skin cape, enormous chubby arms flexed, big happy toddler grin. All the sunflowers around him are slightly bent from him just walking by. Bright cheerful colors. Big expressive cartoon style. 16:9.",
+      "bg_colors": ["#87CEEB", "#FFD700", "#7CFC00"],
+      "duration_sec": 45
     },
     {
       "scene_number": 2,
       "type": "setup",
-      "title": "Meet Drako",
-      "narration": "Baby Hercules walked all the way around the mountain to find the snake's head. It took a while. The snake's name was Drako. Drako was ENORMOUS. He was also, it turned out, not that scary. He was just very, very cold. And he'd found a mountain that was nice and warm.",
-      "visual_prompt": "Little Olympus kids cartoon style. Baby Hercules — chubby toddler with lion cape — stands face to face with DRAKO, a gigantic cartoon snake head with big yellow eyes and an unexpectedly grumpy but not scary expression. Drako's head alone is bigger than three Baby Hercules. Drako's expression is cold and huffy — he's shivering slightly. Baby Hercules looks curious and impressed. Bright cartoon colors. 16:9.",
-      "bg_colors": ["#228B22", "#90EE90", "#FFD700"],
-      "accent": "#FF6B35",
-      "camera": "push_in",
-      "duration_sec": 9,
-      "higgsfield_prompt": "Cute kids cartoon style, enormous cartoon snake head with yellow grumpy shivering eyes facing tiny chubby toddler with lion cape, snake head many times bigger than child, both have big expressive cartoon faces, bright cartoon colors, 16:9"
+      "title": "Breakfast Goes Very Wrong",
+      "narration": "Every morning Baby Hercules tried to eat breakfast like a normal kid. He reached for a grape. Just ONE grape. The grape exploded. He reached for an egg. The egg launched across the table like a tiny cannonball. He tried to pour himself juice and accidentally bent the pitcher in half. Again.",
+      "visual_prompt": "Little Olympus kids cartoon style. Golden breakfast table on Mount Olympus. Baby Hercules sitting at a small table, shocked as grape juice sprays everywhere. Broken pitcher dripping. Egg-shaped dent in the wall. His big innocent eyes wide with surprise. Funny cartoon chaos. Bright morning light. 16:9.",
+      "bg_colors": ["#FFD700", "#FF6B35", "#FFF8DC"],
+      "duration_sec": 42
     },
     {
       "scene_number": 3,
-      "type": "problem",
-      "title": "Zeus Has a Plan (Sort Of)",
-      "narration": "Little Zeus had a plan. He would zap Drako with lightning and make him go away. This did not work. Lightning just made Drako sneeze. Very loudly. Baby Hercules was launched into the clouds. He came back down immediately. He was fine. He's always fine.",
-      "visual_prompt": "Little Olympus kids cartoon style. Comic action scene — Little Zeus points his thunderbolt at the giant snake, there's a big cartoon ZAP, and Drako lets out an ENORMOUS cartoon sneeze. Baby Hercules has been launched upward and is in mid-air with a surprised expression, clouds around him. Little Zeus looks embarrassed. Athena watches from the side with a knowing look and a sigh. Very funny, cartoon slapstick. Bright colors. 16:9.",
-      "bg_colors": ["#4A4A8A", "#87CEEB", "#FFFFFF"],
-      "accent": "#FFD700",
-      "camera": "pull_back",
-      "duration_sec": 9,
-      "higgsfield_prompt": "Cute kids cartoon style, small boy with crown zapping giant snake with lightning, snake doing huge cartoon sneeze, chubby toddler launched into air looking surprised, smart girl watching with knowing expression, comic slapstick scene, bright cartoon colors, 16:9"
+      "type": "setup",
+      "title": "Little Zeus Has a Plan",
+      "narration": "'Herc,' said Zeus, eating his twelve breakfast olives very carefully, 'maybe today you should try... not touching things?' Baby Hercules thought about this very seriously. He nodded. He folded his enormous arms behind his back. Then he knocked over the whole table just by turning around.",
+      "visual_prompt": "Little Olympus kids cartoon style. Little Zeus with wild curly white hair and tiny golden crown sitting across from Baby Hercules. Zeus holding one olive very delicately. Baby Hercules turning around and accidentally sweeping the whole table with his cape. Plates and food flying in cartoon arc. Zeus diving under the table. 16:9.",
+      "bg_colors": ["#FFD700", "#1A1060", "#FFF8DC"],
+      "duration_sec": 44
     },
     {
       "scene_number": 4,
-      "type": "attempt",
-      "title": "Hercules Tries to Move the Snake",
-      "narration": "So Zeus had a new plan. Baby Hercules would just MOVE the snake. Baby Hercules grabbed Drako's tail and pulled. He pulled so hard that part of the mountain came with him. A little part. A medium part. Actually quite a large part. Drako was completely fine. The mountain was going to need some repairs.",
-      "visual_prompt": "Little Olympus kids cartoon style. Baby Hercules strains heroically with Drako's giant tail in both enormous arms, pulling with all his might. Behind him, a huge chunk of mountain is being pulled along with the snake — rocks, trees, a temple sliding out of place. Drako hasn't moved an inch and looks bored. Little Zeus and Athena watch in horror. Very funny, over-the-top cartoon destruction. Bright colors. 16:9.",
-      "bg_colors": ["#8B4513", "#90EE90", "#87CEEB"],
-      "accent": "#FF6B35",
-      "camera": "pull_back",
-      "duration_sec": 9,
-      "higgsfield_prompt": "Cute kids cartoon style, chubby toddler with enormous arms pulling giant snake tail with all his might, large chunk of mountain sliding along behind him, snake looking completely bored and unaffected, two kids watching in cartoon horror, funny destruction, bright colors, 16:9"
+      "type": "inciting_incident",
+      "title": "Today Is Helper Day",
+      "narration": "Mount Olympus had one important rule: every Friday was Helper Day. Everyone helped with one job on the mountain. Baby Hercules was SO excited. He had been practicing helping all week. 'TODAY,' said Baby Hercules, 'I will be the BEST helper anyone has ever seen.' He puffed out his chest. He flexed his enormous arms. He was absolutely ready.",
+      "visual_prompt": "Little Olympus kids cartoon style. Baby Hercules standing at the golden gates of Mount Olympus, wearing a tiny helper badge. Arms wide open, biggest grin, ready to go. Little Zeus behind him giving two thumbs up encouragingly. Morning sunlight streaming through clouds. Epic heroic pose but adorably tiny scale. 16:9.",
+      "bg_colors": ["#FFD700", "#00B4E6", "#87CEEB"],
+      "duration_sec": 43
     },
     {
       "scene_number": 5,
-      "type": "solution",
-      "title": "Athena's Idea",
-      "narration": "Athena had been thinking. She tapped her chin three times. Then she whispered something to Baby Hercules. Baby Hercules's face went from confused to very excited. He ran back to his garden — carefully, for once — and came back with the biggest, coziest pile of blankets you've ever seen.",
-      "visual_prompt": "Little Olympus kids cartoon style. Athena whispers to Baby Hercules — who has the most delighted expression — his eyes go wide and sparkly. Then: Baby Hercules carefully (tongue out with concentration) carries an ENORMOUS colorful pile of fluffy blankets, pillows, and quilts — bigger than he is — through the garden. He's being very gentle and careful which is clearly new for him. Bright warm colors, soft textures visible. 16:9.",
-      "bg_colors": ["#FFD700", "#FF69B4", "#FFA500"],
-      "accent": "#87CEEB",
-      "camera": "push_in",
-      "duration_sec": 9,
-      "higgsfield_prompt": "Cute kids cartoon style, smart girl with glasses and owl whispering to delighted chubby toddler, then toddler carefully carrying enormous colorful pile of soft blankets and pillows bigger than himself, tongue out in concentration, bright warm cozy colors, 16:9"
+      "type": "problem_1",
+      "title": "The Garden Disaster",
+      "narration": "First stop: helping Apollo water the flower garden. Simple! Easy! Baby Hercules picked up the watering can. It had been a precious ancient watering can for one hundred years. He turned it on and squeezed the handle just a tiny little bit. The water didn't come out. The whole bottom fell off.",
+      "visual_prompt": "Little Olympus kids cartoon style. Beautiful golden flower garden. Baby Hercules holding a completely destroyed bronze watering can, bottom half gone, water pouring everywhere. Flowers drowning in a small flood. Apollo staring in frozen horror. Baby Hercules completely confused about what happened. 16:9.",
+      "bg_colors": ["#7CFC00", "#FFD700", "#00B4E6"],
+      "duration_sec": 45
     },
     {
       "scene_number": 6,
-      "type": "resolution",
-      "title": "The Warmest Snake on Olympus",
-      "narration": "Baby Hercules wrapped Drako in the warmest blanket nest you've ever seen. Every blanket on Olympus. Plus some pillows. Drako didn't say thank you. But his eyes went soft. And slowly, gently, he uncoiled himself from Mount Olympus — and slithered down to the valley below, where he curled up very cozily in a warm meadow. He would NOT be back.",
-      "visual_prompt": "Little Olympus kids cartoon style. Heartwarming resolution — enormous Drako the snake is wrapped in a giant colorful nest of blankets and pillows, looking completely cozy and relaxed, his grumpy eyes gone soft and sleepy. Baby Hercules watches proudly with arms crossed. Drako gently begins to uncoil from the mountain. Little Zeus cheers, Athena smiles, Archie the owl gives a single approving nod. Warm golden light. Rainbow in distance. 16:9.",
-      "bg_colors": ["#FFD700", "#90EE90", "#87CEEB"],
-      "accent": "#FF69B4",
-      "camera": "pull_back",
-      "duration_sec": 9,
-      "higgsfield_prompt": "Cute kids cartoon style, enormous snake wrapped in colorful cozy blanket nest looking relaxed and happy, chubby toddler watching proudly with arms crossed, small curly-haired boy cheering, smart girl with owl smiling, warm golden light, heartwarming scene, bright colors, 16:9"
+      "type": "problem_2",
+      "title": "The Pet Situation",
+      "narration": "Okay. Next job: petting Pegasus Junior to make him calm before his flying lesson. Easy. You just pet a horse. Baby Hercules reached out one finger — just ONE — and gently pat-pat-patted Pegasus Junior on the head. Pegasus Junior flew straight up and did not come down for twelve minutes.",
+      "visual_prompt": "Little Olympus kids cartoon style. Baby Hercules looking up with big guilty eyes. Tiny winged horse Pegasus Junior is a small white dot way up in the clouds, sneezing glitter. Baby Hercules's one finger still extended from the gentle pat. Little Zeus on the ground shielding his eyes looking up. Cartoon altitude lines showing extreme height. 16:9.",
+      "bg_colors": ["#87CEEB", "#FFFFFF", "#FFD700"],
+      "duration_sec": 43
     },
     {
       "scene_number": 7,
-      "type": "lesson_and_cta",
-      "title": "What Did We Learn?",
-      "narration": "And that's what Baby Hercules learned that day. When you're the strongest kid on Olympus, the most powerful thing you can do is choose to be gentle. Baby Hercules was getting better at that. Most of the time. See you next time on Little Olympus!",
-      "visual_prompt": "Little Olympus kids cartoon style. Final group shot — Baby Hercules waves proudly at camera, one arm gently around Little Zeus (who is not being crushed for once). Athena and Archie the owl take a small bow. In the background the mountain is slightly lopsided from earlier but everyone is smiling. The sun is setting golden over Olympus. Fun title card energy. Bright warm colors. 16:9.",
-      "bg_colors": ["#1A1060", "#FFD700", "#FF6B35"],
-      "accent": "#FFD700",
-      "camera": "pull_back",
-      "duration_sec": 9,
-      "higgsfield_prompt": "Cute kids cartoon style, chubby toddler waving at camera with arm gently around small curly-haired boy, smart girl and owl bowing, lopsided mountain in background, golden sunset, all smiling, title card energy, warm bright colors, 16:9"
+      "type": "emotion_beat",
+      "title": "Maybe I Should Stop Helping",
+      "narration": "Baby Hercules sat down on a cloud. The cloud immediately turned into a pancake shape from his weight. He looked at his enormous hands. He had broken the watering can. He had launched Pegasus Junior. He had given Apollo's sunflowers a swimming pool instead of a garden. Maybe he should just stop helping. Maybe he was too much.",
+      "visual_prompt": "Little Olympus kids cartoon style. Baby Hercules sitting on a very flat squished cloud, looking sadly at his giant chubby hands. His tiny lion-skin cape drooping. The bright Olympus sky around him seems a little less colorful. Big expressive sad toddler eyes. Soft gentle lighting. 16:9.",
+      "bg_colors": ["#B0C4DE", "#87CEEB", "#D3D3D3"],
+      "duration_sec": 42
+    },
+    {
+      "scene_number": 8,
+      "type": "mentor_arrives",
+      "title": "Athena Has Thoughts",
+      "narration": "Athena walked up. She always walked up at exactly the right moment. 'The problem isn't that you're strong,' said Athena, adjusting her big glasses. 'Strength is amazing. You just haven't found the RIGHT job for your strength yet.' 'Like what?' 'You'll know when you see it.'",
+      "visual_prompt": "Little Olympus kids cartoon style. Athena crouching down to eye level with Baby Hercules on his flat cloud. Her owl tilting its head wisely. Athena pointing at Baby Hercules's huge arms with encouraging expression. Baby Hercules looking up with hopeful eyes. Scroll open with diagrams of strength being used wisely. Warm afternoon light. 16:9.",
+      "bg_colors": ["#87CEEB", "#FFD700", "#9370DB"],
+      "duration_sec": 44
+    },
+    {
+      "scene_number": 9,
+      "type": "try_again",
+      "title": "The Door Problem",
+      "narration": "Baby Hercules decided to try one more time. He would help Hermes deliver mail. You couldn't break mail, right? He grabbed the first door to knock on it. Very very gently. With one tiny knuckle. The door came off its hinges and flew into the garden behind the house. The family inside stared at the hole where the door used to be. Baby Hercules stared back. Everyone was very quiet.",
+      "visual_prompt": "Little Olympus kids cartoon style. Baby Hercules standing in a doorway holding a door that has completely come off its hinges. Family inside staring wide-eyed. Door flat in his hand like a tray. Mail clutched in his other hand. Most apologetic toddler expression possible. Warm afternoon. 16:9.",
+      "bg_colors": ["#FFD700", "#FF6B35", "#FFF8DC"],
+      "duration_sec": 45
+    },
+    {
+      "scene_number": 10,
+      "type": "low_point",
+      "title": "The Sad Walk Home",
+      "narration": "Baby Hercules walked home very slowly. He walked around rocks instead of over them. He went around trees instead of under them. He held his arms so carefully they were practically floating. By the time he got back to Zeus's house, his eyes were extremely wobbly. You know. The wobbly eyes that mean something.",
+      "visual_prompt": "Little Olympus kids cartoon style. Baby Hercules walking carefully and sadly along golden Olympus path, arms held away from body. His tiny lion-skin cape dragging on the ground. Lower lip wobbling. Little Zeus watching from the doorway looking worried. Warm but slightly sad sunset colors. 16:9.",
+      "bg_colors": ["#FFA500", "#FFD700", "#B0C4DE"],
+      "duration_sec": 43
+    },
+    {
+      "scene_number": 11,
+      "type": "crisis_arrives",
+      "title": "RUMBLE RUMBLE RUMBLE",
+      "narration": "And THEN. The ground started to shake. Not a little shake. A BIG shake. The kind that made all the olives fall off the olive trees at once. Everyone on Mount Olympus looked toward the Valley of Baby Animals. Because from the valley came a rumbling, rolling, extremely large sound. A GIANT BOULDER. Rolling straight toward the valley. Toward all the baby animals inside.",
+      "visual_prompt": "Little Olympus kids cartoon style. Wide view of Mount Olympus. Enormous cartoon boulder rolling down the mountainside toward a valley where tiny cartoon baby animals (lambs, bunnies, baby pegasuses) look up with wide scared eyes. Ground cracking under the boulder. Everyone on Olympus looking in alarm. Dramatic cartoon action. 16:9.",
+      "bg_colors": ["#FF6B35", "#8B0000", "#FFD700"],
+      "duration_sec": 45
+    },
+    {
+      "scene_number": 12,
+      "type": "crisis_escalates",
+      "title": "Nobody Can Stop It",
+      "narration": "Apollo tried his sunshine rays. The boulder kept rolling. Hermes ran around it very fast — but fast doesn't stop heavy. Little Zeus threw his best mini thunderbolt — CRACK — it bounced right off. The boulder was getting closer. The baby animals were getting louder. And then everyone looked at Baby Hercules.",
+      "visual_prompt": "Little Olympus kids cartoon style. Multiple characters failing to stop the giant cartoon boulder. Apollo's rays bouncing off. Hermes a blurry running circle. Zeus's thunderbolt bouncing back almost hitting him. Boulder still rolling. Baby animals scared in background. All the gods slowly turning to look at Baby Hercules. 16:9.",
+      "bg_colors": ["#FF6B35", "#1A1060", "#FFD700"],
+      "duration_sec": 44
+    },
+    {
+      "scene_number": 13,
+      "type": "hero_moment_buildup",
+      "title": "All Eyes on Baby Hercules",
+      "narration": "Baby Hercules looked at the boulder. He looked at the baby animals. He looked at his enormous hands. And something happened inside him that had never happened before. He wasn't nervous about being too strong. He was thinking: I NEED to be this strong. Right now. Right this second. This is the right moment.",
+      "visual_prompt": "Little Olympus kids cartoon style. Close on Baby Hercules's face — determined expression never seen before, eyebrows down, jaw set, huge eyes focused. His enormous arms glowing slightly golden. Wind blowing his tiny lion-skin cape dramatically. Little Zeus and Athena watching with held breath behind him. Epic heroic lighting on toddler scale. 16:9.",
+      "bg_colors": ["#FFD700", "#FF6B35", "#1A1060"],
+      "duration_sec": 43
+    },
+    {
+      "scene_number": 14,
+      "type": "hero_action",
+      "title": "BABY HERCULES RUNS",
+      "narration": "Baby Hercules ran. His tiny legs were basically a blur. His lion-skin cape flew out behind him. He got in front of the boulder and planted both feet — BOOM — so hard the ground shook. He put out both enormous arms. He squeezed his eyes shut. And then — CRASH — the boulder hit his hands. And Baby Hercules. Did not. Move.",
+      "visual_prompt": "Little Olympus kids cartoon style. EPIC moment: Baby Hercules planted in front of the enormous boulder, both chubby arms out, eyes squeezed shut, gritting tiny baby teeth. Boulder hits his hands with CRASH and shockwave lines radiating outward. His tiny feet digging grooves into the ground. Cape flying. Ultimate heroic toddler energy. 16:9.",
+      "bg_colors": ["#FF6B35", "#FFD700", "#8B0000"],
+      "duration_sec": 46
+    },
+    {
+      "scene_number": 15,
+      "type": "hero_resolution",
+      "title": "The Boulder Stops",
+      "narration": "Baby Hercules pushed with every single bit of his enormous toddler strength. The boulder slowed. It slowed more. And then — very slowly, like it was embarrassed — the boulder stopped. Baby Hercules opened one eye. Then the other. He had STOPPED it.",
+      "visual_prompt": "Little Olympus kids cartoon style. Baby Hercules standing triumphant, both hands pressed against the completely still boulder. Expression going from squinting scared to SHOCKED HAPPY. Boulder slightly pushed into the ground. Baby animals in the valley behind him cheering with tiny hooves and paws in the air. Golden light everywhere. 16:9.",
+      "bg_colors": ["#FFD700", "#7CFC00", "#87CEEB"],
+      "duration_sec": 45
+    },
+    {
+      "scene_number": 16,
+      "type": "celebration_1",
+      "title": "The Valley Goes WILD",
+      "narration": "The baby animals went absolutely crazy. Baby lambs bouncing. Baby rabbits doing backflips. The tiny baby pegasuses sneezed glitter everywhere out of pure excitement. Little Zeus ran down so fast his crown fell off and he didn't even stop to pick it up. He grabbed Baby Hercules in a hug that knocked them both over.",
+      "visual_prompt": "Little Olympus kids cartoon style. Joyful chaos in the valley. Baby lambs leaping, baby rabbits flipping, baby pegasuses sneezing golden glitter. Little Zeus running with crown askew, leaping at Baby Hercules in a big hug, both falling over laughing. Athena writing in her scroll nearby, smiling. Confetti-bright celebration energy. 16:9.",
+      "bg_colors": ["#FFD700", "#FF6B35", "#7CFC00"],
+      "duration_sec": 44
+    },
+    {
+      "scene_number": 17,
+      "type": "celebration_2",
+      "title": "Everyone Is Sorry",
+      "narration": "Apollo walked over looking sheepish. 'I'm sorry I never thought to ask you for help.' Hermes nodded fast. Even the family whose door fell off came to say they were glad he was there today. Baby Hercules felt something warm and bubbly in his chest — completely different from the sad feeling before. This was the good feeling. The very very good feeling.",
+      "visual_prompt": "Little Olympus kids cartoon style. Group scene on sunny hillside. Apollo, Hermes, and various Olympus characters coming one by one to Baby Hercules with friendly gestures and apologies. Baby Hercules growing more confident with each one. Little Zeus beside him giving everyone the stink eye like a loyal best friend. Warm golden afternoon. 16:9.",
+      "bg_colors": ["#FFD700", "#FFA500", "#87CEEB"],
+      "duration_sec": 43
+    },
+    {
+      "scene_number": 18,
+      "type": "mentor_lesson",
+      "title": "Athena Was Right",
+      "narration": "Athena walked up last. Her little owl hooted in what was definitely an I-told-you-so way. 'Your strength isn't a problem,' said Athena. 'It's the BEST thing about you. You just needed the right moment.' Baby Hercules looked at his enormous arms with completely new eyes.",
+      "visual_prompt": "Little Olympus kids cartoon style. Athena in front of Baby Hercules in golden afternoon light. Her owl doing a smug but cute wing-flap. Athena's scroll has a drawing of Baby Hercules stopping the boulder. Baby Hercules looking down at his own arms with a new proud expression. Little Zeus nodding like this makes total sense. 16:9.",
+      "bg_colors": ["#FFD700", "#9370DB", "#87CEEB"],
+      "duration_sec": 44
+    },
+    {
+      "scene_number": 19,
+      "type": "funny_callback",
+      "title": "The Helpful Hercules Rules",
+      "narration": "After that, Baby Hercules made himself a list. THE HELPFUL HERCULES RULES. Rule one: no picking up watering cans. Rule two: no knocking on doors. Rule three: no petting things smaller than a boulder. Rule four: PERFECT for stopping boulders, moving mountains, and lifting anything that needs a very strong baby. It was the best list anyone had ever written.",
+      "visual_prompt": "Little Olympus kids cartoon style. Baby Hercules holding up a scroll with HELPFUL HERCULES RULES written in messy toddler handwriting — backwards letters, crayon, very official. Four rules illustrated with tiny stick drawings. Athena trying to keep a straight face. Little Zeus giving it two thumbs up. Funny and earnest at the same time. 16:9.",
+      "bg_colors": ["#FFF8DC", "#FFD700", "#FF6B35"],
+      "duration_sec": 43
+    },
+    {
+      "scene_number": 20,
+      "type": "new_normal",
+      "title": "The Best Job on Mount Olympus",
+      "narration": "From then on, Baby Hercules had the most important job on all of Mount Olympus. Boulder watcher. Mountain mover. Extremely-heavy-thing lifter. And sometimes, on special days, Official Hugger — because it turned out that if you knew it was coming, a Baby Hercules hug was the best hug in the universe. Just hold on tight and lean into it.",
+      "visual_prompt": "Little Olympus kids cartoon style. Montage panel style: Baby Hercules in new roles. Moving a small mountain smiling. Lifting an enormous golden pillar. Giving Little Zeus a hug that squishes Zeus's cheeks sideways — Zeus thrilled anyway. His HELPER badge glowing. Sunny and celebratory. 16:9.",
+      "bg_colors": ["#FFD700", "#7CFC00", "#00B4E6"],
+      "duration_sec": 45
+    },
+    {
+      "scene_number": 21,
+      "type": "callback_gag",
+      "title": "The Door Got Fixed",
+      "narration": "Oh, and the door. Baby Hercules very carefully — very very carefully — picked up the door he had knocked off earlier. He carried it back. He placed it against the wall. It fit perfectly. He turned the handle very slowly. And it opened. Like a normal door. He did a tiny victory dance that shook the whole street. Close enough.",
+      "visual_prompt": "Little Olympus kids cartoon style. Baby Hercules doing extremely careful door replacement, tongue stuck out in concentration, enormous arms in tiny precise slow movements. Door goes back perfectly. He opens it normally. Then does a HUGE victory dance shaking the whole building, family bouncing on furniture inside. Funny punchline moment. 16:9.",
+      "bg_colors": ["#FFD700", "#FF6B35", "#FFF8DC"],
+      "duration_sec": 42
+    },
+    {
+      "scene_number": 22,
+      "type": "lesson_recap",
+      "title": "What Baby Hercules Learned",
+      "narration": "Being different isn't a problem. It's actually a superpower — you just have to find the right moment to use it. Maybe you're really loud, or really fast, or really good at things other people find hard. That's not a problem. That's YOUR superpower. Just make a list of the right moments. Athena can help you with that.",
+      "visual_prompt": "Little Olympus kids cartoon style. Warm sunset scene. Baby Hercules sitting on mountain edge looking out at beautiful Olympus sky, Little Zeus beside him, Athena behind with her owl. Baby Hercules's enormous arms relaxed and peaceful. Valley below with baby animals safe and visible. Glowing warm golden hour light. 16:9.",
+      "bg_colors": ["#FFA500", "#FFD700", "#FF6B35"],
+      "duration_sec": 44
+    },
+    {
+      "scene_number": 23,
+      "type": "outro_song",
+      "title": "The Little Olympus Song",
+      "narration": "Up on Mount Olympus, the kids are the best! Little Zeus has his crown and Baby Herc has the rest! Athena's got the scroll and Pegasus has wings! Little Olympus is the place where everybody brings their very best thing! Little Olympus! Little Olympus! The funniest place in the sky! Little Olympus! Little Olympus! Where even the clouds are pie!",
+      "visual_prompt": "Little Olympus kids cartoon style. Full cast title card style shot. Little Zeus, Baby Hercules, Athena, and Pegasus Junior all posed together on fluffy clouds above a colorful Olympus sunset. Each character in signature pose. Show logo appears. Confetti and sparkles everywhere. Big bright colors. Maximum fun energy. Kids show outro vibe. 16:9.",
+      "bg_colors": ["#FFD700", "#FF6B35", "#00B4E6"],
+      "duration_sec": 45
+    },
+    {
+      "scene_number": 24,
+      "type": "end_card",
+      "title": "See You Next Time!",
+      "narration": "That's all for today on Little Olympus! Subscribe so you don't miss what happens next — because next time, somebody is going to sneeze at exactly the wrong moment. A VERY big sneeze. Subscribe and find out! Bye from Little Olympus! Stay strong!",
+      "visual_prompt": "Little Olympus kids cartoon style. End card screen. Baby Hercules waving one enormous arm at camera. Little Zeus beside him giving two thumbs up. Subscribe button animated and bouncing. Little Olympus logo prominent. Channel handle @littleolympusai visible. Bright fun colors. Friendly direct-to-camera energy. Kids YouTube end card layout. 16:9.",
+      "bg_colors": ["#1A1060", "#FFD700", "#00B4E6"],
+      "duration_sec": 40
     }
   ],
   "music": {
-    "style": "upbeat_kids_adventure",
-    "notes": "Playful bouncy base track. A comically deep THUD sound when Hercules pulls the mountain. Warm swell in scene 6 when Drako gets cozy. Triumphant but cute ending sting."
-  },
-  "voice_style": {
-    "tone": "warm_playful_encouraging",
-    "pacing": "punchy — but slow slightly on comedy beats to let jokes land",
-    "character": "storyteller who can barely keep a straight face during the mountain-breaking scenes"
-  },
-  "lesson": "Strength isn't just about power — knowing when to be gentle is the strongest thing you can do.",
-  "bible_reference": "Little_Olympus_Master_Bible.md — Baby Hercules section (accidental destruction, 'I HELPED!', food-motivated, gentle soul). Athena chin-tap (3x) appears in scene 5.",
-  "youtube_title": "Baby Hercules vs. the GIANT SNAKE! 🐍💪 | Little Olympus Episode 2",
-  "youtube_description": "Baby Hercules has a problem. A GIANT problem. A giant SNAKE problem. 😱\n\nDrako the enormous snake has wrapped himself all the way around Mount Olympus and won't budge! Can Baby Hercules use his incredible strength to move him?\n\nSpoiler: yes. But not how you'd expect. 😂\n\nIn today's adventure:\n💪 Baby Hercules tries to move a snake the size of a mountain\n⚡ Little Zeus makes things MUCH worse (as always)\n🦉 Athena figures out what's REALLY going on\n🐍 Drako just wants to be warm\n\n📺 Watch ALL our adventures: [playlist link]\n🔔 SUBSCRIBE for new episodes every week!\n\n#LittleOlympus #BabyHercules #KidsCartoon #GreekMythology #KidsYouTube",
-  "next_episode_preview": "Episode 3 — Perseus and the Tiny Medusa! Someone has turned the whole fountain PURPLE. And Mini Medusa may have had nothing to do with it. (She definitely had something to do with it.)",
-  "higgsfield_style_notes": "ALL scenes must be bright, colorful, cute cartoon style. Big expressive eyes on all characters. CoComelon × Greek mythology. NOT cinematic/dark. Drako is funny-big, not scary-big — his expressions should be grumpy-cute, not menacing."
+    "intro": "upbeat_kids_adventure_fanfare",
+    "main": "playful_orchestral_comedy",
+    "emotional": "gentle_warm_strings",
+    "action": "big_heroic_brass_kids",
+    "outro": "little_olympus_theme_song"
+  }
 }

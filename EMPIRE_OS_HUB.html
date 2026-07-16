@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Empire OS Hub</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#09090b;--surface:#18181b;--s2:#1f1f23;--s3:#27272a;
+  --border:rgba(255,255,255,.08);--text:#f4f4f5;--ts:#a1a1aa;--tt:#71717a;
+  --accent:#6366f1;--a2:#818cf8;--green:#34d399;--gold:#fbbf24;--red:#fb7185;
+}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes fadeup{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+body{background:var(--bg);color:var(--text);font-family:'Inter',system-ui,sans-serif;min-height:100vh;-webkit-font-smoothing:antialiased;}
+::-webkit-scrollbar{width:8px}
+::-webkit-scrollbar-thumb{background:rgba(255,255,255,.1);border-radius:4px}
+input,textarea,select{font-family:inherit}
+#app{display:flex;flex-direction:column;min-height:100vh}
+.topbar{height:56px;display:flex;align-items:center;gap:14px;padding:0 16px;border-bottom:1px solid var(--border);background:rgba(9,9,11,.85);backdrop-filter:blur(10px);position:sticky;top:0;z-index:40;flex-shrink:0}
+.body-row{display:flex;flex:1}
+.sidebar{width:216px;flex-shrink:0;border-right:1px solid var(--border);display:flex;flex-direction:column;position:sticky;top:56px;height:calc(100vh - 56px);background:var(--surface);overflow-y:auto}
+.main{flex:1;min-width:0;padding:28px 32px 60px;max-width:1280px}
+.nav-item{display:flex;align-items:center;gap:11px;padding:9px 10px;border-radius:8px;cursor:pointer;border:1px solid transparent;margin-bottom:2px;user-select:none}
+.nav-item:hover:not(.active){background:rgba(255,255,255,.04)}
+.nav-item.active{background:var(--s2);border-color:var(--border)}
+.nav-label{font-size:13px;font-weight:500;color:var(--ts);flex:1;white-space:nowrap}
+.nav-item.active .nav-label{font-weight:600;color:var(--text)}
+.nav-icon{width:16px;height:16px;position:relative;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.badge{font-size:9px;font-weight:700;padding:2px 5px;border-radius:5px}
+.badge-ai{color:var(--a2);background:rgba(139,92,246,.15);border:1px solid rgba(139,92,246,.3)}
+.badge-new{color:var(--green);background:rgba(52,211,153,.12);border:1px solid rgba(52,211,153,.3)}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:18px}
+.eyebrow{font-size:10.5px;font-weight:700;color:var(--tt);text-transform:uppercase;letter-spacing:.07em}
+.stitle{font-size:13px;font-weight:700;color:var(--text)}
+.mono{font-family:'JetBrains Mono',monospace}
+.btn{font-size:12px;font-weight:600;padding:8px 14px;border-radius:8px;cursor:pointer;border:1px solid var(--border);background:var(--s2);color:var(--text);display:inline-flex;align-items:center;gap:6px}
+.btn:hover{opacity:.82}
+.btn-primary{background:linear-gradient(135deg,#818cf8,#4f46e5);border-color:transparent;color:#fff}
+.btn-green{background:rgba(52,211,153,.15);border-color:rgba(52,211,153,.3);color:var(--green)}
+.btn-gold{background:rgba(251,191,36,.12);border-color:rgba(251,191,36,.3);color:var(--gold)}
+.sgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:22px}
+.scard{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:18px;display:flex;flex-direction:column;gap:8px}
+.slabel{font-size:10.5px;font-weight:700;color:var(--tt);text-transform:uppercase;letter-spacing:.07em}
+.sval{font-size:26px;font-weight:800;color:var(--text);font-family:'JetBrains Mono',monospace;letter-spacing:-.01em}
+.ssub{font-size:11.5px;font-weight:600}
+.arow{display:flex;gap:12px;padding:11px 0;border-bottom:1px solid var(--border)}
+.pill{font-size:11px;font-weight:600;padding:4px 10px;border-radius:20px;display:inline-flex;align-items:center;gap:5px;white-space:nowrap}
+.p-green{background:rgba(52,211,153,.15);border:1px solid rgba(52,211,153,.3);color:var(--green)}
+.p-red{background:rgba(251,113,133,.15);border:1px solid rgba(251,113,133,.3);color:var(--red)}
+.p-gold{background:rgba(251,191,36,.12);border:1px solid rgba(251,191,36,.3);color:var(--gold)}
+.p-accent{background:rgba(99,102,241,.15);border:1px solid rgba(99,102,241,.3);color:var(--a2)}
+.mkt-mono{width:24px;height:24px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:10.5px;font-weight:800;font-family:'JetBrains Mono',monospace;color:#0a0a10;flex-shrink:0}
+.ch-chip{font-size:12px;font-weight:700;padding:6px 12px;border-radius:8px;cursor:pointer;border:1px solid var(--border);background:var(--s2);color:var(--ts)}
+.ch-chip.active{background:rgba(99,102,241,.15);border-color:rgba(99,102,241,.4);color:var(--a2)}
+.ep-row{display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid var(--border)}
+.prog-bar{height:6px;background:var(--s3);border-radius:3px;overflow:hidden}
+.prog-fill{height:100%;border-radius:3px;background:linear-gradient(90deg,#818cf8,#4f46e5);transition:width .3s}
+.rev-bar-wrap{display:flex;align-items:flex-end;flex:1}
+.cmd-overlay{position:fixed;inset:0;background:rgba(4,4,8,.72);backdrop-filter:blur(3px);z-index:100;display:flex;align-items:flex-start;justify-content:center;padding-top:90px}
+.cmd-panel{width:560px;background:var(--surface);border:1px solid var(--border);border-radius:14px;box-shadow:0 24px 60px rgba(0,0,0,.55);overflow:hidden;animation:fadeup .15s ease}
+.credits-box{margin-top:auto;padding:14px;border-top:1px solid var(--border)}
+.credits-inner{display:flex;flex-direction:column;gap:6px;padding:12px;border-radius:10px;background:linear-gradient(160deg,rgba(139,92,246,.14),rgba(34,211,238,.06));border:1px solid rgba(139,92,246,.22)}
+.ptitle{font-size:20px;font-weight:700;color:var(--text)}
+.psub{font-size:13px;color:var(--tt);margin-top:3px;margin-bottom:22px}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<script>
+// ── STATE ─────────────────────────────────────────────────────────────────────
+const S = {
+  page: 'dashboard',
+  cmdOpen: false,
+  cmdQuery: '',
+  contentChannel: 'GG',
+  bookTopic: '',
+  bookGenre: 'Non-Fiction',
+  editorPrice: 128,
+  editorTitle: "Vintage Levi's 501 Denim Jacket — Medium, Excellent Condition",
+  editorDesc: "Classic 501 straight-leg denim jacket in a rich indigo wash. Excellent pre-owned condition — no rips, stains, or fading. Button closures all intact.",
+  targets: { ebay: true, facebook: true, mercari: false, etsy: false, poshmark: true, depop: true },
+  aiQuery: '',
+};
+
+function set(u) { Object.assign(S, u); renderApp(); }
+
+// ── ACTIONS ───────────────────────────────────────────────────────────────────
+function nav(p) { set({ page: p, cmdOpen: false }); }
+function openCmd() { set({ cmdOpen: true }); }
+function closeCmd() { set({ cmdOpen: false }); }
+function setChannel(c) { set({ contentChannel: c }); }
+function toggleTarget(id) { S.targets[id] = !S.targets[id]; renderApp(); }
+
+async function callPipeline(action, body) {
+  try {
+    const r = await fetch('http://localhost:8002/api/' + action, {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(body),
+    });
+    const d = await r.json();
+    if (d.error) alert('⚠ ' + d.error);
+    else alert('✓ ' + (d.message || action + ' started'));
+  } catch {
+    alert('⚠ Server offline — start empire_server.py first:\n  START_EMPIRE_PIPELINE.bat');
+  }
+}
+
+function pipelineBtn(label, action, body, cls) {
+  const args = JSON.stringify(body).replace(/"/g, '&quot;');
+  return `<button class="btn ${cls||''}" onclick='callPipeline("${action}",${JSON.stringify(body)})'>${label}</button>`;
+}
+
+// ── DATA ──────────────────────────────────────────────────────────────────────
+const CHANNELS = {
+  GG: { name: 'Gods & Glory',    handle: '@GodsAndGloryAI', color: '#818cf8', type: 'documentary', token: 'warn',    ep: 11 },
+  LO: { name: 'Little Olympus',  handle: '@LittleOlympusAI',color: '#34d399', type: 'higgsfield',  token: 'missing', ep: 1  },
+  IL: { name: 'Iron Legends',    handle: '@IronLegendsai',  color: '#fbbf24', type: 'higgsfield',  token: 'ok',      ep: 0  },
+  ED: { name: 'Empire Decoded',  handle: 'Planned',         color: '#67e8f9', type: 'documentary', token: 'missing', ep: 0  },
+  WW: { name: 'World Wars',      handle: 'Planned',         color: '#a78bfa', type: 'documentary', token: 'missing', ep: 0  },
+};
+
+const MARKETS = [
+  { id:'ebay',     name:'eBay',                mono:'eB', color:'#3b82f6', status:'live',    listings:342, sync:'2m ago'       },
+  { id:'facebook', name:'Facebook Marketplace',mono:'FB', color:'#4f7cff', status:'live',    listings:288, sync:'4m ago'       },
+  { id:'mercari',  name:'Mercari',             mono:'Mc', color:'#f97364', status:'syncing', listings:201, sync:'Syncing…'     },
+  { id:'etsy',     name:'Etsy',                mono:'Et', color:'#f1641e', status:'live',    listings:96,  sync:'11m ago'      },
+  { id:'poshmark', name:'Poshmark',            mono:'Po', color:'#c2185b', status:'error',   listings:154, sync:'Failed 1h ago'},
+  { id:'depop',    name:'Depop',               mono:'De', color:'#ff2300', status:'live',    listings:118, sync:'6m ago'       },
+];
+
+const INV = [
+  { sku:'SKU-20291', title:"Vintage Levi's 501 Denim Jacket — Medium",       qty:1, profit:42.50,  score:92, live:['ebay','poshmark','depop']           },
+  { sku:'SKU-20288', title:'Nikon F3 35mm Film Camera Body',                  qty:1, profit:118.00, score:97, live:['ebay','mercari']                    },
+  { sku:'SKU-20276', title:'Le Creuset Dutch Oven 5.5qt — Cerise',           qty:2, profit:65.25,  score:88, live:['facebook','mercari','etsy']          },
+  { sku:'SKU-20261', title:'Coach Leather Crossbody — Black',                 qty:1, profit:31.00,  score:74, live:['poshmark','depop']                  },
+  { sku:'SKU-20254', title:'Herman Miller Aeron Chair — Size B',              qty:1, profit:210.00, score:95, live:['ebay','facebook']                   },
+  { sku:'SKU-20239', title:'Sony WH-1000XM4 Headphones',                     qty:3, profit:54.00,  score:81, live:['ebay','mercari','facebook']          },
+  { sku:'SKU-20202', title:'Polaroid SX-70 Land Camera',                     qty:1, profit:89.50,  score:90, live:['ebay','depop','etsy']                },
+];
+
+const ACTIVITY = [
+  { t:'2m ago',   text:'Relisted 12 stale items on Poshmark to refresh search ranking', kind:'relist' },
+  { t:'9m ago',   text:'Generated title + description for SKU-20291 (Vintage Denim Jacket)', kind:'gen' },
+  { t:'18m ago',  text:'GG_EP016 render in progress — scene 38 of 54', kind:'render' },
+  { t:'34m ago',  text:'LO_EP001 Higgsfield assembly complete — 455MB final at renders/', kind:'done' },
+  { t:'1h ago',   text:'Poshmark sync error — auth token expired', kind:'error' },
+  { t:'2h ago',   text:'GG_EP015 render complete — 54 scenes, 47min, 284MB', kind:'done' },
+];
+
+const REV = [32,28,41,38,52,48,61,58,70,66,78,84];
+
+const RENDERS = [
+  { ep:'GG_EP016', title:'Agincourt',      pct:70, scene:38, total:54, status:'rendering' },
+  { ep:'GG_EP017', title:'Battle of Tours',pct:0,  scene:0,  total:54, status:'queued'    },
+  { ep:'GG_EP018', title:'Hastings 1066',  pct:0,  scene:0,  total:54, status:'queued'    },
+];
+
+const UPLOADS = [
+  { ep:'GG_EP008', title:'Battle of Thermopylae', size:'284MB', dur:'47min', bot10:'pass'    },
+  { ep:'GG_EP009', title:'Battle of Hastings',    size:'261MB', dur:'44min', bot10:'pass'    },
+  { ep:'GG_EP010', title:'Battle of Agincourt',   size:'271MB', dur:'45min', bot10:'pending' },
+  { ep:'GG_EP011', title:'Waterloo',               size:'255MB', dur:'43min', bot10:'pending' },
+];
+
+const GG_EP = [
+  { ep:'EP001',title:'Spartans at Thermopylae',st:'live',sz:'187MB',dur:'39min'},
+  { ep:'EP002',title:'Rise of Alexander',      st:'live',sz:'201MB',dur:'42min'},
+  { ep:'EP003',title:'Roman Legions',           st:'live',sz:'195MB',dur:'41min'},
+  { ep:'EP004',title:'Genghis Khan',            st:'live',sz:'210MB',dur:'43min'},
+  { ep:'EP005',title:'The Crusades',            st:'live',sz:'188MB',dur:'39min'},
+  { ep:'EP006',title:'Pearl Harbor',            st:'live',sz:'260MB',dur:'41min'},
+  { ep:'EP007',title:'D-Day',                   st:'live',sz:'231MB',dur:'39min'},
+  { ep:'EP008',title:'Battle of Thermopylae',  st:'ready',sz:'284MB',dur:'47min'},
+  { ep:'EP009',title:'Battle of Hastings',     st:'ready',sz:'261MB',dur:'44min'},
+  { ep:'EP010',title:'Battle of Agincourt',    st:'ready',sz:'271MB',dur:'45min'},
+  { ep:'EP011',title:'Waterloo',               st:'ready',sz:'255MB',dur:'43min'},
+  { ep:'EP016',title:'Agincourt (S3)',         st:'rendering',sz:'—',dur:'—'},
+];
+
+// ── NAV ───────────────────────────────────────────────────────────────────────
+const NAV = [
+  { id:'dashboard', label:'Dashboard'     },
+  { id:'inventory', label:'Inventory'     },
+  { id:'editor',    label:'Listing Editor'},
+  { id:'crosspost', label:'Cross-Posting' },
+  { id:'analytics', label:'Analytics'    },
+  { id:'aicommand', label:'AI Command',   badge:'AI',  badgeCls:'badge-ai'  },
+  { id:'content',   label:'Content',      badge:'NEW', badgeCls:'badge-new' },
+  { id:'books',     label:'Books',        badge:'NEW', badgeCls:'badge-new' },
+  { id:'channels',  label:'Channels',     badge:'NEW', badgeCls:'badge-new' },
+];
+
+// ── ICON SVGs ─────────────────────────────────────────────────────────────────
+function icon(id, active) {
+  const c = active ? '#818cf8' : '#71717a';
+  const I = {
+    dashboard: `<div style="width:10px;height:10px;border-radius:50%;background:${c};"></div>`,
+    inventory: `<div style="position:absolute;left:0;right:0;top:1px;height:5px;border-radius:2px;background:${c};opacity:.5;"></div><div style="position:absolute;left:0;right:0;bottom:1px;height:5px;border-radius:2px;background:${c};"></div>`,
+    editor:    `<div style="width:8px;height:8px;background:${c};transform:rotate(45deg);border-radius:2px;"></div>`,
+    crosspost: `<div style="position:absolute;width:5px;height:5px;border-radius:50%;background:${c};left:0;top:3px;"></div><div style="position:absolute;width:5px;height:5px;border-radius:50%;background:${c};right:0;top:3px;"></div><div style="position:absolute;width:5px;height:5px;border-radius:50%;background:${c};left:5px;bottom:1px;"></div>`,
+    analytics: `<div style="position:absolute;left:0;bottom:0;width:3px;height:7px;border-radius:1px;background:${c};opacity:.55;"></div><div style="position:absolute;left:5px;bottom:0;width:3px;height:13px;border-radius:1px;background:${c};"></div><div style="position:absolute;right:0;bottom:0;width:3px;height:10px;border-radius:1px;background:${c};opacity:.75;"></div>`,
+    aicommand: `<div style="width:12px;height:12px;background:${c};clip-path:polygon(50% 0%,62% 38%,100% 50%,62% 62%,50% 100%,38% 62%,0% 50%,38% 38%);"></div>`,
+    content:   `<div style="width:0;height:0;border-top:5px solid transparent;border-bottom:5px solid transparent;border-left:9px solid ${c};margin-left:3px;"></div>`,
+    books:     `<div style="position:absolute;left:3px;top:1px;width:3px;bottom:1px;background:${c};border-radius:1px 0 0 1px;"></div><div style="position:absolute;left:6px;top:1px;right:0;bottom:1px;border:1.5px solid ${c};border-radius:0 3px 3px 0;border-left:none;"></div>`,
+    channels:  `<div style="position:absolute;left:0;top:3px;right:5px;bottom:3px;border:1.5px solid ${c};border-radius:2px;"></div><div style="position:absolute;right:0;top:50%;transform:translateY(-50%);width:0;height:0;border-top:4px solid transparent;border-bottom:4px solid transparent;border-left:5px solid ${c};"></div>`,
+  };
+  return `<div class="nav-icon" style="position:relative;">${I[id]||''}</div>`;
+}
+
+// ── HELPERS ───────────────────────────────────────────────────────────────────
+const LOGO = `<div style="width:30px;height:30px;border-radius:8px;background:linear-gradient(135deg,#a78bfa,#67e8f9);flex-shrink:0;display:flex;align-items:center;justify-content:center;"><div style="width:10px;height:10px;border-radius:3px;background:#0a0a10;transform:rotate(45deg);"></div></div>`;
+
+function revBars(data, h) {
+  const mx = Math.max(...data);
+  return data.map((v, i) => {
+    const pct = Math.round((v / mx) * 100);
+    const last = i === data.length - 1;
+    return `<div class="rev-bar-wrap" style="height:${h}px;"><div style="width:100%;border-radius:3px 3px 0 0;background:${last ? 'linear-gradient(180deg,#818cf8,#4f46e5)' : 'rgba(99,102,241,.28)'};height:${pct}%;"></div></div>`;
+  }).join('');
+}
+
+function mktMono(m, sz) {
+  sz = sz || 24;
+  return `<div class="mkt-mono" style="background:${m.color};width:${sz}px;height:${sz}px;border-radius:${sz===24?6:9}px;font-size:${sz===24?10.5:13}px;">${m.mono}</div>`;
+}
+
+// ── PAGE: DASHBOARD ───────────────────────────────────────────────────────────
+function pgDashboard() {
+  const dotColor = { relist:'#818cf8', gen:'#818cf8', render:'#fbbf24', done:'#34d399', error:'#fb7185' };
+  const acts = ACTIVITY.map(a => {
+    const dc = dotColor[a.kind] || '#818cf8';
+    return `<div class="arow">
+      <div style="width:22px;height:22px;border-radius:50%;background:${dc}22;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;">
+        <div style="width:6px;height:6px;border-radius:50%;background:${dc};"></div>
+      </div>
+      <div style="flex:1;min-width:0;">
+        <div style="font-size:12.5px;color:var(--text);line-height:1.5;">${a.text}</div>
+        <div style="font-size:10.5px;color:var(--tt);font-family:'JetBrains Mono',monospace;margin-top:2px;">${a.t}</div>
+      </div>
+    </div>`;
+  }).join('');
+
+  const mktStatus = MARKETS.map(m => {
+    const dc = m.status === 'live' ? 'var(--green)' : m.status === 'syncing' ? 'var(--gold)' : 'var(--red)';
+    return `<div style="display:flex;align-items:center;gap:9px;padding:9px 12px;background:var(--s2);border:1px solid var(--border);border-radius:10px;">
+      ${mktMono(m)}
+      <div>
+        <div style="font-size:12px;font-weight:600;color:var(--text);">${m.name.split(' ')[0]}</div>
+        <div style="display:flex;align-items:center;gap:5px;margin-top:2px;">
+          <div style="width:6px;height:6px;border-radius:50%;background:${dc};${m.status==='syncing'?'animation:pulse 1.2s infinite':''}"></div>
+          <span style="font-size:10.5px;color:var(--tt);font-family:'JetBrains Mono',monospace;">${m.sync}</span>
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+
+  return `
+    <div style="font-size:20px;font-weight:700;">Good morning, Josh</div>
+    <div style="font-size:13px;color:var(--tt);margin-top:3px;margin-bottom:22px;">Here's how the empire is performing today.</div>
+    <div class="sgrid">
+      <div class="scard"><span class="slabel">Revenue (30d)</span><span class="sval">$24,680</span><span class="ssub" style="color:var(--green);">+18.2% vs prior</span></div>
+      <div class="scard"><span class="slabel">Active Listings</span><span class="sval">1,299</span><span class="ssub" style="color:var(--tt);">6 marketplaces</span></div>
+      <div class="scard"><span class="slabel">GG Episodes Live</span><span class="sval">11</span><span class="ssub" style="color:var(--a2);">S3 rendering now</span></div>
+      <div class="scard"><span class="slabel">Pending Upload</span><span class="sval">4</span><span class="ssub" style="color:var(--gold);">manual approval req.</span></div>
+    </div>
+    <div style="display:grid;grid-template-columns:2fr 1fr;gap:16px;margin-bottom:16px;">
+      <div class="card">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;">
+          <span class="stitle">Revenue — Last 12 Weeks</span>
+          <span style="font-size:11px;color:var(--green);font-weight:700;font-family:'JetBrains Mono',monospace;">+18.2%</span>
+        </div>
+        <div style="display:flex;align-items:flex-end;gap:6px;">${revBars(REV, 120)}</div>
+      </div>
+      <div class="card">
+        <div class="eyebrow" style="margin-bottom:12px;">Marketplace Status</div>
+        <div style="display:flex;flex-direction:column;gap:8px;">${mktStatus}</div>
+      </div>
+    </div>
+    <div class="card">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;">
+        <span class="stitle">Empire Activity Feed</span>
+        <div style="display:flex;align-items:center;gap:6px;">
+          <div style="width:6px;height:6px;border-radius:50%;background:var(--green);animation:pulse 2s infinite;"></div>
+          <span style="font-size:10.5px;color:var(--tt);font-family:'JetBrains Mono',monospace;">LIVE</span>
+        </div>
+      </div>
+      ${acts}
+    </div>`;
+}
+
+// ── PAGE: INVENTORY ───────────────────────────────────────────────────────────
+function pgInventory() {
+  const rows = INV.map(r => {
+    const sc = r.score >= 90 ? 'var(--green)' : r.score >= 70 ? 'var(--a2)' : 'var(--gold)';
+    const badges = MARKETS.map(m => {
+      const a = r.live.includes(m.id);
+      return `<div style="width:20px;height:20px;border-radius:5px;display:flex;align-items:center;justify-content:center;font-size:8.5px;font-weight:800;font-family:'JetBrains Mono',monospace;background:${a?m.color:'var(--s3)'};color:${a?'#0a0a10':'var(--tt)'};opacity:${a?1:.45};">${m.mono}</div>`;
+    }).join('');
+    return `<div style="display:grid;grid-template-columns:44px 2.4fr .8fr 1.4fr .7fr;gap:12px;align-items:center;padding:10px 8px;border-bottom:1px solid var(--border);">
+      <div style="width:36px;height:36px;border-radius:8px;background:repeating-linear-gradient(45deg,var(--s3),var(--s3) 4px,var(--s2) 4px,var(--s2) 8px);border:1px solid var(--border);"></div>
+      <div><div style="font-size:12.5px;font-weight:600;color:var(--text);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${r.title}</div><div style="font-size:10.5px;color:var(--tt);font-family:'JetBrains Mono',monospace;">${r.sku}</div></div>
+      <span style="font-size:12.5px;font-weight:700;color:var(--green);font-family:'JetBrains Mono',monospace;">$${r.profit.toFixed(2)}</span>
+      <div style="display:flex;gap:4px;flex-wrap:wrap;">${badges}</div>
+      <span style="font-size:11px;font-weight:800;color:${sc};padding:3px 7px;border-radius:6px;background:${sc}22;border:1px solid ${sc}44;font-family:'JetBrains Mono',monospace;">${r.score}</span>
+    </div>`;
+  }).join('');
+  return `
+    <div class="ptitle">Inventory</div>
+    <div class="psub">1,299 items across 6 connected marketplaces</div>
+    <div class="card" style="padding:0;overflow:hidden;">
+      <div style="display:grid;grid-template-columns:44px 2.4fr .8fr 1.4fr .7fr;gap:12px;align-items:center;padding:10px 8px;border-bottom:1px solid var(--border);background:var(--s2);">
+        <span></span><span class="eyebrow">Item</span><span class="eyebrow">Profit</span><span class="eyebrow">Marketplaces</span><span class="eyebrow">AI Score</span>
+      </div>
+      ${rows}
+    </div>`;
+}
+
+// ── PAGE: LISTING EDITOR ──────────────────────────────────────────────────────
+function pgEditor() {
+  const count = Object.values(S.targets).filter(Boolean).length;
+  const targets = MARKETS.map(m => {
+    const a = S.targets[m.id];
+    return `<div onclick="toggleTarget('${m.id}')" style="display:flex;align-items:center;gap:10px;padding:9px 11px;border-radius:9px;border:1px solid ${a?'rgba(99,102,241,.35)':'var(--border)'};background:${a?'rgba(99,102,241,.08)':'var(--s2)'};cursor:pointer;margin-bottom:7px;">
+      ${mktMono(m)}
+      <span style="font-size:12.5px;font-weight:600;color:var(--text);flex:1;">${m.name}</span>
+      <div style="width:16px;height:16px;border-radius:5px;border:1.5px solid ${a?'var(--accent)':'var(--tt)'};background:${a?'var(--accent)':'transparent'};display:flex;align-items:center;justify-content:center;">${a?'<div style="width:6px;height:6px;border-radius:50%;background:#fff;"></div>':''}</div>
+    </div>`;
+  }).join('');
+  const photos = [0,1,2,3,4,5].map(i => `<div style="aspect-ratio:1;border-radius:10px;border:${i===0?'1.5px solid var(--accent)':'1px dashed var(--border)'};background:${i===0?'repeating-linear-gradient(45deg,var(--s3),var(--s3) 5px,var(--s2) 5px,var(--s2) 10px)':'var(--s2)'};display:flex;align-items:center;justify-content:center;position:relative;cursor:pointer;">${i===0?'<span style="position:absolute;top:5px;left:5px;font-size:8.5px;font-weight:700;color:#0a0a10;background:var(--a2);padding:2px 5px;border-radius:5px;font-family:\'JetBrains Mono\',monospace;">PRIMARY</span>':''}<span style="font-size:11px;color:var(--tt);">+</span></div>`).join('');
+  return `
+    <div class="ptitle">Listing Editor</div>
+    <div class="psub">SKU-20291 — Vintage Levi's 501 Denim Jacket</div>
+    <div style="display:grid;grid-template-columns:1.6fr 1fr;gap:16px;align-items:start;">
+      <div style="display:flex;flex-direction:column;gap:16px;">
+        <div class="card"><div class="eyebrow" style="margin-bottom:12px;">Photos</div><div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;">${photos}</div></div>
+        <div class="card">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;"><span class="eyebrow">Title</span><span style="font-size:11px;font-weight:700;color:var(--a2);cursor:pointer;">✦ Generate with AI</span></div>
+          <input id="etitle" value="${S.editorTitle.replace(/"/g,'&quot;')}" oninput="S.editorTitle=this.value" style="width:100%;background:var(--s2);border:1px solid var(--border);border-radius:9px;padding:11px 12px;color:var(--text);font-size:13px;font-weight:500;outline:none;"/>
+          <div style="display:flex;align-items:center;justify-content:space-between;margin:16px 0 8px;"><span class="eyebrow">Description</span><span style="font-size:11px;font-weight:700;color:var(--a2);cursor:pointer;">✦ Generate with AI</span></div>
+          <textarea oninput="S.editorDesc=this.value" style="width:100%;min-height:110px;background:var(--s2);border:1px solid var(--border);border-radius:9px;padding:11px 12px;color:var(--ts);font-size:13px;line-height:1.55;resize:vertical;outline:none;">${S.editorDesc}</textarea>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:16px;">
+        <div class="card">
+          <div class="eyebrow" style="margin-bottom:10px;">AI Price Suggestion</div>
+          <div style="display:flex;align-items:baseline;gap:6px;margin-bottom:4px;"><span style="font-size:11px;color:var(--tt);">$</span><input type="number" id="eprice" value="${S.editorPrice}" oninput="S.editorPrice=+this.value||0" style="width:100px;background:transparent;border:none;outline:none;color:var(--text);font-size:30px;font-weight:800;font-family:'JetBrains Mono',monospace;padding:0;"/></div>
+          <div style="font-size:11.5px;color:var(--green);font-weight:600;margin-bottom:14px;">Within suggested range — competitive</div>
+          <div style="height:6px;border-radius:3px;background:var(--s3);position:relative;margin-bottom:6px;">
+            <div style="position:absolute;left:22%;right:30%;top:0;bottom:0;border-radius:3px;background:linear-gradient(90deg,#818cf8,#6366f1);"></div>
+            <div style="position:absolute;left:48%;top:-3px;width:2px;height:12px;background:var(--text);border-radius:1px;"></div>
+          </div>
+          <div style="display:flex;justify-content:space-between;font-size:10.5px;color:var(--tt);font-family:'JetBrains Mono',monospace;"><span>Low $98</span><span>Median $124</span><span>High $162</span></div>
+        </div>
+        <div class="card">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;"><span class="eyebrow">Publish Targets</span><span style="font-size:10.5px;color:var(--tt);font-family:'JetBrains Mono',monospace;">${count}/6</span></div>
+          ${targets}
+        </div>
+        <button class="btn btn-primary" style="width:100%;justify-content:center;padding:13px;font-size:13.5px;border-radius:10px;">Publish to ${count} Marketplace${count!==1?'s':''}</button>
+        <button class="btn" style="width:100%;justify-content:center;padding:13px;font-size:13px;border-radius:10px;">Save Draft</button>
+      </div>
+    </div>`;
+}
+
+// ── PAGE: CROSS-POSTING ───────────────────────────────────────────────────────
+function pgCrosspost() {
+  const live = MARKETS.filter(m => m.status === 'live').length;
+  const pct = Math.round((live / MARKETS.length) * 100);
+  const cards = MARKETS.map(m => {
+    const sc = m.status === 'live' ? 'var(--green)' : m.status === 'syncing' ? 'var(--gold)' : 'var(--red)';
+    const sl = m.status === 'live' ? 'Live syncing' : m.status === 'syncing' ? 'Syncing…' : 'Sync error';
+    return `<div class="card" style="display:flex;flex-direction:column;gap:12px;">
+      <div style="display:flex;align-items:center;gap:11px;">
+        ${mktMono({...m, mono:m.mono}, 34)}
+        <div style="flex:1;"><div style="font-size:13.5px;font-weight:700;color:var(--text);">${m.name}</div>
+          <div style="display:flex;align-items:center;gap:5px;margin-top:2px;">
+            <div style="width:7px;height:7px;border-radius:50%;background:${sc};${m.status==='syncing'?'animation:pulse 1.2s infinite':''}"></div>
+            <span style="font-size:11.5px;font-weight:600;color:${sc};">${sl}</span>
+          </div>
+        </div>
+      </div>
+      <div style="display:flex;align-items:center;justify-content:space-between;padding-top:10px;border-top:1px solid var(--border);">
+        <div><div style="font-size:17px;font-weight:800;font-family:'JetBrains Mono',monospace;">${m.listings}</div><div style="font-size:10px;color:var(--tt);text-transform:uppercase;letter-spacing:.05em;">listings</div></div>
+        <button class="btn" style="font-size:11.5px;padding:6px 11px;">${m.status==='error'?'Re-auth':'Sync Now'}</button>
+      </div>
+    </div>`;
+  }).join('');
+  return `
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:22px;">
+      <div><div class="ptitle">Cross-Posting Center</div><div style="font-size:13px;color:var(--tt);margin-top:3px;">${live} marketplaces live · ${MARKETS.reduce((a,m)=>a+m.listings,0)} listings</div></div>
+      <div style="display:flex;align-items:center;gap:10px;">
+        <div class="prog-bar" style="width:120px;"><div class="prog-fill" style="width:${pct}%;background:linear-gradient(90deg,#818cf8,#34d399);"></div></div>
+        <span style="font-size:11.5px;font-weight:700;color:var(--green);font-family:'JetBrains Mono',monospace;">${pct}% Healthy</span>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;">${cards}</div>`;
+}
+
+// ── PAGE: ANALYTICS ───────────────────────────────────────────────────────────
+function pgAnalytics() {
+  const best = [
+    { name:'Herman Miller Aeron Chair', sold:14, rev:4380 },
+    { name:'Nikon F3 Camera Body',      sold:9,  rev:2115 },
+    { name:'Polaroid SX-70',            sold:11, rev:1848 },
+    { name:'Sony WH-1000XM4',           sold:21, rev:3255 },
+  ].map((p,i) => `<div style="display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid var(--border);">
+    <div style="width:22px;height:22px;border-radius:6px;background:var(--s3);color:var(--ts);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0;">${i+1}</div>
+    <span style="font-size:12.5px;font-weight:600;flex:1;">${p.name}</span>
+    <span style="font-size:11px;color:var(--tt);font-family:'JetBrains Mono',monospace;">${p.sold} sold</span>
+    <span style="font-size:13px;font-weight:700;color:var(--green);font-family:'JetBrains Mono',monospace;">$${p.rev.toLocaleString()}</span>
+  </div>`).join('');
+  return `
+    <div class="ptitle">Analytics</div>
+    <div class="psub">Performance across every connected marketplace</div>
+    <div class="sgrid" style="margin-bottom:16px;">
+      <div class="scard"><span class="slabel">Revenue (30d)</span><span class="sval">$24,680</span><span class="ssub" style="color:var(--green);">+18.2%</span></div>
+      <div class="scard"><span class="slabel">Profit (30d)</span><span class="sval">$9,412</span><span class="ssub" style="color:var(--green);">+11.4%</span></div>
+      <div class="scard"><span class="slabel">Sell-Through</span><span class="sval">38.2%</span><span class="ssub" style="color:var(--a2);">+3.1 pts</span></div>
+      <div class="scard"><span class="slabel">Avg. ROI</span><span class="sval">184%</span><span class="ssub" style="color:var(--gold);">across all SKUs</span></div>
+    </div>
+    <div class="card" style="margin-bottom:16px;">
+      <div class="stitle" style="margin-bottom:16px;">Revenue Trend — 12 Weeks</div>
+      <div style="display:flex;align-items:flex-end;gap:6px;">${revBars(REV, 130)}</div>
+    </div>
+    <div class="card"><div class="stitle" style="margin-bottom:4px;">Best Products</div>${best}</div>`;
+}
+
+// ── PAGE: AI COMMAND ──────────────────────────────────────────────────────────
+function pgAiCommand() {
+  const sug = ['List everything on eBay','Relist stale inventory','Render GG_EP017',"Show today's profit","Generate LO episode script"].map(s =>
+    `<div onclick="S.aiQuery='${s}';document.getElementById('ai-q').value='${s}'" style="display:flex;align-items:center;gap:8px;padding:9px 14px;border-radius:20px;background:var(--s2);border:1px solid var(--border);font-size:12.5px;font-weight:600;cursor:pointer;">${s}</div>`
+  ).join('');
+  const hist = [
+    { q:"Show today's profit",      a:"Today's profit is $1,842 across 6 marketplaces, up 12% vs. yesterday. Top contributor: eBay ($712).", t:'10:14 AM' },
+    { q:'Relist stale inventory',   a:'Relisted 12 items idle 45+ days on Poshmark and Depop. Estimated visibility lift: +18%.',             t:'9:52 AM'  },
+    { q:'GG_EP016 render status',   a:'GG_EP016 Agincourt rendering at scene 38/54 (~70%). Estimated completion: ~45 minutes.',              t:'9:20 AM'  },
+  ].map(h => `<div class="card" style="margin-bottom:12px;">
+    <div style="display:flex;align-items:center;justify-content:space-between;">
+      <span style="font-size:13.5px;font-weight:600;">${h.q}</span>
+      <span style="font-size:10.5px;color:var(--tt);font-family:'JetBrains Mono',monospace;">${h.t}</span>
+    </div>
+    <div style="font-size:12.5px;color:var(--ts);line-height:1.6;margin-top:6px;">${h.a}</div>
+  </div>`).join('');
+  return `
+    <div style="text-align:center;padding:26px 0 6px;">
+      <div style="width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,#818cf8,#4f46e5);margin:0 auto 14px;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(99,102,241,.35);">
+        <div style="width:16px;height:16px;background:#fff;clip-path:polygon(50% 0%,62% 38%,100% 50%,62% 62%,50% 100%,38% 62%,0% 50%,38% 38%);"></div>
+      </div>
+      <div style="font-size:21px;font-weight:700;">AI Command Center</div>
+      <div style="font-size:13px;color:var(--tt);margin-top:4px;">Tell Empire OS what to do, in plain English.</div>
+    </div>
+    <div class="card" style="max-width:640px;margin:20px auto;">
+      <div style="display:flex;align-items:center;gap:10px;">
+        <input id="ai-q" value="${S.aiQuery}" oninput="S.aiQuery=this.value" placeholder="e.g. Render GG_EP017 and cut a social clip" style="flex:1;background:transparent;border:none;outline:none;color:var(--text);font-size:14.5px;"/>
+        <div style="width:34px;height:34px;border-radius:9px;background:linear-gradient(135deg,#818cf8,#4f46e5);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;">
+          <div style="width:0;height:0;border-top:5px solid transparent;border-bottom:5px solid transparent;border-left:8px solid #fff;margin-left:2px;"></div>
+        </div>
+      </div>
+    </div>
+    <div style="display:flex;gap:9px;flex-wrap:wrap;justify-content:center;max-width:640px;margin:0 auto 24px;">${sug}</div>
+    <div style="max-width:640px;margin:0 auto;"><div class="eyebrow" style="margin-bottom:12px;">Recent Commands</div>${hist}</div>`;
+}
+
+// ── PAGE: CONTENT ─────────────────────────────────────────────────────────────
+function pgContent() {
+  const ch = S.contentChannel;
+  const c = CHANNELS[ch];
+  const chips = Object.keys(CHANNELS).map(id =>
+    `<div class="ch-chip${S.contentChannel===id?' active':''}" onclick="setChannel('${id}')">${id}</div>`
+  ).join('');
+
+  const renderRows = RENDERS.map(r => {
+    const badge = r.status === 'rendering'
+      ? `<span class="pill p-gold"><div style="width:5px;height:5px;border-radius:50%;background:currentColor;animation:pulse 1s infinite;"></div>Rendering</span>`
+      : `<span class="pill p-accent">Queued</span>`;
+    return `<div class="ep-row">
+      <div style="flex:1;min-width:0;">
+        <div style="font-size:13px;font-weight:600;">${r.ep} — ${r.title}</div>
+        ${r.status==='rendering'?`<div style="margin-top:6px;"><div class="prog-bar"><div class="prog-fill" style="width:${r.pct}%;"></div></div><div style="font-size:10.5px;color:var(--tt);font-family:'JetBrains Mono',monospace;margin-top:4px;">Scene ${r.scene} / ${r.total} · ${r.pct}%</div></div>`:''}
+      </div>
+      ${badge}
+    </div>`;
+  }).join('');
+
+  const uploadRows = UPLOADS.map(u => {
+    const ok = u.bot10 === 'pass';
+    return `<div class="ep-row">
+      <div style="flex:1;min-width:0;">
+        <div style="font-size:13px;font-weight:600;">${u.ep} — ${u.title}</div>
+        <div style="font-size:10.5px;color:var(--tt);font-family:'JetBrains Mono',monospace;margin-top:2px;">${u.dur} · ${u.size}</div>
+      </div>
+      ${ok?'<span class="pill p-green">✓ Bot-10 passed</span>':'<span class="pill p-gold">⏳ Bot-10 pending</span>'}
+      ${ok?`<button class="btn btn-primary" style="font-size:11px;padding:6px 12px;" onclick="alert('Run: python channel_uploader.py --episode ${u.ep} --channel GG\\n\\nYouTube upload requires your manual approval.')">Approve ▶</button>`:`<button class="btn" style="font-size:11px;padding:6px 12px;opacity:.5;" disabled>Run Bot-10 First</button>`}
+    </div>`;
+  }).join('');
+
+  return `
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:22px;">
+      <div><div class="ptitle">Content Pipeline</div><div style="font-size:13px;color:var(--tt);margin-top:3px;">Video production across all Empire OS channels</div></div>
+      <div style="display:flex;gap:6px;">${chips}</div>
+    </div>
+    <div class="card" style="margin-bottom:16px;">
+      <div style="display:flex;align-items:center;gap:14px;margin-bottom:16px;">
+        <div style="width:40px;height:40px;border-radius:10px;background:${c.color}22;border:1px solid ${c.color}44;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:800;color:${c.color};font-family:'JetBrains Mono',monospace;flex-shrink:0;">${ch}</div>
+        <div>
+          <div style="font-size:14px;font-weight:700;">${c.name}</div>
+          <div style="font-size:11.5px;color:var(--tt);">${c.handle} · ${c.ep} episode${c.ep!==1?'s':''} live · ${c.type}</div>
+        </div>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;">
+        <button class="btn btn-primary" onclick="callPipeline('generate_script',{channel:'${ch}'})">✦ Write Script</button>
+        <button class="btn btn-green" onclick="callPipeline('render',{channel:'${ch}',mode:'free'})">▶ Render FREE</button>
+        <button class="btn btn-gold" onclick="callPipeline('render',{channel:'${ch}',mode:'premium'})">▶ Render PREMIUM</button>
+        <button class="btn" onclick="callPipeline('cut_clip',{channel:'${ch}'})">✂ Cut Social Clip</button>
+        <button class="btn" onclick="callPipeline('post_funnels',{channel:'${ch}'})">📤 Post Funnels</button>
+        <button class="btn" onclick="callPipeline('auto',{channel:'${ch}',mode:'free'})" style="border-color:rgba(99,102,241,.4);color:var(--a2);">🔄 Full Auto FREE</button>
+      </div>
+      ${ch==='LO'||ch==='IL'?`<div style="margin-top:12px;padding:10px 14px;border-radius:8px;background:rgba(251,191,36,.08);border:1px solid rgba(251,191,36,.25);font-size:12px;color:var(--gold);">⚠ ${ch} requires Higgsfield for animation — Soul Cast (character consistency) + Wan 2.7 + Hailuo (dialogue). Static pipeline will produce unwatchable content.</div>`:''}
+    </div>
+    <div class="card" style="margin-bottom:16px;">
+      <div class="stitle" style="margin-bottom:4px;">Current Renders</div>
+      <div style="font-size:11px;color:var(--tt);margin-bottom:12px;">empire_server.py at localhost:8002 — <span style="color:var(--a2);cursor:pointer;" onclick="callPipeline('status',{})">check status</span></div>
+      ${renderRows}
+    </div>
+    <div class="card">
+      <div class="stitle" style="margin-bottom:4px;">Pending Upload Queue</div>
+      <div style="font-size:11px;color:var(--gold);font-weight:600;margin-bottom:12px;">⚠ Every YouTube upload requires your manual approval — no exceptions</div>
+      ${uploadRows}
+    </div>`;
+}
+
+// ── PAGE: BOOKS ───────────────────────────────────────────────────────────────
+function pgBooks() {
+  return `
+    <div class="ptitle">Book Pipeline</div>
+    <div class="psub">Generate, export EPUB, and distribute via Draft2Digital</div>
+    <div style="display:grid;grid-template-columns:1.6fr 1fr;gap:16px;margin-bottom:16px;">
+      <div class="card">
+        <div class="eyebrow" style="margin-bottom:12px;">New Book</div>
+        <div class="eyebrow" style="margin-bottom:8px;">Topic</div>
+        <input id="btopic" value="${S.bookTopic.replace(/"/g,'&quot;')}" oninput="S.bookTopic=this.value" placeholder="e.g. AI Empire Building — How I Built 5 YouTube Channels with No Camera" style="width:100%;background:var(--s2);border:1px solid var(--border);border-radius:9px;padding:11px 12px;color:var(--text);font-size:13.5px;outline:none;margin-bottom:12px;"/>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px;">
+          <div>
+            <div class="eyebrow" style="margin-bottom:8px;">Genre</div>
+            <select onchange="S.bookGenre=this.value" style="width:100%;background:var(--s2);border:1px solid var(--border);border-radius:9px;padding:10px 12px;color:var(--text);font-size:13px;outline:none;">
+              ${['Non-Fiction','Self-Help','Business','How-To','History','Fantasy'].map(g=>`<option${S.bookGenre===g?' selected':''}>${g}</option>`).join('')}
+            </select>
+          </div>
+          <div>
+            <div class="eyebrow" style="margin-bottom:8px;">Distribute via</div>
+            <select style="width:100%;background:var(--s2);border:1px solid var(--border);border-radius:9px;padding:10px 12px;color:var(--text);font-size:13px;outline:none;">
+              <option>Draft2Digital</option><option>Amazon KDP</option><option>Both</option>
+            </select>
+          </div>
+        </div>
+        <button class="btn btn-primary" style="width:100%;justify-content:center;padding:12px;font-size:13.5px;" onclick="S.bookTopic?callPipeline('generate_book',{topic:S.bookTopic,genre:S.bookGenre}):alert('Enter a book topic first')">✦ Generate with Gemini</button>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:12px;">
+        <div class="card">
+          <div class="eyebrow" style="margin-bottom:12px;">Integration Status</div>
+          <div style="display:flex;flex-direction:column;gap:10px;">
+            <div style="display:flex;align-items:center;justify-content:space-between;"><span style="font-size:13px;font-weight:600;">Gemini API</span><span class="pill p-green">✓ Connected</span></div>
+            <div style="display:flex;align-items:center;justify-content:space-between;"><span style="font-size:13px;font-weight:600;">Draft2Digital</span><span class="pill p-red">Add D2D_API_KEY</span></div>
+            <div style="display:flex;align-items:center;justify-content:space-between;"><span style="font-size:13px;font-weight:600;">EbookLib</span><span class="pill p-gold">pip install needed</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="eyebrow" style="margin-bottom:8px;">StoryForge</div>
+          <div style="font-size:12.5px;color:var(--ts);line-height:1.6;margin-bottom:12px;">Book generation system built into Empire OS. Topic → Outline → Chapters → EPUB, all with Gemini.</div>
+          <div style="font-size:11px;color:var(--tt);margin-bottom:8px;">Install deps first:</div>
+          <div style="background:var(--s2);border:1px solid var(--border);border-radius:8px;padding:10px 12px;font-size:11px;font-family:'JetBrains Mono',monospace;color:var(--a2);">pip install google-generativeai ebooklib requests --break-system-packages</div>
+        </div>
+        <div class="card">
+          <div class="eyebrow" style="margin-bottom:8px;">D2D Setup</div>
+          <div style="font-size:12px;color:var(--ts);line-height:1.6;">Sign up at draft2digital.com ($20/mo), then add <span style="color:var(--a2);font-family:'JetBrains Mono',monospace;">D2D_API_KEY</span> to your <span style="color:var(--a2);font-family:'JetBrains Mono',monospace;">.env</span> file.</div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="stitle" style="margin-bottom:16px;">Books in Pipeline</div>
+      <div style="text-align:center;padding:40px 20px;color:var(--tt);font-size:13px;">No books yet — enter a topic above and click Generate to start your first book.</div>
+    </div>`;
+}
+
+// ── PAGE: CHANNELS ────────────────────────────────────────────────────────────
+function pgChannels() {
+  const chCards = Object.entries(CHANNELS).map(([id, c]) => {
+    const tb = c.token==='ok'
+      ? '<span class="pill p-green">✓ Token valid</span>'
+      : c.token==='warn'
+      ? '<span class="pill p-gold">⚠ Re-auth needed</span>'
+      : '<span class="pill p-red">Not set up</span>';
+    return `<div class="card" style="display:flex;align-items:center;gap:14px;margin-bottom:8px;">
+      <div style="width:40px;height:40px;border-radius:10px;background:${c.color}22;border:1px solid ${c.color}44;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:800;color:${c.color};font-family:'JetBrains Mono',monospace;flex-shrink:0;">${id}</div>
+      <div style="flex:1;min-width:0;">
+        <div style="font-size:13.5px;font-weight:700;">${c.name}</div>
+        <div style="font-size:11.5px;color:var(--tt);font-family:'JetBrains Mono',monospace;">${c.handle}</div>
+      </div>
+      ${tb}
+      <span style="font-size:11.5px;color:var(--tt);">${c.ep} ep</span>
+    </div>`;
+  }).join('');
+
+  const epRows = GG_EP.map(ep => {
+    const badge = ep.st==='live'
+      ? '<span class="pill p-green">✓ Live</span>'
+      : ep.st==='rendering'
+      ? '<span class="pill p-gold">Rendering</span>'
+      : '<span class="pill p-accent">Ready</span>';
+    return `<div class="ep-row">
+      <div style="font-size:10.5px;font-weight:700;color:var(--tt);font-family:'JetBrains Mono',monospace;width:44px;flex-shrink:0;">${ep.ep}</div>
+      <div style="flex:1;font-size:12.5px;font-weight:600;">${ep.title}</div>
+      <div style="font-size:10.5px;color:var(--tt);font-family:'JetBrains Mono',monospace;">${ep.sz} · ${ep.dur}</div>
+      ${badge}
+    </div>`;
+  }).join('');
+
+  return `
+    <div class="ptitle">YouTube Channels</div>
+    <div class="psub">Token status, episode tracking, and upload queue</div>
+    <div style="margin-bottom:16px;">${chCards}</div>
+    <div style="display:grid;grid-template-columns:1.4fr 1fr;gap:16px;">
+      <div class="card">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:4px;">
+          <div class="stitle">Gods & Glory Episodes</div>
+          <span class="pill p-green">${GG_EP.filter(e=>e.st==='live').length} live</span>
+        </div>
+        <div style="font-size:11px;color:var(--tt);margin-bottom:12px;font-family:'JetBrains Mono',monospace;">@GodsAndGloryAI · token_gg.pickle</div>
+        <div style="background:rgba(251,113,133,.08);border:1px solid rgba(251,113,133,.25);border-radius:8px;padding:10px 12px;font-size:11.5px;color:var(--red);margin-bottom:12px;">⚠ token_gg.pickle was committed to git — credentials are public. Rotate now in Google Cloud Console.</div>
+        ${epRows}
+      </div>
+      <div style="display:flex;flex-direction:column;gap:12px;">
+        <div class="card">
+          <div class="stitle" style="margin-bottom:4px;">S3 Render Progress</div>
+          <div style="font-size:11px;color:var(--tt);margin-bottom:12px;">EP012–EP025 · 14 scripts ready</div>
+          <div class="prog-bar" style="margin-bottom:8px;"><div class="prog-fill" style="width:14%;"></div></div>
+          <div style="font-size:11.5px;color:var(--tt);font-family:'JetBrains Mono',monospace;">2 / 14 episodes rendered</div>
+          <div style="font-size:11px;color:var(--a2);margin-top:8px;">Run RENDER_S3_ALL.bat to continue</div>
+        </div>
+        <div class="card">
+          <div class="stitle" style="margin-bottom:12px;">Quick Actions</div>
+          <div style="display:flex;flex-direction:column;gap:8px;">
+            <button class="btn" style="justify-content:flex-start;" onclick="alert('Run: python channel_uploader.py --reauth --channel GG\\n\\nThis will open a Google OAuth flow.')">🔑 Re-auth GG Token</button>
+            <button class="btn" style="justify-content:flex-start;" onclick="alert('Run: python council\\\\bots\\\\bot_10_frame_inspector.py --channel GG')">🔍 Run Bot-10 QC Check</button>
+            <button class="btn btn-primary" style="justify-content:flex-start;" onclick="alert('YouTube upload requires manual approval.\\n\\nRun: python channel_uploader.py --episode GG_EP008 --channel GG --verify')">📤 Upload EP008 to YouTube</button>
+          </div>
+        </div>
+        <div class="card">
+          <div class="eyebrow" style="margin-bottom:8px;">Social Funnels</div>
+          <div style="font-size:12px;color:var(--ts);line-height:1.6;margin-bottom:10px;">YouTube = main channel. Instagram/TikTok/Facebook/X/Pinterest = 60-sec vertical clips that drive traffic to YouTube.</div>
+          <div style="display:flex;flex-wrap:wrap;gap:6px;">
+            ${['YT','IG','TK','FB','X','Pin'].map(p=>`<div style="font-size:10.5px;font-weight:700;padding:4px 9px;border-radius:6px;background:var(--s3);border:1px solid var(--border);font-family:'JetBrains Mono',monospace;color:var(--ts);">${p}</div>`).join('')}
+          </div>
+        </div>
+      </div>
+    </div>`;
+}
+
+// ── COMMAND PALETTE ───────────────────────────────────────────────────────────
+function renderCmd() {
+  if (!S.cmdOpen) return '';
+  const sug = [
+    { label:'Render GG_EP017',       tag:'Content',   page:'content'   },
+    { label:'Check upload queue',    tag:'Channels',  page:'channels'  },
+    { label:'Relist stale inventory',tag:'Crosspost', page:'crosspost' },
+    { label:"Today's profit",        tag:'Analytics', page:'analytics' },
+    { label:'Generate new book',     tag:'Books',     page:'books'     },
+  ].map(s => `<div onclick="nav('${s.page}')" style="display:flex;align-items:center;gap:11px;padding:10px;border-radius:9px;cursor:pointer;" onmouseover="this.style.background='var(--s2)'" onmouseout="this.style.background='transparent'">
+    <div style="width:26px;height:26px;border-radius:7px;background:var(--s3);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--a2);">✦</div>
+    <span style="font-size:13px;flex:1;">${s.label}</span>
+    <span style="font-size:10.5px;color:var(--tt);">${s.tag}</span>
+  </div>`).join('');
+  return `<div class="cmd-overlay" onclick="closeCmd()">
+    <div class="cmd-panel" onclick="event.stopPropagation()">
+      <div style="display:flex;align-items:center;gap:10px;padding:14px 16px;border-bottom:1px solid var(--border);">
+        <div style="width:14px;height:14px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--a2));flex-shrink:0;box-shadow:0 0 14px rgba(139,92,246,.5);"></div>
+        <input id="cmd-i" value="${S.cmdQuery}" oninput="S.cmdQuery=this.value" onkeydown="if(event.key==='Escape')closeCmd()" placeholder="Tell Empire OS AI what to do…" style="flex:1;background:transparent;border:none;outline:none;color:var(--text);font:500 15px Inter,sans-serif;"/>
+        <span style="font:500 10px/1 'JetBrains Mono',monospace;color:var(--tt);background:var(--s3);border:1px solid var(--border);border-radius:4px;padding:4px 6px;">ESC</span>
+      </div>
+      <div style="padding:10px;max-height:400px;overflow:auto;">
+        <div class="eyebrow" style="padding:8px 8px 6px;">Suggested</div>
+        ${sug}
+      </div>
+    </div>
+  </div>`;
+}
+
+// ── MAIN RENDER ───────────────────────────────────────────────────────────────
+const PAGES = {
+  dashboard: pgDashboard,
+  inventory: pgInventory,
+  editor:    pgEditor,
+  crosspost: pgCrosspost,
+  analytics: pgAnalytics,
+  aicommand: pgAiCommand,
+  content:   pgContent,
+  books:     pgBooks,
+  channels:  pgChannels,
+};
+
+function renderApp() {
+  const p = S.page;
+  const navHtml = NAV.map(n => {
+    const a = p === n.id;
+    return `<div class="nav-item${a?' active':''}" onclick="nav('${n.id}')">
+      ${icon(n.id, a)}
+      <span class="nav-label">${n.label}</span>
+      ${n.badge ? `<span class="badge ${n.badgeCls}">${n.badge}</span>` : ''}
+    </div>`;
+  }).join('');
+
+  document.getElementById('app').innerHTML = `
+    <div class="topbar">
+      <div style="display:flex;align-items:center;gap:10px;min-width:0;">
+        ${LOGO}
+        <div style="display:flex;align-items:baseline;gap:5px;white-space:nowrap;">
+          <span style="font-size:14.5px;font-weight:700;letter-spacing:-.01em;">Empire OS</span>
+          <span style="font-size:14.5px;font-weight:500;color:var(--tt);">Hub</span>
+        </div>
+      </div>
+      <div onclick="openCmd()" style="flex:1;max-width:420px;display:flex;align-items:center;gap:9px;height:36px;padding:0 12px;background:var(--s2);border:1px solid var(--border);border-radius:9px;cursor:pointer;color:var(--tt);">
+        <div style="width:12px;height:12px;border-radius:50%;border:1.6px solid var(--tt);position:relative;flex-shrink:0;"><div style="position:absolute;width:1.6px;height:6px;background:var(--tt);right:-3px;bottom:-3px;transform:rotate(45deg);"></div></div>
+        <span style="font-size:12.5px;flex:1;">Ask Empire OS AI or search…</span>
+        <div style="display:flex;gap:3px;">
+          <span style="font:500 10px/1 'JetBrains Mono',monospace;color:var(--tt);background:var(--s3);border:1px solid var(--border);border-radius:4px;padding:3px 5px;">⌘</span>
+          <span style="font:500 10px/1 'JetBrains Mono',monospace;color:var(--tt);background:var(--s3);border:1px solid var(--border);border-radius:4px;padding:3px 5px;">K</span>
+        </div>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;flex-shrink:0;">
+        <div style="width:1px;height:20px;background:var(--border);"></div>
+        <div style="width:30px;height:30px;border-radius:50%;background:linear-gradient(135deg,#a78bfa,#67e8f9);display:flex;align-items:center;justify-content:center;font:700 12px Inter,sans-serif;color:#0a0a10;flex-shrink:0;">JJ</div>
+      </div>
+    </div>
+    <div class="body-row">
+      <div class="sidebar">
+        <div style="padding:14px 10px;">${navHtml}</div>
+        <div class="credits-box">
+          <div class="credits-inner">
+            <span style="font-size:11.5px;font-weight:600;">AI Credits</span>
+            <span style="font-size:10.5px;color:var(--tt);">2,840 / 5,000 used this month</span>
+            <div class="prog-bar" style="margin-top:2px;"><div class="prog-fill" style="width:57%;"></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="main">${(PAGES[p]||pgDashboard)()}</div>
+    </div>
+    ${renderCmd()}`;
+
+  if (S.cmdOpen) {
+    const ci = document.getElementById('cmd-i');
+    if (ci) setTimeout(() => ci.focus(), 0);
+  }
+}
+
+// ── KEYBOARD ──────────────────────────────────────────────────────────────────
+document.addEventListener('keydown', e => {
+  if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') { e.preventDefault(); openCmd(); }
+  if (e.key === 'Escape' && S.cmdOpen) closeCmd();
+});
+
+renderApp();
+</script>
+</body>
+</html>

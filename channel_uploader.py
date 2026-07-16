@@ -249,6 +249,18 @@ def upload_episode(
     desc  = meta.get("description") or ch["default_desc"]
     tags  = list(set(meta.get("tags", []) + ch["default_tags"]))
 
+    # ── Enforce episode number prefix ─────────────────────────────────────────
+    # Extract number from ep_id e.g. GG_EP006 → 6 → "EP006"
+    import re as _re
+    ep_match = _re.search(r"EP(\d+)", ep_id, _re.IGNORECASE)
+    if ep_match:
+        ep_num = f"EP{int(ep_match.group(1)):03d}"   # EP006, EP012, EP025 etc.
+        # Strip any existing malformed ep prefix (EP1, EP2, EP12, etc.) from title
+        title = _re.sub(r"\|\s*Gods\s*&\s*Glory\s*EP\d+\s*$", "", title, flags=_re.IGNORECASE).strip()
+        title = _re.sub(r"\bEP\d+\b\s*\|?\s*", "", title, flags=_re.IGNORECASE).strip()
+        # Prepend clean numbered prefix
+        title = f"{ep_num} | {title}"
+
     print(f"\n[{ep_id}] {title}")
     print(f"  File:    {path.name} ({size_mb:.0f}MB)")
     print(f"  Channel: {ch['name']}")

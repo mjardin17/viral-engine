@@ -6,6 +6,8 @@ Every provider (Higgsfield, Kling, Veo, Runway) must implement this interface.
 """
 
 from abc import ABC, abstractmethod
+from pathlib import Path
+import urllib.request
 
 
 class ProviderBase(ABC):
@@ -52,10 +54,9 @@ class ProviderBase(ABC):
         """Poll status of a submitted job. Returns {"status": ..., "output_url": ...}"""
         ...
 
-    def not_connected_response(self, operation: str) -> dict:
-        return {
-            "status": "not_connected",
-            "job_id": None,
-            "operation": operation,
-            "message": f"Provider '{self.__class__.__name__}' not connected — set the required API key.",
-        }
+    def download_clip(self, output_url: str, dest_path: str | Path) -> bool:
+        """
+        Download a finished clip/asset from output_url to dest_path.
+        Returns True on success (file exists and is >10KB). Never raises.
+        """
+        d

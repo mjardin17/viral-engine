@@ -1,0 +1,152 @@
+{
+  "episode_id": "GG_EP003",
+  "title": "The Last Emperor: Constantinople Falls, 1453",
+  "channel": "GG",
+  "total_scenes": 12,
+  "scenes": [
+    {
+      "scene_number": 1,
+      "title": "The Emperor Takes Off His Crown",
+      "narration": "May 29th, 1453. Before dawn. The walls of Constantinople are breaking, and the last Roman Emperor knows it. Constantine XI stands in the smoke as Ottoman soldiers pour through a breach that a thousand years of enemies could not make. His advisors beg him to flee — there are ships waiting, escape is still possible. Instead, he does something no emperor has ever done. He strips off the purple. The imperial eagles, the insignia, everything that marks him as the heir of Augustus and Constantine the Great — gone. Then he draws his sword and charges into the breach as an ordinary soldier, and vanishes into the melee. His body is never conclusively identified. Fifteen hundred years of Roman Empire die with him, anonymous, in the dark. This is how Rome actually ends.",
+      "image_prompts": [
+        "Constantine XI Palaiologos last Byzantine emperor portrait",
+        "fall of Constantinople 1453 final assault dramatic painting",
+        "Theodosian walls of Constantinople breach at night illustration",
+        "Byzantine imperial double-headed eagle insignia purple banner"
+      ],
+      "ken_burns": "zoom_in"
+    },
+    {
+      "scene_number": 2,
+      "title": "The City the World Could Not Take",
+      "narration": "For eleven hundred years, this city was untakeable. Constantinople: the New Rome, seat of emperors, the richest city in Christendom, guarded on three sides by the sea and on the fourth by the most formidable fortifications ever built — the Theodosian Walls. Three layers deep, sixty feet high, studded with nearly two hundred towers. Huns, Avars, Persians, Arabs, Bulgars, Rus — twenty-three sieges broke against these stones. But by 1453, the empire behind the walls is a ghost. Plague, crusaders, and centuries of decline have gutted it. The 'empire' is now essentially one city and a few scraps of coastline. Inside the walls built for half a million people, perhaps fifty thousand remain. Constantine XI can scrape together fewer than eight thousand defenders. And an empire on the other side of the water has been waiting a very long time.",
+      "image_prompts": [
+        "Theodosian walls of Constantinople triple fortification reconstruction",
+        "Byzantine Constantinople city panorama medieval illustration Hagia Sophia",
+        "map of Byzantine Empire territorial decline 1453",
+        "Golden Horn harbor Constantinople medieval painting"
+      ],
+      "ken_burns": "zoom_out"
+    },
+    {
+      "scene_number": 3,
+      "title": "The Boy Sultan and the Impossible Gun",
+      "narration": "Mehmed II is twenty-one years old, and he has wanted this city since childhood. He sleeps with maps of its walls. His own ministers think he's reckless; his elders remember that every sultan who attacked Constantinople failed. Mehmed doesn't care about precedent. He cares about a Hungarian engineer named Orban, who arrives offering to build the largest cannon on earth. The Byzantines couldn't afford Orban's services. Mehmed pays him four times his asking price. The result is a monster twenty-seven feet long, firing stone balls weighing over half a ton. It takes sixty oxen and four hundred men to move it, and it can only fire seven times a day — but each shot can shatter walls that stood for a millennium. Medieval fortification has just become obsolete. Nobody inside Constantinople fully understands this yet.",
+      "image_prompts": [
+        "Sultan Mehmed II the Conqueror portrait painting Gentile Bellini",
+        "great Ottoman bombard Dardanelles gun giant medieval cannon photograph",
+        "Ottoman army marching with siege artillery illustration",
+        "team of oxen hauling giant cannon medieval engraving"
+      ],
+      "ken_burns": "zoom_in"
+    },
+    {
+      "scene_number": 4,
+      "title": "The Siege Begins",
+      "narration": "April 6th, 1453. Mehmed arrives with an army the defenders can't count — somewhere between eighty and two hundred thousand men, stretched along the entire four-mile length of the land walls. Eight thousand defenders look down on a sea of tents. Then Orban's guns open fire, and the bombardment simply never stops. Day after day, the great stones scream in and the ancient walls crack and slide. The defenders — Greeks fighting beside Genoese and Venetian volunteers, commanded by the brilliant Italian soldier Giustiniani — rebuild the breaches every night with rubble, timber, and barrels of earth. By morning the guns undo their work. It becomes a grinding rhythm: destruction by day, resurrection by night. The city is dying in slow motion, and everyone on both sides of the wall knows the only question is when.",
+      "image_prompts": [
+        "siege of Constantinople 1453 Ottoman camp panorama painting",
+        "Ottoman cannon bombarding city walls medieval illustration",
+        "defenders repairing breached wall at night dramatic painting",
+        "Giovanni Giustiniani Genoese commander medieval portrait illustration"
+      ],
+      "ken_burns": "pan_left"
+    },
+    {
+      "scene_number": 5,
+      "title": "Ships Sail Over a Mountain",
+      "narration": "Constantinople has one safe flank: the Golden Horn, its harbor, sealed by a massive iron chain that no fleet can break. Mehmed's ships try. They fail. So the young sultan orders something that sounds like madness — if the fleet cannot break into the harbor, it will go around the chain. Over land. His engineers build a greased wooden track a mile long, over a two-hundred-foot ridge, and in a single night, teams of oxen and thousands of men drag seventy warships up the hill, through the countryside, and down into the Golden Horn. The defenders wake to an impossible sight: an enemy fleet inside their harbor, sails full, drums beating. The city's safe flank is gone. Every defender now has to be everywhere. Eight thousand men are stretched to breaking.",
+      "image_prompts": [
+        "Ottoman ships transported overland into Golden Horn painting Zonaro",
+        "great chain of the Golden Horn Constantinople artifact photograph",
+        "Ottoman galleys on greased logs over hill illustration",
+        "Byzantine defenders watching enemy fleet in harbor dramatic painting"
+      ],
+      "ken_burns": "pan_right"
+    },
+    {
+      "scene_number": 6,
+      "title": "Fifty-Three Days",
+      "narration": "The siege grinds through May, and the city begins to hallucinate its own doom. Food runs short. Men desert the walls at night to dig their families' gardens. Then the omens start. During a procession, an icon of the Virgin slips from its bearers into the mud. A freak fog swallows the city — in May — and when it lifts, a strange light dances on the dome of the Hagia Sophia. Even the sky seems to be switching sides; we now know a distant volcanic eruption had darkened the moon that spring, but to the defenders, the lunar eclipse fulfills an ancient prophecy: the city will fall under a darkened moon. In the Ottoman camp, Mehmed faces his own crisis — advisors urging him to abandon the siege before a Christian relief army arrives. He gives his answer on May 27th: prepare the final assault.",
+      "image_prompts": [
+        "religious procession with icon Constantinople Byzantine painting",
+        "lunar eclipse blood moon over medieval city dramatic illustration",
+        "Hagia Sophia dome glowing strange light night painting",
+        "Ottoman war council Mehmed II with viziers miniature painting"
+      ],
+      "ken_burns": "zoom_in"
+    },
+    {
+      "scene_number": 7,
+      "title": "The Last Night of Byzantium",
+      "narration": "May 28th. Both sides know tomorrow is the end. In the Ottoman camp, fires burn from horizon to horizon and the army fasts and prays. Inside the walls, something extraordinary happens. Orthodox and Catholic — enemies who have hated each other for four centuries, whose feud helped doom this city — crowd together into the Hagia Sophia for a final liturgy. Emperor Constantine speaks to his commanders. He tells the Greeks they are the descendants of Rome. He tells the Italians they are brothers. He asks forgiveness of any man he has ever wronged, and the chronicler says every soldier in the room wept. Then they walk to the walls in darkness and lock the gates behind themselves — so that no one will be tempted to run. At half past one in the morning, the Ottoman lines erupt.",
+      "image_prompts": [
+        "interior of Hagia Sophia candlelit Byzantine liturgy painting",
+        "Constantine XI final speech to defenders dramatic painting",
+        "Ottoman camp at night thousands of fires illustration",
+        "medieval soldiers praying before battle candlelight painting"
+      ],
+      "ken_burns": "zoom_out"
+    },
+    {
+      "scene_number": 8,
+      "title": "The Assault",
+      "narration": "Mehmed throws his army at the walls in three waves, each timed to bleed the defenders a little more. First the irregulars — expendable, driven forward, dying in heaps in the ditch. The exhausted defenders beat them back. Then the Anatolian regulars, hammering the shattered stretch of wall by the Gate of Saint Romanus. Beaten back again. For four hours, eight thousand men hold off an empire. Giustiniani is everywhere, plugging every gap. Constantine fights beside his soldiers in the breach. As dawn bleeds into the sky, Mehmed plays his last piece: the Janissaries. Fresh, silent, professional — the finest infantry in the world, advancing with terrible discipline into the gap. The defenders have been fighting all night. The men coming up the rubble have been waiting all night. And then, two disasters strike within minutes.",
+      "image_prompts": [
+        "Ottoman final assault on Constantinople walls 1453 dramatic painting",
+        "Janissaries elite Ottoman infantry advancing illustration",
+        "night battle on breached city wall torchlight painting",
+        "defenders fighting on rubble of broken wall medieval illustration"
+      ],
+      "ken_burns": "zoom_in"
+    },
+    {
+      "scene_number": 9,
+      "title": "An Open Gate and a Fallen Captain",
+      "narration": "The first disaster is small enough to be absurd. The Kerkoporta — a tiny sally gate — is left unbarred after a night raid. Ottoman soldiers find it, slip through, and suddenly there are enemy banners on the wall itself. Panic ripples down the line. Minutes later, the second blow: a shot tears through Giustiniani's armor. The man who has held the defense together for seven weeks is carried bleeding to the harbor, and his Genoese troops — seeing their captain leave — begin to follow. The defense doesn't collapse everywhere at once; it collapses like a wall of sand, one section pulling down the next. The Janissaries sense it and surge. Constantine, watching his line dissolve, makes his final choice — off comes the purple, and the last emperor of Rome disappears into the breach, sword in hand.",
+      "image_prompts": [
+        "small hidden postern gate in massive medieval wall photograph",
+        "wounded commander carried from battle medieval painting",
+        "Ottoman banner raised on captured city wall illustration",
+        "last charge of Constantine XI fall of Constantinople painting"
+      ],
+      "ken_burns": "pan_left"
+    },
+    {
+      "scene_number": 10,
+      "title": "One Morning Ends a Thousand Years",
+      "narration": "By mid-morning, it is over. The walls that stood for a thousand years fall in a single morning, and the city they protected is given over to sack. Thousands flee to the Hagia Sophia, remembering an old prophecy that an angel will descend to save them at the last moment. The doors are hacked open. No angel comes. That afternoon, Mehmed the Conqueror rides through the conquered streets, dismounts before the greatest church in Christendom, and pours a handful of earth over his turban in humility before God. Then he walks into the Hagia Sophia and orders it converted to a mosque. Seeing the ruined imperial palace, legend says, he whispered a Persian verse: 'The spider spins his web in the palace of the Caesars.' The Roman Empire — begun with Augustus, twenty-two centuries of unbroken lineage through Byzantium — is gone.",
+      "image_prompts": [
+        "Mehmed II entering Constantinople painting Benjamin Constant",
+        "Hagia Sophia interior converted to mosque historical painting",
+        "sack of Constantinople 1453 chaos in streets illustration",
+        "Ottoman sultan on horseback entering conquered city gate painting"
+      ],
+      "ken_burns": "zoom_in"
+    },
+    {
+      "scene_number": 11,
+      "title": "The Refugees Who Carried Fire",
+      "narration": "But watch the harbor. Ships are escaping — Genoese, Venetian, packed with survivors. And in their baggage is something more valuable than gold: books. Greek scholars have been trickling west for decades as the empire shrank, carrying manuscripts of Plato, Aristotle, Ptolemy, Homer — texts Western Europe had lost or half-forgotten for centuries. The fall of 1453 turns the trickle into a flood, straight into the counting-houses and courts of Renaissance Italy, where men like the Medici pay fortunes for them. Meanwhile, with the old trade routes to the East now running through Ottoman hands, Europeans start seriously funding a dangerous idea: reaching Asia by sea. Within forty years of the city's fall, Portuguese ships round Africa, and a Genoese captain named Columbus — from the same seafaring city as the men who died on those walls — sails west.",
+      "image_prompts": [
+        "Renaissance scholars studying Greek manuscripts painting",
+        "Byzantine refugees boarding ships fleeing city illustration",
+        "ancient Greek manuscript illuminated codex photograph",
+        "Christopher Columbus ships departing harbor painting"
+      ],
+      "ken_burns": "zoom_out"
+    },
+    {
+      "scene_number": 12,
+      "title": "The Day the Middle Ages Died",
+      "narration": "Historians need borders, and many draw the line right here: May 29th, 1453 — the day the Middle Ages ended. One morning of gunfire proved that no wall can stop technology. It's a lesson every fortress-builder since has relearned the hard way, from the Maginot Line to the digital firewalls of today: no defense is permanent. Standing still is a strategy for dying. Constantinople became Istanbul, capital of an empire that would terrify Europe for two centuries — and we'll see how far that tide reached, at the gates of Vienna, later this season. But the city on the Bosphorus still stands, and the Hagia Sophia still holds up its impossible dome — built by Romans, claimed by sultans, argued over to this very day. Empires die. Their ghosts negotiate forever. Next week: Rome's legions march into a German forest — and never march out.",
+      "image_prompts": [
+        "Hagia Sophia Istanbul exterior with minarets photograph",
+        "Istanbul skyline Bosphorus golden sunset photograph",
+        "Maginot Line fortress bunker historical photograph",
+        "old map of Ottoman Empire at its height 16th century"
+      ],
+      "ken_burns": "zoom_in"
+    }
+  ]
+}

@@ -1,0 +1,152 @@
+{
+  "episode_id": "GG_EP002",
+  "title": "Rome's Worst Day: The Slaughter at Cannae, 216 BC",
+  "channel": "GG",
+  "total_scenes": 12,
+  "scenes": [
+    {
+      "scene_number": 1,
+      "title": "One Afternoon in August",
+      "narration": "August 2nd, 216 BC. Southern Italy. The sun is going down over a field near a small town called Cannae, and the ground is no longer visible. It is covered, horizon to horizon, with the bodies of Roman soldiers. Seventy thousand men marched onto this plain at dawn. By dusk, most of them are dead. Not scattered. Not routed. Slaughtered — packed so tightly they couldn't raise their swords, killed in a ring that closed around them like a fist. Rome has lost more men in one afternoon than America lost in the entire Vietnam War. The man who did this has no siege engines, no supply line, and no way home. His name is Hannibal Barca. And he has just executed the most perfect battle in human history.",
+      "image_prompts": [
+        "aftermath of the Battle of Cannae historical painting dead Roman soldiers on battlefield",
+        "portrait of Hannibal Barca ancient marble bust",
+        "Apulia Italy plain landscape at sunset Aufidus river",
+        "ancient Roman soldiers armor and weapons scattered battlefield engraving"
+      ],
+      "ken_burns": "zoom_in"
+    },
+    {
+      "scene_number": 2,
+      "title": "The Man Who Hated Rome",
+      "narration": "To understand Cannae, you have to understand a nine-year-old boy standing at an altar in Carthage. His father, the general Hamilcar, makes him swear an oath: eternal hatred of Rome. That boy grows up in army camps in Spain, learning war the way other children learn language. In 218 BC, Hannibal does the impossible — he marches an army of Africans, Spaniards, and war elephants over the Alps in winter. Half his men die on the mountains. It doesn't matter. He falls on Italy like an avalanche. At the Trebia River, he destroys a Roman army. At Lake Trasimene, he ambushes another and kills fifteen thousand men in three hours. Rome has now lost two armies in two years. And Hannibal is still coming.",
+      "image_prompts": [
+        "Hannibal crossing the Alps with war elephants historical oil painting",
+        "ancient Carthage city harbor reconstruction illustration",
+        "Hamilcar Barca and young Hannibal oath scene classical painting",
+        "Battle of Lake Trasimene ambush historical illustration"
+      ],
+      "ken_burns": "pan_right"
+    },
+    {
+      "scene_number": 3,
+      "title": "Rome Raises the Largest Army in Its History",
+      "narration": "Rome's answer is brutally simple: overwhelm him. The Republic raises the largest army it has ever fielded — eight full legions plus allies, over eighty thousand men. Command rotates daily between two consuls who despise each other. Lucius Aemilius Paullus is cautious, aristocratic, and suspicious of Hannibal's tricks. Gaius Terentius Varro is a populist in a hurry, elected on a promise to end this war with one decisive blow. Hannibal has roughly fifty thousand men — outnumbered almost two to one. When Roman scouts report his position at Cannae, on open ground perfect for Rome's heavy infantry, Varro sees the chance of a lifetime. Paullus sees a trap. On August 2nd, it is Varro's day to command. He orders the army to attack.",
+      "image_prompts": [
+        "Roman legion marching in formation historical oil painting",
+        "Roman consul in toga addressing the Senate classical painting",
+        "ancient map of southern Italy Second Punic War 216 BC",
+        "Roman Republic soldiers with shields and pila detailed illustration"
+      ],
+      "ken_burns": "zoom_out"
+    },
+    {
+      "scene_number": 4,
+      "title": "The Trap Is Set",
+      "narration": "Dawn, and eighty thousand Romans deploy in a formation deeper and denser than any in their history — a human battering ram designed to punch straight through Hannibal's center and end the war by lunch. Across the field, Hannibal does something that looks like suicide. He puts his weakest troops — Gauls and Spaniards — directly in the center, facing the full weight of the Roman ram. His elite African veterans, he holds back on the wings, hidden in plain sight. Then he walks the line, laughing with his men, as the largest army Rome has ever built comes to kill them. One officer jokes nervously about the enemy's numbers. Hannibal replies: in all that multitude, there is not one man named Gisgo. The center is not a line. It is bait.",
+      "image_prompts": [
+        "Battle of Cannae tactical formation diagram double envelopment",
+        "Celtic and Iberian warriors ancient battle line illustration",
+        "Hannibal on horseback reviewing troops historical painting",
+        "Carthaginian Libyan infantry veterans with captured Roman armor illustration"
+      ],
+      "ken_burns": "pan_left"
+    },
+    {
+      "scene_number": 5,
+      "title": "The Ram Strikes",
+      "narration": "The armies collide, and the sound carries for miles — the crash of a hundred and thousand shields, a noise ancient writers struggled to describe. The Roman ram does exactly what it was built to do. It smashes into Hannibal's center, and the Gauls and Spaniards begin to give ground. Step by step, the Carthaginian line bends backward, its crescent curving in like a bow drawn to breaking point. The Romans smell victory. They push harder, rank upon rank pressing forward into the collapsing center, packing themselves tighter with every step. Roman soldiers in the rear can't even see the enemy — they simply shove the men in front of them deeper into the pocket. It looks like the center is breaking. It is doing precisely what Hannibal told it to do.",
+      "image_prompts": [
+        "ancient battle clash of Roman legion and Carthaginian infantry dramatic oil painting",
+        "Roman soldiers pushing forward with shields testudo dense formation illustration",
+        "Battle of Cannae crescent formation bending diagram",
+        "Gallic warriors fighting Romans close combat historical engraving"
+      ],
+      "ken_burns": "zoom_in"
+    },
+    {
+      "scene_number": 6,
+      "title": "The Cavalry Doors Slam Shut",
+      "narration": "While the infantry grinds forward, the real battle is happening on the flanks — and Rome is losing it in minutes. On the left, Hasdrubal's heavy Spanish and Gallic cavalry smashes the Roman horsemen against the river and annihilates them. On the right, Numidian riders — the finest light cavalry on earth — swarm the allied cavalry like hornets. Then Hasdrubal does something almost no cavalry commander in history has the discipline to do. He doesn't chase the fleeing survivors. He rallies his squadrons, wheels them around the entire Roman army, and drives off the second cavalry wing too. Now both Roman flanks are naked. Behind the legions, where their line of retreat should be, there is nothing but dust — and inside that dust, thousands of enemy horsemen turning inward.",
+      "image_prompts": [
+        "Numidian light cavalry riders ancient warfare illustration",
+        "ancient cavalry battle charge by river dramatic painting",
+        "Hasdrubal Carthaginian cavalry commander illustration",
+        "Roman cavalry fleeing battlefield dust clouds historical painting"
+      ],
+      "ken_burns": "pan_right"
+    },
+    {
+      "scene_number": 7,
+      "title": "The Jaws Close",
+      "narration": "This is the moment the trap becomes a masterpiece. Hannibal's center, bent to breaking, finally holds. And on the wings, his African veterans — untouched, rested, wearing captured Roman armor — pivot inward like two doors swinging shut. They slam into the exposed Roman flanks. At the same instant, Hasdrubal's cavalry hits the legions from behind. In the space of minutes, eighty thousand men discover that the battlefield no longer has a direction called 'back.' The Roman army, the largest ever assembled, is now sealed inside a ring of iron. The word for what Hannibal has just done — a double envelopment — barely exists yet. He is outnumbered nearly two to one, and he has surrounded them. Military academies will still be diagramming these five minutes twenty-two centuries later.",
+      "image_prompts": [
+        "double envelopment Cannae encirclement battle map diagram",
+        "African infantry attacking Roman flank ancient battle painting",
+        "surrounded Roman legion soldiers back to back illustration",
+        "aerial view ancient battlefield encirclement artistic reconstruction"
+      ],
+      "ken_burns": "zoom_in"
+    },
+    {
+      "scene_number": 8,
+      "title": "The Killing Floor",
+      "narration": "What follows is not a battle. It is an execution that takes all afternoon. The Romans are packed so densely that most cannot lift their weapons. Men in the center stand for hours, hearing the ring shrink toward them, waiting their turn to die. Some dig into the earth with bare hands, burying their faces in the soil. Some offer their throats. The Carthaginians work inward rank by rank, exhausted by the sheer labor of killing. Ancient sources say six hundred Romans died every minute — a rate of slaughter no battle would match until the machine guns of the First World War. By sunset, somewhere between fifty and seventy thousand Romans are dead in an area smaller than New York's Central Park. Hannibal has lost fewer than six thousand men.",
+      "image_prompts": [
+        "dense mass of trapped Roman soldiers battle chaos dark oil painting",
+        "Battle of Cannae massacre scene 19th century historical painting",
+        "fallen Roman soldiers shields and swords on ground engraving",
+        "Carthaginian soldiers advancing through battlefield twilight illustration"
+      ],
+      "ken_burns": "zoom_out"
+    },
+    {
+      "scene_number": 9,
+      "title": "The Death of Paullus",
+      "narration": "Somewhere inside the ring, the consul Paullus is bleeding from a sling stone that struck him at the battle's start. He has spent the day riding wherever the fighting is worst, and now he sits on a rock, wounded, as the ring closes. A military tribune named Lentulus finds him and offers his own horse — the last horse, the last chance. Paullus refuses. He will not spend the battle's final hour explaining to the Senate a disaster he opposed and could not prevent. He tells Lentulus to ride to Rome and warn them: fortify the city. Then he turns back toward the enemy. The Carthaginians never learn who he is. They cut him down among his men, one anonymous body in a field of fifty thousand. Varro — the consul who ordered the attack — escapes.",
+      "image_prompts": [
+        "The Death of Aemilius Paullus painting John Trumbull",
+        "wounded Roman consul refusing horse on battlefield classical painting",
+        "Roman tribune on horseback fleeing battle dramatic illustration",
+        "dying Roman general surrounded by enemies historical oil painting"
+      ],
+      "ken_burns": "zoom_in"
+    },
+    {
+      "scene_number": 10,
+      "title": "Thirty Days of Silence",
+      "narration": "The news reaches Rome, and the city breaks. There is no family in Rome that has not lost someone — a fifth of the Republic's fighting-age men died in a single afternoon. The Senate bans public mourning because the wailing is drowning out government. In their terror, the Romans do something they had almost never done: they bury four people alive in the Forum as human sacrifices, begging gods they think have abandoned them. And then — the pivot on which all of Western history turns — they do the unthinkable. They refuse to negotiate. Hannibal sends envoys offering ransom for eight thousand prisoners. The Senate says no. They will not pay. They will not treat. When Varro, the man responsible, returns, the Senate meets him at the gates — and thanks him for not despairing of the Republic.",
+      "image_prompts": [
+        "Roman Senate in session ancient Rome interior painting",
+        "Roman women mourning at temple classical painting",
+        "Roman Forum ancient city reconstruction illustration",
+        "Roman senators in togas solemn gathering historical painting"
+      ],
+      "ken_burns": "zoom_out"
+    },
+    {
+      "scene_number": 11,
+      "title": "The Victory That Lost the War",
+      "narration": "Hannibal's cavalry commander Maharbal begs him to march on Rome immediately: give me the cavalry, and in five days you dine on the Capitol. Hannibal hesitates — his army is exhausted, and he has no siege equipment. Maharbal's reply becomes immortal: 'You know how to win a victory, Hannibal. You do not know how to use one.' He is right. Rome refuses every battle, raises new legions from slaves and boys, and bleeds Hannibal dry for thirteen more years. Then a young Roman named Scipio — a survivor of Cannae — studies Hannibal's own tactics, invades Africa, and turns them against him. At Zama in 202 BC, Hannibal finally loses. Carthage falls. Within a generation, Rome doesn't just win the war. It erases Carthage from the face of the earth.",
+      "image_prompts": [
+        "Battle of Zama Scipio versus Hannibal historical painting",
+        "Scipio Africanus ancient marble bust portrait",
+        "ruins of ancient Carthage archaeological site photograph",
+        "Roman siege and destruction of Carthage illustration"
+      ],
+      "ken_burns": "pan_left"
+    },
+    {
+      "scene_number": 12,
+      "title": "The Battle That Never Ended",
+      "narration": "Cannae never really ended. It became an obsession. Napoleon studied it. The German General Staff spent forty years trying to rebuild it — their plan for World War One was Cannae drawn on a map of France. Schwarzkopf's flanking sweep in the Gulf War was Cannae with tanks. To this day, cadets at West Point diagram those two hours in an Italian field, chasing the perfect battle of annihilation. Almost all of them fail — because Cannae needs an enemy who cooperates and a commander who bets everything. But the deeper lesson belongs to Rome. Hannibal fought a perfect battle and lost the war, because he faced a people who simply refused to admit defeat. Genius wins afternoons. Endurance wins centuries. Next week: a city with a thousand years of walls — and the cannon built to end them.",
+      "image_prompts": [
+        "West Point military academy cadets classroom historic photograph",
+        "Napoleon studying maps by candlelight painting",
+        "Alfred von Schlieffen German General Staff portrait photograph",
+        "modern tank column desert flanking maneuver Gulf War photograph"
+      ],
+      "ken_burns": "zoom_in"
+    }
+  ]
+}

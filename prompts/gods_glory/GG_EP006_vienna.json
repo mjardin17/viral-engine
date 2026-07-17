@@ -1,0 +1,152 @@
+{
+  "episode_id": "GG_EP006",
+  "title": "The Winged Hussars: How Europe Was Saved at Vienna, 1683",
+  "channel": "GG",
+  "total_scenes": 12,
+  "scenes": [
+    {
+      "scene_number": 1,
+      "title": "The Sound from the Hills",
+      "narration": "September 12th, 1683. Late afternoon. Vienna is hours from death. The city has been strangled for two months — its people are eating cats, rats, and boiled hides. The walls are collapsing, Ottoman mines are chewing through the last defenses, and two hundred thousand besiegers wait for the final assault. And then, from the wooded hills above the city, comes a sound the Ottoman army has never heard. A low thunder, growing. Thousands of lance pennants rising over the ridge line — and behind each rider, towering frames of eagle feathers that scream in the wind as they charge. Eighteen thousand horsemen are coming downhill at full gallop, the largest cavalry charge in the history of the world, aimed like a spear at the heart of the Ottoman camp. The men in the feathers are Polish Winged Hussars. Europe's fate rides with them.",
+      "image_prompts": [
+        "Polish winged hussars cavalry charge painting Battle of Vienna",
+        "winged hussar armor with eagle feather wings museum photograph",
+        "siege of Vienna 1683 panorama Ottoman camp painting",
+        "Kahlenberg hills above Vienna landscape photograph"
+      ],
+      "ken_burns": "zoom_in"
+    },
+    {
+      "scene_number": 2,
+      "title": "The Empire That Never Stopped",
+      "narration": "For three hundred years, the Ottoman Empire has been the terror of Europe — the superpower that swallowed Constantinople, the Balkans, Hungary, and the Mediterranean. In 1683, Sultan Mehmed IV's empire stretches across three continents, and his Grand Vizier, Kara Mustafa Pasha, hungers to complete the dream that even Suleiman the Magnificent failed: taking Vienna, the 'Golden Apple,' gateway to the German lands and the heart of Christian Europe. In the spring, he marches north with one of the largest armies the empire has ever assembled — perhaps 150,000 to 200,000 fighting men — a moving city of camels, oxen, and cannon. Facing them: the Habsburg Empire, broke, distracted, and defended by a fraction of those numbers. When the Ottoman host crosses the frontier in July, Emperor Leopold does the math — and flees his own capital in the night. Sixty thousand Viennese flee with him.",
+      "image_prompts": [
+        "Kara Mustafa Pasha Ottoman grand vizier portrait painting",
+        "Ottoman army on the march with camels and banners painting",
+        "map of Ottoman Empire expansion into Europe 17th century",
+        "Emperor Leopold I Habsburg portrait painting"
+      ],
+      "ken_burns": "pan_left"
+    },
+    {
+      "scene_number": 3,
+      "title": "Eleven Thousand Against an Empire",
+      "narration": "Vienna is left with eleven thousand soldiers, five thousand armed citizens, and a commander with a spine of iron: Count Ernst Rüdiger von Starhemberg. His first order is ruthless — burn the suburbs to the ground so the Ottomans find no cover. On July 14th, the tide arrives. Kara Mustafa's engineers ring the city, and he sends the customary offer: convert or surrender, and live. Starhemberg doesn't bother replying. But the Grand Vizier makes a choice that will shadow everything to come. Confident the city must fall — and wanting its riches intact for himself — he settles in for a patient siege. His camp becomes a wonder: silk tents, gardens, fountains, even ostriches. He is already living like the governor of Vienna. What he does not do, in two long months, is seriously fortify his camp against attack from outside. Why would he? No one is coming.",
+      "image_prompts": [
+        "Ernst Rudiger von Starhemberg portrait painting",
+        "burning suburbs outside Vienna city walls 1683 illustration",
+        "lavish Ottoman camp silk tents illustration 17th century",
+        "Vienna city fortifications star fort map 1683"
+      ],
+      "ken_burns": "zoom_out"
+    },
+    {
+      "scene_number": 4,
+      "title": "The War Underground",
+      "narration": "The siege of Vienna is fought in the dark, under the earth. Ottoman engineers are the finest miners in the world, and they burrow relentlessly toward the walls, packing tunnels with gunpowder to blow the fortifications sky-high. The defenders counter-mine, listening through the soil with drums and peas on drumheads for the scrape of enemy shovels, breaking into Ottoman tunnels for knife fights by torchlight, sixty feet down. Above ground, the bombardment never stops. Week by week, the explosions tear pieces off the city's bastions — the Burg ravelin, the Löbel bastion, names that become synonyms for slaughter. The garrison bleeds: eleven thousand fighters dwindle toward four. Dysentery stalks the streets. By early September, rations are gone — Viennese householders hunt rats and the last cats. Starhemberg, sick himself, hangs on with signal rockets fired nightly from the cathedral tower: a plea into the darkness. Is anyone out there?",
+      "image_prompts": [
+        "siege mining tunnel warfare underground illustration",
+        "explosion breach in city bastion siege painting",
+        "starving civilians in besieged city 17th century illustration",
+        "St Stephens cathedral tower Vienna night photograph"
+      ],
+      "ken_burns": "zoom_in"
+    },
+    {
+      "scene_number": 5,
+      "title": "The King Who Answered",
+      "narration": "Someone is out there. Months earlier, the Habsburgs signed a desperate treaty with the Polish-Lithuanian Commonwealth and its warrior-king, Jan III Sobieski — a man who has spent his life beating Ottomans. The Pope's gold raises the army; cold strategy does the rest — if Vienna falls, Kraków is next. Through late summer, the relief force gathers: Austrians under Duke Charles of Lorraine, Bavarians, Saxons, Franconians — and Sobieski's Poles, marching two hundred miles with the famous Hussars, the heavy cavalry that has shattered every enemy it has ever charged. Seventy thousand strong — outnumbered two to one — the allied princes do the impossible: they hand supreme command to the foreigner, Sobieski. He looks at the maps and chooses his road: through the Vienna Woods, over the steep ridge called the Kahlenberg. The one direction Kara Mustafa is sure no army can come from.",
+      "image_prompts": [
+        "King Jan III Sobieski of Poland portrait on horseback painting",
+        "Polish army on the march 17th century painting",
+        "Charles of Lorraine general portrait painting",
+        "Vienna woods forested hills Kahlenberg photograph"
+      ],
+      "ken_burns": "pan_right"
+    },
+    {
+      "scene_number": 6,
+      "title": "The Race Against the Mines",
+      "narration": "Now it's a race, and Vienna is losing it. On September 4th, a massive mine brings down the Burg bastion, and the assault columns pour in — beaten back hand-to-hand at the barricades. The defenders are down to their last thousands, and everyone knows one more breach will be the last. Kara Mustafa knows it too — his janissaries are grumbling, and his scouts bring word of an army in the hills. His choice: turn his full strength against the relief force, or finish the city first. He chooses arrogance. The trenches stay full. The mines keep digging toward the final breach, aimed to blow on September 13th. On the night of September 11th, watchers on the cathedral tower see fire bloom on the Kahlenberg summit — rockets, answering theirs. The army is on the ridge. Tomorrow decides everything.",
+      "image_prompts": [
+        "assault on breach fierce hand to hand fighting painting",
+        "janissaries storming fortification siege of Vienna illustration",
+        "signal fire on hilltop at night dramatic illustration",
+        "17th century army camp on wooded ridge illustration"
+      ],
+      "ken_burns": "zoom_in"
+    },
+    {
+      "scene_number": 7,
+      "title": "Morning on the Kahlenberg",
+      "narration": "Dawn, September 12th. On the summit, in a ruined chapel, mass is said for the army; Sobieski himself serves at the altar. Then the allied host comes down off the mountain like a slow avalanche. This is brutal ground — vineyards, ravines, walled villages — and Ottoman troops contest every slope as the Austrians and Germans grind forward, village by burning village. Kara Mustafa, finally awake to the scale of the threat, makes his second fatal choice: he refuses to abandon the siege. He splits his army — his best men stay in the trenches storming Vienna while the rest turn to face the relief. All day the battle rages through Nussdorf and Heiligenstadt. And through those hours, on the allied right, the Poles do what the Ottomans can't see: dragging eighteen thousand horses through gullies into position above the open ground.",
+      "image_prompts": [
+        "mass before battle Kahlenberg chapel Sobieski painting",
+        "battle in vineyards villages infantry fighting 17th century painting",
+        "Ottoman troops defending slope musket fire illustration",
+        "Polish cavalry moving through wooded ravine illustration"
+      ],
+      "ken_burns": "pan_left"
+    },
+    {
+      "scene_number": 8,
+      "title": "The Charge",
+      "narration": "Late afternoon. The Ottoman line is stretched, exhausted, and bent — and the Poles are finally where Sobieski wants them. First a probing squadron thunders down to test the ground. It holds. Then the king unleashes everything. Eighteen thousand allied horsemen — Polish Hussars at the spearhead, German and Austrian cavalry on the wings — pour down the slopes in the largest cavalry charge ever ridden. The Hussars come knee to knee, lances lowered, wings hissing, and the ground shakes. Ottomans who fought all day watch the steel wave descend and break — the ones who stand are ridden over. The charge splits the Ottoman army and drives straight for the Grand Vizier's tent. Kara Mustafa grabs the Banner of the Prophet and runs for his life. First trumpet to fallen camp: three hours. The siege of Vienna dies at a gallop.",
+      "image_prompts": [
+        "Sobieski at Vienna charge painting Juliusz Kossak",
+        "winged hussars lances lowered full gallop dramatic painting",
+        "Ottoman army routed fleeing camp chaos painting",
+        "grand vizier tent captured battle of Vienna illustration"
+      ],
+      "ken_burns": "zoom_in"
+    },
+    {
+      "scene_number": 9,
+      "title": "Veni, Vidi, Deus Vicit",
+      "narration": "That night, Sobieski sleeps in Kara Mustafa's abandoned tent — a silk palace stuffed with treasure: war chest, banners, jeweled weapons — and sacks of strange dark beans Vienna will soon learn to brew as coffee. The king writes two letters. To his beloved wife Marysieńka, pages of triumph and wonder at the plunder. To the Pope, three words that echo Caesar and correct him: 'Veni, vidi, Deus vicit' — I came, I saw, God conquered. When Sobieski rides into Vienna, the starving city goes delirious — crowds fight to kiss his hands, his boots, his horse. Emperor Leopold, returning to the capital he abandoned, finds the people cheering a foreign king in his own streets, and historians say he never forgave it. Gratitude, as Sobieski will learn, is the shortest-lived of all political emotions. But the moment belongs to him. Vienna stands.",
+      "image_prompts": [
+        "Sobieski sending message of victory to the pope painting Matejko",
+        "captured Ottoman treasures banners and weapons photograph",
+        "triumphal entry into liberated Vienna crowds painting",
+        "17th century Turkish coffee sacks and coffeehouse illustration"
+      ],
+      "ken_burns": "zoom_out"
+    },
+    {
+      "scene_number": 10,
+      "title": "The Cord of Silk",
+      "narration": "For Kara Mustafa, the road from Vienna leads somewhere darker. The Grand Vizier retreats to Belgrade, executing scapegoat commanders — including the pasha who begged him to fortify the camp. But the Ottoman court has its own arithmetic for catastrophe. On Christmas Day, 1683, the sultan's messengers arrive carrying the traditional instrument of imperial displeasure: a silk cord. Kara Mustafa lifts his own beard for the executioners, and the man who nearly took Vienna is strangled in his quarters. It changes nothing. The disaster at Vienna is not an ending but a beginning — the allied victory ignites the Great Turkish War, a sixteen-year rollback. Buda falls. Belgrade falls. In 1699, the Ottomans sign the Treaty of Karlowitz, surrendering Hungary and, for the first time in three centuries, ceding conquered land back to Christian Europe. The tide that rose for three hundred years has turned for good.",
+      "image_prompts": [
+        "Kara Mustafa execution silk cord Belgrade illustration",
+        "Ottoman court sultan Mehmed IV audience painting",
+        "siege of Buda 1686 painting",
+        "Treaty of Karlowitz signing 1699 engraving"
+      ],
+      "ken_burns": "pan_right"
+    },
+    {
+      "scene_number": 11,
+      "title": "What the Hussars Bought",
+      "narration": "Step back and look at what was decided in those three hours. Vienna 1683 marks the high-water line — the deepest the Ottoman Empire ever drove into the heart of Europe. Had the city fallen, the road up the Danube lay open, with no comparable fortress behind it and a Europe too divided to respond. Instead, the Habsburgs rose to great-power status, and the religious map of Europe froze roughly where the armies stood that September evening. History rarely hinges so visibly on a single afternoon. And there's a bitter epilogue for the rescuers: Poland, whose king saved the Habsburgs, would a century later be carved out of existence — partitioned by its neighbors, Austria among them. When Polish patriots protested, the story goes, they were reminded that states have interests, not memories. The wings that saved Vienna could not, in the end, save Warsaw.",
+      "image_prompts": [
+        "map of Europe 1683 Ottoman Habsburg frontier",
+        "Habsburg Vienna baroque palaces golden age photograph",
+        "partitions of Poland map 18th century",
+        "winged hussar armor displayed in museum dramatic photograph"
+      ],
+      "ken_burns": "zoom_out"
+    },
+    {
+      "scene_number": 12,
+      "title": "The Afternoon That Drew the Map",
+      "narration": "Vienna 1683 still lives in the modern world's bloodstream. The date itself — September 11th, the eve of the battle — has echoed for centuries. But the deeper lessons are universal. Kara Mustafa had every advantage and lost, because overconfidence dissolves empires: he besieged a city for two months and never prepared to be attacked himself. And Vienna remains history's great argument for allies — quarreling states choosing one commander and striking as one fist. Every coalition since, from Waterloo to NATO, runs on the gamble that worked on the Kahlenberg. The world you live in — its borders, its religions, its capital cities — was shaped by eighteen thousand horsemen and three hours of thunder. Next week: Hitler pours three hundred thousand men into a city on the Volga — and the Sixth Army never comes home.",
+      "image_prompts": [
+        "battle of Vienna 1683 grand panoramic painting",
+        "modern Vienna skyline St Stephens cathedral photograph",
+        "NATO allied flags summit photograph",
+        "monument to Jan Sobieski Vienna Kahlenberg photograph"
+      ],
+      "ken_burns": "zoom_in"
+    }
+  ]
+}

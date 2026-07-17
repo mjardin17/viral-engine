@@ -1,0 +1,152 @@
+{
+  "episode_id": "GG_EP007",
+  "title": "Hitler's Obsession: The Death of the 6th Army at Stalingrad, 1942-43",
+  "channel": "GG",
+  "total_scenes": 12,
+  "scenes": [
+    {
+      "scene_number": 1,
+      "title": "The City That Ate an Army",
+      "narration": "January 1943. Minus thirty degrees on the Volga. In the frozen basement of a ruined department store, a German field marshal sits in the dark, surrounded by dying men. Friedrich Paulus commands the Sixth Army — three hundred thousand soldiers when they marched here, the pride of the Wehrmacht, conquerors of France. Now they are eating their horses. Then the glue from their bandages. The wounded freeze where they lie, and the living are too weak to bury them. Two hundred miles from any friendly line, encircled, abandoned, they have been ordered by Adolf Hitler to fight to the last bullet and die where they stand. Above the basement stretches a city that no longer exists — a moonscape of rubble that has swallowed more human lives than any battle ever fought. Its name is Stalingrad. And no one here was ever supposed to fight for it at all.",
+      "image_prompts": [
+        "ruins of Stalingrad destroyed city winter 1943 photograph",
+        "Friedrich Paulus field marshal portrait photograph",
+        "German soldiers freezing in snow Eastern Front photograph",
+        "Univermag department store Stalingrad basement headquarters photograph"
+      ],
+      "ken_burns": "zoom_in"
+    },
+    {
+      "scene_number": 2,
+      "title": "A Name on a Map",
+      "narration": "Summer 1942. Hitler's armies surge across southern Russia toward the true prize: the oil fields of the Caucasus, the fuel without which Germany's war machine dies. Stalingrad is a secondary objective — an industrial city on the Volga, useful to screen the flank, strategically replaceable. His generals see it exactly that way: neutralize it with artillery and move on. But the city carries a name, and the name changes everything. Stalin's city. To Hitler, taking it means breaking his enemy's name in front of the world; to Stalin, losing it is unthinkable. Two dictators lock eyes over a map, and strategy quietly leaves the room. In July, Hitler splits his offensive to chase both oil and city at once, against the advice of nearly every professional soldier. Objectors are ignored or removed. The Sixth Army, his strongest, turns toward the Volga.",
+      "image_prompts": [
+        "Hitler studying map with generals headquarters photograph",
+        "German panzer columns advancing Russian steppe summer 1942 photograph",
+        "map of Case Blue German offensive southern Russia 1942",
+        "Stalin portrait official photograph 1940s"
+      ],
+      "ken_burns": "pan_right"
+    },
+    {
+      "scene_number": 3,
+      "title": "August 23rd: The City Burns",
+      "narration": "August 23rd, 1942. The Luftwaffe arrives over Stalingrad with a thousand aircraft, and in a single day turns a city of half a million people into a torch. Firestorms consume whole districts; the wooden southern neighborhoods simply vanish. Tens of thousands of civilians die — Stalin has forbidden evacuation, reasoning that soldiers fight harder for a living city. And here is the first great irony of Stalingrad: the bombing that was meant to break the city instead builds the fortress. Because rubble, it turns out, is stronger than architecture. Collapsed buildings become bunkers. Craters become trenches. A city smashed into fifty million tons of broken concrete is a maze no tank can cross and no map can describe. The Germans, whose whole way of war is speed — radio, tanks, aircraft moving as one — are about to enter a labyrinth where speed does not exist.",
+      "image_prompts": [
+        "Luftwaffe bombing Stalingrad smoke over Volga photograph 1942",
+        "Stalingrad burning city firestorm aerial photograph",
+        "civilians fleeing burning buildings World War 2 photograph",
+        "ruined factory district rubble Stalingrad photograph"
+      ],
+      "ken_burns": "zoom_in"
+    },
+    {
+      "scene_number": 4,
+      "title": "Rattenkrieg: The War of the Rats",
+      "narration": "September. The Sixth Army enters the city, and German doctrine dies in the doorways. This is Rattenkrieg — rat war — fighting the Wehrmacht was specifically built to avoid. The front line is not a line; it runs through buildings, floor by floor. Germans hold the ground level, Soviets the cellar; grenades travel by stairwell. General Chuikov, his back to the Volga, orders his men to 'hug' the enemy — so close that German artillery and Stukas can't strike without killing their own. Landmarks become blood-soaked legends: the Grain Elevator, held for weeks by a few dozen men; Pavlov's House, one apartment building that held for two months — German maps marked it a fortress. The Mamayev Kurgan hill changes hands so many times its slopes are resurfaced with steel fragments and bone. A German officer writes home: 'Animals flee this hell. Only men endure.'",
+      "image_prompts": [
+        "Soviet soldiers fighting in ruined building Stalingrad photograph",
+        "Vasily Chuikov Soviet general Stalingrad photograph",
+        "Pavlovs house fortified ruin Stalingrad photograph",
+        "close quarters street fighting rubble World War 2 photograph"
+      ],
+      "ken_burns": "pan_left"
+    },
+    {
+      "scene_number": 5,
+      "title": "The Ferry and the Snipers",
+      "narration": "The entire Soviet defense hangs on a ribbon of water. Every night, under shellfire, ferries and barges cross the burning Volga carrying fresh troops into the inferno — and many of those reinforcements live less than twenty-four hours. The crossing itself is a horror: boats shattered mid-river, men swimming through blazing oil. But the trickle never quite stops, and that is the point. Chuikov feeds the furnace just enough to keep it burning, trading lives for the one commodity that decides everything: time. In the ruins, the sniper rules. Vasily Zaitsev, a shepherd from the Urals, kills over two hundred Germans, and Soviet newspapers make him immortal. Every German learns that standing still in daylight is death. By November, the Germans hold ninety percent of the city. The Soviets cling to a few hundred meters of riverbank. Ninety percent, it turns out, is not enough.",
+      "image_prompts": [
+        "Soviet troops crossing Volga river ferry under fire photograph",
+        "Vasily Zaitsev sniper Stalingrad photograph",
+        "soldiers landing on riverbank Stalingrad night photograph",
+        "sniper aiming through ruined wall World War 2 photograph"
+      ],
+      "ken_burns": "zoom_in"
+    },
+    {
+      "scene_number": 6,
+      "title": "Zhukov's Secret",
+      "narration": "While Hitler stares obsessively at the city, Georgy Zhukov is staring at the map around it — and what he sees is a neck stretched out for the axe. The Sixth Army's flanks are held by Romanian, Hungarian, and Italian armies: brave men, under-equipped, thinly spread, with almost no anti-tank weapons. In total secrecy, the Soviets assemble a counterstroke of staggering scale — over a million men, nine hundred tanks, fourteen thousand guns, moved at night behind radio silence. German intelligence catches glimpses and dismisses them; Hitler is assured the Soviets are finished. It is one of the war's greatest intelligence failures. Operation Uranus doesn't aim at Stalingrad at all — two armored pincers strike the weak flanks, closing at a bridge called Kalach. The trap Hannibal built with infantry at Cannae, Zhukov builds with tanks.",
+      "image_prompts": [
+        "Georgy Zhukov Soviet marshal portrait photograph",
+        "Soviet T-34 tanks massed for offensive photograph",
+        "map of Operation Uranus encirclement Stalingrad",
+        "Soviet troops moving at night winter camouflage photograph"
+      ],
+      "ken_burns": "zoom_out"
+    },
+    {
+      "scene_number": 7,
+      "title": "November 19th: Uranus",
+      "narration": "November 19th, 1942. In freezing fog, thirty-five hundred Soviet guns open fire on the Romanian Third Army — a bombardment that shakes the ground fifty miles away. Then the tanks come out of the snow. The Romanian line, starved of anti-tank guns, fights and dies and breaks. The next day, a second offensive erupts south of the city, and on November 23rd, at Kalach on the Don, the pincers meet — tankmen embracing on the frozen river. The ring is closed. Inside: the entire Sixth Army and part of the Fourth Panzer Army — some two hundred and ninety thousand men. In four days, the hunters have become the prey. In Berlin, the word 'encirclement' is forbidden. The pocket is renamed a 'fortress.'",
+      "image_prompts": [
+        "Soviet artillery barrage winter offensive muzzle flashes photograph",
+        "T-34 tanks charging through snow steppe photograph",
+        "Soviet soldiers linking up Kalach embracing photograph",
+        "map of closed encirclement ring Stalingrad pocket November 1942"
+      ],
+      "ken_burns": "zoom_in"
+    },
+    {
+      "scene_number": 8,
+      "title": "The Lie That Killed an Army",
+      "narration": "Now comes the decision that murders the Sixth Army — made a thousand miles away. Paulus requests permission to break out while his men are still strong; his generals are unanimous. Then Hermann Göring makes his catastrophic promise: the Luftwaffe will supply the pocket by air — five hundred tons a day. His own airmen know it is fantasy — the fleet could barely manage a fraction in perfect weather, and this is a Russian winter. But the promise gives Hitler what he wants: a reason to say no. Stand fast, he orders. Hold the fortress. The airlift becomes a slow-motion massacre — a hundred tons on good days, nothing on bad, five hundred transports destroyed trying. Bread falls to a hundred grams a day. The horses are eaten. Then the dogs. Then winter arrives in force, and men freeze at their posts, rifles still in their hands.",
+      "image_prompts": [
+        "Hermann Goring Luftwaffe portrait photograph",
+        "Junkers Ju 52 transport plane landing snow airfield photograph",
+        "starving German soldiers pocket Stalingrad winter photograph",
+        "wrecked German transport aircraft in snow photograph"
+      ],
+      "ken_burns": "pan_right"
+    },
+    {
+      "scene_number": 9,
+      "title": "Winter Storm Dies in the Snow",
+      "narration": "One hope remains. Erich von Manstein — Germany's finest operational mind — launches Operation Winter Storm on December 12th: a panzer drive toward the pocket through blizzards and massed Soviet armor. His spearheads claw to within thirty miles. At night, the trapped men see gunfire flickering on the horizon — salvation, almost close enough to touch. Manstein signals the moment: break out now, meet me halfway. The tragedy tightens. Hitler forbids abandoning the city, and obedient Paulus will not move without the order — his tanks have fuel for twenty miles, his starving infantry cannot march through the snow. The window stays open for days. Then a Soviet offensive smashes the Italian army further west, and the relief force is pulled away to save the southern front. The gunfire fades. Every man in the pocket understands the silence.",
+      "image_prompts": [
+        "Erich von Manstein field marshal portrait photograph",
+        "German panzers advancing through deep snow blizzard photograph",
+        "German soldiers watching horizon at night winter photograph",
+        "destroyed German tanks on snowy steppe photograph"
+      ],
+      "ken_burns": "zoom_out"
+    },
+    {
+      "scene_number": 10,
+      "title": "The Field Marshal in the Basement",
+      "narration": "January 1943. The Soviets carve the pocket apart, and the end comes with a poisoned gift: on January 30th, Hitler promotes Paulus to Field Marshal. The message is unmistakable — no German field marshal has ever been taken alive. It is a suicide order wrapped in a medal. Paulus refuses the script: 'I have no intention of shooting myself for that Bohemian corporal.' On January 31st, Soviet soldiers reach the basement, and the newest field marshal in German history surrenders after holding the rank for one day. On February 2nd, the last pocket falls silent. Of the two hundred and ninety thousand men trapped in November, ninety-one thousand shuffle into captivity — frostbitten skeletons in rags. In Germany, the radio plays funeral music for three days. For the first time, the Reich admits catastrophe. The whole world hears it.",
+      "image_prompts": [
+        "Paulus surrendering Soviet headquarters January 1943 photograph",
+        "German prisoners of war column marching in snow Stalingrad photograph",
+        "Soviet soldiers raising flag over Stalingrad ruins photograph",
+        "German radio announcement mourning newspaper front page 1943"
+      ],
+      "ken_burns": "zoom_in"
+    },
+    {
+      "scene_number": 11,
+      "title": "The Cost",
+      "narration": "Count what Stalingrad devoured. The battle killed, wounded, or captured close to two million human beings — German, Soviet, Romanian, Hungarian, Italian — more than many entire wars. The Axis lost a quarter of its Eastern Front strength in a single stroke. Of the ninety-one thousand prisoners, barely five thousand ever saw Germany again — the last released in 1955, ghosts returning to a country that had already mourned them. For Stalingrad's defenders, the arithmetic was as merciless: a Soviet soldier's life expectancy at the height of the fighting was measured in days — sometimes hours. The city itself was a graveyard of rubble where fewer than ten thousand of its half-million inhabitants still lived among the ruins. Paulus, the field marshal who wouldn't shoot himself, testified against the Nazi regime at Nuremberg. Hitler never mentioned the Sixth Army in public again.",
+      "image_prompts": [
+        "endless column of German prisoners Stalingrad photograph",
+        "devastated Stalingrad panorama total destruction aerial photograph",
+        "returning German POWs 1955 reunion emotional photograph",
+        "war cemetery Eastern Front crosses in snow photograph"
+      ],
+      "ken_burns": "pan_left"
+    },
+    {
+      "scene_number": 12,
+      "title": "The Hinge of the Twentieth Century",
+      "narration": "Historians argue about everything except this: Stalingrad is where the Second World War turned. Before it, the Wehrmacht was a legend. After it, Germany never won another major offensive in the East — the initiative passed on the Volga and never came back; the road from Stalingrad leads through Kursk to Berlin. But the deeper lesson is about the most dangerous force in any war room or boardroom: a leader who cannot say 'I was wrong.' Prestige overruled strategy — a name became an obsession, and an obsession became a tomb. Every institution that doubles down rather than lose face is fighting a small Stalingrad. Today the city is Volgograd, and on the Mamayev Kurgan stands one of the tallest statues on earth: The Motherland Calls, sword raised over two million dead. She is not celebrating. She is warning.",
+      "image_prompts": [
+        "The Motherland Calls statue Volgograd Mamayev Kurgan photograph",
+        "eternal flame memorial Stalingrad hall of valor photograph",
+        "Soviet advance westward tanks 1943 photograph",
+        "modern Volgograd city Volga river photograph"
+      ],
+      "ken_burns": "zoom_in"
+    }
+  ]
+}

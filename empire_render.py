@@ -64,7 +64,11 @@ def find_ffmpeg() -> str:
     """Locate ffmpeg: PATH first, then known Windows install locations."""
     if f := shutil.which("ffmpeg"):
         return f
-    for candidate in (Path(r"C:\ffmpeg\bin\ffmpeg.exe"), BASE_DIR / "ffmpeg_bin" / "ffmpeg.exe"):
+    for candidate in (
+        Path(r"C:\ffmpeg\ffmpeg-8.1.2-essentials_build\bin\ffmpeg.exe"),
+        Path(r"C:\ffmpeg\bin\ffmpeg.exe"),
+        BASE_DIR / "ffmpeg_bin" / "ffmpeg.exe",
+    ):
         if candidate.exists():
             return str(candidate)
     raise RuntimeError("ffmpeg not found — install it or add to PATH")
@@ -305,7 +309,14 @@ def fit_clip_to_narration(clip: Path, narration_dur: float, clip_dur: float, out
         vf = scale
     else:
         hold = narration_dur - clip_dur
-        vf = f"{scale},tpad=stop_mode=clone:stop_duration={hold:.3f}"
+        zoom_max = 1.12
+        kenburns = (
+            f"scale=trunc(iw*{zoom_max}/2)*2:trunc(ih*{zoom_max}/2)*2,"
+            f"crop=w=1920:h=1080:"
+            f"x='(iw-1920)*t/{narration_dur:.3f}':"
+            f"y='(ih-1080)*t/{narration_dur:.3f}'"
+        )
+        vf = f"{scale},tpad=stop_mode=clone:stop_duration={hold:.3f},{kenburns}"
     return run_ffmpeg(
         ["-i", str(clip),
          "-vf", vf,

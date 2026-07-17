@@ -1,0 +1,133 @@
+{
+  "channel": "Gods and Glory AI",
+  "episode_id": "GG_EP001",
+  "title": "300 Spartans vs The Entire Persian Empire",
+  "battle_date": "480 BC",
+  "lower_third_default": "The Battle of Thermopylae | 480 BC",
+  "duration_target_min": 10,
+  "format": "v3_short_punchy",
+  "youtube_title": "300 Spartans vs The Entire Persian Empire | The Battle of Thermopylae | Gods & Glory",
+  "youtube_description": "480 BC. Two million men. One mountain pass. Three hundred Spartans who chose to stand instead of run. This is the true story of Thermopylae - the battle that shouldn't have mattered, and ended up saving the Western world.",
+  "scenes": [
+    {
+      "scene_number": 1,
+      "type": "hook",
+      "title": "The Largest Army the World Had Ever Seen",
+      "narration": "480 BC. Two million men are marching on Greece. That is not a typo - that is the army King Xerxes brings across the Hellespont, the largest force the ancient world has ever seen. Standing in his way: one narrow mountain pass, and three hundred Spartans who have already decided they are not moving.",
+      "wikimedia_query": "Xerxes I Persian army relief Persepolis",
+      "visual_prompt": "dramatic epic painting Persian army marching vast desert Xerxes king golden armor",
+      "lower_third": "480 BC - Thermopylae, Greece",
+      "duration_sec": 45
+    },
+    {
+      "scene_number": 2,
+      "type": "context",
+      "title": "An Empire Without Limits",
+      "narration": "For ten years, Persia has swallowed nations whole - Egypt, Babylon, half of India. Then a small Greek army humiliated Xerxes's father at a place called Marathon. Xerxes never forgot it. He has spent a decade building the machine that will erase that humiliation for good.",
+      "wikimedia_query": "Achaemenid Persian Empire map",
+      "visual_prompt": "ancient map Persian Empire territory sprawling continents gold ink illustration",
+      "lower_third": "The Persian Empire, 480 BC",
+      "duration_sec": 40
+    },
+    {
+      "scene_number": 3,
+      "type": "context",
+      "title": "A Fractured Greece Chooses to Fight",
+      "narration": "Here is the problem: Greece is not a country. It is dozens of rival cities that usually hate each other. Facing total annihilation, they do something that has never happened before - they team up. But their armies need time to gather. Someone has to buy that time. Someone has to hold the door.",
+      "wikimedia_query": "ancient Greek city states map classical period",
+      "visual_prompt": "ancient Greek city states painting acropolis temples coastline dramatic light",
+      "lower_third": "The Greek Alliance",
+      "duration_sec": 40
+    },
+    {
+      "scene_number": 4,
+      "type": "character",
+      "title": "The King Who Volunteers to Die",
+      "narration": "That job falls to Leonidas, king of Sparta. Sacred law forbids Sparta's full army from marching right now - so Leonidas takes matters into his own hands. He personally selects three hundred men, every one a father with sons already born to carry his name. He is not choosing soldiers. He is choosing men who can afford to die.",
+      "wikimedia_query": "ancient Spartan hoplite statue Leonidas",
+      "visual_prompt": "dramatic portrait Spartan king Leonidas bronze armor red cape determined expression",
+      "lower_third": "Leonidas I, King of Sparta",
+      "duration_sec": 45
+    },
+    {
+      "scene_number": 5,
+      "type": "context",
+      "title": "The Perfect Trap",
+      "narration": "Thermopylae means The Hot Gates - a corridor so narrow that in places, only one cart can pass through at a time. Here, two million men are worth exactly as much as three hundred. Leonidas did not pick this spot by accident. It is the one place on Earth where his math actually works.",
+      "wikimedia_query": "Thermopylae pass geography Greece",
+      "visual_prompt": "narrow mountain pass cliffs sea dramatic landscape ancient Greece painting",
+      "lower_third": "The Pass of Thermopylae",
+      "duration_sec": 45
+    },
+    {
+      "scene_number": 6,
+      "type": "battle",
+      "title": "Day One: The Wall That Wouldn't Break",
+      "narration": "Xerxes waits four days. He is sure they will run. They do not. When his troops finally charge, they slam into something they have never seen: a wall of shields that does not break, spears that do not miss, a formation that eats every wave they throw at it. By nightfall, the pass still belongs to three hundred men.",
+      "wikimedia_query": "Greek hoplite phalanx formation ancient",
+      "visual_prompt": "epic battle scene Greek phalanx shield wall spears clashing Persian soldiers dust",
+      "lower_third": "Day 1 of the Battle",
+      "duration_sec": 45
+    },
+    {
+      "scene_number": 7,
+      "type": "battle",
+      "title": "The Immortals Fall",
+      "narration": "Day two. Xerxes throws in his best - ten thousand elite soldiers called the Immortals, a name that means they are never supposed to lose. They lose anyway. Leonidas keeps swapping fresh Spartans into the front line, so the wall never gets tired. For the first time in his life, Xerxes is losing.",
+      "wikimedia_query": "Persian Immortals relief sculpture",
+      "visual_prompt": "Persian Immortal elite soldiers ornate armor spears formation relief carving style",
+      "lower_third": "The Immortals Are Repelled",
+      "duration_sec": 40
+    },
+    {
+      "scene_number": 8,
+      "type": "twist",
+      "title": "The Path That Changed Everything",
+      "narration": "Then, one Greek man ruins everything. His name is Ephialtes, and for a reward, he tells Xerxes about a hidden goat path that loops around the mountain, straight behind the Spartan line. That night, Persian soldiers move through the dark in total silence. By sunrise, three hundred men are no longer holding a chokepoint. They are surrounded.",
+      "wikimedia_query": "Greek mountain path Thermopylae Anopaea",
+      "visual_prompt": "moonlit mountain path soldiers marching silently shadowy dramatic night scene",
+      "lower_third": "The Betrayal of Ephialtes",
+      "duration_sec": 45
+    },
+    {
+      "scene_number": 9,
+      "type": "turning_point",
+      "title": "The Choice",
+      "narration": "Word reaches Leonidas: you are surrounded. He has seconds to decide. He orders almost the entire Greek army to retreat - live now, fight later. He stays. His three hundred stay with him. So do roughly seven hundred Thespians who refuse to walk away. They are not trying to win anymore. They are trying to make Persia pay for every single step.",
+      "wikimedia_query": "ancient Greek warriors last stand painting",
+      "visual_prompt": "Spartan warriors standing firm resolute facing overwhelming odds dramatic lighting",
+      "lower_third": "The Final Stand Begins",
+      "duration_sec": 45
+    },
+    {
+      "scene_number": 10,
+      "type": "climax",
+      "title": "Spears, Then Swords, Then Hands",
+      "narration": "Surrounded from every direction, they fight until their spears snap. Then they draw swords. When the swords break, they fight with bare hands and teeth. Leonidas falls first. His men throw themselves over his body, fighting off the Persians just to keep his corpse from being taken. By the end, every last Spartan is dead - exactly where he chose to stand.",
+      "wikimedia_query": "ancient battle sculpture warriors fighting",
+      "visual_prompt": "chaotic final battle Spartan warriors fighting desperately swords broken shields epic painting",
+      "lower_third": "The Last Stand",
+      "duration_sec": 45
+    },
+    {
+      "scene_number": 11,
+      "type": "aftermath",
+      "title": "Three Days for a Nation",
+      "narration": "Thermopylae falls. Xerxes marches into Greece thinking he has already won. He has not. Those three days Leonidas bought were not wasted - the Greek navy used every hour of them. They are now waiting in a narrow strait called Salamis. Three hundred dead men are about to cost Xerxes an entire empire.",
+      "wikimedia_query": "ancient Greek trireme warship",
+      "visual_prompt": "ancient Greek trireme warships fleet sailing dramatic sunset sea",
+      "lower_third": "The Cost Xerxes Paid",
+      "duration_sec": 40
+    },
+    {
+      "scene_number": 12,
+      "type": "legacy",
+      "title": "Why We Still Say Their Names",
+      "narration": "They later carved a monument at Thermopylae. The words on it have outlasted every empire that came after: Go tell the Spartans, stranger passing by, that here, obedient to their laws, we lie. Three hundred men proved that an empire of millions could bleed. That lesson did not stay at Thermopylae - it carried all the way to Salamis, and to the birth of the Western world we live in today.",
+      "wikimedia_query": "Thermopylae memorial monument Leonidas modern",
+      "visual_prompt": "modern memorial monument Thermopylae inscription dramatic golden light",
+      "lower_third": "480 BC - The Legacy of Thermopylae",
+      "duration_sec": 45
+    }
+  ]
+}

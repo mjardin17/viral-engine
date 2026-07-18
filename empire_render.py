@@ -34,8 +34,10 @@ import math
 import shutil
 import subprocess
 import sys
+import threading
 import urllib.parse
 import urllib.request
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from dataclasses import dataclass, field
 from pathlib import Path
 
@@ -119,6 +121,8 @@ DEFAULT_GG_MUSIC: Path = BASE_DIR / "music" / "gg_battle_theme.mp3"
 KEN_BURNS_ROTATION: tuple[int, ...] = (0, 1, 2, 3, 4)
 
 MIN_IMAGE_BYTES = 50 * 1024  # Wikimedia image must be >50KB to count as real
+
+MAX_PARALLEL_SCENES = 4  # scenes rendered concurrently (ThreadPoolExecutor)
 
 
 # ── Result tracking ────────────────────────────────────────────────────────────
@@ -641,23 +645,43 @@ def render_episode(channel: str, episode_id: str, script_path: Path,
             print(f"{TAG} No clips dir — auto-generating clips via provider waterfall "
                   f"(free APIs first, Higgsfield last)")
 
-    scene_clips: list[Path] = []
-    for index, scene in enumerate(scenes):
-        n = int(scene.get("scene_number", index + 1))
-        try:
-            if channel == "GG" and multi_agent:
-                from orchestrator.agents.scene_builder import build_scene  # lazy
-                clip = build_scene(scene, index, len(scenes), work_dir, title, voice, speed)
-            elif channel == "GG":
-                clip = render_scene_gg(scene, index, len(scenes), work_dir, title, voice, speed)
-            else:
-                clip = render_scene_clip(scene, index, len(scenes), work_dir, clips_dir, voice, speed)
-        except Exception as e:  # never crash mid-render
-            print(f"{TAG} Scene {n:02d} ❌ unexpected error: {e}", file=sys.stderr)
-            clip = None
+    def render_one_scene(index: int, scene: dict) -> Path | None:
+        """Render a single scene via the right per-channel path. Never raises."""
+        if channel == "GG" and multi_agent:
+            from orchestrator.agents.scene_builder import build_scene  # lazy
+            return build_scene(scene, index, len(scenes), work_dir, title, voice, speed)
+        if channel == "GG":
+            return render_scene_gg(scene, index, len(scenes), work_dir, title, voice, speed)
+        return render_scene_clip(scene, index, len(scenes), work_dir, clips_dir, voice, speed)
 
-        if clip is not None:
-            scene_clips.append(clip)
+    # Render ALL scenes in parallel (4 workers); assembly waits for everything.
+    print(f"{TAG} Rendering {len(scenes)} scenes in parallel "
+          f"({MAX_PARALLEL_SCENES} workers)...")
+    results: dict[int, Path | None] = {}
+    progress_lock = threading.Lock()
+    with ThreadPoolExecutor(max_workers=MAX_PARALLEL_SCENES) as pool:
+        futures = {pool.submit(render_one_scene, i, s): i for i, s in enumerate(scenes)}
+        for future in as_completed(futures):
+            i = futures[future]
+            n = int(scenes[i].get("scene_number", i + 1))
+            try:
+                clip = future.result()
+            except Exception as e:  # never crash mid-render
+                print(f"{TAG} Scene {n:02d} ❌ unexpected error: {e}", file=sys.stderr)
+                clip = None
+            with progress_lock:
+                results[i] = clip
+                if clip is not None:
+                    print(f"{TAG} Scene {n:02d}/{len(scenes)} complete ✅")
+                else:
+                    print(f"{TAG} Scene {n:02d}/{len(scenes)} FAILED ❌", file=sys.stderr)
+
+    # Collect in strict scene order — concat must never shuffle scenes
+    scene_clips: list[Path] = []
+    for i in sorted(results):
+        n = int(scenes[i].get("scene_number", i + 1))
+        if results[i] is not None:
+            scene_clips.append(results[i])  # type: ignore[arg-type]
             stats.rendered += 1
         else:
             stats.skip(n)
@@ -684,8 +708,21 @@ def render_episode(channel: str, episode_id: str, script_path: Path,
             print(f"{TAG} ⚠ Music file not found: {music_path} — rendering without music")
         shutil.copy2(assembled, final_path)
 
-    # Clean work files after a fully successful render (keep them if scenes were skipped,
-    # so a re-run can resume and fill the gaps)
+    # Mandatory council QC on the finished episode (3 rounds: duration/audio/frames).
+    # Expected duration = sum of all scene clip durations (probe BEFORE cleanup).
+    expected_dur = sum(probe_duration(c) or 0.0 for c in scene_clips)
+    from orchestrator.agents import council_evaluator  # lazy
+    verdict = council_evaluator.evaluate(final_path, expected_dur, tag=ep_id)
+    if not verdict.passed:
+        print(f"{TAG} ❌ COUNCIL REJECTED — round {verdict.round_failed} failed: "
+              f"{verdict.reason}", file=sys.stderr)
+        print(f"{TAG} ❌ {final_path} is NOT upload-ready — "
+              f"work files kept in {work_dir} for re-run", file=sys.stderr)
+        return None
+    print(f"{TAG} ✅ COUNCIL APPROVED — ready to upload")
+
+    # Clean work files only after a fully successful, council-approved render
+    # (keep them if scenes were skipped, so a re-run can resume and fill the gaps)
     if not stats.skipped:
         shutil.rmtree(work_dir, ignore_errors=True)
 

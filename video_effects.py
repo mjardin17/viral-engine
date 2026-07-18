@@ -70,7 +70,7 @@ MOTION_PRESETS = [
 def ken_burns_clip(
     image_path: str,
     out_path: str,
-    duration: int = 45,
+    duration: float = 45,
     motion: str = "random",
     fade_in: float = 0.5,
     fade_out: float = 0.5,
@@ -81,7 +81,8 @@ def ken_burns_clip(
     Args:
         image_path: Path to source image (jpg/png)
         out_path: Output video path (.mp4)
-        duration: Clip duration in seconds
+        duration: Clip duration in seconds (float — exact durations supported
+            so multi-image scenes can split narration time equally)
         motion: 'random' or index 0-4 to pick a specific preset
         fade_in: Fade-in duration in seconds
         fade_out: Fade-out duration in seconds
@@ -91,7 +92,7 @@ def ken_burns_clip(
     """
     os.makedirs(os.path.dirname(out_path) or ".", exist_ok=True)
 
-    frames = duration * 25  # 25fps
+    frames = max(1, int(round(duration * 25)))  # 25fps
     if motion == "random":
         preset = random.choice(MOTION_PRESETS)
     else:
@@ -100,10 +101,11 @@ def ken_burns_clip(
     zoompan_filter = preset.format(frames=frames)
 
     # Add fade in/out on top of Ken Burns
+    fade_out_start = max(0.0, duration - fade_out)
     vf = (
         f"{zoompan_filter},"
         f"fade=t=in:st=0:d={fade_in},"
-        f"fade=t=out:st={duration - fade_out}:d={fade_out}"
+        f"fade=t=out:st={fade_out_start:.3f}:d={fade_out}"
     )
 
     cmd = [
@@ -111,7 +113,7 @@ def ken_burns_clip(
         "-loop", "1",
         "-i", image_path,
         "-vf", vf,
-        "-t", str(duration),
+        "-t", f"{duration:.3f}",
         "-c:v", "libx264",
         "-preset", "fast",
         "-crf", "20",
@@ -120,7 +122,7 @@ def ken_burns_clip(
         out_path,
     ]
 
-    print(f"[video_effects] Ken Burns: {image_path} → {out_path} ({duration}s)")
+    print(f"[video_effects] Ken Burns: {image_path} → {out_path} ({duration:.1f}s)")
     result = subprocess.run(cmd, capture_output=True, text=True)
     if result.returncode != 0:
         print(f"[video_effects] FFmpeg error:\n{result.stderr[-500:]}", file=sys.stderr)

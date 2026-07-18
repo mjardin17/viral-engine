@@ -201,7 +201,12 @@ def generate_scene_asset(prompt: str, duration_sec: int, aspect_ratio: str,
     try:
         provider = factory()
         if provider.is_connected():
-            _log("all free providers failed — falling back to PAID Higgsfield", err=True)
+            # Credit guard — Higgsfield credits are real money. Give Josh a
+            # 10-second window to abort before any paid call is made.
+            _log("⚠️ WARNING: All free providers failed. About to use Higgsfield "
+                 "(PAID). Press Ctrl+C within 10 seconds to cancel.", err=True)
+            time.sleep(10)
+            _log("no cancel — proceeding with PAID Higgsfield", err=True)
             dest = work_dir / f"{scene_tag}_{name}.mp4"
             clip = _run_video_provider(provider, name, prompt, duration_sec, aspect_ratio, dest)
             if clip:

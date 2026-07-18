@@ -33,6 +33,7 @@ GEMINI_API_BASE = "https://generativelanguage.googleapis.com/v1beta"
 MODEL_CANDIDATES: tuple[str, ...] = (
     "gemini-2.5-flash-image",
     "gemini-2.0-flash-preview-image-generation",
+    "gemini-2.0-flash-exp",  # last resort — older experimental image model
 )
 
 

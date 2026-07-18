@@ -5,8 +5,12 @@ Given one image prompt, hits ALL sources IN PARALLEL and returns every
 successful result ranked by quality (file size, largest first):
 
   Source 1: Wikimedia Commons API   (real historical photos — GG gold standard)
-  Source 2: Pollinations AI         (always works, no key)
-  Source 3: Gemini image generation (GEMINI_API_KEY in .env — free 500/day)
+  Source 2: Gemini image generation (GEMINI_API_KEY in .env — free 500/day,
+                                     period-accurate, skipped silently if no key)
+  Source 3: Pollinations AI         (always works, no key)
+
+Ranking: file size DESC (bigger = higher quality), with source priority
+(wikimedia > gemini > pollinations) breaking size ties.
 
 Usage:
     from orchestrator.agents.image_scout import scout_image
@@ -83,11 +87,16 @@ def _try_gemini(prompt: str, dest: Path) -> Optional[Path]:
     return None
 
 
+# Priority order: wikimedia (real historical) > gemini (period-accurate gen)
+# > pollinations (generic but always works). All run in parallel; this order
+# is the tiebreaker when two results have the same file size.
 _SOURCES: list[tuple[str, Callable[[str, Path], Optional[Path]], str]] = [
     ("wikimedia", _try_wikimedia, ".jpg"),
-    ("pollinations", _try_pollinations, ".jpg"),
     ("gemini", _try_gemini, ".png"),
+    ("pollinations", _try_pollinations, ".jpg"),
 ]
+
+_SOURCE_PRIORITY: dict[str, int] = {name: i for i, (name, _, _) in enumerate(_SOURCES)}
 
 
 # ── Public API ────────────────────────────────────────────────────────────────
@@ -127,7 +136,7 @@ def scout_image(prompt: str, work_dir: Path, tag: str,
                 _log(f"{tag} — {name} ✅ ({size_kb}KB)")
                 results.append(ImageResult(path=path, source=name, size_kb=size_kb))
 
-    results.sort(key=lambda r: r.size_kb, reverse=True)
+    results.sort(key=lambda r: (-r.size_kb, _SOURCE_PRIORITY.get(r.source, 99)))
     if not results:
         _log(f"{tag} — ALL sources failed for prompt: {prompt[:80]}")
     return results

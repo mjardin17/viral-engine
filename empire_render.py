@@ -174,8 +174,15 @@ def find_episode_script(channel: str, episode_id: str) -> Path | None:
             candidates.append(p)
     if not candidates:
         return None
-    # Prefer "final" scripts, then v3, then shortest name (most canonical)
-    candidates.sort(key=lambda p: (("final" not in p.name.lower()), ("v3" not in p.name.lower()), len(p.name)))
+    # Prefer files whose name STARTS with the episode id (e.g. GG_EP002_cannae.json)
+    # over files that merely contain it (e.g. scene_prompts.gg_ep002.final.json),
+    # then "final" scripts, then v3, then shortest name (most canonical)
+    candidates.sort(key=lambda p: (
+        (not p.name.lower().startswith(ep_lower)),
+        ("final" not in p.name.lower()),
+        ("v3" not in p.name.lower()),
+        len(p.name),
+    ))
     return candidates[0]
 
 

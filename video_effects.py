@@ -17,10 +17,40 @@ Usage:
 import subprocess
 import random
 import os
+import shutil
 import sys
+from pathlib import Path
 
 
-FFMPEG = "ffmpeg"
+def _find_ffmpeg() -> str:
+    """Locate ffmpeg: PATH first, then known Windows install locations.
+
+    Bare "ffmpeg" fails with WinError 2 in subprocesses when ffmpeg is not
+    on PATH — always resolve the full executable path up front.
+    """
+    if f := shutil.which("ffmpeg"):
+        return f
+    for candidate in (
+        Path(r"C:\ffmpeg\ffmpeg-8.1.2-essentials_build\bin\ffmpeg.exe"),
+        Path(r"C:\ffmpeg\bin\ffmpeg.exe"),
+        Path(__file__).resolve().parent / "ffmpeg_bin" / "ffmpeg.exe",
+    ):
+        if candidate.exists():
+            return str(candidate)
+    raise RuntimeError("ffmpeg not found — install it or add to PATH")
+
+
+def _find_ffprobe(ffmpeg: str) -> str:
+    """Locate ffprobe next to ffmpeg (or on PATH)."""
+    if ffmpeg.lower().endswith("ffmpeg.exe"):
+        probe = ffmpeg[: -len("ffmpeg.exe")] + "ffprobe.exe"
+        if Path(probe).exists():
+            return probe
+    return shutil.which("ffprobe") or "ffprobe"
+
+
+FFMPEG = _find_ffmpeg()
+FFPROBE = _find_ffprobe(FFMPEG)
 
 # Ken Burns motion presets — variety keeps it visually interesting
 MOTION_PRESETS = [
@@ -123,7 +153,7 @@ def mix_music(
 
     # Get video duration for music fade
     probe_cmd = [
-        "ffprobe", "-v", "quiet", "-print_format", "json",
+        FFPROBE, "-v", "quiet", "-print_format", "json",
         "-show_format", video_path
     ]
     probe = subprocess.run(probe_cmd, capture_output=True, text=True)

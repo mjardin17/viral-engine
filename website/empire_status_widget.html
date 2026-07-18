@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<!--
+  empire_status_widget.html — Empire OS status widget for jardins-outpost.pages.dev
+  ================================================================================
+  Embeddable widget: latest episode per channel, total live count, weekly badge,
+  channel links. Reads latest_episodes.json via fetch().
+
+  Embed on the site (Cloudflare Pages) with:
+    <iframe src="/empire_status_widget.html" style="width:100%;border:0;min-height:420px"></iframe>
+  and deploy latest_episodes.json next to it (copied from the repo root after
+  every render — auto_publisher/post_render keep it current).
+
+  Optional: ?feed=https://raw.githubusercontent.com/mjardin17/viral-engine/main/latest_episodes.json
+  to read the feed straight from GitHub instead of a local copy.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Empire OS — Episode Status</title>
+<style>
+  :root {
+    --bg: #0d0b08;
+    --card: #17130d;
+    --gold: #d4af37;
+    --gold-dim: #8a7326;
+    --text: #e8e2d4;
+    --muted: #9a917d;
+    --live: #4caf50;
+    --rendered: #d4af37;
+    --scripted: #9a917d;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: Georgia, "Times New Roman", serif;
+    padding: 24px;
+  }
+  .eos-widget { max-width: 860px; margin: 0 auto; }
+  .eos-head {
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 12px; margin-bottom: 18px;
+    border-bottom: 1px solid var(--gold-dim); padding-bottom: 14px;
+  }
+  .eos-title { color: var(--gold); font-size: 1.5rem; letter-spacing: 1px; }
+  .eos-badge {
+    background: var(--gold); color: #0d0b08; font-weight: bold;
+    font-size: .78rem; padding: 6px 14px; border-radius: 999px;
+    text-transform: uppercase; letter-spacing: 1px;
+  }
+  .eos-count { color: var(--muted); font-size: .95rem; margin-bottom: 18px; }
+  .eos-count b { color: var(--gold); font-size: 1.2rem; }
+  .eos-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; }
+  .eos-card {
+    background: var(--card); border: 1px solid #2a2418;
+    border-radius: 10px; padding: 16px;
+  }
+  .eos-chan { color: var(--gold); font-size: .8rem; text-transform: uppercase;
+              letter-spacing: 2px; margin-bottom: 8px; }
+  .eos-ep-title { font-size: 1rem; line-height: 1.35; margin-bottom: 10px; min-height: 2.7em; }
+  .eos-status { font-size: .8rem; text-transform: uppercase; letter-spacing: 1px; }
+  .eos-status::before { content: "●"; margin-right: 6px; }
+  .eos-status.live, .eos-status.uploaded { color: var(--live); }
+  .eos-status.rendered { color: var(--rendered); }
+  .eos-status.scripted, .eos-status.pending { color: var(--scripted); }
+  .eos-watch { display: inline-block; margin-top: 10px; color: var(--gold);
+               font-size: .85rem; text-decoration: none; }
+  .eos-watch:hover { text-decoration: underline; }
+  .eos-links { margin-top: 22px; display: flex; flex-wrap: wrap; gap: 10px; }
+  .eos-links a {
+    color: var(--gold); text-decoration: none; font-size: .85rem;
+    border: 1px solid var(--gold-dim); border-radius: 999px; padding: 6px 14px;
+  }
+  .eos-links a:hover { background: var(--gold); color: #0d0b08; }
+  .eos-error { color: var(--muted); font-style: italic; padding: 20px 0; }
+</style>
+</head>
+<body>
+<div class="eos-widget">
+  <div class="eos-head">
+    <div class="eos-title">Empire OS — Latest Episodes</div>
+    <div class="eos-badge">New episode every week</div>
+  </div>
+  <div class="eos-count" id="eos-count">Loading…</div>
+  <div class="eos-grid" id="eos-grid"></div>
+  <div class="eos-links">
+    <a href="https://www.youtube.com/@godsandgloryai" target="_blank" rel="noopener">Gods &amp; Glory</a>
+    <a href="https://www.youtube.com/@littleolympusai" target="_blank" rel="noopener">Little Olympus</a>
+    <a href="https://www.youtube.com/@ironlegendsai" target="_blank" rel="noopener">Iron Legends</a>
+    <a href="https://www.youtube.com/@echosofeternitiai" target="_blank" rel="noopener">Echoes of Eternity</a>
+  </div>
+</div>
+
+<script>
+(function () {
+  "use strict";
+  var CHANNEL_NAMES = {
+    GG: "Gods & Glory", LO: "Little Olympus", IL: "Iron Legends",
+    ED: "Empire Decoded", EOE: "Echoes of Eternity"
+  };
+  var params = new URLSearchParams(window.location.search);
+  var feed = params.get("feed") || "latest_episodes.json";
+
+  function esc(s) {
+    return String(s || "").replace(/[&<>"']/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+    });
+  }
+
+  function epNum(id) {
+    var m = /EP(\d+)/.exec(id || "");
+    return m ? parseInt(m[1], 10) : 0;
+  }
+
+  function render(data) {
+    var episodes = (data && data.episodes) || [];
+    // Latest episode per channel (highest EP number wins)
+    var latest = {};
+    episodes.forEach(function (ep) {
+      var ch = ep.channel || "?";
+      if (!latest[ch] || epNum(ep.episode_id) > epNum(latest[ch].episode_id)) {
+        latest[ch] = ep;
+      }
+    });
+    var liveCount = episodes.filter(function (ep) {
+      return ep.status === "live" || ep.status === "uploaded";
+    }).length;
+
+    document.getElementById("eos-count").innerHTML =
+      "<b>" + liveCount + "</b> episode" + (liveCount === 1 ? "" : "s") +
+      " live across the empire" +
+      (data.updated_at ? " &middot; updated " + esc(String(data.updated_at).slice(0, 10)) : "");
+
+    var grid = document.getElementById("eos-grid");
+    grid.innerHTML = Object.keys(latest).sort().map(function (ch) {
+      var ep = latest[ch];
+      var status = esc(ep.status || "pending");
+      var watch = ep.youtube_url
+        ? '<a class="eos-watch" href="' + esc(ep.youtube_url) +
+          '" target="_blank" rel="noopener">Watch on YouTube &rarr;</a>'
+        : "";
+      return '<div class="eos-card">' +
+        '<div class="eos-chan">' + esc(CHANNEL_NAMES[ch] || ch) + "</div>" +
+        '<div class="eos-ep-title">' + esc(ep.title || ep.episode_id) + "</div>" +
+        '<div class="eos-status ' + status + '">' + status + "</div>" +
+        watch + "</div>";
+    }).join("");
+  }
+
+  fetch(feed, { cache: "no-store" })
+    .then(function (r) {
+      if (!r.ok) throw new Error("HTTP " + r.status);
+      return r.json();
+    })
+    .then(render)
+    .catch(function (e) {
+      document.getElementById("eos-count").innerHTML =
+        '<span class="eos-error">Episode feed unavailable (' + esc(e.message) +
+        ") — check latest_episodes.json deployment.</span>";
+    });
+})();
+</script>
+</body>
+</html>

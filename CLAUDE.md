@@ -55,6 +55,9 @@ Josh Jardin (justifiedmagnificent@gmail.com). Building a multi-channel AI conten
 | channel_uploader.py | Per-channel uploader with --verify — replaces easy_youtube_uploader.py |
 | token_gg.pickle | Correct GG token — NEVER use token.pickle (wrong account) |
 | crosspost_bridge.py | Multiplatform publish queue — needs crosspost_config.json filled in |
+| social_clips/ | AUTO-PUBLISH SYSTEM: clip_generator.py (5 platform clips from final MP4, RMS-peak selection, burned captions) + auto_publisher.py (posts all platforms in parallel, 3x retry) + post_render.py (hook fired by empire_render after council approval) |
+| auto_publisher.py | social_clips/auto_publisher.py — runs after YouTube upload (via UPLOAD_{ch}_{ep}.bat); IG/TikTok/FB/Pinterest stubs skip cleanly until tokens added to .env (IG_ACCESS_TOKEN, TIKTOK_ACCESS_TOKEN, FB_ACCESS_TOKEN, PINTEREST_ACCESS_TOKEN) |
+| latest_episodes.json | Website episode feed (repo root) — updated by post_render/auto_publisher; read by website/empire_status_widget.html (embed on jardins-outpost.pages.dev) |
 | AGENT HAND-OFF | Gemini's master handoff block — paste at start of every new agent session |
 | Python path | C:\Users\jjard\AppData\Local\Programs\Python\Python314\python.exe |
 
@@ -62,7 +65,7 @@ Josh Jardin (justifiedmagnificent@gmail.com). Building a multi-channel AI conten
 | Season | Episodes | Status |
 |--------|----------|--------|
 | S1 GG | EP001–EP005 | ✅ Finals in renders/ (187–260MB each) |
-| GG NEW FORMAT | EP002–EP007 | ✅ Scripts written (Cannae/Constantinople/Teutoburg/Gaugamela/Vienna/Stalingrad) — queued for render (council/state/gg/render_queue.json) via empire_render.py |
+| GG NEW FORMAT | EP001–EP007 | ✅ Scripts written (Thermopylae/Cannae/Constantinople/Teutoburg/Gaugamela/Vienna/Stalingrad) — queued for render (council/state/gg/render_queue.json) via empire_render.py. EP001 = GG_EP001_thermopylae.json (old EP001 scripts deleted 2026-07-18) |
 | S2 GG | EP006–EP011 | EP006 (Pearl Harbor 41min) ✅ uploaded · EP007 (D-Day 39min) ✅ uploaded · EP008–EP011 RENDERING NOW from full 54-scene scripts via RENDER_S2_MISSING.bat |
 | S3 GG | EP012–EP025 | ✅ ALL 14 SCRIPTS WRITTEN — run render_season3.bat to render |
 | ED S1 | EP001 | Scripted only |
@@ -75,7 +78,7 @@ EP018 Hastings 1066 | EP019 Kamikaze/Mongol Fleet | EP020 Vienna 1683
 EP021 Midway | EP022 Battle of the Bulge | EP023 Operation Market Garden
 EP024 Inchon | EP025 Yorktown
 
-## Council Bots (10 total, C:\Users\jjard\claude\video-bot-pipeline\council\bots\)
+## Council Bots (12 total, C:\Users\jjard\claude\video-bot-pipeline\council\bots\)
 | Bot | Priority | Role |
 |-----|----------|------|
 | bot_01_guardian | 10 | Scans for broken/tiny clips and short finals |
@@ -88,6 +91,8 @@ EP024 Inchon | EP025 Yorktown
 | bot_08_auto_renderer | 60 | Renders 1 episode per council run |
 | bot_09_quality_checker | 55 | ffprobe duration + audio RMS check |
 | bot_10_frame_inspector | 56 | Visual QC: frame every 30s, catches red/black/white/frozen screens, auto-queues re-render |
+| bot_11_orchestrator_monitor | 5 | Watchdog: restarts master orchestrator if heartbeat stale/dead |
+| bot_12_social_publisher | 65 | Self-healing social posts: retries failed platform posts (max 3), publishes orphan clip sets |
 
 ## Viral Engine Launch
 **Website:** https://jardins-outpost.pages.dev (Cloudflare Pages) — LIVE, looks great, dark gold theme. Has Apps/Store/Services/Workspace/Contact nav. App cards currently point to locally-running servers (not public yet).

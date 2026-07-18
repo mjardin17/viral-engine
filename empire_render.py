@@ -931,6 +931,14 @@ def render_episode(channel: str, episode_id: str, script_path: Path,
         return None
     print(f"{TAG} ✅ COUNCIL APPROVED — ready to upload")
 
+    # Post-render hook: upload mission + UPLOAD bat + website feed + social
+    # clip staging. Best-effort — a hook failure never kills a finished render.
+    try:
+        from social_clips.post_render import on_council_approved  # lazy
+        on_council_approved(channel, ep_id, final_path, title)
+    except Exception as e:
+        print(f"{TAG} ⚠ post-render hook failed (non-fatal): {e}", file=sys.stderr)
+
     # Clean work files only after a fully successful, council-approved render
     # (keep them if scenes were skipped, so a re-run can resume and fill the gaps)
     if not stats.skipped:

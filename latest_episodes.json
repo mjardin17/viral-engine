@@ -1,0 +1,41 @@
+{
+  "updated_at": "2026-07-18T00:00:00Z",
+  "episodes": [
+    {
+      "episode_id": "GG_EP001",
+      "title": "The 300: Death Before Surrender at Thermopylae",
+      "channel": "GG",
+      "youtube_url": "",
+      "thumbnail_url": "",
+      "status": "scripted",
+      "rendered_at": ""
+    },
+    {
+      "episode_id": "GG_EP006",
+      "title": "Pearl Harbor",
+      "channel": "GG",
+      "youtube_url": "",
+      "thumbnail_url": "",
+      "status": "uploaded",
+      "rendered_at": ""
+    },
+    {
+      "episode_id": "GG_EP007",
+      "title": "D-Day",
+      "channel": "GG",
+      "youtube_url": "",
+      "thumbnail_url": "",
+      "status": "uploaded",
+      "rendered_at": ""
+    },
+    {
+      "episode_id": "LO_EP001",
+      "title": "Little Olympus — Episode 1",
+      "channel": "LO",
+      "youtube_url": "",
+      "thumbnail_url": "",
+      "status": "rendered",
+      "rendered_at": ""
+    }
+  ]
+}

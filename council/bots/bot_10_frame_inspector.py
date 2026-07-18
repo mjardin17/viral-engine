@@ -211,22 +211,21 @@ def inspect_video(video_path: Path, log_fn) -> list[str]:
 
 
 class FrameInspectorBot(CouncilBot):
-    NAME     = "bot_10_frame_inspector"
-    PRIORITY = 56   # runs right after bot_09_quality_checker (55)
+    name = "bot_10_frame_inspector"
+    description = "Visual QC: samples frames from finals, catches red/black/white/frozen screens"
+    priority = 56   # runs right after bot_09_quality_checker (55)
+    auto_fix = False  # only reports + queues re-renders; bot_08 does the fixing
 
     def run(self) -> BotResult:
+        r = self.result
         if not self.renders_dir.exists():
-            return BotResult(
-                bot=self.NAME, channel=self.channel,
-                status="skip", message="renders dir missing"
-            )
+            r.ok(f"No renders dir yet for {self.channel_name} — nothing to inspect")
+            return r
 
-        finals = sorted(self.renders_dir.glob(f"*_final.mp4"))
+        finals = sorted(self.renders_dir.glob("*_final.mp4"))
         if not finals:
-            return BotResult(
-                bot=self.NAME, channel=self.channel,
-                status="ok", message="no finals to inspect"
-            )
+            r.ok("No finals to inspect")
+            return r
 
         failed: list[str]   = []
         clean:  list[str]   = []
@@ -240,7 +239,8 @@ class FrameInspectorBot(CouncilBot):
                     failed.append(ep_id)
                     report[ep_id] = {"status": "FAIL", "defects": defects}
                     for d in defects:
-                        self.log(f"[FAIL] {ep_id}: {d}", level="error")
+                        self.log(f"[FAIL] {ep_id}: {d}")
+                    r.warn(f"{ep_id}: {len(defects)} visual defect(s): {'; '.join(defects)}")
                     # Write to re-render queue so bot_08 picks it up
                     self._queue_for_rerender(ep_id)
                 else:
@@ -248,26 +248,23 @@ class FrameInspectorBot(CouncilBot):
                     report[ep_id] = {"status": "PASS"}
                     self.log(f"[PASS] {ep_id}: visual QC clean")
             except Exception as e:
-                self.log(f"[ERROR] {ep_id}: {e}", level="error")
+                self.log(f"[ERROR] {ep_id}: {e}")
                 report[ep_id] = {"status": "ERROR", "error": str(e)}
+                r.error(f"{ep_id}: inspection error: {e}")
 
         # Save report
         report_path = self.state_dir / "frame_inspection_report.json"
         report_path.write_text(json.dumps(report, indent=2), encoding="utf-8")
 
         if failed:
-            msg = f"VISUAL DEFECTS FOUND in {len(failed)} episode(s): {', '.join(failed)}. Queued for re-render."
-            return BotResult(
-                bot=self.NAME, channel=self.channel,
-                status="warning", message=msg, data=report
+            r.next_action = "bot_08_auto_renderer"
+            r.messages.append(
+                f"⚠ VISUAL DEFECTS FOUND in {len(failed)} episode(s): "
+                f"{', '.join(failed)}. Queued for re-render."
             )
-
-        return BotResult(
-            bot=self.NAME, channel=self.channel,
-            status="ok",
-            message=f"All {len(clean)} episodes passed visual QC.",
-            data=report
-        )
+        else:
+            r.ok(f"All {len(clean)} episodes passed visual QC.")
+        return r
 
     def _queue_for_rerender(self, ep_id: str) -> None:
         """Add ep_id to the render queue so bot_08 re-renders it."""
@@ -279,7 +276,7 @@ class FrameInspectorBot(CouncilBot):
                 queue_path.write_text(json.dumps(queue, indent=2), encoding="utf-8")
                 self.log(f"Queued {ep_id} for re-render due to visual defect")
         except Exception as e:
-            self.log(f"Could not update render queue: {e}", level="error")
+            self.log(f"Could not update render queue: {e}")
 
 
 if __name__ == "__main__":

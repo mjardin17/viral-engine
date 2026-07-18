@@ -71,6 +71,25 @@ CHANNEL_CONFIGS: dict[str, dict] = {
 
 ALL_CHANNELS = list(CHANNEL_CONFIGS.keys())
 
+# Narration pace used to estimate duration for new-format scripts (words/sec).
+# Kokoro narrates at roughly 150 wpm → 2.5 words per second.
+NARRATION_WORDS_PER_SEC = 2.5
+
+
+def estimate_scenes_duration(scenes: list[dict]) -> int:
+    """Total duration (seconds) for a script's scenes.
+
+    Legacy scripts carry an explicit per-scene ``duration_sec``. New-format
+    scripts (empire_render.py, 2026-07: GG_EP002+ punchy 10-min episodes)
+    omit it — duration is implied by narration length. When no explicit
+    durations exist, estimate from narration word count at Kokoro pace.
+    """
+    explicit = sum(s.get("duration_sec", 0) for s in scenes)
+    if explicit > 0:
+        return explicit
+    words = sum(len(str(s.get("narration", "")).split()) for s in scenes)
+    return int(words / NARRATION_WORDS_PER_SEC)
+
 
 @dataclass
 class BotResult:

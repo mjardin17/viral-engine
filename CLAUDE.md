@@ -62,6 +62,7 @@ Josh Jardin (justifiedmagnificent@gmail.com). Building a multi-channel AI conten
 | Season | Episodes | Status |
 |--------|----------|--------|
 | S1 GG | EP001–EP005 | ✅ Finals in renders/ (187–260MB each) |
+| GG NEW FORMAT | EP002–EP007 | ✅ Scripts written (Cannae/Constantinople/Teutoburg/Gaugamela/Vienna/Stalingrad) — queued for render (council/state/gg/render_queue.json) via empire_render.py |
 | S2 GG | EP006–EP011 | EP006 (Pearl Harbor 41min) ✅ uploaded · EP007 (D-Day 39min) ✅ uploaded · EP008–EP011 RENDERING NOW from full 54-scene scripts via RENDER_S2_MISSING.bat |
 | S3 GG | EP012–EP025 | ✅ ALL 14 SCRIPTS WRITTEN — run render_season3.bat to render |
 | ED S1 | EP001 | Scripted only |
@@ -162,6 +163,7 @@ Then give the answer.
 - Base44 free plan caps at 5 apps and has no delete/status-poll tool available via MCP — when the cap is hit, repurpose an existing app instead of asking Josh to free a slot blind. 2026-07-13: repurposed ViralVox (6a341ca3df11ec718fefd246) into the full storefront (Product/Order entities + Store/Apps/Services pages) rather than creating a new app.
 - Don't price a product as sellable ("Buy Now") without checking whether the underlying feature actually matches the sales pitch — caught after the fact that ViralVox was priced as launch-ready while still running edge-tts, not the ElevenLabs upgrade this doc says is required before launch.
 - Empire OS pipeline (static PNGs + Kokoro TTS) CANNOT produce watchable LO or IL content — tested on LO EP001, result was blue screen with robot voice. Higgsfield is non-negotiable for cartoon channels. Never attempt to replace Higgsfield for LO/IL with the static pipeline again.
+- Old script files (scene_prompts.gg_epXXX.final.json) beat new scripts alphabetically — always delete old scripts after replacing with new ones (bot_09 now flags this as wrong_script; bot_06 prefers canonical {EP_ID}_*.json names).
 
 → Full pipeline docs: memory/context/pipeline.md
 → Full episode backlog: memory/projects/viral-engine.md

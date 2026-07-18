@@ -121,6 +121,42 @@ class QualityCheckerBot(CouncilBot):
     priority = 55
     auto_fix = False
 
+    def _check_script_source(self, ep_id: str) -> list[str]:
+        """Verify a rendered GG episode was built from the canonical script.
+
+        Canonical scripts are named {EP_ID}_*.json (e.g. GG_EP002_cannae.json).
+        Legacy scripts (scene_prompts.gg_ep002.final.json) sort ahead of them
+        alphabetically and can silently win selection — if a legacy file still
+        exists alongside a canonical one, or the render queue recorded a
+        legacy-named script_path, that is an ERROR. Returns problem strings.
+        """
+        problems: list[str] = []
+        if not self.prompts_dir.exists():
+            return problems
+        canonical = (list(self.prompts_dir.glob(f"{ep_id}_*.json"))
+                     + list(self.prompts_dir.glob(f"{ep_id}.json")))
+        legacy = list(self.prompts_dir.glob(f"scene_prompts.{ep_id.lower()}.*.json"))
+        if canonical and legacy:
+            problems.append(
+                f"legacy script(s) shadow canonical {canonical[0].name}: "
+                f"{', '.join(p.name for p in legacy)} — delete legacy after replacing"
+            )
+        # If the render queue recorded which script was queued, verify its name
+        queue_path = self.state_dir / "render_queue.json"
+        if queue_path.exists():
+            try:
+                queue = json.loads(queue_path.read_text(encoding="utf-8"))
+                for q in queue:
+                    if isinstance(q, dict) and q.get("episode_id") == ep_id:
+                        sp = q.get("script_path", "")
+                        if sp and not Path(sp).name.upper().startswith(ep_id.upper()):
+                            problems.append(
+                                f"render queue points at legacy-named script: {Path(sp).name}"
+                            )
+            except Exception:
+                pass
+        return problems
+
     def run(self) -> BotResult:
         r = self.result
         if not self.renders_dir.exists():
@@ -182,7 +218,20 @@ class QualityCheckerBot(CouncilBot):
                 quality_issues.append({"episode": ep_id, "issue": "no_final_hold", "verdict": "NO-GO"})
                 continue
 
-            if rms >= MIN_AUDIO_RMS:
+            # Script provenance — canonical {EP_ID}_*.json must have been used,
+            # not an old legacy scene_prompts.* file (GG new-format guard)
+            script_problems: list[str] = []
+            if self.channel == "gg":
+                script_problems = self._check_script_source(ep_id)
+                for prob in script_problems:
+                    r.error(f"{ep_id}: WRONG SCRIPT — {prob}")
+                    quality_issues.append({
+                        "episode": ep_id,
+                        "issue": "wrong_script",
+                        "detail": prob,
+                    })
+
+            if rms >= MIN_AUDIO_RMS and not script_problems:
                 r.ok(f"{ep_id}: {dur:.0f}s  {vid_info}  audio={rms:.1f}dBFS  ending=ok  ✓")
 
         self.save_state({"quality_issues": quality_issues,

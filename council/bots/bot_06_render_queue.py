@@ -12,7 +12,8 @@ from pathlib import Path
 from datetime import datetime
 
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
-from council.bot_base import CouncilBot, BotResult, BASE_DIR, STATE_DIR
+from council.bot_base import (CouncilBot, BotResult, BASE_DIR, STATE_DIR,
+                              estimate_scenes_duration)
 
 MIN_FULL_DURATION = 600
 
@@ -53,15 +54,22 @@ def _scan_full_scripts(prompts_dir: Path, ep_prefix: str) -> dict[str, dict]:
                 ep_id = stem[idx:].split(".")[0].upper()
         if not ep_id:
             continue
-        total_dur = sum(s.get("duration_sec", 0) for s in scenes)
+        total_dur = estimate_scenes_duration(scenes)
         if total_dur >= MIN_FULL_DURATION:
-            if ep_id not in full_scripts or total_dur > full_scripts[ep_id]["total_duration_sec"]:
+            # Canonical scripts are named {EP_ID}_*.json (e.g. GG_EP002_cannae.json).
+            # They ALWAYS beat legacy names (scene_prompts.gg_ep002.final.json),
+            # regardless of duration — legacy files must never win selection.
+            canonical = p.stem.upper().startswith(ep_id.upper())
+            prev = full_scripts.get(ep_id)
+            if prev is None or (canonical, total_dur) > (prev["canonical_name"],
+                                                         prev["total_duration_sec"]):
                 full_scripts[ep_id] = {
                     "episode_id": ep_id,
                     "script_path": str(p),
                     "scene_count": len(scenes),
                     "total_duration_sec": total_dur,
                     "title": data.get("title", "?"),
+                    "canonical_name": canonical,
                 }
     return full_scripts
 
@@ -103,6 +111,7 @@ class RenderQueueBot(CouncilBot):
             queue.append({
                 "episode_id": ep_id,
                 "title": script_info["title"],
+                "script_path": script_info["script_path"],
                 "scene_count": script_info["scene_count"],
                 "total_duration_sec": script_info["total_duration_sec"],
                 "queued_at": datetime.now().isoformat(),

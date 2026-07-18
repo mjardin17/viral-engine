@@ -11,7 +11,8 @@ from pathlib import Path
 from datetime import datetime
 
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
-from council.bot_base import CouncilBot, BotResult, BASE_DIR, STATE_DIR
+from council.bot_base import (CouncilBot, BotResult, BASE_DIR, STATE_DIR,
+                              estimate_scenes_duration)
 
 MIN_FULL_DURATION = 600
 STUB_CRITICAL = 120
@@ -68,7 +69,10 @@ class StubExpanderBot(CouncilBot):
                         break
             if not ep_id:
                 continue
-            total_dur = sum(s.get("duration_sec", 0) for s in scenes)
+            # New-format scripts (GG_EP002+ / empire_render.py) have no
+            # duration_sec — estimate from narration so they are recognized
+            # as FULL scripts, never flagged as stubs.
+            total_dur = estimate_scenes_duration(scenes)
             by_ep.setdefault(ep_id, []).append({
                 "filepath": str(p),
                 "scene_count": len(scenes),

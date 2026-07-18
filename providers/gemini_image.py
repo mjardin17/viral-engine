@@ -30,11 +30,14 @@ from .base import ProviderBase
 
 GEMINI_API_BASE = "https://generativelanguage.googleapis.com/v1beta"
 # Tried in order — first model that returns an image wins.
+# Verified working July 2026: gemini-2.0-flash-preview-image-generation
 MODEL_CANDIDATES: tuple[str, ...] = (
-    "gemini-2.5-flash-image",
     "gemini-2.0-flash-preview-image-generation",
-    "gemini-2.0-flash-exp",  # last resort — older experimental image model
+    "gemini-2.5-flash-image",
 )
+# Fallback if every generateContent model fails — Imagen predict API.
+IMAGEN_FALLBACK_MODEL = "imagen-3.0-generate-002"
+LOG_TAG = "[gemini_image]"
 
 
 def _load_env() -> None:
@@ -64,13 +67,8 @@ class GeminiImageProvider(ProviderBase):
         """True if GEMINI_API_KEY is set."""
         return bool(self.api_key)
 
-    def _generate_content(self, model: str, prompt: str) -> dict:
-        """Call generateContent asking for an IMAGE response modality."""
-        url = f"{GEMINI_API_BASE}/models/{model}:generateContent"
-        payload = {
-            "contents": [{"parts": [{"text": prompt}]}],
-            "generationConfig": {"responseModalities": ["IMAGE", "TEXT"]},
-        }
+    def _post_json(self, url: str, payload: dict) -> dict:
+        """POST JSON to a Gemini endpoint; on failure return {"error", "body"}."""
         headers = {"Content-Type": "application/json", "x-goog-api-key": self.api_key}
         req = urllib.request.Request(url, data=json.dumps(payload).encode("utf-8"),
                                      headers=headers, method="POST")
@@ -80,7 +78,39 @@ class GeminiImageProvider(ProviderBase):
         except urllib.error.HTTPError as e:
             return {"error": str(e), "body": e.read().decode("utf-8", errors="replace")}
         except Exception as e:
-            return {"error": str(e)}
+            return {"error": str(e), "body": ""}
+
+    def _generate_content(self, model: str, prompt: str) -> dict:
+        """Call generateContent asking for an IMAGE response modality."""
+        url = f"{GEMINI_API_BASE}/models/{model}:generateContent"
+        payload = {
+            "contents": [{"parts": [{"text": f"Generate a historical image: {prompt}"}]}],
+            "generationConfig": {"responseModalities": ["IMAGE", "TEXT"]},
+        }
+        return self._post_json(url, payload)
+
+    def _generate_imagen(self, prompt: str, aspect_ratio: str) -> bytes | None:
+        """Last-resort fallback: Imagen predict API (paid-tier rate limited)."""
+        url = f"{GEMINI_API_BASE}/models/{IMAGEN_FALLBACK_MODEL}:predict"
+        payload = {
+            "instances": [{"prompt": prompt}],
+            "parameters": {"sampleCount": 1, "aspectRatio": aspect_ratio},
+        }
+        result = self._post_json(url, payload)
+        if "error" in result:
+            print(f"{LOG_TAG} {IMAGEN_FALLBACK_MODEL} FAILED: {result['error']} "
+                  f"| response: {result.get('body', '')[:500]}", flush=True)
+            return None
+        for prediction in result.get("predictions", []):
+            b64 = prediction.get("bytesBase64Encoded")
+            if b64:
+                try:
+                    return base64.b64decode(b64)
+                except Exception as e:
+                    print(f"{LOG_TAG} Imagen base64 decode failed: {e}", flush=True)
+        print(f"{LOG_TAG} {IMAGEN_FALLBACK_MODEL} returned no image data "
+              f"(keys: {list(result.keys())})", flush=True)
+        return None
 
     @staticmethod
     def _extract_image_bytes(result: dict) -> bytes | None:
@@ -103,21 +133,36 @@ class GeminiImageProvider(ProviderBase):
         Synchronous — this is what waterfall.py calls.
         """
         if not self.is_connected():
+            print(f"{LOG_TAG} SKIPPED — GEMINI_API_KEY not set in .env", flush=True)
             return False
         styled = (f"{prompt}. Cinematic wide illustration, {aspect_ratio} aspect ratio, "
                   f"vibrant colors, high detail, no text, no watermark.")
+        data: bytes | None = None
         for model in MODEL_CANDIDATES:
             result = self._generate_content(model, styled)
             if "error" in result:
+                # Loud failure — silent fall-through hid a dead model name for weeks.
+                print(f"{LOG_TAG} {model} FAILED: {result['error']} "
+                      f"| response: {result.get('body', '')[:500]}", flush=True)
                 continue
             data = self._extract_image_bytes(result)
             if data and len(data) > 10_000:
-                try:
-                    dest.parent.mkdir(parents=True, exist_ok=True)
-                    dest.write_bytes(data)
-                    return True
-                except OSError:
-                    return False
+                break
+            print(f"{LOG_TAG} {model} returned no usable image "
+                  f"(got {len(data) if data else 0} bytes) — trying next", flush=True)
+            data = None
+        if data is None:
+            print(f"{LOG_TAG} all generateContent models failed — "
+                  f"trying Imagen fallback {IMAGEN_FALLBACK_MODEL}", flush=True)
+            data = self._generate_imagen(styled, aspect_ratio)
+        if data and len(data) > 10_000:
+            try:
+                dest.parent.mkdir(parents=True, exist_ok=True)
+                dest.write_bytes(data)
+                return True
+            except OSError as e:
+                print(f"{LOG_TAG} could not write {dest}: {e}", flush=True)
+                return False
         return False
 
     # ── ProviderBase interface ─────────────────────────────────────────────

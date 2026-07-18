@@ -36,6 +36,8 @@ import shutil
 import subprocess
 import sys
 import threading
+import time
+import urllib.error
 import urllib.parse
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -123,7 +125,7 @@ KEN_BURNS_ROTATION: tuple[int, ...] = (0, 1, 2, 3, 4)
 
 MIN_IMAGE_BYTES = 50 * 1024  # Wikimedia image must be >50KB to count as real
 
-MAX_PARALLEL_SCENES = 4  # scenes rendered concurrently (ThreadPoolExecutor)
+MAX_PARALLEL_SCENES = 2  # scenes rendered concurrently — keep low: Pollinations rate-limits ~1 req/s
 
 # ── Quality feature flags (Josh can set to False to disable) ───────────────────
 SMART_IMAGE_PROMPTS = True  # Use Gemini to match images to narration
@@ -341,21 +343,36 @@ def fetch_wikimedia_image(query: str, dest: Path, max_results: int = 5) -> bool:
 
 
 def fetch_pollinations_image(prompt: str, dest: Path) -> bool:
-    """Fallback: generate an image via Pollinations AI."""
+    """
+    Fallback: generate an image via Pollinations AI.
+    Pollinations rate-limits at ~1 req/s — on HTTP 429 we wait 3s and
+    retry once before giving up.
+    """
     encoded = urllib.parse.quote(prompt[:200])
     url = f"https://image.pollinations.ai/prompt/{encoded}?width=1920&height=1080&nologo=true"
-    try:
-        req = urllib.request.Request(url, headers={"User-Agent": "EmpireOS/1.0"})
-        with urllib.request.urlopen(req, timeout=90) as resp:
-            data = resp.read()
-        dest.parent.mkdir(parents=True, exist_ok=True)
-        dest.write_bytes(data)
-        if len(data) > 10_000 and _looks_like_image(dest):
-            print(f"{TAG} Pollinations fallback ✅ ({len(data) // 1024}KB)")
-            return True
-        dest.unlink(missing_ok=True)
-    except Exception as e:
-        print(f"{TAG} Pollinations failed: {e}", file=sys.stderr)
+    for attempt in (1, 2):
+        try:
+            req = urllib.request.Request(url, headers={"User-Agent": "EmpireOS/1.0"})
+            with urllib.request.urlopen(req, timeout=90) as resp:
+                data = resp.read()
+            dest.parent.mkdir(parents=True, exist_ok=True)
+            dest.write_bytes(data)
+            if len(data) > 10_000 and _looks_like_image(dest):
+                print(f"{TAG} Pollinations fallback ✅ ({len(data) // 1024}KB)")
+                return True
+            dest.unlink(missing_ok=True)
+            return False
+        except urllib.error.HTTPError as e:
+            if e.code == 429 and attempt == 1:
+                print(f"{TAG} Pollinations 429 (rate limited) — waiting 3s and retrying once",
+                      file=sys.stderr)
+                time.sleep(3)
+                continue
+            print(f"{TAG} Pollinations failed: HTTP {e.code} {e.reason}", file=sys.stderr)
+            return False
+        except Exception as e:
+            print(f"{TAG} Pollinations failed: {e}", file=sys.stderr)
+            return False
     return False
 
 
@@ -402,6 +419,8 @@ def fetch_scene_images(prompts: list[str], work_dir: Path, scene_number: int,
         if dest.exists() and dest.stat().st_size > 10_000:
             images.append(dest)
             continue
+        if i > 1:
+            time.sleep(1.0)  # pace image fetches — Pollinations rate-limits ~1 req/s
         if fetch_one_scene_image(prompt, work_dir, f"scene_{scene_number:02d}_img{i}", dest):
             images.append(dest)
         else:

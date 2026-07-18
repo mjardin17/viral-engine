@@ -23,6 +23,7 @@ Never raises — a source that fails is simply absent from the results.
 from __future__ import annotations
 
 import sys
+import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from dataclasses import dataclass
 from pathlib import Path
@@ -35,6 +36,7 @@ if str(BASE_DIR) not in sys.path:
 TAG = "[image_scout]"
 MAX_WORKERS = 4
 MIN_VALID_BYTES = 10_000
+SOURCE_STAGGER_SEC = 0.5  # delay between parallel source launches — don't hammer APIs
 
 
 @dataclass(frozen=True)
@@ -79,9 +81,18 @@ def _try_gemini(prompt: str, dest: Path) -> Optional[Path]:
     try:
         from providers.gemini_image import GeminiImageProvider
         provider = GeminiImageProvider()
-        if provider.is_connected() and provider.generate_image_file(prompt, dest, "16:9"):
+        if not provider.is_connected():
+            _log("gemini skipped: GEMINI_API_KEY not set in .env")
+            return None
+        if provider.generate_image_file(prompt, dest, "16:9"):
             if dest.exists() and dest.stat().st_size > MIN_VALID_BYTES:
                 return dest
+            size = dest.stat().st_size if dest.exists() else 0
+            _log(f"gemini failed: wrote {size} bytes (< {MIN_VALID_BYTES} minimum)")
+        else:
+            # Provider prints the actual API error itself ([gemini_image] ... FAILED)
+            _log("gemini failed: all Gemini models returned errors — see [gemini_image] "
+                 "log lines above for the actual API responses")
     except Exception as e:
         _log(f"gemini failed: {e}")
     return None
@@ -120,10 +131,11 @@ def scout_image(prompt: str, work_dir: Path, tag: str,
 
     results: list[ImageResult] = []
     with ThreadPoolExecutor(max_workers=MAX_WORKERS) as pool:
-        futures = {
-            pool.submit(fn, prompt, work_dir / f"{tag}_{name}{ext}"): name
-            for name, fn, ext in active
-        }
+        futures = {}
+        for i, (name, fn, ext) in enumerate(active):
+            if i > 0:
+                time.sleep(SOURCE_STAGGER_SEC)  # stagger launches — avoid hammering APIs
+            futures[pool.submit(fn, prompt, work_dir / f"{tag}_{name}{ext}")] = name
         for future in as_completed(futures):
             name = futures[future]
             try:

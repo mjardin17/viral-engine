@@ -57,6 +57,17 @@ BASE_DIR: Path = Path(__file__).resolve().parent
 sys.path.insert(0, str(BASE_DIR))
 from wikimedia_fetch import search_wikimedia  # noqa: E402
 
+# ── AI Router + engineering report (ADDITIVE — never blocks a render) ─────────
+try:
+    from ai_router.router import AIRouter, TaskType  # noqa: E402,F401
+    from report_generator import ReportGenerator  # noqa: E402
+    _router: "AIRouter | None" = AIRouter()
+except Exception as _router_err:  # router must never kill the renderer
+    print(f"[empire_render] ⚠ AI router unavailable ({_router_err}) — "
+          f"legacy paths only", file=sys.stderr)
+    _router = None
+    ReportGenerator = None  # type: ignore[assignment,misc]
+
 TAG = "[empire_render]"
 
 # ── Executables ────────────────────────────────────────────────────────────────
@@ -987,7 +998,15 @@ def main() -> None:
     parser.add_argument("--multi-agent", action="store_true",
                         help="GG: build each scene via orchestrator scene_builder "
                              "(parallel image scout + video agent + 3-round council QC)")
+    parser.add_argument("--dry-run", action="store_true",
+                        help="Test pipeline without generating assets")
     args = parser.parse_args()
+
+    # Dry run: full preflight (deps/keys/paths/council), zero generation
+    if args.dry_run:
+        from dry_run import run_dry_run  # lazy — only imported when asked
+        failures = run_dry_run()
+        sys.exit(1 if failures else 0)
 
     channel: str = args.channel.upper()
     episode_id: str = args.episode.upper()
@@ -1041,6 +1060,29 @@ def main() -> None:
 
     result = render_episode(channel, episode_id, script_path, music_path, clips_dir,
                             multi_agent=args.multi_agent)
+
+    # Engineering report (ADDITIVE — never affects render success/failure)
+    if result is not None and ReportGenerator is not None:
+        try:
+            run_id = time.strftime("%Y%m%d_%H%M%S")
+            report = ReportGenerator(run_id=run_id, episode_id=episode_id,
+                                     channel=channel)
+            report.log_quality_score("final_render", 1.0, {
+                "output": str(result),
+                "size_mb": round(result.stat().st_size / 1024 / 1024, 1),
+            })
+            if _router is not None:
+                for model, info in _router.health.get_report().items():
+                    for task, stats in info.get("tasks", {}).items():
+                        report.log_model_used(task, model,
+                                              stats["avg_latency_ms"],
+                                              stats["avg_cost_usd"])
+            report_path = report.generate()
+            print(f"{TAG} Engineering report: {report_path}")
+        except Exception as e:
+            print(f"{TAG} ⚠ report generation failed (non-fatal): {e}",
+                  file=sys.stderr)
+
     sys.exit(0 if result else 1)
 
 

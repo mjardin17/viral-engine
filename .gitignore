@@ -94,3 +94,8 @@ dist/
 .next/
 .turbo/
 *.tsbuildinfo
+
+# --- AI ROUTER RUNTIME STATE (never commit) ---
+model_health.json
+DRY_RUN_REPORT.md
+PIPELINE_ENGINEERING_REPORT.md

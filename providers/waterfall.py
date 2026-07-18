@@ -13,9 +13,20 @@ Order (free → paid):
   6. replicate      — REPLICATE_API_TOKEN     (video, open-source models)
   7. image_to_video — HF_TOKEN + GEMINI_API_KEY (free still → REAL MOTION clip;
                                                best free fallback)
-  8. gemini_image   — GEMINI_API_KEY          (image → Ken Burns; free 500/day)
-  9. pollinations   — no key needed           (image → Ken Burns; always free)
- 10. higgsfield     — HIGGSFIELD_API_KEY      (video; PAID — absolute last resort)
+
+  Image chain (each → Ken Burns still; ZERO-SIGNUP sources first):
+  8.  wikimedia        — no key needed        (real historical photos, public domain)
+  9.  wikiart          — no key needed        (historical paintings, public domain)
+ 10.  openverse        — no key needed        (700M+ CC commercial-licensed images)
+ 11.  lexica           — no key needed        (HD AI-image search, any prompt)
+ 12.  gemini_image     — GEMINI_API_KEY       (AI gen; free 500/day)
+ 12b. cloudflare_image — CF_ACCOUNT_ID+CF_API_TOKEN (AI gen; free 10k/day)
+ 13.  pollinations     — no key needed        (AI gen; always free)
+ 14.  ai_horde         — no key needed        (anonymous crowdsourced SD,
+                                               slow queue but always free)
+ 15.  picsum           — no key needed        (LAST RESORT random placeholder —
+                                               unrelated to prompt, beats black frame)
+ 16.  higgsfield       — HIGGSFIELD_API_KEY   (video; PAID — absolute last resort)
 
 Each provider is skipped silently if its key is missing, and skipped with a
 log line if it errors or times out. This module never raises.
@@ -102,6 +113,57 @@ def _run_video_provider(provider: ProviderBase, name: str, prompt: str,
 
 
 # ── Image providers ────────────────────────────────────────────────────────────
+def _wikimedia_image(prompt: str, dest: Path, aspect_ratio: str) -> Path | None:
+    """Fetch a real historical photo from Wikimedia Commons (no key)."""
+    try:
+        from empire_render import fetch_wikimedia_image
+        if fetch_wikimedia_image(prompt, dest):
+            return dest
+    except Exception as e:
+        _log(f"wikimedia: unexpected error — {e}", err=True)
+    return None
+
+
+def _wikiart_image(prompt: str, dest: Path, aspect_ratio: str) -> Path | None:
+    """Fetch a historical painting from WikiArt (no key, public domain era art)."""
+    try:
+        from .wikiart import WikiArtProvider
+        return WikiArtProvider().fetch_image(prompt, dest, aspect_ratio)
+    except Exception as e:
+        _log(f"wikiart: unexpected error — {e}", err=True)
+    return None
+
+
+def _openverse_image(prompt: str, dest: Path, aspect_ratio: str) -> Path | None:
+    """Fetch a CC commercial-licensed image from Openverse (no key)."""
+    try:
+        from .openverse import OpenverseProvider
+        return OpenverseProvider().fetch_image(prompt, dest, aspect_ratio)
+    except Exception as e:
+        _log(f"openverse: unexpected error — {e}", err=True)
+    return None
+
+
+def _lexica_image(prompt: str, dest: Path, aspect_ratio: str) -> Path | None:
+    """Fetch an HD AI-generated image from Lexica search (no key)."""
+    try:
+        from .lexica_search import LexicaProvider
+        return LexicaProvider().fetch_image(prompt, dest, aspect_ratio)
+    except Exception as e:
+        _log(f"lexica: unexpected error — {e}", err=True)
+    return None
+
+
+def _picsum_image(prompt: str, dest: Path, aspect_ratio: str) -> Path | None:
+    """LAST RESORT: random scenic placeholder from Lorem Picsum (no key)."""
+    try:
+        from .picsum import PicsumProvider
+        return PicsumProvider().fetch_image(prompt, dest, aspect_ratio)
+    except Exception as e:
+        _log(f"picsum: unexpected error — {e}", err=True)
+    return None
+
+
 def _gemini_image(prompt: str, dest: Path, aspect_ratio: str) -> Path | None:
     """Generate a still via Gemini (free 500/day). Returns path or None."""
     try:
@@ -111,6 +173,30 @@ def _gemini_image(prompt: str, dest: Path, aspect_ratio: str) -> Path | None:
             return dest
     except Exception as e:
         _log(f"gemini_image: unexpected error — {e}", err=True)
+    return None
+
+
+def _cloudflare_image(prompt: str, dest: Path, aspect_ratio: str) -> Path | None:
+    """Generate a still via Cloudflare Workers AI FLUX-schnell (free 10k/day)."""
+    try:
+        from .cloudflare_image import CloudflareImageProvider
+        provider = CloudflareImageProvider()
+        if provider.is_connected() and provider.generate_image_file(prompt, dest, aspect_ratio):
+            return dest
+    except Exception as e:
+        _log(f"cloudflare_image: unexpected error — {e}", err=True)
+    return None
+
+
+def _ai_horde_image(prompt: str, dest: Path, aspect_ratio: str) -> Path | None:
+    """Generate a still via AI Horde (anonymous key, always free, slow queue)."""
+    try:
+        from .ai_horde import AIHordeProvider
+        provider = AIHordeProvider()
+        if provider.generate_image_file(prompt, dest, aspect_ratio):
+            return dest
+    except Exception as e:
+        _log(f"ai_horde: unexpected error — {e}", err=True)
     return None
 
 
@@ -184,19 +270,29 @@ def generate_scene_asset(prompt: str, duration_sec: int, aspect_ratio: str,
             _log(f"{scene_tag} → {name} ✅")
             return SceneAsset(kind="video", path=clip, provider=name)
 
-    # 8. Gemini image → Ken Burns (free 500/day)
-    img = work_dir / f"{scene_tag}_gemini.png"
-    if _gemini_image(prompt, img, aspect_ratio):
-        _log(f"{scene_tag} → gemini_image (Ken Burns still) ✅")
-        return SceneAsset(kind="image", path=img, provider="gemini_image")
+    # 8-15. Image chain → Ken Burns. ZERO-SIGNUP real sources first
+    # (Wikimedia photos → WikiArt paintings → Openverse CC → Lexica AI search),
+    # then keyed AI gen (Gemini/Cloudflare), then keyless AI gen (Pollinations
+    # → AI Horde), then the Picsum LAST-RESORT placeholder.
+    image_chain: list[tuple[str, Callable[[str, Path, str], Path | None], str]] = [
+        ("wikimedia", _wikimedia_image, ".jpg"),
+        ("wikiart", _wikiart_image, ".jpg"),
+        ("openverse", _openverse_image, ".jpg"),
+        ("lexica", _lexica_image, ".jpg"),
+        ("gemini_image", _gemini_image, ".png"),
+        ("cloudflare_image", _cloudflare_image, ".jpg"),
+        ("pollinations", lambda p, d, _ar: _pollinations_image(p, d), ".jpg"),
+        ("ai_horde", _ai_horde_image, ".png"),
+        ("picsum", _picsum_image, ".jpg"),  # LAST RESORT — unrelated placeholder
+    ]
+    for name, fetch, ext in image_chain:
+        img = work_dir / f"{scene_tag}_{name}{ext}"
+        if fetch(prompt, img, aspect_ratio) and img.exists() \
+                and img.stat().st_size > 10_000:
+            _log(f"{scene_tag} → {name} (Ken Burns still) ✅")
+            return SceneAsset(kind="image", path=img, provider=name)
 
-    # 9. Pollinations image → Ken Burns (always free)
-    img = work_dir / f"{scene_tag}_pollinations.jpg"
-    if _pollinations_image(prompt, img):
-        _log(f"{scene_tag} → pollinations (Ken Burns still) ✅")
-        return SceneAsset(kind="image", path=img, provider="pollinations")
-
-    # 10. Higgsfield — PAID, only when everything free has failed
+    # 16. Higgsfield — PAID, only when everything free has failed
     name, factory = _higgsfield()
     try:
         provider = factory()

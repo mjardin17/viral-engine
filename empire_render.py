@@ -999,8 +999,24 @@ def main() -> None:
               f"(looked in prompts/{CHANNEL_PROMPT_DIR[channel]}/)", file=sys.stderr)
         sys.exit(1)
 
-    # Resolve music
+    # Resolve music — FreePD (zero-signup public domain, per-episode variety)
+    # is primary; the static gg_battle_theme.mp3 is the fallback.
     music_path: Path | None = Path(args.music) if args.music else None
+    if music_path is None and channel == "GG":
+        try:
+            from providers.freepd_music import FreePDMusicProvider
+            freepd = FreePDMusicProvider()
+            cached = freepd.get_cached_track(episode_id)
+            if cached:
+                print(f"{TAG} Music: FreePD track {cached.name}")
+                music_path = cached
+            else:
+                # Don't block the render on a download — grab it in the
+                # background so the NEXT render finds it cached.
+                freepd.download_in_background(episode_id)
+        except Exception as e:
+            print(f"{TAG} FreePD unavailable ({e}) — using static theme",
+                  file=sys.stderr)
     if music_path is None and channel == "GG" and DEFAULT_GG_MUSIC.exists():
         music_path = DEFAULT_GG_MUSIC
 

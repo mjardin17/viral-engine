@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-11T13:36:00Z",
+  "updated_at": "2026-07-17T00:00:00Z",
   "missions": [
     {
       "id": "m001",
@@ -21,6 +21,7 @@
       "channel": "gg",
       "target": "GG_EP012,GG_EP013,GG_EP014,GG_EP015,GG_EP016,GG_EP017,GG_EP018,GG_EP019,GG_EP020,GG_EP021,GG_EP022,GG_EP023,GG_EP024,GG_EP025",
       "priority": 2,
+      "use_all_4_images": true,
       "notes": "Running now via render_season3.bat — currently on EP012",
       "result": "",
       "error": ""
@@ -33,6 +34,7 @@
       "channel": "gg",
       "target": "GG_EP006,GG_EP008,GG_EP009,GG_EP010,GG_EP011",
       "priority": 3,
+      "use_all_4_images": true,
       "notes": "EP006 broken (0KB clips), EP008-011 are stubs <18min. Grok re-renders all.",
       "result": "",
       "error": ""
@@ -94,6 +96,84 @@
       "target": "LO_EP001",
       "priority": 6,
       "notes": "Little Olympus EP001 — scripted, never rendered",
+      "result": "",
+      "error": ""
+    },
+    {
+      "id": "m009",
+      "type": "render",
+      "status": "pending",
+      "assigned_to": "council",
+      "channel": "gg",
+      "target": "GG_EP002",
+      "priority": 2,
+      "use_all_4_images": true,
+      "notes": "NEW FORMAT v3.0 Cannae — multi-agent scene_builder render, 4 images/scene, council 3-round QC",
+      "result": "",
+      "error": ""
+    },
+    {
+      "id": "m010",
+      "type": "render",
+      "status": "pending",
+      "assigned_to": "council",
+      "channel": "gg",
+      "target": "GG_EP003",
+      "priority": 2,
+      "use_all_4_images": true,
+      "notes": "NEW FORMAT v3.0 Constantinople — multi-agent scene_builder render, 4 images/scene, council 3-round QC",
+      "result": "",
+      "error": ""
+    },
+    {
+      "id": "m011",
+      "type": "render",
+      "status": "pending",
+      "assigned_to": "council",
+      "channel": "gg",
+      "target": "GG_EP004",
+      "priority": 2,
+      "use_all_4_images": true,
+      "notes": "NEW FORMAT v3.0 Teutoburg — multi-agent scene_builder render, 4 images/scene, council 3-round QC",
+      "result": "",
+      "error": ""
+    },
+    {
+      "id": "m012",
+      "type": "render",
+      "status": "pending",
+      "assigned_to": "council",
+      "channel": "gg",
+      "target": "GG_EP005",
+      "priority": 2,
+      "use_all_4_images": true,
+      "notes": "NEW FORMAT v3.0 Gaugamela — multi-agent scene_builder render, 4 images/scene, council 3-round QC",
+      "result": "",
+      "error": ""
+    },
+    {
+      "id": "m013",
+      "type": "render",
+      "status": "pending",
+      "assigned_to": "council",
+      "channel": "gg",
+      "target": "GG_EP006",
+      "priority": 2,
+      "use_all_4_images": true,
+      "notes": "NEW FORMAT v3.0 Vienna — multi-agent scene_builder render, 4 images/scene, council 3-round QC",
+      "result": "",
+      "error": ""
+    },
+    {
+      "id": "m014",
+      "type": "render",
+      "status": "pending",
+      "assigned_to": "council",
+      "channel": "gg",
+      "target": "GG_EP007",
+      "priority": 2,
+      "use_all_4_images": true,
+      "notes": "NEW FORMAT v3.0 Stalingrad — multi-agent scene_builder render, 4 images/scene, council 3-round QC",
       "result": "",
       "error": ""
     }

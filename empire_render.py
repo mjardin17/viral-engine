@@ -271,20 +271,81 @@ def fetch_scene_image(scene: dict, dest: Path, episode_title: str) -> bool:
     return fetch_pollinations_image(prompt, dest)
 
 
+def fetch_scene_images(scene: dict, work_dir: Path, scene_number: int,
+                       episode_title: str) -> list[Path]:
+    """
+    Fetch ALL images for a scene — one per entry in image_prompts (4 per scene
+    is the GG standard). Each prompt tries Wikimedia first, Pollinations as
+    fallback. Legacy scenes without image_prompts fall back to the single
+    wikimedia_query/visual_prompt flow. Returns every image that succeeded
+    (order preserved); failed prompts are logged and skipped.
+    """
+    prompts: list[str] = [
+        p.strip() for p in (scene.get("image_prompts") or [])
+        if isinstance(p, str) and p.strip()
+    ]
+    if not prompts:
+        # Legacy single-image scene
+        dest = work_dir / f"scene_{scene_number:02d}_img1.jpg"
+        if (dest.exists() and dest.stat().st_size > 10_000) or \
+                fetch_scene_image(scene, dest, episode_title):
+            return [dest]
+        return []
+
+    images: list[Path] = []
+    for i, prompt in enumerate(prompts, start=1):
+        dest = work_dir / f"scene_{scene_number:02d}_img{i}.jpg"
+        if dest.exists() and dest.stat().st_size > 10_000:
+            images.append(dest)
+            continue
+        if fetch_wikimedia_image(prompt, dest):
+            images.append(dest)
+            continue
+        print(f"{TAG} Wikimedia exhausted for '{prompt}' — falling back to Pollinations")
+        if fetch_pollinations_image(prompt, dest):
+            images.append(dest)
+        else:
+            print(f"{TAG} ⚠ Scene {scene_number:02d} image {i}/{len(prompts)} "
+                  f"failed on all sources — continuing with remaining images", file=sys.stderr)
+    return images
+
+
 # ── Video building blocks ──────────────────────────────────────────────────────
 def make_ken_burns_clip(image: Path, out: Path, duration: float, preset_index: int) -> bool:
     """
     Build a silent Ken Burns clip from a still image using one of the 5
-    rotating motion presets. Generated slightly longer than needed; trimmed
-    exactly to narration later.
+    rotating motion presets. Duration is exact (float) so multi-image scenes
+    split narration time equally; final trim to narration happens at combine.
     """
     from video_effects import ken_burns_clip  # local module, imported lazily
-    whole_seconds = max(3, math.ceil(duration))
     return ken_burns_clip(
         str(image), str(out),
-        duration=whole_seconds,
+        duration=max(1.0, duration),
         motion=str(preset_index % len(KEN_BURNS_ROTATION)),
     )
+
+
+def make_ken_burns_slideshow(images: list[Path], out: Path, work_dir: Path,
+                             scene_number: int, total_duration: float,
+                             preset_index: int) -> bool:
+    """
+    Build one silent scene video from ALL scene images: each image gets an
+    equal share of the narration duration with its own Ken Burns motion
+    (presets rotate per image), then the segments are concatenated.
+    A 48s scene with 4 images → 4 × 12s Ken Burns segments.
+    """
+    per_image = total_duration / len(images)
+    segments: list[Path] = []
+    for i, image in enumerate(images):
+        seg = work_dir / f"scene_{scene_number:02d}_kb{i + 1}.mp4"
+        if not seg.exists():
+            if not make_ken_burns_clip(image, seg, per_image, preset_index=preset_index + i):
+                return False
+        segments.append(seg)
+    if len(segments) == 1:
+        shutil.copy2(segments[0], out)
+        return True
+    return concat_scenes(segments, out)
 
 
 def combine_clip_and_narration(video: Path, audio: Path, out: Path, exact_duration: float) -> bool:
@@ -405,7 +466,6 @@ def render_scene_gg(scene: dict, index: int, total: int, work_dir: Path,
     Returns the finished scene clip path, or None if the scene failed.
     """
     n = int(scene.get("scene_number", index + 1))
-    img = work_dir / f"scene_{n:02d}.jpg"
     kb = work_dir / f"scene_{n:02d}_kb.mp4"
     wav = work_dir / f"scene_{n:02d}.wav"
     narrated = work_dir / f"scene_{n:02d}_narrated.mp4"
@@ -424,15 +484,16 @@ def render_scene_gg(scene: dict, index: int, total: int, work_dir: Path,
     if not narr_dur:
         return None
 
-    # 2. Image: Wikimedia → Pollinations
-    if not (img.exists() and img.stat().st_size > 10_000):
-        if not fetch_scene_image(scene, img, episode_title):
-            print(f"{TAG} Scene {n:02d}/{total} ❌ image fetch failed", file=sys.stderr)
-            return None
+    # 2. Images: ALL image_prompts (4 per scene standard), Wikimedia → Pollinations each
+    images = fetch_scene_images(scene, work_dir, n, episode_title)
+    if not images:
+        print(f"{TAG} Scene {n:02d}/{total} ❌ no images fetched", file=sys.stderr)
+        return None
 
-    # 3. Ken Burns motion — presets rotate per scene
+    # 3. Ken Burns slideshow — narration split equally across all images,
+    #    presets rotate per image so consecutive shots move differently
     if not kb.exists():
-        if not make_ken_burns_clip(img, kb, narr_dur, preset_index=index):
+        if not make_ken_burns_slideshow(images, kb, work_dir, n, narr_dur, preset_index=index):
             return None
 
     # 4-5. Combine + trim exactly to narration
@@ -449,7 +510,7 @@ def render_scene_gg(scene: dict, index: int, total: int, work_dir: Path,
         else:
             shutil.copy2(narrated, final)
 
-    print(f"{TAG} Scene {n:02d}/{total} ✅ narration:{narr_dur:.1f}s image:{img.stat().st_size // 1024}KB")
+    print(f"{TAG} Scene {n:02d}/{total} ✅ narration:{narr_dur:.1f}s images:{len(images)}")
     return final
 
 
@@ -546,10 +607,15 @@ def render_scene_clip(scene: dict, index: int, total: int, work_dir: Path,
 
 # ── Episode renderer ───────────────────────────────────────────────────────────
 def render_episode(channel: str, episode_id: str, script_path: Path,
-                   music_path: Path | None, clips_dir: Path | None) -> Path | None:
+                   music_path: Path | None, clips_dir: Path | None,
+                   multi_agent: bool = False) -> Path | None:
     """
     Render a full episode for any channel. Returns final MP4 path or None.
     Never crashes mid-render: per-scene failures are logged and skipped.
+
+    multi_agent=True (GG): each scene is built by the orchestrator's
+    scene_builder agent — parallel multi-source image scouting, video_agent
+    for action scenes, and 3-round council evaluation with per-step retries.
     """
     script = load_script(script_path)
     ep_id = script.get("episode_id", episode_id)
@@ -579,7 +645,10 @@ def render_episode(channel: str, episode_id: str, script_path: Path,
     for index, scene in enumerate(scenes):
         n = int(scene.get("scene_number", index + 1))
         try:
-            if channel == "GG":
+            if channel == "GG" and multi_agent:
+                from orchestrator.agents.scene_builder import build_scene  # lazy
+                clip = build_scene(scene, index, len(scenes), work_dir, title, voice, speed)
+            elif channel == "GG":
                 clip = render_scene_gg(scene, index, len(scenes), work_dir, title, voice, speed)
             else:
                 clip = render_scene_clip(scene, index, len(scenes), work_dir, clips_dir, voice, speed)
@@ -641,6 +710,9 @@ def main() -> None:
                         help="Background music file (GG defaults to music/gg_battle_theme.mp3)")
     parser.add_argument("--clips-dir", default=None,
                         help="Higgsfield clips directory (LO/IL; default higgsfield_clips/{episode}/)")
+    parser.add_argument("--multi-agent", action="store_true",
+                        help="GG: build each scene via orchestrator scene_builder "
+                             "(parallel image scout + video agent + 3-round council QC)")
     args = parser.parse_args()
 
     channel: str = args.channel.upper()
@@ -677,7 +749,8 @@ def main() -> None:
                 print(f"{TAG} No pre-made clips at {default_dir} — "
                       f"clips will be auto-generated via the provider waterfall.")
 
-    result = render_episode(channel, episode_id, script_path, music_path, clips_dir)
+    result = render_episode(channel, episode_id, script_path, music_path, clips_dir,
+                            multi_agent=args.multi_agent)
     sys.exit(0 if result else 1)
 
 

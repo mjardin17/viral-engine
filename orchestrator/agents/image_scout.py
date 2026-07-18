@@ -146,3 +146,17 @@ def scout_best_image(prompt: str, work_dir: Path, tag: str) -> Optional[ImageRes
     """Convenience: return only the single best image (or None)."""
     results = scout_image(prompt, work_dir, tag)
     return results[0] if results else None
+
+
+def scout_image_source_first(prompt: str, work_dir: Path, tag: str) -> Optional[ImageResult]:
+    """
+    Return the best image ranked by SOURCE priority first — Wikimedia (real
+    historical) beats Gemini (period-accurate gen) beats Pollinations —
+    with file size breaking ties within a source. This is the GG pipeline's
+    preferred pick: authenticity over raw resolution. Returns None if every
+    source failed.
+    """
+    results = scout_image(prompt, work_dir, tag)
+    if not results:
+        return None
+    return min(results, key=lambda r: (_SOURCE_PRIORITY.get(r.source, 99), -r.size_kb))

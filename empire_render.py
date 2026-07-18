@@ -31,6 +31,7 @@ from __future__ import annotations
 import argparse
 import json
 import math
+import os
 import shutil
 import subprocess
 import sys
@@ -124,6 +125,19 @@ MIN_IMAGE_BYTES = 50 * 1024  # Wikimedia image must be >50KB to count as real
 
 MAX_PARALLEL_SCENES = 4  # scenes rendered concurrently (ThreadPoolExecutor)
 
+# ── Quality feature flags (Josh can set to False to disable) ───────────────────
+SMART_IMAGE_PROMPTS = True  # Use Gemini to match images to narration
+ACTION_VIDEO_CLIPS = True   # Try FAL/Replicate for action scenes
+
+# Gemini text models tried in order for narration → image-prompt generation
+GEMINI_TEXT_MODELS: tuple[str, ...] = ("gemini-2.5-flash", "gemini-2.0-flash")
+
+# Words that mark a scene as an ACTION scene (checked in narration.lower())
+ACTION_WORDS: frozenset[str] = frozenset({
+    "charge", "battle", "attack", "cavalry", "siege", "march", "fire",
+    "explosion", "clash", "assault", "overwhelm", "surrounded", "encircle",
+})
+
 
 # ── Result tracking ────────────────────────────────────────────────────────────
 @dataclass
@@ -210,6 +224,86 @@ def tts_narrate(text: str, out_wav: Path, voice: str, speed: float) -> bool:
     return True
 
 
+# ── Smart image prompts (Gemini: narration chunk → specific visual) ────────────
+def _gemini_generate_text(prompt: str) -> str | None:
+    """
+    One synchronous Gemini text completion (generateContent, x-goog-api-key).
+    Tries GEMINI_TEXT_MODELS in order. Returns stripped text or None. Never raises.
+    """
+    from providers.gemini_image import _load_env  # reuse .env loader
+    _load_env()
+    api_key = os.environ.get("GEMINI_API_KEY", "")
+    if not api_key:
+        return None
+    payload = json.dumps({"contents": [{"parts": [{"text": prompt}]}]}).encode("utf-8")
+    headers = {"Content-Type": "application/json", "x-goog-api-key": api_key}
+    for model in GEMINI_TEXT_MODELS:
+        url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
+        try:
+            req = urllib.request.Request(url, data=payload, headers=headers, method="POST")
+            with urllib.request.urlopen(req, timeout=60) as resp:
+                result = json.loads(resp.read().decode("utf-8"))
+            for candidate in result.get("candidates", []):
+                for part in (candidate.get("content") or {}).get("parts", []):
+                    text = (part.get("text") or "").strip()
+                    if text:
+                        return text
+        except Exception as e:
+            print(f"{TAG} Gemini text ({model}) failed: {e}", file=sys.stderr)
+    return None
+
+
+def split_narration_to_image_prompts(narration: str, n: int = 4,
+                                     fallback: list[str] | None = None) -> list[str]:
+    """
+    Split narration into n equal word-count chunks and ask Gemini for the
+    single most powerful specific historical image for EACH chunk — so every
+    on-screen visual matches exactly what the narrator is saying right then.
+
+    Fallbacks (never fails):
+      - GEMINI_API_KEY not set → return `fallback` (script image_prompts)
+      - One chunk's Gemini call fails → that slot uses fallback[i], else the
+        raw chunk text as the search prompt
+    """
+    clean_fallback: list[str] = [
+        p.strip() for p in (fallback or []) if isinstance(p, str) and p.strip()
+    ]
+    words = narration.split()
+    if not words:
+        return clean_fallback
+    chunk_size = max(1, math.ceil(len(words) / n))
+    chunks = [" ".join(words[i:i + chunk_size])
+              for i in range(0, len(words), chunk_size)][:n]
+
+    if not os.environ.get("GEMINI_API_KEY"):
+        from providers.gemini_image import _load_env
+        _load_env()
+    if not os.environ.get("GEMINI_API_KEY"):
+        if clean_fallback:
+            print(f"{TAG} GEMINI_API_KEY not set — using script image_prompts")
+            return clean_fallback
+        return chunks
+
+    prompts: list[str] = []
+    for i, chunk in enumerate(chunks):
+        ask = (
+            "You are creating visuals for a history documentary. "
+            f"The narrator is saying: '{chunk}'. "
+            "Describe in one sentence the single most powerful, specific "
+            "historical image that would appear on screen right now. "
+            "Be specific — name the person, location, and action. "
+            "Style: historical oil painting or period engraving."
+        )
+        text = _gemini_generate_text(ask)
+        if text:
+            prompts.append(" ".join(text.split())[:300])  # one clean line, capped
+        elif i < len(clean_fallback):
+            prompts.append(clean_fallback[i])
+        else:
+            prompts.append(chunk)
+    return prompts
+
+
 # ── Image fetching (GG) ────────────────────────────────────────────────────────
 def _looks_like_image(path: Path) -> bool:
     """Check magic bytes: real JPEG or PNG file."""
@@ -265,51 +359,53 @@ def fetch_pollinations_image(prompt: str, dest: Path) -> bool:
     return False
 
 
-def fetch_scene_image(scene: dict, dest: Path, episode_title: str) -> bool:
-    """Fetch a scene image: Wikimedia first (validated), Pollinations fallback."""
-    query = scene.get("wikimedia_query") or scene.get("title") or episode_title
-    if fetch_wikimedia_image(query, dest):
+def fetch_one_scene_image(prompt: str, work_dir: Path, tag: str, dest: Path) -> bool:
+    """
+    Fetch ONE image for a prompt via the image_scout waterfall:
+    Wikimedia (real historical) → Gemini image gen → Pollinations.
+    Copies the winning image to `dest`. Falls back to the direct
+    Wikimedia→Pollinations flow if image_scout itself errors. Never raises.
+    """
+    try:
+        # Lazy import — image_scout imports back from this module (no cycle at import time)
+        from orchestrator.agents.image_scout import scout_image_source_first
+        result = scout_image_source_first(prompt, work_dir, tag)
+        if result is not None:
+            if result.path != dest:
+                dest.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copy2(result.path, dest)
+            return True
+    except Exception as e:
+        print(f"{TAG} image_scout failed ({e}) — direct fetch fallback", file=sys.stderr)
+    if fetch_wikimedia_image(prompt, dest):
         return True
-    print(f"{TAG} Wikimedia exhausted for '{query}' — falling back to Pollinations")
-    prompt = scene.get("visual_prompt") or query
+    print(f"{TAG} Wikimedia exhausted for '{prompt}' — falling back to Pollinations")
     return fetch_pollinations_image(prompt, dest)
 
 
-def fetch_scene_images(scene: dict, work_dir: Path, scene_number: int,
+def fetch_scene_images(prompts: list[str], work_dir: Path, scene_number: int,
                        episode_title: str) -> list[Path]:
     """
-    Fetch ALL images for a scene — one per entry in image_prompts (4 per scene
-    is the GG standard). Each prompt tries Wikimedia first, Pollinations as
-    fallback. Legacy scenes without image_prompts fall back to the single
-    wikimedia_query/visual_prompt flow. Returns every image that succeeded
-    (order preserved); failed prompts are logged and skipped.
+    Fetch ALL images for a scene — one per prompt (4 per scene is the GG
+    standard). EACH prompt runs the image_scout waterfall: Wikimedia first,
+    then Gemini image generation, then Pollinations. Returns every image
+    that succeeded (order preserved); failed prompts are logged and skipped.
     """
-    prompts: list[str] = [
-        p.strip() for p in (scene.get("image_prompts") or [])
-        if isinstance(p, str) and p.strip()
-    ]
-    if not prompts:
-        # Legacy single-image scene
-        dest = work_dir / f"scene_{scene_number:02d}_img1.jpg"
-        if (dest.exists() and dest.stat().st_size > 10_000) or \
-                fetch_scene_image(scene, dest, episode_title):
-            return [dest]
-        return []
+    clean: list[str] = [p.strip() for p in (prompts or [])
+                        if isinstance(p, str) and p.strip()]
+    if not clean:
+        clean = [episode_title]
 
     images: list[Path] = []
-    for i, prompt in enumerate(prompts, start=1):
+    for i, prompt in enumerate(clean, start=1):
         dest = work_dir / f"scene_{scene_number:02d}_img{i}.jpg"
         if dest.exists() and dest.stat().st_size > 10_000:
             images.append(dest)
             continue
-        if fetch_wikimedia_image(prompt, dest):
-            images.append(dest)
-            continue
-        print(f"{TAG} Wikimedia exhausted for '{prompt}' — falling back to Pollinations")
-        if fetch_pollinations_image(prompt, dest):
+        if fetch_one_scene_image(prompt, work_dir, f"scene_{scene_number:02d}_img{i}", dest):
             images.append(dest)
         else:
-            print(f"{TAG} ⚠ Scene {scene_number:02d} image {i}/{len(prompts)} "
+            print(f"{TAG} ⚠ Scene {scene_number:02d} image {i}/{len(clean)} "
                   f"failed on all sources — continuing with remaining images", file=sys.stderr)
     return images
 
@@ -462,11 +558,99 @@ def find_higgsfield_clip(clips_dir: Path, scene_number: int) -> Path | None:
     return None
 
 
+# ── Action video clips (GG battle scenes) ──────────────────────────────────────
+def is_action_scene(narration: str) -> bool:
+    """True if the narration contains any ACTION_WORDS (battle/charge/siege...)."""
+    low = narration.lower()
+    return any(word in low for word in ACTION_WORDS)
+
+
+def generate_action_clip(scene: dict, work_dir: Path, scene_number: int,
+                         episode_title: str) -> Path | None:
+    """
+    Try to generate a ~5s real video clip for an action scene via connected
+    video providers (FAL, then Replicate). Returns clip path or None — every
+    failure is a silent fallback to the images-only path. Never raises.
+    """
+    try:
+        from providers.fal_video import FalVideoProvider
+        from providers.replicate_video import ReplicateVideoProvider
+        from providers.waterfall import _run_video_provider
+    except Exception as e:
+        print(f"{TAG} action clip providers unavailable: {e}", file=sys.stderr)
+        return None
+
+    title = (scene.get("title") or episode_title).strip()
+    prompt = (f"Cinematic live-action historical battle footage: {title}. "
+              f"Epic action, realistic, dramatic lighting, film grain, no text.")
+    for name, factory in (("fal_video", FalVideoProvider),
+                          ("replicate", ReplicateVideoProvider)):
+        try:
+            provider = factory()
+            if not provider.is_connected():
+                continue  # silent skip — key not set
+            dest = work_dir / f"scene_{scene_number:02d}_action_{name}.mp4"
+            if dest.exists() and dest.stat().st_size > 10_000:
+                return dest
+            clip = _run_video_provider(provider, name, prompt, 5, "16:9", dest)
+            if clip is not None:
+                print(f"{TAG} Scene {scene_number:02d} action clip via {name} ✅")
+                return clip
+        except Exception as e:
+            print(f"{TAG} action clip ({name}) failed: {e}", file=sys.stderr)
+    return None
+
+
+def normalize_action_clip(clip: Path, out: Path, max_duration: float) -> bool:
+    """Normalize an action clip to 1920x1080 @ 25fps, silent, capped at max_duration."""
+    vf = ("scale=1920:1080:force_original_aspect_ratio=decrease,"
+          "pad=1920:1080:(ow-iw)/2:(oh-ih)/2,fps=25")
+    return run_ffmpeg(
+        ["-i", str(clip), "-vf", vf, "-t", f"{max_duration:.3f}", "-an",
+         "-c:v", "libx264", "-preset", "fast", "-crf", "20", "-pix_fmt", "yuv420p",
+         str(out)],
+        f"normalize {out.name}",
+    )
+
+
+def build_action_scene_video(action_clip: Path, images: list[Path], out: Path,
+                             work_dir: Path, scene_number: int, narr_dur: float,
+                             preset_index: int) -> bool:
+    """
+    Build the scene's silent video with the action clip FIRST, then Ken Burns
+    images covering the remaining narration time. Returns False on any failure
+    so the caller silently falls back to the images-only slideshow.
+    """
+    try:
+        norm = work_dir / f"scene_{scene_number:02d}_action_norm.mp4"
+        if not norm.exists():
+            if not normalize_action_clip(action_clip, norm, narr_dur):
+                return False
+        clip_dur = probe_duration(norm)
+        if not clip_dur:
+            return False
+        remaining = narr_dur - clip_dur
+        if remaining < 1.0:
+            return False  # no room for Ken Burns — images-only path is safer
+        rest_dir = work_dir / f"scene_{scene_number:02d}_action_rest"
+        rest_dir.mkdir(parents=True, exist_ok=True)
+        kb_rest = rest_dir / f"scene_{scene_number:02d}_kb_rest.mp4"
+        if not kb_rest.exists():
+            if not make_ken_burns_slideshow(images, kb_rest, rest_dir, scene_number,
+                                            remaining, preset_index=preset_index):
+                return False
+        return concat_scenes([norm, kb_rest], out)
+    except Exception as e:
+        print(f"{TAG} action scene build failed: {e}", file=sys.stderr)
+        return False
+
+
 # ── Scene renderers ────────────────────────────────────────────────────────────
 def render_scene_gg(scene: dict, index: int, total: int, work_dir: Path,
                     episode_title: str, voice: str, speed: float) -> Path | None:
     """
-    Render one GG scene: image → Ken Burns → TTS → combine → lower third.
+    Render one GG scene: narration-matched images → (optional action clip) →
+    Ken Burns → TTS → combine → lower third.
     Returns the finished scene clip path, or None if the scene failed.
     """
     n = int(scene.get("scene_number", index + 1))
@@ -488,17 +672,43 @@ def render_scene_gg(scene: dict, index: int, total: int, work_dir: Path,
     if not narr_dur:
         return None
 
-    # 2. Images: ALL image_prompts (4 per scene standard), Wikimedia → Pollinations each
-    images = fetch_scene_images(scene, work_dir, n, episode_title)
+    # 2. Image prompts: Gemini matches each visual to its exact narration chunk
+    #    (SMART_IMAGE_PROMPTS); script image_prompts are the fallback
+    script_prompts: list[str] = [
+        p.strip() for p in (scene.get("image_prompts") or [])
+        if isinstance(p, str) and p.strip()
+    ]
+    if not script_prompts:
+        legacy = (scene.get("wikimedia_query") or scene.get("visual_prompt")
+                  or scene.get("title") or episode_title)
+        script_prompts = [legacy]
+    if SMART_IMAGE_PROMPTS:
+        smart_prompts = split_narration_to_image_prompts(narration, fallback=script_prompts)
+    else:
+        smart_prompts = script_prompts
+
+    # Images: EACH prompt runs Wikimedia → Gemini image gen → Pollinations
+    images = fetch_scene_images(smart_prompts, work_dir, n, episode_title)
     if not images:
         print(f"{TAG} Scene {n:02d}/{total} ❌ no images fetched", file=sys.stderr)
         return None
 
-    # 3. Ken Burns slideshow — narration split equally across all images,
-    #    presets rotate per image so consecutive shots move differently
+    # 3. Silent video track. Action scenes try a real 5s video clip first
+    #    (FAL/Replicate), then Ken Burns images fill the remaining narration
+    #    time. Any clip failure silently falls back to the images-only path.
     if not kb.exists():
-        if not make_ken_burns_slideshow(images, kb, work_dir, n, narr_dur, preset_index=index):
-            return None
+        built = False
+        if ACTION_VIDEO_CLIPS and is_action_scene(narration):
+            action_clip = generate_action_clip(scene, work_dir, n, episode_title)
+            if action_clip is not None:
+                built = build_action_scene_video(action_clip, images, kb, work_dir,
+                                                 n, narr_dur, preset_index=index)
+                if built:
+                    print(f"{TAG} Scene {n:02d}/{total} — action clip lead-in ✅")
+        if not built:
+            if not make_ken_burns_slideshow(images, kb, work_dir, n, narr_dur,
+                                            preset_index=index):
+                return None
 
     # 4-5. Combine + trim exactly to narration
     if not narrated.exists():

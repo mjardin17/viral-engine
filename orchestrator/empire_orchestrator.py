@@ -56,8 +56,8 @@ from orchestrator.mission_board import MissionBoard, board  # noqa: E402
 
 TAG = "[orchestrator]"
 PYTHON_MAIN = Path(r"C:\Users\jjard\AppData\Local\Programs\Python\Python314\python.exe")
-POLL_INTERVAL_SEC = 30
-MAX_WORKERS = 4
+POLL_INTERVAL_SEC = 10
+MAX_WORKERS = 12
 STATE_DIR = BASE_DIR / "orchestrator" / "state"
 HEARTBEAT_PATH = STATE_DIR / "heartbeat.json"
 

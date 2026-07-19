@@ -136,7 +136,7 @@ KEN_BURNS_ROTATION: tuple[int, ...] = (0, 1, 2, 3, 4)
 
 MIN_IMAGE_BYTES = 50 * 1024  # Wikimedia image must be >50KB to count as real
 
-MAX_PARALLEL_SCENES = 2  # scenes rendered concurrently — keep low: Pollinations rate-limits ~1 req/s
+MAX_PARALLEL_SCENES = 6  # scenes rendered concurrently — AI Router spreads load across providers
 
 # ── Quality feature flags (Josh can set to False to disable) ───────────────────
 SMART_IMAGE_PROMPTS = True  # Use Gemini to match images to narration

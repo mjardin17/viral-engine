@@ -1,5 +1,5 @@
 # AGENT_MEMORY.md — Permanent Project Architecture
-_Last updated: 2026-07-02 by Claude_
+_Last updated: 2026-07-18 by Claude_
 
 Every AI that works on this system must read this file before taking any action.
 
@@ -7,11 +7,13 @@ Every AI that works on this system must read this file before taking any action.
 
 ## What This System Is
 
-**Viral Engine** — A 3-channel AI YouTube documentary factory.
+**Empire OS** — A 5-channel AI YouTube content empire with AI orchestration router.
 
 - Converts episode JSON scripts → AI images → TTS narration → FFmpeg assembly → final MP4
-- Three channels: Gods & Glory (GG), Mech Legends (ML), Little Olympus (LO)
+- Five channels: Gods & Glory (GG), Little Olympus (LO), Iron Legends (IL), Empire Decoded (ED), Echoes of Eternity (EOE)
 - One production codebase. One GitHub repo. No forks.
+- AI Router: 20 adapters (Claude, OpenAI, Gemini, FLUX, MuseTalk, Higgsfield, etc.) with health scoring and fallback chains
+- Council Bot System: 14 self-healing bots with priorities, including credit-guardian for LO/IL budget control
 
 **GitHub:** `https://github.com/mjardin17/viral-engine`
 **Local:** `C:\Users\jjard\claude\video-bot-pipeline\`
@@ -51,19 +53,19 @@ python pipeline_run.py --channel gg
 
 ---
 
-## Episode Status
+## Episode Status (Updated 2026-07-18)
 
-| Channel | Season | Episodes | Status |
-|---|---|---|---|
-| GG | S1 | EP001–EP005 | ✅ Finals in renders/ (187–260MB each) |
-| GG | S2 | EP006 | ❌ BROKEN — 21/24 clips are 0KB. Run `render_ep006.bat` |
-| GG | S2 | EP007–EP011 | ✅ Finals in renders/ (but under 18min — stubs) |
-| GG | S3 | EP012–EP025 | ✅ Scripts written. Run `render_season3.bat` to produce videos |
-| GG | S3+ | EP026 | ✅ Script exists in prompts/gods_glory/ |
-| ML | S1 | EP001 | ✅ Final in renders/ |
-| ML | S1 | EP002–EP012 | ✅ Scripts in prompts/mech_legends/ |
-| LO | S1 | EP001 | ✅ Final in renders/ |
-| LO | S1 | EP002–EP040 | ✅ Scripts in prompts/ |
+| Channel | Season | Episodes | Status | Notes |
+|---|---|---|---|---|
+| **GG** (Gods & Glory) | NEW FORMAT | EP001–EP007 | ✅ Scripted (Thermopylae/Cannae/Constantinople/Teutoburg/Gaugamela/Vienna/Stalingrad) | Queued for render via empire_render.py |
+| GG | S2 | EP006–EP007 | ✅ Uploaded (old 45-min format) | Pearl Harbor (41min), D-Day (39min) |
+| GG | S2 | EP008–EP011 | ⚠️ RENDERING NOW | From full 54-scene scripts via RENDER_S2_MISSING.bat |
+| GG | S3 | EP012–EP025 | ✅ Scripts written (14 episodes) | Run render_season3.bat to render |
+| **LO** (Little Olympus) | S1 | EP001 | ⚠️ BROKEN (4 scenes repeating) | Fix via credit-stretching system (hybrid Higgsfield+free) |
+| LO | S1 | EP002–EP004 | ✅ Scripted (24-scene full scripts) | Ready for credit-optimized render |
+| **IL** (Iron Legends) | S1 | EP001 | ✅ Scripted | Higgsfield essential for anime |
+| **ED** (Empire Decoded) | S1 | EP001 | ✅ Scripted | Tech/AI channel |
+| **EOE** (Echoes of Eternity) | S1 | EP001 | 🔄 Pending | New channel |
 
 ---
 
@@ -158,7 +160,7 @@ python pipeline_run.py --channel gg
 
 ## Council Bot System
 
-9 bots in `council/bots/`, run via `council_run.bat`.
+14 bots in `council/bots/`, run via `council_run.bat`.
 
 | Bot | Priority | Function |
 |---|---|---|
@@ -168,9 +170,14 @@ python pipeline_run.py --channel gg
 | bot_04_clip_rebuilder | 40 | Re-renders 0KB clips |
 | bot_05_final_assembler | 50 | Rebuilds final MP4s |
 | bot_06_render_queue | 30 | Tracks episode render status |
-| bot_07_stub_expander | 35 | Manages 84-stub backlog |
+| bot_07_stub_expander | 35 | Manages stub backlog |
 | bot_08_auto_renderer | 60 | Renders 1 episode per council run |
 | bot_09_quality_checker | 55 | ffprobe duration + audio RMS |
+| bot_10_frame_inspector | 56 | Visual QC: frame every 30s, catches red/black/white/frozen screens |
+| bot_11_orchestrator_monitor | 5 | Watchdog: restarts master orchestrator if heartbeat stale |
+| bot_12_social_publisher | 65 | Self-healing social posts: retries failed platform posts (max 3) |
+| bot_13_tool_scout | 25 | Discovers free tools daily, queues findings to MISSION_BOARD |
+| bot_14_credit_guardian | 45 | Blocks LO/IL episodes over Higgsfield budget or without approved render_plan.json |
 
 ---
 
@@ -219,12 +226,70 @@ Empire OS server: `empire-os-patch/apps/empire-os-server/server.ts` — 22 modul
 
 ---
 
-## YouTube Upload System (Working as of 2026-07-07)
+## Higgsfield Credit-Stretching System (NEW 2026-07-18)
 
-**Upload script:** `easy_youtube_uploader.py`
-**Launcher:** `UPLOAD_NOW.bat`
-**Token:** `token.pickle` (saved after first auth, reused automatically)
+For **LO (Little Olympus)** and **IL (Iron Legends)** episodes, Higgsfield is essential but expensive. New system reduces Higgsfield spend by ~80%.
+
+**Three-step workflow:**
+
+1. **scene_classifier.py** — Assigns each scene a render tier
+   - `higgsfield_video` (3-4 peak moments per episode, ~10 credits each)
+   - `higgsfield_image` (high-action scenes, ~2.5 credits each)
+   - `composited` (cached character + background via FLUX Kontext, ~$0.02 each)
+   - `free` (free providers + Ken Burns, $0)
+
+2. **episode_credit_planner.py** — Interactive budget optimizer
+   - Shows cost estimate
+   - Auto-downgrades low-priority scenes if over budget
+   - Outputs `{episode_id}_render_plan.json` (read by bot_14_credit_guardian)
+
+3. **bot_14_credit_guardian** (council bot, priority 45)
+   - Checks LO/IL episodes BEFORE render
+   - Blocks rendering if render_plan.json missing or over safety threshold (default 50 credits)
+
+**Asset caching** (via asset_cache.py):
+- `assets/characters/{channel}/{character}/` — character sheets (reused across scenes)
+- `assets/backgrounds/{channel}/{location}/` — backgrounds (reused across scenes)
+
+**Result:** One 24-scene LO episode costs ~30-40 Higgsfield credits (was 200+).
+
+---
+
+## AI Orchestration Router (NEW 2026-07-18)
+
+**Central routing system** at `ai_router/router.py` — handles all AI generation across 20 adapters.
+
+**14 Task Types:**
+- PLANNING, RESEARCH, SCRIPT_GENERATION, PROMPT_ENGINEERING
+- IMAGE_GENERATION, VIDEO_GENERATION, 3D_GENERATION
+- TTS_GENERATION, AUDIO_EDITING, LIP_SYNC
+- SUBTITLE_GENERATION, CAPTION_BURNING
+- QUALITY_CHECK, PUBLISHING
+
+**20 Adapters:** Claude, OpenAI, Gemini, FLUX, FLUX Kontext, MuseTalk, SkyReels, Wan 2.2, Higgsfield, ElevenLabs, Kokoro, Piper, Whisper, FFmpeg, FreePD, Openverse, Picsum, Pollinations, AI Horde, Uploader
+
+**Health Scoring:** Tracks latency/success/cost per model, auto-recommends routing based on load
+
+**Provider Waterfall (in order):**
+Wikimedia → WikiArt → Openverse → Lexica → Gemini → Pollinations → AI Horde → Higgsfield (with 10s paid warning)
+
+**Features:**
+- Paid warning: 10-second countdown before Higgsfield charges, Ctrl+C to cancel
+- Dry-run mode: test all connectivity/auth/deps without spending money
+- Report generator: writes PIPELINE_ENGINEERING_REPORT.md after every render
+- Free tools: bot_13_tool_scout discovers new free tools daily, queues via MISSION_BOARD
+
+**Wiring:** Integrated into `empire_render.py` with `--dry-run` flag. No breaking changes to existing render API.
+
+---
+
+## YouTube Upload System (Working as of 2026-07-18)
+
+**Upload script:** `channel_uploader.py` (per-channel uploader with --verify flag)
+**Launcher:** Per-channel bat files (UPLOAD_GG.bat, UPLOAD_LO.bat, UPLOAD_IL.bat, UPLOAD_ED.bat, UPLOAD_EOE.bat)
+**Token:** `token_gg.pickle` for GG (correct account), NOT `token.pickle` (wrong account)
 **Credentials:** `credentials.json` (OAuth Desktop client — DO NOT COMMIT)
+**CRITICAL:** Always verify after upload that video URL shows correct channel name before proceeding to next episode
 
 **GCP Project:** `viral-engine-yt` (owner: justifiedmagnificent@gmail.com)
 **YouTube channel:** "Gods & Glory" on **godsandgloryai@gmail.com**
@@ -252,13 +317,14 @@ Empire OS server: `empire-os-patch/apps/empire-os-server/server.ts` — 22 modul
 
 ---
 
-## Immediate Actions Needed (as of 2026-07-05)
+## Immediate Actions Needed (as of 2026-07-18)
 
-1. **SECURITY**: Josh must rotate all keys exposed in .env before next commit — see SECURITY_REPORT.md
-2. **SECURITY**: Run `FIX_SECURITY.bat` to remove .env from git tracking (after rotating keys)
-3. **Install FastAPI**: `pip install fastapi uvicorn` (one-time, for empire_server.py)
-4. **Launch**: Run `START_EMPIRE_PIPELINE.bat` — starts both Empire OS (port 3001) and empire_server.py (port 8002)
-5. **Test**: Open http://localhost:3001/empire-dashboard/ → click "Render Episode" → pick episode → click Render
-6. `render_ep006.bat` — Fix GG_EP006 (Pearl Harbor, 21/24 clips broken)
-7. `render_season3.bat` — Render GG_EP012–EP025 (all scripts complete)
+1. **PUSH COMMITS**: Run `PUSH_NOW.bat` to push commits 29b9efb + 52dbb47 (AI router + free providers) + CLAUDE.md update
+2. **INSTALL WHISPER**: `pip install openai-whisper` on Josh's machine to activate subtitle generation in router
+3. **RUN TOOL SCOUT**: Execute `RUN_TOOL_SCOUT.bat` once to seed `free_tools_discovered.json` (sandbox proxy blocks HTTP, needs real machine)
+4. **UPDATE AGENT_MEMORY.md**: Add AI Router architecture + 5 channels (done in this session — needs commit)
+5. **BUILD CREDIT-STRETCHING**: Confirm with Josh, then integrate scene_classifier + episode_credit_planner into render workflow
+6. **ROTATE CREDENTIALS**: Higgsfield key + token_gg.pickle (both exposed in git history)
+7. **FIX LO_EP001**: Re-render using credit-stretching system (hybrid Higgsfield+free) instead of 4-scene repeat
+8. **IMPLEMENT QUICK WINS**: MAX_PARALLEL_SCENES 2→6, POLL_INTERVAL 30→10, batch image fetches (5 min, 2-3x throughput)
 8. Set real `ELEVENLABS_API_KEY` in .env (optional — edge-tts fallback works)

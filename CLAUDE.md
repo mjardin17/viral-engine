@@ -8,6 +8,7 @@ Josh Jardin (justifiedmagnificent@gmail.com). Building a multi-channel AI conten
 
 ## Standing Rules (NEVER BREAK)
 - **Always start every response with "Josh"**
+- **COUNCIL BOTS ON EVERY TASK** — After any render, build, or substantial change, run council_run.bat. Bots heal breaks before they cascade. This is non-negotiable.
 - **No scene reuse** — ever, within or across episodes
 - **4 photos per scene** — every scene, no exceptions
 - **Never idle** — there is always something to do in this pipeline

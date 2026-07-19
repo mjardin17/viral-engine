@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-17T00:00:00Z",
+  "updated_at": "2026-07-18T10:03:47.672993+00:00",
   "missions": [
     {
       "id": "m001",
@@ -189,6 +189,19 @@
       "notes": "NEW FORMAT v3.0 Thermopylae / The 300 — new script GG_EP001_thermopylae.json (12 scenes, ~618s). Old EP001 scripts deleted. After render+upload, social clips auto-post via social_clips/auto_publisher.py.",
       "result": "",
       "error": ""
+    },
+    {
+      "id": "upload_gg_ep001",
+      "type": "upload",
+      "status": "pending",
+      "assigned_to": "council",
+      "channel": "gg",
+      "target": "GG_EP001",
+      "priority": 1,
+      "notes": "Council-approved final at C:\\Users\\jjard\\claude\\video-bot-pipeline\\renders\\gods_glory\\GG_EP001_final.mp4. Josh runs UPLOAD_GG_GG_EP001.bat, then social clips auto-post.",
+      "result": "",
+      "error": "",
+      "updated_at": "2026-07-18T10:03:47.672729+00:00"
     }
   ]
 }

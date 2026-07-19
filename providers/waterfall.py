@@ -73,6 +73,18 @@ def _log(msg: str, err: bool = False) -> None:
     print(f"{TAG} {msg}", file=sys.stderr if err else sys.stdout)
 
 
+def paid_credit_warning(seconds: int = 10, context: str = "Higgsfield") -> None:
+    """Shared 10-second Ctrl+C credit-guard warning — Higgsfield credits are
+    real money. ADDITIVE: extracted so new callers (episode_credit_planner.py)
+    can reuse the exact same guard instead of duplicating it a third time.
+    The inline warnings below (in this module) and in higgsfield_adapter.py
+    are left untouched for safety — this is a new, equivalent helper."""
+    _log(f"⚠️ WARNING: about to use {context} (PAID). "
+         f"Press Ctrl+C within {seconds} seconds to cancel.", err=True)
+    time.sleep(seconds)
+    _log(f"no cancel — proceeding with PAID {context}", err=True)
+
+
 # ── Video providers ────────────────────────────────────────────────────────────
 def _run_video_provider(provider: ProviderBase, name: str, prompt: str,
                         duration_sec: int, aspect_ratio: str, dest: Path) -> Path | None:

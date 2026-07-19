@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-18T00:00:00Z",
+  "updated_at": "2026-07-18T10:03:47.682422+00:00",
   "episodes": [
     {
       "episode_id": "GG_EP001",
@@ -7,7 +7,7 @@
       "channel": "GG",
       "youtube_url": "",
       "thumbnail_url": "",
-      "status": "scripted",
+      "status": "rendered",
       "rendered_at": ""
     },
     {

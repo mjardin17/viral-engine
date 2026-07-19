@@ -1,0 +1,103 @@
+{
+  "episode_id": "LO_EP002",
+  "channel": "Little Olympus",
+  "title": "Little Zeus Meets His Father",
+  "scenes": [
+    {
+      "scene_id": "scene_01",
+      "narration": "Little Zeus stood in the grand throne room, trembling with anticipation.",
+      "is_peak_moment": true,
+      "action_level": "medium",
+      "character": "little_zeus",
+      "location": "olympus_throne_room"
+    },
+    {
+      "scene_id": "scene_02",
+      "narration": "His father towered above him, lightning crackling between his fingers.",
+      "is_peak_moment": false,
+      "action_level": "high",
+      "character": "zeus_father",
+      "location": "olympus_throne_room"
+    },
+    {
+      "scene_id": "scene_03",
+      "narration": "Hera stepped forward, her golden robes shimmering with divine light.",
+      "is_peak_moment": false,
+      "action_level": "medium",
+      "character": "hera",
+      "location": "olympus_throne_room"
+    },
+    {
+      "scene_id": "scene_04",
+      "narration": "The training grounds stretched endlessly below Mount Olympus.",
+      "is_peak_moment": false,
+      "action_level": "low",
+      "character": null,
+      "location": "training_grounds"
+    },
+    {
+      "scene_id": "scene_05",
+      "narration": "Ares laughed, challenging Little Zeus to prove his worthiness.",
+      "is_peak_moment": false,
+      "action_level": "high",
+      "character": "ares",
+      "location": "training_grounds"
+    },
+    {
+      "scene_id": "scene_06",
+      "narration": "Little Zeus charged forward, determination burning in his eyes.",
+      "is_peak_moment": false,
+      "action_level": "high",
+      "character": "little_zeus",
+      "location": "training_grounds"
+    },
+    {
+      "scene_id": "scene_07",
+      "narration": "Thunder roared across the sky as power surged through him.",
+      "is_peak_moment": false,
+      "action_level": "medium",
+      "character": "little_zeus",
+      "location": "training_grounds"
+    },
+    {
+      "scene_id": "scene_08",
+      "narration": "In the shadowed corner of Olympus, Hades watched from his dark realm.",
+      "is_peak_moment": false,
+      "action_level": "low",
+      "character": "hades",
+      "location": "olympus_shadows"
+    },
+    {
+      "scene_id": "scene_09",
+      "narration": "He smiled, knowing that this young god's struggle had just begun.",
+      "is_peak_moment": false,
+      "action_level": "low",
+      "character": "hades",
+      "location": "olympus_shadows"
+    },
+    {
+      "scene_id": "scene_10",
+      "narration": "Back at the throne room, Poseidon appeared with a knowing smirk.",
+      "is_peak_moment": false,
+      "action_level": "medium",
+      "character": "poseidon",
+      "location": "olympus_throne_room"
+    },
+    {
+      "scene_id": "scene_11",
+      "narration": "He whispered words of caution to young Zeus about the dangers ahead.",
+      "is_peak_moment": false,
+      "action_level": "low",
+      "character": "poseidon",
+      "location": "olympus_throne_room"
+    },
+    {
+      "scene_id": "scene_12",
+      "narration": "As the sun set over Olympus, Little Zeus stood tall, ready for anything.",
+      "is_peak_moment": true,
+      "action_level": "medium",
+      "character": "little_zeus",
+      "location": "olympus_peak"
+    }
+  ]
+}

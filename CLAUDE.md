@@ -70,7 +70,7 @@ Josh Jardin (justifiedmagnificent@gmail.com). Building a multi-channel AI conten
 | StoryForge | Book generation system — built into Empire OS by Google AI Studio |
 | Grok | xAI outside builder — builds external projects/apps. NOT Google. NOT Gemini. |
 | Google AI Studio (Gemini) | Built: Boss Listers, Crosspost, Empire OS — internal empire tools |
-| Boss Listers | Cross-listing app built by Google AI Studio. GOAL: eBay inventory → jardins-outpost.pages.dev storefront → other platforms (Poshmark, Mercari, etc.). Pipeline not fully working yet — eBay connected, website + other platforms pending. |
+| Boss Listers | Cross-listing app built by Google AI Studio. GOAL: eBay inventory → jardins-outpost.pages.dev storefront → other platforms (Poshmark, Mercari, etc.). 2026-07-25: live-inventory backend built (`inventory-sync/` — eBay→Supabase sync + schema); website storefront wired to it; Boss Listers app itself still needs to be generated from MASTER_PROMPT.txt and deployed to Vercel. Other platforms (Poshmark, Mercari, etc.) still pending. |
 | ngrok | Tunnels local server so agents can hit it via public URL |
 | channel_uploader.py | Per-channel uploader with --verify — replaces easy_youtube_uploader.py |
 | token_gg.pickle | Correct GG token — NEVER use token.pickle (wrong account) |
@@ -85,6 +85,10 @@ Josh Jardin (justifiedmagnificent@gmail.com). Building a multi-channel AI conten
 | omniroute_adapter.py | OmniRoute integration adapter — supports image_gen, video, tts, reasoning fallback chains |
 | omniroute.config.json | OmniRoute configuration — providers, routing strategies, resilience rules |
 | START_OMNIROUTE.bat | Launcher for OmniRoute daemon (npm install + start on 20128) |
+| inventory-sync/ | Live eBay→Supabase inventory sync system (schema + Edge Function + deploy docs) — see `inventory-sync/DEPLOY.md` |
+| ebay-sync | Supabase Edge Function (`inventory-sync/supabase/functions/ebay-sync/`) — polls eBay Sell Inventory API every 15 min via pg_cron, upserts into `public.products`, logs to `public.sync_logs` |
+| products table | Shared Supabase table — single source of truth read by the website storefront (`/api/products`) and Boss Listers, written by ebay-sync (source='ebay') and Boss Listers (source='manual') |
+| functions/api/products.ts | Cloudflare Pages Function — `GET /api/products`, 5-min edge cache, backs the website's "Shop The Inventory" section in `index.html` |
 
 ## Episode Status
 | Season | Episodes | Status |
@@ -124,6 +128,7 @@ EP024 Inchon | EP025 Yorktown
 
 ## Viral Engine Launch
 **Website:** https://jardins-outpost.pages.dev (Cloudflare Pages) — LIVE, looks great, dark gold theme. Has Apps/Store/Services/Workspace/Contact nav. App cards currently point to locally-running servers (not public yet).
+**Live Inventory (2026-07-25):** New "Shop The Inventory" section added to `index.html`, backed by `inventory-sync/` (Supabase Edge Function polls eBay every 15 min → `products` table → `/api/products` Cloudflare Pages Function, 5-min cache, plus a Supabase Realtime subscription for instant updates). Full architecture + deploy steps in `inventory-sync/DEPLOY.md`. ⚠️ Not live yet — Josh still needs to: (1) create the Supabase project and run the two migrations, (2) create an eBay developer app + complete the one-time OAuth consent flow to get a refresh token, (3) set Edge Function + Vault secrets, (4) deploy the function, (5) fill in the `SUPABASE_URL`/`SUPABASE_ANON_KEY` placeholders in `index.html` and the Cloudflare Pages env vars. This is separate from the Base44/ViralVox "Apps & Store" section below — that one stays untouched.
 **NEXT:** Added a real Store section to `index.html` (2026-07-19) — ViralVox, ViralVox Pro, Boss Listers AI, 2 merch items, channel sponsorship bundle, all styled to match the existing dark-gold design system. ⚠️ Buy buttons currently point to the Base44 **editor/preview** URL (`https://app.base44.com/apps/6a341ca3df11ec718fefd246/editor/preview`) as a placeholder — this is NOT the public customer-facing URL. Josh needs to: (1) publish the Base44 app (via massgains1731@gmail.com account), (2) get the real public app URL, (3) swap it into `index.html`'s Store section, (4) `git push` (via PUSH_NOW.bat) so Cloudflare Pages picks up the change. Also still needs: real Stripe keys pasted into the Base44 app to make checkout live.
 **Grok built landing pages** for various offer packs — files location unknown, need to find them.
 **Empire OS Hub:** Running at localhost:5173 — React+Vite app, dark theme, agent dispatch tabs (Claude/Gemini/Grok/ChatGPT/DeepSeek), Gods & Glory pipeline view. Needs extension to cover all empire pillars (Books, Merch, Store, Services, Revenue).
@@ -216,7 +221,7 @@ Then give the answer.
 
 Completed: Bottleneck audit, credit-stretching system (scene_classifier.py, bot_14_credit_guardian.py), AI router (20 adapters), free provider waterfall, documentation.
 
-### 2026-07-21 Session (CURRENT)
+### 2026-07-21 Session
 **Focus:** Fix LO_EP001 quality issues, stabilize OmniRoute multi-provider failover, document learnings  
 **Status:** ✅ OmniRoute live on localhost:20128, CLAUDE.md updated
 
@@ -238,6 +243,78 @@ Completed: Bottleneck audit, credit-stretching system (scene_classifier.py, bot_
 3. **Upload fixed LO_EP001:** Get it live on @littleolympusai with manual verification
 4. **Render LO_EP002-004:** Once EP001 is verified good
 5. **Replicate to IL:** Iron Legends channel (same 24-scene format, Higgsfield animation)
+
+### 2026-07-28 Session (CURRENT)
+**Focus:** Build multichannel connector system for Boss Listers; git/GitHub authentication
+**Status:** ✅ Complete — manual export connector live, API structures ready, all migrations deployed, GitHub authenticated, PR opened
+
+#### Completed
+1. **Fixed anon read permissions bug** — migration `0004_channels_and_grants.sql` applied + verified live (products/storefront_products now 200 for anon; sync_logs/marketplace_accounts correctly still 401). All 4 migrations deployed to Boss listers prod.
+2. **Built multichannel connector system (boss-listers-mvp repo):**
+   - **Manual export connector** (fully working, tested): FB Marketplace/OfferUp/Craigslist/Mercari/Poshmark with platform-tuned titles/descriptions, keyword extraction, CSV export, photo checklist. Zero browser automation/scraping — hard platform rule.
+   - **Shared connector interface** (`lib/channels/connector.js`): BaseConnector, CONNECTION_STATUS enum, UnsupportedOperationError for honesty. Honesty guards: nothing claims "connected" without a real authenticated API test.
+   - **API connectors** (`lib/channels/apiConnectors.js`): eBay (AWAITING_APPROVAL), Etsy (CONFIGURATION_REQUIRED), Shopify/WooCommerce (NOT_CONNECTED, optional). Real env-var detection, no false "connected" claims.
+   - **Channel registry** (`lib/channels/registry.js`): unified status source; separate static vs live probes.
+   - **Channels page** (`pages/channels.js`): status pills per channel, Test Connection buttons, manual listing-package generator with copy buttons, CSV download.
+   - **API routes** (`pages/api/channels/*`): /channels (list all), /channels/test (live auth test), /channels/manual-package (generator), /channels/manual-status (lifecycle tracking).
+3. **Supabase inventory bridge extended** (`lib/supabaseInventory.js`): new functions listChannelAccounts(), upsertManualListing() for idempotent posted/sold tracking (marketplace_listings table, reuses 0003's schema).
+4. **Security hardened:** Next.js 14.2.5 → 14.2.35 (resolved published advisory). All new code: no secrets in code, env-var only, .env gitignored.
+5. **GitHub authentication:** `gh auth login` → HTTPS protocol → logged in as mjardin17 ✅
+6. **PR opened:** `feat/supabase-inventory` → main (github.com/mjardin17/boss-listers-mvp/pull/1) with full test summary.
+7. **Tests all pass:** manual-package unit tests, connector honesty guards (no false "connected" claims), `next build`, secret sweep, DB migration 0004 verified against live Supabase.
+
+#### What's operational now
+| Feature | Status |
+|---|---|
+| Manual listing packages (FB/OfferUp/Craigslist/Mercari/Poshmark) | ✅ Working — copy-paste-ready, CSV export, no automation |
+| Channels status page (/channels) | ✅ Built — shows honest status for all 9 channels + test buttons |
+| eBay sync engine | ✅ Built (inventory-sync/) — awaiting developer approval |
+| Etsy/Shopify/WooCommerce scaffolds | ✅ Ready — need credentials |
+| Supabase (Boss listers prod) | ✅ Live (0001–0004 applied) — public reads fixed, manual lifecycle ready |
+
+#### Pending (user action required)
+1. **eBay developer approval** — when email arrives: grab keyset + RuName → consent flow → refresh token
+2. **Deploy boss-listers-mvp** — Vercel/Render for /channels UI (manual packages usable from phone)
+3. **Optional: Etsy** — register at etsy.com/developers (instant for personal use)
+
+### 2026-07-26 Session
+**Focus:** Commerce architecture correction (CrossPost vs BossLister separation) + commerce hardening
+**Status:** ✅ Code complete — see `FABEL_COMMERCE_INTEGRATION_HANDOFF.md` for full state, classifications, and blockers
+
+Key facts established:
+- **CrossPost/BossLister were never entangled** — this repo's crosspost/social_clips code is content-only; guardrails added instead (read-only `social_clips/product_promos.py` for shop links in video descriptions).
+- **The real BossLister app is `mjardin17/boss-listers-mvp` on GitHub** (Next.js, OpenAI Vision listing generator, JSON-file storage — NOT on Supabase despite earlier belief). Cloned to `C:\Users\jjard\claude\boss-listers-mvp`, branch `feat/supabase-inventory` adds the shared-DB bridge (staged, NOT pushed).
+- **Supabase project confirmed: `irslzufsqjveyibkfjtz` ("Boss listers prod")** — key/ref pair verified live via REST 2026-07-26 (publishable key `sb_publishable_HV03…` wired into index.html). EMPTY, migrations not yet applied (mobile SQL paste failed; run `npx supabase db push` from PC). ⚠️ Josh has a SECOND, unused project `lgevctbpntndmbwgebwe` ("mjardin17's Project") — also empty, do NOT deploy there; consider deleting to avoid confusion.
+- New: migration `0003_commerce_hardening.sql` (marketplace_accounts/listings/events, idempotent `record_sale()`, oversell prevention, sync_version optimistic locking, `storefront_products` public view), `/api/storefront/*` Pages Functions, `extension/` compliant scaffold (NOT IMPLEMENTED).
+- eBay: developer account SUBMITTED (email verified, approval pending as of 2026-07-26). Nothing is claimed live.
+
+**Later same session — multichannel connector system (built in boss-listers-mvp clone, branch `feat/supabase-inventory`):**
+- **Verified live:** migrations 0001–0003 ARE applied to Boss listers prod (`irslzufsqjveyibkfjtz`) — but found a real bug: 0001 never issued table GRANTs, so all anon storefront reads fail 42501. Fix shipped in **`0004_channels_and_grants.sql`** (also: channel seeds, manual-listing lifecycle columns, marketplace constraint extensions — reuses 0003's marketplace_accounts/listings as channel_connections/channel_listings, no duplicate tables). ✅ **0004 APPLIED + VERIFIED LIVE 2026-07-28**: anon reads on products/storefront_products return 200; sync_logs/marketplace_accounts correctly still 401 for anon. All 4 migrations now live on Boss listers prod. Supabase CLI is authenticated + linked from `inventory-sync/` on Josh's PC. ✅ **Branch `feat/supabase-inventory` PUSHED** to mjardin17/boss-listers-mvp (Josh approved; Windows stored git credentials) — PR can be opened at github.com/mjardin17/boss-listers-mvp/pull/new/feat/supabase-inventory.
+- **Manual export connector (WORKING NOW, tested):** `lib/channels/manualPackage.js` — platform-optimized listing packages for FB Marketplace/OfferUp/Craigslist/Mercari/Poshmark (titles within per-platform limits, descriptions, keywords, photo checklist, CSV export). No browser automation/scraping — hard rule.
+- **Connector architecture:** `lib/channels/connector.js` (common interface incl. connect/testConnection/syncInventory/etc.), `apiConnectors.js` (eBay=awaiting_approval, Etsy/Shopify/Woo=structured+disabled, honest status only — "connected" requires a real API test), `registry.js`, API routes `pages/api/channels/*`, UI `pages/channels.js`. `CHANNEL_SETUP.md` = user setup guide with exact env var names.
+- **Tests:** manual-package unit tests PASS, connector honesty guards PASS, `next build` PASS (all routes compile). Secret sweep clean. ⚠️ next@14.2.5 has a known security advisory — recommend patch bump later.
+
+### 2026-07-25 Session
+**Focus:** Build the eBay → Supabase live inventory system (schema, sync service, website + Boss Listers wiring)
+**Status:** ✅ Code complete, not yet deployed — needs Josh's Supabase project + eBay developer app
+
+#### Completed
+1. **Supabase schema** — `inventory-sync/supabase/migrations/0001_init_inventory.sql`: `products` (schema-first, RLS: public read, `boss_lister`-role write, service_role bypass for the sync), `sync_logs`, `sync_state` (circuit breaker), realtime publication on `products`.
+2. **eBay sync Edge Function** — `inventory-sync/supabase/functions/ebay-sync/`: Deno/TypeScript, OAuth refresh-token exchange, paginated inventory + offer fetch, retry-with-backoff, circuit breaker (5 consecutive failures → 30-min cooldown), conflict-safe upsert, structured logging to `sync_logs`.
+3. **Scheduling** — `0002_schedule_ebay_sync.sql`: pg_cron + pg_net call the function every 15 min, authenticated via a Vault-stored service-role key and shared trigger secret (function checks `x-sync-trigger-secret`).
+4. **Website** — new "Shop The Inventory" section in `index.html` (separate from the existing Base44 Apps/Store section), fed by `functions/api/products.ts` (Cloudflare Pages Function, `GET /api/products`, 5-min edge cache) plus a client-side Supabase Realtime subscription for instant updates.
+5. **Boss Listers** — `boss-listers-ai/boss-listers-ai/src/lib/supabaseClient.ts` + `inventoryApi.ts` added (read/write the shared `products` table, mapped to/from the existing `ResellerProduct` model); `types.ts` extended with the canonical `ProductRow` shape; `MASTER_PROMPT.txt` updated so the next Gemini AI Studio generation wires the dashboard to real Supabase data instead of only mock data.
+6. **Deploy guide** — `inventory-sync/DEPLOY.md`: full path from empty Supabase project to verified end-to-end sync, including the one-time eBay OAuth consent flow for the refresh token.
+
+#### Deviations from the original brief (flagged, not silent)
+- **Sync host:** brief said "Node.js sync service"; built as a **Supabase Edge Function (Deno, TypeScript)** instead, scheduled by pg_cron — confirmed with Josh. Reason: Vercel Hobby cron is capped at once/day (can't do 15-min), and this keeps secrets in one place with no separate host to run.
+- **Sync logging:** brief said log to `DRY_RUN_REPORT.md`; that file is auto-generated by the video pipeline's `dry_run.py` and would collide. Sync runs log to a `sync_logs` Postgres table instead (queryable; also the only option for a stateless Edge Function). See `inventory-sync/reports/README.md`.
+
+#### Pending Tasks (PRIORITY ORDER)
+1. **Josh:** create the Supabase project, run both migrations, complete the eBay OAuth consent flow, set secrets, deploy the function — full checklist in `inventory-sync/DEPLOY.md`.
+2. **Josh:** fill in the `SUPABASE_URL`/`SUPABASE_ANON_KEY` placeholders in `index.html` and set the same as Cloudflare Pages env vars.
+3. Generate the actual Boss Listers app from `MASTER_PROMPT.txt` (still just a starter kit — no real app code exists yet) and deploy to Vercel.
+4. Once live, verify a real eBay price/quantity change shows up on the website within 15 min (or instantly via Realtime after the first sync).
 
 ## Git & GitHub (PRODUCTION RULES)
 

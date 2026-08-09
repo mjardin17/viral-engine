@@ -1,0 +1,32 @@
+{
+  "products": [
+    {
+      "id": "sample-jacket-001",
+      "name": "Vintage Leather Jacket",
+      "description": "Classic brown leather jacket in excellent condition",
+      "price": 89.99,
+      "quantity": 2,
+      "images": [
+        "https://via.placeholder.com/400x300?text=Jacket+Front",
+        "https://via.placeholder.com/400x300?text=Jacket+Back"
+      ],
+      "status": "for_sale",
+      "create_commercial": false,
+      "sync_to_platforms": false
+    },
+    {
+      "id": "test-workflow-001",
+      "name": "Test Workflow Product",
+      "description": "Product for production readiness testing",
+      "price": 49.99,
+      "quantity": 2,
+      "images": [
+        "https://via.placeholder.com/400x300?text=Test+Product+1",
+        "https://via.placeholder.com/400x300?text=Test+Product+2"
+      ],
+      "status": "for_sale",
+      "create_commercial": true,
+      "sync_to_platforms": true
+    }
+  ]
+}

@@ -22,9 +22,10 @@ BOSS_LISTERS_DB = Path(__file__).parent.parent / "boss-listers-ai" / "data.json"
 SYNC_STATE_FILE = Path(__file__).parent.parent / "crosslist_sync_state.json"
 
 def post_to_buzz(message, channel="inventory-sync"):
-    """Post status to Buzz channel."""
+    """Post status to Buzz channel (fallback to stdout if buzz-cli unavailable)."""
+    print(f"[{datetime.now().isoformat()}] #{channel}: {message}")
+
     if not BUZZ_PRIVATE_KEY:
-        print(f"[{datetime.now().isoformat()}] {message}")
         return
 
     cmd = f"""BUZZ_PRIVATE_KEY={BUZZ_PRIVATE_KEY} BUZZ_RELAY_URL={BUZZ_RELAY_URL} \
@@ -33,9 +34,11 @@ def post_to_buzz(message, channel="inventory-sync"):
     try:
         result = subprocess.run(cmd, shell=True, capture_output=True, text=True, timeout=10)
         if result.returncode == 0:
-            print(f"✓ Posted: {message[:50]}...")
+            print(f"  ✓ Buzz posted")
+    except FileNotFoundError:
+        pass  # buzz-cli not installed, stdout logging is sufficient
     except Exception as e:
-        print(f"Error posting to Buzz: {e}")
+        print(f"  ⚠️ Buzz error: {str(e)[:50]}")
 
 def load_boss_listers_inventory():
     """Load inventory from Boss Listers."""

@@ -1,0 +1,52 @@
+@echo off
+REM Start all Empire OS agents
+REM Video Pipeline: Renders episodes and commercials
+REM Crosslister: Monitors inventory for new items
+REM Platform Sync: Pushes items to all resale platforms
+REM Sales Tracker: Monitors platforms for sold items
+REM Price Sync: Syncs prices bidirectionally
+
+setlocal enabledelayedexpansion
+
+REM Agent keypair
+set BUZZ_PRIVATE_KEY=31a697cb1a00d32c0ef5ef7b03dee1567e24d7798cb225302864f886d2af0f04
+set BUZZ_RELAY_URL=ws://localhost:3000
+
+REM Python path
+set PYTHON_PATH=C:\Users\jjard\AppData\Local\Programs\Python\Python314\python.exe
+
+echo.
+echo ================================================
+echo Empire OS Agent Coordinator (5 Agents)
+echo ================================================
+echo Relay: %BUZZ_RELAY_URL%
+echo.
+echo Agents:
+echo   1. Video Pipeline Agent     (render jobs)
+echo   2. Crosslister Agent        (monitor inventory)
+echo   3. Platform Sync Agent      (push to platforms)
+echo   4. Sales Tracker Agent      (monitor sales)
+echo   5. Price Sync Agent         (sync prices)
+echo.
+echo Channels:
+echo   #video-pipeline   (render status)
+echo   #commercials      (commercial production)
+echo   #inventory-sync   (crosslisting status)
+echo.
+
+REM Start agents in separate windows
+start "Video Pipeline Agent" cmd /c "%PYTHON_PATH% agents\video_pipeline_agent.py"
+timeout /t 2
+start "Crosslister Agent" cmd /c "%PYTHON_PATH% agents\crosslister_agent.py"
+timeout /t 2
+start "Platform Sync Agent" cmd /c "%PYTHON_PATH% agents\platform_sync_agent.py"
+timeout /t 2
+start "Sales Tracker Agent" cmd /c "%PYTHON_PATH% agents\sales_tracker_agent.py"
+timeout /t 2
+start "Price Sync Agent" cmd /c "%PYTHON_PATH% agents\price_sync_agent.py"
+
+echo.
+echo All 5 agents started. Check their windows for status.
+echo Monitor in Buzz: http://localhost:3000
+echo.
+pause

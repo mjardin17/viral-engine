@@ -1731,6 +1731,382 @@ class VestiaireConnector(PlatformConnector):
             return []
 
 
+class EbayConnector(PlatformConnector):
+    """eBay Trading API integration."""
+
+    def __init__(self):
+        super().__init__("ebay")
+        self.base_url = "https://api.ebay.com/sell/inventory/v1"
+
+    def authenticate(self) -> bool:
+        if not self.auth_token:
+            print("⚠️ eBay: No API token configured (EBAY_TOKEN)")
+            return False
+        try:
+            headers = {"Authorization": f"Bearer {self.auth_token}"}
+            response = self.session.get(f"{self.base_url}/inventory_item", headers=headers, timeout=5)
+            return response.status_code in [200, 400]
+        except:
+            return False
+
+    def create_listing(self, title: str, description: str, price: float, images: List[str]) -> Optional[Listing]:
+        try:
+            headers = {"Authorization": f"Bearer {self.auth_token}", "Content-Type": "application/json"}
+            payload = {"title": title[:80], "description": description[:5000], "price": price, "images": images[:12]}
+            response = self.session.post(f"{self.base_url}/inventory_item", headers=headers, json=payload, timeout=10)
+            if response.status_code in [200, 201]:
+                listing_id = response.json().get("id")
+                print(f"✓ eBay: Created {listing_id}")
+                return Listing(str(listing_id), "ebay", title, description, price, 1, images, "active", f"https://ebay.com/{listing_id}", datetime.now(), datetime.now())
+            return None
+        except Exception as e:
+            print(f"❌ eBay error: {e}")
+            return None
+
+    def update_listing(self, listing_id: str, **kwargs) -> bool:
+        try:
+            headers = {"Authorization": f"Bearer {self.auth_token}", "Content-Type": "application/json"}
+            payload = {}
+            if "price" in kwargs:
+                payload["price"] = kwargs["price"]
+            if not payload:
+                return True
+            response = self.session.put(f"{self.base_url}/inventory_item/{listing_id}", headers=headers, json=payload, timeout=10)
+            return response.status_code in [200, 204]
+        except:
+            return False
+
+    def delist(self, listing_id: str) -> bool:
+        try:
+            headers = {"Authorization": f"Bearer {self.auth_token}"}
+            response = self.session.delete(f"{self.base_url}/inventory_item/{listing_id}", headers=headers, timeout=10)
+            return response.status_code in [200, 204]
+        except:
+            return False
+
+    def get_sales(self, since: datetime) -> List[Sale]:
+        try:
+            headers = {"Authorization": f"Bearer {self.auth_token}"}
+            response = self.session.get(f"{self.base_url}/orders", headers=headers, timeout=10)
+            if response.status_code != 200:
+                return []
+            sales = []
+            for order in response.json().get("orders", []):
+                created_at = datetime.fromisoformat(order.get("created_at", "").replace("Z", "+00:00"))
+                if created_at > since:
+                    sales.append(Sale(str(order["id"]), "ebay", str(order.get("item_id")), str(order.get("item_id")), float(order.get("price", 0)), 1, order.get("buyer"), created_at))
+            print(f"📊 eBay: Found {len(sales)} sales")
+            return sales
+        except:
+            return []
+
+    def get_inventory(self) -> List[Listing]:
+        try:
+            headers = {"Authorization": f"Bearer {self.auth_token}"}
+            response = self.session.get(f"{self.base_url}/inventory_item", headers=headers, timeout=10)
+            if response.status_code != 200:
+                return []
+            listings = []
+            for item in response.json().get("items", []):
+                listings.append(Listing(str(item["id"]), "ebay", item.get("title", ""), item.get("description", ""), float(item.get("price", 0)), item.get("quantity", 0), item.get("images", []), "active", f"https://ebay.com/{item['id']}", datetime.now(), datetime.now()))
+            print(f"📋 eBay: Found {len(listings)} listings")
+            return listings
+        except:
+            return []
+
+
+class FacebookMarketplaceConnector(PlatformConnector):
+    """Facebook Marketplace API integration."""
+
+    def __init__(self):
+        super().__init__("facebook")
+        self.base_url = "https://graph.facebook.com/v18.0"
+
+    def authenticate(self) -> bool:
+        if not self.auth_token:
+            print("⚠️ Facebook: No API token configured (FACEBOOK_TOKEN)")
+            return False
+        try:
+            response = self.session.get(f"{self.base_url}/me", params={"access_token": self.auth_token}, timeout=5)
+            return response.status_code == 200
+        except:
+            return False
+
+    def create_listing(self, title: str, description: str, price: float, images: List[str]) -> Optional[Listing]:
+        try:
+            payload = {"name": title, "description": description, "price": int(price * 100), "image_urls": images[:8]}
+            response = self.session.post(f"{self.base_url}/me/marketplace_listings", data=payload, params={"access_token": self.auth_token}, timeout=10)
+            if response.status_code in [200, 201]:
+                listing_id = response.json().get("id")
+                print(f"✓ Facebook: Created {listing_id}")
+                return Listing(str(listing_id), "facebook", title, description, price, 1, images, "active", f"https://facebook.com/marketplace/listings/{listing_id}", datetime.now(), datetime.now())
+            return None
+        except Exception as e:
+            print(f"❌ Facebook error: {e}")
+            return None
+
+    def update_listing(self, listing_id: str, **kwargs) -> bool:
+        try:
+            payload = {}
+            if "price" in kwargs:
+                payload["price"] = int(kwargs["price"] * 100)
+            if not payload:
+                return True
+            response = self.session.post(f"{self.base_url}/{listing_id}", data=payload, params={"access_token": self.auth_token}, timeout=10)
+            return response.status_code in [200, 204]
+        except:
+            return False
+
+    def delist(self, listing_id: str) -> bool:
+        try:
+            response = self.session.delete(f"{self.base_url}/{listing_id}", params={"access_token": self.auth_token}, timeout=10)
+            return response.status_code in [200, 204]
+        except:
+            return False
+
+    def get_sales(self, since: datetime) -> List[Sale]:
+        return []
+
+    def get_inventory(self) -> List[Listing]:
+        try:
+            response = self.session.get(f"{self.base_url}/me/marketplace_listings", params={"access_token": self.auth_token}, timeout=10)
+            if response.status_code != 200:
+                return []
+            listings = [Listing(str(item["id"]), "facebook", item.get("name", ""), item.get("description", ""), float(item.get("price", 0) / 100), 1, item.get("images", []), "active", f"https://facebook.com/marketplace/listings/{item['id']}", datetime.now(), datetime.now()) for item in response.json().get("listings", [])]
+            print(f"📋 Facebook: Found {len(listings)} listings")
+            return listings
+        except:
+            return []
+
+
+class MercadoLibreConnector(PlatformConnector):
+    """Mercado Libre API integration (Latin America)."""
+
+    def __init__(self):
+        super().__init__("mercadolibre")
+        self.base_url = "https://api.mercadolibre.com"
+
+    def authenticate(self) -> bool:
+        if not self.auth_token:
+            print("⚠️ Mercado Libre: No API token configured (MERCADOLIBRE_TOKEN)")
+            return False
+        try:
+            headers = {"Authorization": f"Bearer {self.auth_token}"}
+            response = self.session.get(f"{self.base_url}/users/me", headers=headers, timeout=5)
+            return response.status_code == 200
+        except:
+            return False
+
+    def create_listing(self, title: str, description: str, price: float, images: List[str]) -> Optional[Listing]:
+        try:
+            headers = {"Authorization": f"Bearer {self.auth_token}", "Content-Type": "application/json"}
+            payload = {"title": title, "description": description, "price": price, "currency_id": "USD", "pictures": [{"url": img} for img in images[:8]]}
+            response = self.session.post(f"{self.base_url}/items", headers=headers, json=payload, timeout=10)
+            if response.status_code in [200, 201]:
+                listing_id = response.json().get("id")
+                print(f"✓ Mercado Libre: Created {listing_id}")
+                return Listing(str(listing_id), "mercadolibre", title, description, price, 1, images, "active", f"https://mercadolibre.com.ar/p/{listing_id}", datetime.now(), datetime.now())
+            return None
+        except Exception as e:
+            print(f"❌ Mercado Libre error: {e}")
+            return None
+
+    def update_listing(self, listing_id: str, **kwargs) -> bool:
+        try:
+            headers = {"Authorization": f"Bearer {self.auth_token}", "Content-Type": "application/json"}
+            payload = {}
+            if "price" in kwargs:
+                payload["price"] = kwargs["price"]
+            if not payload:
+                return True
+            response = self.session.put(f"{self.base_url}/items/{listing_id}", headers=headers, json=payload, timeout=10)
+            return response.status_code in [200, 204]
+        except:
+            return False
+
+    def delist(self, listing_id: str) -> bool:
+        try:
+            headers = {"Authorization": f"Bearer {self.auth_token}"}
+            response = self.session.delete(f"{self.base_url}/items/{listing_id}", headers=headers, timeout=10)
+            return response.status_code in [200, 204]
+        except:
+            return False
+
+    def get_sales(self, since: datetime) -> List[Sale]:
+        try:
+            headers = {"Authorization": f"Bearer {self.auth_token}"}
+            response = self.session.get(f"{self.base_url}/orders/search", headers=headers, timeout=10)
+            if response.status_code != 200:
+                return []
+            return [Sale(str(order["id"]), "mercadolibre", str(order.get("item_id")), str(order.get("item_id")), float(order.get("price", 0)), 1, order.get("buyer"), datetime.fromisoformat(order.get("date_created", "").replace("Z", "+00:00"))) for order in response.json().get("orders", []) if datetime.fromisoformat(order.get("date_created", "").replace("Z", "+00:00")) > since]
+        except:
+            return []
+
+    def get_inventory(self) -> List[Listing]:
+        try:
+            headers = {"Authorization": f"Bearer {self.auth_token}"}
+            response = self.session.get(f"{self.base_url}/users/me/listings", headers=headers, timeout=10)
+            if response.status_code != 200:
+                return []
+            listings = [Listing(str(item["id"]), "mercadolibre", item.get("title", ""), "", float(item.get("price", 0)), item.get("available_quantity", 0), item.get("pictures", []), "active", f"https://mercadolibre.com.ar/p/{item['id']}", datetime.now(), datetime.now()) for item in response.json().get("results", [])]
+            print(f"📋 Mercado Libre: Found {len(listings)} listings")
+            return listings
+        except:
+            return []
+
+
+class ReverbConnector(PlatformConnector):
+    """Reverb.com API integration (music gear)."""
+
+    def __init__(self):
+        super().__init__("reverb")
+        self.base_url = "https://api.reverb.com/api/own"
+
+    def authenticate(self) -> bool:
+        if not self.auth_token:
+            print("⚠️ Reverb: No API token configured (REVERB_TOKEN)")
+            return False
+        try:
+            headers = {"Authorization": f"Token token={self.auth_token}"}
+            response = self.session.get(f"{self.base_url}/profile", headers=headers, timeout=5)
+            return response.status_code == 200
+        except:
+            return False
+
+    def create_listing(self, title: str, description: str, price: float, images: List[str]) -> Optional[Listing]:
+        try:
+            headers = {"Authorization": f"Token token={self.auth_token}"}
+            payload = {"listing": {"title": title, "description": description, "price": price, "photo_ids": list(range(len(images[:10])))}}
+            response = self.session.post(f"{self.base_url}/listings", headers=headers, json=payload, timeout=10)
+            if response.status_code in [200, 201]:
+                listing_id = response.json().get("listing", {}).get("id")
+                print(f"✓ Reverb: Created {listing_id}")
+                return Listing(str(listing_id), "reverb", title, description, price, 1, images, "active", f"https://reverb.com/item/{listing_id}", datetime.now(), datetime.now())
+            return None
+        except Exception as e:
+            print(f"❌ Reverb error: {e}")
+            return None
+
+    def update_listing(self, listing_id: str, **kwargs) -> bool:
+        try:
+            headers = {"Authorization": f"Token token={self.auth_token}"}
+            payload = {"listing": {}}
+            if "price" in kwargs:
+                payload["listing"]["price"] = kwargs["price"]
+            if not payload["listing"]:
+                return True
+            response = self.session.put(f"{self.base_url}/listings/{listing_id}", headers=headers, json=payload, timeout=10)
+            return response.status_code in [200, 204]
+        except:
+            return False
+
+    def delist(self, listing_id: str) -> bool:
+        try:
+            headers = {"Authorization": f"Token token={self.auth_token}"}
+            response = self.session.delete(f"{self.base_url}/listings/{listing_id}", headers=headers, timeout=10)
+            return response.status_code in [200, 204]
+        except:
+            return False
+
+    def get_sales(self, since: datetime) -> List[Sale]:
+        try:
+            headers = {"Authorization": f"Token token={self.auth_token}"}
+            response = self.session.get(f"{self.base_url}/sales", headers=headers, timeout=10)
+            if response.status_code != 200:
+                return []
+            return [Sale(str(sale["id"]), "reverb", str(sale.get("listing_id")), str(sale.get("listing_id")), float(sale.get("price", 0)), 1, sale.get("buyer"), datetime.fromisoformat(sale.get("created_at", "").replace("Z", "+00:00"))) for sale in response.json().get("sales", []) if datetime.fromisoformat(sale.get("created_at", "").replace("Z", "+00:00")) > since]
+        except:
+            return []
+
+    def get_inventory(self) -> List[Listing]:
+        try:
+            headers = {"Authorization": f"Token token={self.auth_token}"}
+            response = self.session.get(f"{self.base_url}/listings", headers=headers, timeout=10)
+            if response.status_code != 200:
+                return []
+            listings = [Listing(str(item["id"]), "reverb", item.get("title", ""), item.get("description", ""), float(item.get("price", 0)), 1, item.get("photos", []), "active", f"https://reverb.com/item/{item['id']}", datetime.now(), datetime.now()) for item in response.json().get("listings", [])]
+            print(f"📋 Reverb: Found {len(listings)} listings")
+            return listings
+        except:
+            return []
+
+
+class RealRealConnector(PlatformConnector):
+    """The RealReal API integration (luxury resale)."""
+
+    def __init__(self):
+        super().__init__("realreal")
+        self.base_url = "https://api.therealreal.com/v1"
+
+    def authenticate(self) -> bool:
+        if not self.auth_token:
+            print("⚠️ The RealReal: No API token configured (REALREAL_TOKEN)")
+            return False
+        try:
+            headers = {"Authorization": f"Bearer {self.auth_token}"}
+            response = self.session.get(f"{self.base_url}/seller/profile", headers=headers, timeout=5)
+            return response.status_code == 200
+        except:
+            return False
+
+    def create_listing(self, title: str, description: str, price: float, images: List[str]) -> Optional[Listing]:
+        try:
+            headers = {"Authorization": f"Bearer {self.auth_token}", "Content-Type": "application/json"}
+            payload = {"title": title, "description": description, "price": price, "photos": images[:10]}
+            response = self.session.post(f"{self.base_url}/listings", headers=headers, json=payload, timeout=10)
+            if response.status_code in [200, 201]:
+                listing_id = response.json().get("id")
+                print(f"✓ The RealReal: Created {listing_id}")
+                return Listing(str(listing_id), "realreal", title, description, price, 1, images, "active", f"https://therealreal.com/products/{listing_id}", datetime.now(), datetime.now())
+            return None
+        except Exception as e:
+            print(f"❌ The RealReal error: {e}")
+            return None
+
+    def update_listing(self, listing_id: str, **kwargs) -> bool:
+        try:
+            headers = {"Authorization": f"Bearer {self.auth_token}", "Content-Type": "application/json"}
+            payload = {}
+            if "price" in kwargs:
+                payload["price"] = kwargs["price"]
+            if not payload:
+                return True
+            response = self.session.patch(f"{self.base_url}/listings/{listing_id}", headers=headers, json=payload, timeout=10)
+            return response.status_code in [200, 204]
+        except:
+            return False
+
+    def delist(self, listing_id: str) -> bool:
+        try:
+            headers = {"Authorization": f"Bearer {self.auth_token}"}
+            response = self.session.delete(f"{self.base_url}/listings/{listing_id}", headers=headers, timeout=10)
+            return response.status_code in [200, 204]
+        except:
+            return False
+
+    def get_sales(self, since: datetime) -> List[Sale]:
+        try:
+            headers = {"Authorization": f"Bearer {self.auth_token}"}
+            response = self.session.get(f"{self.base_url}/sales", headers=headers, timeout=10)
+            if response.status_code != 200:
+                return []
+            return [Sale(str(sale["id"]), "realreal", str(sale.get("listing_id")), str(sale.get("listing_id")), float(sale.get("price", 0)), 1, sale.get("buyer"), datetime.fromisoformat(sale.get("date", "").replace("Z", "+00:00"))) for sale in response.json().get("sales", []) if datetime.fromisoformat(sale.get("date", "").replace("Z", "+00:00")) > since]
+        except:
+            return []
+
+    def get_inventory(self) -> List[Listing]:
+        try:
+            headers = {"Authorization": f"Bearer {self.auth_token}"}
+            response = self.session.get(f"{self.base_url}/listings", headers=headers, timeout=10)
+            if response.status_code != 200:
+                return []
+            listings = [Listing(str(item["id"]), "realreal", item.get("title", ""), item.get("description", ""), float(item.get("price", 0)), 1, item.get("photos", []), "active", f"https://therealreal.com/products/{item['id']}", datetime.now(), datetime.now()) for item in response.json().get("listings", [])]
+            print(f"📋 The RealReal: Found {len(listings)} listings")
+            return listings
+        except:
+            return []
+
+
 # Registry of all platform connectors
 PLATFORMS = {
     "etsy": EtsyConnector,
@@ -1740,6 +2116,11 @@ PLATFORMS = {
     "grailed": GrailedConnector,
     "vinted": VintedConnector,
     "vestiaire": VestiaireConnector,
+    "ebay": EbayConnector,
+    "facebook": FacebookMarketplaceConnector,
+    "mercadolibre": MercadoLibreConnector,
+    "reverb": ReverbConnector,
+    "realreal": RealRealConnector,
     "mercari": MercariConnector,
     "poshmark": PoshmarkConnector,
 }

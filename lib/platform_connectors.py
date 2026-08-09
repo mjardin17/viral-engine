@@ -1078,12 +1078,668 @@ class PoshmarkConnector(PlatformConnector):
         return []
 
 
+class GrailedConnector(PlatformConnector):
+    """Grailed API integration (streetwear marketplace)."""
+
+    def __init__(self):
+        super().__init__("grailed")
+        self.base_url = "https://api.grailed.com/api/v2"
+
+    def authenticate(self) -> bool:
+        """Verify Grailed API token is valid."""
+        if not self.auth_token:
+            print("⚠️ Grailed: No API token configured (GRAILED_TOKEN)")
+            return False
+
+        try:
+            headers = {"Authorization": f"Bearer {self.auth_token}"}
+            response = self.session.get(
+                f"{self.base_url}/me",
+                headers=headers,
+                timeout=5
+            )
+            return response.status_code == 200
+        except Exception as e:
+            print(f"⚠️ Grailed auth failed: {e}")
+            return False
+
+    def create_listing(self, title: str, description: str, price: float, images: List[str]) -> Optional[Listing]:
+        """Create a Grailed listing."""
+        try:
+            headers = {
+                "Authorization": f"Bearer {self.auth_token}",
+                "Content-Type": "application/json"
+            }
+
+            payload = {
+                "listing": {
+                    "title": title[:100],
+                    "description": description,
+                    "price_cents": int(price * 100),
+                    "category": "tops",
+                    "size": "One Size",
+                    "condition": "New",
+                    "photos": [{"url": img} for img in images[:8]]
+                }
+            }
+
+            response = self.session.post(
+                f"{self.base_url}/listings",
+                headers=headers,
+                json=payload,
+                timeout=10
+            )
+
+            if response.status_code in [200, 201]:
+                data = response.json()
+                listing_id = data.get("listing", {}).get("id")
+                print(f"✓ Grailed: Created listing {listing_id}: {title}")
+
+                return Listing(
+                    id=str(listing_id),
+                    platform="grailed",
+                    title=title,
+                    description=description,
+                    price=price,
+                    quantity=1,
+                    images=images,
+                    status="active",
+                    url=f"https://www.grailed.com/listings/{listing_id}",
+                    created_at=datetime.now(),
+                    updated_at=datetime.now()
+                )
+            else:
+                print(f"❌ Grailed: Failed to create listing (status {response.status_code})")
+                return None
+
+        except Exception as e:
+            print(f"❌ Grailed create_listing error: {e}")
+            return None
+
+    def update_listing(self, listing_id: str, **kwargs) -> bool:
+        """Update Grailed listing."""
+        try:
+            headers = {
+                "Authorization": f"Bearer {self.auth_token}",
+                "Content-Type": "application/json"
+            }
+
+            payload = {"listing": {}}
+
+            if "price" in kwargs:
+                payload["listing"]["price_cents"] = int(kwargs["price"] * 100)
+            if "description" in kwargs:
+                payload["listing"]["description"] = kwargs["description"]
+
+            if len(payload["listing"]) == 0:
+                return True
+
+            response = self.session.put(
+                f"{self.base_url}/listings/{listing_id}",
+                headers=headers,
+                json=payload,
+                timeout=10
+            )
+
+            if response.status_code in [200, 204]:
+                print(f"✓ Grailed: Updated listing {listing_id}")
+                return True
+            else:
+                print(f"❌ Grailed: Update failed (status {response.status_code})")
+                return False
+
+        except Exception as e:
+            print(f"❌ Grailed update_listing error: {e}")
+            return False
+
+    def delist(self, listing_id: str) -> bool:
+        """Delete Grailed listing."""
+        try:
+            headers = {"Authorization": f"Bearer {self.auth_token}"}
+
+            response = self.session.delete(
+                f"{self.base_url}/listings/{listing_id}",
+                headers=headers,
+                timeout=10
+            )
+
+            if response.status_code in [200, 204]:
+                print(f"✓ Grailed: Delisted {listing_id}")
+                return True
+            else:
+                print(f"❌ Grailed: Delist failed (status {response.status_code})")
+                return False
+
+        except Exception as e:
+            print(f"❌ Grailed delist error: {e}")
+            return False
+
+    def get_sales(self, since: datetime) -> List[Sale]:
+        """Fetch Grailed sales since timestamp."""
+        try:
+            headers = {"Authorization": f"Bearer {self.auth_token}"}
+
+            response = self.session.get(
+                f"{self.base_url}/me/sales",
+                headers=headers,
+                params={"limit": 100},
+                timeout=10
+            )
+
+            if response.status_code != 200:
+                print(f"⚠️ Grailed: Failed to fetch sales (status {response.status_code})")
+                return []
+
+            sales = []
+            data = response.json()
+
+            for sale in data.get("sales", []):
+                created_at = datetime.fromisoformat(sale.get("created_at", "").replace("Z", "+00:00"))
+                if created_at > since:
+                    sales.append(Sale(
+                        id=str(sale["id"]),
+                        platform="grailed",
+                        listing_id=str(sale.get("listing_id")),
+                        product_id=str(sale.get("listing_id")),
+                        price=sale.get("price_cents", 0) / 100,
+                        quantity=1,
+                        buyer=sale.get("buyer", {}).get("username", "unknown"),
+                        sold_at=created_at
+                    ))
+
+            print(f"📊 Grailed: Found {len(sales)} sales")
+            return sales
+
+        except Exception as e:
+            print(f"❌ Grailed get_sales error: {e}")
+            return []
+
+    def get_inventory(self) -> List[Listing]:
+        """Fetch all Grailed listings."""
+        try:
+            headers = {"Authorization": f"Bearer {self.auth_token}"}
+
+            response = self.session.get(
+                f"{self.base_url}/me/listings",
+                headers=headers,
+                params={"limit": 100},
+                timeout=10
+            )
+
+            if response.status_code != 200:
+                print(f"⚠️ Grailed: Failed to fetch listings (status {response.status_code})")
+                return []
+
+            listings = []
+            data = response.json()
+
+            for listing in data.get("listings", []):
+                listings.append(Listing(
+                    id=str(listing["id"]),
+                    platform="grailed",
+                    title=listing["title"],
+                    description=listing.get("description", ""),
+                    price=listing.get("price_cents", 0) / 100,
+                    quantity=1 if listing.get("status") == "active" else 0,
+                    images=[p.get("url") for p in listing.get("photos", [])],
+                    status="active" if listing.get("status") == "active" else "inactive",
+                    url=f"https://www.grailed.com/listings/{listing['id']}",
+                    created_at=datetime.fromisoformat(listing.get("created_at", "").replace("Z", "+00:00")),
+                    updated_at=datetime.fromisoformat(listing.get("updated_at", "").replace("Z", "+00:00"))
+                ))
+
+            print(f"📋 Grailed: Found {len(listings)} listings")
+            return listings
+
+        except Exception as e:
+            print(f"❌ Grailed get_inventory error: {e}")
+            return []
+
+
+class VintedConnector(PlatformConnector):
+    """Vinted API integration (fashion resale)."""
+
+    def __init__(self):
+        super().__init__("vinted")
+        self.base_url = "https://www.vinted.com/api/v2"
+
+    def authenticate(self) -> bool:
+        """Verify Vinted API token is valid."""
+        if not self.auth_token:
+            print("⚠️ Vinted: No API token configured (VINTED_TOKEN)")
+            return False
+
+        try:
+            headers = {"Authorization": f"Bearer {self.auth_token}"}
+            response = self.session.get(
+                f"{self.base_url}/user",
+                headers=headers,
+                timeout=5
+            )
+            return response.status_code == 200
+        except Exception as e:
+            print(f"⚠️ Vinted auth failed: {e}")
+            return False
+
+    def create_listing(self, title: str, description: str, price: float, images: List[str]) -> Optional[Listing]:
+        """Create a Vinted listing."""
+        try:
+            headers = {
+                "Authorization": f"Bearer {self.auth_token}",
+                "Content-Type": "application/json"
+            }
+
+            payload = {
+                "item": {
+                    "title": title,
+                    "description": description,
+                    "price": price,
+                    "currency": "USD",
+                    "size_id": 0,
+                    "brand_id": 0,
+                    "photo_ids": list(range(len(images[:10])))
+                }
+            }
+
+            response = self.session.post(
+                f"{self.base_url}/items",
+                headers=headers,
+                json=payload,
+                timeout=10
+            )
+
+            if response.status_code in [200, 201]:
+                data = response.json()
+                item_id = data.get("item", {}).get("id")
+                print(f"✓ Vinted: Created listing {item_id}: {title}")
+
+                return Listing(
+                    id=str(item_id),
+                    platform="vinted",
+                    title=title,
+                    description=description,
+                    price=price,
+                    quantity=1,
+                    images=images,
+                    status="active",
+                    url=f"https://www.vinted.com/items/{item_id}",
+                    created_at=datetime.now(),
+                    updated_at=datetime.now()
+                )
+            else:
+                print(f"❌ Vinted: Failed to create listing (status {response.status_code})")
+                return None
+
+        except Exception as e:
+            print(f"❌ Vinted create_listing error: {e}")
+            return None
+
+    def update_listing(self, listing_id: str, **kwargs) -> bool:
+        """Update Vinted listing."""
+        try:
+            headers = {
+                "Authorization": f"Bearer {self.auth_token}",
+                "Content-Type": "application/json"
+            }
+
+            payload = {"item": {}}
+
+            if "price" in kwargs:
+                payload["item"]["price"] = kwargs["price"]
+            if "description" in kwargs:
+                payload["item"]["description"] = kwargs["description"]
+
+            if len(payload["item"]) == 0:
+                return True
+
+            response = self.session.put(
+                f"{self.base_url}/items/{listing_id}",
+                headers=headers,
+                json=payload,
+                timeout=10
+            )
+
+            if response.status_code in [200, 204]:
+                print(f"✓ Vinted: Updated listing {listing_id}")
+                return True
+            else:
+                print(f"❌ Vinted: Update failed (status {response.status_code})")
+                return False
+
+        except Exception as e:
+            print(f"❌ Vinted update_listing error: {e}")
+            return False
+
+    def delist(self, listing_id: str) -> bool:
+        """Delete Vinted listing."""
+        try:
+            headers = {"Authorization": f"Bearer {self.auth_token}"}
+
+            response = self.session.delete(
+                f"{self.base_url}/items/{listing_id}",
+                headers=headers,
+                timeout=10
+            )
+
+            if response.status_code in [200, 204]:
+                print(f"✓ Vinted: Delisted {listing_id}")
+                return True
+            else:
+                print(f"❌ Vinted: Delist failed (status {response.status_code})")
+                return False
+
+        except Exception as e:
+            print(f"❌ Vinted delist error: {e}")
+            return False
+
+    def get_sales(self, since: datetime) -> List[Sale]:
+        """Fetch Vinted sales since timestamp."""
+        try:
+            headers = {"Authorization": f"Bearer {self.auth_token}"}
+
+            response = self.session.get(
+                f"{self.base_url}/transactions",
+                headers=headers,
+                params={"status": "completed", "limit": 100},
+                timeout=10
+            )
+
+            if response.status_code != 200:
+                print(f"⚠️ Vinted: Failed to fetch sales (status {response.status_code})")
+                return []
+
+            sales = []
+            data = response.json()
+
+            for tx in data.get("transactions", []):
+                created_at = datetime.fromisoformat(tx.get("created_at", "").replace("Z", "+00:00"))
+                if created_at > since:
+                    sales.append(Sale(
+                        id=str(tx["id"]),
+                        platform="vinted",
+                        listing_id=str(tx.get("item_id")),
+                        product_id=str(tx.get("item_id")),
+                        price=float(tx.get("price", 0)),
+                        quantity=1,
+                        buyer=tx.get("buyer", {}).get("login", "unknown"),
+                        sold_at=created_at
+                    ))
+
+            print(f"📊 Vinted: Found {len(sales)} sales")
+            return sales
+
+        except Exception as e:
+            print(f"❌ Vinted get_sales error: {e}")
+            return []
+
+    def get_inventory(self) -> List[Listing]:
+        """Fetch all Vinted listings."""
+        try:
+            headers = {"Authorization": f"Bearer {self.auth_token}"}
+
+            response = self.session.get(
+                f"{self.base_url}/items",
+                headers=headers,
+                params={"status": "active", "limit": 100},
+                timeout=10
+            )
+
+            if response.status_code != 200:
+                print(f"⚠️ Vinted: Failed to fetch listings (status {response.status_code})")
+                return []
+
+            listings = []
+            data = response.json()
+
+            for item in data.get("items", []):
+                listings.append(Listing(
+                    id=str(item["id"]),
+                    platform="vinted",
+                    title=item.get("title", ""),
+                    description=item.get("description", ""),
+                    price=float(item.get("price", 0)),
+                    quantity=1 if item.get("status") == "active" else 0,
+                    images=[p.get("url") for p in item.get("photos", [])],
+                    status="active" if item.get("status") == "active" else "inactive",
+                    url=f"https://www.vinted.com/items/{item['id']}",
+                    created_at=datetime.fromisoformat(item.get("created_at", "").replace("Z", "+00:00")),
+                    updated_at=datetime.fromisoformat(item.get("updated_at", "").replace("Z", "+00:00"))
+                ))
+
+            print(f"📋 Vinted: Found {len(listings)} listings")
+            return listings
+
+        except Exception as e:
+            print(f"❌ Vinted get_inventory error: {e}")
+            return []
+
+
+class VestiaireConnector(PlatformConnector):
+    """Vestiaire Collective API integration (luxury resale)."""
+
+    def __init__(self):
+        super().__init__("vestiaire")
+        self.base_url = "https://api.vestiaire.com/v2"
+
+    def authenticate(self) -> bool:
+        """Verify Vestiaire Collective API token is valid."""
+        if not self.auth_token:
+            print("⚠️ Vestiaire: No API token configured (VESTIAIRE_TOKEN)")
+            return False
+
+        try:
+            headers = {"Authorization": f"Bearer {self.auth_token}"}
+            response = self.session.get(
+                f"{self.base_url}/me",
+                headers=headers,
+                timeout=5
+            )
+            return response.status_code == 200
+        except Exception as e:
+            print(f"⚠️ Vestiaire auth failed: {e}")
+            return False
+
+    def create_listing(self, title: str, description: str, price: float, images: List[str]) -> Optional[Listing]:
+        """Create a Vestiaire Collective listing."""
+        try:
+            headers = {
+                "Authorization": f"Bearer {self.auth_token}",
+                "Content-Type": "application/json"
+            }
+
+            payload = {
+                "product": {
+                    "name": title,
+                    "description": description,
+                    "price": int(price * 100),
+                    "currency": "USD",
+                    "condition": "Never Worn",
+                    "photos": [{"url": img} for img in images[:10]]
+                }
+            }
+
+            response = self.session.post(
+                f"{self.base_url}/products",
+                headers=headers,
+                json=payload,
+                timeout=10
+            )
+
+            if response.status_code in [200, 201]:
+                data = response.json()
+                product_id = data.get("product", {}).get("id")
+                print(f"✓ Vestiaire: Created listing {product_id}: {title}")
+
+                return Listing(
+                    id=str(product_id),
+                    platform="vestiaire",
+                    title=title,
+                    description=description,
+                    price=price,
+                    quantity=1,
+                    images=images,
+                    status="active",
+                    url=f"https://www.vestiaire.com/p/{product_id}",
+                    created_at=datetime.now(),
+                    updated_at=datetime.now()
+                )
+            else:
+                print(f"❌ Vestiaire: Failed to create listing (status {response.status_code})")
+                return None
+
+        except Exception as e:
+            print(f"❌ Vestiaire create_listing error: {e}")
+            return None
+
+    def update_listing(self, listing_id: str, **kwargs) -> bool:
+        """Update Vestiaire Collective listing."""
+        try:
+            headers = {
+                "Authorization": f"Bearer {self.auth_token}",
+                "Content-Type": "application/json"
+            }
+
+            payload = {"product": {}}
+
+            if "price" in kwargs:
+                payload["product"]["price"] = int(kwargs["price"] * 100)
+            if "description" in kwargs:
+                payload["product"]["description"] = kwargs["description"]
+
+            if len(payload["product"]) == 0:
+                return True
+
+            response = self.session.put(
+                f"{self.base_url}/products/{listing_id}",
+                headers=headers,
+                json=payload,
+                timeout=10
+            )
+
+            if response.status_code in [200, 204]:
+                print(f"✓ Vestiaire: Updated listing {listing_id}")
+                return True
+            else:
+                print(f"❌ Vestiaire: Update failed (status {response.status_code})")
+                return False
+
+        except Exception as e:
+            print(f"❌ Vestiaire update_listing error: {e}")
+            return False
+
+    def delist(self, listing_id: str) -> bool:
+        """Delete Vestiaire Collective listing."""
+        try:
+            headers = {"Authorization": f"Bearer {self.auth_token}"}
+
+            response = self.session.delete(
+                f"{self.base_url}/products/{listing_id}",
+                headers=headers,
+                timeout=10
+            )
+
+            if response.status_code in [200, 204]:
+                print(f"✓ Vestiaire: Delisted {listing_id}")
+                return True
+            else:
+                print(f"❌ Vestiaire: Delist failed (status {response.status_code})")
+                return False
+
+        except Exception as e:
+            print(f"❌ Vestiaire delist error: {e}")
+            return False
+
+    def get_sales(self, since: datetime) -> List[Sale]:
+        """Fetch Vestiaire Collective sales since timestamp."""
+        try:
+            headers = {"Authorization": f"Bearer {self.auth_token}"}
+
+            response = self.session.get(
+                f"{self.base_url}/orders",
+                headers=headers,
+                params={"status": "completed", "limit": 100},
+                timeout=10
+            )
+
+            if response.status_code != 200:
+                print(f"⚠️ Vestiaire: Failed to fetch sales (status {response.status_code})")
+                return []
+
+            sales = []
+            data = response.json()
+
+            for order in data.get("orders", []):
+                created_at = datetime.fromisoformat(order.get("created_at", "").replace("Z", "+00:00"))
+                if created_at > since:
+                    sales.append(Sale(
+                        id=str(order["id"]),
+                        platform="vestiaire",
+                        listing_id=str(order.get("product_id")),
+                        product_id=str(order.get("product_id")),
+                        price=order.get("price", 0) / 100,
+                        quantity=1,
+                        buyer=order.get("buyer", {}).get("username", "unknown"),
+                        sold_at=created_at
+                    ))
+
+            print(f"📊 Vestiaire: Found {len(sales)} sales")
+            return sales
+
+        except Exception as e:
+            print(f"❌ Vestiaire get_sales error: {e}")
+            return []
+
+    def get_inventory(self) -> List[Listing]:
+        """Fetch all Vestiaire Collective listings."""
+        try:
+            headers = {"Authorization": f"Bearer {self.auth_token}"}
+
+            response = self.session.get(
+                f"{self.base_url}/products",
+                headers=headers,
+                params={"status": "active", "limit": 100},
+                timeout=10
+            )
+
+            if response.status_code != 200:
+                print(f"⚠️ Vestiaire: Failed to fetch listings (status {response.status_code})")
+                return []
+
+            listings = []
+            data = response.json()
+
+            for product in data.get("products", []):
+                listings.append(Listing(
+                    id=str(product["id"]),
+                    platform="vestiaire",
+                    title=product.get("name", ""),
+                    description=product.get("description", ""),
+                    price=product.get("price", 0) / 100,
+                    quantity=1 if product.get("status") == "active" else 0,
+                    images=[p.get("url") for p in product.get("photos", [])],
+                    status="active" if product.get("status") == "active" else "inactive",
+                    url=f"https://www.vestiaire.com/p/{product['id']}",
+                    created_at=datetime.fromisoformat(product.get("created_at", "").replace("Z", "+00:00")),
+                    updated_at=datetime.fromisoformat(product.get("updated_at", "").replace("Z", "+00:00"))
+                ))
+
+            print(f"📋 Vestiaire: Found {len(listings)} listings")
+            return listings
+
+        except Exception as e:
+            print(f"❌ Vestiaire get_inventory error: {e}")
+            return []
+
+
 # Registry of all platform connectors
 PLATFORMS = {
     "etsy": EtsyConnector,
     "depop": DepopConnector,
     "shopify": ShopifyConnector,
     "woocommerce": WooCommerceConnector,
+    "grailed": GrailedConnector,
+    "vinted": VintedConnector,
+    "vestiaire": VestiaireConnector,
     "mercari": MercariConnector,
     "poshmark": PoshmarkConnector,
 }

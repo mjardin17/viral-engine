@@ -27,6 +27,7 @@ Josh Jardin (justifiedmagnificent@gmail.com). Building a multi-channel AI conten
 
 ## Standing Rules (NEVER BREAK)
 - **Always start every response with "Josh"**
+- **LAUNCH COUNCIL + 2 AGENTS AT SESSION START** — Before any work: Dispatch 2 agents in parallel for multi-perspective analysis (e.g., code-reviewer + security-reviewer, or architect + planner). Council monitors quality in background. This enables safe async work and faster error detection.
 - **COUNCIL BOTS ON EVERY TASK** — After any render, build, or substantial change, run council_run.bat. Bots heal breaks before they cascade. This is non-negotiable.
 - **No scene reuse** — ever, within or across episodes
 - **4 photos per scene** — every scene, no exceptions

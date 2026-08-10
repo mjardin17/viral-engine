@@ -26,24 +26,26 @@ async def get_tokens():
         # ETSY
         print("\n📱 ETSY TOKEN")
         print("─"*70)
-        print("→ Opening Etsy Developers...")
-        await page.goto("https://www.etsy.com/developers/", wait_until="domcontentloaded")
-        await asyncio.sleep(2)
+        etsy_ready = input("Is your Etsy app approved and ready? (y/n): ").strip().lower()
+        if etsy_ready == "y":
+            print("→ Opening Etsy Developers...")
+            await page.goto("https://www.etsy.com/developers/", wait_until="domcontentloaded")
+            await asyncio.sleep(2)
 
-        print("→ Follow these steps:")
-        print("  1. Click 'Get Started'")
-        print("  2. Create a new app (name: 'Inventory Sync')")
-        print("  3. Go to 'Keys' tab")
-        print("  4. Copy the OAuth Token")
-        print("\nWaiting 60 seconds for you to get the token...\n")
-        await asyncio.sleep(60)
+            print("→ Follow these steps:")
+            print("  1. Go to 'Keys' tab")
+            print("  2. Copy the OAuth Token")
+            print("\nWaiting 60 seconds for you to get the token...\n")
+            await asyncio.sleep(60)
 
-        token = input("Paste your Etsy OAuth Token here: ").strip()
-        if token:
-            tokens["ETSY_TOKEN"] = token
-            print("✓ Etsy token saved\n")
+            token = input("Paste your Etsy OAuth Token here: ").strip()
+            if token:
+                tokens["ETSY_TOKEN"] = token
+                print("✓ Etsy token saved\n")
+            else:
+                print("⊘ Etsy token skipped\n")
         else:
-            print("⊘ Etsy token skipped\n")
+            print("⊘ Etsy skipped (waiting for approval)\n")
 
         # PINTEREST
         print("📱 PINTEREST TOKEN")

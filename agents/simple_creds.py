@@ -32,7 +32,12 @@ for platform, display_name, ptype in PLATFORMS:
     print(f"▶ {display_name}")
 
     if ptype == "api":
-        # API platforms - just ask for token
+        # API platforms - optional tokens
+        have_token = input(f"  Have a token? (y/n): ").strip().lower()
+        if have_token != "y":
+            print(f"  (skipped - add token to .env later if needed)\n")
+            continue
+
         token = input(f"  API Token/Key: ").strip()
         if not token:
             print(f"  (skipped)\n")

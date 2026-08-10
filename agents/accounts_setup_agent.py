@@ -15,6 +15,7 @@ def main():
     accounts = []
 
     platforms = [
+        ("whatnot", "Whatnot", "username"),
         ("poshmark", "Poshmark", "username"),
         ("mercari", "Mercari", "email"),
         ("depop", "Depop", "username"),

@@ -2107,10 +2107,19 @@ class RealRealConnector(PlatformConnector):
             return []
 
 
+# Try importing browser connectors
+try:
+    from lib.browser_connectors import BROWSER_CONNECTORS
+    _browser_available = True
+except ImportError:
+    BROWSER_CONNECTORS = {}
+    _browser_available = False
+
 # Registry of all platform connectors
+# Priority: Browser automation (no-API platforms) > REST APIs > Stubs
 PLATFORMS = {
+    # REST API connectors (full automation with API keys)
     "etsy": EtsyConnector,
-    "depop": DepopConnector,
     "shopify": ShopifyConnector,
     "woocommerce": WooCommerceConnector,
     "grailed": GrailedConnector,
@@ -2121,9 +2130,21 @@ PLATFORMS = {
     "mercadolibre": MercadoLibreConnector,
     "reverb": ReverbConnector,
     "realreal": RealRealConnector,
-    "mercari": MercariConnector,
-    "poshmark": PoshmarkConnector,
 }
+
+# Add browser automation connectors if Playwright is available
+if _browser_available:
+    PLATFORMS.update(BROWSER_CONNECTORS)
+    # Override stubs with browser versions
+    PLATFORMS["depop"] = BROWSER_CONNECTORS.get("depop_web", DepopConnector)
+    PLATFORMS["mercari"] = BROWSER_CONNECTORS.get("mercari_web", MercariConnector)
+    PLATFORMS["poshmark"] = BROWSER_CONNECTORS.get("poshmark_web", PoshmarkConnector)
+    PLATFORMS["whatnot"] = BROWSER_CONNECTORS.get("whatnot_web")
+else:
+    # Fallback to stubs if Playwright not available
+    PLATFORMS["depop"] = DepopConnector
+    PLATFORMS["mercari"] = MercariConnector
+    PLATFORMS["poshmark"] = PoshmarkConnector
 
 def get_all_connectors() -> Dict[str, PlatformConnector]:
     """Initialize all platform connectors."""

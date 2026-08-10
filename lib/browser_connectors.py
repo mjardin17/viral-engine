@@ -427,10 +427,126 @@ class FacebookMarketplaceBrowserConnector(BrowserConnector):
         return []
 
 
+class WhatnotConnector(BrowserConnector):
+    """Whatnot browser automation connector."""
+
+    def __init__(self):
+        super().__init__("whatnot")
+
+    def authenticate(self) -> bool:
+        if not self.auth_token:
+            print("⚠️ Whatnot: No credentials configured (WHATNOT_USERNAME, WHATNOT_PASSWORD)")
+            return False
+        try:
+            username, password = self.auth_token.split(":", 1)
+            return self._login(
+                username, password,
+                "https://www.whatnot.com/login",
+                "input[name='username']",
+                "input[name='password']",
+                "button[type='submit']"
+            )
+        except:
+            return False
+
+    def create_listing(self, title: str, description: str, price: float, images: List[str]) -> Optional[Listing]:
+        try:
+            self._start_browser()
+            self.page.goto("https://www.whatnot.com/selling/create-listing", wait_until="networkidle")
+
+            # Fill form
+            self.page.fill("input[name='title']", title[:200])
+            self.page.fill("textarea[name='description']", description[:5000])
+            self.page.fill("input[name='price']", str(price))
+
+            # Submit
+            self.page.click("button[type='submit']")
+            self.page.wait_for_load_state("networkidle")
+
+            listing_id = self.page.url.split("/")[-1]
+            print(f"✓ Whatnot: Created {listing_id}")
+            return Listing(listing_id, "whatnot", title, description, price, 1, images, "active", self.page.url, datetime.now(), datetime.now())
+        except Exception as e:
+            print(f"❌ Whatnot error: {e}")
+            return None
+
+    def update_listing(self, listing_id: str, **kwargs) -> bool:
+        try:
+            self._start_browser()
+            self.page.goto(f"https://www.whatnot.com/selling/edit/{listing_id}", wait_until="networkidle")
+
+            if "price" in kwargs:
+                self.page.fill("input[name='price']", str(kwargs["price"]))
+
+            self.page.click("button[type='submit']")
+            return True
+        except:
+            return False
+
+    def delist(self, listing_id: str) -> bool:
+        try:
+            self._start_browser()
+            self.page.goto(f"https://www.whatnot.com/item/{listing_id}", wait_until="networkidle")
+            self.page.click("button:has-text('Delete Listing')")
+            return True
+        except:
+            return False
+
+    def get_sales(self, since: datetime) -> List[Sale]:
+        try:
+            self._start_browser()
+            self.page.goto("https://www.whatnot.com/selling/sales", wait_until="networkidle")
+
+            sales = []
+            sale_items = self.page.query_selector_all(".sale-item")
+            for item in sale_items:
+                sales.append(Sale(
+                    str(item.get_attribute("data-id")),
+                    "whatnot",
+                    str(item.get_attribute("data-listing-id")),
+                    str(item.get_attribute("data-listing-id")),
+                    float(item.text_content().split("$")[1]),
+                    1,
+                    "whatnot_buyer",
+                    datetime.now()
+                ))
+            print(f"📊 Whatnot: Found {len(sales)} sales")
+            return sales
+        except:
+            return []
+
+    def get_inventory(self) -> List[Listing]:
+        try:
+            self._start_browser()
+            self.page.goto("https://www.whatnot.com/selling/inventory", wait_until="networkidle")
+
+            listings = []
+            listing_items = self.page.query_selector_all(".listing-item")
+            for item in listing_items:
+                listings.append(Listing(
+                    str(item.get_attribute("data-id")),
+                    "whatnot",
+                    item.query_selector(".title").text_content(),
+                    "",
+                    float(item.query_selector(".price").text_content().replace("$", "")),
+                    1,
+                    [],
+                    "active",
+                    f"https://www.whatnot.com/item/{item.get_attribute('data-id')}",
+                    datetime.now(),
+                    datetime.now()
+                ))
+            print(f"📋 Whatnot: Found {len(listings)} listings")
+            return listings
+        except:
+            return []
+
+
 # Browser connector registry
 BROWSER_CONNECTORS = {
     "poshmark_web": PoshmarkConnector,
     "mercari_web": MercariConnector,
     "depop_web": DepopConnector,
     "facebook_web": FacebookMarketplaceBrowserConnector,
+    "whatnot_web": WhatnotConnector,
 }

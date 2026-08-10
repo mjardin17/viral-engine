@@ -20,6 +20,13 @@ class LoginCoordinator:
     """Coordinates logins across all platforms."""
 
     LOGIN_CONFIGS = {
+        "whatnot": {
+            "url": "https://www.whatnot.com/login",
+            "username_selector": "input[name='username']",
+            "password_selector": "input[name='password']",
+            "submit_selector": "button[type='submit']",
+            "success_check": "https://www.whatnot.com/",
+        },
         "poshmark": {
             "url": "https://poshmark.com/login",
             "username_selector": "input[name='username']",

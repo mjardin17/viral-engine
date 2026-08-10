@@ -3,18 +3,19 @@
 
 from pathlib import Path
 
+# Platform types: "browser" = username+password, "api" = token only
 PLATFORMS = [
-    ("whatnot", "Whatnot"),
-    ("mercari", "Mercari"),
-    ("facebook", "Facebook Marketplace"),
-    ("etsy", "Etsy"),
-    ("pinterest", "Pinterest"),
+    ("whatnot", "Whatnot", "browser"),
+    ("mercari", "Mercari", "browser"),
+    ("facebook", "Facebook Marketplace", "browser"),
+    ("etsy", "Etsy", "api"),
+    ("pinterest", "Pinterest", "api"),
 ]
 
 print("\n" + "="*70)
-print("CREDENTIAL SETUP - SIMPLE")
+print("CREDENTIAL SETUP")
 print("="*70)
-print("\nJust answer the prompts. Press Enter to skip a platform.\n")
+print("\nPress Enter to skip any platform.\n")
 
 creds = {}
 
@@ -27,35 +28,46 @@ if env_file.exists():
                 k, v = line.strip().split("=", 1)
                 creds[k.strip()] = v.strip()
 
-for platform, display_name in PLATFORMS:
+for platform, display_name, ptype in PLATFORMS:
     print(f"▶ {display_name}")
 
-    username = input(f"  Username/Email: ").strip()
-    if not username:
-        print(f"  (skipped)\n")
-        continue
+    if ptype == "api":
+        # API platforms - just ask for token
+        token = input(f"  API Token/Key: ").strip()
+        if not token:
+            print(f"  (skipped)\n")
+            continue
 
-    password = input(f"  Password: ").strip()
-    if not password:
-        print(f"  (skipped)\n")
-        continue
+        if platform == "etsy":
+            creds["ETSY_TOKEN"] = token
+        elif platform == "pinterest":
+            creds["PINTEREST_TOKEN"] = token
 
-    # Store credentials
-    if platform == "etsy":
-        creds["ETSY_TOKEN"] = username
-    elif platform == "whatnot":
-        creds["WHATNOT_USERNAME"] = username
-        creds["WHATNOT_PASSWORD"] = password
-    elif platform == "mercari":
-        creds["MERCARI_EMAIL"] = username
-        creds["MERCARI_PASSWORD"] = password
-    elif platform == "facebook":
-        creds["FACEBOOK_EMAIL"] = username
-        creds["FACEBOOK_PASSWORD"] = password
-    elif platform == "pinterest":
-        creds["PINTEREST_TOKEN"] = username
+        print(f"  ✓ Saved\n")
 
-    print(f"  ✓ Saved\n")
+    else:  # browser
+        # Browser platforms - ask for username and password
+        username = input(f"  Username/Email: ").strip()
+        if not username:
+            print(f"  (skipped)\n")
+            continue
+
+        password = input(f"  Password: ").strip()
+        if not password:
+            print(f"  (skipped)\n")
+            continue
+
+        if platform == "whatnot":
+            creds["WHATNOT_USERNAME"] = username
+            creds["WHATNOT_PASSWORD"] = password
+        elif platform == "mercari":
+            creds["MERCARI_EMAIL"] = username
+            creds["MERCARI_PASSWORD"] = password
+        elif platform == "facebook":
+            creds["FACEBOOK_EMAIL"] = username
+            creds["FACEBOOK_PASSWORD"] = password
+
+        print(f"  ✓ Saved\n")
 
 # Save to .env
 if creds:

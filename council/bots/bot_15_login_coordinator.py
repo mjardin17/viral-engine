@@ -102,41 +102,78 @@ class LoginCoordinator:
 
         try:
             async with async_playwright() as p:
-                browser = await p.chromium.launch(headless=True)
-                page = await browser.new_page()
+                # Launch with longer timeout, visible browser (no headless), and user agent
+                browser = await p.chromium.launch(
+                    headless=False,  # Show browser window so we can see what's happening
+                    args=["--disable-blink-features=AutomationControlled"]
+                )
+                context = await browser.new_context(
+                    user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+                )
+                page = await context.new_page()
 
                 # Go to login page
                 print(f"  → Navigating to {config['url']}...")
-                await page.goto(config["url"], wait_until="networkidle", timeout=30000)
+                try:
+                    await page.goto(config["url"], wait_until="domcontentloaded", timeout=60000)
+                except:
+                    await page.goto(config["url"], timeout=60000)
+
+                await asyncio.sleep(2)  # Wait for dynamic content
 
                 # Fill username
                 print(f"  → Entering credentials for {username}...")
-                await page.fill(config["username_selector"], username)
-                await asyncio.sleep(0.3)
+                try:
+                    await page.fill(config["username_selector"], username, timeout=10000)
+                except Exception as e:
+                    print(f"     ⚠️ Could not find username field, trying alternative approach...")
+                    try:
+                        await page.type(config["username_selector"], username)
+                    except:
+                        pass
+
+                await asyncio.sleep(1)
 
                 # Fill password
-                await page.fill(config["password_selector"], password)
-                await asyncio.sleep(0.3)
+                try:
+                    await page.fill(config["password_selector"], password, timeout=10000)
+                except Exception as e:
+                    print(f"     ⚠️ Could not find password field")
+                    try:
+                        await page.type(config["password_selector"], password)
+                    except:
+                        pass
+
+                await asyncio.sleep(1)
 
                 # Submit
                 print(f"  → Submitting login...")
-                await page.click(config["submit_selector"])
-
-                # Wait for navigation
-                print(f"  → Waiting for login to complete...")
-                await asyncio.sleep(2)
                 try:
-                    await page.wait_for_load_state("networkidle", timeout=10000)
+                    await page.click(config["submit_selector"], timeout=5000)
                 except:
-                    pass  # Not all sites trigger networkidle
+                    print(f"     ⚠️ Could not click submit button")
+
+                # Wait for navigation - be lenient
+                print(f"  → Waiting for login to complete (this may take a minute)...")
+                await asyncio.sleep(3)
+
+                try:
+                    await page.wait_for_load_state("networkidle", timeout=30000)
+                except:
+                    try:
+                        await page.wait_for_load_state("domcontentloaded", timeout=30000)
+                    except:
+                        await asyncio.sleep(3)
 
                 # Check for success
                 current_url = page.url
+                print(f"     Current URL: {current_url}")
+
                 if config["success_check"] in current_url:
                     print(f"  ✓ Successfully logged in to {platform}")
 
                     # Save cookies/session
-                    cookies = await page.context.cookies()
+                    cookies = await context.cookies()
                     session_file = self.session_dir / f"{platform}_{username}.json"
                     with open(session_file, "w") as f:
                         json.dump(cookies, f)
@@ -151,7 +188,7 @@ class LoginCoordinator:
                         print(f"  ⚠️ MFA required - check your {platform} account for verification")
                         self.results["mfa_required"].append((platform, username))
                     else:
-                        print(f"  ❌ Login failed - check credentials")
+                        print(f"  ❌ Login failed - verify credentials are correct")
                         self.results["failed"].append((platform, username, f"Login failed or invalid credentials"))
 
                     await browser.close()

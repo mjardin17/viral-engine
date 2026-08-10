@@ -4,12 +4,13 @@
 import json
 import csv
 import time
+import asyncio
 from pathlib import Path
 from datetime import datetime
 from typing import Dict, List, Optional
 
 try:
-    from playwright.sync_api import sync_playwright
+    from playwright.async_api import async_playwright
 except ImportError:
     print("❌ Playwright not installed. Run: INSTALL_PLAYWRIGHT.bat")
     exit(1)
@@ -87,8 +88,8 @@ class LoginCoordinator:
         print("❌ No accounts.csv or accounts.json found")
         return []
 
-    def login(self, platform: str, username: str, password: str) -> bool:
-        """Log in to a platform and save session."""
+    async def login_async(self, platform: str, username: str, password: str) -> bool:
+        """Log in to a platform and save session (async)."""
         print(f"\n{'─'*70}")
         print(f"🔐 Logging in to {platform.upper()}")
         print(f"{'─'*70}")
@@ -100,68 +101,70 @@ class LoginCoordinator:
             return False
 
         try:
-            playwright = sync_playwright().start()
-            browser = playwright.chromium.launch(headless=True)
-            page = browser.new_page()
+            async with async_playwright() as p:
+                browser = await p.chromium.launch(headless=True)
+                page = await browser.new_page()
 
-            # Go to login page
-            print(f"  → Navigating to {config['url']}...")
-            page.goto(config["url"], wait_until="networkidle", timeout=30000)
+                # Go to login page
+                print(f"  → Navigating to {config['url']}...")
+                await page.goto(config["url"], wait_until="networkidle", timeout=30000)
 
-            # Fill username
-            print(f"  → Entering credentials for {username}...")
-            page.fill(config["username_selector"], username, timeout=5000)
-            time.sleep(0.5)
+                # Fill username
+                print(f"  → Entering credentials for {username}...")
+                await page.fill(config["username_selector"], username)
+                await asyncio.sleep(0.3)
 
-            # Fill password
-            page.fill(config["password_selector"], password, timeout=5000)
-            time.sleep(0.5)
+                # Fill password
+                await page.fill(config["password_selector"], password)
+                await asyncio.sleep(0.3)
 
-            # Submit
-            print(f"  → Submitting login...")
-            page.click(config["submit_selector"], timeout=5000)
+                # Submit
+                print(f"  → Submitting login...")
+                await page.click(config["submit_selector"])
 
-            # Wait for navigation
-            print(f"  → Waiting for login to complete...")
-            page.wait_for_load_state("networkidle", timeout=30000)
+                # Wait for navigation
+                print(f"  → Waiting for login to complete...")
+                await asyncio.sleep(2)
+                try:
+                    await page.wait_for_load_state("networkidle", timeout=10000)
+                except:
+                    pass  # Not all sites trigger networkidle
 
-            # Check for success
-            current_url = page.url
-            if config["success_check"] in current_url:
-                print(f"  ✓ Successfully logged in to {platform}")
+                # Check for success
+                current_url = page.url
+                if config["success_check"] in current_url:
+                    print(f"  ✓ Successfully logged in to {platform}")
 
-                # Save cookies/session
-                cookies = page.context.cookies()
-                session_file = self.session_dir / f"{platform}_{username}.json"
-                with open(session_file, "w") as f:
-                    json.dump(cookies, f)
-                print(f"  ✓ Session saved to {session_file}")
+                    # Save cookies/session
+                    cookies = await page.context.cookies()
+                    session_file = self.session_dir / f"{platform}_{username}.json"
+                    with open(session_file, "w") as f:
+                        json.dump(cookies, f)
+                    print(f"  ✓ Session saved to {session_file}")
 
-                self.results["successful"].append((platform, username))
-                browser.close()
-                playwright.stop()
-                return True
-            else:
-                # Check for MFA
-                if "verify" in current_url or "2fa" in current_url or "mfa" in current_url:
-                    print(f"  ⚠️ MFA required - manual approval needed at {current_url}")
-                    print(f"  → Keeping browser open for manual MFA entry...")
-                    print(f"  → Close browser window when done")
-                    browser.close()
-                    playwright.stop()
-                    self.results["mfa_required"].append((platform, username))
-                    return False
+                    self.results["successful"].append((platform, username))
+                    await browser.close()
+                    return True
                 else:
-                    print(f"  ❌ Login failed - unexpected URL: {current_url}")
-                    self.results["failed"].append((platform, username, f"Unexpected URL: {current_url}"))
-                    browser.close()
-                    playwright.stop()
+                    # Check for MFA
+                    if "verify" in current_url or "2fa" in current_url or "mfa" in current_url:
+                        print(f"  ⚠️ MFA required - check your {platform} account for verification")
+                        self.results["mfa_required"].append((platform, username))
+                    else:
+                        print(f"  ❌ Login failed - check credentials")
+                        self.results["failed"].append((platform, username, f"Login failed or invalid credentials"))
+
+                    await browser.close()
                     return False
 
         except Exception as e:
             print(f"  ❌ Error: {str(e)}")
             self.results["failed"].append((platform, username, str(e)))
             return False
+
+    def login(self, platform: str, username: str, password: str) -> bool:
+        """Log in to a platform (sync wrapper)."""
+        return asyncio.run(self.login_async(platform, username, password))
 
     def run_all(self):
         """Log in to all accounts."""

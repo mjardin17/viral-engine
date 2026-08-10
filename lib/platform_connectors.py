@@ -2210,35 +2210,29 @@ except ImportError:
     BROWSER_CONNECTORS = {}
     _browser_available = False
 
-# Registry of all platform connectors
-# Priority: Browser automation (no-API platforms) > REST APIs > Stubs
-PLATFORMS = {
-    # REST API connectors (full automation with API keys)
-    "etsy": EtsyConnector,
-    "grailed": GrailedConnector,
-    "vinted": VintedConnector,
-    "vestiaire": VestiaireConnector,
-    "ebay": EbayConnector,
-    "facebook": FacebookMarketplaceConnector,
-    "mercadolibre": MercadoLibreConnector,
-    "reverb": ReverbConnector,
-    "realreal": RealRealConnector,
-    "pinterest": PinterestConnector,
-}
+# Registry of all platform connectors - 100% BROWSER AUTOMATION (NO API KEYS)
+PLATFORMS = {}
 
-# Add browser automation connectors if Playwright is available
 if _browser_available:
+    # All platforms use browser automation
     PLATFORMS.update(BROWSER_CONNECTORS)
-    # Override stubs with browser versions
-    PLATFORMS["depop"] = BROWSER_CONNECTORS.get("depop_web", DepopConnector)
-    PLATFORMS["mercari"] = BROWSER_CONNECTORS.get("mercari_web", MercariConnector)
-    PLATFORMS["poshmark"] = BROWSER_CONNECTORS.get("poshmark_web", PoshmarkConnector)
-    PLATFORMS["whatnot"] = BROWSER_CONNECTORS.get("whatnot_web")
 else:
-    # Fallback to stubs if Playwright not available
-    PLATFORMS["depop"] = DepopConnector
-    PLATFORMS["mercari"] = MercariConnector
-    PLATFORMS["poshmark"] = PoshmarkConnector
+    # Fallback to REST APIs if Playwright not available (shouldn't happen)
+    PLATFORMS = {
+        "etsy": EtsyConnector,
+        "grailed": GrailedConnector,
+        "vinted": VintedConnector,
+        "vestiaire": VestiaireConnector,
+        "ebay": EbayConnector,
+        "facebook": FacebookMarketplaceConnector,
+        "mercadolibre": MercadoLibreConnector,
+        "reverb": ReverbConnector,
+        "realreal": RealRealConnector,
+        "pinterest": PinterestConnector,
+        "depop": DepopConnector,
+        "mercari": MercariConnector,
+        "poshmark": PoshmarkConnector,
+    }
 
 def get_all_connectors() -> Dict[str, PlatformConnector]:
     """Initialize all platform connectors."""

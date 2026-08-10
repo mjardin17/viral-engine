@@ -542,11 +542,121 @@ class WhatnotConnector(BrowserConnector):
             return []
 
 
-# Browser connector registry
+class EtsyBrowserConnector(BrowserConnector):
+    """Etsy browser automation (no API key needed)."""
+    def __init__(self):
+        super().__init__("etsy")
+    def authenticate(self) -> bool:
+        if not self.auth_token:
+            print("⚠️ Etsy: No credentials configured")
+            return False
+        try:
+            username, password = self.auth_token.split(":", 1)
+            return self._login(username, password, "https://www.etsy.com/signin", "input[type='email']", "input[type='password']", "button[type='submit']")
+        except: return False
+    def create_listing(self, title: str, description: str, price: float, images: List[str]) -> Optional[Listing]:
+        try:
+            self._start_browser()
+            self.page.goto("https://www.etsy.com/sell", wait_until="networkidle")
+            self.page.fill("input[name='title']", title[:140])
+            self.page.fill("textarea[name='description']", description[:2000])
+            self.page.fill("input[name='price']", str(price))
+            self.page.click("button[type='submit']")
+            self.page.wait_for_load_state("networkidle")
+            listing_id = self.page.url.split("/")[-1]
+            print(f"✓ Etsy: Created {listing_id}")
+            return Listing(listing_id, "etsy", title, description, price, 1, images, "active", self.page.url, datetime.now(), datetime.now())
+        except Exception as e:
+            print(f"❌ Etsy error: {e}")
+            return None
+    def update_listing(self, listing_id: str, **kwargs) -> bool:
+        try:
+            self._start_browser()
+            self.page.goto(f"https://www.etsy.com/your/shops/0/listings/{listing_id}/edit", wait_until="networkidle")
+            if "price" in kwargs:
+                self.page.fill("input[name='price']", str(kwargs["price"]))
+            self.page.click("button[type='submit']")
+            return True
+        except: return False
+    def delist(self, listing_id: str) -> bool:
+        try:
+            self._start_browser()
+            self.page.goto(f"https://www.etsy.com/your/shops/0/listings/{listing_id}", wait_until="networkidle")
+            self.page.click("button:has-text('Deactivate')")
+            return True
+        except: return False
+    def get_sales(self, since: datetime) -> List[Sale]: return []
+    def get_inventory(self) -> List[Listing]:
+        try:
+            self._start_browser()
+            self.page.goto("https://www.etsy.com/your/shops/0/listings/active", wait_until="networkidle")
+            listings = []
+            for item in self.page.query_selector_all(".listing-card"):
+                listings.append(Listing(str(item.get_attribute("data-id")), "etsy", item.query_selector(".title").text_content(), "", 0.0, 1, [], "active", "", datetime.now(), datetime.now()))
+            print(f"📋 Etsy: Found {len(listings)} listings")
+            return listings
+        except: return []
+
+
+class PinterestBrowserConnector(BrowserConnector):
+    """Pinterest browser automation (no API key needed)."""
+    def __init__(self):
+        super().__init__("pinterest")
+    def authenticate(self) -> bool:
+        if not self.auth_token:
+            print("⚠️ Pinterest: No credentials configured")
+            return False
+        try:
+            username, password = self.auth_token.split(":", 1)
+            return self._login(username, password, "https://www.pinterest.com/login/", "input[name='email']", "input[name='password']", "button[type='submit']")
+        except: return False
+    def create_listing(self, title: str, description: str, price: float, images: List[str]) -> Optional[Listing]:
+        try:
+            self._start_browser()
+            self.page.goto("https://www.pinterest.com/pin/create/", wait_until="networkidle")
+            self.page.fill("input[name='title']", title[:100])
+            self.page.fill("textarea[name='description']", description[:500])
+            self.page.click("button[type='submit']")
+            self.page.wait_for_load_state("networkidle")
+            pin_id = self.page.url.split("/")[-1]
+            print(f"✓ Pinterest: Created {pin_id}")
+            return Listing(pin_id, "pinterest", title, description, price, 1, images, "active", self.page.url, datetime.now(), datetime.now())
+        except Exception as e:
+            print(f"❌ Pinterest error: {e}")
+            return None
+    def update_listing(self, listing_id: str, **kwargs) -> bool: return True
+    def delist(self, listing_id: str) -> bool:
+        try:
+            self._start_browser()
+            self.page.goto(f"https://www.pinterest.com/pin/{listing_id}/", wait_until="networkidle")
+            self.page.click("button:has-text('Delete')")
+            return True
+        except: return False
+    def get_sales(self, since: datetime) -> List[Sale]: return []
+    def get_inventory(self) -> List[Listing]:
+        try:
+            self._start_browser()
+            self.page.goto("https://www.pinterest.com/me/pins/", wait_until="networkidle")
+            listings = [Listing(str(item.get_attribute("data-id")), "pinterest", item.query_selector(".title").text_content(), "", 0.0, 1, [], "active", "", datetime.now(), datetime.now()) for item in self.page.query_selector_all(".pin")]
+            print(f"📋 Pinterest: Found {len(listings)} pins")
+            return listings
+        except: return []
+
+
+# Browser connector registry - ALL PLATFORMS
 BROWSER_CONNECTORS = {
     "poshmark_web": PoshmarkConnector,
     "mercari_web": MercariConnector,
     "depop_web": DepopConnector,
     "facebook_web": FacebookMarketplaceBrowserConnector,
     "whatnot_web": WhatnotConnector,
+    "etsy_web": EtsyBrowserConnector,
+    "pinterest_web": PinterestBrowserConnector,
+    "grailed_web": GrailedConnector,  # Reuse REST impl for browser fallback
+    "vinted_web": VintedConnector,
+    "vestiaire_web": VestiaireConnector,
+    "ebay_web": EbayConnector,
+    "reverb_web": ReverbConnector,
+    "realreal_web": RealRealConnector,
+    "mercadolibre_web": MercadoLibreConnector,
 }

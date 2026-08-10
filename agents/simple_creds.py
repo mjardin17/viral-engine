@@ -1,15 +1,24 @@
 #!/usr/bin/env python3
-"""Simple credential collector - just text prompts."""
+"""Simple credential collector - browser automation for ALL platforms."""
 
 from pathlib import Path
 
-# Platform types: "browser" = username+password, "api" = token only
+# ALL PLATFORMS - Browser automation only (username/password)
 PLATFORMS = [
-    ("whatnot", "Whatnot", "browser"),
-    ("mercari", "Mercari", "browser"),
-    ("facebook", "Facebook Marketplace", "browser"),
-    ("etsy", "Etsy", "api"),
-    ("pinterest", "Pinterest", "api"),
+    ("whatnot", "Whatnot"),
+    ("mercari", "Mercari"),
+    ("facebook", "Facebook Marketplace"),
+    ("etsy", "Etsy"),
+    ("pinterest", "Pinterest"),
+    ("grailed", "Grailed"),
+    ("vinted", "Vinted"),
+    ("vestiaire", "Vestiaire Collective"),
+    ("ebay", "eBay"),
+    ("reverb", "Reverb.com"),
+    ("realreal", "The RealReal"),
+    ("mercadolibre", "Mercado Libre"),
+    ("depop", "Depop"),
+    ("poshmark", "Poshmark"),
 ]
 
 print("\n" + "="*70)
@@ -28,51 +37,25 @@ if env_file.exists():
                 k, v = line.strip().split("=", 1)
                 creds[k.strip()] = v.strip()
 
-for platform, display_name, ptype in PLATFORMS:
+for platform, display_name in PLATFORMS:
     print(f"▶ {display_name}")
 
-    if ptype == "api":
-        # API platforms - optional tokens
-        have_token = input(f"  Have a token? (y/n): ").strip().lower()
-        if have_token != "y":
-            print(f"  (skipped - add token to .env later if needed)\n")
-            continue
+    username = input(f"  Username/Email: ").strip()
+    if not username:
+        print(f"  (skipped)\n")
+        continue
 
-        token = input(f"  API Token/Key: ").strip()
-        if not token:
-            print(f"  (skipped)\n")
-            continue
+    password = input(f"  Password: ").strip()
+    if not password:
+        print(f"  (skipped)\n")
+        continue
 
-        if platform == "etsy":
-            creds["ETSY_TOKEN"] = token
-        elif platform == "pinterest":
-            creds["PINTEREST_TOKEN"] = token
-
-        print(f"  ✓ Saved\n")
-
-    else:  # browser
-        # Browser platforms - ask for username and password
-        username = input(f"  Username/Email: ").strip()
-        if not username:
-            print(f"  (skipped)\n")
-            continue
-
-        password = input(f"  Password: ").strip()
-        if not password:
-            print(f"  (skipped)\n")
-            continue
-
-        if platform == "whatnot":
-            creds["WHATNOT_USERNAME"] = username
-            creds["WHATNOT_PASSWORD"] = password
-        elif platform == "mercari":
-            creds["MERCARI_EMAIL"] = username
-            creds["MERCARI_PASSWORD"] = password
-        elif platform == "facebook":
-            creds["FACEBOOK_EMAIL"] = username
-            creds["FACEBOOK_PASSWORD"] = password
-
-        print(f"  ✓ Saved\n")
+    # Store credentials for all platforms
+    key_user = f"{platform.upper()}_USERNAME"
+    key_pass = f"{platform.upper()}_PASSWORD"
+    creds[key_user] = username
+    creds[key_pass] = password
+    print(f"  ✓ Saved\n")
 
 # Save to .env
 if creds:

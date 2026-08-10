@@ -2031,6 +2031,101 @@ class ReverbConnector(PlatformConnector):
             return []
 
 
+class PinterestConnector(PlatformConnector):
+    """Pinterest REST API connector."""
+
+    def __init__(self):
+        super().__init__("pinterest")
+        self.base_url = "https://api.pinterest.com/v5"
+
+    def authenticate(self) -> bool:
+        if not self.auth_token:
+            print("⚠️ Pinterest: No API token configured (PINTEREST_TOKEN)")
+            return False
+        try:
+            headers = {"Authorization": f"Bearer {self.auth_token}"}
+            response = self.session.get(f"{self.base_url}/user_account", headers=headers, timeout=5)
+            return response.status_code == 200
+        except:
+            return False
+
+    def create_listing(self, title: str, description: str, price: float, images: List[str]) -> Optional[Listing]:
+        try:
+            headers = {
+                "Authorization": f"Bearer {self.auth_token}",
+                "Content-Type": "application/json"
+            }
+            payload = {
+                "title": title[:100],
+                "description": description[:500],
+                "image_url": images[0] if images else "",
+                "link": f"https://yourstore.com/product/{title.lower().replace(' ', '-')}",
+                "alt_text": title
+            }
+            response = self.session.post(f"{self.base_url}/pins", headers=headers, json=payload, timeout=10)
+            if response.status_code in [200, 201]:
+                pin_id = response.json().get("id")
+                print(f"✓ Pinterest: Created pin {pin_id}")
+                return Listing(str(pin_id), "pinterest", title, description, price, 1, images, "active", f"https://pinterest.com/pin/{pin_id}", datetime.now(), datetime.now())
+            return None
+        except Exception as e:
+            print(f"❌ Pinterest error: {e}")
+            return None
+
+    def update_listing(self, listing_id: str, **kwargs) -> bool:
+        try:
+            headers = {
+                "Authorization": f"Bearer {self.auth_token}",
+                "Content-Type": "application/json"
+            }
+            payload = {}
+            if "description" in kwargs:
+                payload["description"] = kwargs["description"][:500]
+            if not payload:
+                return True
+            response = self.session.patch(f"{self.base_url}/pins/{listing_id}", headers=headers, json=payload, timeout=10)
+            return response.status_code in [200, 204]
+        except:
+            return False
+
+    def delist(self, listing_id: str) -> bool:
+        try:
+            headers = {"Authorization": f"Bearer {self.auth_token}"}
+            response = self.session.delete(f"{self.base_url}/pins/{listing_id}", headers=headers, timeout=10)
+            return response.status_code in [200, 204]
+        except:
+            return False
+
+    def get_sales(self, since: datetime) -> List[Sale]:
+        return []
+
+    def get_inventory(self) -> List[Listing]:
+        try:
+            headers = {"Authorization": f"Bearer {self.auth_token}"}
+            response = self.session.get(f"{self.base_url}/pins", headers=headers, timeout=10)
+            if response.status_code != 200:
+                return []
+            listings = []
+            for pin in response.json().get("items", []):
+                listings.append(Listing(
+                    str(pin["id"]),
+                    "pinterest",
+                    pin.get("title", ""),
+                    pin.get("description", ""),
+                    0.0,
+                    1,
+                    [pin.get("image_url")] if pin.get("image_url") else [],
+                    "active",
+                    f"https://pinterest.com/pin/{pin['id']}",
+                    datetime.now(),
+                    datetime.now()
+                ))
+            print(f"📋 Pinterest: Found {len(listings)} pins")
+            return listings
+        except:
+            return []
+
+
 class RealRealConnector(PlatformConnector):
     """The RealReal API integration (luxury resale)."""
 
@@ -2130,6 +2225,7 @@ PLATFORMS = {
     "mercadolibre": MercadoLibreConnector,
     "reverb": ReverbConnector,
     "realreal": RealRealConnector,
+    "pinterest": PinterestConnector,
 }
 
 # Add browser automation connectors if Playwright is available

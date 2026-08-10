@@ -8,6 +8,7 @@ PLATFORMS = [
     ("mercari", "Mercari"),
     ("facebook", "Facebook Marketplace"),
     ("etsy", "Etsy"),
+    ("pinterest", "Pinterest"),
 ]
 
 print("\n" + "="*70)
@@ -51,6 +52,8 @@ for platform, display_name in PLATFORMS:
     elif platform == "facebook":
         creds["FACEBOOK_EMAIL"] = username
         creds["FACEBOOK_PASSWORD"] = password
+    elif platform == "pinterest":
+        creds["PINTEREST_TOKEN"] = username
 
     print(f"  ✓ Saved\n")
 

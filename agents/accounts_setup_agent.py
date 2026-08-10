@@ -16,9 +16,7 @@ def main():
 
     platforms = [
         ("whatnot", "Whatnot", "username"),
-        ("poshmark", "Poshmark", "username"),
         ("mercari", "Mercari", "email"),
-        ("depop", "Depop", "username"),
         ("facebook", "Facebook Marketplace", "email"),
         ("etsy", "Etsy", "email"),
     ]

@@ -27,26 +27,12 @@ class LoginCoordinator:
             "submit_selector": "button[type='submit']",
             "success_check": "https://www.whatnot.com/",
         },
-        "poshmark": {
-            "url": "https://poshmark.com/login",
-            "username_selector": "input[name='username']",
-            "password_selector": "input[name='password']",
-            "submit_selector": "button[type='submit']",
-            "success_check": "https://poshmark.com/",
-        },
         "mercari": {
             "url": "https://www.mercariapp.com/auth/login",
             "username_selector": "input[type='email']",
             "password_selector": "input[type='password']",
             "submit_selector": "button[type='submit']",
             "success_check": "https://www.mercariapp.com/",
-        },
-        "depop": {
-            "url": "https://www.depop.com/auth/login",
-            "username_selector": "input[name='username']",
-            "password_selector": "input[name='password']",
-            "submit_selector": "button[type='submit']",
-            "success_check": "https://www.depop.com/",
         },
         "facebook": {
             "url": "https://www.facebook.com/login",

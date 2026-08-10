@@ -2215,8 +2215,6 @@ except ImportError:
 PLATFORMS = {
     # REST API connectors (full automation with API keys)
     "etsy": EtsyConnector,
-    "shopify": ShopifyConnector,
-    "woocommerce": WooCommerceConnector,
     "grailed": GrailedConnector,
     "vinted": VintedConnector,
     "vestiaire": VestiaireConnector,

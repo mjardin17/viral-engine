@@ -213,6 +213,28 @@ Then give the answer.
 → Full pipeline docs: memory/context/pipeline.md
 → Full episode backlog: memory/projects/viral-engine.md
 
+### 2026-08-11 Session (CURRENT)
+**Focus:** Wire Boss Listers + live inventory to website; full integration via Council dispatch
+**Status:** 🚀 MISSION DISPATCHED — Orchestration Council + Commerce Council + Infrastructure Council active
+
+#### Work Completed This Session
+1. **Investigated website connectivity** — found Store section (placeholder Base44 URLs) + Live Inventory section (Supabase-ready, not yet active)
+2. **Assessed Boss Listers readiness** — built but not deployed; sits in repo, waiting for Vercel hosting
+3. **Defined integration architecture** — eBay → Supabase Edge Function (15-min sync) → Website (GET /api/products) + Boss Listers dashboard (both read/write same `products` table)
+4. **Dispatched to Council via MISSION_BOARD.json** — 5 parallel subtasks in inventory_integration_full
+
+#### Mission: inventory_integration_full (DISPATCHED)
+**Priority:** 1 (highest)
+**Assigned to:** Orchestration Council + Commerce Council + Infrastructure Council
+**Subtasks (execute in parallel):**
+1. Deploy Boss Listers to Vercel (infrastructure_council) — clone from GitHub, set SUPABASE_URL + ANON_KEY env vars
+2. Create Supabase project + run migrations (commerce_council) — Josh creates project, runs 0001_init_inventory.sql + 0002_schedule_ebay_sync.sql, stores eBay refresh token in Vault
+3. Wire eBay API OAuth flow (commerce_council) — Josh creates eBay developer app, completes OAuth consent, stores refresh token
+4. Wire website → Supabase API (orchestration_council) — fill SUPABASE_URL + ANON_KEY in index.html, verify loadInventory() works, git push
+5. Verify end-to-end sync (quality_council) — manual test: eBay item → Supabase after 15 min → website shows it → price edit in Boss Listers → website + Supabase update instantly
+
+**Blockers:** Awaiting Josh to create Supabase account + eBay developer app
+
 ## Session Work Summary
 
 ### 2026-07-18 Session
@@ -244,7 +266,7 @@ Completed: Bottleneck audit, credit-stretching system (scene_classifier.py, bot_
 4. **Render LO_EP002-004:** Once EP001 is verified good
 5. **Replicate to IL:** Iron Legends channel (same 24-scene format, Higgsfield animation)
 
-### 2026-07-28 Session (CURRENT)
+### 2026-07-28 Session
 **Focus:** Build multichannel connector system for Boss Listers; git/GitHub authentication
 **Status:** ✅ Complete — manual export connector live, API structures ready, all migrations deployed, GitHub authenticated, PR opened
 

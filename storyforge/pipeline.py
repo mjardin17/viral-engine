@@ -21,10 +21,13 @@ from pathlib import Path
 # Add parent to path so imports work when run from repo root
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
+from storyforge.config    import init_env
 from storyforge.scanner   import run_scan
 from storyforge.generator import run_generator, auto_pick_niche, call_gemini
 from storyforge.formatter import format_book
 from storyforge.merch     import generate_merch_assets
+
+init_env()
 
 STORYFORGE  = Path(__file__).parent
 BOOKS_DIR   = STORYFORGE / "books"

@@ -1,0 +1,28 @@
+{
+  "title": "Little Zeus Gets His Thunderbolt",
+  "episode_id": "LO_EP001",
+  "description": "Way up above the clouds \u2014 higher than birds, higher than kites, higher than even the tallest mountain \u2014 there is a place called Mount Olympus. And on Mount Olympus, the gods live. Now, most people think the gods are very serious, very powerful, and very grown-up. Most people have never met Little Ze...",
+  "word_count": 4086,
+  "channel": "LO",
+  "created_at": "2026-08-10T12:34:50.294819",
+  "structure": {
+    "cover": "LO_EP001_cover.jpg",
+    "title_page": "title_page.xhtml",
+    "toc": "table_of_contents.xhtml",
+    "chapters": [
+      "chapter_01.xhtml",
+      "chapter_02.xhtml",
+      "chapter_03.xhtml",
+      "chapter_04.xhtml",
+      "chapter_05.xhtml",
+      "chapter_06.xhtml",
+      "chapter_07.xhtml",
+      "chapter_08.xhtml"
+    ],
+    "about_author": "about_author.xhtml"
+  },
+  "metadata": {
+    "language": "en",
+    "date": "2026-08-10T12:34:50.294832"
+  }
+}

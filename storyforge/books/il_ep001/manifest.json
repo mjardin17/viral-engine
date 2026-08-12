@@ -1,0 +1,102 @@
+{
+  "id": "il_ep001",
+  "episode_id": "IL_EP001",
+  "title": "Iron Legends \u2014 Episode 1: The Last Signal",
+  "channel": "IL",
+  "description": "Somewhere in the Nevada desert, a signal has been dormant for thirty years. Tonight, it woke up. And the Iron Council is watching. His name is Axon. Once the greatest guardian the Iron Legion ever produced. Now rusting in a salvage yard outside Reno, Nevada. But rust doesn't stop what was built to l...",
+  "genre": "Action",
+  "reading_level": "YA",
+  "word_count": 2400,
+  "chapter_count": 4,
+  "characters": {},
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "title": "Something Is Coming",
+      "scenes": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "narration": "Somewhere in the Nevada desert, a signal has been dormant for thirty years. Tonight, it woke up. And the Iron Council is watching. His name is Axon. Once the greatest guardian the Iron Legion ever produced. Now rusting in a salvage yard outside Reno, Nevada. But rust doesn't stop what was built to last. Thousands of years ago, before humanity built its first city, a race of ancient mechanical beings called the Iron Legion arrived on Earth. Protectors. Builders. Warriors. They chose to stay hidden \u2014 watching, waiting \u2014 until the day they'd be needed most. The Iron Council \u2014 nine ancient mech gods \u2014 governs from the Vault: an underground fortress buried beneath the Sahara. They decide everything. Who gets activated. Who stays dormant. And who is deemed too dangerous to ever wake up again.",
+      "scene_count": 4,
+      "target_words": 600
+    },
+    {
+      "chapter_number": 2,
+      "title": "The Null",
+      "scenes": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "narration": "His name is Null. He was the Iron Legion's greatest general \u2014 before the Fracture. Before he decided that protecting humanity was a waste of a perfect machine. Null doesn't want to destroy the world. He wants to reprogram it. The signal that woke up tonight is an emergency beacon \u2014 one that only broadcasts when a Fracture Node is opening. Fracture Nodes are what Null uses to pull rogue Iron Legion units back under his control. There's one opening in Las Vegas. Right now. Axon hasn't transformed in eleven years. His joints are corroded. His reactor is running at forty percent. None of that matters now. Someone has to go. And there's nobody left but him. Maya Chen is fourteen. She wasn't supposed to be in the desert tonight. She was supposed to be grounded. But Maya has a habit of following signals that don't make sense \u2014 and this one led her straight to a wrecked robot who just opened his eyes and called her by name.",
+      "scene_count": 4,
+      "target_words": 600
+    },
+    {
+      "chapter_number": 3,
+      "title": "Why She Matters",
+      "scenes": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "narration": "Maya's father was Dr. David Chen \u2014 the human engineer who helped rebuild Axon twenty years ago. He disappeared three years ago. The last thing he told Maya before he vanished: if you ever meet a robot named Axon, trust him with everything. The Fracture Node opens at exactly midnight. Three Iron Legion units in Vegas \u2014 dormant for decades, reprogrammed by Null \u2014 turn on the city all at once. Cars flip. Buildings crack. The city's power grid goes dark. And the Iron Council is still debating what to do. Axon tells Maya the truth: he's too damaged to fight three Null-class drones alone. His weapons systems are offline. His armor is at thirty percent integrity. If he goes in there without a human partner to reroute his power core \u2014 he won't come back out. Maya Chen has never hacked a mech before. She's never even changed the oil in a car. But she's memorized every blueprint her father ever sent her. Every line. Every diagram. Every failsafe. She tells Axon: I know exactly where to plug in.",
+      "scene_count": 4,
+      "target_words": 600
+    },
+    {
+      "chapter_number": 4,
+      "title": "Iron to the Bone",
+      "scenes": [
+        13,
+        14,
+        15
+      ],
+      "narration": "The connection completes. Maya's interface cable plugs into Axon's power core. For one second, she sees everything \u2014 thirty thousand years of Iron Legion history flowing through her like electricity. Then Axon stands up. Full power. Full weapons. And he says: Let's go remind Null what this Legion was built for. Deep in the Vault, the Iron Council watches Axon's energy signature light up their display screens. One council member breaks the silence: 'He bonded with a human child. That hasn't happened in ten thousand years.' Another responds: 'The last time it did... the world changed forever.' Null is already watching too. And he's smiling. Iron Legends. New episodes every week. Subscribe now \u2014 and find out what happens when the past refuses to stay buried, and a fourteen-year-old girl becomes the most important person on Earth.",
+      "scene_count": 3,
+      "target_words": 600
+    }
+  ],
+  "status": "complete",
+  "created_at": "2026-08-10T12:20:37.431347",
+  "voice_profile": {
+    "tone": "cinematic",
+    "pov": "third_person_limited",
+    "forbidden_phrases": [
+      "As an AI",
+      "In conclusion",
+      "delve"
+    ]
+  },
+  "series": {
+    "name": "@ironlegendsai",
+    "book_number": 1,
+    "next_book_hook": ""
+  },
+  "chapters_generated": 4,
+  "total_words": 2422,
+  "total_violations": 11,
+  "chapter_files": [
+    {
+      "number": 1,
+      "file": "storyforge\\books\\il_ep001\\chapter_01.txt"
+    },
+    {
+      "number": 2,
+      "file": "storyforge\\books\\il_ep001\\chapter_02.txt"
+    },
+    {
+      "number": 3,
+      "file": "storyforge\\books\\il_ep001\\chapter_03.txt"
+    },
+    {
+      "number": 4,
+      "file": "storyforge\\books\\il_ep001\\chapter_04.txt"
+    }
+  ]
+}

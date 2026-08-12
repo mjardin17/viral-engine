@@ -1,0 +1,24 @@
+{
+  "title": "Iron Legends \u2014 Episode 1: The Last Signal",
+  "episode_id": "IL_EP001",
+  "description": "Somewhere in the Nevada desert, a signal has been dormant for thirty years. Tonight, it woke up. And the Iron Council is watching. His name is Axon. Once the greatest guardian the Iron Legion ever produced. Now rusting in a salvage yard outside Reno, Nevada. But rust doesn't stop what was built to l...",
+  "word_count": 2422,
+  "channel": "IL",
+  "created_at": "2026-08-10T12:34:50.293604",
+  "structure": {
+    "cover": "IL_EP001_cover.jpg",
+    "title_page": "title_page.xhtml",
+    "toc": "table_of_contents.xhtml",
+    "chapters": [
+      "chapter_01.xhtml",
+      "chapter_02.xhtml",
+      "chapter_03.xhtml",
+      "chapter_04.xhtml"
+    ],
+    "about_author": "about_author.xhtml"
+  },
+  "metadata": {
+    "language": "en",
+    "date": "2026-08-10T12:34:50.293636"
+  }
+}

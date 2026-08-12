@@ -19,32 +19,110 @@ from pathlib import Path
 
 import requests
 
+from storyforge.config import init_env, get_required
+from storyforge.patterson_formula import PattersonFormula, ReadingLevel
+
 REPO        = Path(__file__).parent.parent
 BOOKS_DIR   = Path(__file__).parent / "books"
 NICHE_BOARD = Path(__file__).parent / "NICHE_BOARD.json"
 BOOKS_DIR.mkdir(exist_ok=True)
 
-GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
-GEMINI_URL     = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent"
+GEMINI_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent"
+HEADERS    = {"User-Agent": "Mozilla/5.0"}
 
-HEADERS = {"User-Agent": "Mozilla/5.0"}
+# AI Router for fallback chains
+_ROUTER = None
+
+def get_router():
+    """Lazy-load AI router."""
+    global _ROUTER
+    if _ROUTER is None:
+        try:
+            from ai_router.router import AIRouter
+            _ROUTER = AIRouter()
+        except ImportError:
+            _ROUTER = False  # Mark as unavailable
+    return _ROUTER if _ROUTER else None
+
+
+def get_gemini_key() -> str:
+    """Get Gemini API key from environment, fail fast if missing."""
+    return get_required("GEMINI_API_KEY", "Google Gemini API key for book generation")
+
+
+def generate_chapter_with_formula(
+    chapter_num: int,
+    title: str,
+    narration: str,
+    reading_level: str = "YA",
+    characters: dict[str, str] | None = None,
+    max_retries: int = 3,
+) -> tuple[str, list[str]]:
+    """
+    Generate a chapter that FOLLOWS the Patterson formula.
+
+    Returns: (chapter_text, violations_list)
+    - If violations is empty, chapter passed formula validation
+    - If violations is non-empty, chapter failed but returned anyway (for inspection)
+    """
+    formula = PattersonFormula(reading_level=reading_level)
+
+    for attempt in range(1, max_retries + 1):
+        # Generate using formula prompt
+        prompt = formula.chapter_generation_prompt(
+            chapter_num=chapter_num,
+            title=title,
+            narration=narration,
+            characters=characters or {},
+        )
+
+        chapter_text = call_gemini(prompt, use_router=True)
+
+        # Validate against formula
+        violations = formula.validate_chapter(chapter_text)
+
+        if not violations:
+            # Perfect! Chapter passes formula
+            return chapter_text, []
+
+        # If violations exist and this isn't the last retry, regenerate
+        if attempt < max_retries:
+            print(f"    Attempt {attempt}: formula violations, retrying...")
+            continue
+        else:
+            # Last attempt—return with violations noted
+            return chapter_text, violations
+
+    return chapter_text, violations
 
 
 def slugify(text: str) -> str:
     return re.sub(r"[^a-z0-9]+", "_", text.lower()).strip("_")[:40]
 
 
-def call_gemini(prompt: str) -> str:
-    """Call Gemini API, return generated text."""
-    if not GEMINI_API_KEY:
-        raise RuntimeError("GEMINI_API_KEY not set in .env — Josh: add it to .env file")
+def call_gemini(prompt: str, use_router: bool = True) -> str:
+    """Call Gemini API with AI Router fallback. Returns generated text."""
+    # Try router first (has fallback chain: claude → chatgpt → gemini → omniroute)
+    if use_router:
+        router = get_router()
+        if router:
+            try:
+                from ai_router.router import TaskType
+                result = router.route(TaskType.WRITING, {"prompt": prompt})
+                if result and result.success:
+                    return result.result  # Correct attribute
+            except Exception as e:
+                pass  # Fall through to direct Gemini call
+
+    # Direct Gemini call (primary, or fallback if router unavailable)
+    api_key = get_gemini_key()
 
     payload = {
         "contents": [{"parts": [{"text": prompt}]}],
         "generationConfig": {"temperature": 0.8, "maxOutputTokens": 8192},
     }
     resp = requests.post(
-        f"{GEMINI_URL}?key={GEMINI_API_KEY}",
+        f"{GEMINI_URL}?key={api_key}",
         json=payload, timeout=120,
     )
     resp.raise_for_status()

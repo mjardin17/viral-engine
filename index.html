@@ -413,6 +413,7 @@ footer a { color:var(--gold); text-decoration:none; }
   <a href="#" class="logo">EMPIRE<span> OS</span></a>
   <ul>
     <li><a href="#channels">Channels</a></li>
+    <li><a href="#store">Store</a></li>
     <li><a href="#services">Services</a></li>
     <li><a href="#newsletter">Legion</a></li>
   </ul>
@@ -492,6 +493,96 @@ footer a { color:var(--gold); text-decoration:none; }
     <h2 class="section-title">Latest Releases</h2>
     <div class="video-grid" id="vid-grid">
       <p style="grid-column:1/-1;color:var(--muted);padding:3rem 0;text-align:center">Loading latest episodes…</p>
+    </div>
+  </div>
+</section>
+
+<!--
+  STORE / APPS
+  ⚠️ TODO (Josh): every "View in Store" link below points to the Base44 EDITOR/PREVIEW URL,
+  not a public storefront — this is a temporary placeholder, not a real per-product checkout link.
+  Once the Base44 app is published (via massgains1731@gmail.com), replace STORE_URL below
+  with the real public app URL. There is only ONE place to change it — search this file for STORE_URL.
+  STORE_URL = https://app.base44.com/apps/6a341ca3df11ec718fefd246/editor/preview
+-->
+<section id="store" style="padding: 7rem 0 2rem;">
+  <div class="section-inner">
+    <div class="section-label">Shop The Empire</div>
+    <h2 class="section-title">Apps &amp; Store</h2>
+    <div class="divider"></div>
+    <p class="section-sub">Tools built by Empire OS — live today, more shipping every week.</p>
+    <p style="margin-top:1.5rem">
+      <a class="btn-primary" href="https://app.base44.com/apps/6a341ca3df11ec718fefd246/editor/preview" target="_blank">Enter the Store →</a>
+    </p>
+    <div class="services-grid" style="margin-top:2.5rem">
+
+      <div class="svc-card tilt-card">
+        <div class="svc-tier tier-premium">🎙️ App</div>
+        <h3>ViralVox</h3>
+        <p>AI voiceover generation for creators. Turn any script into narration in seconds — multiple voices, instant export.</p>
+        <div class="svc-price">$19/mo</div>
+        <a class="svc-cta" href="https://app.base44.com/apps/6a341ca3df11ec718fefd246/editor/preview" target="_blank">View in Store →</a>
+      </div>
+
+      <div class="svc-card tilt-card">
+        <div class="svc-tier tier-premium">🎙️ App</div>
+        <h3>ViralVox Pro</h3>
+        <p>Unlimited generations, priority processing, commercial usage rights, premium voice packs.</p>
+        <div class="svc-price">$49/mo</div>
+        <a class="svc-cta" href="https://app.base44.com/apps/6a341ca3df11ec718fefd246/editor/preview" target="_blank">View in Store →</a>
+      </div>
+
+      <div class="svc-card tilt-card">
+        <div class="svc-tier tier-semi">🛒 App</div>
+        <h3>Boss Listers AI</h3>
+        <p>Cross-list your inventory once, sell across eBay, Poshmark, Mercari, and more automatically.</p>
+        <div class="svc-price">$29/mo · Coming Soon</div>
+        <a class="svc-cta" href="https://app.base44.com/apps/6a341ca3df11ec718fefd246/editor/preview" target="_blank">View in Store →</a>
+      </div>
+
+      <div class="svc-card tilt-card">
+        <div class="svc-tier tier-auto">👕 Merch</div>
+        <h3>Empire OS Tee</h3>
+        <p>Rep the Empire. First run ships once pre-orders hit minimum threshold.</p>
+        <div class="svc-price">Pre-order $24.99</div>
+        <a class="svc-cta" href="https://app.base44.com/apps/6a341ca3df11ec718fefd246/editor/preview" target="_blank">View in Store →</a>
+      </div>
+
+      <div class="svc-card tilt-card">
+        <div class="svc-tier tier-auto">👕 Merch</div>
+        <h3>Gods &amp; Glory Poster</h3>
+        <p>Limited-run, numbered 18×24 art print from the Gods &amp; Glory series.</p>
+        <div class="svc-price">Pre-order $18</div>
+        <a class="svc-cta" href="https://app.base44.com/apps/6a341ca3df11ec718fefd246/editor/preview" target="_blank">View in Store →</a>
+      </div>
+
+      <div class="svc-card tilt-card">
+        <div class="svc-tier tier-premium">⚔️ Sponsorship</div>
+        <h3>Channel Sponsorship Bundle</h3>
+        <p>Sponsor a segment across all 4 channels — Gods &amp; Glory, Iron Legends, Little Olympus, Empire Decoded — in one push.</p>
+        <div class="svc-price">Starting at $800/bundle</div>
+        <a class="svc-cta" href="mailto:jardinsempire@gmail.com?subject=Channel Sponsorship Bundle">Request Quote →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!--
+  LIVE INVENTORY (eBay -> Supabase -> here)
+  Populated client-side by loadInventory() below, fed by:
+    1. GET /api/products (Cloudflare Pages Function, cached 5 min) on first load
+    2. A Supabase Realtime subscription for instant updates after that
+  See inventory-sync/DEPLOY.md for how this is wired up.
+-->
+<section id="inventory" style="padding: 2rem 0 7rem;">
+  <div class="section-inner">
+    <div class="section-label">Live From eBay</div>
+    <h2 class="section-title">Shop The Inventory</h2>
+    <div class="divider"></div>
+    <p class="section-sub">Synced from eBay every 15 minutes — updates instantly the moment something sells.</p>
+    <div class="services-grid" id="inventory-grid" style="margin-top:2.5rem">
+      <p style="grid-column:1/-1;color:var(--muted);padding:3rem 0;text-align:center">Loading inventory…</p>
     </div>
   </div>
 </section>
@@ -631,6 +722,7 @@ footer a { color:var(--gold); text-decoration:none; }
 
 <!-- THREE.JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
 <script>
 // ═══════════════════════════════════════════════
 //  THREE.JS — GOLD PARTICLE NEBULA + ENERGY RINGS
@@ -865,6 +957,59 @@ const CHANNELS = [
     revealObs.observe(el);
   });
 })();
+
+// ═══════════════════════════════════════════════
+//  LIVE INVENTORY (eBay -> Supabase)
+// ═══════════════════════════════════════════════
+// ⚠️ TODO (Josh): fill in your Supabase project URL + anon key below.
+// The anon key is safe to expose client-side — RLS on `products` only
+// grants public SELECT (see inventory-sync/supabase/migrations/0001_init_inventory.sql).
+// There is only ONE place to change these — search this file for SUPABASE_URL.
+const SUPABASE_URL = 'https://irslzufsqjveyibkfjtz.supabase.co';
+const SUPABASE_ANON_KEY = 'sb_publishable_HV03fWT-xFr4mB1x3AGlcg_a3JbBtwA';
+
+function renderInventoryCard(p) {
+  const priceStr = typeof p.price === 'number' ? `$${p.price.toFixed(2)}` : p.price;
+  const img = p.image_url ? `<img src="${p.image_url}" alt="${p.title}" style="width:100%;aspect-ratio:1;object-fit:cover;border-radius:8px;margin-bottom:0.75rem">` : '';
+  const soldOut = p.status === 'out_of_stock' || p.quantity === 0;
+  const cta = soldOut
+    ? `<div class="svc-price" style="opacity:.6">Sold Out</div>`
+    : `<div class="svc-price">${priceStr}</div><a class="svc-cta" href="https://www.ebay.com/itm/${p.ebay_listing_id||''}" target="_blank">Buy on eBay →</a>`;
+  return `<div class="svc-card tilt-card" data-sku="${p.sku}">${img}<h3>${p.title}</h3><p>${p.condition||''}</p>${cta}</div>`;
+}
+
+async function loadInventory() {
+  const grid = document.getElementById('inventory-grid');
+  try {
+    const res = await fetch('/api/products');
+    const { products } = await res.json();
+    if (!products?.length) {
+      grid.innerHTML = '<p style="grid-column:1/-1;color:var(--muted);padding:3rem 0;text-align:center">No items listed right now — check back soon.</p>';
+      return;
+    }
+    grid.innerHTML = products.map(renderInventoryCard).join('');
+    grid.querySelectorAll('.svc-card').forEach((el,i) => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(28px)';
+      el.style.transition = `opacity 0.5s ${i*0.05}s ease, transform 0.5s ${i*0.05}s ease, border-color 0.3s, box-shadow 0.3s`;
+      revealObs.observe(el);
+    });
+  } catch (e) {
+    grid.innerHTML = '<p style="grid-column:1/-1;color:var(--muted);padding:3rem 0;text-align:center">Inventory temporarily unavailable.</p>';
+  }
+}
+
+loadInventory();
+
+// Real-time overlay: the initial paint above comes from the 5-min-cached
+// /api/products endpoint; this subscription pushes instant updates after
+// that (new listing, price change, sold out) without a page refresh.
+if (window.supabase && !SUPABASE_URL.includes('YOUR_PROJECT_REF')) {
+  const sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+  sb.channel('products-live')
+    .on('postgres_changes', { event: '*', schema: 'public', table: 'products' }, () => loadInventory())
+    .subscribe();
+}
 </script>
 </body>
 </html>

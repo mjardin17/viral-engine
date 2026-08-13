@@ -112,7 +112,8 @@ def main():
     post_to_buzz("🤖 Platform Sync Agent online - monitoring inventory")
 
     connectors = get_all_connectors()
-    print(f"Connected to {len(connectors)} platforms: {', '.join(connectors.keys())}")
+    print(f"🚀 Connected to {len(connectors)} platforms: {', '.join(sorted(connectors.keys()))}")
+    post_to_buzz(f"🌐 NETWORK EXPANDED: {len(connectors)} platforms active\n{', '.join(sorted(connectors.keys()))}")
 
     sync_state = load_sync_state()
     synced_items = sync_state.get("synced_items", {})

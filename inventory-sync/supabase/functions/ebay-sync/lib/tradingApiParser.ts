@@ -1,5 +1,6 @@
 // XML parser for eBay Trading API GetMyeBaySelling responses.
 // Handles conversion from XML to structured inventory items.
+// Uses regex-based parsing for Deno Edge Function compatibility.
 
 import type { EbayInventoryItem } from "./types.ts";
 
@@ -12,51 +13,43 @@ interface ParsedResponse {
   errors: Array<{ code: string; message: string }>;
 }
 
-/** Parse XML string into a DOM (basic Deno approach). */
-function parseXml(xmlString: string): Document {
-  // Deno's DOMParser is available in the runtime
-  const parser = new DOMParser();
-  const doc = parser.parseFromString(xmlString, "application/xml");
-  if (!doc) throw new Error("Failed to parse XML response");
-  return doc;
+/** Extract text value from XML tag. */
+function extractTag(xml: string, tagName: string): string | null {
+  const regex = new RegExp(`<${tagName}[^>]*>([^<]*)</${tagName}>`, "i");
+  const match = xml.match(regex);
+  return match ? match[1] : null;
 }
 
-/** Extract text content from first matching element. */
-function getTextContent(doc: Document, path: string): string | null {
-  const element = doc.querySelector(path);
-  return element ? element.textContent || null : null;
+/** Extract all Item blocks from XML. */
+function extractItems(xml: string): string[] {
+  const itemRegex = /<Item[^>]*>[\s\S]*?<\/Item>/gi;
+  const matches = xml.match(itemRegex) || [];
+  return matches;
 }
 
-/** Extract all matching elements. */
-function getElements(doc: Document, path: string): Element[] {
-  return Array.from(doc.querySelectorAll(path));
-}
-
-/** Parse a single item element. */
-function parseItem(itemElement: Element): EbayInventoryItem {
-  const getText = (selector: string): string | null => {
-    const el = itemElement.querySelector(selector);
-    return el ? el.textContent || null : null;
-  };
-
-  const getNum = (selector: string): number | null => {
-    const val = getText(selector);
+/** Parse a single item block (XML string). */
+function parseItem(itemXml: string): EbayInventoryItem {
+  const getText = (tagName: string): string | null => extractTag(itemXml, tagName);
+  const getNum = (tagName: string): number | null => {
+    const val = getText(tagName);
     return val ? parseInt(val, 10) : null;
   };
 
   const itemId = getText("ItemID");
   if (!itemId) throw new Error("ItemID missing from response");
 
-  const quantityAvailable = getNum("SellingStatus > QuantityAvailable") ?? 0;
-  const quantitySold = getNum("SellingStatus > QuantitySold") ?? 0;
+  const quantityAvailable = getNum("QuantityAvailable") ?? 0;
+  const quantitySold = getNum("QuantitySold") ?? 0;
   const quantity = getNum("Quantity") ?? 0;
+
+  const price = getText("CurrentPrice");
 
   return {
     ebayItemId: itemId,
     sku: getText("SKU"),
     title: getText("Title") || "Unknown",
     listingType: getText("ListingType"),
-    price: getText("CurrentPrice") ? parseFloat(getText("CurrentPrice") || "0") : null,
+    price: price ? parseFloat(price) : null,
     currency: getText("Currency"),
     quantityListed: quantity,
     quantityAvailable,
@@ -65,14 +58,12 @@ function parseItem(itemElement: Element): EbayInventoryItem {
     watchCount: getNum("WatchCount"),
     bidCount: getNum("BidCount"),
     startTime: getText("ListingDuration"),
-    endTime: getText("SellingStatus > EndTime"),
-    shippingType: getText("ShippingDetails > ShippingType"),
-    shippingCost: getText("ShippingDetails > ShippingServiceOptions > ShippingServiceCost")
-      ? parseFloat(getText("ShippingDetails > ShippingServiceOptions > ShippingServiceCost") || "0")
-      : null,
-    paymentProfileId: getText("PaymentProfile > PaymentProfileID"),
-    returnProfileId: getText("ReturnProfile > ReturnProfileID"),
-    shippingProfileId: getText("ShippingProfile > ShippingProfileID"),
+    endTime: getText("EndTime"),
+    shippingType: getText("ShippingType"),
+    shippingCost: null,
+    paymentProfileId: getText("PaymentProfileID"),
+    returnProfileId: getText("ReturnProfileID"),
+    shippingProfileId: getText("ShippingProfileID"),
     sourcePlatform: "ebay",
     sourceEnvironment: "sandbox",
     lastSyncedAt: new Date().toISOString(),
@@ -81,19 +72,17 @@ function parseItem(itemElement: Element): EbayInventoryItem {
 
 /** Parse GetMyeBaySelling response. */
 export function parseGetMyeBaySellingResponse(xmlString: string): ParsedResponse {
-  const doc = parseXml(xmlString);
-
-  const ack = getTextContent(doc, "Ack") || "Unknown";
-  const totalPages = parseInt(getTextContent(doc, "ActiveList > PaginationResult > TotalNumberOfPages") || "0", 10);
-  const totalEntries = parseInt(getTextContent(doc, "ActiveList > PaginationResult > TotalNumberOfEntries") || "0", 10);
-  const currentPage = parseInt(getTextContent(doc, "ActiveList > PaginationResult > PageNumber") || "1", 10);
+  const ack = extractTag(xmlString, "Ack") || "Unknown";
+  const totalPages = parseInt(extractTag(xmlString, "TotalNumberOfPages") || "0", 10);
+  const totalEntries = parseInt(extractTag(xmlString, "TotalNumberOfEntries") || "0", 10);
+  const currentPage = parseInt(extractTag(xmlString, "PageNumber") || "1", 10);
 
   const items: EbayInventoryItem[] = [];
-  const itemElements = getElements(doc, "ActiveList > ItemArray > Item");
+  const itemXmlBlocks = extractItems(xmlString);
 
-  for (const itemEl of itemElements) {
+  for (const itemXml of itemXmlBlocks) {
     try {
-      items.push(parseItem(itemEl));
+      items.push(parseItem(itemXml));
     } catch (itemError) {
       console.error("Failed to parse item:", itemError);
       // Continue parsing other items
@@ -101,11 +90,17 @@ export function parseGetMyeBaySellingResponse(xmlString: string): ParsedResponse
   }
 
   // Parse errors if Ack indicates failure
-  const errorElements = getElements(doc, "Errors");
-  const errors = errorElements.map((errEl) => ({
-    code: errEl.querySelector("ErrorCode")?.textContent || "Unknown",
-    message: errEl.querySelector("LongMessage")?.textContent || errEl.querySelector("ShortMessage")?.textContent || "Unknown error",
-  }));
+  const errors: Array<{ code: string; message: string }> = [];
+  const errorRegex = /<Errors[^>]*>[\s\S]*?<\/Errors>/gi;
+  const errorBlocks = xmlString.match(errorRegex) || [];
+  for (const errorXml of errorBlocks) {
+    const code = extractTag(errorXml, "ErrorCode") || "Unknown";
+    const message =
+      extractTag(errorXml, "LongMessage") ||
+      extractTag(errorXml, "ShortMessage") ||
+      "Unknown error";
+    errors.push({ code, message });
+  }
 
   return { ack, totalPages, totalEntries, currentPage, items, errors };
 }

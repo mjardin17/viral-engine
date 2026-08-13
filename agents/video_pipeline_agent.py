@@ -73,13 +73,25 @@ def execute_render(mission):
 
         # Create render script for commercial
         render_script = mission.get("render_script", {})
-        script_path = Path(__file__).parent.parent / f".temp_commercial_{mission_id}.json"
+        base_dir = Path(__file__).parent.parent
+        script_path = base_dir / f".temp_commercial_{mission_id}.json"
+        # output/{mission_id}.mp4 — matches the FIRST path this function's own
+        # lookup below already checks, so no change needed there.
+        out_path = base_dir / "output" / f"{mission_id}.mp4"
 
         try:
             with open(script_path, 'w') as f:
                 json.dump(render_script, f)
 
-            cmd = f"cd {Path(__file__).parent.parent} && python empire_render.py --script {script_path}"
+            # FIXED 2026-08-12: was `empire_render.py --script {path}` — that
+            # script requires --channel/--episode (argparse exit 2 before any
+            # frame rendered) and doesn't understand commercial scene types
+            # anyway (product_showcase/price_and_cta/product_loop don't exist
+            # there — it renders documentary episodes). render_commercial.py
+            # is the dedicated, tested entrypoint for this job; see CLAUDE.md.
+            python = r"C:\Users\jjard\AppData\Local\Programs\Python\Python314\python.exe"
+            cmd = (f'cd /d "{base_dir}" && "{python}" render_commercial.py '
+                  f'--script "{script_path}" --out "{out_path}"')
         except Exception as e:
             post_to_channel(f"❌ Error preparing commercial: {str(e)[:100]}")
             return False

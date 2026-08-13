@@ -1,0 +1,170 @@
+{
+  "episode_id": "IL_EP001",
+  "channel": "IL",
+  "channel_slug": "il",
+  "script_path": "prompts\\iron_legends\\IL_EP001.json",
+  "scenes": [
+    {
+      "scene_id": "scene_01",
+      "render_tier": "higgsfield_video",
+      "reason": "cold open (first scene)",
+      "is_peak_moment": false,
+      "action_level": "medium",
+      "character": null,
+      "location": null
+    },
+    {
+      "scene_id": "scene_02",
+      "render_tier": "free",
+      "reason": "no peak/action/cache match \u2014 default free tier",
+      "is_peak_moment": false,
+      "action_level": "medium",
+      "character": null,
+      "location": null
+    },
+    {
+      "scene_id": "scene_03",
+      "render_tier": "free",
+      "reason": "no peak/action/cache match \u2014 default free tier",
+      "is_peak_moment": false,
+      "action_level": "medium",
+      "character": null,
+      "location": null
+    },
+    {
+      "scene_id": "scene_04",
+      "render_tier": "free",
+      "reason": "no peak/action/cache match \u2014 default free tier",
+      "is_peak_moment": false,
+      "action_level": "medium",
+      "character": null,
+      "location": null
+    },
+    {
+      "scene_id": "scene_05",
+      "render_tier": "free",
+      "reason": "no peak/action/cache match \u2014 default free tier",
+      "is_peak_moment": false,
+      "action_level": "medium",
+      "character": null,
+      "location": null
+    },
+    {
+      "scene_id": "scene_06",
+      "render_tier": "free",
+      "reason": "no peak/action/cache match \u2014 default free tier",
+      "is_peak_moment": false,
+      "action_level": "medium",
+      "character": null,
+      "location": null
+    },
+    {
+      "scene_id": "scene_07",
+      "render_tier": "free",
+      "reason": "no peak/action/cache match \u2014 default free tier",
+      "is_peak_moment": false,
+      "action_level": "medium",
+      "character": null,
+      "location": null
+    },
+    {
+      "scene_id": "scene_08",
+      "render_tier": "free",
+      "reason": "no peak/action/cache match \u2014 default free tier",
+      "is_peak_moment": false,
+      "action_level": "medium",
+      "character": null,
+      "location": null
+    },
+    {
+      "scene_id": "scene_09",
+      "render_tier": "free",
+      "reason": "no peak/action/cache match \u2014 default free tier",
+      "is_peak_moment": false,
+      "action_level": "medium",
+      "character": null,
+      "location": null
+    },
+    {
+      "scene_id": "scene_10",
+      "render_tier": "free",
+      "reason": "no peak/action/cache match \u2014 default free tier",
+      "is_peak_moment": false,
+      "action_level": "medium",
+      "character": null,
+      "location": null
+    },
+    {
+      "scene_id": "scene_11",
+      "render_tier": "free",
+      "reason": "no peak/action/cache match \u2014 default free tier",
+      "is_peak_moment": false,
+      "action_level": "medium",
+      "character": null,
+      "location": null
+    },
+    {
+      "scene_id": "scene_12",
+      "render_tier": "free",
+      "reason": "no peak/action/cache match \u2014 default free tier",
+      "is_peak_moment": false,
+      "action_level": "medium",
+      "character": null,
+      "location": null
+    },
+    {
+      "scene_id": "scene_13",
+      "render_tier": "free",
+      "reason": "no peak/action/cache match \u2014 default free tier",
+      "is_peak_moment": false,
+      "action_level": "medium",
+      "character": null,
+      "location": null
+    },
+    {
+      "scene_id": "scene_14",
+      "render_tier": "higgsfield_video",
+      "reason": "climax/resolution (last 2 scenes)",
+      "is_peak_moment": false,
+      "action_level": "medium",
+      "character": null,
+      "location": null
+    },
+    {
+      "scene_id": "scene_15",
+      "render_tier": "higgsfield_video",
+      "reason": "climax/resolution (last 2 scenes)",
+      "is_peak_moment": false,
+      "action_level": "medium",
+      "character": null,
+      "location": null
+    }
+  ],
+  "summary": {
+    "total_scenes": 15,
+    "tier_counts": {
+      "higgsfield_video": 3,
+      "higgsfield_image": 0,
+      "composited": 0,
+      "free": 12
+    },
+    "max_higgsfield_video_scenes": 4,
+    "max_higgsfield_image_scenes": 8,
+    "missing_character_cache": [],
+    "missing_background_cache": [],
+    "classified_at": "2026-07-22T23:42:51.217159"
+  },
+  "cost_estimate": {
+    "higgsfield_credits_est": 30.0,
+    "fal_cost_usd": 0.0,
+    "free_scenes": 12,
+    "total_scenes": 15,
+    "breakdown": {
+      "higgsfield_video_scenes": 3,
+      "higgsfield_image_scenes": 0,
+      "composited_scenes": 0,
+      "free_scenes": 12
+    }
+  },
+  "approved": true
+}

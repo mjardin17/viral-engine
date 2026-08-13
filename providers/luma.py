@@ -51,6 +51,8 @@ def _load_env() -> None:
 class LumaProvider(ProviderBase):
     """Luma Dream Machine (Ray-2) text-to-video provider."""
 
+    supports_reference_image = True  # generate_video() sets payload["keyframes"]["frame0"]
+
     def __init__(self) -> None:
         _load_env()
         self.api_key: str = os.environ.get("LUMA_API_KEY", "")

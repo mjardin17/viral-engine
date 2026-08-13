@@ -284,6 +284,8 @@ def _models_from_env(var: str, default: tuple[str, ...]) -> tuple[str, ...]:
 class HFVideoProvider(ProviderBase):
     """Free video generation via HF Inference Providers (fal-ai route)."""
 
+    supports_reference_image = True  # generate_video() routes to animate_image() when set
+
     def __init__(self) -> None:
         _load_env()
         self.token: str = os.environ.get("HF_TOKEN", "")

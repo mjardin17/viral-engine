@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Boss Listers Assistant",
+  "version": "0.1.0",
+  "description": "Compliant listing assistant: fills marketplace listing forms from your Boss Listers inventory with your review and confirmation. Scaffold — not yet functional.",
+  "background": {
+    "service_worker": "background/service_worker.js",
+    "type": "module"
+  },
+  "permissions": ["storage", "activeTab"],
+  "optional_host_permissions": [
+    "https://poshmark.com/*",
+    "https://www.mercari.com/*",
+    "https://www.depop.com/*"
+  ],
+  "host_permissions": [],
+  "content_scripts": [],
+  "action": {
+    "default_title": "Boss Listers Assistant (scaffold)"
+  }
+}

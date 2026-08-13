@@ -130,15 +130,35 @@ CHANNEL_MUSIC_VOL: dict[str, float] = {
 }
 DEFAULT_GG_MUSIC: Path = BASE_DIR / "music" / "gg_battle_theme.mp3"
 
+# Character sheets live at characters/<channel_dir>/<key>_sheet.png. Scene
+# "character" values match the sheet filename exactly EXCEPT for these
+# verified mismatches — do not add fuzzy matching here, only confirmed aliases.
+CHARACTER_SHEET_ALIASES: dict[str, str] = {
+    "little_zeus": "zeus",  # script uses "little_zeus", file is zeus_sheet.png
+}
+
 # Ken Burns presets rotate in this fixed order per scene (indexes into
 # video_effects.MOTION_PRESETS): zoom_in, pan_left, pan_right, zoom_out, pan_up
 KEN_BURNS_ROTATION: tuple[int, ...] = (0, 1, 2, 3, 4)
 
 MIN_IMAGE_BYTES = 50 * 1024  # Wikimedia image must be >50KB to count as real
 
-MAX_PARALLEL_SCENES = 6  # scenes rendered concurrently — AI Router spreads load across providers
+MAX_PARALLEL_SCENES = 2  # scenes rendered concurrently. Lowered from 6 on 2026-08-09:
+# this machine has 7.7GB RAM and no GPU — 6 concurrent scenes each loading
+# Kokoro/PyTorch for TTS caused real TTS subprocess crashes (LSTM/weight_norm
+# errors) and burst-overloaded the free image APIs (Wikimedia/Pollinations)
+# enough that some scenes got zero working images. 2 is conservative but
+# reliable on this hardware; raise it if this ever runs on a bigger machine.
 
 # ── Quality feature flags (Josh can set to False to disable) ───────────────────
+# Re-enabled 2026-08-13 after direct testing. The earlier "limit: 0" reading was
+# real but model-specific: Gemini's free tier has a hard zero quota for IMAGE
+# models (gemini-2.5-flash-image), and that is still true. TEXT models
+# (gemini-2.5-flash / 2.0-flash) generate fine on this key — verified by live
+# call. Disabling this flag was an overcorrection from conflating the two.
+# Note: free-tier text is rate-limited per minute, so a 24-scene render can
+# still hit RPM ceilings; failures fall through to the script's own
+# image_prompts, which is the intended behavior.
 SMART_IMAGE_PROMPTS = True  # Use Gemini to match images to narration
 ACTION_VIDEO_CLIPS = True   # Try FAL/Replicate for action scenes
 
@@ -588,6 +608,27 @@ def find_higgsfield_clip(clips_dir: Path, scene_number: int) -> Path | None:
     return None
 
 
+# ── Character reference discovery ───────────────────────────────────────────────
+def find_character_reference(channel: str, character_key: str | None) -> Path | None:
+    """
+    Look up a character sheet for reference-image conditioning:
+    characters/<channel_dir>/<key>_sheet.png. Tries the key as given, then
+    CHARACTER_SHEET_ALIASES. Returns None (not a guess/placeholder) if no
+    sheet exists yet for this character — callers must handle that case by
+    simply proceeding without a reference image.
+    """
+    if not character_key:
+        return None
+    char_dir = BASE_DIR / "characters" / CHANNEL_PROMPT_DIR.get(channel, channel.lower())
+    for key in (character_key, CHARACTER_SHEET_ALIASES.get(character_key)):
+        if not key:
+            continue
+        candidate = char_dir / f"{key}_sheet.png"
+        if candidate.exists() and candidate.stat().st_size > 10_000:
+            return candidate
+    return None
+
+
 # ── Action video clips (GG battle scenes) ──────────────────────────────────────
 def is_action_scene(narration: str) -> bool:
     """True if the narration contains any ACTION_WORDS (battle/charge/siege...)."""
@@ -759,12 +800,16 @@ def render_scene_gg(scene: dict, index: int, total: int, work_dir: Path,
 
 
 def generate_scene_clip_waterfall(scene: dict, n: int, total: int, work_dir: Path,
-                                  narr_dur: float, preset_index: int) -> Path | None:
+                                  narr_dur: float, preset_index: int, channel: str) -> Path | None:
     """
     Auto-generate a scene clip via the free-first provider waterfall
     (providers/waterfall.py). Video providers return a clip directly;
     image providers (Gemini/Pollinations) return a still that gets Ken
     Burns motion applied here. Returns a silent video clip path or None.
+
+    If the scene names a character (scene["character"]) and a matching
+    sheet exists under characters/<channel>/, it's passed through as a
+    reference image so reference-capable providers stay on-model.
     """
     from providers.waterfall import generate_scene_asset  # lazy — keeps GG path light
 
@@ -773,8 +818,10 @@ def generate_scene_clip_waterfall(scene: dict, n: int, total: int, work_dir: Pat
     if not prompt:
         return None
 
+    reference = find_character_reference(channel, scene.get("character"))
     duration = max(3, min(10, math.ceil(narr_dur)))
-    asset = generate_scene_asset(prompt, duration, "16:9", work_dir, f"scene_{n:02d}")
+    asset = generate_scene_asset(prompt, duration, "16:9", work_dir, f"scene_{n:02d}",
+                                 reference_image_path=str(reference) if reference else None)
     if asset is None:
         return None
 
@@ -790,7 +837,7 @@ def generate_scene_clip_waterfall(scene: dict, n: int, total: int, work_dir: Pat
 
 
 def render_scene_clip(scene: dict, index: int, total: int, work_dir: Path,
-                      clips_dir: Path | None, voice: str, speed: float) -> Path | None:
+                      clips_dir: Path | None, voice: str, speed: float, channel: str) -> Path | None:
     """
     Render one LO/IL scene. Clip source:
       - clips_dir set  → pre-generated Higgsfield clip (original flow)
@@ -823,9 +870,9 @@ def render_scene_clip(scene: dict, index: int, total: int, work_dir: Path,
         if clip is None:
             print(f"{TAG} Scene {n:02d}/{total} ⚠ Higgsfield clip missing "
                   f"({clips_dir / f'scene_{n:02d}.mp4'}) — trying provider waterfall")
-            clip = generate_scene_clip_waterfall(scene, n, total, work_dir, narr_dur, index)
+            clip = generate_scene_clip_waterfall(scene, n, total, work_dir, narr_dur, index, channel)
     else:
-        clip = generate_scene_clip_waterfall(scene, n, total, work_dir, narr_dur, index)
+        clip = generate_scene_clip_waterfall(scene, n, total, work_dir, narr_dur, index, channel)
     if clip is None:
         print(f"{TAG} Scene {n:02d}/{total} ❌ no clip from any source", file=sys.stderr)
         return None
@@ -892,7 +939,7 @@ def render_episode(channel: str, episode_id: str, script_path: Path,
             return build_scene(scene, index, len(scenes), work_dir, title, voice, speed)
         if channel == "GG":
             return render_scene_gg(scene, index, len(scenes), work_dir, title, voice, speed)
-        return render_scene_clip(scene, index, len(scenes), work_dir, clips_dir, voice, speed)
+        return render_scene_clip(scene, index, len(scenes), work_dir, clips_dir, voice, speed, channel)
 
     # Render ALL scenes in parallel (4 workers); assembly waits for everything.
     print(f"{TAG} Rendering {len(scenes)} scenes in parallel "
@@ -948,21 +995,38 @@ def render_episode(channel: str, episode_id: str, script_path: Path,
             print(f"{TAG} ⚠ Music file not found: {music_path} — rendering without music")
         shutil.copy2(assembled, final_path)
 
+    # Completeness gate — MUST run before council QC and BEFORE upload staging.
+    # council_evaluator only checks technical quality of whatever clip exists;
+    # it has no way to know the episode is missing scenes (expected_dur below
+    # is derived FROM scene_clips, so a partial episode always "matches" its
+    # own partial duration). A skipped scene means the episode is INCOMPLETE
+    # regardless of what the 3-round check would say, so it's checked first
+    # and short-circuits council entirely — no status confusion, no partial
+    # episode ever reaches the upload-staging hook.
+    if stats.skipped:
+        print(f"{TAG} ❌ STATUS: INCOMPLETE — {len(stats.skipped)}/{stats.total} scenes "
+              f"missing (skipped: {stats.skipped})", file=sys.stderr)
+        print(f"{TAG} ❌ {final_path} is NOT upload-ready — "
+              f"work files kept in {work_dir} for re-run/resume", file=sys.stderr)
+        return None
+
     # Mandatory council QC on the finished episode (3 rounds: duration/audio/frames).
     # Expected duration = sum of all scene clip durations (probe BEFORE cleanup).
+    # Only reachable when every scene rendered (completeness gate above).
     expected_dur = sum(probe_duration(c) or 0.0 for c in scene_clips)
     from orchestrator.agents import council_evaluator  # lazy
     verdict = council_evaluator.evaluate(final_path, expected_dur, tag=ep_id)
     if not verdict.passed:
-        print(f"{TAG} ❌ COUNCIL REJECTED — round {verdict.round_failed} failed: "
+        print(f"{TAG} ❌ STATUS: FAIL — round {verdict.round_failed} failed: "
               f"{verdict.reason}", file=sys.stderr)
         print(f"{TAG} ❌ {final_path} is NOT upload-ready — "
               f"work files kept in {work_dir} for re-run", file=sys.stderr)
         return None
-    print(f"{TAG} ✅ COUNCIL APPROVED — ready to upload")
+    print(f"{TAG} ✅ STATUS: PASS — COUNCIL APPROVED — ready to upload")
 
     # Post-render hook: upload mission + UPLOAD bat + website feed + social
     # clip staging. Best-effort — a hook failure never kills a finished render.
+    # Only reachable for a complete, council-approved episode.
     try:
         from social_clips.post_render import on_council_approved  # lazy
         on_council_approved(channel, ep_id, final_path, title)

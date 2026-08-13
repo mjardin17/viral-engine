@@ -44,9 +44,26 @@ timeout /t 2
 start "Sales Tracker Agent" cmd /c "%PYTHON_PATH% agents\sales_tracker_agent.py"
 timeout /t 2
 start "Price Sync Agent" cmd /c "%PYTHON_PATH% agents\price_sync_agent.py"
+timeout /t 2
+start "Whatnot Specialist Agent" cmd /c "%PYTHON_PATH% agents\whatnot_specialist_agent.py"
 
 echo.
-echo All 5 agents started. Check their windows for status.
+echo All 6 agents started. Check their windows for status.
+echo.
+echo Agents:
+echo   - Video Pipeline (renders episodes + commercials)
+echo   - Crosslister (monitor inventory for auctions)
+echo   - Platform Sync (push to 18 platforms)
+echo   - Sales Tracker (monitor sales, update inventory)
+echo   - Price Sync (sync prices bidirectionally)
+echo   - Whatnot Specialist (orchestrate auctions, optimize ROI)
+echo   - Scanner Uploader (Epson ES-400 II → Boss Listers)
+echo.
+echo Council Bots (quality + optimization):
+echo   - Bot 18: Whatnot Quality Checker
+echo   - Bot 19: Whatnot Bid Analyzer
+echo   - Bot 20: Whatnot ROI Optimizer
+echo.
 echo Monitor in Buzz: http://localhost:3000
 echo.
 pause

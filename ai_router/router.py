@@ -57,21 +57,22 @@ class TaskType:
 
 
 # Default best-first routing per task type
+# All chains end with "omniroute" as the ultimate fallback
 ROUTING_TABLE: dict[str, list[str]] = {
-    TaskType.PLANNING: ["claude", "chatgpt", "gemini"],
-    TaskType.WRITING: ["claude", "chatgpt", "gemini"],
-    TaskType.STORYBOARDING: ["claude", "gemini", "chatgpt"],
-    TaskType.PROMPT_CREATION: ["claude", "chatgpt", "gemini"],
-    TaskType.IMAGE_GENERATION: ["flux", "gemini_image", "pollinations", "ai_horde", "picsum"],
-    TaskType.IMAGE_EDITING: ["flux_kontext", "chatgpt_vision", "gemini_vision"],
-    TaskType.ANIMATION: ["wan22", "higgsfield", "kling", "skyreels"],
-    TaskType.VIDEO_GENERATION: ["veo", "skyreels", "wan22", "runway", "higgsfield"],
-    TaskType.LIP_SYNC: ["musetalk", "sadtalker"],
-    TaskType.NARRATION: ["kokoro", "elevenlabs", "piper"],
-    TaskType.SUBTITLE_CREATION: ["whisper"],
-    TaskType.MUSIC: ["freepd", "openverse_audio"],
-    TaskType.RENDERING: ["ffmpeg"],
-    TaskType.PUBLISHING: ["channel_uploader"],
+    TaskType.PLANNING: ["claude", "chatgpt", "gemini", "omniroute"],
+    TaskType.WRITING: ["claude", "chatgpt", "gemini", "omniroute"],
+    TaskType.STORYBOARDING: ["claude", "gemini", "chatgpt", "omniroute"],
+    TaskType.PROMPT_CREATION: ["claude", "chatgpt", "gemini", "omniroute"],
+    TaskType.IMAGE_GENERATION: ["flux", "gemini_image", "pollinations", "ai_horde", "picsum", "omniroute"],
+    TaskType.IMAGE_EDITING: ["flux_kontext", "chatgpt_vision", "gemini_vision", "omniroute"],
+    TaskType.ANIMATION: ["wan22", "higgsfield", "kling", "skyreels", "omniroute"],
+    TaskType.VIDEO_GENERATION: ["veo", "skyreels", "wan22", "runway", "higgsfield", "omniroute"],
+    TaskType.LIP_SYNC: ["musetalk", "sadtalker", "omniroute"],
+    TaskType.NARRATION: ["kokoro", "elevenlabs", "piper", "omniroute"],
+    TaskType.SUBTITLE_CREATION: ["whisper", "omniroute"],
+    TaskType.MUSIC: ["freepd", "openverse_audio", "omniroute"],
+    TaskType.RENDERING: ["ffmpeg", "omniroute"],
+    TaskType.PUBLISHING: ["channel_uploader", "omniroute"],
 }
 
 # model name → (module, class). Lazy imports so one broken adapter never
@@ -101,6 +102,7 @@ ADAPTER_REGISTRY: dict[str, tuple[str, str]] = {
     "freepd": ("ai_router.adapters.freepd_adapter", "FreePDAdapter"),
     "openverse_audio": ("ai_router.adapters.openverse_adapter", "OpenverseAdapter"),
     "channel_uploader": ("ai_router.adapters.uploader_adapter", "UploaderAdapter"),
+    "omniroute": ("ai_router.adapters.omniroute_adapter", "OmniRouteAdapter"),
 }
 
 

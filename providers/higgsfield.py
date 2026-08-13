@@ -53,6 +53,8 @@ def _load_env():
 
 class HiggssfieldProvider(ProviderBase):
 
+    supports_reference_image = True  # generate_video() sets payload["reference_image"]
+
     def __init__(self):
         _load_env()
         self.api_key = os.environ.get("HIGGSFIELD_API_KEY", "")

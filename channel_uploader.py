@@ -110,11 +110,11 @@ EP_FILE_MAP: dict[str, str] = {
     # GG
     **{f"GG_EP{str(i).zfill(3)}": f"GG_EP{str(i).zfill(3)}_final.mp4" for i in range(1, 30)},
     # IL
-    **{f"IL_EP{str(i).zfill(3)}": f"il_ep{str(i).zfill(3)}.mp4" for i in range(1, 20)},
+    **{f"IL_EP{str(i).zfill(3)}": f"IL_EP{str(i).zfill(3)}_final.mp4" for i in range(1, 20)},
     # LO
-    **{f"LO_EP{str(i).zfill(3)}": f"lo_ep{str(i).zfill(3)}.mp4" for i in range(1, 20)},
+    **{f"LO_EP{str(i).zfill(3)}": f"LO_EP{str(i).zfill(3)}_final.mp4" for i in range(1, 20)},
     # ED
-    **{f"ED_EP{str(i).zfill(3)}": f"ed_ep{str(i).zfill(3)}.mp4" for i in range(1, 20)},
+    **{f"ED_EP{str(i).zfill(3)}": f"ED_EP{str(i).zfill(3)}_final.mp4" for i in range(1, 20)},
 }
 
 # ── Auth ──────────────────────────────────────────────────────────────────────

@@ -74,6 +74,8 @@ def _generate_still(prompt: str, dest: Path, aspect_ratio: str) -> str | None:
 class ImageToVideoProvider(ProviderBase):
     """Free image → motion-video provider (Gemini/Pollinations still + HF I2V)."""
 
+    supports_reference_image = True  # generate_video() routes to _hf.animate_image() when set
+
     def __init__(self) -> None:
         self._hf = HFVideoProvider()
 

@@ -17,6 +17,13 @@ class ProviderBase(ABC):
         {"status": "ok"|"not_connected"|"error", "job_id": str|None, ...}
     """
 
+    # True on subclasses whose generate_video() actually reads and uses
+    # reference_image_path (vs. accepting-but-ignoring it). Used by
+    # providers/waterfall.py to prefer reference-capable providers when a
+    # character/scene reference image is available. Default False —
+    # verified per-provider, never assumed.
+    supports_reference_image: bool = False
+
     @abstractmethod
     def is_connected(self) -> bool:
         """Return True if API key is set and provider is reachable."""

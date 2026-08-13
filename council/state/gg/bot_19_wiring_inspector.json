@@ -1,0 +1,56 @@
+{
+  "broken_cli_contracts": [],
+  "rotting_missions": [
+    {
+      "id": "lo_ep001_render",
+      "type": "render",
+      "status": "in_progress",
+      "age_hours": null
+    },
+    {
+      "id": "upload_lo_ep001",
+      "type": "upload",
+      "status": "pending",
+      "age_hours": null
+    },
+    {
+      "id": "upload_gg_ep001",
+      "type": "upload",
+      "status": "pending",
+      "age_hours": null
+    },
+    {
+      "id": "commercial-test-workflow-001",
+      "type": "commercial",
+      "status": "pending",
+      "age_hours": 89.71992394003603
+    },
+    {
+      "id": "commercial-restored-1786296459",
+      "type": "commercial",
+      "status": "pending",
+      "age_hours": 89.34133510390917
+    },
+    {
+      "id": "commercial-restored-1786374118",
+      "type": "commercial",
+      "status": "pending",
+      "age_hours": 67.76917741556963
+    },
+    {
+      "id": "commercial-restored-1786374732",
+      "type": "commercial",
+      "status": "pending",
+      "age_hours": 67.59883060720232
+    }
+  ],
+  "orphaned_commercial_scripts": [
+    ".temp_commercial_commercial-restored-1786296459.json",
+    ".temp_commercial_commercial-restored-1786374118.json",
+    ".temp_commercial_commercial-restored-1786374732.json",
+    ".temp_commercial_commercial-test-workflow-001.json"
+  ],
+  "dead_queues": [],
+  "quarantined_publishes": [],
+  "last_updated": "2026-08-13T06:48:07.928682"
+}

@@ -28,34 +28,36 @@ BASE_DIR = Path(__file__).resolve().parent.parent.parent
 if str(BASE_DIR) not in sys.path:
     sys.path.insert(0, str(BASE_DIR))
 
-from council.bot_base import BotBase, BotResult
+from council.bot_base import CouncilBot, BotResult
 
 
-class Bot14CreditGuardian(BotBase):
+class Bot14CreditGuardian(CouncilBot):
     """Higgsfield credit guardian for LO/IL episodes."""
 
-    def __init__(self):
-        super().__init__(
-            name="bot_14_credit_guardian",
-            priority=45,
-            description="Guard Higgsfield budget before rendering LO/IL episodes",
-        )
-        self.SAFETY_THRESHOLD_CREDITS = 50.0  # Configurable via env if needed
+    name = "bot_14_credit_guardian"
+    description = "Guard Higgsfield budget before rendering LO/IL episodes"
+    priority = 45
+    SAFETY_THRESHOLD_CREDITS = 50.0  # Configurable via env if needed
 
     def run(self) -> BotResult:
         """Check render queue for LO/IL episodes and validate budgets."""
+        r = self.result
         try:
             # Check if render_queue.json exists and has pending episodes
             queue_path = Path(self.base_dir) / "council" / "state" / "gg" / "render_queue.json"
             if not queue_path.exists():
-                return self.ok("No render queue found — nothing to guard")
+                r.ok("No render queue found — nothing to guard")
+                return r
 
             with open(queue_path) as f:
                 queue = json.load(f)
 
-            pending = queue.get("pending", [])
+            # render_queue.json is a flat list of episode entries, not {"pending": [...]}
+            all_entries = queue.get("pending", []) if isinstance(queue, dict) else queue
+            pending = [e for e in all_entries if e.get("status", "pending") == "pending"]
             if not pending:
-                return self.ok("Render queue is empty — nothing to guard")
+                r.ok("Render queue is empty — nothing to guard")
+                return r
 
             warnings = []
             errors = []
@@ -115,20 +117,25 @@ class Bot14CreditGuardian(BotBase):
             # Report findings
             if errors:
                 msg = f"Credit guardian blocked {len(blocked)} episode(s): " + " | ".join(errors)
-                return self.error(msg)
+                r.error(msg)
+                return r
 
             if warnings:
                 msg = f"Credit guardian warnings: " + " | ".join(warnings)
-                return self.warn(msg)
+                r.warn(msg)
+                return r
 
-            return self.ok(f"Credit guardian cleared {len(pending) - len(blocked)} episode(s) for rendering")
+            r.ok(f"Credit guardian cleared {len(pending) - len(blocked)} episode(s) for rendering")
+            return r
 
         except Exception as e:
-            return self.error(f"Credit guardian crashed: {e}")
+            r.error(f"Credit guardian crashed: {e}")
+            return r
 
 
 if __name__ == "__main__":
     bot = Bot14CreditGuardian()
     result = bot.run()
-    print(result)
-    sys.exit(0 if result.ok() else 1)
+    for msg in result.messages:
+        print(msg)
+    sys.exit(0 if result.status in ("ok", "fixed", "warning") else 1)

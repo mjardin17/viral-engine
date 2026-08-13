@@ -76,7 +76,7 @@ Josh Jardin (justifiedmagnificent@gmail.com). Building a multi-channel AI conten
 | token_gg.pickle | Correct GG token — NEVER use token.pickle (wrong account) |
 | crosspost_bridge.py | Multiplatform publish queue — needs crosspost_config.json filled in |
 | social_clips/ | AUTO-PUBLISH SYSTEM: clip_generator.py (5 platform clips from final MP4, RMS-peak selection, burned captions) + auto_publisher.py (posts all platforms in parallel, 3x retry) + post_render.py (hook fired by empire_render after council approval) |
-| auto_publisher.py | social_clips/auto_publisher.py — runs after YouTube upload (via UPLOAD_{ch}_{ep}.bat); IG/TikTok/FB/Pinterest stubs skip cleanly until tokens added to .env (IG_ACCESS_TOKEN, TIKTOK_ACCESS_TOKEN, FB_ACCESS_TOKEN, PINTEREST_ACCESS_TOKEN) |
+| auto_publisher.py | social_clips/auto_publisher.py — runs after YouTube upload (via UPLOAD_{ch}_{ep}.bat). ⚠️ **CORRECTED 2026-08-12:** IG/TikTok/FB/Pinterest are NOT merely awaiting tokens — the HTTP calls are unimplemented (`TODO(api)` at lines 168/186/204/227). With a token PRESENT, publish_instagram returns "IG_ACCESS_TOKEN present but Graph API call not yet implemented". Adding tokens to .env will NOT make these post. See CROSSPOST_INTEGRATION.md § Status. |
 | latest_episodes.json | Website episode feed (repo root) — updated by post_render/auto_publisher; read by website/empire_status_widget.html (embed on jardins-outpost.pages.dev) |
 | AGENT HAND-OFF | Gemini's master handoff block — paste at start of every new agent session |
 | Python path | C:\Users\jjard\AppData\Local\Programs\Python\Python314\python.exe |
@@ -293,6 +293,357 @@ See `BOSSLISTER_LAUNCH_CHECKLIST.md` for full 5-phase checklist:
 4. 🌐 **Deploy Boss Listers:** `npm run build && wrangler pages deploy out` (from mvp repo)
 5. ✅ **Deploy website:** Update .env credentials → push to GitHub → Cloudflare auto-deploys
 6. 🧪 **End-to-end test:** List item on eBay → wait 15-20 min → verify on website + Boss Listers
+
+---
+
+## ⚠️ AUDIT FINDINGS — 2026-08-12 (later same session)
+
+Three agent audits were run. **Several things previously recorded as "done" are not.**
+Read this before acting on any statement above.
+
+### eBay sync — the credentials set today are NOT read by the function
+An OAuth consent flow was completed and 4 secrets were set. **Three of them are inert.**
+
+| Set in Supabase | Read by code | |
+|---|---|---|
+| `EBAY_CLIENT_ID` | never read | ❌ |
+| `EBAY_CLIENT_SECRET` | never read | ❌ |
+| `EBAY_REFRESH_TOKEN` | never read | ❌ |
+| `SYNC_TRIGGER_SECRET` | `index.ts:101` | ✅ |
+
+The function actually reads `EBAY_{SANDBOX|PRODUCTION}_APP_ID / _CERT_ID / _DEV_ID / _USER_TOKEN`
+(`index.ts:50-53`), switched by `EBAY_ENVIRONMENT` (`index.ts:46`, **defaults to `production`**).
+
+- **Wrong token TYPE was obtained.** The live path is the legacy **Trading API**
+  (`tradingApiClient.ts`), which needs an **Auth'n'Auth user token** placed verbatim in
+  `<eBayAuthToken>`. It performs no OAuth exchange anywhere. The OAuth/Sell-Inventory
+  implementation (`ebayAuth.ts`, `ebayClient.ts`) is **dead code, imported by nothing**.
+  The `sell.inventory` scope consented to belongs to that dead path.
+- **Dev ID is required and was never collected.** Sandbox Dev ID is
+  `5de50257-826a-4192-8b32-6f6b82d95525` (from the portal screenshot).
+- **Production keyset is DISABLED** pending eBay's marketplace-deletion-notification
+  compliance → `EBAY_ENVIRONMENT` must be explicitly set to `sandbox`.
+- **Fails silently.** The missing-env throw at `index.ts:49-55` is OUTSIDE the try block
+  at `index.ts:57`, and `await runSync()` (`index.ts:112`) has no try/catch — so the
+  `sync_logs` insert at `index.ts:115` never runs. **An empty `sync_logs` table looks
+  identical to "cron never fired."** Do not diagnose this as a cron problem.
+- **Latent bug:** `tradingApiClient.ts:90` — `maxPages` computed before the loop with
+  `totalPages` still 1, and `const` blocks recompute. **Any seller with >100 active
+  listings silently syncs only the first 100.**
+- `DEPLOY.md:203` is stale (references `EBAY_REFRESH_TOKEN`) and is the likely origin of
+  the wrong secret names. `DEPLOY.md:72-84` is correct — it says generate a User Token.
+
+### Boss Listers on Vercel — deployed but has NO backend
+Live: `https://nextjs-boilerplate-massgains1731-3174s-projects.vercel.app`
+
+- `next.config.js` sets `output: 'export'` → **all nine `/api/*` routes and
+  `middleware.js` are compiled but NOT deployed.** That includes `/api/analyze`
+  (the photo→listing AI) and `/api/channels/manual-package`.
+- **This app is configured for Cloudflare Pages, not Vercel** — it has `wrangler.toml`,
+  a `functions/` dir supplying the backend, and `"deploy": "wrangler pages deploy out"`.
+  Vercel ignores `functions/`. **Deploy target should be Cloudflare Pages.**
+- Site is behind **Vercel Deployment Protection** — a normal visitor gets an auth wall.
+- **Real bug fixed (uncommitted):** `package.json` was missing `exif-parser`,
+  `formidable`, `fs-extra`, `uuid`. They were in local `node_modules` (installed once
+  without `--save`), so local builds passed and every clean install failed.
+- A fresh Vercel device-login ran during deploy, as `massgains1731-3174` (the Base44
+  account, not the primary email).
+
+### Crosspost — three disconnected paths, zero completed runs
+See CROSSPOST_INTEGRATION.md § Status for the full table. Summary: the commercial
+writer, the dispatcher, and the publisher all use different queues; none connect.
+
+### ✅ Instagram publishing — IMPLEMENTED 2026-08-12 (written, NOT yet live-tested)
+New: **`lib/instagram_publisher.py`** — real Reels publishing, replacing the stub.
+`auto_publisher.py:154 publish_instagram()` now calls it.
+
+- **Surface:** Instagram API with **Instagram Login** (`graph.instagram.com`),
+  pinned to Graph **v26.0**. Chosen over the Facebook Login path because it needs
+  **no linked Facebook Page** and fewer permissions.
+- **Upload:** resumable binary (`upload_type=resumable` → `rupload.facebook.com`).
+  **The old docstring's claim that a public video URL is mandatory was WRONG** —
+  Meta supports raw byte upload from local disk. No ngrok, no CDN, no Supabase
+  Storage step, no public exposure of unreleased clips.
+- **Retry wrapper upgraded:** publishers may now return `"permanent": True`;
+  `_publish_with_retry` fails fast instead of burning 3 attempts on an error
+  that cannot resolve (wrong account type, missing permission, bad codec).
+- Quota is read at runtime via `/content_publishing_limit` — never hardcoded,
+  because Meta's own docs contradict themselves (guide says 100, reference says 50).
+
+**Verified:** compiles, imports, validation rejects oversize/wrong-container/
+too-many-hashtag input and trims captions at 2200 chars.
+**NOT verified:** never called against the live API — no token exists yet.
+
+**Turn-on steps (Josh):**
+1. Instagram account must be **Business or Creator** (app → Settings → Account type).
+   Personal accounts are rejected by the API; no code workaround exists.
+2. Create a Meta app, add the Instagram product, add yourself as an app role.
+   **No App Review needed** for apps serving only businesses you own, in Dev Mode.
+3. Put `IG_ACCESS_TOKEN` + `IG_USER_ID` (numeric account ID, NOT the @handle) in `.env`.
+4. Verify without posting: `python lib/instagram_publisher.py --check`
+
+**⚠ 60-DAY TOKEN CLIFF — the most likely cause of silent death.** Long-lived
+tokens last 60 days. `refresh_token()` works only while the token is still valid
+AND ≥24h old. Past 60 days there is **no programmatic recovery** — a human must
+re-run OAuth consent. Schedule a refresh around day 45-50 and alarm on failure.
+
+### ✅ Crosspost queue wiring — FIXED 2026-08-12
+`lib/crosspost_bridge.py` gained **`process_queue()`** — the consumer that never
+existed. Commercials queued by `queue_commercial_for_posting()` now actually reach
+`auto_publisher.py`. Path #2 (root `crosspost_bridge.py` → external SaaS) stays
+dead; it was never configured and is not built on.
+
+```bash
+python lib/crosspost_bridge.py process --dry-run   # ALWAYS do this first
+python lib/crosspost_bridge.py process
+python lib/crosspost_bridge.py list
+```
+
+Safety (Instagram has no unpublish API, so double-posting is unrecoverable):
+per-**platform** results so a partial failure can't re-post a success; platform
+marked `posting` **before** the attempt so a mid-post crash is **quarantined for a
+human** rather than auto-retried; atomic queue writes; `O_EXCL` lock so two agents
+can't both post. Corrupt queue raises instead of silently treating it as empty.
+**Tested: 14/14 assertions pass, nothing posted.**
+
+⚠ Quarantined platform = a run died mid-publish and we cannot tell if it went
+live. Check the account, then hand-edit `results[<platform>].status`.
+
+**Still stubs:** TikTok (`:186`), Facebook (`:204`), Pinterest (`:227`).
+
+### ✅ Pre-existing drawtext bug in add_lower_third() — FOUND + FIXED 2026-08-12
+Found while building the commercial renderer, unrelated to that work.
+`add_lower_third()` (`video_effects.py`) used `y=ih-110`/`y=ih-62` in its
+`drawtext` filters. **`ih` is not a valid constant inside drawtext's own
+expression evaluator** on this FFmpeg build (8.1.2) — it belongs to filters
+like `scale`/`crop`/`drawbox`, not `drawtext`. Confirmed by direct execution:
+`"Undefined constant or missing '(' in 'ih-110'"`, zero-byte output, silent
+failure back up the call chain (`apply_lower_third()` in `empire_render.py`
+just returns `False`).
+
+**Never triggered by a completed render.** Only `prompts/gods_glory/
+gg_ep012_v3.json` sets a `lower_third` field — and per the Episode Status
+table, S3 (EP012–EP025) scripts are written but not yet rendered. Caught
+before `render_season3.bat` would have hit it. Fixed: `ih` → `h` in both
+`drawtext` y-expressions. `drawbox` calls in the same function correctly keep
+`ih` — that filter DOES support it, only `drawtext`'s evaluator doesn't.
+
+### ✅ Browser-connector credential naming — FIXED 2026-08-12
+Root cause (found by the credential audit earlier this session): 16 connector
+classes exist in `lib/platform_connectors.py`, but every `BrowserConnector`
+subclass (Poshmark, Mercari, Depop, Facebook, Whatnot, Etsy-browser,
+Pinterest-browser, Reddit, LinkedIn, Twitch, Discord — 11 of the 16) read a
+single `{PLATFORM}_TOKEN` env var and `.split(":", 1)` it into username/
+password. **Nothing ever wrote that combined format** — every credential-setup
+script in `agents/` writes `{PLATFORM}_USERNAME`/`{PLATFORM}_PASSWORD` (or
+`_EMAIL`/`_PASSWORD` — inconsistent per platform) as two separate variables.
+Result: these 11 connectors failed auth regardless of what credentials existed.
+Note this is separate from the real bearer-token API connectors in
+`platform_connectors.py` (Etsy, Shopify, eBay, Grailed, etc.) — those correctly
+use a single token and were never affected.
+
+**Fix, scoped to one place:** `BrowserConnector.__init__` in
+`lib/browser_connectors.py` now constructs `self.auth_token` from
+`{PLATFORM}_USERNAME` **or** `{PLATFORM}_EMAIL`, plus `{PLATFORM}_PASSWORD`, if
+`{PLATFORM}_TOKEN` isn't already set. Every existing `self.auth_token.split(":
+", 1)` call downstream now works unchanged — no subclass rewrites needed.
+
+**Second bug found in the same pass:** `FacebookMarketplaceBrowserConnector`
+called `super().__init__("facebook_web")` — the only platform name with a
+suffix; every other one matches its plain name exactly (`poshmark`, `mercari`,
+`etsy`...). `.env` has plain `FACEBOOK_EMAIL`/`FACEBOOK_PASSWORD`, so this
+connector could never find its own credentials no matter what the first fix
+did. Changed to `"facebook"`.
+
+**Verified against the live `.env`** (no secret values printed, only
+truthy/well-formed checks): **Mercari, Facebook, and Whatnot are now correctly
+wired** — using credentials already sitting in `.env`, no new tokens needed.
+Poshmark/Depop/Etsy-browser/Pinterest-browser/Reddit/LinkedIn/Twitch/Discord
+have no credentials in `.env` yet — that's expected, not a bug; the connector
+code will now use them correctly whenever they're added.
+
+⚠ **Latent, pre-existing overlap (not introduced by this fix, not fixed
+either):** `FacebookMarketplaceBrowserConnector` and the real API
+`FacebookMarketplaceConnector` in `platform_connectors.py` both use
+`platform_name="facebook"` — same env-var namespace, different auth-token
+shapes (bearer token vs `email:password`). Currently harmless because no
+`FACEBOOK_TOKEN` exists. If one is ever set for the real API connector, the
+browser connector would inherit it and its `.split(":", 1)` would break on a
+token with no colon. Worth a registry-level decision later on which connector
+"owns" a platform when both exist — out of scope for this fix.
+
+### 📋 Merch vs. Books automation — POLICY, not a TODO (2026-08-12)
+Josh researched cross-platform publishing APIs for the merch/book side. Recording
+the split as **policy** because the book side is a platform-policy wall, not a
+tooling gap — do not spend time trying to solve it with better code.
+
+**Merch (print-on-demand) — genuinely automatable:**
+- **Printful** — real REST API, unofficial-but-current SDK (`printful-sdk-js-v2`)
+- **Printify** — real REST API, unofficial-but-current SDK (`printify-sdk-js`,
+  same author as Printful's — near-identical shape)
+- **Gooten** — real REST API with an OFFICIAL company-maintained SDK
+  (`github.com/printdotio`) — the only one of the three with real vendor
+  support; good fallback/primary candidate
+- Spring/Teespring and Redbubble — **no usable public API.** Skip; don't build
+  scrapers against them.
+
+**Books — NOT automatable, by platform policy:**
+- Amazon KDP, IngramSpark, Draft2Digital, Apple Books, Google Play Books — **none
+  expose a public API for submitting/uploading titles.** KDP is explicitly
+  excluded from Amazon's Selling Partner API.
+- **Realistic pipeline:** generate the finished EPUB/PDF (Pressbooks is the
+  suggested open-source generator) → **a human manually uploads to each store.**
+  That upload step is permanent, not a future automation target. A "KDP
+  auto-upload" tool would necessarily be a ToS-violating browser scraper —
+  do not build one.
+
+⚠ These specific facts came from Josh's own research passes (not independently
+verified by an agent this session) — [Reported, not Certain]. Low-consequence if
+slightly off for the merch SDKs; the KDP-exclusion claim is the one worth a fast
+confirm before treating as permanently settled, since it's the basis for never
+attempting book-upload automation again.
+
+### 🔴 COMMERCIAL RENDERING DOES NOT EXIST — proven 2026-08-12
+Previously recorded as "untested." That was wrong. It is **not implemented**, and
+has never produced a single MP4. Verified by running the exact command the agent runs:
+
+```
+$ python empire_render.py --script .temp_commercial_commercial-test-workflow-001.json
+empire_render.py: error: the following arguments are required: --channel, --episode
+exit code: 2
+```
+
+Four independent breaks:
+
+1. **`video_pipeline_agent.py:82`** builds
+   `python empire_render.py --script {path}` — but `--channel` and `--episode` are
+   both `required=True` (`empire_render.py:1052,1054`). **argparse exits 2 before
+   any render starts.**
+2. **No valid channel exists for commercials.** `--channel` is
+   `choices={GG, IL, LO}` — documentary/cartoon channels only. There is no Boss
+   Listers / product channel.
+3. **The commercial scene types are not implemented.** `product_showcase`,
+   `price_and_cta`, `product_loop`, `gradient_dark_gold` (emitted by
+   `lib/commercial_generator.py`) appear **nowhere** in `empire_render.py`. It
+   renders episode scenes — narration over Ken Burns stills — not product layouts.
+4. **Output path mismatch.** `empire_render.py:986` writes
+   `renders/{channel_dir}/{ep_id}_final.mp4`. `video_pipeline_agent.py:102-106`
+   looks in `output/{mission_id}.mp4`, `renders/{mission_id}.mp4`,
+   `.temp_commercial_{mission_id}.mp4`. **None match** — so even a successful
+   render would log "⚠️ Rendered file not found" and never queue for crosspost.
+
+**Evidence this has been failing silently for a while:** four commercial missions
+sit in `MISSION_BOARD.json`, four `.temp_commercial_*.json` files sit in the repo
+root (written at `video_pipeline_agent.py:79` immediately before the failing
+command), and zero commercial MP4s exist anywhere.
+
+### ✅ COMMERCIAL RENDERER BUILT + VERIFIED — 2026-08-12 (same session, later)
+New file: **`render_commercial.py`** (repo root). Dedicated entrypoint —
+`--script` in, MP4 out, no `--channel`/`--episode` because a commercial has
+neither. Reuses `video_effects.py`'s proven primitives (`ken_burns_clip`,
+`mix_music`) rather than reimplementing FFmpeg filter graphs; adds two new
+ones (`add_title_card`, `add_price_card`) for the commercial-specific scenes.
+Dispatches all 5 scene types from `lib/commercial_generator.py`: title,
+product_showcase, description, price_and_cta, product_loop. Output: 1080x1920
+(Reels/TikTok/Shorts), configurable via `--size`.
+
+**Wired in:** `agents/video_pipeline_agent.py:82` fixed to call
+`render_commercial.py` instead of `empire_render.py` for commercial missions,
+writing to `output/{mission_id}.mp4` — the exact path its own downstream
+lookup already checked first, so no change needed there. Full python path
+used (not bare `python`), matching the documented `py`-not-on-PATH lesson.
+
+**Two real bugs found and fixed while building this** (both pre-existing,
+neither introduced by this work):
+1. **`add_lower_third()` was silently broken** — used `y=ih-110` in a
+   `drawtext` filter; `ih` is undefined inside drawtext's own expression
+   evaluator (belongs to scale/crop/drawbox, not drawtext). Confirmed by
+   direct execution: `"Undefined constant ... in 'ih-110'"`, zero-byte
+   output. Never triggered by a completed render — only `gg_ep012_v3.json`
+   sets `lower_third`, and S3 scripts aren't rendered yet. Caught before
+   `render_season3.bat` would have hit it. Fixed: `ih` → `h`.
+2. **Concatenating clips with inconsistent stream layouts silently drops
+   audio.** Scenes without narration (title/showcase/loop) had video-only
+   clips (`ken_burns_clip` uses `-an`); narrated scenes (description,
+   price_and_cta) had video+audio. The concat demuxer's `-c copy` took its
+   stream template from the FIRST clip — video-only — and silently dropped
+   ALL audio from the final output. The render reported success (`✅ ...
+   23.1s`); `ffprobe` on the actual file showed **zero audio streams**.
+   Fixed with `add_silent_audio()` — every scene now gets an audio track,
+   silent or real, before concat. This is the exact "looks done, isn't"
+   pattern from everything else found today — caught by verifying the
+   output file directly instead of trusting the exit message.
+
+**Verified, not assumed** — 3 independent checks against the real rendered
+file (not a placeholder image, real photos from `all_pictures/`):
+- `ffprobe` stream list: video (1080x1920 h264) + audio (aac) both present
+- Audio stream duration matches the full video duration (23.1s, not truncated)
+- `volumedetect`: mean -32.3dB / max -4.3dB — consistent with real speech
+  peaks over silence, not a dead/silent track
+
+**Also fixed:** the wiring-inspector bot (`bot_19_wiring_inspector.py`) had
+its own false-positive bug — its regex-based CLI-contract check flagged
+plain-English comments/docstrings that merely *mention* a command (e.g. this
+fix's own changelog comment quoting the old broken invocation as prose) as if
+they were live code constructing that command. Added a requirement that the
+matched line also contain a real code marker (`cmd`, `subprocess`, `.run(`,
+etc.) and skip comment/docstring-opening lines. Re-ran clean afterward.
+
+**Known gaps, disclosed rather than hidden:**
+- **No music mixing yet in practice** — `mix_music()` is wired and reused
+  correctly, but no royalty-free track exists anywhere in this repo suited to
+  a product ad (`music/battle_epic.mp3` is a documentary battle theme —
+  wrong mood; `assets/music/` and `music/freepd/` are empty). Renders
+  silently skip music rather than substituting a mismatched track — that's
+  the deliberate choice, not an oversight, but it means today's real output
+  has visuals + narration only, no bed music.
+- `"background": "gradient_dark_gold"` in the JSON is a mood keyword with no
+  matching asset. Title cards with no product image fall back to a flat
+  solid dark-gold-ish color (`solid_background()`), not an actual gradient —
+  an honest stand-in, not a faked system.
+- **4 old missions/artifacts predate this fix** and are still sitting as
+  historical debris (`.temp_commercial_commercial-restored-*.json`,
+  60-90h old per the wiring bot). A fresh commercial mission now flows
+  through correctly; these old ones need a human decision — reprocess or
+  discard — not silently auto-resolved.
+- Only tested with `--music` omitted. `--music <path>` accepts a file but
+  hasn't been exercised end-to-end.
+
+### ✅ NEW COUNCIL BOT — `bot_19_wiring_inspector` (priority 8)
+`council/bots/bot_19_wiring_inspector.py`. Built 2026-08-12 in response to the
+above: **14 council bots were running and none noticed**, because all 14 inspect
+render OUTPUT and nothing inspected whether the pipeline was CONNECTED.
+
+Four checks, all credential-free, all hard yes/no:
+
+| Check | Catches |
+|---|---|
+| **CLI contract** | A file builds `empire_render.py --script …` but the script requires `--channel/--episode` → argparse exit 2. Introspects each script's `--help` usage line for required flags, then greps every caller that constructs a command for it. |
+| **Mission rot** | `MISSION_BOARD.json` entries pending past 6h — means the consumer is dead or failing silently. (Standing rule: the board is an action queue, not a backlog.) |
+| **Orphaned artifacts** | `.temp_commercial_*.json` with no matching MP4 — the fingerprint of a render prepared and then died. |
+| **Queue contracts** | A queue artifact written by a producer that no consumer references = silent dead end. Also surfaces crosspost publishes stuck in `posting` (quarantined). |
+
+`auto_fix = False` **deliberately** — a wiring break means two components disagree
+about a contract, and guessing which side is wrong risks "healing" the correct one.
+
+**First run found 9 issues**, including the commercial missions rotting for
+**60-83 hours** and the exact `video_pipeline_agent.py:82` CLI bug, in ~5 seconds.
+The crosspost-queue check correctly passed (fixed earlier same day), confirming it
+is not merely always-firing.
+
+```bash
+python council/council.py --channel gg --bot bot_19_wiring_inspector
+```
+
+**Lesson for the council generally:** self-healing that only inspects OUTPUT
+cannot detect a pipeline that never RAN. A missing output and a never-invoked
+stage look identical from downstream. Contract checks are cheap, instant, and
+need no credentials — prefer them over output forensics wherever a contract exists.
+
+### council_run.bat was broken
+Called `py`, which is not on PATH on this machine (already a documented lesson).
+Fixed to use `%PYEXE%` full interpreter path. **Note: all 14 council bots are
+video-pipeline bots — none cover Boss Listers, inventory, or commerce.**
 
 ## Session Work Summary
 

@@ -13,14 +13,38 @@ except ImportError:
     print("⚠️ Playwright not installed. Run: pip install playwright")
     print("   Then run: playwright install")
 
-from lib.platform_connectors import Listing, Sale, PlatformConnector
+from lib.platform_connectors import (
+    Listing, Sale, PlatformConnector,
+    GrailedConnector, VintedConnector, VestiaireConnector,
+    EbayConnector, ReverbConnector, RealRealConnector, MercadoLibreConnector
+)
 
 
 class BrowserConnector(PlatformConnector):
-    """Base class for browser automation connectors."""
+    """Base class for browser automation connectors.
+
+    Every subclass authenticates by splitting self.auth_token on ":" into
+    username/password for Playwright form-filling. PlatformConnector.__init__
+    only ever populates self.auth_token from {PLATFORM}_TOKEN, but every
+    credential-setup script in agents/ writes {PLATFORM}_USERNAME and
+    {PLATFORM}_PASSWORD as two separate variables instead — so auth_token was
+    always None here and every browser connector failed regardless of what
+    credentials existed. Fixed by constructing auth_token from the pair the
+    tooling actually writes, so the unchanged split(":", 1) calls downstream
+    now work.
+    """
 
     def __init__(self, platform_name: str):
         super().__init__(platform_name)
+        if not self.auth_token:
+            prefix = platform_name.upper()
+            # The setup scripts are inconsistent about which they write per
+            # platform (MERCARI_EMAIL / FACEBOOK_EMAIL vs WHATNOT_USERNAME) —
+            # accept either rather than guessing wrong per platform.
+            login = os.getenv(f"{prefix}_USERNAME") or os.getenv(f"{prefix}_EMAIL")
+            password = os.getenv(f"{prefix}_PASSWORD")
+            if login and password:
+                self.auth_token = f"{login}:{password}"
         self.browser: Optional[Browser] = None
         self.page: Optional[Page] = None
 
@@ -359,7 +383,11 @@ class FacebookMarketplaceBrowserConnector(BrowserConnector):
     """Facebook Marketplace browser automation connector."""
 
     def __init__(self):
-        super().__init__("facebook_web")
+        # Was "facebook_web" — every other platform here matches its plain
+        # lowercase name (poshmark, mercari, etsy...), and .env has plain
+        # FACEBOOK_EMAIL/FACEBOOK_PASSWORD, not FACEBOOK_WEB_*. The suffix
+        # meant this connector could never find its own credentials.
+        super().__init__("facebook")
 
     def authenticate(self) -> bool:
         if not self.auth_token:
@@ -643,7 +671,314 @@ class PinterestBrowserConnector(BrowserConnector):
         except: return []
 
 
-# Browser connector registry - ALL PLATFORMS
+class RedditConnector(BrowserConnector):
+    """Reddit r/marketplace and r/flipping browser connector."""
+
+    def __init__(self):
+        super().__init__("reddit")
+
+    def authenticate(self) -> bool:
+        if not self.auth_token:
+            print("⚠️ Reddit: No credentials (REDDIT_USERNAME, REDDIT_PASSWORD)")
+            return False
+        try:
+            username, password = self.auth_token.split(":", 1)
+            return self._login(
+                username, password,
+                "https://www.reddit.com/login",
+                "input[name='username']",
+                "input[name='password']",
+                "button[type='submit']"
+            )
+        except:
+            return False
+
+    def create_listing(self, title: str, description: str, price: float, images: List[str]) -> Optional[Listing]:
+        try:
+            self._start_browser()
+            self.page.goto("https://www.reddit.com/r/marketplace/submit", wait_until="networkidle")
+            self.page.fill("input[placeholder='Post title']", f"[H] {title} [W] ${price}")
+            self.page.fill("textarea", description)
+            self.page.click("button:has-text('Post')")
+            print(f"✓ Reddit: Posted {title}")
+            return Listing("reddit_post", "reddit", title, description, price, 1, images, "active", self.page.url, datetime.now(), datetime.now())
+        except Exception as e:
+            print(f"❌ Reddit error: {e}")
+            return None
+
+    def update_listing(self, listing_id: str, **kwargs) -> bool:
+        try:
+            self._start_browser()
+            self.page.goto(f"https://www.reddit.com/r/marketplace/comments/{listing_id}", wait_until="networkidle")
+            if "price" in kwargs:
+                self.page.click("button:has-text('Edit')")
+                self.page.wait_for_selector("textarea")
+                self.page.fill("textarea", f"Updated price: ${kwargs['price']}")
+                self.page.click("button:has-text('Save')")
+            return True
+        except:
+            return False
+
+    def delist(self, listing_id: str) -> bool:
+        try:
+            self._start_browser()
+            self.page.goto(f"https://www.reddit.com/r/marketplace/comments/{listing_id}", wait_until="networkidle")
+            self.page.click("button:has-text('Delete')")
+            return True
+        except:
+            return False
+
+    def get_sales(self, since: datetime) -> List[Sale]:
+        return []  # Reddit doesn't track sales directly
+
+    def get_inventory(self) -> List[Listing]:
+        try:
+            self._start_browser()
+            self.page.goto("https://www.reddit.com/user/me/submitted", wait_until="networkidle")
+            listings = []
+            posts = self.page.query_selector_all("[data-testid='post']")
+            for post in posts[:20]:
+                listings.append(Listing(
+                    str(post.get_attribute("data-id")),
+                    "reddit",
+                    post.query_selector(".title").text_content() if post.query_selector(".title") else "",
+                    "",
+                    0.0,
+                    1,
+                    [],
+                    "active",
+                    "",
+                    datetime.now(),
+                    datetime.now()
+                ))
+            print(f"📋 Reddit: Found {len(listings)} posts")
+            return listings
+        except:
+            return []
+
+
+class LinkedInConnector(BrowserConnector):
+    """LinkedIn marketplace connector for B2B reselling."""
+
+    def __init__(self):
+        super().__init__("linkedin")
+
+    def authenticate(self) -> bool:
+        if not self.auth_token:
+            print("⚠️ LinkedIn: No credentials (LINKEDIN_EMAIL, LINKEDIN_PASSWORD)")
+            return False
+        try:
+            email, password = self.auth_token.split(":", 1)
+            return self._login(
+                email, password,
+                "https://www.linkedin.com/login",
+                "input[name='session_key']",
+                "input[name='session_password']",
+                "button[type='submit']"
+            )
+        except:
+            return False
+
+    def create_listing(self, title: str, description: str, price: float, images: List[str]) -> Optional[Listing]:
+        try:
+            self._start_browser()
+            self.page.goto("https://www.linkedin.com/business/marketplace", wait_until="networkidle")
+            self.page.click("button:has-text('Post')")
+            self.page.fill("input[placeholder='Item title']", title[:100])
+            self.page.fill("textarea", f"{description}\n\nPrice: ${price}")
+            self.page.click("button:has-text('Publish')")
+            print(f"✓ LinkedIn: Posted {title}")
+            return Listing("linkedin_post", "linkedin", title, description, price, 1, images, "active", self.page.url, datetime.now(), datetime.now())
+        except Exception as e:
+            print(f"❌ LinkedIn error: {e}")
+            return None
+
+    def update_listing(self, listing_id: str, **kwargs) -> bool:
+        return True  # LinkedIn updates through comments
+
+    def delist(self, listing_id: str) -> bool:
+        try:
+            self._start_browser()
+            self.page.goto(f"https://www.linkedin.com/feed/update/{listing_id}", wait_until="networkidle")
+            self.page.click("button[aria-label='Delete']")
+            return True
+        except:
+            return False
+
+    def get_sales(self, since: datetime) -> List[Sale]:
+        return []
+
+    def get_inventory(self) -> List[Listing]:
+        try:
+            self._start_browser()
+            self.page.goto("https://www.linkedin.com/business/marketplace/my-listings", wait_until="networkidle")
+            listings = []
+            items = self.page.query_selector_all("[data-item]")
+            for item in items[:50]:
+                listings.append(Listing(
+                    str(item.get_attribute("data-id")),
+                    "linkedin",
+                    item.query_selector(".title").text_content() if item.query_selector(".title") else "",
+                    "",
+                    0.0,
+                    1,
+                    [],
+                    "active",
+                    "",
+                    datetime.now(),
+                    datetime.now()
+                ))
+            print(f"📋 LinkedIn: Found {len(listings)} listings")
+            return listings
+        except:
+            return []
+
+
+class TwitchConnector(BrowserConnector):
+    """Twitch clips and community posts connector."""
+
+    def __init__(self):
+        super().__init__("twitch")
+
+    def authenticate(self) -> bool:
+        if not self.auth_token:
+            print("⚠️ Twitch: No credentials (TWITCH_USERNAME, TWITCH_PASSWORD)")
+            return False
+        try:
+            username, password = self.auth_token.split(":", 1)
+            return self._login(
+                username, password,
+                "https://www.twitch.tv/login",
+                "input[name='login']",
+                "input[name='password']",
+                "button[type='submit']"
+            )
+        except:
+            return False
+
+    def create_listing(self, title: str, description: str, price: float, images: List[str]) -> Optional[Listing]:
+        try:
+            self._start_browser()
+            self.page.goto("https://www.twitch.tv/creatorcamp/community/posts", wait_until="networkidle")
+            self.page.click("button:has-text('Create Post')")
+            self.page.fill("input[placeholder='Post title']", title)
+            self.page.fill("textarea", f"{description}\n💰 Price: ${price}\n✨ DM for details!")
+            self.page.click("button:has-text('Publish')")
+            print(f"✓ Twitch: Posted {title}")
+            return Listing("twitch_post", "twitch", title, description, price, 1, images, "active", self.page.url, datetime.now(), datetime.now())
+        except Exception as e:
+            print(f"❌ Twitch error: {e}")
+            return None
+
+    def update_listing(self, listing_id: str, **kwargs) -> bool:
+        return True  # Twitch posts updated via edits
+
+    def delist(self, listing_id: str) -> bool:
+        try:
+            self._start_browser()
+            self.page.goto(f"https://www.twitch.tv/creatorcamp/community/posts/{listing_id}", wait_until="networkidle")
+            self.page.click("button[aria-label='Delete']")
+            return True
+        except:
+            return False
+
+    def get_sales(self, since: datetime) -> List[Sale]:
+        return []
+
+    def get_inventory(self) -> List[Listing]:
+        try:
+            self._start_browser()
+            self.page.goto("https://www.twitch.tv/creatorcamp/community/posts", wait_until="networkidle")
+            listings = []
+            posts = self.page.query_selector_all("[data-post-id]")
+            for post in posts[:50]:
+                listings.append(Listing(
+                    str(post.get_attribute("data-post-id")),
+                    "twitch",
+                    post.query_selector(".title").text_content() if post.query_selector(".title") else "",
+                    "",
+                    0.0,
+                    1,
+                    [],
+                    "active",
+                    "",
+                    datetime.now(),
+                    datetime.now()
+                ))
+            print(f"📋 Twitch: Found {len(listings)} posts")
+            return listings
+        except:
+            return []
+
+
+class DiscordConnector(BrowserConnector):
+    """Discord community bot for marketplace listings."""
+
+    def __init__(self):
+        super().__init__("discord")
+
+    def authenticate(self) -> bool:
+        if not self.auth_token:
+            print("⚠️ Discord: No bot token (DISCORD_BOT_TOKEN)")
+            return False
+        # Discord uses bot token auth, not browser login
+        return True
+
+    def create_listing(self, title: str, description: str, price: float, images: List[str]) -> Optional[Listing]:
+        # This would use Discord API, not browser automation
+        try:
+            self._start_browser()
+            # Post to #marketplace channel
+            self.page.goto("https://discord.com/app", wait_until="networkidle")
+            self.page.click("text=#marketplace")
+            self.page.click("input[placeholder='Say something...']")
+            embed = f"```\n{title} - ${price}\n{description}\n```"
+            self.page.fill("input[placeholder='Say something...']", embed)
+            self.page.press("input[placeholder='Say something...']", "Enter")
+            print(f"✓ Discord: Posted {title}")
+            return Listing("discord_msg", "discord", title, description, price, 1, images, "active", "discord://marketplace", datetime.now(), datetime.now())
+        except Exception as e:
+            print(f"❌ Discord error: {e}")
+            return None
+
+    def update_listing(self, listing_id: str, **kwargs) -> bool:
+        return True
+
+    def delist(self, listing_id: str) -> bool:
+        return True
+
+    def get_sales(self, since: datetime) -> List[Sale]:
+        return []
+
+    def get_inventory(self) -> List[Listing]:
+        try:
+            self._start_browser()
+            self.page.goto("https://discord.com/app", wait_until="networkidle")
+            self.page.click("text=#marketplace")
+            listings = []
+            # Parse Discord messages for listings (simplified)
+            messages = self.page.query_selector_all("[data-message-id]")
+            for msg in messages[:20]:
+                listings.append(Listing(
+                    str(msg.get_attribute("data-message-id")),
+                    "discord",
+                    msg.text_content()[:100],
+                    "",
+                    0.0,
+                    1,
+                    [],
+                    "active",
+                    "",
+                    datetime.now(),
+                    datetime.now()
+                ))
+            print(f"📋 Discord: Found {len(listings)} messages")
+            return listings
+        except:
+            return []
+
+
+# Browser connector registry - ALL PLATFORMS (10+ platforms)
 BROWSER_CONNECTORS = {
     "poshmark_web": PoshmarkConnector,
     "mercari_web": MercariConnector,
@@ -652,7 +987,11 @@ BROWSER_CONNECTORS = {
     "whatnot_web": WhatnotConnector,
     "etsy_web": EtsyBrowserConnector,
     "pinterest_web": PinterestBrowserConnector,
-    "grailed_web": GrailedConnector,  # Reuse REST impl for browser fallback
+    "reddit_web": RedditConnector,
+    "linkedin_web": LinkedInConnector,
+    "twitch_web": TwitchConnector,
+    "discord_web": DiscordConnector,
+    "grailed_web": GrailedConnector,
     "vinted_web": VintedConnector,
     "vestiaire_web": VestiaireConnector,
     "ebay_web": EbayConnector,

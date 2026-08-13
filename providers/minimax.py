@@ -49,6 +49,8 @@ def _load_env() -> None:
 class MinimaxProvider(ProviderBase):
     """MiniMax Hailuo text-to-video provider."""
 
+    supports_reference_image = True  # generate_video() sets payload["first_frame_image"]
+
     def __init__(self) -> None:
         _load_env()
         self.api_key: str = os.environ.get("MINIMAX_API_KEY", "")

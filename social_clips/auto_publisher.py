@@ -153,22 +153,40 @@ def publish_youtube_short(clip_path: Path, title: str, description: str,
 
 def publish_instagram(clip_path: Path, caption: str) -> dict:
     """
-    Instagram Reel via Graph API.
-    TODO: needs IG_ACCESS_TOKEN (+ IG_USER_ID) in .env.
-    Flow: POST /{ig-user-id}/media (media_type=REELS, video_url, caption)
-          → poll status → POST /{ig-user-id}/media_publish (creation_id).
-    Note: Graph API requires a PUBLIC video URL — serve the clip via ngrok
-    or upload to hosting first.
+    Instagram Reel — IMPLEMENTED 2026-08-12. See lib/instagram_publisher.py.
+
+    Uses the resumable binary upload path, so the clip is sent straight from
+    local disk — no public URL / ngrok / CDN needed (the old docstring's claim
+    that a public URL is mandatory was wrong; Meta supports both).
+
+    Requires IG_ACCESS_TOKEN and IG_USER_ID in .env, and the target account must
+    be a Business or Creator account. Personal accounts cannot publish via API.
+
+    ⚠ This posts publicly and immediately. Instagram has no unpublish API.
     """
     token = _token("IG_ACCESS_TOKEN")
     if not token:
         return _skip("instagram", "IG_ACCESS_TOKEN")
+    if not _token("IG_USER_ID"):
+        return _skip("instagram", "IG_USER_ID")
     if not clip_path or not Path(clip_path).exists():
         return {"status": "failed", "detail": "clip missing"}
-    # TODO(api): implement container create + publish once IG_ACCESS_TOKEN is set
-    return {"status": "failed",
-            "detail": "IG_ACCESS_TOKEN present but Graph API call not yet "
-                      "implemented — needs IG_USER_ID + public video URL (ngrok)"}
+
+    from lib.instagram_publisher import InstagramError, publish_reel
+
+    try:
+        result = publish_reel(Path(clip_path), caption,
+                              log=lambda m: print(f"{TAG} {m}"))
+    except InstagramError as e:
+        # `permanent` suppresses the retry loop: a wrong account type or a
+        # missing permission will not resolve itself 60 seconds later.
+        return {"status": "failed", "detail": str(e), "permanent": e.permanent}
+
+    print(f"{TAG} instagram: posted {result.media_id}")
+    return {"status": "posted",
+            "detail": f"media {result.media_id} "
+                      f"(quota {result.quota_used}/{result.quota_total})",
+            "media_id": result.media_id}
 
 
 def publish_tiktok(clip_path: Path, caption: str) -> dict:
@@ -242,6 +260,12 @@ def _publish_with_retry(platform: str, fn, *args,
         except Exception as e:  # publishers must never kill the run
             last = {"status": "failed", "detail": f"crashed: {e}"}
         if last.get("status") in ("posted", "skipped", "pending_approval"):
+            return last | {"attempts": attempt}
+        if last.get("permanent"):
+            # Wrong account type, missing permission, bad codec — retrying in
+            # 60s cannot fix any of these. Fail fast and say why.
+            print(f"{TAG} {platform}: permanent failure, not retrying — "
+                  f"{last.get('detail', '?')}")
             return last | {"attempts": attempt}
         print(f"{TAG} {platform}: attempt {attempt}/{retries} failed — "
               f"{last.get('detail', '?')}")

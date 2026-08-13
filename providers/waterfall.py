@@ -87,7 +87,8 @@ def paid_credit_warning(seconds: int = 10, context: str = "Higgsfield") -> None:
 
 # ── Video providers ────────────────────────────────────────────────────────────
 def _run_video_provider(provider: ProviderBase, name: str, prompt: str,
-                        duration_sec: int, aspect_ratio: str, dest: Path) -> Path | None:
+                        duration_sec: int, aspect_ratio: str, dest: Path,
+                        reference_image_path: str | None = None) -> Path | None:
     """
     Full lifecycle for one async video provider: submit → poll → download.
     Returns the downloaded clip path or None. Never raises.
@@ -95,8 +96,8 @@ def _run_video_provider(provider: ProviderBase, name: str, prompt: str,
     try:
         if not provider.is_connected():
             return None  # silent skip — key not set
-        job = provider.generate_video(prompt, aspect_ratio=aspect_ratio,
-                                      duration_sec=duration_sec)
+        job = provider.generate_video(prompt, reference_image_path=reference_image_path,
+                                      aspect_ratio=aspect_ratio, duration_sec=duration_sec)
         if job.get("status") != "submitted" or not job.get("job_id"):
             _log(f"{name}: submit failed — {str(job.get('raw', ''))[:200]}", err=True)
             return None
@@ -231,7 +232,8 @@ def _pollinations_image(prompt: str, dest: Path) -> Path | None:
 
 # ── Provider registry ──────────────────────────────────────────────────────────
 def _video_chain() -> list[tuple[str, Callable[[], ProviderBase]]]:
-    """Free video providers in waterfall order (lazy factories)."""
+    """Free-first video providers, plus SkyReels-V3 (paid-when-configured,
+    silently skipped by is_connected() until a RunPod endpoint is set up)."""
     from .fal_video import FalVideoProvider
     from .hf_video import HFVideoProvider
     from .image_to_video import ImageToVideoProvider
@@ -239,6 +241,7 @@ def _video_chain() -> list[tuple[str, Callable[[], ProviderBase]]]:
     from .minimax import MinimaxProvider
     from .pika import PikaProvider
     from .replicate_video import ReplicateVideoProvider
+    from .skyreels_v3 import SkyReelsV3Provider
     return [
         ("luma_ai", LumaProvider),
         ("fal_video", FalVideoProvider),          # one-time fal signup credits
@@ -247,7 +250,25 @@ def _video_chain() -> list[tuple[str, Callable[[], ProviderBase]]]:
         ("minimax", MinimaxProvider),
         ("replicate", ReplicateVideoProvider),
         ("image_to_video", ImageToVideoProvider), # free still → real motion
+        ("skyreels_v3", SkyReelsV3Provider),      # PAID once RunPod is configured —
+                                                   # best multi-character reference support;
+                                                   # is_connected()=False (no-op) until set up
     ]
+
+
+def _order_for_reference(chain: list[tuple[str, Callable[[], ProviderBase]]],
+                         reference_image_path: str | None
+                         ) -> list[tuple[str, Callable[[], ProviderBase]]]:
+    """
+    When a reference/character image is available, try providers that
+    actually condition on it (ProviderBase.supports_reference_image) before
+    providers that would silently ignore it and generate an unconditioned
+    (character-inconsistent) clip. No-op when there's no reference image.
+    Stable sort — relative free-first ordering within each group is preserved.
+    """
+    if not reference_image_path:
+        return chain
+    return sorted(chain, key=lambda item: not getattr(item[1], "supports_reference_image", False))
 
 
 def _higgsfield() -> tuple[str, Callable[[], ProviderBase]]:
@@ -258,17 +279,28 @@ def _higgsfield() -> tuple[str, Callable[[], ProviderBase]]:
 
 # ── Public API ─────────────────────────────────────────────────────────────────
 def generate_scene_asset(prompt: str, duration_sec: int, aspect_ratio: str,
-                         work_dir: Path, scene_tag: str) -> SceneAsset | None:
+                         work_dir: Path, scene_tag: str,
+                         reference_image_path: str | None = None) -> SceneAsset | None:
     """
     Run the full free-first waterfall for one scene.
+
+    reference_image_path: optional path to a character/scene reference image
+    (e.g. one of the character sheets in characters/<channel>/). When set,
+    providers that actually condition on a reference image
+    (ProviderBase.supports_reference_image) are tried before providers that
+    would silently ignore it — see _order_for_reference(). Providers that
+    don't support it still run as normal fallbacks, just later in the order.
 
     Returns a SceneAsset ("video" or "image") or None if every provider —
     including paid Higgsfield — failed. Never raises.
     """
     work_dir.mkdir(parents=True, exist_ok=True)
 
-    # 1-7. Free/cheap video providers (image_to_video = free REAL-MOTION fallback)
-    for name, factory in _video_chain():
+    # 1-8. Free/cheap video providers (image_to_video = free REAL-MOTION fallback;
+    # skyreels_v3 = best character-reference support, paid-once-configured).
+    # Reordered to prefer reference-capable providers when a reference image
+    # was passed in — see _order_for_reference().
+    for name, factory in _order_for_reference(_video_chain(), reference_image_path):
         try:
             provider = factory()
             if not provider.is_connected():
@@ -277,9 +309,11 @@ def generate_scene_asset(prompt: str, duration_sec: int, aspect_ratio: str,
             _log(f"{name}: init failed — {e}", err=True)
             continue
         dest = work_dir / f"{scene_tag}_{name}.mp4"
-        clip = _run_video_provider(provider, name, prompt, duration_sec, aspect_ratio, dest)
+        clip = _run_video_provider(provider, name, prompt, duration_sec, aspect_ratio, dest,
+                                   reference_image_path=reference_image_path)
         if clip:
-            _log(f"{scene_tag} → {name} ✅")
+            _log(f"{scene_tag} → {name} "
+                 f"{'(reference-conditioned) ' if reference_image_path and provider.supports_reference_image else ''}✅")
             return SceneAsset(kind="video", path=clip, provider=name)
 
     # 8-15. Image chain → Ken Burns. ZERO-SIGNUP real sources first
@@ -316,7 +350,8 @@ def generate_scene_asset(prompt: str, duration_sec: int, aspect_ratio: str,
             time.sleep(10)
             _log("no cancel — proceeding with PAID Higgsfield", err=True)
             dest = work_dir / f"{scene_tag}_{name}.mp4"
-            clip = _run_video_provider(provider, name, prompt, duration_sec, aspect_ratio, dest)
+            clip = _run_video_provider(provider, name, prompt, duration_sec, aspect_ratio, dest,
+                                       reference_image_path=reference_image_path)
             if clip:
                 return SceneAsset(kind="video", path=clip, provider=name)
     except Exception as e:

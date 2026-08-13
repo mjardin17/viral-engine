@@ -19,6 +19,27 @@ token_il.pickle
 token_lo.pickle
 token_ed.pickle
 
+# --- ADDED 2026-08-12 after credential audit ---
+# These held live secrets and were NOT ignored. The documented workflow is
+# `git add -A`, so each was one routine commit away from a public repo.
+#
+# ⚠ credentials.json above is ALREADY TRACKED (in .gitignore since line 13, but
+#   gitignore does not apply to files already in the index). It must be untracked
+#   with `git rm --cached credentials.json` AND the Google OAuth client rotated.
+# NOTE: git does NOT support trailing comments on a pattern line — a `#`
+# mid-line becomes part of the pattern. Comments must be on their own line.
+
+# plaintext platform passwords, written by accounts_setup_agent.py:52
+accounts.csv
+# no CSV in this repo should ever carry credentials
+*.csv
+# Playwright cookie jars — session cookies bypass password AND 2FA
+sessions/
+# credential_collector_agent.py writes credential values here
+credential_collection_log.txt
+*_credentials.json
+.crosspost_queue.lock
+
 # --- GENERATED VIDEO/AUDIO (too large) ---
 renders/
 output/

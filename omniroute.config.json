@@ -1,0 +1,141 @@
+{
+  "version": "3.8.49",
+  "server": {
+    "port": 20128,
+    "host": "127.0.0.1",
+    "protocol": "http"
+  },
+  "dashboard": {
+    "enabled": true,
+    "port": 20128,
+    "url": "http://localhost:20128/dashboard"
+  },
+  "providers": {
+    "claude": {
+      "type": "oauth",
+      "enabled": false,
+      "note": "Enable via dashboard — OAuth sign-in required"
+    },
+    "gemini": {
+      "type": "api-key",
+      "enabled": true,
+      "apiKey": "${GEMINI_API_KEY}",
+      "models": ["gemini-2.0-flash", "gemini-pro", "gemini-1.5-pro"]
+    },
+    "openai": {
+      "type": "api-key",
+      "enabled": true,
+      "apiKey": "${OPENAI_API_KEY}",
+      "models": ["gpt-4o", "gpt-4-turbo", "gpt-4", "gpt-3.5-turbo"]
+    },
+    "replicate": {
+      "type": "api-key",
+      "enabled": true,
+      "apiKey": "${REPLICATE_API_TOKEN}",
+      "models": ["replicate-video", "sdxl", "llama-2-70b"]
+    },
+    "fal": {
+      "type": "api-key",
+      "enabled": true,
+      "apiKey": "${FAL_KEY}",
+      "models": ["fal-ai/ltxv-13b-098-distilled", "fal-ai/wan/v2.2-a14b"]
+    },
+    "huggingface": {
+      "type": "api-key",
+      "enabled": true,
+      "apiKey": "${HF_TOKEN}",
+      "models": ["meta-llama/Llama-2-70b", "gpt2", "distilbert-base-uncased"]
+    },
+    "groq": {
+      "type": "api-key",
+      "enabled": false,
+      "note": "Add GROQ_API_KEY to .env to enable"
+    },
+    "cerebras": {
+      "type": "api-key",
+      "enabled": false,
+      "note": "Free tier — add CEREBRAS_API_KEY to .env to enable"
+    },
+    "pollinations": {
+      "type": "free",
+      "enabled": true,
+      "models": ["pollinations-image", "pollinations-video"]
+    },
+    "kiro": {
+      "type": "free",
+      "enabled": true,
+      "note": "Free forever — no API key needed"
+    }
+  },
+  "routing": {
+    "default": "auto",
+    "strategies": {
+      "auto": {
+        "name": "Auto Failover (9-factor)",
+        "description": "Smart scoring — latency, cost, health, quota — switches in milliseconds when provider fails",
+        "tierOrder": ["claude", "openai", "gemini", "replicate", "fal", "huggingface"],
+        "tier2": ["groq", "cerebras"],
+        "tier3": ["pollinations", "kiro"],
+        "failoverMs": 8
+      },
+      "cheap": {
+        "name": "Cost Optimized",
+        "description": "Drain free tiers first, then cheapest paid",
+        "priority": ["pollinations", "kiro", "cerebras", "groq", "fal", "gemini", "openai"]
+      },
+      "fast": {
+        "name": "Lowest Latency",
+        "description": "Prioritize response speed over cost",
+        "priority": ["openai", "groq", "gemini", "claude"]
+      },
+      "coding": {
+        "name": "Code Generation Focus",
+        "description": "Prioritize Claude, GPT-4, then fallback",
+        "priority": ["claude", "openai", "gemini", "replicate"]
+      },
+      "offline": {
+        "name": "Local & Free Only",
+        "description": "No paid APIs — local + free tier only",
+        "priority": ["pollinations", "kiro", "huggingface-local"]
+      }
+    }
+  },
+  "compression": {
+    "enabled": true,
+    "mode": "stacked",
+    "engines": ["session-dedup", "rtk", "caveman"],
+    "tokenSavings": "60-95%"
+  },
+  "resilience": {
+    "circuitBreaker": {
+      "enabled": true,
+      "failureThreshold": 5,
+      "resetTimeoutMs": 60000
+    },
+    "cooldown": {
+      "enabled": true,
+      "cooldownMs": 30000
+    },
+    "lockout": {
+      "enabled": true,
+      "lockoutMs": 60000
+    }
+  },
+  "memory": {
+    "enabled": true,
+    "type": "sqlite",
+    "storage": "./omniroute-memory.db",
+    "encryption": "aes-256"
+  },
+  "logging": {
+    "level": "info",
+    "format": "json",
+    "output": "./omniroute.log"
+  },
+  "analytics": {
+    "enabled": true,
+    "trackFailovers": true,
+    "trackLatency": true,
+    "trackCost": true
+  }
+}

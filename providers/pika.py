@@ -47,6 +47,8 @@ def _load_env() -> None:
 class PikaProvider(ProviderBase):
     """Pika Labs text-to-video provider (paid API — dark until key added)."""
 
+    supports_reference_image = True  # generate_video() sets payload["image"]
+
     def __init__(self) -> None:
         _load_env()
         self.api_key: str = os.environ.get("PIKA_API_KEY", "")

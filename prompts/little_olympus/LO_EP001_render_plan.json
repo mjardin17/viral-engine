@@ -1,0 +1,257 @@
+{
+  "episode_id": "LO_EP001",
+  "channel": "LO",
+  "channel_slug": "lo",
+  "script_path": "prompts\\little_olympus\\LO_EP001.json",
+  "scenes": [
+    {
+      "scene_id": "scene_01",
+      "render_tier": "higgsfield_video",
+      "reason": "explicit is_peak_moment=true",
+      "is_peak_moment": true,
+      "action_level": "medium",
+      "character": "little_zeus",
+      "location": "mount_olympus"
+    },
+    {
+      "scene_id": "scene_02",
+      "render_tier": "free",
+      "reason": "character 'little_zeus' not yet cached \u2014 needs one-time Higgsfield gen",
+      "is_peak_moment": false,
+      "action_level": "low",
+      "character": "little_zeus",
+      "location": "zeus_bedroom"
+    },
+    {
+      "scene_id": "scene_03",
+      "render_tier": "higgsfield_image",
+      "reason": "action_level=high, within image budget (1/8)",
+      "is_peak_moment": false,
+      "action_level": "high",
+      "character": "little_zeus",
+      "location": "zeus_bedroom"
+    },
+    {
+      "scene_id": "scene_04",
+      "render_tier": "higgsfield_image",
+      "reason": "action_level=high, within image budget (2/8)",
+      "is_peak_moment": false,
+      "action_level": "high",
+      "character": "little_zeus",
+      "location": "olympus_palace"
+    },
+    {
+      "scene_id": "scene_05",
+      "render_tier": "free",
+      "reason": "character 'hephaestus' not yet cached \u2014 needs one-time Higgsfield gen",
+      "is_peak_moment": false,
+      "action_level": "low",
+      "character": "hephaestus",
+      "location": "hephaestus_forge"
+    },
+    {
+      "scene_id": "scene_06",
+      "render_tier": "free",
+      "reason": "character 'poseidon' not yet cached \u2014 needs one-time Higgsfield gen",
+      "is_peak_moment": false,
+      "action_level": "low",
+      "character": "poseidon",
+      "location": "ocean_palace"
+    },
+    {
+      "scene_id": "scene_07",
+      "render_tier": "higgsfield_image",
+      "reason": "action_level=high, within image budget (3/8)",
+      "is_peak_moment": false,
+      "action_level": "high",
+      "character": "hercules",
+      "location": "olympus_garden"
+    },
+    {
+      "scene_id": "scene_08",
+      "render_tier": "higgsfield_image",
+      "reason": "action_level=high, within image budget (4/8)",
+      "is_peak_moment": false,
+      "action_level": "high",
+      "character": "hercules",
+      "location": "olympus_garden"
+    },
+    {
+      "scene_id": "scene_09",
+      "render_tier": "free",
+      "reason": "character 'athena' not yet cached \u2014 needs one-time Higgsfield gen",
+      "is_peak_moment": false,
+      "action_level": "medium",
+      "character": "athena",
+      "location": "olympus_library"
+    },
+    {
+      "scene_id": "scene_10",
+      "render_tier": "higgsfield_video",
+      "reason": "explicit is_peak_moment=true",
+      "is_peak_moment": true,
+      "action_level": "medium",
+      "character": "stormy",
+      "location": "sky_olympus"
+    },
+    {
+      "scene_id": "scene_11",
+      "render_tier": "higgsfield_image",
+      "reason": "action_level=high, within image budget (5/8)",
+      "is_peak_moment": false,
+      "action_level": "high",
+      "character": "little_zeus",
+      "location": "sky_olympus"
+    },
+    {
+      "scene_id": "scene_12",
+      "render_tier": "higgsfield_image",
+      "reason": "action_level=high, within image budget (6/8)",
+      "is_peak_moment": false,
+      "action_level": "high",
+      "character": "hercules",
+      "location": "olympus_forest"
+    },
+    {
+      "scene_id": "scene_13",
+      "render_tier": "free",
+      "reason": "character 'little_zeus' not yet cached \u2014 needs one-time Higgsfield gen",
+      "is_peak_moment": false,
+      "action_level": "low",
+      "character": "little_zeus",
+      "location": "olympus_forest"
+    },
+    {
+      "scene_id": "scene_14",
+      "render_tier": "free",
+      "reason": "character 'athena' not yet cached \u2014 needs one-time Higgsfield gen",
+      "is_peak_moment": false,
+      "action_level": "low",
+      "character": "athena",
+      "location": "olympus_forest"
+    },
+    {
+      "scene_id": "scene_15",
+      "render_tier": "higgsfield_video",
+      "reason": "explicit is_peak_moment=true",
+      "is_peak_moment": true,
+      "action_level": "low",
+      "character": "little_zeus",
+      "location": "olympus_forest"
+    },
+    {
+      "scene_id": "scene_16",
+      "render_tier": "free",
+      "reason": "character 'little_zeus' not yet cached \u2014 needs one-time Higgsfield gen",
+      "is_peak_moment": false,
+      "action_level": "medium",
+      "character": "little_zeus",
+      "location": "sky_olympus"
+    },
+    {
+      "scene_id": "scene_17",
+      "render_tier": "higgsfield_video",
+      "reason": "explicit is_peak_moment=true",
+      "is_peak_moment": true,
+      "action_level": "high",
+      "character": "stormy",
+      "location": "sky_olympus"
+    },
+    {
+      "scene_id": "scene_18",
+      "render_tier": "higgsfield_video",
+      "reason": "explicit is_peak_moment=true",
+      "is_peak_moment": true,
+      "action_level": "low",
+      "character": "stormy",
+      "location": "sky_olympus"
+    },
+    {
+      "scene_id": "scene_19",
+      "render_tier": "higgsfield_video",
+      "reason": "explicit is_peak_moment=true",
+      "is_peak_moment": true,
+      "action_level": "low",
+      "character": "little_zeus",
+      "location": "sky_olympus"
+    },
+    {
+      "scene_id": "scene_20",
+      "render_tier": "higgsfield_video",
+      "reason": "explicit is_peak_moment=true",
+      "is_peak_moment": true,
+      "action_level": "medium",
+      "character": "little_zeus",
+      "location": "sky_olympus"
+    },
+    {
+      "scene_id": "scene_21",
+      "render_tier": "higgsfield_video",
+      "reason": "explicit is_peak_moment=true",
+      "is_peak_moment": true,
+      "action_level": "high",
+      "character": "little_zeus",
+      "location": "mount_olympus"
+    },
+    {
+      "scene_id": "scene_22",
+      "render_tier": "free",
+      "reason": "character 'stormy' not yet cached \u2014 needs one-time Higgsfield gen",
+      "is_peak_moment": false,
+      "action_level": "low",
+      "character": "stormy",
+      "location": "mount_olympus"
+    },
+    {
+      "scene_id": "scene_23",
+      "render_tier": "free",
+      "reason": "character 'little_zeus' not yet cached \u2014 needs one-time Higgsfield gen",
+      "is_peak_moment": false,
+      "action_level": "low",
+      "character": "little_zeus",
+      "location": "mount_olympus"
+    },
+    {
+      "scene_id": "scene_24",
+      "render_tier": "free",
+      "reason": "character 'little_zeus' not yet cached \u2014 needs one-time Higgsfield gen",
+      "is_peak_moment": false,
+      "action_level": "low",
+      "character": "little_zeus",
+      "location": "mount_olympus"
+    }
+  ],
+  "summary": {
+    "total_scenes": 24,
+    "tier_counts": {
+      "higgsfield_video": 8,
+      "higgsfield_image": 6,
+      "composited": 0,
+      "free": 10
+    },
+    "max_higgsfield_video_scenes": 4,
+    "max_higgsfield_image_scenes": 8,
+    "missing_character_cache": [
+      "athena",
+      "hephaestus",
+      "little_zeus",
+      "poseidon",
+      "stormy"
+    ],
+    "missing_background_cache": [],
+    "classified_at": "2026-07-22T23:42:50.738107"
+  },
+  "cost_estimate": {
+    "higgsfield_credits_est": 95.0,
+    "fal_cost_usd": 0.0,
+    "free_scenes": 10,
+    "total_scenes": 24,
+    "breakdown": {
+      "higgsfield_video_scenes": 8,
+      "higgsfield_image_scenes": 6,
+      "composited_scenes": 0,
+      "free_scenes": 10
+    }
+  },
+  "approved": true
+}

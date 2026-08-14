@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StoryForge Publishing - Automated Book Generation & Publishing</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            background: linear-gradient(135deg, #00d4ff, #0099ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 30px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #00d4ff;
+        }
+
+        /* Hero */
+        .hero {
+            text-align: center;
+            padding: 100px 0;
+            color: white;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            font-weight: 900;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero-subtitle {
+            font-size: 24px;
+            margin-bottom: 30px;
+            opacity: 0.95;
+            color: #00d4ff;
+        }
+
+        .hero-description {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto 50px;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, #00d4ff, #0099ff);
+            color: white;
+            padding: 16px 45px;
+            border: none;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(0, 212, 255, 0.4);
+        }
+
+        /* Section */
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 42px;
+            font-weight: 900;
+            margin-bottom: 60px;
+            color: #1a1a2e;
+        }
+
+        .section-alt {
+            background: white;
+        }
+
+        .section-light {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+
+        /* Flow Diagram */
+        .flow-diagram {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            margin: 50px 0;
+        }
+
+        .flow-step {
+            display: inline-block;
+            background: linear-gradient(135deg, #00d4ff, #0099ff);
+            color: white;
+            padding: 15px 25px;
+            border-radius: 8px;
+            margin: 0 10px 20px 0;
+            font-weight: 600;
+        }
+
+        .flow-arrow {
+            display: inline-block;
+            color: #00d4ff;
+            font-size: 24px;
+            margin: 0 10px;
+            vertical-align: middle;
+        }
+
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            border-top: 4px solid #00d4ff;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+        }
+
+        .feature-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            font-size: 22px;
+            color: #1a1a2e;
+            margin-bottom: 15px;
+        }
+
+        .feature-card p {
+            color: #666;
+            line-height: 1.8;
+        }
+
+        /* ROI Calculator */
+        .roi-section {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            margin: 50px 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .roi-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .roi-card {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 4px solid #00d4ff;
+        }
+
+        .roi-label {
+            font-size: 12px;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .roi-value {
+            font-size: 32px;
+            font-weight: 900;
+            color: #00d4ff;
+            margin-bottom: 8px;
+        }
+
+        .roi-detail {
+            font-size: 13px;
+            color: #666;
+        }
+
+        /* How It Works */
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .process-step {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #00d4ff, #0099ff);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 24px;
+            margin: 0 auto 15px;
+        }
+
+        .process-step h4 {
+            font-size: 18px;
+            color: #1a1a2e;
+            margin-bottom: 12px;
+        }
+
+        .process-step p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        /* Stats */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin: 50px 0;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .stat-number {
+            font-size: 42px;
+            font-weight: 900;
+            color: #00d4ff;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            color: #1a1a2e;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .stat-detail {
+            font-size: 13px;
+            color: #666;
+        }
+
+        /* Pricing */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .pricing-card {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            border: 2px solid #ecf0f1;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+        }
+
+        .pricing-card:hover {
+            border-color: #00d4ff;
+            transform: translateY(-8px);
+        }
+
+        .pricing-card.featured {
+            border-color: #00d4ff;
+            transform: scale(1.05);
+        }
+
+        .pricing-card h3 {
+            font-size: 24px;
+            color: #1a1a2e;
+            margin-bottom: 20px;
+        }
+
+        .price {
+            font-size: 48px;
+            font-weight: 900;
+            color: #00d4ff;
+            margin-bottom: 10px;
+        }
+
+        .price-period {
+            color: #999;
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
+
+        .features-list {
+            list-style: none;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+
+        .features-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid #ecf0f1;
+            color: #666;
+        }
+
+        .features-list li:before {
+            content: "✓ ";
+            color: #00d4ff;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+
+        .pricing-cta {
+            background: linear-gradient(135deg, #00d4ff, #0099ff);
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 25px;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.3s;
+        }
+
+        .pricing-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 212, 255, 0.3);
+        }
+
+        /* CTA Section */
+        .final-cta {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .final-cta h2 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+
+        .final-cta p {
+            font-size: 18px;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a1a2e;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .section-title {
+                font-size: 32px;
+            }
+
+            .pricing-card.featured {
+                transform: scale(1);
+            }
+
+            nav a {
+                margin-left: 15px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">⚡ StoryForge Publishing</div>
+                <nav>
+                    <a href="#how">How It Works</a>
+                    <a href="#roi">ROI</a>
+                    <a href="#pricing">Pricing</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <h1>Generate Books. Auto-Publish. Collect Royalties.</h1>
+            <p class="hero-subtitle">The AI that writes bestseller-quality books automatically</p>
+            <p class="hero-description">
+                Scout bestselling books. Analyze what makes them sell. Generate better versions. Auto-publish to Barnes & Noble and Amazon. Collect passive income 24/7.
+            </p>
+            <button class="cta-button">Start Free Trial</button>
+        </div>
+    </section>
+
+    <!-- The Machine -->
+    <section class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">The Automated Publishing Machine</h2>
+            <div class="flow-diagram">
+                <div class="flow-step">📊 Scout Bestsellers</div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step">🔍 Analyze Patterns</div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step">✨ AI Writes Better</div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step">🚀 Auto-Publish</div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step">💰 Collect Money</div>
+            </div>
+
+            <div class="stats">
+                <div class="stat-card">
+                    <div class="stat-number">1,000+</div>
+                    <div class="stat-label">Books/Month Generated</div>
+                    <div class="stat-detail">Across all categories</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-number">$50-500</div>
+                    <div class="stat-label">Revenue/Book/Year</div>
+                    <div class="stat-detail">Passive income per title</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-number">24 hrs</div>
+                    <div class="stat-label">Scout to Published</div>
+                    <div class="stat-detail">Identify bestsellers to live on Amazon</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-number">$500k+</div>
+                    <div class="stat-label">Annual Revenue</div>
+                    <div class="stat-detail">1,000 books averaging $500/yr each</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="section section-light" id="how">
+        <div class="container">
+            <h2 class="section-title">How It Works</h2>
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h4>Scout Bestsellers</h4>
+                    <p>Agent automatically scans Amazon, NYT bestseller lists, Goodreads trends. Identifies top-selling books and niche opportunities.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h4>Analyze Winners</h4>
+                    <p>AI analyzes what makes bestsellers successful: structure, pacing, themes, word count, tone, reader demographics.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h4>Generate Better</h4>
+                    <p>AI writes original, optimized books using bestseller patterns. Same feel as the market leader, but improved execution and unique angle.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h4>Format & Cover</h4>
+                    <p>Automatic formatting for both ebook and paperback. AI-generated cover design that tests against bestsellers in the category.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">5</div>
+                    <h4>Auto-Publish</h4>
+                    <p>Simultaneously publish to Amazon KDP, Barnes & Noble Press, and other major retailers. No manual uploads. 100% automated.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">6</div>
+                    <h4>Collect Royalties</h4>
+                    <p>Books go live. Royalties flow in automatically. Dashboard tracks earnings across all platforms in real-time.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">What the AI Does</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Bestseller Scout</h3>
+                    <p>Continuously monitors Amazon, NYT, Goodreads. Identifies top performers in 100+ categories. Finds market gaps.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🔍</div>
+                    <h3>Pattern Analysis</h3>
+                    <p>Analyzes bestsellers for: word count, chapter structure, pacing, themes, target audience, reading level. Identifies winning formulas.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">✨</div>
+                    <h3>Intelligent Writing</h3>
+                    <p>Generates original books using bestseller patterns. Maintains author voice. Improves on existing market leaders.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <h3>Cover Design</h3>
+                    <p>AI-generated covers that match bestseller aesthetics. Tests multiple designs. Optimizes for conversion.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>Multi-Format</h3>
+                    <p>Generates ebook, paperback, audiobook formats automatically. All versions optimized for their platform.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🚀</div>
+                    <h3>Auto-Publishing</h3>
+                    <p>One-click publish to Amazon KDP, B&N Press, Smashwords, Draft2Digital. Simultaneous launch across all platforms.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <h3>Royalty Tracking</h3>
+                    <p>Real-time dashboard showing earnings across all platforms. Automatic royalty collection and payouts.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📈</div>
+                    <h3>Category Optimization</h3>
+                    <p>AI-assigns optimal categories and keywords for maximum visibility. Adjusts pricing automatically for each market.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">♻️</div>
+                    <h3>Continuous Updates</h3>
+                    <p>Re-analyzes market trends weekly. Generates new books based on emerging bestseller patterns. Scale infinitely.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ROI Section -->
+    <section class="section section-light" id="roi">
+        <div class="container">
+            <h2 class="section-title">ROI: Passive Income at Scale</h2>
+            <div class="roi-section">
+                <p style="text-align: center; max-width: 700px; margin: 0 auto 30px; color: #666;">
+                    Publish 1 book = $50-500/year passive income. Publish 100 books = $5,000-50,000/year. Publish 1,000 books = $500k-5M/year.
+                </p>
+
+                <div class="roi-grid">
+                    <div class="roi-card">
+                        <div class="roi-label">10 Books/Month</div>
+                        <div class="roi-value">$6k-60k/year</div>
+                        <div class="roi-detail">120 books × $50-500 each</div>
+                    </div>
+
+                    <div class="roi-card">
+                        <div class="roi-label">50 Books/Month</div>
+                        <div class="roi-value">$30k-300k/year</div>
+                        <div class="roi-detail">600 books × $50-500 each</div>
+                    </div>
+
+                    <div class="roi-card">
+                        <div class="roi-label">100 Books/Month</div>
+                        <div class="roi-value">$60k-600k/year</div>
+                        <div class="roi-detail">1,200 books × $50-500 each</div>
+                    </div>
+
+                    <div class="roi-card">
+                        <div class="roi-label">Effort Required</div>
+                        <div class="roi-value">ZERO</div>
+                        <div class="roi-detail">Fully automated. Monitor dashboard only.</div>
+                    </div>
+                </div>
+
+                <p style="text-align: center; margin-top: 30px; color: #666; font-weight: 500;">
+                    <strong>Key insight:</strong> Each book earns you money every single month. Compounding passive income. The more you publish, the more you earn.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="section section-alt" id="pricing">
+        <div class="container">
+            <h2 class="section-title">Pricing Plans</h2>
+
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Starter</h3>
+                    <div class="price">$399</div>
+                    <div class="price-period">per month</div>
+                    <ul class="features-list">
+                        <li>10 books/month auto-generated</li>
+                        <li>All categories supported</li>
+                        <li>Auto-publish to Amazon & B&N</li>
+                        <li>Real-time royalty dashboard</li>
+                        <li>Email support</li>
+                    </ul>
+                    <button class="pricing-cta">Start Free Trial</button>
+                </div>
+
+                <div class="pricing-card featured">
+                    <h3>Professional</h3>
+                    <div class="price">$999</div>
+                    <div class="price-period">per month</div>
+                    <ul class="features-list">
+                        <li>50 books/month auto-generated</li>
+                        <li>All categories supported</li>
+                        <li>Multi-platform publishing</li>
+                        <li>Advanced analytics & reporting</li>
+                        <li>Priority support</li>
+                        <li>Custom category targeting</li>
+                    </ul>
+                    <button class="pricing-cta">Start Free Trial</button>
+                </div>
+
+                <div class="pricing-card">
+                    <h3>Enterprise</h3>
+                    <div class="price">$2,999</div>
+                    <div class="price-period">per month</div>
+                    <ul class="features-list">
+                        <li>200 books/month auto-generated</li>
+                        <li>All categories + custom genres</li>
+                        <li>10+ publishing platforms</li>
+                        <li>Unlimited revisions</li>
+                        <li>24/7 dedicated support</li>
+                        <li>Audiobook generation (beta)</li>
+                    </ul>
+                    <button class="pricing-cta">Schedule Demo</button>
+                </div>
+            </div>
+
+            <p style="text-align: center; margin-top: 30px; color: #666;">
+                <strong>Guarantee:</strong> 30-day free trial. 60-day money-back guarantee. Cancel anytime.
+            </p>
+        </div>
+    </section>
+
+    <!-- Why It Works -->
+    <section class="section section-light">
+        <div class="container">
+            <h2 class="section-title">Why This Crushes Traditional Publishing</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Speed</h3>
+                    <p>Write, format, and publish in 24 hours. Traditional publishing takes 18+ months. We're 500x faster.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">💯</div>
+                    <h3>Bestseller Quality</h3>
+                    <p>Our AI analyzes what readers actually buy. Every book is optimized for market success before publication.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📈</div>
+                    <h3>Scale Infinitely</h3>
+                    <p>Publish 10 books or 10,000. The system works the same. No marginal cost to generate more titles.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <h3>100% Royalties</h3>
+                    <p>We take 30% of profits (vs traditional publisher taking 85%). You keep more money.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🔄</div>
+                    <h3>Continuous Improvement</h3>
+                    <p>Algorithm learns from every published book. Gets smarter with time. Each new book is better than the last.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <h3>100% Hands-Free</h3>
+                    <p>No writing. No editing. No uploading. No marketing. Just let the algorithm run. Monitor your dashboard.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <div class="container">
+            <h2>Start Your Passive Income Machine Today</h2>
+            <p>Publish books 24/7. Collect royalties while you sleep. Scale to $500k+/year.</p>
+            <button class="cta-button">Start Free Trial (30 Days)</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 StoryForge Publishing. Automated book generation & publishing. | <a href="#" style="color: #00d4ff; text-decoration: none;">Privacy</a> | <a href="#" style="color: #00d4ff; text-decoration: none;">Terms</a> | <a href="#" style="color: #00d4ff; text-decoration: none;">Contact</a></p>
+        </div>
+    </footer>
+</body>
+</html>

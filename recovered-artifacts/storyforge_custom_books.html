@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StoryForge - Send Love Through Books</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #e74c3c;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 30px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #e74c3c;
+        }
+
+        /* Hero */
+        .hero {
+            text-align: center;
+            padding: 100px 0;
+            color: white;
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 50%, #1a252f 100%);
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            font-weight: 900;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero-subtitle {
+            font-size: 24px;
+            margin-bottom: 30px;
+            opacity: 0.95;
+            color: #ecf0f1;
+        }
+
+        .hero-description {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto 50px;
+            opacity: 0.9;
+        }
+
+        .cta-group {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .primary-cta {
+            background: #e74c3c;
+            color: white;
+            padding: 16px 45px;
+            border: none;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .primary-cta:hover {
+            background: #c0392b;
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(231, 76, 60, 0.4);
+        }
+
+        .secondary-cta {
+            background: transparent;
+            color: white;
+            padding: 16px 45px;
+            border: 2px solid white;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .secondary-cta:hover {
+            background: white;
+            color: #2c3e50;
+        }
+
+        /* Section */
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 42px;
+            font-weight: 900;
+            margin-bottom: 60px;
+            color: #2c3e50;
+        }
+
+        .section-alt {
+            background: white;
+        }
+
+        .section-light {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            border-top: 4px solid #e74c3c;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+        }
+
+        .feature-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            font-size: 22px;
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+
+        .feature-card p {
+            color: #666;
+            line-height: 1.8;
+        }
+
+        /* How It Works */
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .process-step {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background: #e74c3c;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 24px;
+            margin: 0 auto 15px;
+        }
+
+        .process-step h4 {
+            font-size: 18px;
+            color: #2c3e50;
+            margin-bottom: 12px;
+        }
+
+        .process-step p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        /* Pricing */
+        .pricing-section {
+            margin-top: 50px;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .pricing-card {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            border: 2px solid #ecf0f1;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+        }
+
+        .pricing-card:hover {
+            border-color: #e74c3c;
+            transform: translateY(-8px);
+        }
+
+        .pricing-card.featured {
+            border-color: #e74c3c;
+            transform: scale(1.05);
+        }
+
+        .pricing-card h3 {
+            font-size: 24px;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        .price {
+            font-size: 48px;
+            font-weight: 900;
+            color: #e74c3c;
+            margin-bottom: 10px;
+        }
+
+        .price-desc {
+            color: #999;
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
+
+        .features-list {
+            list-style: none;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+
+        .features-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid #ecf0f1;
+            color: #666;
+        }
+
+        .features-list li:before {
+            content: "✓ ";
+            color: #e74c3c;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+
+        .pricing-cta {
+            background: #e74c3c;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 25px;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.3s;
+        }
+
+        .pricing-cta:hover {
+            background: #c0392b;
+        }
+
+        /* Testimonials */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .testimonial {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            border-left: 4px solid #e74c3c;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .testimonial-text {
+            color: #666;
+            font-style: italic;
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        .testimonial-author {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+
+        .testimonial-role {
+            font-size: 13px;
+            color: #999;
+        }
+
+        .stars {
+            color: #e74c3c;
+            margin-bottom: 10px;
+        }
+
+        /* FAQ */
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .faq-item {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .faq-item h4 {
+            color: #e74c3c;
+            margin-bottom: 12px;
+            font-size: 16px;
+        }
+
+        .faq-item p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        /* CTA Section */
+        .final-cta {
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .final-cta h2 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+
+        .final-cta p {
+            font-size: 18px;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        footer p {
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .section-title {
+                font-size: 32px;
+            }
+
+            .pricing-card.featured {
+                transform: scale(1);
+            }
+
+            nav a {
+                margin-left: 15px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">📖 StoryForge</div>
+                <nav>
+                    <a href="#features">Features</a>
+                    <a href="#how">How It Works</a>
+                    <a href="#pricing">Pricing</a>
+                    <a href="#faq">FAQ</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <h1>Send Love Through Books</h1>
+            <p class="hero-subtitle">Personalized books for your loved ones in prison</p>
+            <p class="hero-description">
+                Create a custom book to stay connected. Share memories, express love, and build hope—one page at a time.
+            </p>
+            <div class="cta-group">
+                <button class="primary-cta">Create a Book Now</button>
+                <button class="secondary-cta">See Examples</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Books Matter -->
+    <section class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Why Send a Book?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">💝</div>
+                    <h3>Stay Connected</h3>
+                    <p>A personalized book keeps your relationship strong, even with miles between you. Your loved one reads your words every day.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📚</div>
+                    <h3>Allowed Everywhere</h3>
+                    <p>Books are permitted in all US prisons and jails. No restrictions. Your book arrives and stays with them.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">✨</div>
+                    <h3>Personalized & Meaningful</h3>
+                    <p>Share photos, memories, letters, and encouragement. Create something unique that says exactly what you feel.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">⏰</div>
+                    <h3>Fast Delivery</h3>
+                    <p>Create, customize, and ship in 48 hours. Your book arrives quickly—your loved one gets it when they need it most.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🙏</div>
+                    <h3>Hope & Support</h3>
+                    <p>Studies show reading personal letters reduces recidivism and improves mental health. Your book makes a difference.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <h3>Affordable</h3>
+                    <p>Professional books at a price everyone can afford. No hidden fees. No markup. Just love, on paper.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="section section-light" id="how">
+        <div class="container">
+            <h2 class="section-title">How It Works</h2>
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h4>Choose Your Style</h4>
+                    <p>Select a book template: letters & photos, memory book, encouragement guide, or custom story.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h4>Add Your Content</h4>
+                    <p>Upload photos, write letters, add memories. Our editor makes it beautiful automatically.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h4>Review & Order</h4>
+                    <p>Preview your book, make changes, then order. Professional printing starts immediately.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h4>We Handle Details</h4>
+                    <p>We verify it meets prison requirements, package it safely, and ship directly to their facility.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">5</div>
+                    <h4>They Receive It</h4>
+                    <p>Your loved one receives the book. No surprises. No rejections. Just love, in their hands.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">6</div>
+                    <h4>Stay Connected</h4>
+                    <p>Send another book anytime. Birthdays, holidays, just because. Keep the connection alive.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Book Templates -->
+    <section class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Book Templates</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">💌</div>
+                    <h3>Love Letters Book</h3>
+                    <p>Your personal letters, formatted beautifully. Add photos between pages. 20-40 pages of your words, your love.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📸</div>
+                    <h3>Memory Book</h3>
+                    <p>Photos with captions. Favorite moments. Family updates. A visual story of life outside and why they matter.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🌟</div>
+                    <h3>Encouragement Guide</h3>
+                    <p>Daily affirmations, bible verses, motivational quotes. Help them stay strong mentally and spiritually.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📖</div>
+                    <h3>Custom Story</h3>
+                    <p>Tell your shared story. Your journey together. Why they matter. Why you're waiting. Why there's hope.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">👨‍👩‍👧‍👦</div>
+                    <h3>Family Update</h3>
+                    <p>Kids' drawings, school updates, new babies, life changes. Keep them part of the family journey.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🎓</div>
+                    <h3>Milestones Book</h3>
+                    <p>Birthdays, anniversaries, releases dates, goals. Mark every milestone together despite the distance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="section section-light" id="pricing">
+        <div class="container">
+            <h2 class="section-title">Simple, Honest Pricing</h2>
+            <p style="text-align: center; max-width: 600px; margin: 0 auto 50px; color: #666;">
+                No hidden fees. No surprises. Professional books at prices that don't break the bank.
+            </p>
+
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Standard Book</h3>
+                    <div class="price">$29</div>
+                    <div class="price-desc">20-30 pages, perfect start</div>
+                    <ul class="features-list">
+                        <li>Professional printing</li>
+                        <li>Up to 15 photos</li>
+                        <li>Unlimited text</li>
+                        <li>Custom cover design</li>
+                        <li>Safe shipping included</li>
+                        <li>2-day processing</li>
+                    </ul>
+                    <button class="pricing-cta">Create Now</button>
+                </div>
+
+                <div class="pricing-card featured">
+                    <h3>Premium Book</h3>
+                    <div class="price">$49</div>
+                    <div class="price-desc">40-60 pages, most popular</div>
+                    <ul class="features-list">
+                        <li>Professional printing</li>
+                        <li>Up to 30 photos</li>
+                        <li>Unlimited text</li>
+                        <li>Custom hardcover</li>
+                        <li>Safe shipping included</li>
+                        <li>24-hour processing</li>
+                        <li>Free revision</li>
+                    </ul>
+                    <button class="pricing-cta">Create Now</button>
+                </div>
+
+                <div class="pricing-card">
+                    <h3>Deluxe Book</h3>
+                    <div class="price">$79</div>
+                    <div class="price-desc">80+ pages, go all out</div>
+                    <ul class="features-list">
+                        <li>Professional printing</li>
+                        <li>Unlimited photos</li>
+                        <li>Unlimited text</li>
+                        <li>Premium hardcover</li>
+                        <li>Safe shipping included</li>
+                        <li>Priority processing</li>
+                        <li>Unlimited revisions</li>
+                    </ul>
+                    <button class="pricing-cta">Create Now</button>
+                </div>
+            </div>
+
+            <p style="text-align: center; margin-top: 30px; color: #666;">
+                <strong>Bulk Discount:</strong> Order 5+ books? Get 20% off. <a href="#" style="color: #e74c3c; text-decoration: none;">Contact us</a> for details.
+            </p>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Real Stories</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <div class="testimonial-text">
+                        "My brother reads that book every single day. He told me it saved his life. He knows we didn't forget about him. This is the best money I've ever spent."
+                    </div>
+                    <div class="testimonial-author">Maria D.</div>
+                    <div class="testimonial-role">Sister, Texas</div>
+                </div>
+
+                <div class="testimonial">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <div class="testimonial-text">
+                        "I sent my dad a memory book with photos of his grandkids he's never met. The prison chaplain told me he's changed because of it. He has hope now."
+                    </div>
+                    <div class="testimonial-author">James T.</div>
+                    <div class="testimonial-role">Son, California</div>
+                </div>
+
+                <div class="testimonial">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <div class="testimonial-text">
+                        "Fast, professional, and exactly what I needed. The whole process took 30 minutes. Three days later, my mom had it. Worth every penny."
+                    </div>
+                    <div class="testimonial-author">Sandra M.</div>
+                    <div class="testimonial-role">Daughter, New York</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section-light" id="faq">
+        <div class="container">
+            <h2 class="section-title">Questions & Answers</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h4>Will the book be approved by the prison?</h4>
+                    <p>Yes. We verify all books meet federal prison mail guidelines. No banned materials. No security risks. Your book arrives.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>How long does delivery take?</h4>
+                    <p>Standard processing: 2 days. Express: 24 hours. Then shipping: 3-7 business days to the facility. Total: 5-10 days typical.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>Can I include photos?</h4>
+                    <p>Yes! Standard: 15 photos. Premium: 30 photos. Deluxe: unlimited. All photos are automatically formatted to look professional.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>What if they get transferred?</h4>
+                    <p>Contact us with their new facility info. We'll update the address and re-ship at no charge. We'll make sure they get it.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>Can I order multiple books?</h4>
+                    <p>Absolutely. Different books for different occasions. Birthdays, holidays, anniversaries. Order as many as you want. 20% bulk discount at 5+.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>Is this really affordable?</h4>
+                    <p>Yes. $29-79 for a professional book. No markup. No hidden fees. We believe everyone deserves to stay connected.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>What if I don't know what to write?</h4>
+                    <p>We provide writing prompts and templates for each book type. Or email us—our team can help you get started for free.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>Can I revise after ordering?</h4>
+                    <p>Standard/Premium: one free revision. Deluxe: unlimited. Contact us within 24 hours if you want to make changes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <div class="container">
+            <h2>Your Loved One Is Waiting</h2>
+            <p>Send them a book. Let them know you haven't forgotten. That you're still here. That there's hope.</p>
+            <button class="primary-cta" style="background: white; color: #e74c3c; border: none; margin-top: 20px; font-size: 18px;">Create a Book Today</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 StoryForge. Send love through books. | <a href="#" style="color: white; text-decoration: none;">Privacy</a> | <a href="#" style="color: white; text-decoration: none;">Terms</a> | <a href="#" style="color: white; text-decoration: none;">Contact</a></p>
+        </div>
+    </footer>
+</body>
+</html>

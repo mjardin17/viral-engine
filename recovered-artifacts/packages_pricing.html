@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empire OS - Service Packages & Pricing</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            background: linear-gradient(135deg, #00d4ff, #0099ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 30px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #00d4ff;
+        }
+
+        /* Hero */
+        .hero {
+            text-align: center;
+            padding: 80px 0;
+            color: white;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            font-weight: 900;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero-subtitle {
+            font-size: 24px;
+            margin-bottom: 30px;
+            opacity: 0.95;
+            color: #00d4ff;
+        }
+
+        .hero-description {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+
+        /* Section Title */
+        .section-title {
+            text-align: center;
+            font-size: 42px;
+            font-weight: 900;
+            margin-bottom: 60px;
+            color: #1a1a2e;
+        }
+
+        /* Packages Section */
+        .packages {
+            padding: 100px 0;
+            background: white;
+        }
+
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .package-card {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 40px 30px;
+            border-radius: 15px;
+            border: 2px solid transparent;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .package-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #00d4ff, #0099ff);
+        }
+
+        .package-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .package-card.featured {
+            border-color: #00d4ff;
+            background: linear-gradient(135deg, #e3f2fd 0%, #f3e5f5 100%);
+            transform: scale(1.05);
+        }
+
+        .package-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #00d4ff, #0099ff);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .package-name {
+            font-size: 28px;
+            font-weight: 900;
+            color: #1a1a2e;
+            margin-bottom: 10px;
+        }
+
+        .package-description {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 30px;
+            min-height: 40px;
+        }
+
+        .price {
+            font-size: 48px;
+            font-weight: 900;
+            color: #00d4ff;
+            margin-bottom: 5px;
+        }
+
+        .price-period {
+            color: #999;
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
+
+        .price-note {
+            color: #666;
+            font-size: 12px;
+            margin-bottom: 30px;
+            padding-top: 15px;
+            border-top: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .features {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+
+        .features li {
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            color: #555;
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .features li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #00d4ff;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .features li.coming-soon {
+            opacity: 0.5;
+        }
+
+        .features li.coming-soon:before {
+            content: "⏳";
+            color: #ffa500;
+        }
+
+        .cta {
+            background: linear-gradient(135deg, #00d4ff, #0099ff);
+            color: white;
+            padding: 14px 32px;
+            border: none;
+            border-radius: 25px;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.3s;
+            font-size: 15px;
+        }
+
+        .cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 212, 255, 0.3);
+        }
+
+        .cta.secondary {
+            background: transparent;
+            color: #00d4ff;
+            border: 2px solid #00d4ff;
+        }
+
+        .cta.secondary:hover {
+            background: #00d4ff;
+            color: white;
+        }
+
+        /* Feature Matrix */
+        .matrix {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+
+        .matrix-table {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-top: 40px;
+        }
+
+        .matrix-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .matrix-table th {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            padding: 20px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .matrix-table td {
+            padding: 16px 20px;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .matrix-table tbody tr:hover {
+            background: #f9f9f9;
+        }
+
+        .matrix-table .feature-name {
+            font-weight: 600;
+            color: #1a1a2e;
+            width: 30%;
+        }
+
+        .matrix-table .check {
+            color: #00d4ff;
+            font-weight: bold;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .matrix-table .cross {
+            color: #ccc;
+            font-weight: bold;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .matrix-table .value {
+            color: #00d4ff;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        /* ROI Section */
+        .roi {
+            padding: 100px 0;
+            background: white;
+        }
+
+        .roi-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .roi-card {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 30px;
+            border-radius: 12px;
+            border-left: 4px solid #00d4ff;
+        }
+
+        .roi-card h4 {
+            color: #1a1a2e;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        .roi-value {
+            font-size: 36px;
+            font-weight: 900;
+            color: #00d4ff;
+            margin-bottom: 10px;
+        }
+
+        .roi-details {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        /* FAQ */
+        .faq {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .faq-item {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            border-top: 3px solid #00d4ff;
+        }
+
+        .faq-item h4 {
+            color: #1a1a2e;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
+        .faq-item p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            font-size: 18px;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, #00d4ff, #0099ff);
+            color: white;
+            padding: 16px 50px;
+            border: none;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(0, 212, 255, 0.4);
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            padding: 40px 0 20px;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .section-title {
+                font-size: 32px;
+            }
+
+            .package-card.featured {
+                transform: scale(1);
+            }
+
+            .packages-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .matrix-table {
+                overflow-x: auto;
+            }
+
+            nav a {
+                margin-left: 15px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">⚡ Empire OS</div>
+                <nav>
+                    <a href="#packages">Packages</a>
+                    <a href="#comparison">Compare</a>
+                    <a href="#roi">ROI</a>
+                    <a href="#faq">FAQ</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <h1>Service Packages Built for Scale</h1>
+            <p class="hero-subtitle">From startups to enterprises</p>
+            <p class="hero-description">
+                Choose the automation package that fits your business. Scale up anytime. No long-term contracts.
+            </p>
+        </div>
+    </section>
+
+    <!-- Packages -->
+    <section class="packages" id="packages">
+        <div class="container">
+            <h2 class="section-title">Pricing Packages</h2>
+            <div class="packages-grid">
+                <!-- Startup Package -->
+                <div class="package-card">
+                    <span class="package-badge">🚀 STARTER</span>
+                    <h3 class="package-name">Startup</h3>
+                    <p class="package-description">Answer calls + basic scheduling for small teams</p>
+                    <div class="price">$699</div>
+                    <div class="price-period">per month</div>
+                    <div class="price-note">Up to 500 calls/month + 100 appointments</div>
+
+                    <ul class="features">
+                        <li>📞 AI Phone Agent (24/7)</li>
+                        <li>📅 Basic Calendar Scheduling</li>
+                        <li>📋 Appointment Confirmation SMS</li>
+                        <li>📊 Call Analytics Dashboard</li>
+                        <li>⏰ Single Agent Instance</li>
+                        <li class="coming-soon">Email Automation</li>
+                        <li class="coming-soon">Inventory Sync</li>
+                    </ul>
+                    <button class="cta secondary">Get Started</button>
+                </div>
+
+                <!-- Professional Package -->
+                <div class="package-card featured">
+                    <span class="package-badge">⭐ MOST POPULAR</span>
+                    <h3 class="package-name">Professional</h3>
+                    <p class="package-description">Complete communication & scheduling automation</p>
+                    <div class="price">$1,899</div>
+                    <div class="price-period">per month</div>
+                    <div class="price-note">Up to 2,500 calls + 5,000 emails + unlimited appointments</div>
+
+                    <ul class="features">
+                        <li>📞 AI Phone Agent (24/7)</li>
+                        <li>📧 Email Automation & Responses</li>
+                        <li>📅 Intelligent Calendar Scheduling</li>
+                        <li>📋 Lead Qualification</li>
+                        <li>📧 Follow-up Sequences</li>
+                        <li>📊 Advanced Analytics</li>
+                        <li>⏰ Priority Support</li>
+                    </ul>
+                    <button class="cta">Start Free Trial</button>
+                </div>
+
+                <!-- Business Package -->
+                <div class="package-card">
+                    <span class="package-badge">🏢 BUSINESS</span>
+                    <h3 class="package-name">Business</h3>
+                    <p class="package-description">Full automation + inventory management</p>
+                    <div class="price">$3,499</div>
+                    <div class="price-period">per month</div>
+                    <div class="price-note">Unlimited calls/emails + real-time inventory</div>
+
+                    <ul class="features">
+                        <li>📞 Advanced Phone Agent + Transfer</li>
+                        <li>📧 Email + CRM Integration</li>
+                        <li>📅 Enterprise Calendar Sync</li>
+                        <li>📦 Real-time Inventory Tracking</li>
+                        <li>💰 Multi-platform Price Sync</li>
+                        <li>🔄 Automated Reordering</li>
+                        <li>📊 Custom Reporting</li>
+                        <li>👥 Dedicated Account Manager</li>
+                    </ul>
+                    <button class="cta secondary">Schedule Demo</button>
+                </div>
+
+                <!-- Enterprise Package -->
+                <div class="package-card">
+                    <span class="package-badge">🚀 ENTERPRISE</span>
+                    <h3 class="package-name">Enterprise</h3>
+                    <p class="package-description">Custom multi-agent automation ecosystem</p>
+                    <div class="price">Custom</div>
+                    <div class="price-period">contact sales</div>
+                    <div class="price-note">Tailored to your infrastructure</div>
+
+                    <ul class="features">
+                        <li>☎️ Multi-agent Phone System</li>
+                        <li>📧 White-label Email Platform</li>
+                        <li>📅 Calendar + Meeting Analytics</li>
+                        <li>📦 Enterprise Inventory System</li>
+                        <li>🔗 Custom API Integrations</li>
+                        <li>🛡️ SLA & Uptime Guarantee</li>
+                        <li>👥 Dedicated Engineering Team</li>
+                        <li>🔐 Private Cloud Deployment</li>
+                    </ul>
+                    <button class="cta secondary">Talk to Sales</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Matrix -->
+    <section class="matrix" id="comparison">
+        <div class="container">
+            <h2 class="section-title">Feature Comparison</h2>
+            <div class="matrix-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th style="text-align: center;">Startup</th>
+                            <th style="text-align: center;">Professional</th>
+                            <th style="text-align: center;">Business</th>
+                            <th style="text-align: center;">Enterprise</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="feature-name">📞 Phone Agent (24/7)</td>
+                            <td class="check">✓</td>
+                            <td class="check">✓</td>
+                            <td class="check">✓</td>
+                            <td class="check">✓</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">📧 Email Automation</td>
+                            <td class="cross">—</td>
+                            <td class="check">✓</td>
+                            <td class="check">✓</td>
+                            <td class="check">✓</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">📅 Calendar Management</td>
+                            <td class="value">Basic</td>
+                            <td class="check">✓</td>
+                            <td class="check">✓</td>
+                            <td class="check">✓</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">📦 Inventory Sync</td>
+                            <td class="cross">—</td>
+                            <td class="cross">—</td>
+                            <td class="check">✓</td>
+                            <td class="check">✓</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">💰 Price Sync (Multi-platform)</td>
+                            <td class="cross">—</td>
+                            <td class="cross">—</td>
+                            <td class="check">✓</td>
+                            <td class="check">✓</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">🤖 Lead Qualification</td>
+                            <td class="cross">—</td>
+                            <td class="check">✓</td>
+                            <td class="check">✓</td>
+                            <td class="check">✓</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">📊 Custom Reports</td>
+                            <td class="cross">—</td>
+                            <td class="value">Basic</td>
+                            <td class="check">✓</td>
+                            <td class="check">✓</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">🔄 Automated Reordering</td>
+                            <td class="cross">—</td>
+                            <td class="cross">—</td>
+                            <td class="check">✓</td>
+                            <td class="check">✓</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">🔗 API Integrations</td>
+                            <td class="value">3</td>
+                            <td class="value">10</td>
+                            <td class="value">25+</td>
+                            <td class="value">Custom</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">👥 Support Level</td>
+                            <td class="value">Email</td>
+                            <td class="value">Priority</td>
+                            <td class="value">Dedicated</td>
+                            <td class="value">24/7 Premium</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">🛡️ SLA Guarantee</td>
+                            <td class="cross">—</td>
+                            <td class="cross">—</td>
+                            <td class="value">99%</td>
+                            <td class="value">99.9%</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Call/Email Limits</td>
+                            <td class="value">500/100</td>
+                            <td class="value">2,500/5k</td>
+                            <td class="value">Unlimited</td>
+                            <td class="value">Unlimited</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- ROI Section -->
+    <section class="roi" id="roi">
+        <div class="container">
+            <h2 class="section-title">ROI Potential by Package</h2>
+            <div class="roi-grid">
+                <div class="roi-card">
+                    <h4>Startup Package</h4>
+                    <div class="roi-value">$18k/year</div>
+                    <div class="roi-details">
+                        <strong>Typical Savings:</strong><br>
+                        • 20 hrs/month admin work saved @ $50/hr = $12k<br>
+                        • 5 extra appointments/month @ $200 each = $12k<br>
+                        • Minus: $8.4k software = <strong>$15.6k net ROI</strong>
+                    </div>
+                </div>
+
+                <div class="roi-card">
+                    <h4>Professional Package</h4>
+                    <div class="roi-value">$65k/year</div>
+                    <div class="roi-details">
+                        <strong>Typical Savings:</strong><br>
+                        • 50 hrs/month admin saved @ $50/hr = $30k<br>
+                        • 20 qualified leads/month @ $300 each = $72k<br>
+                        • Minus: $22.8k software = <strong>$79.2k net ROI</strong>
+                    </div>
+                </div>
+
+                <div class="roi-card">
+                    <h4>Business Package</h4>
+                    <div class="roi-value">$180k/year</div>
+                    <div class="roi-details">
+                        <strong>Typical Savings:</strong><br>
+                        • 100 hrs/month admin saved = $60k<br>
+                        • Inventory optimization (stock-out prevention) = $50k<br>
+                        • Price sync efficiency gains = $75k<br>
+                        • Minus: $41.9k software = <strong>$183.1k net ROI</strong>
+                    </div>
+                </div>
+
+                <div class="roi-card">
+                    <h4>Enterprise Package</h4>
+                    <div class="roi-value">$500k+/year</div>
+                    <div class="roi-details">
+                        <strong>Typical Savings:</strong><br>
+                        • Full automation across departments = $300k<br>
+                        • Multi-agent coordination efficiency = $200k<br>
+                        • Revenue uplift from 24/7 availability = $150k<br>
+                        • Minus: Custom pricing = <strong>$500k+ net</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h4>Can I upgrade packages anytime?</h4>
+                    <p>Yes! Upgrade or downgrade anytime with prorated billing. No penalties. You pay only for what you use each month.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>How long does setup take?</h4>
+                    <p>Typically 2-4 hours. We handle database setup, API configuration, and agent training on your specific business rules and workflows.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>Do you offer a free trial?</h4>
+                    <p>Yes! Professional package includes a 14-day free trial. No credit card required. Other packages: contact sales for trial eligibility.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>What's your uptime SLA?</h4>
+                    <p>Startup/Professional: Best-effort. Business: 99% SLA. Enterprise: 99.9% SLA with guaranteed support response times.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>Do you integrate with my existing systems?</h4>
+                    <p>Yes. Professional: 10 integrations. Business: 25+. Enterprise: unlimited custom integrations via private API.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>What about data security?</h4>
+                    <p>All data encrypted at rest (AES-256) and in transit (TLS). SOC 2 Type II certified. Enterprise: private cloud deployment available.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>Can I add users or seats?</h4>
+                    <p>Startup: 1 agent. Professional: 3 agents. Business/Enterprise: unlimited agents. Additional seats billed separately.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>Do you have volume discounts?</h4>
+                    <p>Yes! Enterprise plans: negotiate custom pricing based on scale, integration complexity, and annual commitment.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>What if I go over limits?</h4>
+                    <p>Startup/Professional: $0.50 per overage call, $0.10 per overage email. Business/Enterprise: no overage charges — unlimited included.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Scale Your Operations?</h2>
+            <p>Join businesses automating their workflows 24/7. Setup takes 2-4 hours.</p>
+            <button class="cta-button">Start Your Free Trial</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Empire OS. 24/7 Autonomous Business Automation. | Built for scale.</p>
+        </div>
+    </footer>
+</body>
+</html>

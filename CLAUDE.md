@@ -846,6 +846,33 @@ ETSY_TOKEN=<oauth-token>
 
 ---
 
+### 2026-08-15 Session — Story Forge 2 tests + merch ingest
+
+**Built:** first real pytest suite in this repo (`tests/storyforge2/`, 110 passing)
+plus `storyforge2/merch/` — MerchPulse export ingest, independent economics
+recompute, and a POD channel registry reusing the book side's `ConnectorStatus`.
+
+**Audit of `merchpulse_full_export.json` (run, not assumed):**
+- **Nothing in it is publishable.** The single campaign ("DEMO: Plant Mom Life")
+  and every Order/SalesMetric/Channel/PublishJob row is `is_demo: true`. The
+  revenue figures (674.73 total) are **fictional seed data**. Only the 5 fall-coffee
+  TrendSignals are real, and none has an Opportunity — researched, never acted on.
+- **Economics check out.** 4.50+3.00+4.00+0.72+2.50+0.75 = 15.47 cost; 24.99 retail
+  → 9.52 profit → 38.1% margin. Stored figures match the recompute exactly, and
+  both SalesMetric rows are exact multiples. No drift.
+- **All 3 PublishJobs are `dry_run`.** Nothing has reached a real platform.
+- **One registry disagreement:** the export marks TikTok Shop `UNSUPPORTED`; a real
+  Partner API exists but is approval-gated, so it is `APPROVED_PARTNER_API` here.
+  Surfaced via `reconcile_export_channels()` rather than silently overridden.
+
+**Account note:** the export's AuditLog actor is **littleolympusai@gmail.com** — a
+third account, distinct from both justifiedmagnificent@ and massgains1731@. Confirm
+which account owns MerchPulse before any billing or app-level action.
+
+**Merch policy encoded (from CLAUDE.md research pass, carried at
+[Reported, not Certain] in each `notes` field):** Printful/Printify/Gooten =
+real APIs; Redbubble/Spring/Amazon Merch = manual upload package, no scraper.
+
 ## Git & GitHub (PRODUCTION RULES)
 
 **Repository:** `https://github.com/mjardin17/viral-engine` (branch: `main`)

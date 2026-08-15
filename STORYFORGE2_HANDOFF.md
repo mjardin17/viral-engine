@@ -88,8 +88,31 @@ Nothing has actually been ported from any of the 5 reference repos yet — every
 - **Verify, don't assume.** Every module built so far was tested with a real script before being called done — several would have shipped subtly broken (especially the mock text provider) if only eyeballed. Keep doing this, especially for `export/epub.py`/`pdf.py` (validate the actual file, don't just check it exists) and `video/*.py` (use `ffprobe`, not just "the render command didn't error").
 - **Commit frequently, on this branch, never to `main`.** The user asked for a push already (branch is public on GitHub now) — keep pushing at reasonable checkpoints so work survives context limits, but confirm with the user before opening a PR or merging to `main`.
 
+## 2026-08-14 Session Update (CURRENT)
+
+**Built & verified:** 6 new modules (typography, render, metadata, epub, pdf, registry), all tested against real files.
+
+- `storyforge2/cover/typography.py` — deterministic text compositing (title/author/spine with shadow-then-fill, auto-shrink-to-fit, spine rotation)
+- `storyforge2/cover/render.py` — orchestration layer producing 9 cover variants (print/ebook/social)
+- `storyforge2/export/metadata.py` — extended metadata (ISBN placeholder, language, age_range, accessibility)
+- `storyforge2/export/epub.py` — EPUB validation (zipfile structure, OPF, UTF-8, XML well-formedness)
+- `storyforge2/export/pdf.py` — PDF validation (page count, dimensions, content checks)
+- `storyforge2/publishing/registry.py` — **HONEST platform registry:** 6 direct APIs + 2 approved-partner + 6 manual-export, no fabricated capabilities. Established the truth about which platforms have public submission APIs (KDP/D2D/Payhip do; Apple Books/Google Play/Kobo/B&N/IngramSpark don't — per CLAUDE.md audit).
+
+**Branch state:** `feature/storyforge2-2026-08-14` at commit `c6b6240`, pushed to GitHub, clean tree.
+
 ## Immediate next step on resume
 
-1. `cd C:\Users\jjard\claude\video-bot-pipeline && git status` and `git log --oneline -5` to confirm you're picking up from `52e430b` on `feature/storyforge2-2026-08-14` with a clean tree.
-2. Read `C:\Users\jjard\.claude\plans\scalable-waddling-cocke.md` in full.
-3. Continue with `storyforge2/cover/typography.py` (next un-started item, cover package is mid-flight).
+1. Verify git state: `git log --oneline -6` should show the registry commit + cover/export modules.
+2. **Next high-priority items (in order):**
+   - **`storyforge2/publishing/connectors/kdp.py`, `d2d.py`, `payhip.py`** — port the verified implementations from today's empire-os work (already exists at `C:\Users\jjard\empire-os\apps\storyforge\storyforge-engine\core\publishing\connectors\`), adapt to this repo's credential/queue conventions. ~200-300 LOC total, no new concepts.
+   - **`storyforge2/publishing/connectors/manual_export.py`** — generates upload-ready folder + checklist for draft-export platforms (Apple Books, Google Play, Kobo, B&N Press, IngramSpark). Straightforward, no APIs.
+   - **Video pipeline** — if connectors are done and you want to unlock full end-to-end, next build `storyforge2/video/` (storyboard, narration, master_video, captions, commercials).
+   - **Marketing packages** — `storyforge2/marketing/platforms.py` + `package.py` for per-platform content templates (the confirmed-absent piece).
+   - **CLI + API + Tests + Fixtures** — final touches to make it runnable end-to-end.
+
+## Previous sessions' work (already complete)
+
+- `storyforge2/brief.py`, `state.py`, `manuscript.py`, `illustrations.py`, `layout.py`, `dedup.py` — all verified
+- `storyforge2/cover/spec.py` — real spine/bleed math, verified
+- Full plan file: `C:\Users\jjard\.claude\plans\scalable-waddling-cocke.md`

@@ -915,6 +915,36 @@ only fetches by URL). `MerchConnector.accepts_local_upload` carries this;
 answer. This means **hosting is not a hard blocker if going via Printify** —
 rasterising the SVG still is.
 
+**✅ RASTERISER BUILT — the POD blocker is cleared (Printify path).**
+`merch/rasterize.py`. **234 tests passing.** Verified end-to-end against the
+real design: `data:` URI SVG → 4500x4500 PNG, 335KB, 254 colours, not blank →
+passes the Printify gate → clean Printify dry run at 2499 minor units.
+
+- **Stack:** `svglib` (parse) + reportlab `renderPM` (raster) + **`rlPyCairo`**
+  (native backend). reportlab alone CANNOT rasterise on Python 3.14 — it ships
+  no `_renderPM`, so `drawToFile` raises `RenderPMError`. cairosvg was rejected:
+  needs Cairo installed natively on Windows. **This is the project's first
+  native dependency** (pycairo), installed clean from wheels, no system Cairo.
+- **Optional import.** Everything else in merch works without it;
+  `backend_available()` returns the install line rather than an ImportError.
+- New `requirements-storyforge2.txt` records the whole set. ⚠ Licences in the
+  rasteriser sub-stack (svglib, pycairo — copyleft family) are **NOT reviewed**;
+  fine internally, review before shipping Story Forge 2 as a product.
+
+⚠ **KNOWN LIMITATION — no alpha.** Probed directly: default background is
+white, `bg=None` gives black, `configPIL {'transparent': 1}` is ignored.
+Output is always RGB. **A white-background print file prints a white rectangle
+on a coloured garment.** `transparent_from=` is opt-in chroma-keying that
+reports how many pixels it removed (knocking out a colour that also appears
+inside the art destroys the design while still producing a plausible file).
+The demo design is unaffected — its navy fill is part of the artwork — but
+most text-only designs need real alpha and therefore a different renderer.
+
+**Perf bug I introduced and fixed:** verification used `set(img.getdata())`
+and the chroma-key looped pixels in Python — 20M pixels on a print file, which
+blew a 120s test timeout. Both moved into Pillow (`getcolors` with a cap,
+band masks via `ImageChops`). Suite went 120s+ → 35s.
+
 **Two bugs found by running against the real export rather than fixtures:**
 (1) `urlparse` reads a Windows drive letter as a URL scheme, so `C:/art.png`
 classified as UNKNOWN instead of a local file; (2) `\bwidth` matches inside

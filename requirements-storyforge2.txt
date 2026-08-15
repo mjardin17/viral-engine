@@ -1,0 +1,32 @@
+# Story Forge 2 dependencies.
+#
+# Install with the canonical interpreter for this machine (the `py` launcher
+# is not on PATH here -- see CLAUDE.md):
+#
+#   C:\Users\jjard\AppData\Local\Programs\Python\Python314\python.exe -m pip install -r requirements-storyforge2.txt
+
+# -- core: book pipeline ---------------------------------------------------
+Pillow>=10          # cover compositing, raster verification
+ebooklib>=0.18      # EPUB generation
+reportlab>=4.0      # PDF generation; also the rasteriser's drawing layer
+pypdf>=4.0          # PDF structural validation
+requests>=2.31      # publishing + merch connectors
+
+# -- merch rasteriser (OPTIONAL) -------------------------------------------
+# Only needed by storyforge2/merch/rasterize.py. Everything else in the merch
+# pipeline imports and runs without these; rasterize.backend_available()
+# reports a clear install line when they are absent.
+#
+# rlPyCairo pulls pycairo, which is a native extension -- this is the first
+# non-pure-Python dependency in the project. It installed cleanly from wheels
+# on Windows/Python 3.14 (no Cairo system install needed). cairosvg was NOT
+# used: it needs Cairo present natively on Windows.
+#
+# NOTE: licences in this sub-stack have NOT been reviewed here. svglib and
+# pycairo are copyleft-family (LGPL). Fine for internal use; review before
+# redistributing Story Forge 2 as a product.
+svglib>=1.5
+rlPyCairo>=0.3
+
+# -- dev -------------------------------------------------------------------
+pytest>=8.0

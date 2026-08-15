@@ -177,11 +177,25 @@ class ArtworkSource:
     def is_https(self) -> bool:
         return urlparse(self.raw).scheme == "https"
 
-    def is_pod_ready(self) -> tuple[bool, str]:
-        """Whether a POD vendor could fetch and print this as-is.
+    @property
+    def is_raster(self) -> bool:
+        """Whether the underlying file is a raster image.
+
+        Independent of where it lives -- a local PNG is raster, a hosted SVG
+        is not. Vendors reject on format regardless of transport.
+        """
+        return self.mime in ("image/png", "image/jpeg")
+
+    def is_pod_ready(self, allow_local_upload: bool = False) -> tuple[bool, str]:
+        """Whether a POD vendor could print this as-is.
 
         Returns (ok, reason). The reason states what must happen next, not
         just that something is wrong.
+
+        `allow_local_upload` reflects a real capability split: Printify takes
+        base64 file contents, so a local raster file is submittable to it.
+        Printful only fetches by URL, so the same file is not submittable
+        there. Defaulting to False keeps the stricter answer the default.
         """
         if self.kind is ArtworkKind.MISSING:
             return False, "design has no artwork"
@@ -199,10 +213,20 @@ class ArtworkSource:
             )
 
         if self.kind is ArtworkKind.LOCAL_FILE:
-            return False, (
-                "artwork is a local file -- vendors pull by URL, so it must be "
-                "uploaded to public storage first"
-            )
+            if not allow_local_upload:
+                return False, (
+                    "artwork is a local file -- this vendor pulls by URL, so it "
+                    "must be uploaded to public storage first"
+                )
+            if not self.is_raster:
+                return False, (
+                    f"artwork is a local vector file ({self.mime or 'unknown'}) -- "
+                    f"print files must be raster PNG/JPG even when uploaded directly"
+                )
+            if not Path(self.raw).is_file():
+                return False, f"artwork file does not exist: {self.raw}"
+            undersized = self.resolution_problem()
+            return (False, undersized) if undersized else (True, "ok")
 
         if self.kind is ArtworkKind.HOSTED_VECTOR:
             return False, (
@@ -256,9 +280,9 @@ class ArtworkSource:
             f"the declared size is unverified metadata, not the asset"
         )
 
-    def warnings(self) -> list[str]:
+    def warnings(self, allow_local_upload: bool = False) -> list[str]:
         out: list[str] = []
-        ok, reason = self.is_pod_ready()
+        ok, reason = self.is_pod_ready(allow_local_upload=allow_local_upload)
         if not ok:
             out.append(reason)
         discrepancy = self.dimension_discrepancy()

@@ -13,6 +13,7 @@ from .base import (
     PublishingConnectorResult,
 )
 from .printful import PrintfulConnector
+from .printify import PrintifyConnector, to_minor_units
 
 __all__ = [
     "MerchConnector",
@@ -20,4 +21,6 @@ __all__ = [
     "MerchVariant",
     "PublishingConnectorResult",
     "PrintfulConnector",
+    "PrintifyConnector",
+    "to_minor_units",
 ]

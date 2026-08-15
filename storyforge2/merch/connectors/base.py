@@ -67,11 +67,14 @@ class MerchPublishRequest:
     product_type: str = ""
     external_id: str = ""
 
-    def validate(self) -> list[str]:
+    def validate(self, allow_local_upload: bool = False) -> list[str]:
         """Local problems that would make a submission fail or mislead.
 
         Returned rather than raised so a caller can report every problem at
         once instead of fixing them one round-trip at a time.
+
+        `allow_local_upload` is supplied by the connector, because vendors
+        differ on it -- see MerchConnector.accepts_local_upload.
         """
         problems: list[str] = []
 
@@ -96,7 +99,7 @@ class MerchPublishRequest:
                     f"has non-positive price {variant.retail_price}"
                 )
 
-        ok, reason = self.artwork.is_pod_ready()
+        ok, reason = self.artwork.is_pod_ready(allow_local_upload=allow_local_upload)
         if not ok:
             problems.append(f"artwork: {reason}")
 
@@ -109,6 +112,11 @@ class MerchConnector(ABC):
     platform_id: str = "base"
     name: str = "Base Merch Connector"
     credential_env: tuple[str, ...] = ()
+
+    accepts_local_upload: bool = False
+    # True when the vendor accepts raw file contents (e.g. base64) rather than
+    # only fetching from a URL. Printify does; Printful does not. Defaults to
+    # the stricter answer so a new connector cannot accidentally claim it.
 
     # -- credentials ------------------------------------------------------
 
@@ -159,7 +167,7 @@ class MerchConnector(ABC):
                 "missing_credentials",
             )
 
-        problems = request.validate()
+        problems = request.validate(allow_local_upload=self.accepts_local_upload)
         if problems:
             return self._failure(
                 f"{self.name}: request is not submittable -- "

@@ -892,6 +892,29 @@ Also: the Design record claims `dimensions: "4500x5400"` but the actual SVG is
 1200x1200. That field is metadata nobody recomputes, so it is not evidence of
 print resolution.
 
+**Printify connector (fallback) — `merch/connectors/printify.py`.** 217 tests
+passing. Also never run against a live account (no PRINTIFY_API_KEY). Four
+differences from Printful, each with its own failure mode, so it is NOT a copy
+with the URL swapped:
+1. **Price is integer minor units (2499), not "24.99".** Sending a decimal
+   where cents are expected lists the product at 25 cents. `to_minor_units()`
+   uses Decimal — `int(price * 100)` truncates a cent low on **4.6% of cent
+   values** (`int(1.15*100)` is 114, `int(0.29*100)` is 28). Sub-cent input
+   raises rather than rounds.
+2. **Shop-scoped** — `PRINTIFY_SHOP_ID` is required, not optional.
+3. **Two-step**: artwork uploads first, product references the returned image
+   id. A failed upload never proceeds to product creation; a failed creation
+   still reports the orphaned image id.
+4. **`blueprint_id` + `print_provider_id` required, no defaults** — a guessed
+   blueprint prints the design on the wrong garment.
+
+⚠ **Capability split, now encoded:** Printify accepts base64 file contents, so
+a **local raster PNG is submittable to Printify but not to Printful** (which
+only fetches by URL). `MerchConnector.accepts_local_upload` carries this;
+`ArtworkSource.is_pod_ready(allow_local_upload=...)` defaults to the stricter
+answer. This means **hosting is not a hard blocker if going via Printify** —
+rasterising the SVG still is.
+
 **Two bugs found by running against the real export rather than fixtures:**
 (1) `urlparse` reads a Windows drive letter as a URL scheme, so `C:/art.png`
 classified as UNKNOWN instead of a local file; (2) `\bwidth` matches inside

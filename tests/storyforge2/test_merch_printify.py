@@ -152,6 +152,48 @@ def test_credentials_are_never_echoed_in_a_result(connector):
     assert "pfy-secret" not in str(result.to_dict())
 
 
+def test_every_request_sends_a_user_agent(connector, monkeypatch):
+    """Printify rejects requests without one. The first draft of this
+    connector omitted it and every live call would have failed."""
+    import requests
+    seen = []
+
+    def _record(url, headers=None, json=None, timeout=None):
+        seen.append(headers)
+        return _Response(200, {"id": "img" if "uploads" in url else "prod"})
+
+    monkeypatch.setattr(requests, "post", _record)
+    monkeypatch.setattr(requests, "get", lambda url, headers=None, timeout=None:
+                        (seen.append(headers), _Response(200, []))[1])
+
+    connector.publish(_request(), credentials=CREDS, dry_run=False, **BLUEPRINT)
+    connector.fetch_shops(credentials=CREDS)
+    connector.fetch_blueprint_providers(384, credentials=CREDS)
+
+    assert len(seen) == 4
+    for headers in seen:
+        assert headers.get("User-Agent"), "a Printify call went out with no User-Agent"
+
+
+def test_fetch_shops_needs_only_the_api_key(connector, monkeypatch):
+    """Requiring the shop id here would be circular -- this call is how you
+    find it."""
+    import requests
+    monkeypatch.setattr(requests, "get", lambda url, headers=None, timeout=None:
+                        _Response(200, [{"id": 5432, "title": "My new store"}]))
+
+    result = connector.fetch_shops(credentials={"PRINTIFY_API_KEY": "k"})
+    assert result.success is True
+    assert result.metadata["shops"][0]["id"] == 5432
+
+
+def test_fetch_shops_without_a_key_fails_locally(connector, monkeypatch):
+    monkeypatch.delenv("PRINTIFY_API_KEY", raising=False)
+    result = connector.fetch_shops(credentials={})
+    assert result.success is False
+    assert result.error_code == "missing_credentials"
+
+
 # -- payload ---------------------------------------------------------------
 
 def test_payload_prices_are_integers_not_strings(connector):

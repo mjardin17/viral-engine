@@ -58,6 +58,11 @@ PRINTIFY_BASE_URL = "https://api.printify.com/v1"
 REQUEST_TIMEOUT_SECONDS = 60
 MAX_TITLE_LENGTH = 255
 
+# Printify REQUIRES a User-Agent on every request and rejects those without
+# one. Confirmed against developers.printify.com, not assumed -- the first
+# draft of this connector omitted it and every live call would have failed.
+USER_AGENT = "StoryForge2/1.0 (+empire-os)"
+
 # Printify rejects uploads above this; catching it locally beats a 413.
 MAX_UPLOAD_BYTES = 50 * 1024 * 1024
 
@@ -231,10 +236,7 @@ class PrintifyConnector(MerchConnector):
                 "missing_dependency",
             )
 
-        headers = {
-            "Authorization": f"Bearer {self._credential('PRINTIFY_API_KEY', credentials)}",
-            "Content-Type": "application/json",
-        }
+        headers = self._headers(credentials)
         shop_id = self._credential("PRINTIFY_SHOP_ID", credentials)
 
         upload = self._upload_artwork(request, headers, requests)
@@ -259,6 +261,18 @@ class PrintifyConnector(MerchConnector):
             )
 
         return self._interpret_create_response(response, request, shop_id, image_id)
+
+    def _headers(self, credentials: Optional[dict[str, str]]) -> dict[str, str]:
+        """Headers for every Printify call.
+
+        User-Agent is mandatory, not decorative -- Printify rejects requests
+        without one.
+        """
+        return {
+            "Authorization": f"Bearer {self._credential('PRINTIFY_API_KEY', credentials)}",
+            "Content-Type": "application/json",
+            "User-Agent": USER_AGENT,
+        }
 
     # -- steps ------------------------------------------------------------
 
@@ -359,6 +373,61 @@ class PrintifyConnector(MerchConnector):
 
     # -- catalogue --------------------------------------------------------
 
+    def fetch_shops(self, credentials: Optional[dict[str, str]] = None
+                    ) -> PublishingConnectorResult:
+        """List the shops on this account, to find PRINTIFY_SHOP_ID.
+
+        Read-only, and the cheapest way to confirm a new API key works before
+        anything is created. Only needs PRINTIFY_API_KEY -- the shop id is
+        what this call is for, so requiring it would be circular.
+        """
+        if not self._credential("PRINTIFY_API_KEY", credentials):
+            return self._failure(
+                f"{self.name}: missing credentials: PRINTIFY_API_KEY",
+                "missing_credentials",
+            )
+
+        try:
+            import requests
+        except ImportError:
+            return self._failure(
+                "requests not installed -- run: pip install requests",
+                "missing_dependency",
+            )
+
+        try:
+            response = requests.get(
+                f"{self.base_url}/shops.json",
+                headers=self._headers(credentials),
+                timeout=REQUEST_TIMEOUT_SECONDS,
+            )
+        except requests.RequestException as exc:
+            return self._failure(
+                f"Printify shops request failed: {str(exc)[:200]}", "request_error",
+            )
+
+        try:
+            body = response.json()
+        except ValueError:
+            return self._failure(
+                f"Printify returned non-JSON (HTTP {response.status_code})",
+                "bad_response",
+            )
+
+        if response.status_code != 200:
+            return self._failure(
+                f"Printify shops lookup failed (HTTP {response.status_code}): "
+                f"{_error_text(body)}",
+                "shops_failed",
+            )
+
+        shops = body if isinstance(body, list) else body.get("data", [])
+        return self._success(
+            f"Found {len(shops)} shop(s). Set PRINTIFY_SHOP_ID to the id you want.",
+            shops=[{"id": s.get("id"), "title": s.get("title"),
+                    "channel": s.get("sales_channel")} for s in shops],
+        )
+
     def fetch_blueprint_providers(self, blueprint_id: int,
                                   credentials: Optional[dict[str, str]] = None
                                   ) -> PublishingConnectorResult:
@@ -382,8 +451,7 @@ class PrintifyConnector(MerchConnector):
         try:
             response = requests.get(
                 f"{self.base_url}/catalog/blueprints/{blueprint_id}/print_providers.json",
-                headers={"Authorization":
-                         f"Bearer {self._credential('PRINTIFY_API_KEY', credentials)}"},
+                headers=self._headers(credentials),
                 timeout=REQUEST_TIMEOUT_SECONDS,
             )
         except requests.RequestException as exc:

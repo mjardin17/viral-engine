@@ -873,6 +873,33 @@ which account owns MerchPulse before any billing or app-level action.
 [Reported, not Certain] in each `notes` field):** Printful/Printify/Gooten =
 real APIs; Redbubble/Spring/Amazon Merch = manual upload package, no scraper.
 
+**Printful connector + artwork gate (later same session):**
+`merch/connectors/printful.py` (real REST shape, `dry_run=True` default) and
+`merch/artwork.py`. 170 tests passing. **Not exercised against a live account
+— no PRINTFUL_API_KEY exists yet**, so every call in that file is written from
+published docs and is [Likely], not verified.
+
+⚠ **The demo design cannot be submitted to any POD vendor as-is.** Its artwork
+is a `data:image/svg+xml` URI; Printful/Printify/Gooten all fetch print files
+from a public HTTPS URL and want raster PNG/JPG. It also passed MerchPulse's
+own `print_quality_ok` check while being unsubmittable — that flag is about the
+design, not deliverability. Blocking step before any real listing: rasterise
+the SVG to PNG at print size and host it. Deliberately NOT automated —
+rasterising needs cairosvg/resvg (new dependency) and a bad rasterisation still
+produces a plausible-looking file.
+
+Also: the Design record claims `dimensions: "4500x5400"` but the actual SVG is
+1200x1200. That field is metadata nobody recomputes, so it is not evidence of
+print resolution.
+
+**Two bugs found by running against the real export rather than fixtures:**
+(1) `urlparse` reads a Windows drive letter as a URL scheme, so `C:/art.png`
+classified as UNKNOWN instead of a local file; (2) `\bwidth` matches inside
+`stroke-width` because a hyphen is a non-word character — the real design read
+as **12x1200** off its border width. Both fixed, both now regression-tested
+against the full real SVG. Lesson: trimmed test fixtures hid a bug that one run
+against production data exposed immediately.
+
 ## Git & GitHub (PRODUCTION RULES)
 
 **Repository:** `https://github.com/mjardin17/viral-engine` (branch: `main`)

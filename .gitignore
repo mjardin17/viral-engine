@@ -7,6 +7,15 @@
 # --- SECRETS (NEVER commit) ---
 .env
 .env.local
+# Backups of .env hold the same live secrets as .env itself. Templates and
+# examples stay tracked via the negations below.
+.env.bak
+.env.backup
+.env.*.bak
+.env.save
+!.env.example
+!.env.template
+!.env.social.template
 *.key
 *.token
 *.pickle

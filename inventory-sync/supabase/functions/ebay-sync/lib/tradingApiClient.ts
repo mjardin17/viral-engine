@@ -39,17 +39,28 @@ function buildGetMyeBaySellingRequest(pageNumber: number): string {
 </GetMyeBaySellingRequest>`;
 }
 
+/**
+ * Minimal shape of `fetch` that this client actually uses. Declared so tests
+ * can inject a fake transport without constructing real Response objects;
+ * the global `fetch` satisfies it structurally.
+ */
+export type FetchLike = (
+  url: string,
+  init: RequestInit,
+) => Promise<{ ok: boolean; status: number; text: () => Promise<string> }>;
+
 /** Make a Trading API call. */
 async function tradingApiCall(
   xml: string,
   config: TradingApiConfig,
   userToken: string,
+  fetchImpl: FetchLike,
 ): Promise<string> {
   const xmlWithToken = xml.replace("REPLACE_TOKEN", userToken);
 
   return withRetry(
     async () => {
-      const response = await fetch(baseUrl(config.environment), {
+      const response = await fetchImpl(baseUrl(config.environment), {
         method: "POST",
         headers: {
           "X-EBAY-API-CALL-NAME": "GetMyeBaySelling",
@@ -77,21 +88,30 @@ async function tradingApiCall(
   );
 }
 
-/** Fetch all active listings with pagination. */
+/** Hard ceiling on pages fetched, so a bad TotalNumberOfPages can't loop forever. */
+const MAX_PAGES = 1000;
+
+/**
+ * Fetch all active listings with pagination.
+ *
+ * The page cap MUST be recomputed after each response. The previous version
+ * did `const maxPages = Math.min(1000, totalPages)` before the first request,
+ * while totalPages was still its initial 1 — and being a `const`, it never
+ * updated. The loop therefore ran exactly once no matter what eBay reported,
+ * silently capping every sync at the first 100 listings.
+ */
 export async function fetchAllActiveListings(
   config: TradingApiConfig,
   userToken: string,
+  fetchImpl: FetchLike = fetch,
 ): Promise<EbayInventoryItem[]> {
   const items: EbayInventoryItem[] = [];
   let pageNumber = 1;
   let totalPages = 1;
 
-  // Pagination safety: never exceed 1000 pages
-  const maxPages = Math.min(1000, totalPages);
-
-  while (pageNumber <= maxPages) {
+  do {
     const xml = buildGetMyeBaySellingRequest(pageNumber);
-    const responseXml = await tradingApiCall(xml, config, userToken);
+    const responseXml = await tradingApiCall(xml, config, userToken, fetchImpl);
     const parsed = parseGetMyeBaySellingResponse(responseXml);
 
     if (!isSuccessAck(parsed.ack)) {
@@ -99,9 +119,10 @@ export async function fetchAllActiveListings(
     }
 
     items.push(...parsed.items);
-    totalPages = parsed.totalPages;
+    // Re-read the real page count from each response, clamped to the ceiling.
+    totalPages = Math.min(parsed.totalPages, MAX_PAGES);
     pageNumber++;
-  }
+  } while (pageNumber <= totalPages);
 
   return items;
 }

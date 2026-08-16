@@ -98,10 +98,14 @@ class PlatformRegistry:
         self.add(PlatformCapability(
             platform_id="kdp",
             name="Amazon Kindle Direct Publishing",
-            status=ConnectorStatus.DIRECT_API,
-            base_url="https://sellerapi.amazon.com",
-            auth_method="oauth2",
-            notes="Real API (Selling Partner API), verified in empire-os session. Ported to kdp.py.",
+            status=ConnectorStatus.DRAFT_EXPORT,
+            auth_method="web_ui",
+            notes=(
+                "No public submission API. KDP is explicitly excluded from Amazon's "
+                "Selling Partner API (CLAUDE.md audit). kdp.py drives the real web UI "
+                "via Playwright and requires a human for 2FA — it is browser automation, "
+                "not an API integration."
+            ),
             supported_formats=["mobi", "epub", "pdf"],
         ))
 

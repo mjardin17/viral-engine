@@ -1750,18 +1750,32 @@ class EbayConnector(PlatformConnector):
             return False
 
     def create_listing(self, title: str, description: str, price: float, images: List[str]) -> Optional[Listing]:
-        try:
-            headers = {"Authorization": f"Bearer {self.auth_token}", "Content-Type": "application/json"}
-            payload = {"title": title[:80], "description": description[:5000], "price": price, "images": images[:12]}
-            response = self.session.post(f"{self.base_url}/inventory_item", headers=headers, json=payload, timeout=10)
-            if response.status_code in [200, 201]:
-                listing_id = response.json().get("id")
-                print(f"✓ eBay: Created {listing_id}")
-                return Listing(str(listing_id), "ebay", title, description, price, 1, images, "active", f"https://ebay.com/{listing_id}", datetime.now(), datetime.now())
-            return None
-        except Exception as e:
-            print(f"❌ eBay error: {e}")
-            return None
+        """NOT usable through this interface — see lib/ebay_listing.py.
+
+        The previous body here POSTed {title, description, price, images} to
+        /inventory_item. That endpoint does not accept POST and eBay defines no
+        such body, so it could never have created a listing — it just returned
+        None and looked like a normal failure.
+
+        Creating an eBay listing takes three calls (inventory item -> offer ->
+        publish) and needs a category ID, a SKU, a condition, and four seller
+        policy IDs. None of those can be expressed through this base signature,
+        which is why this connector cannot be made to work as-is: the interface
+        is too thin for a real marketplace, not just this implementation.
+
+        Use lib.ebay_listing.EbayListingClient directly.
+        """
+        # ASCII only: this repo's console is cp1252 and emoji in print() raises
+        # UnicodeEncodeError. Other prints in this file still carry emoji and
+        # will crash the same way when they fire -- see note in EBAY_SYNC_FIX_PLAN.md.
+        print(
+            "[eBay] create_listing is not available through PlatformConnector.\n"
+            "   eBay needs category_id, sku, condition, and 4 policy IDs, which\n"
+            "   this signature cannot carry. Use lib/ebay_listing.py:\n"
+            "     from lib.ebay_listing import EbayListingClient, EbayProduct, EbayListingPolicies\n"
+            "   (dry_run=True by default; 18 tests cover the flow.)"
+        )
+        return None
 
     def update_listing(self, listing_id: str, **kwargs) -> bool:
         try:

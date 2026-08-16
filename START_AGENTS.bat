@@ -15,6 +15,14 @@ set BUZZ_RELAY_URL=ws://localhost:3000
 REM Python path
 set PYTHON_PATH=C:\Users\jjard\AppData\Local\Programs\Python\Python314\python.exe
 
+REM Force UTF-8 stdout. Without this, Python 3.14 uses the console's cp1252
+REM codepage and EVERY print() containing an emoji raises UnicodeEncodeError
+REM and kills the agent. There are 447 such print() calls across agents/,
+REM lib/ and council/ -- platform_sync_agent and whatnot_specialist_agent die
+REM on their startup banner; the rest die on their first status message.
+REM Verified 2026-08-15: the same print succeeds with this set and raises without it.
+set PYTHONUTF8=1
+
 echo.
 echo ================================================
 echo Empire OS Agent Coordinator (5 Agents)

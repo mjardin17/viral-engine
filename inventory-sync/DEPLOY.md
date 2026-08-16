@@ -85,6 +85,63 @@ and a **user-scoped token** (it reads your own seller's active listings).
 4. (Optional but recommended) Set a **RuName** (OAuth redirect identifier)
    if you plan to implement authenticated third-party app access later.
 
+> **Do NOT run an OAuth consent flow for this.** The Trading API uses an
+> Auth'n'Auth **User Token** (step 3), not OAuth. OAuth gives you a
+> client id / secret / refresh token — none of which this function reads.
+> Three separate setup attempts failed for exactly this reason.
+
+## 3b. Activate the production keyset (marketplace account deletion)
+
+**Production API calls are blocked until this is done.** eBay requires every
+developer to either subscribe to or opt out of marketplace account
+deletion/closure notifications before the first production call. This is
+**self-service — there is no review queue.** Sandbox is unaffected.
+
+Two options:
+
+**Option A — opt out.** In the portal, set *"Not persisting eBay data"* to On,
+pick a reason, submit. Only honest if you store no eBay user personal data.
+This repo currently stores only your own listings, but note the `buyer` field
+on the `Sale` type in `lib/platform_connectors.py` — if that ever gets
+populated, Option A stops being true.
+
+**Option B — subscribe (implemented here).** Deploy the `ebay-deletion`
+function and register its URL.
+
+```bash
+# 1. Pick a verification token: 32-80 chars, letters/digits/underscore/hyphen.
+npx supabase secrets set EBAY_VERIFICATION_TOKEN=your_generated_token
+
+# 2. The function's own public URL, EXACTLY as you will register it.
+npx supabase secrets set \
+  EBAY_DELETION_ENDPOINT_URL=https://YOUR_PROJECT_REF.supabase.co/functions/v1/ebay-deletion
+
+# 3. Deploy. --no-verify-jwt is REQUIRED (see below).
+npx supabase functions deploy ebay-deletion --no-verify-jwt
+```
+
+Then in the eBay portal → **Alerts & Notifications** → Marketplace Account
+Deletion: paste the same URL and the same verification token, and click
+**Send Test Notification**.
+
+Two failure modes account for nearly every "endpoint validation failed":
+
+- **Missing `--no-verify-jwt`.** Supabase Edge Functions demand an
+  `Authorization` JWT by default. eBay sends none, so the endpoint answers
+  **401** and eBay reports a generic validation failure that looks like a
+  hashing bug. It isn't.
+- **URL mismatch.** The response hash is computed over the endpoint URL, so
+  the value in `EBAY_DELETION_ENDPOINT_URL` must match what you registered
+  **byte-for-byte** — scheme, case, and trailing slash included. A trailing
+  slash on one side and not the other produces a valid-looking 64-char hash
+  that fails. (`lib/challenge.test.ts` covers this case explicitly.)
+
+Verify locally before deploying:
+
+```bash
+cd supabase/functions/ebay-deletion && deno test --allow-net lib/
+```
+
 ## 4. Set Edge Function secrets
 
 For **Sandbox** testing:
@@ -199,7 +256,12 @@ its `README.txt`) and deployed to Vercel:
 ## Rotating / pausing
 
 - Pause the sync without undeploying: `select cron.unschedule('ebay-sync-every-15-min');`
-- Rotate the eBay refresh token: repeat step 3, then
-  `npx supabase secrets set EBAY_REFRESH_TOKEN=new_token`.
+- Rotate the eBay user token: repeat step 3 (generate a new **Auth'n'Auth User
+  Token** — NOT an OAuth token), then
+  `npx supabase secrets set EBAY_PRODUCTION_USER_TOKEN=new_token`
+  (or `EBAY_SANDBOX_USER_TOKEN`, matching `EBAY_ENVIRONMENT`).
+  There is no `EBAY_REFRESH_TOKEN` — this function uses the legacy Trading
+  API, which has no OAuth refresh flow. Setting OAuth secrets here does
+  nothing; the function never reads them.
 - Rotate `SYNC_TRIGGER_SECRET`: update both the Edge Function secret (step 4)
   and the Vault secret (step 6) — they must match.

@@ -98,8 +98,20 @@ async function runSync(): Promise<SyncRunResult> {
 Deno.serve(async (req) => {
   // pg_cron calls this with a shared-secret header (see 0002 migration) —
   // reject anything else so the function can't be triggered publicly.
+  // FAIL CLOSED. The previous form was `if (cronSecret && header !== cronSecret)`,
+  // which SKIPPED the check entirely when SYNC_TRIGGER_SECRET was unset — so a
+  // deleted or mistyped secret silently turned the guard off instead of
+  // refusing requests. The anon key is embedded client-side on the public
+  // website, so "needs a Supabase JWT" is not a meaningful second barrier.
   const cronSecret = Deno.env.get("SYNC_TRIGGER_SECRET");
-  if (cronSecret && req.headers.get("x-sync-trigger-secret") !== cronSecret) {
+  if (!cronSecret) {
+    console.error(
+      "ebay-sync: SYNC_TRIGGER_SECRET is not set — refusing all requests. " +
+        "Set it with `supabase secrets set SYNC_TRIGGER_SECRET=...`.",
+    );
+    return new Response("Forbidden", { status: 403 });
+  }
+  if (req.headers.get("x-sync-trigger-secret") !== cronSecret) {
     return new Response("Forbidden", { status: 403 });
   }
 
@@ -109,10 +121,29 @@ Deno.serve(async (req) => {
   );
 
   const startedAt = new Date();
-  const result = await runSync();
+
+  // runSync() reads its required env vars OUTSIDE its own try block (see the
+  // requireEnv calls above), so a missing secret throws straight past it.
+  // Without this catch that throw escapes the handler and the sync_logs
+  // insert below never runs — which makes a credential problem look exactly
+  // like "cron never fired," and has sent several debugging sessions after
+  // the scheduler instead of the credentials. Every run must leave a row.
+  let result: SyncRunResult;
+  try {
+    result = await runSync();
+  } catch (fatalError) {
+    result = {
+      status: "failed",
+      itemsSeen: 0,
+      itemsUpserted: 0,
+      conflicts: [],
+      errors: [{ stage: "unexpected", message: String(fatalError) }],
+    };
+  }
+
   const finishedAt = new Date();
 
-  await supabase.from("sync_logs").insert({
+  const { error: logError } = await supabase.from("sync_logs").insert({
     started_at: startedAt.toISOString(),
     finished_at: finishedAt.toISOString(),
     status: result.status,
@@ -121,6 +152,12 @@ Deno.serve(async (req) => {
     conflicts: result.conflicts,
     errors: result.errors,
   });
+
+  // If even the logging fails, say so in the function logs rather than
+  // returning a clean response over a silently empty sync_logs table.
+  if (logError) {
+    console.error("ebay-sync: failed to write sync_logs row:", logError.message);
+  }
 
   return new Response(JSON.stringify(result), {
     status: result.status === "failed" ? 500 : 200,

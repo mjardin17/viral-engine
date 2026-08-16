@@ -179,3 +179,124 @@ Deno.test("tradingApiParser: handles multiple items", () => {
   assertEquals(parsed.items[1].quantityAvailable, 8);
   assertEquals(parsed.items[2].quantityAvailable, 12);
 });
+
+// ---------------------------------------------------------------------------
+// Pagination regression tests.
+//
+// These cover the bug where `maxPages` was computed as
+// `Math.min(1000, totalPages)` BEFORE the first request (totalPages still 1)
+// and stored in a `const`, so the loop ran exactly once and every sync was
+// silently capped at the first 100 listings. Nothing caught it because no
+// test had ever exercised fetchAllActiveListings — only the parser.
+// ---------------------------------------------------------------------------
+
+import { fetchAllActiveListings, type FetchLike } from "./tradingApiClient.ts";
+
+const TEST_CONFIG = {
+  appId: "app",
+  certId: "cert",
+  devId: "dev",
+  userToken: "token",
+  environment: "sandbox" as const,
+};
+
+/** Build a GetMyeBaySelling response for one page of a `totalPages` result. */
+function pageResponse(pageNumber: number, totalPages: number): string {
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<GetMyeBaySellingResponse xmlns="urn:ebay:apis:eBLBaseComponents">
+  <Ack>Success</Ack>
+  <ActiveList>
+    <PaginationResult>
+      <TotalNumberOfPages>${totalPages}</TotalNumberOfPages>
+      <TotalNumberOfEntries>${totalPages * 100}</TotalNumberOfEntries>
+      <PageNumber>${pageNumber}</PageNumber>
+    </PaginationResult>
+    <ItemArray>
+      <Item>
+        <ItemID>item-page-${pageNumber}</ItemID>
+        <Title>Item on page ${pageNumber}</Title>
+        <CurrentPrice>10.00</CurrentPrice>
+        <SellingStatus>
+          <QuantityAvailable>1</QuantityAvailable>
+        </SellingStatus>
+      </Item>
+    </ItemArray>
+  </ActiveList>
+</GetMyeBaySellingResponse>`;
+}
+
+/** Fake transport that records the PageNumber requested on each call. */
+function fakeFetch(totalPages: number, requested: number[]): FetchLike {
+  return (_url, init) => {
+    const body = String(init.body ?? "");
+    const page = parseInt(body.match(/<PageNumber>(\d+)<\/PageNumber>/)?.[1] ?? "0", 10);
+    requested.push(page);
+    return Promise.resolve({
+      ok: true,
+      status: 200,
+      text: () => Promise.resolve(pageResponse(page, totalPages)),
+    });
+  };
+}
+
+Deno.test("fetchAllActiveListings: fetches EVERY page, not just the first", async () => {
+  const requested: number[] = [];
+  const items = await fetchAllActiveListings(
+    TEST_CONFIG,
+    "token",
+    fakeFetch(3, requested),
+  );
+
+  // The bug produced [1] here and a single item.
+  assertEquals(requested, [1, 2, 3]);
+  assertEquals(items.length, 3);
+  assertEquals(items[0].ebayItemId, "item-page-1");
+  assertEquals(items[2].ebayItemId, "item-page-3");
+});
+
+Deno.test("fetchAllActiveListings: single-page result makes exactly one request", async () => {
+  const requested: number[] = [];
+  const items = await fetchAllActiveListings(
+    TEST_CONFIG,
+    "token",
+    fakeFetch(1, requested),
+  );
+
+  assertEquals(requested, [1]);
+  assertEquals(items.length, 1);
+});
+
+Deno.test("fetchAllActiveListings: clamps a runaway TotalNumberOfPages to 1000", async () => {
+  const requested: number[] = [];
+  const items = await fetchAllActiveListings(
+    TEST_CONFIG,
+    "token",
+    fakeFetch(999999, requested),
+  );
+
+  assertEquals(requested.length, 1000);
+  assertEquals(items.length, 1000);
+});
+
+Deno.test("fetchAllActiveListings: throws on a non-Success Ack instead of returning partial data", async () => {
+  const failing: FetchLike = () =>
+    Promise.resolve({
+      ok: true,
+      status: 200,
+      text: () =>
+        Promise.resolve(`<?xml version="1.0"?>
+<GetMyeBaySellingResponse>
+  <Ack>Failure</Ack>
+  <Errors><ErrorCode>931</ErrorCode><LongMessage>Auth token is invalid</LongMessage></Errors>
+</GetMyeBaySellingResponse>`),
+    });
+
+  let threw = false;
+  try {
+    await fetchAllActiveListings(TEST_CONFIG, "token", failing);
+  } catch (err) {
+    threw = true;
+    assertEquals(String(err).includes("Auth token is invalid"), true);
+  }
+  assertEquals(threw, true);
+});

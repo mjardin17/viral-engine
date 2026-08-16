@@ -14,7 +14,10 @@ const DEFAULT_OPTIONS: RetryOptions = {
 };
 
 export class RetryExhaustedError extends Error {
-  constructor(public readonly attempts: number, public readonly cause: unknown) {
+  // `cause` needs `override` — Error itself declares a `cause` property
+  // (ES2022), so redeclaring it here without the modifier is a type error
+  // under strict TypeScript. Caught by `deno check`, not by the tests.
+  constructor(public readonly attempts: number, public override readonly cause: unknown) {
     super(`Retry exhausted after ${attempts} attempts: ${String(cause)}`);
     this.name = "RetryExhaustedError";
   }

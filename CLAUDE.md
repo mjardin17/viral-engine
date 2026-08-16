@@ -953,6 +953,52 @@ as **12x1200** off its border width. Both fixed, both now regression-tested
 against the full real SVG. Lesson: trimmed test fixtures hid a bug that one run
 against production data exposed immediately.
 
+### 2026-08-16 Session — eBay sync/listing/feed fixes pushed, Creao scaffold audited + fixed
+
+**Pushed to `feature/storyforge2-2026-08-14`** (video-bot-pipeline): all the
+eBay sync bugfixes, the `ebay-deletion` webhook, `lib/ebay_listing.py`
+(3-call Sell Inventory flow, 24 tests), and `lib/product_feed.py` (Google
+Shopping RSS + Meta CSV, 32 tests) documented earlier in this file. 289
+Python + 14 Deno tests pass. Secret sweep clean.
+
+**Audited a third-party scaffold Creao pushed to `boss-listers-mvp` overnight**
+(`marketplace-integration/`, went straight to `main`, no PR). Two real findings:
+
+1. **Only 15 of the 21 files it claimed to deliver actually reached GitHub.**
+   Missing: `src/index.js` (the entry point its own "Verification" section
+   claims to have run — `node src/index.js --check`), `src/connectors/
+   facebook.js`, `scripts/oauth-token.js`, and 3 of 5 docs. Same pattern this
+   whole audit started from: a summary describing work that isn't in the repo.
+2. **`src/connectors/ebay.js` crashed on its first call, always, regardless of
+   credentials.** `env.js` exports `process.env` flat (matches `.env.example`:
+   `EBAY_APP_ID`/`EBAY_CERT_ID`/`EBAY_AUTH_TOKEN`/`EBAY_SANDBOX`), and every
+   other connector in the scaffold (etsy/depop/mercari/whatnot) reads
+   `process.env.X` directly to match — `ebay.js` alone invented a nested
+   `env.ebay.clientId` shape that existed nowhere, so `env.ebay` was
+   `undefined` and every call threw a `TypeError` before touching the
+   network. Fixed in `boss-listers-mvp` (commits `f663738`, `550479a`,
+   pushed to `main`): flat env reads restored, `Content-Language: en-US`
+   added to `createInventoryItem` only (the same header-omission bug I'd
+   already found and fixed in `lib/ebay_listing.py` — eBay's 400 for a
+   missing Content-Language never mentions the header, so it's cheap to miss
+   twice), and a canonical-source note added directing future editors to
+   `lib/ebay_listing.py` instead of adding validation logic to `ebay.js`.
+
+**Decision: `lib/ebay_listing.py` is the canonical eBay listing client.**
+`marketplace-integration/src/connectors/ebay.js` (boss-listers-mvp, Node) is
+a thin mirror only — no independent validation logic should be added there.
+Reason: it has no dry-run default (any call with real creds hits the live
+API immediately) and no step-tracking (an offer created but not published
+returns `{ok:true}` with no signal that it isn't live), so extending it
+independently would recreate every bug already found and fixed in the Python
+client. If Boss Listers ever needs to call the Python client at runtime, the
+answer is a small internal HTTP service — not a JS rewrite of the validation.
+
+**Unrelated, not a duplicate:** `boss-listers-mvp/lib/channels/
+apiConnectors.js`'s `EbayConnector` (pre-existing, wired into the `/channels`
+status page) only checks OAuth token exchange for a connection-status
+indicator — it doesn't create listings. No overlap with the above.
+
 ## Git & GitHub (PRODUCTION RULES)
 
 **Repository:** `https://github.com/mjardin17/viral-engine` (branch: `main`)

@@ -47,6 +47,8 @@ Josh Jardin (justifiedmagnificent@gmail.com). Building a multi-channel AI conten
 | **WW Channel (WW)** | WW1 & WW2 documentary channel | Planned — starts after GG EP020-025 done |
 | **Council Bot System** | Self-healing pipeline monitor (9 bots) | Live |
 | **Viral Engine Launch** | Website + YouTube + Store + Apps + Newsletter | Opening day pending |
+| **Book Factory** | 24/7 autonomous book generation: trends → manuscript → cover → publish to Gumroad/D2D/storefront | MVP built 2026-08-17 (trends, metadata, factory orchestrator + 34 tests) — Phase 0 blockers identified |
+| **Merch Factory** | 24/7 autonomous merch generation: parallel to Book Factory, same factory pattern | Architecture designed (separate instance per product kind: t-shirts, mugs, prints, etc.) |
 
 → Full details: memory/projects/
 
@@ -89,6 +91,12 @@ Josh Jardin (justifiedmagnificent@gmail.com). Building a multi-channel AI conten
 | ebay-sync | Supabase Edge Function (`inventory-sync/supabase/functions/ebay-sync/`) — polls eBay Sell Inventory API every 15 min via pg_cron, upserts into `public.products`, logs to `public.sync_logs` |
 | products table | Shared Supabase table — single source of truth read by the website storefront (`/api/products`) and Boss Listers, written by ebay-sync (source='ebay') and Boss Listers (source='manual') |
 | functions/api/products.ts | Cloudflare Pages Function — `GET /api/products`, 5-min edge cache, backs the website's "Shop The Inventory" section in `index.html` |
+| **Book Factory** | Autonomous loop: scan trends (4h) → pick niche → generate manuscript → cover → metadata → publish (dry-run first). MVPcode in `storyforge2/books/` (trends.py, metadata.py, factory.py + cli). 8 evergreen niches, 90-day cooldown per niche |
+| TrendScanner | Scans for TrendOpportunity in evergreen niches; round-robin + cooldown enforcement |
+| TrendOpportunity | `{niche, title, premise, keywords, audience, estimated_size}` — proposed book idea from a signal |
+| BookMetadata | `{isbn (placeholder), title, description, keywords, categories (BISAC), pricing}` — enriched with ISBN determinism + niche-based pricing |
+| BookFactory | Orchestrator: runs one cycle per 4h, scans → briefs → manufactures → publishes (DRY_RUN default) |
+| BookCycle | State for one book: cycle_id, opportunity, brief, metadata, status (initialized → manuscript → metadata → ready_publish) |
 
 ## Episode Status
 | Season | Episodes | Status |
@@ -183,6 +191,55 @@ Then give the answer.
 - Credits matter — no runaway scheduled tasks
 - Josh handles credentials himself
 - Wants everything launched, not just planned
+
+## Book Factory — 2026-08-17 Session Notes
+
+### Architecture Decision
+Book Factory is **top-level** (`books/`), **parallel to merch/**, NOT nested inside `storyforge2/`. 
+Reason: `storyforge2/` is the *manufacturing library* (components); `books/` is the *business layer* (orchestration + market decisions).
+
+### MVP Status (Committed 2026-08-17)
+✅ **Core components built and tested:**
+- Trend scanning: 8 evergreen niches (personal-finance, productivity, AI, health, remote-work, side-hustle, tech-writing, ML)
+- Round-robin scheduling with 90-day cooldown per niche
+- ISBN generation (placeholder format: 978-1-{8digits}-{check}, deterministic, Luhn-validated)
+- Metadata builder: BISAC categories, niche-specific pricing ($9.99–$19.99), description synthesis
+- Factory orchestrator: dry-run default, SQLite ledger for cycle tracking, context managers for DB cleanup
+- CLI: `scan` / `run-cycle` / `status` / `publish` subcommands
+- **34 tests passing**: TrendScanner round-robin, ISBN determinism, metadata pricing, state machine
+
+⚠️ **Critical blockers identified by architect + planner agents (not yet fixed):**
+
+1. **`storyforge2/pipeline.py` is broken on import**
+   - Line 18: `from storyforge2.state import PipelineState, StageStatus`
+   - Reality: `state.py` defines `StateStore`, not these classes
+   - Impact: **Book Factory manuscript phase cannot run**
+   - Fix: Phase 0 — rewrite pipeline.py to use real StateStore API
+
+2. **No Claude API integration**
+   - `.env` has `GEMINI_API_KEY`, NOT `ANTHROPIC_API_KEY`
+   - `ai_router/adapters/claude_adapter.py` is a stub (returns `success=False`)
+   - `storyforge2/manuscript.py` has only `{gemini, mock}` providers
+   - Impact: **Blocks Phase 2 entirely** (20k-40k word generation)
+   - Fix: Wire real Claude API in ai_router; add RouterTextProvider to manuscript.py
+
+3. **Draft2Digital status contradicted**
+   - Registry: "DIRECT_API, verified in empire-os"
+   - CLAUDE.md: "does not expose public API"
+   - Reality: Never tested against live endpoint
+   - Impact: Phase 4 publishes to D2D by default; a 404 = silent failure
+   - Fix: Verify endpoint before use or demote status
+
+4. **KDP policy violated by existing code**
+   - CLAUDE.md: "browser scraping = policy violation"
+   - Reality: `kdp.py` exists, uses Playwright, needs human 2FA
+   - Fix: Book Factory produces manual package only; never calls kdp.py automatically
+
+### User Signal (2026-08-17)
+Josh said: "we can make merch its own factory with all different kinds" — indicating intent to:
+1. Complete Book Factory as a working model
+2. Extract factory pattern into Merch Factory (with product type variants: t-shirts, mugs, prints, etc.)
+3. Replicate factory pattern to other domains
 
 ## Lessons
 - Uploads went to wrong channel because token.pickle was authenticated to wrong Google account — always verify which account token belongs to before running uploader

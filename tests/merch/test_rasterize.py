@@ -1,5 +1,5 @@
 """
-tests/storyforge2/test_merch_rasterize.py -- SVG to print-ready PNG.
+tests/merch/test_rasterize.py -- SVG to print-ready PNG.
 
 These run the real backend, so they are the only tests in this suite that
 exercise a native dependency. They skip cleanly when it is absent rather than
@@ -14,7 +14,7 @@ from pathlib import Path
 
 import pytest
 
-from storyforge2.merch.rasterize import (
+from merch.rasterize import (
     DEFAULT_PRINT_WIDTH, RasterError, backend_available, rasterize_design,
     rasterize_svg,
 )
@@ -51,7 +51,7 @@ def test_backend_availability_is_reported_not_raised():
 
 def test_module_imports_without_the_backend():
     """The rest of the merch pipeline must work on a machine with no renderer."""
-    import storyforge2.merch.rasterize as module
+    import merch.rasterize as module
     assert module.rasterize_svg is not None
 
 
@@ -81,7 +81,7 @@ def test_shipped_design_preserves_its_square_aspect(tmp_path):
 def test_rasterised_design_becomes_pod_ready_artwork(tmp_path):
     """End to end: the thing that was unsubmittable now passes the gate that
     rejected it -- for a vendor that accepts direct upload."""
-    from storyforge2.merch.artwork import ArtworkKind, ArtworkSource
+    from merch.artwork import ArtworkKind, ArtworkSource
 
     before = ArtworkSource.from_design({
         "artwork_url": "data:image/svg+xml;utf8,%3Csvg%3E",
@@ -99,7 +99,7 @@ def test_rasterised_design_becomes_pod_ready_artwork(tmp_path):
 @requires_backend
 def test_rasterised_design_still_needs_hosting_for_printful(tmp_path):
     """Rasterising solves format, not transport. Printful pulls by URL."""
-    from storyforge2.merch.artwork import ArtworkSource
+    from merch.artwork import ArtworkSource
 
     result = rasterize_design(SHIPPED_DESIGN, tmp_path / "print.png")
     art = ArtworkSource.from_url(str(result.path))

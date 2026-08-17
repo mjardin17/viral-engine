@@ -1,5 +1,5 @@
 """
-tests/storyforge2/test_merch_artwork.py -- artwork classification for POD.
+tests/merch/test_artwork.py -- artwork classification for POD.
 
 The case that matters: the shipped MerchPulse Design stores its artwork as a
 `data:image/svg+xml` URI. That is not submittable to any POD vendor, and the
@@ -8,7 +8,7 @@ whole point of this module is saying so before a connector tries.
 
 import pytest
 
-from storyforge2.merch.artwork import (
+from merch.artwork import (
     MIN_PRINT_PIXELS, ArtworkKind, ArtworkSource,
 )
 

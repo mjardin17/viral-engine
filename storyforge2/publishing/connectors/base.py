@@ -13,32 +13,18 @@ platforms.
 from __future__ import annotations
 
 from abc import ABC, abstractmethod
-from dataclasses import dataclass
 from pathlib import Path
 from typing import Optional
+
+from connector_core import ConnectorResult
 
 __all__ = ["PublishingConnectorResult", "PublishingConnector"]
 
 
-@dataclass
-class PublishingConnectorResult:
-    """Standardized result from a connector publish attempt."""
-    success: bool
-    message: str
-    platform_id: str
-    listing_url: Optional[str] = None
-    error_code: Optional[str] = None
-    metadata: dict = None  # platform-specific extra info (book_id, etc.)
-
-    def to_dict(self) -> dict:
-        return {
-            "success": self.success,
-            "message": self.message,
-            "platform_id": self.platform_id,
-            "listing_url": self.listing_url,
-            "error_code": self.error_code,
-            "metadata": self.metadata or {},
-        }
+# Alias, not a redefinition: books and merch record outcomes into the same
+# ledger, so they must share one result shape. Kept under the old name so
+# existing book connectors need no edit.
+PublishingConnectorResult = ConnectorResult
 
 
 class PublishingConnector(ABC):

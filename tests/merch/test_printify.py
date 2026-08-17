@@ -1,5 +1,5 @@
 """
-tests/storyforge2/test_merch_printify.py -- Printify connector.
+tests/merch/test_printify.py -- Printify connector.
 
 Nothing here hits the network. The behaviours worth pinning are the ones that
 differ from Printful and each have a money or wrong-product failure mode:
@@ -14,11 +14,11 @@ from decimal import Decimal
 
 import pytest
 
-from storyforge2.merch.artwork import ArtworkSource
-from storyforge2.merch.connectors import (
+from merch.artwork import ArtworkSource
+from merch.connectors import (
     MerchPublishRequest, MerchVariant, PrintifyConnector, to_minor_units,
 )
-from storyforge2.merch.connectors.printify import (
+from merch.connectors.printify import (
     MAX_UPLOAD_BYTES, PrintifyArtworkError, PrintifyPriceError,
 )
 
@@ -277,7 +277,7 @@ def test_local_raster_file_passes_preflight_on_printify(connector, tmp_path):
 def test_the_same_local_file_is_rejected_by_printful(tmp_path):
     """Same artwork, different vendor, different answer -- the capability
     split is real and must not be flattened."""
-    from storyforge2.merch.connectors import PrintfulConnector
+    from merch.connectors import PrintfulConnector
 
     art_file = tmp_path / "design.png"
     art_file.write_bytes(b"\x89PNG" + b"0" * 64)
@@ -307,7 +307,7 @@ def test_missing_local_file_is_caught_before_upload(connector, tmp_path):
 
 def test_oversize_upload_is_rejected_locally(connector, tmp_path, monkeypatch):
     monkeypatch.setattr(
-        "storyforge2.merch.connectors.printify.MAX_UPLOAD_BYTES", 32,
+        "merch.connectors.printify.MAX_UPLOAD_BYTES", 32,
     )
     art_file = tmp_path / "big.png"
     art_file.write_bytes(b"0" * 128)

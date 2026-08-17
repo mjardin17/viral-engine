@@ -1,5 +1,5 @@
 """
-tests/storyforge2/test_merch_channels.py -- merch channel registry honesty.
+tests/merch/test_channels.py -- merch channel registry honesty.
 
 Same guard as the book registry: a platform must not be labelled as having
 an API it does not have. Redbubble and Spring are the ones at risk here --
@@ -9,11 +9,12 @@ should be built against them.
 
 import pytest
 
-from storyforge2.merch.channels import (
+from merch.channels import (
     CONNECTOR_TYPE_TO_STATUS, MERCH_CHANNELS, merch_registry,
     reconcile_export_channels,
 )
-from storyforge2.publishing.registry import ConnectorStatus, get_registry
+from connector_core import ConnectorStatus
+from storyforge2.publishing.registry import get_registry
 
 
 @pytest.fixture

@@ -1,5 +1,5 @@
 """
-tests/storyforge2/test_merch_economics.py -- unit economics recompute.
+tests/merch/test_economics.py -- unit economics recompute.
 
 The point of this module is catching a stored figure that has gone stale
 against its own inputs. These tests pin the arithmetic to the real numbers
@@ -9,7 +9,7 @@ as a failure rather than as a quietly different margin.
 
 import pytest
 
-from storyforge2.merch.economics import (
+from merch.economics import (
     COST_FIELDS, THIN_MARGIN_PCT, verify_all_products, verify_product_economics,
 )
 

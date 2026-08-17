@@ -1,5 +1,5 @@
 """
-tests/storyforge2/test_merch_export.py -- MerchPulse export ingest.
+tests/merch/test_export.py -- MerchPulse export ingest.
 
 The property that matters most: demo-seeded records can never be mistaken
 for real product. Everything in the shipped export except the trend signals
@@ -11,7 +11,7 @@ import json
 
 import pytest
 
-from storyforge2.merch.export_ingest import (
+from merch.export_ingest import (
     CampaignChain, MerchExportError, MerchPulseExport, load_export,
 )
 

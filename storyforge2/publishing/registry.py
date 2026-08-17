@@ -18,9 +18,11 @@ live APIs.
 
 from __future__ import annotations
 
-from dataclasses import dataclass, field
-from enum import Enum
 from typing import Optional
+
+from connector_core import (
+    CapabilityRegistry, ConnectorStatus, PlatformCapability,
+)
 
 __all__ = [
     "ConnectorStatus",
@@ -30,67 +32,15 @@ __all__ = [
 ]
 
 
-class ConnectorStatus(Enum):
-    """Honest labels for what a platform offers. Never use "DIRECT_API" as
-    a placeholder for "we haven't implemented it yet" — always label
-    truthfully."""
+class PlatformRegistry(CapabilityRegistry):
+    """The book pipeline's platforms.
 
-    DIRECT_API = "direct_api"
-    # Platform exposes a real, public REST/GraphQL API for listing submission.
-    # Verified by reading their API docs and testing the call.
-
-    APPROVED_PARTNER_API = "approved_partner_api"
-    # Platform requires business approval to access APIs (e.g. TikTok Shop,
-    # Facebook/Instagram Shops). Real APIs exist, but access is gated on
-    # merchant application. Honest status until the gate is passed.
-
-    DRAFT_EXPORT = "draft_export"
-    # No public submission API exists. Platform publishes via manual web UI
-    # only. We generate an upload-ready folder + checklist for the human to
-    # complete. Examples: KDP's web form, Apple Books, Google Play Books,
-    # Kobo Writing Life, B&N Press, IngramSpark. Confirmed by reading their
-    # official help docs (which all say "upload via our website") and the
-    # Anthropic API docs (which exclude most self-publishing platforms from
-    # their seller API because they don't offer one).
-
-    MANUAL_UPLOAD_PACKAGE = "manual_upload_package"
-    # Same as DRAFT_EXPORT — generates the export folder. Listed separately
-    # here only if we want to distinguish between "this platform is a big
-    # player (KDP)" vs. "this is a smaller niche store" — doesn't change
-    # the workflow.
-
-    UNSUPPORTED = "unsupported"
-    # Platform doesn't fit the book-selling use case (e.g. YouTube is for
-    # video, not ebook sales), or access is completely restricted, or the
-    # API is so undocumented that implementing it is impractical. Honest
-    # label rather than a TODO.
-
-
-@dataclass
-class PlatformCapability:
-    """One platform's publishing capability. Never instances with status
-    DIRECT_API unless the connector is actually implemented and tested."""
-
-    platform_id: str  # e.g. "kdp", "d2d", "instagram_shops"
-    name: str  # e.g. "Amazon Kindle Direct Publishing"
-    status: ConnectorStatus
-    base_url: str = ""  # if DIRECT_API, the API endpoint root
-    auth_method: str = ""  # "oauth2", "api_key", "web_ui", etc.
-    notes: str = ""  # why it has this status, evidence (doc links, etc.)
-    supported_formats: list[str] = field(default_factory=lambda: ["epub", "pdf"])  # what this platform accepts
-
-    def requires_auth(self) -> bool:
-        return self.status in (ConnectorStatus.DIRECT_API, ConnectorStatus.APPROVED_PARTNER_API)
-
-    def is_draft_export(self) -> bool:
-        return self.status in (ConnectorStatus.DRAFT_EXPORT, ConnectorStatus.MANUAL_UPLOAD_PACKAGE)
-
-
-class PlatformRegistry:
-    """Central registry of all 13 platforms mentioned in the mission brief."""
+    Subclasses the neutral registry rather than redefining it -- merch
+    builds its own from the same base, so neither owns the other.
+    """
 
     def __init__(self):
-        self.platforms: dict[str, PlatformCapability] = {}
+        super().__init__()
         self._init_platforms()
 
     def _init_platforms(self):
@@ -233,26 +183,6 @@ class PlatformRegistry:
             supported_formats=["pdf"],
         ))
 
-    def add(self, capability: PlatformCapability):
-        self.platforms[capability.platform_id] = capability
-
-    def get(self, platform_id: str) -> Optional[PlatformCapability]:
-        return self.platforms.get(platform_id)
-
-    def list_by_status(self, status: ConnectorStatus) -> list[PlatformCapability]:
-        return [p for p in self.platforms.values() if p.status == status]
-
-    def all_platforms(self) -> list[PlatformCapability]:
-        return sorted(self.platforms.values(), key=lambda p: p.name)
-
-    def direct_api_platforms(self) -> list[PlatformCapability]:
-        """Returns platforms with real, public APIs (DIRECT_API only, not
-        APPROVED_PARTNER_API, since those are gated)."""
-        return self.list_by_status(ConnectorStatus.DIRECT_API)
-
-    def draft_export_platforms(self) -> list[PlatformCapability]:
-        """Returns platforms requiring manual/web UI export."""
-        return [p for p in self.platforms.values() if p.is_draft_export()]
 
 
 # Singleton registry

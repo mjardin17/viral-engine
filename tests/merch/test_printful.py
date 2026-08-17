@@ -1,5 +1,5 @@
 """
-tests/storyforge2/test_merch_printful.py -- Printful connector.
+tests/merch/test_printful.py -- Printful connector.
 
 No live account exists, so nothing here hits the network. The behaviours
 tested are the ones that decide whether a *real* run is trustworthy:
@@ -13,8 +13,8 @@ from types import SimpleNamespace
 
 import pytest
 
-from storyforge2.merch.artwork import ArtworkSource
-from storyforge2.merch.connectors import (
+from merch.artwork import ArtworkSource
+from merch.connectors import (
     MerchPublishRequest, MerchVariant, PrintfulConnector,
 )
 

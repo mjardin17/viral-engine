@@ -1,5 +1,5 @@
 """
-storyforge2/merch/economics.py -- independent recompute of merch unit economics.
+merch/economics.py -- independent recompute of merch unit economics.
 
 MerchPulse stores both the cost inputs *and* the derived figures
 (profit_amount, margin_pct). Storing a derived value is how a stale number

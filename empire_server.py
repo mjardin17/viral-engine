@@ -24,6 +24,8 @@ Empire OS connection:
 
 from __future__ import annotations
 
+import hashlib
+import hmac
 import json
 import os
 import subprocess
@@ -34,7 +36,7 @@ from pathlib import Path
 from typing import Any, Optional
 
 import uvicorn
-from fastapi import FastAPI, HTTPException, BackgroundTasks
+from fastapi import FastAPI, HTTPException, BackgroundTasks, Header, Request
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
@@ -325,6 +327,191 @@ def council_status():
 @app.get("/api/render/status")
 def render_status():
     return {"active_renders": _active_renders}
+
+
+# ── Webhook: Commercial Generation (Boss Listers → social clips) ───────────────
+WEBHOOK_SECRET = os.environ.get("WEBHOOK_SECRET", "boss-listers-webhook-secret-2026")
+
+@app.post("/webhook")
+async def webhook_generate_commercial(request: Request, background_tasks: BackgroundTasks,
+                                       x_webhook_signature: str = Header(None)):
+    """
+    Receive commercial generation request from Boss Listers.
+
+    Expected payload:
+    {
+      "type": "generate_commercial",
+      "job_id": "commercial_...",
+      "listing_id": "sku123",
+      "product_name": "Trading Card: Charizard",
+      "images": ["https://...", ...],
+      "description": "Holographic, near-mint condition",
+      "price": "$99.99"
+    }
+    """
+    try:
+        # Verify webhook signature
+        body_bytes = await request.body()
+        body_str = body_bytes.decode('utf-8')
+
+        if x_webhook_signature:
+            expected_sig = hmac.new(
+                WEBHOOK_SECRET.encode(),
+                body_str.encode(),
+                hashlib.sha256
+            ).hexdigest()
+            if not hmac.compare_digest(x_webhook_signature, expected_sig):
+                print(f"[webhook] Signature mismatch: {x_webhook_signature} vs {expected_sig}")
+                raise HTTPException(status_code=401, detail="Invalid signature")
+
+        request_body = json.loads(body_str)
+        job_type = request_body.get("type")
+        if job_type != "generate_commercial":
+            return {"error": "Unknown webhook type", "type": job_type}, 400
+
+        job_id = request_body.get("job_id", "commercial_unknown")
+        listing_id = request_body.get("listing_id", "")
+        product_name = request_body.get("product_name", "Product")
+        images = request_body.get("images", [])
+        description = request_body.get("description", "")
+        price = request_body.get("price", "$0")
+
+        # Queue rendering in background
+        background_tasks.add_task(
+            _render_commercial_task,
+            job_id=job_id,
+            listing_id=listing_id,
+            product_name=product_name,
+            images=images,
+            description=description,
+            price=price
+        )
+
+        return {
+            "status": "queued",
+            "job_id": job_id,
+            "listing_id": listing_id,
+            "message": f"Commercial rendering queued for {product_name}"
+        }
+
+    except Exception as e:
+        print(f"[webhook] Error: {e}")
+        return {"error": str(e)}, 500
+
+
+def _render_commercial_task(job_id: str, listing_id: str, product_name: str,
+                            images: list[str], description: str, price: str):
+    """Background task: render a commercial and queue for social posting."""
+    try:
+        print(f"[commercial] Starting render for job {job_id}: {product_name}")
+
+        # Create commercial script JSON
+        script = {
+            "title": f"Product Commercial: {product_name}",
+            "type": "commercial",
+            "duration_seconds": 30,
+            "scenes": [
+                {
+                    "scene": 1,
+                    "duration": 3,
+                    "type": "title",
+                    "text": product_name,
+                    "background": "gradient_dark_gold"
+                },
+                {
+                    "scene": 2,
+                    "duration": 8,
+                    "type": "product_showcase",
+                    "product_images": images[:3] if images else [],
+                    "audio": "upbeat_music",
+                    "caption": "Premium quality"
+                },
+                {
+                    "scene": 3,
+                    "duration": 6,
+                    "type": "description",
+                    "text": description or "High quality item",
+                    "text_color": "gold",
+                    "audio": f"tts:{description or 'Premium item'}"
+                },
+                {
+                    "scene": 4,
+                    "duration": 5,
+                    "type": "price_and_cta",
+                    "price": price,
+                    "text": "Available on Boss Listers",
+                    "cta_button": "Shop Now",
+                    "audio": f"tts:{price}"
+                },
+                {
+                    "scene": 5,
+                    "duration": 8,
+                    "type": "product_loop",
+                    "product_images": images[-3:] if images else [],
+                    "music": "upbeat_fade_out",
+                    "text": "Boss Listers: Quality, Affordable, Fast"
+                }
+            ],
+            "audio": {
+                "music": "upbeat_modern",
+                "voice": "professional_female",
+                "volume_levels": {"music": 0.6, "voice": 1.0}
+            },
+            "output_formats": [
+                {"format": "mp4_9_16", "platform": "tiktok"},
+                {"format": "mp4_1080p", "platform": "instagram_reels"},
+                {"format": "mp4_1_1", "platform": "instagram_feed"}
+            ]
+        }
+
+        # Write script to temp file
+        script_path = Path(f".temp_commercial_{job_id}.json")
+        script_path.write_text(json.dumps(script, indent=2), encoding="utf-8")
+        print(f"[commercial] Wrote script: {script_path}")
+
+        # Output path in social_clips for auto-posting
+        social_clips_dir = BASE_DIR / "social_clips"
+        social_clips_dir.mkdir(exist_ok=True)
+        output_path = social_clips_dir / f"commercial_{listing_id}_{job_id}.mp4"
+
+        # Call render_commercial.py
+        python_exe = r"C:\Users\jjard\AppData\Local\Programs\Python\Python314\python.exe"
+        render_script = BASE_DIR / "render_commercial.py"
+
+        cmd = [
+            python_exe,
+            str(render_script),
+            "--script", str(script_path),
+            "--out", str(output_path)
+        ]
+
+        print(f"[commercial] Running: {' '.join(cmd)}")
+        result = subprocess.run(cmd, capture_output=True, text=True, timeout=600)
+
+        if result.returncode == 0:
+            file_size_mb = round(output_path.stat().st_size / 1_048_576, 1) if output_path.exists() else 0
+            print(f"✅ [commercial] Rendered: {output_path} ({file_size_mb}MB)")
+            _publish_empire_event("commercial.completed", {
+                "job_id": job_id,
+                "listing_id": listing_id,
+                "product": product_name,
+                "output_path": str(output_path),
+                "size_mb": file_size_mb
+            })
+        else:
+            print(f"❌ [commercial] Render failed: {result.stderr}")
+            _publish_empire_event("commercial.failed", {
+                "job_id": job_id,
+                "error": result.stderr
+            })
+
+        # Cleanup script
+        if script_path.exists():
+            script_path.unlink()
+
+    except Exception as e:
+        print(f"❌ [commercial] Task error: {e}")
+        _publish_empire_event("commercial.failed", {"job_id": job_id, "error": str(e)})
 
 
 # ── Entry point ───────────────────────────────────────────────────────────────

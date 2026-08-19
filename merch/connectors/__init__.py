@@ -1,5 +1,5 @@
 """
-storyforge2.merch.connectors -- POD vendor connectors.
+merch.connectors -- POD vendor connectors.
 
 Only Printful is implemented. Printify and Gooten have real APIs and are the
 next candidates; Redbubble, Spring and Amazon Merch have no usable submission
@@ -10,7 +10,7 @@ from .base import (
     MerchConnector,
     MerchPublishRequest,
     MerchVariant,
-    PublishingConnectorResult,
+    ConnectorResult,
 )
 from .printful import PrintfulConnector
 from .printify import PrintifyConnector, to_minor_units
@@ -19,7 +19,7 @@ __all__ = [
     "MerchConnector",
     "MerchPublishRequest",
     "MerchVariant",
-    "PublishingConnectorResult",
+    "ConnectorResult",
     "PrintfulConnector",
     "PrintifyConnector",
     "to_minor_units",

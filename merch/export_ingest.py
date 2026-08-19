@@ -1,5 +1,5 @@
 """
-storyforge2/merch/export_ingest.py -- load and validate a MerchPulse export.
+merch/export_ingest.py -- load and validate a MerchPulse export.
 
 A MerchPulse export is a single JSON object of entity_name -> list[record].
 The records form a chain:

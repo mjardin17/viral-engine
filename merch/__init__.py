@@ -1,5 +1,5 @@
 """
-storyforge2.merch -- merch (print-on-demand) side of the pipeline.
+merch -- merch (print-on-demand) side of the pipeline.
 
 Ingests MerchPulse exports, validates their economics independently, and
 reconciles their channel list against the honest connector registry.

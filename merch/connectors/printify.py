@@ -1,5 +1,5 @@
 """
-storyforge2/merch/connectors/printify.py -- Printify product creation.
+merch/connectors/printify.py -- Printify product creation.
 
 Built as the fallback to Printful. The two vendors differ in four ways that
 each have a failure mode, so this is not a copy of printful.py with the URL
@@ -43,7 +43,7 @@ from pathlib import Path
 from typing import Any, Optional
 
 from ..artwork import ArtworkKind
-from .base import MerchConnector, MerchPublishRequest, PublishingConnectorResult
+from .base import MerchConnector, MerchPublishRequest, ConnectorResult
 
 __all__ = [
     "PrintifyConnector",
@@ -189,7 +189,7 @@ class PrintifyConnector(MerchConnector):
                 dry_run: bool = True,
                 blueprint_id: Optional[int] = None,
                 print_provider_id: Optional[int] = None,
-                print_position: str = "front") -> PublishingConnectorResult:
+                print_position: str = "front") -> ConnectorResult:
         """Upload the artwork, then create the product.
 
         `blueprint_id` and `print_provider_id` have no defaults on purpose --
@@ -277,7 +277,7 @@ class PrintifyConnector(MerchConnector):
     # -- steps ------------------------------------------------------------
 
     def _upload_artwork(self, request: MerchPublishRequest, headers: dict[str, str],
-                        requests: Any) -> PublishingConnectorResult:
+                        requests: Any) -> ConnectorResult:
         try:
             payload = self.build_upload_payload(request)
         except PrintifyArtworkError as exc:
@@ -324,7 +324,7 @@ class PrintifyConnector(MerchConnector):
 
     def _interpret_create_response(self, response: Any, request: MerchPublishRequest,
                                    shop_id: str, image_id: str
-                                   ) -> PublishingConnectorResult:
+                                   ) -> ConnectorResult:
         try:
             body = response.json()
         except ValueError:
@@ -374,7 +374,7 @@ class PrintifyConnector(MerchConnector):
     # -- catalogue --------------------------------------------------------
 
     def fetch_shops(self, credentials: Optional[dict[str, str]] = None
-                    ) -> PublishingConnectorResult:
+                    ) -> ConnectorResult:
         """List the shops on this account, to find PRINTIFY_SHOP_ID.
 
         Read-only, and the cheapest way to confirm a new API key works before
@@ -430,7 +430,7 @@ class PrintifyConnector(MerchConnector):
 
     def fetch_blueprint_providers(self, blueprint_id: int,
                                   credentials: Optional[dict[str, str]] = None
-                                  ) -> PublishingConnectorResult:
+                                  ) -> ConnectorResult:
         """List print providers for a blueprint, so provider ids are read
         rather than guessed. Always live -- nothing to dry-run."""
         missing = self.missing_credentials(credentials)

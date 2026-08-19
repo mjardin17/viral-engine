@@ -1,5 +1,5 @@
 """
-storyforge2/merch/artwork.py -- classify a Design's artwork for POD submission.
+merch/artwork.py -- classify a Design's artwork for POD submission.
 
 Print-on-demand vendors do not accept whatever a design tool happens to hold.
 Printful, Printify and Gooten all fetch the print file from a **public HTTPS

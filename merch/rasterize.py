@@ -1,5 +1,5 @@
 """
-storyforge2/merch/rasterize.py -- SVG to print-ready PNG.
+merch/rasterize.py -- SVG to print-ready PNG.
 
 This is the step that unblocks everything else: every POD vendor wants a
 raster file, and MerchPulse stores designs as SVG. Without this, no design in

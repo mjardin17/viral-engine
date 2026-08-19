@@ -1,5 +1,5 @@
 """
-storyforge2/merch/connectors/base.py -- base interface for merch connectors.
+merch/connectors/base.py -- base interface for merch connectors.
 
 Deliberately separate from `publishing/connectors/base.py`. That interface is
 book-shaped -- `publish(manuscript_path, cover_path, metadata)` -- and pushing
@@ -7,7 +7,7 @@ a t-shirt through it would mean passing artwork as "manuscript_path". A merch
 submission has a different shape: one artwork file, a product type, a retail
 price, and a set of vendor variants (sizes/colours).
 
-`PublishingConnectorResult` IS reused, so both sides record outcomes
+`ConnectorResult` IS reused, so both sides record outcomes
 identically and state.py needs no second result format.
 
 Every connector obeys the same two rules:
@@ -25,14 +25,14 @@ from abc import ABC, abstractmethod
 from dataclasses import dataclass, field
 from typing import Any, Optional
 
-from ...publishing.connectors.base import PublishingConnectorResult
+from connector_core import ConnectorResult
 from ..artwork import ArtworkSource
 
 __all__ = [
     "MerchVariant",
     "MerchPublishRequest",
     "MerchConnector",
-    "PublishingConnectorResult",
+    "ConnectorResult",
 ]
 
 
@@ -136,15 +136,15 @@ class MerchConnector(ABC):
     # -- results ----------------------------------------------------------
 
     def _failure(self, message: str, error_code: str, **metadata: Any
-                 ) -> PublishingConnectorResult:
-        return PublishingConnectorResult(
+                 ) -> ConnectorResult:
+        return ConnectorResult(
             success=False, message=message, platform_id=self.platform_id,
             error_code=error_code, metadata=metadata or None,
         )
 
     def _success(self, message: str, listing_url: Optional[str] = None,
-                 **metadata: Any) -> PublishingConnectorResult:
-        return PublishingConnectorResult(
+                 **metadata: Any) -> ConnectorResult:
+        return ConnectorResult(
             success=True, message=message, platform_id=self.platform_id,
             listing_url=listing_url, metadata=metadata or None,
         )
@@ -153,7 +153,7 @@ class MerchConnector(ABC):
 
     def preflight(self, request: MerchPublishRequest,
                   credentials: Optional[dict[str, str]] = None
-                  ) -> Optional[PublishingConnectorResult]:
+                  ) -> Optional[ConnectorResult]:
         """Everything checkable without the network.
 
         Returns a failure result if the submission cannot proceed, or None if
@@ -180,7 +180,7 @@ class MerchConnector(ABC):
     @abstractmethod
     def publish(self, request: MerchPublishRequest,
                 credentials: Optional[dict[str, str]] = None,
-                dry_run: bool = True) -> PublishingConnectorResult:
+                dry_run: bool = True) -> ConnectorResult:
         """Create the product on the vendor.
 
         Args:

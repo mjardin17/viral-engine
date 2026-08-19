@@ -1,5 +1,5 @@
 """
-storyforge2/merch/connectors/printful.py -- Printful product creation.
+merch/connectors/printful.py -- Printful product creation.
 
 Printful is the one merch channel with a real API where a design could
 actually be listed today, which is why it is built first.
@@ -38,7 +38,7 @@ from __future__ import annotations
 from typing import Any, Optional
 
 from ..artwork import ArtworkSource
-from .base import MerchConnector, MerchPublishRequest, PublishingConnectorResult
+from .base import MerchConnector, MerchPublishRequest, ConnectorResult
 
 __all__ = ["PrintfulConnector", "PRINTFUL_BASE_URL"]
 
@@ -89,7 +89,7 @@ class PrintfulConnector(MerchConnector):
 
     def publish(self, request: MerchPublishRequest,
                 credentials: Optional[dict[str, str]] = None,
-                dry_run: bool = True) -> PublishingConnectorResult:
+                dry_run: bool = True) -> ConnectorResult:
         failure = self.preflight(request, credentials)
         if failure is not None:
             return failure
@@ -137,7 +137,7 @@ class PrintfulConnector(MerchConnector):
         return self._interpret_create_response(response, request)
 
     def _interpret_create_response(self, response: Any, request: MerchPublishRequest
-                                   ) -> PublishingConnectorResult:
+                                   ) -> ConnectorResult:
         """Read Printful's response without assuming a 2xx means success.
 
         Printful returns its own `code` inside the body. A transport-level 200
@@ -188,7 +188,7 @@ class PrintfulConnector(MerchConnector):
 
     def fetch_catalog_variants(self, printful_product_id: int,
                                credentials: Optional[dict[str, str]] = None
-                               ) -> PublishingConnectorResult:
+                               ) -> ConnectorResult:
         """Read the catalogue variants for one Printful blank.
 
         Exists so variant ids come from Printful rather than from a hardcoded

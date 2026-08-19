@@ -1,5 +1,5 @@
 """
-storyforge2/merch/channels.py -- honest capability registry for merch channels.
+merch/channels.py -- honest capability registry for merch channels.
 
 Reuses the book side's ConnectorStatus vocabulary unchanged, because the
 distinction it encodes is the same one that matters here: a platform either
@@ -22,7 +22,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 from typing import Any, Optional
 
-from ..publishing.registry import ConnectorStatus, PlatformCapability, PlatformRegistry
+from connector_core import CapabilityRegistry, ConnectorStatus, PlatformCapability
 
 __all__ = [
     "MERCH_CHANNELS",
@@ -161,17 +161,15 @@ MERCH_CHANNELS: tuple[PlatformCapability, ...] = (
 )
 
 
-def merch_registry() -> PlatformRegistry:
+def merch_registry() -> CapabilityRegistry:
     """A registry containing only merch channels.
 
-    Built fresh rather than mutating the book singleton, so importing this
-    module cannot change what the book pipeline sees.
+    Built fresh each call, so nothing that inspects it can affect another
+    pipeline's view. CapabilityRegistry starts empty by design -- an earlier
+    version had to clear book platforms out of it first, which is exactly the
+    coupling connector_core removed.
     """
-    registry = PlatformRegistry()
-    registry.platforms = {}
-    for capability in MERCH_CHANNELS:
-        registry.add(capability)
-    return registry
+    return CapabilityRegistry(list(MERCH_CHANNELS))
 
 
 # MerchPulse Channel.name -> our platform_id. Names come from the export's

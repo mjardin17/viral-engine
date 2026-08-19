@@ -1,5 +1,5 @@
 """
-storyforge2/merch/preflight.py -- read-only credential and connectivity check.
+merch/preflight.py -- read-only credential and connectivity check.
 
 Answers one question before anything is created: do these credentials work,
 and what does the vendor say this account actually has?
@@ -8,8 +8,8 @@ and what does the vendor say this account actually has?
 is safe to run against a live account with a freshly minted token, which is
 the point -- the first contact with a real API should not be a write.
 
-    python -m storyforge2.merch.preflight
-    python -m storyforge2.merch.preflight --blueprint 384
+    python -m merch.preflight
+    python -m merch.preflight --blueprint 384
 
 Credential values are never printed. Presence and length only, so a truncated
 paste is visible without the secret reaching a terminal or a log.

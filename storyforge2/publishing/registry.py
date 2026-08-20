@@ -62,10 +62,16 @@ class PlatformRegistry(CapabilityRegistry):
         self.add(PlatformCapability(
             platform_id="d2d",
             name="Draft2Digital",
-            status=ConnectorStatus.DIRECT_API,
-            base_url="https://api.draft2digital.com",
-            auth_method="api_key",
-            notes="Real REST API, verified in empire-os session. Ported to d2d.py.",
+            status=ConnectorStatus.DRAFT_EXPORT,
+            auth_method="web_ui",
+            notes=(
+                "CORRECTED 2026-08-20: the prior 'Real REST API, verified in "
+                "empire-os session' claim was false. Verified directly against "
+                "Draft2Digital's own site: no public API exists at all. Every "
+                "GitHub reference to a 'D2D API' is an unfulfilled TODO. "
+                "d2d.py's HTTP calls target a nonexistent endpoint and must "
+                "not be used — see CLAUDE.md's 2026-08-20 book-platform audit."
+            ),
             supported_formats=["epub"],
         ))
 
@@ -75,18 +81,48 @@ class PlatformRegistry(CapabilityRegistry):
             status=ConnectorStatus.DIRECT_API,
             base_url="https://api.payhip.com",
             auth_method="api_key",
-            notes="Real REST API, verified in empire-os session. Ported to payhip.py.",
+            notes=(
+                "Real API confirmed at payhip.com/api-reference. Documented "
+                "resources are Coupon and License Key management — full "
+                "product-creation capability not independently verified as "
+                "of 2026-08-20. Verify the exact create-product flow against "
+                "the live docs before trusting payhip.py without testing."
+            ),
             supported_formats=["epub", "pdf"],
         ))
 
         self.add(PlatformCapability(
             platform_id="gumroad",
             name="Gumroad",
-            status=ConnectorStatus.DIRECT_API,
-            base_url="https://api.gumroad.com",
-            auth_method="api_key",
-            notes="Real REST API (public docs available). Connector not yet built.",
+            status=ConnectorStatus.DRAFT_EXPORT,
+            auth_method="web_ui",
+            notes=(
+                "CORRECTED 2026-08-20: Gumroad's own official docs "
+                "(POST /v2/products) state 'This endpoint is currently not "
+                "implemented and will return a 404 error. Product creation "
+                "must be done through the Gumroad dashboard.' The real API "
+                "only supports list/read/update/enable/disable on products "
+                "that already exist — never creation. No connector should "
+                "be built assuming API-driven product creation is possible."
+            ),
             supported_formats=["epub", "pdf", "mobi"],
+        ))
+
+        self.add(PlatformCapability(
+            platform_id="lulu_print",
+            name="Lulu (print-on-demand)",
+            status=ConnectorStatus.DIRECT_API,
+            base_url="https://api.lulu.com",
+            auth_method="api_key",
+            notes=(
+                "Real Print API confirmed at developers.lulu.com / "
+                "api.lulu.com/docs, with a genuine free sandbox environment "
+                "for testing before any real order/charge. Covers physical "
+                "print-on-demand fulfillment (trim size, paper, binding, "
+                "shipping) — not ebook distribution. Connector not yet built "
+                "as of 2026-08-20; this is a real, promising, unbuilt lead."
+            ),
+            supported_formats=["pdf"],
         ))
 
         self.add(PlatformCapability(

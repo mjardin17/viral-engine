@@ -191,48 +191,78 @@ def publish_instagram(clip_path: Path, caption: str) -> dict:
 
 def publish_tiktok(clip_path: Path, caption: str) -> dict:
     """
-    TikTok via Content Posting API.
-    TODO: needs TIKTOK_ACCESS_TOKEN in .env (Direct Post scope: video.publish).
-    Flow: POST /v2/post/publish/video/init/ (source=FILE_UPLOAD, size/chunks)
-          → PUT video bytes to upload_url → status poll.
+    TikTok Direct Post — IMPLEMENTED 2026-08-20. See lib/tiktok_publisher.py.
+
+    Requires TIKTOK_ACCESS_TOKEN (video.publish scope) in .env.
+
+    ⚠ Defaults to SELF_ONLY (private) — an unaudited TikTok app can only post
+    privately; PUBLIC_TO_EVERYONE requires TikTok App Review first, and will
+    be rejected by TikTok itself otherwise. This is not a limitation of this
+    code, it's TikTok's own policy for unaudited apps.
     """
     token = _token("TIKTOK_ACCESS_TOKEN")
     if not token:
         return _skip("tiktok", "TIKTOK_ACCESS_TOKEN")
     if not clip_path or not Path(clip_path).exists():
         return {"status": "failed", "detail": "clip missing"}
-    # TODO(api): implement init + chunked upload once TIKTOK_ACCESS_TOKEN is set
-    return {"status": "failed",
-            "detail": "TIKTOK_ACCESS_TOKEN present but Content Posting API call "
-                      "not yet implemented"}
+
+    from lib.tiktok_publisher import TikTokError, publish_video
+
+    try:
+        result = publish_video(Path(clip_path), caption,
+                               log=lambda m: print(f"{TAG} {m}"))
+    except TikTokError as e:
+        return {"status": "failed", "detail": str(e), "permanent": e.permanent}
+
+    print(f"{TAG} tiktok: accepted {result.publish_id}")
+    return {"status": "posted",
+            "detail": f"publish_id {result.publish_id} — TikTok processes "
+                      f"asynchronously; no status-poll endpoint exists to "
+                      f"confirm final live state",
+            "publish_id": result.publish_id}
 
 
 def publish_facebook(clip_path: Path, caption: str) -> dict:
     """
-    Facebook Page video via Graph API.
-    TODO: needs FB_ACCESS_TOKEN (page access token) + FB_PAGE_ID in .env.
-    Flow: POST https://graph-video.facebook.com/{page-id}/videos
-          (multipart 'source' file + 'description').
+    Facebook Page video — IMPLEMENTED 2026-08-20. See lib/facebook_publisher.py.
+
+    Requires FB_ACCESS_TOKEN (page access token), FB_PAGE_ID, and FB_APP_ID
+    in .env. The token must be a PAGE token with CREATE_CONTENT permission,
+    not a plain user token.
+
+    ⚠ This posts publicly and immediately — the Graph API has no dry-run
+    mode for this endpoint.
     """
     token = _token("FB_ACCESS_TOKEN")
     if not token:
         return _skip("facebook", "FB_ACCESS_TOKEN")
     if not clip_path or not Path(clip_path).exists():
         return {"status": "failed", "detail": "clip missing"}
-    # TODO(api): implement page video upload once FB_ACCESS_TOKEN + FB_PAGE_ID are set
-    return {"status": "failed",
-            "detail": "FB_ACCESS_TOKEN present but Graph API call not yet "
-                      "implemented — also needs FB_PAGE_ID"}
+
+    from lib.facebook_publisher import FacebookError, publish_page_video
+
+    try:
+        result = publish_page_video(Path(clip_path), caption, caption,
+                                    log=lambda m: print(f"{TAG} {m}"))
+    except FacebookError as e:
+        return {"status": "failed", "detail": str(e), "permanent": e.permanent}
+
+    print(f"{TAG} facebook: posted {result.video_id}")
+    return {"status": "posted",
+            "detail": f"video {result.video_id}",
+            "video_id": result.video_id}
 
 
 def publish_pinterest(image_path: Path, title: str, description: str,
                       board_id: str = "") -> dict:
     """
-    Pinterest pin via API v5.
-    TODO: needs PINTEREST_ACCESS_TOKEN + PINTEREST_BOARD_ID in .env.
-    Flow: POST https://api.pinterest.com/v5/pins
-          {board_id, title, description, media_source: {source_type:
-          image_base64, content_type: image/jpeg, data}}.
+    Pinterest image pin — IMPLEMENTED 2026-08-20. See lib/pinterest_publisher.py.
+
+    Requires PINTEREST_ACCESS_TOKEN + PINTEREST_BOARD_ID in .env. Embeds the
+    thumbnail JPG as base64 in a single request — Pinterest's image pins
+    don't need the separate upload/poll cycle that video pins require.
+
+    ⚠ This posts publicly and immediately — Pinterest has no dry-run mode.
     """
     token = _token("PINTEREST_ACCESS_TOKEN")
     if not token:
@@ -242,10 +272,20 @@ def publish_pinterest(image_path: Path, title: str, description: str,
         return _skip("pinterest", "PINTEREST_BOARD_ID")
     if not image_path or not Path(image_path).exists():
         return {"status": "failed", "detail": "pin image missing"}
-    # TODO(api): implement /v5/pins POST once PINTEREST_ACCESS_TOKEN is set
-    return {"status": "failed",
-            "detail": "PINTEREST_ACCESS_TOKEN present but v5 API call not yet "
-                      "implemented"}
+
+    from lib.pinterest_publisher import PinterestError, publish_pin
+
+    try:
+        result = publish_pin(Path(image_path), title, description,
+                             board_id=board_id or None,
+                             log=lambda m: print(f"{TAG} {m}"))
+    except PinterestError as e:
+        return {"status": "failed", "detail": str(e), "permanent": e.permanent}
+
+    print(f"{TAG} pinterest: posted {result.pin_id}")
+    return {"status": "posted",
+            "detail": f"pin {result.pin_id}",
+            "pin_id": result.pin_id}
 
 
 # ── Retry wrapper (self-healing layer 1) ──────────────────────────────────────

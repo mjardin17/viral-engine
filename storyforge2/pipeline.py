@@ -29,6 +29,18 @@ from storyforge2.publishing.registry import get_registry
 __all__ = ["BookPipeline", "PipelineError"]
 
 
+def _load_wired_connectors() -> dict[str, type]:
+    """Platforms with a real, wired connector beyond manual_export. Checked
+    only after the registry confirms DIRECT_API status for a platform_id —
+    being in this table does not bypass that check, it only supplies the
+    connector class once the registry has already said DIRECT_API applies.
+    Imported lazily, same reasoning as manual_export's import inside
+    publish() below — avoids importing every connector module (and their
+    dependencies, e.g. lib/etsy_listing.py) just to construct a pipeline."""
+    from storyforge2.publishing.connectors.etsy_digital import EtsyDigitalConnector
+    return {"etsy_digital": EtsyDigitalConnector}
+
+
 class PipelineError(RuntimeError):
     pass
 
@@ -274,14 +286,19 @@ class BookPipeline:
                     print(f"    ⚠ {platform_id}: {results[platform_id]['message']}\n")
                     continue
                 # DIRECT_API in the registry does not itself guarantee a real
-                # connector module exists and is wired here — only
-                # manual_export is actually wired in this pipeline today.
-                results[platform_id] = {
-                    "status": "not_implemented",
-                    "message": f"{cap_name} registry entry has no real connector wired in yet",
-                }
-                print(f"    ⚠ {platform_id}: {results[platform_id]['message']}\n")
-                continue
+                # connector module exists and is wired here — check the real
+                # wiring table rather than assuming every DIRECT_API entry
+                # has one (manual_export is handled above; everything else
+                # not in this table has no connector yet).
+                connector_cls = _load_wired_connectors().get(platform_id)
+                if connector_cls is None:
+                    results[platform_id] = {
+                        "status": "not_implemented",
+                        "message": f"{cap_name} registry entry has no real connector wired in yet",
+                    }
+                    print(f"    ⚠ {platform_id}: {results[platform_id]['message']}\n")
+                    continue
+                connector = connector_cls()
 
             print(f"  ▶ {cap_name}...")
 

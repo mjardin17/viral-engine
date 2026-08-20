@@ -131,7 +131,16 @@ class PlatformRegistry(CapabilityRegistry):
             status=ConnectorStatus.DIRECT_API,
             base_url="https://api.etsy.com",
             auth_method="oauth2",
-            notes="Real API (Etsy REST API v3). Wraps existing lib/platform_connectors.py. Not yet wired into Story Forge 2.",
+            notes=(
+                "Real API (Etsy Open API v3). Wired into Story Forge 2 as of "
+                "2026-08-20 via storyforge2/publishing/connectors/etsy_digital.py, "
+                "built on lib/etsy_listing.py (NOT lib/platform_connectors.py's "
+                "Etsy connector, which is a separate, lower-quality "
+                "implementation — see CLAUDE.md). Always creates a draft "
+                "listing only, never activates. Not yet exercised against a "
+                "live account — Etsy's app registration is still pending "
+                "their review as of 2026-08-20."
+            ),
             supported_formats=["epub", "pdf"],
         ))
 

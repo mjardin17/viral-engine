@@ -30,6 +30,21 @@ shippingProfileId's conditional requirement) — 2026-08-20. When Etsy last
 touched createDraftListing is unknown to this module; the docstring on
 ``WHEN_MADE_VALUES`` explains the one field that is known to drift.
 
+5. **Digital files are a third separately-gated upload step, not part of
+   createDraftListing either.** Confirmed 2026-08-20 against
+   gordonturner/etsy-open-api-client's ShopListingFileApi.md and Etsy's own
+   Listings Tutorial: ``uploadListingFile`` is
+   ``POST .../listings/{listing_id}/files``, multipart field name ``file``
+   plus ``name`` (the buyer-visible filename) and ``rank``. Etsy's docs
+   state explicitly that a file cannot be assigned at draft-creation time —
+   same shape as images. who_made/when_made are required on ALL listing
+   types, including ``download`` — confirmed via a real API example in a
+   public etsy/open-api GitHub discussion, not assumed to carry over from
+   the physical case. Etsy enforces a 20MB-per-file, 5-files-per-listing
+   cap (from Etsy's seller help docs, not the API schema — a platform
+   limit, not a request-validation rule, so a request that violates it may
+   still round-trip a 200 before failing elsewhere in Etsy's pipeline).
+
 ⚠ Not yet exercised against a live Etsy account — no ETSY_REFRESH_TOKEN
 exists in this repo yet (see CHANNEL_SETUP.md). Field names and the call
 sequence are [Likely], verified against documentation, not a live request.
@@ -48,7 +63,8 @@ from __future__ import annotations
 import re
 from dataclasses import dataclass, field
 from decimal import ROUND_HALF_UP, Decimal, InvalidOperation
-from typing import Any, Callable, Optional
+from pathlib import Path
+from typing import Any, Callable, ClassVar, Optional
 
 ETSY_BASE_URL = "https://openapi.etsy.com/v3/application"
 
@@ -135,6 +151,60 @@ class EtsyImageSource:
 
 
 @dataclass(frozen=True)
+class EtsyDigitalFileSource:
+    """One digital-download file to attach to a 'download' or 'both'
+    listing. Same url/local_path exclusivity as EtsyImageSource, plus a
+    required `filename` — unlike images, Etsy shows this name to the buyer
+    in their download, and has no default for it.
+
+    Etsy caps digital files at 20MB each, 5 files per listing (confirmed
+    2026-08-20 via Etsy's own seller help docs — this is a platform limit,
+    not part of the createDraftListing/uploadListingFile API schema, so it
+    isn't in the parameter table the rest of this module's validation is
+    sourced from). A local_path source is checked against the cap
+    immediately, since the size is knowable up front; a url source is not
+    — it can only be checked after the server-side fetch, at upload time.
+    """
+
+    url: Optional[str] = None
+    local_path: Optional[str] = None
+    filename: str = ""
+
+    MAX_FILE_BYTES: ClassVar[int] = 20 * 1024 * 1024  # Etsy's 20MB/file cap
+
+    def __post_init__(self) -> None:
+        has_url = bool(self.url)
+        has_path = bool(self.local_path)
+        if has_url == has_path:
+            raise EtsyValidationError(
+                "EtsyDigitalFileSource requires exactly one of url or "
+                f"local_path, got url={self.url!r} local_path={self.local_path!r}"
+            )
+        if has_url and not str(self.url).startswith("https://"):
+            raise EtsyValidationError(
+                f"digital file url must be https://, got {self.url!r} — this "
+                "module refuses to fetch over plain http"
+            )
+        if not str(self.filename or "").strip():
+            raise EtsyValidationError(
+                "filename is required for a digital file — it's the name "
+                "Etsy shows the buyer in their download; Etsy has no default"
+            )
+        if has_path:
+            path = Path(self.local_path)
+            if not path.exists():
+                raise EtsyValidationError(
+                    f"local_path does not exist: {self.local_path!r}"
+                )
+            size = path.stat().st_size
+            if size > self.MAX_FILE_BYTES:
+                raise EtsyValidationError(
+                    f"{self.local_path!r} is {size} bytes; Etsy's per-file "
+                    f"limit is {self.MAX_FILE_BYTES} bytes (20MB)"
+                )
+
+
+@dataclass(frozen=True)
 class EtsyProduct:
     """A product to list as an Etsy draft.
 
@@ -158,6 +228,7 @@ class EtsyProduct:
     materials: tuple[str, ...] = ()
     tags: tuple[str, ...] = ()
     images: tuple[EtsyImageSource, ...] = ()
+    digital_files: tuple[EtsyDigitalFileSource, ...] = ()
     shipping_profile_id: Optional[str | int] = None
     return_policy_id: Optional[str | int] = None
 
@@ -238,6 +309,18 @@ class EtsyProduct:
                 raise EtsyValidationError(
                     f"tag {t!r} is {len(t)} chars; Etsy's limit is 20"
                 )
+        if self.digital_files:
+            if self.listing_type not in ("download", "both"):
+                raise EtsyValidationError(
+                    f"digital_files were supplied but listing_type is "
+                    f"{self.listing_type!r} — digital files require "
+                    "listing_type 'download' or 'both'"
+                )
+            if len(self.digital_files) > 5:
+                raise EtsyValidationError(
+                    f"{len(self.digital_files)} digital files supplied; "
+                    "Etsy allows at most 5 per listing"
+                )
         object.__setattr__(self, "price", _normalise_price(self.price))
 
 
@@ -294,6 +377,7 @@ class EtsyListingResult:
     sku: str
     listing_id: Optional[str] = None
     images_uploaded: int = 0
+    files_uploaded: int = 0
     published: bool = False
     dry_run: bool = False
     steps: list[str] = field(default_factory=list)
@@ -402,6 +486,24 @@ class EtsyListingClient:
                 raise
         result.steps.append(f"uploadListingImage: ok ({result.images_uploaded} images)")
 
+        # 2b. Upload digital files, if any. Same reasoning as images: a
+        # failure here still leaves a real, valid (buyer-invisible) draft,
+        # surfaced with listing_id so the caller can resume. Etsy's own docs
+        # say a file cannot be attached at createDraftListing time, so this
+        # is always a separate call, same as images.
+        for i, dfile in enumerate(product.digital_files):
+            file_url = f"{ETSY_BASE_URL}/shops/{self.shop_id}/listings/{quote(result.listing_id)}/files"
+            self._call(
+                "uploadListingFile", "POST", file_url,
+                body_kind="multipart",
+                body={"file": dfile, "name": dfile.filename, "rank": i + 1},
+                ok_statuses=(200, 201),
+                listing_id=result.listing_id,
+            )
+            result.files_uploaded += 1
+        if product.digital_files:
+            result.steps.append(f"uploadListingFile: ok ({result.files_uploaded} files)")
+
         if target_state != "active":
             return result
 
@@ -414,6 +516,23 @@ class EtsyListingClient:
                 "to activate an image-less listing",
                 listing_id=result.listing_id,
             )
+
+        if product.listing_type in ("download", "both"):
+            if not product.digital_files:
+                raise EtsyListingError(
+                    "activate",
+                    f"listing_type is {product.listing_type!r} but no "
+                    "digital_files were supplied — a download listing with "
+                    "nothing to download cannot be activated",
+                    listing_id=result.listing_id,
+                )
+            if not result.files_uploaded:
+                raise EtsyListingError(
+                    "activate", "No digital files were successfully "
+                    "uploaded; refusing to activate a download listing "
+                    "with nothing to download",
+                    listing_id=result.listing_id,
+                )
 
         # 3. Activate — the only step that spends money and goes public.
         activate_url = f"{ETSY_BASE_URL}/shops/{self.shop_id}/listings/{quote(result.listing_id)}"

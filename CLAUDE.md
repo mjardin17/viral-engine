@@ -1937,6 +1937,128 @@ verify with `gh api repos/mjardin17/viral-engine/branches/<branch> --jq
 trust the script's printed output alone.** This cost real trust tonight:
 work was reported as pushed and safe when it was actually still local-only.
 
+### ✅ 2026-08-20 (later session) — Etsy digital-book listings built on top of lib/etsy_listing.py
+
+Executed the handoff prompt Josh pasted in ("Extend Etsy for Digital Book
+Sales"). **Etsy digital-download listing support is real and tested —
+draft-only, never auto-activates.** Not yet run against a live Etsy account
+(still pending Etsy's app review, per the entry above).
+
+**Verified requirement, cited source (not assumed):** who_made/when_made
+are required on ALL Etsy listing types, digital included — confirmed via a
+real request example in a public `etsy/open-api` GitHub discussion, plus
+`gordonturner/etsy-open-api-client`'s parameter tables. shipping_profile_id
+stays physical-only (already correct in the pre-existing code).
+`uploadListingFile` is `POST .../listings/{listing_id}/files`, multipart
+field `file` + `name` (buyer-visible filename) + `rank` — confirmed via
+`gordonturner/etsy-open-api-client`'s `ShopListingFileApi.md` and Etsy's own
+Listings Tutorial page (fetchable this time, unlike the JS-SPA reference
+docs that failed twice earlier the same day per the entry above). Etsy
+enforces a **20MB-per-file, 5-files-per-listing cap** (from Etsy's seller
+help docs, a platform limit, not part of the API request schema) — encoded
+as real validation, not just a comment. Also independently re-verified
+`when_made`'s current bucket set is still `2020_2023` (one search result
+surfaced `2020_2024` — turned out to be a stale typo in an unrelated GitHub
+PR, not real API drift) — the existing `WHEN_MADE_VALUES` enum needed no
+change.
+
+**Built:**
+- `lib/etsy_listing.py`: `EtsyDigitalFileSource` (mirrors `EtsyImageSource`'s
+  url/local_path exclusivity, adds a required `filename` and a real 20MB
+  local-file size check — url sources can't be size-checked until Etsy's
+  server fetches them, so that check is deliberately skipped for url
+  sources, not silently wrong). `EtsyProduct.digital_files` field +
+  cross-field validation (digital files require `listing_type` `download`
+  or `both`; max 5). `EtsyListingClient.create_listing()` gained a third
+  upload step (files, after images, before activation) and an activation
+  guard: a `download`/`both` listing with zero digital files, or whose
+  file upload(s) all failed, cannot be activated — same "quarantine the
+  orphaned draft, never auto-retry" pattern the image-upload path already
+  used. **16 new tests, 50/50 passing** in `tests/etsy/test_etsy_listing.py`
+  (34 existing + 16 new — no existing physical-listing test needed changes).
+- `storyforge2/publishing/connectors/etsy_digital.py` (new): the actual
+  wiring. Builds an `EtsyProduct` from the pipeline's real EPUB + cover,
+  calls the real `EtsyListingClient` — **no logic duplicated**, per the
+  explicit instruction not to touch `lib/platform_connectors.py`'s separate,
+  lower-quality Etsy implementation. `who_made="i_did"`,
+  `when_made="made_to_order"` (deliberate choice for a Book-Factory-
+  generated title — no historical "when made" applies). Credentials:
+  `ETSY_ACCESS_TOKEN`/`ETSY_SHOP_ID`/`ETSY_API_KEY`/`ETSY_TAXONOMY_ID`, all
+  four required — `ETSY_TAXONOMY_ID` has no safe default, same reasoning
+  eBay's policy IDs already established in this repo (a guessed category
+  files the book under the wrong section). **Always requests
+  `target_state="draft"`, never `"active"`, regardless of the `dry_run` it
+  receives** — activation is real money + goes public, and stays a
+  separate, deliberate, human-gated step, matching this repo's existing
+  eBay/Etsy live-publish gating philosophy. Verified this with a
+  monkeypatched `create_listing()` asserting `target_state` even under
+  `dry_run=False`. **13 new tests, all passing**
+  (`tests/storyforge2/test_etsy_digital_connector.py`).
+- `storyforge2/pipeline.py`: `publish()` previously reported
+  `not_implemented` for every DIRECT_API platform except `manual_export`
+  unconditionally — added a small `_load_wired_connectors()` lookup table
+  (currently just `{"etsy_digital": EtsyDigitalConnector}`) so a real
+  connector is used when one exists, while every other DIRECT_API platform
+  (shopify, etc.) still honestly reports `not_implemented` exactly as
+  before — nothing else was silently activated.
+- `storyforge2/publishing/registry.py`: `etsy_digital`'s notes corrected —
+  no longer says "wraps lib/platform_connectors.py" (it doesn't; that
+  connector is a separate, unrelated implementation) or "not yet wired"
+  (it now is).
+
+**Real end-to-end run, not just unit tests:** generated an actual book via
+`BookPipeline.run(provider_name="mock", dry_run=True)` — real 270KB EPUB,
+real 9-variant cover package, all stages green — then called
+`EtsyDigitalConnector.publish()` directly against the real EPUB and real
+cover file. Printed and inspected the actual `createDraftListing` payload
+it would send:
+```json
+{
+  "quantity": 1, "title": "The Mock Productivity Guide",
+  "description": "The Mock Productivity Guide — a digital ebook download.",
+  "price": "9.99", "who_made": "i_did", "when_made": "made_to_order",
+  "taxonomy_id": "68887", "is_supply": false, "type": "download"
+}
+```
+No `shipping_profile_id` key present (correct — never required for
+`download`). `images_uploaded`/`files_uploaded` both read 0 in the dry-run
+result — expected, not a bug: `lib/etsy_listing.py`'s dry-run path returns
+before any network call at all (including uploads), same behavior the
+physical-card path already has.
+
+**Full suite: 122/122 passing** across `tests/etsy/` + `tests/storyforge2/`
+(excluding `tests/storyforge2/books/`, unaffected). Also ran the whole repo
+suite (`--ignore=tests/merch`): **236/236 passing**, confirming nothing else
+regressed.
+
+⚠ **Pre-existing, unrelated to this work:** `tests/merch/` (7 files) fail to
+collect — `ModuleNotFoundError: No module named 'merch.artwork'` /
+`'merch.rasterize'` even though both files exist on disk at `merch/artwork.py`
+and `merch/rasterize.py`. Confirmed via `git status` that none of the merch
+files are part of this session's changes — not investigated further, flagged
+for whoever next touches `merch/`.
+
+⚠ Also noticed but NOT touched, unrelated to this task: two untracked files
+already present before this session started — `lib/ebay_sales.py` and
+`tests/ebay/test_ebay_sales.py`. Left alone; not part of this handoff.
+
+**What's still missing before this can go live:**
+1. **Real Etsy credentials.** Etsy's app registration is still pending
+   their review (see the entry above) — `ETSY_ACCESS_TOKEN`/`ETSY_SHOP_ID`
+   don't exist yet.
+2. **A real `taxonomy_id` for whatever Etsy category digital books/ebooks
+   actually belong under.** `68887` above is a placeholder used only to
+   exercise the dry-run payload — fetch the real one via
+   `getSellerTaxonomyNodes` once credentials exist, same as eBay's
+   `category_id` was fetched from a real listing rather than guessed.
+3. **Never live-tested `uploadListingFile` itself** — the multipart field
+   names (`file`/`name`/`rank`) are `[Likely]`, sourced from documentation,
+   not a live 200/400 response. Verify the first time real credentials
+   exist, before trusting it silently.
+4. A real price/description strategy — the connector's `DEFAULT_PRICE_USD
+   = "9.99"` and the generated fallback description are reasonable
+   placeholders, not a pricing decision Josh has made.
+
 ## Git & GitHub (PRODUCTION RULES)
 
 **Repository:** `https://github.com/mjardin17/viral-engine` (branch: `main`)

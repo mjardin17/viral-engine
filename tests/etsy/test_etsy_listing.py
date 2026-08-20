@@ -6,6 +6,7 @@ has no eBay analogue.
 import pytest
 
 from lib.etsy_listing import (
+    EtsyDigitalFileSource,
     EtsyImageSource,
     EtsyListingClient,
     EtsyListingError,
@@ -52,6 +53,32 @@ def make_product(**overrides):
         taxonomy_id="1234",
         shipping_profile_id="SHIP-1",
         images=(EtsyImageSource(local_path="/tmp/card.jpg"),),
+    )
+    defaults.update(overrides)
+    return EtsyProduct(**defaults)
+
+
+def _write_temp_file(tmp_path, name="book.epub", size_bytes=1024):
+    path = tmp_path / name
+    path.write_bytes(b"x" * size_bytes)
+    return str(path)
+
+
+def make_digital_product(tmp_path, **overrides):
+    """A digital-book listing — no shipping_profile_id, no images by
+    default, one real (on-disk) digital file so EtsyDigitalFileSource's
+    existence/size checks have something real to check."""
+    defaults = dict(
+        sku="BOOK-DIGITAL-001",
+        title="The Digital Book",
+        description="A downloadable ebook.",
+        price="9.99",
+        who_made="i_did",
+        when_made="made_to_order",
+        taxonomy_id="5678",
+        listing_type="download",
+        digital_files=(EtsyDigitalFileSource(
+            local_path=_write_temp_file(tmp_path), filename="book.epub"),),
     )
     defaults.update(overrides)
     return EtsyProduct(**defaults)
@@ -358,3 +385,173 @@ def test_listing_id_is_url_encoded_in_image_and_activate_calls():
     assert "L%20123%2FA" in activate_url
     assert "L 123/A" not in image_url
     assert "L 123/A" not in activate_url
+
+
+# --------------------------------------------------------------------------
+# EtsyDigitalFileSource — digital-download files (books, printables, etc.)
+# --------------------------------------------------------------------------
+
+def test_digital_file_source_requires_exactly_one_of_url_or_local_path():
+    with pytest.raises(EtsyValidationError):
+        EtsyDigitalFileSource(filename="book.epub")
+    with pytest.raises(EtsyValidationError):
+        EtsyDigitalFileSource(
+            url="https://example.com/book.epub", local_path="/tmp/book.epub",
+            filename="book.epub",
+        )
+
+
+def test_digital_file_url_must_be_https():
+    with pytest.raises(EtsyValidationError, match="https"):
+        EtsyDigitalFileSource(url="http://example.com/book.epub", filename="book.epub")
+
+
+def test_digital_file_requires_filename(tmp_path):
+    path = _write_temp_file(tmp_path)
+    with pytest.raises(EtsyValidationError, match="filename"):
+        EtsyDigitalFileSource(local_path=path)
+
+
+def test_digital_file_local_path_must_exist(tmp_path):
+    with pytest.raises(EtsyValidationError, match="does not exist"):
+        EtsyDigitalFileSource(local_path=str(tmp_path / "missing.epub"), filename="book.epub")
+
+
+def test_digital_file_over_20mb_is_rejected(tmp_path):
+    path = _write_temp_file(tmp_path, size_bytes=21 * 1024 * 1024)
+    with pytest.raises(EtsyValidationError, match="20MB"):
+        EtsyDigitalFileSource(local_path=path, filename="book.epub")
+
+
+def test_digital_file_under_20mb_is_allowed(tmp_path):
+    path = _write_temp_file(tmp_path, size_bytes=1024)
+    EtsyDigitalFileSource(local_path=path, filename="book.epub")  # should not raise
+
+
+def test_digital_file_url_source_skips_size_check_since_size_is_unknown():
+    # Should not raise — size can only be known after the server fetches it.
+    EtsyDigitalFileSource(url="https://example.com/book.epub", filename="book.epub")
+
+
+# --------------------------------------------------------------------------
+# EtsyProduct — digital_files cross-field validation
+# --------------------------------------------------------------------------
+
+def test_digital_files_require_download_or_both_listing_type(tmp_path):
+    path = _write_temp_file(tmp_path)
+    with pytest.raises(EtsyValidationError, match="listing_type"):
+        make_product(
+            listing_type="physical",
+            digital_files=(EtsyDigitalFileSource(local_path=path, filename="book.epub"),),
+        )
+
+
+def test_digital_files_allowed_on_both_listing_type(tmp_path):
+    path = _write_temp_file(tmp_path)
+    make_product(  # should not raise
+        listing_type="both",
+        digital_files=(EtsyDigitalFileSource(local_path=path, filename="book.epub"),),
+    )
+
+
+def test_more_than_5_digital_files_is_rejected(tmp_path):
+    files = tuple(
+        EtsyDigitalFileSource(
+            local_path=_write_temp_file(tmp_path, name=f"f{i}.epub"), filename=f"f{i}.epub")
+        for i in range(6)
+    )
+    with pytest.raises(EtsyValidationError, match="5"):
+        make_product(listing_type="download", digital_files=files)
+
+
+def test_download_listing_without_digital_files_is_allowed_at_construction():
+    # Matches Etsy's real flow: a draft can be created file-less. The
+    # requirement to actually have a file is enforced only at activation
+    # (see the create_listing tests below), not at construction.
+    make_product(listing_type="download", shipping_profile_id=None)  # should not raise
+
+
+# --------------------------------------------------------------------------
+# Flow — digital file upload
+# --------------------------------------------------------------------------
+
+def test_digital_file_upload_happens_after_images_before_activation(tmp_path):
+    transport = make_transport([
+        FakeResponse(201, {"listing_id": "L123"}),
+        FakeResponse(201, {"image_id": "IMG1"}),
+        FakeResponse(201, {"listing_file_id": "F1"}),
+        FakeResponse(200, {"state": "active"}),
+    ])
+    client = EtsyListingClient("token", "SHOP1", "apikey", transport=transport)
+    product = make_digital_product(
+        tmp_path, listing_type="both",
+        images=(EtsyImageSource(local_path="/tmp/cover.jpg"),),
+    )
+
+    result = client.create_listing(product, target_state="active", dry_run=False)
+
+    methods = [(c["method"], c["body_kind"]) for c in transport.calls]
+    assert methods == [("POST", "form"), ("POST", "multipart"), ("POST", "multipart"), ("PATCH", "form")]
+    assert result.files_uploaded == 1
+    assert result.images_uploaded == 1
+    assert result.published is True
+
+
+def test_digital_file_upload_uses_file_and_name_fields(tmp_path):
+    transport = make_transport([
+        FakeResponse(201, {"listing_id": "L123"}),
+        FakeResponse(201, {"listing_file_id": "F1"}),
+    ])
+    client = EtsyListingClient("token", "SHOP1", "apikey", transport=transport)
+    product = make_digital_product(tmp_path)
+
+    client.create_listing(product, dry_run=False)
+
+    file_call = transport.calls[1]
+    assert file_call["body"]["name"] == "book.epub"
+    assert file_call["body"]["rank"] == 1
+    assert "file" in file_call["body"]
+
+
+def test_draft_only_still_uploads_digital_files_but_does_not_activate(tmp_path):
+    transport = make_transport([
+        FakeResponse(201, {"listing_id": "L123"}),
+        FakeResponse(201, {"listing_file_id": "F1"}),
+    ])
+    client = EtsyListingClient("token", "SHOP1", "apikey", transport=transport)
+    product = make_digital_product(tmp_path)
+
+    result = client.create_listing(product, target_state="draft", dry_run=False)
+
+    assert result.files_uploaded == 1
+    assert result.published is False
+
+
+def test_activation_without_digital_files_on_download_listing_is_refused():
+    transport = make_transport([
+        FakeResponse(201, {"listing_id": "L123"}),
+    ])
+    client = EtsyListingClient("token", "SHOP1", "apikey", transport=transport)
+    product = make_product(listing_type="download", shipping_profile_id=None, images=())
+
+    with pytest.raises(EtsyListingError) as exc:
+        client.create_listing(product, target_state="active", dry_run=False)
+
+    assert exc.value.step == "activate"
+    assert exc.value.listing_id == "L123"
+    assert len(transport.calls) == 1, "must not attempt activation with nothing to sell"
+
+
+def test_activation_with_failed_digital_file_upload_is_refused(tmp_path):
+    transport = make_transport([
+        FakeResponse(201, {"listing_id": "L123"}),
+        FakeResponse(500, {"error": "upload failed"}),
+    ])
+    client = EtsyListingClient("token", "SHOP1", "apikey", transport=transport)
+    product = make_digital_product(tmp_path)
+
+    with pytest.raises(EtsyListingError) as exc:
+        client.create_listing(product, target_state="active", dry_run=False)
+
+    assert exc.value.step == "uploadListingFile"
+    assert exc.value.listing_id == "L123", "must carry the orphaned draft's id so a caller can resume"

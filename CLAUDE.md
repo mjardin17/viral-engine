@@ -832,12 +832,20 @@ Instagram | TikTok | YouTube Shorts | Facebook
 ```
 
 #### New Files Created
-- `agents/platform_sync_agent.py` (290 lines, production-ready)
-- `agents/sales_tracker_agent.py` (285 lines, production-ready)
-- `agents/price_sync_agent.py` (240 lines, production-ready)
-- `lib/platform_connectors.py` (204 lines, framework + 3 stub implementations)
-- `AGENT_ECOSYSTEM.md` (complete reference docs, 400+ lines)
+- `agents/platform_sync_agent.py`, `sales_tracker_agent.py`, `price_sync_agent.py`
+- `lib/platform_connectors.py`
+- `AGENT_ECOSYSTEM.md`
 - Updated `START_AGENTS.bat` (now launches all 5 agents)
+
+**⚠️ CORRECTED 2026-08-20 — these were never production-ready, and this
+mislabeling is why Josh believed for months that 16 platforms were syncing
+when none of them ever completed a real sync.** See the dedicated
+"platform_connectors.py audited, found non-functional" entry below for the
+full audit. Summary: `lib/platform_connectors.py` grew from "3 stub
+implementations" to 16 connector classes at some later point (undocumented
+when), but was never re-verified against real credentials before being
+called production-ready. `START_AGENTS.bat` no longer launches Platform
+Sync / Sales Tracker / Price Sync / Whatnot Specialist as of 2026-08-20.
 
 #### Data Files & State Tracking
 - `crosslist_sync_state.json` — tracks which items synced to which platforms
@@ -1862,6 +1870,51 @@ rendered completely blank in Chrome (heading with nothing below it, even
 in Incognito — ruled out extensions). Switching to Microsoft Edge worked
 immediately — looked like a Chrome-profile-specific rendering issue, not
 an account or Etsy-side problem.
+
+### 🔴 2026-08-20 — lib/platform_connectors.py audited, found non-functional since 2026-08-09
+Josh believed this project has been syncing across 16 marketplaces for
+months, launched automatically via `START_AGENTS.bat` → Platform Sync /
+Sales Tracker / Price Sync / Whatnot Specialist agents. **It has never
+completed a single real sync.** Audited the actual 16 connector classes
+in `lib/platform_connectors.py` against real `.env` state:
+
+- **10 of 16 have zero credentials configured anywhere** (Poshmark, Grailed,
+  Vinted, Vestiaire, Depop, Shopify, WooCommerce, MercadoLibre, Reverb,
+  RealReal) — `authenticate()` fails instantly, every run.
+- **Facebook and Mercari have real credentials in `.env`, but the connector
+  code can't find them** — `PlatformConnector.__init__` only reads
+  `{PLATFORM}_TOKEN`; `.env` has `FACEBOOK_EMAIL`/`_PASSWORD` and
+  `MERCARI_EMAIL`/`_PASSWORD` instead. This is the exact same env-var-name
+  bug already found and fixed in `lib/browser_connectors.py` on 2026-08-12
+  — that fix was never applied to this file.
+- **Depop, Grailed, Vinted, Vestiaire's code targets API endpoints that
+  don't correspond to any real public developer program** I could find —
+  even a correctly-named token would have nowhere legitimate to come from.
+- **Mercari and Poshmark are honestly stubbed** ("implementation pending
+  API docs") — the only 2 of 16 that don't pretend to work.
+- **A third, independent, duplicate Etsy implementation exists in this
+  file**, conflicting with the real canonical one built today
+  (`lib/etsy_listing.py`) — hardcodes fake values (`who_made: "i_did"`,
+  tags `["resale","secondhand"]`) never matched to real inventory.
+
+**Fix applied:** `START_AGENTS.bat` no longer launches Platform Sync,
+Sales Tracker, Price Sync, or Whatnot Specialist — all four import this
+broken module. Left auto-starting only Video Pipeline and Crosslister,
+which don't depend on it. **Not yet done:** actually fixing or replacing
+`platform_connectors.py` — that's real future work if this pattern is
+ever revisited, not something to re-enable blind.
+
+**Root cause, stated plainly:** this file was documented as "production-
+ready" on 2026-08-09 without ever being run against a real credential.
+That mislabeling is the direct cause of months of false belief that
+multi-platform sync existed. This is now the fourth+ time this exact
+failure mode has been found in this project (see the `BOSS-LISTERS`
+capital audit and the "8-platform extension" merge above) — the common
+thread every time is a confident-sounding commit/doc claim that was never
+checked against a live run. Going forward: **"production-ready" is not a
+label to apply without having actually executed the code against a real
+credential at least once** — a plausible HTTP call shape is not evidence
+it works.
 
 ### 2026-08-20 — Third-party Boss Listers merge audited, bug report sent to Gemini
 See the "Fourth fake complete system" entry above (extension/vault merge).

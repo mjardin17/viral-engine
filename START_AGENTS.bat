@@ -42,30 +42,29 @@ echo   #commercials      (commercial production)
 echo   #inventory-sync   (crosslisting status)
 echo.
 
-REM Start agents in separate windows
+REM DISABLED 2026-08-20: Platform Sync, Sales Tracker, Price Sync, and Whatnot
+REM Specialist all import lib/platform_connectors.py, which was audited today
+REM and found non-functional -- 10 of its 16 connectors have zero credentials
+REM configured anywhere, 2 more (Facebook/Mercari) read the wrong env var name
+REM so real credentials that DO exist are never found, and several hit API
+REM endpoints that don't correspond to any real public developer program
+REM (Depop/Grailed/Vinted/Vestiaire). This has been launching since 2026-08-09
+REM without ever completing one real sync. Left auto-starting only what's
+REM real: Video Pipeline (rendering) and Crosslister (local inventory
+REM monitoring, no external platform dependency). Re-enable per-agent only
+REM after lib/platform_connectors.py is fixed or replaced -- see CLAUDE.md
+REM "2026-08-20 -- platform_connectors.py audited, found non-functional".
 start "Video Pipeline Agent" cmd /c "%PYTHON_PATH% agents\video_pipeline_agent.py"
 timeout /t 2
 start "Crosslister Agent" cmd /c "%PYTHON_PATH% agents\crosslister_agent.py"
-timeout /t 2
-start "Platform Sync Agent" cmd /c "%PYTHON_PATH% agents\platform_sync_agent.py"
-timeout /t 2
-start "Sales Tracker Agent" cmd /c "%PYTHON_PATH% agents\sales_tracker_agent.py"
-timeout /t 2
-start "Price Sync Agent" cmd /c "%PYTHON_PATH% agents\price_sync_agent.py"
-timeout /t 2
-start "Whatnot Specialist Agent" cmd /c "%PYTHON_PATH% agents\whatnot_specialist_agent.py"
 
 echo.
-echo All 6 agents started. Check their windows for status.
+echo 2 agents started (Platform Sync / Sales Tracker / Price Sync / Whatnot
+echo Specialist disabled 2026-08-20 -- see CLAUDE.md, they never worked).
 echo.
 echo Agents:
 echo   - Video Pipeline (renders episodes + commercials)
 echo   - Crosslister (monitor inventory for auctions)
-echo   - Platform Sync (push to 18 platforms)
-echo   - Sales Tracker (monitor sales, update inventory)
-echo   - Price Sync (sync prices bidirectionally)
-echo   - Whatnot Specialist (orchestrate auctions, optimize ROI)
-echo   - Scanner Uploader (Epson ES-400 II → Boss Listers)
 echo.
 echo Council Bots (quality + optimization):
 echo   - Bot 18: Whatnot Quality Checker

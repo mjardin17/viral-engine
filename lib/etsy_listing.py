@@ -54,8 +54,31 @@ lib/ebay_listing.py.
 
 Auth: OAuth 2.0 + PKCE, an access token with the ``listings_w`` scope
 (``listings_r``/``shops_r`` also needed elsewhere in this app for reads).
-Etsy's PKCE flow has no client secret at the token-exchange step — do not
-assume ETSY_SHARED_SECRET is used the same way EBAY_CLIENT_SECRET is.
+
+Two *different* credentials are in play, and conflating them is the most
+common way to get a confusing 403 here:
+
+* ``Authorization: Bearer <access_token>`` — the per-shop OAuth token. Etsy's
+  PKCE flow takes no client secret at the token-exchange step.
+* ``x-api-key: <keystring>:<shared_secret>`` — app-level identity, sent on
+  EVERY request including unauthenticated ones.
+
+The ``x-api-key`` format is VERIFIED against the live production API
+(2026-08-20), not inferred from docs. Probing
+``GET /v3/application/openapi-ping``:
+
+* ``x-api-key: <keystring>``                 -> 403 "Shared secret is required
+  in x-api-key header."
+* ``x-api-key: <shared_secret>``             -> 403 "API key not found or not
+  active, or incorrect shared secret for API key."
+* ``x-api-key: <keystring>:<shared_secret>`` -> **200** ``{"application_id": ...}``
+
+So ``ETSY_SHARED_SECRET`` IS required — just by the API-key header rather than
+by the token exchange. A prior revision of the sibling Node client asserted the
+opposite and was verified only against a mocked fetch, which confirmed the code
+matched its author's intent without ever showing the intent was wrong. Pass the
+colon-joined pair as ``api_key``; ``EtsyListingClient`` will reject a bare
+keystring rather than let it fail as an opaque 403 at call time.
 """
 
 from __future__ import annotations
@@ -407,6 +430,19 @@ class EtsyListingClient:
                 "api_key is required (the x-api-key header — its absence "
                 "produces a 401 that reads like a bad access token, not a "
                 "missing header)"
+            )
+        # Etsy requires x-api-key to be "<keystring>:<shared_secret>". A bare
+        # keystring is accepted by every local check and then fails remotely
+        # with 403 "Shared secret is required in x-api-key header." — an error
+        # that reads like an auth/permission problem rather than a malformed
+        # header, which is how it went undetected before. Fail here instead,
+        # where the message can say what is actually wrong. See module docstring
+        # for the live probe this is based on.
+        if ":" not in str(api_key):
+            raise EtsyValidationError(
+                "api_key must be '<keystring>:<shared_secret>' (colon-joined). "
+                "A bare keystring returns 403 'Shared secret is required in "
+                "x-api-key header.' from Etsy."
             )
         self.access_token = access_token
         self.shop_id = str(shop_id)

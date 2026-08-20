@@ -79,7 +79,7 @@ def test_draft_target_state_never_requires_live_gates(dry_run_client, monkeypatc
     res = dry_run_client.post("/etsy/create-listing", json={
         "access_token": "fake-token",
         "shop_id": "SHOP1",
-        "api_key": "apikey",
+        "api_key": "keystring:sharedsecret",
         "product": VALID_PRODUCT,
         "dry_run": False,
         "target_state": "draft",
@@ -100,7 +100,7 @@ def test_dry_run_true_never_touches_the_network(dry_run_client, monkeypatch):
     res = dry_run_client.post("/etsy/create-listing", json={
         "access_token": "fake-token",
         "shop_id": "SHOP1",
-        "api_key": "apikey",
+        "api_key": "keystring:sharedsecret",
         "product": VALID_PRODUCT,
         "dry_run": True,
     })
@@ -117,7 +117,7 @@ def test_default_target_state_is_draft(dry_run_client, monkeypatch):
     res = dry_run_client.post("/etsy/create-listing", json={
         "access_token": "fake-token",
         "shop_id": "SHOP1",
-        "api_key": "apikey",
+        "api_key": "keystring:sharedsecret",
         "product": VALID_PRODUCT,
         # dry_run and target_state both omitted
     })
@@ -133,7 +133,7 @@ def test_activation_refused_when_etsy_not_armed(dry_run_client):
     res = dry_run_client.post("/etsy/create-listing", json={
         "access_token": "fake-token",
         "shop_id": "SHOP1",
-        "api_key": "apikey",
+        "api_key": "keystring:sharedsecret",
         "product": VALID_PRODUCT,
         "dry_run": False,
         "target_state": "active",
@@ -150,7 +150,7 @@ def test_activation_refused_without_confirm_literal(etsy_live_client):
         json={
             "access_token": "fake-token",
             "shop_id": "SHOP1",
-            "api_key": "apikey",
+            "api_key": "keystring:sharedsecret",
             "product": VALID_PRODUCT,
             "dry_run": False,
             "target_state": "active",
@@ -165,7 +165,7 @@ def test_activation_refused_without_shared_secret(etsy_live_client):
     res = etsy_live_client.post("/etsy/create-listing", json={
         "access_token": "fake-token",
         "shop_id": "SHOP1",
-        "api_key": "apikey",
+        "api_key": "keystring:sharedsecret",
         "product": VALID_PRODUCT,
         "dry_run": False,
         "target_state": "active",
@@ -188,7 +188,7 @@ def test_all_gates_satisfied_reaches_etsy(etsy_live_client, monkeypatch):
         json={
             "access_token": "fake-token",
             "shop_id": "SHOP1",
-            "api_key": "apikey",
+            "api_key": "keystring:sharedsecret",
             "product": VALID_PRODUCT,
             "dry_run": False,
             "target_state": "active",
@@ -244,7 +244,7 @@ def test_image_upload_failure_maps_to_409_images_incomplete(etsy_live_client, mo
         json={
             "access_token": "fake-token",
             "shop_id": "SHOP1",
-            "api_key": "apikey",
+            "api_key": "keystring:sharedsecret",
             "product": VALID_PRODUCT,
             "dry_run": False,
             "target_state": "active",
@@ -271,7 +271,7 @@ def test_activation_failure_maps_to_409_not_activated(etsy_live_client, monkeypa
         json={
             "access_token": "fake-token",
             "shop_id": "SHOP1",
-            "api_key": "apikey",
+            "api_key": "keystring:sharedsecret",
             "product": VALID_PRODUCT,
             "dry_run": False,
             "target_state": "active",
@@ -293,7 +293,7 @@ def test_validation_error_maps_to_400(dry_run_client, monkeypatch):
     res = dry_run_client.post("/etsy/create-listing", json={
         "access_token": "fake-token",
         "shop_id": "SHOP1",
-        "api_key": "apikey",
+        "api_key": "keystring:sharedsecret",
         "product": bad_product,
         "dry_run": True,
     })
@@ -310,7 +310,7 @@ def test_access_token_never_echoed_in_any_response(dry_run_client, monkeypatch):
     res = dry_run_client.post("/etsy/create-listing", json={
         "access_token": secret_token,
         "shop_id": "SHOP1",
-        "api_key": "apikey",
+        "api_key": "keystring:sharedsecret",
         "product": VALID_PRODUCT,
         "dry_run": True,
     })

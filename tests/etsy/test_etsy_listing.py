@@ -212,7 +212,7 @@ def test_price_uses_decimal_so_cents_are_not_truncated():
 
 def test_dry_run_sends_nothing_and_is_not_published():
     transport = make_transport([])
-    client = EtsyListingClient("token", "SHOP1", "apikey", transport=transport)
+    client = EtsyListingClient("token", "SHOP1", "keystring:sharedsecret", transport=transport)
 
     result = client.create_listing(make_product(), dry_run=True)
 
@@ -228,7 +228,7 @@ def test_happy_path_draft_only_stops_before_activation():
         FakeResponse(201, {"listing_id": "L123"}),
         FakeResponse(201, {"image_id": "IMG1"}),
     ])
-    client = EtsyListingClient("token", "SHOP1", "apikey", transport=transport)
+    client = EtsyListingClient("token", "SHOP1", "keystring:sharedsecret", transport=transport)
 
     result = client.create_listing(make_product(), target_state="draft", dry_run=False)
 
@@ -245,7 +245,7 @@ def test_happy_path_active_makes_all_three_calls():
         FakeResponse(201, {"image_id": "IMG1"}),
         FakeResponse(200, {"state": "active"}),
     ])
-    client = EtsyListingClient("token", "SHOP1", "apikey", transport=transport)
+    client = EtsyListingClient("token", "SHOP1", "keystring:sharedsecret", transport=transport)
 
     result = client.create_listing(make_product(), target_state="active", dry_run=False)
 
@@ -259,7 +259,7 @@ def test_default_target_state_is_draft():
         FakeResponse(201, {"listing_id": "L123"}),
         FakeResponse(201, {"image_id": "IMG1"}),
     ])
-    client = EtsyListingClient("token", "SHOP1", "apikey", transport=transport)
+    client = EtsyListingClient("token", "SHOP1", "keystring:sharedsecret", transport=transport)
 
     result = client.create_listing(make_product(), dry_run=False)
 
@@ -272,17 +272,17 @@ def test_x_api_key_header_present_on_every_call():
         FakeResponse(201, {"listing_id": "L123"}),
         FakeResponse(201, {"image_id": "IMG1"}),
     ])
-    client = EtsyListingClient("token", "SHOP1", "apikey123", transport=transport)
+    client = EtsyListingClient("token", "SHOP1", "keystring123:sharedsecret", transport=transport)
 
     client.create_listing(make_product(), dry_run=False)
 
     for call in transport.calls:
-        assert call["headers"]["x-api-key"] == "apikey123"
+        assert call["headers"]["x-api-key"] == "keystring123:sharedsecret"
 
 
 def test_failure_at_create_names_the_step_and_has_no_listing_id():
     transport = make_transport([FakeResponse(400, {"error": "bad taxonomy_id"})])
-    client = EtsyListingClient("token", "SHOP1", "apikey", transport=transport)
+    client = EtsyListingClient("token", "SHOP1", "keystring:sharedsecret", transport=transport)
 
     with pytest.raises(EtsyListingError) as exc:
         client.create_listing(make_product(), dry_run=False)
@@ -294,7 +294,7 @@ def test_failure_at_create_names_the_step_and_has_no_listing_id():
 
 def test_create_accepted_but_no_listing_id_is_an_error_not_a_silent_pass():
     transport = make_transport([FakeResponse(201, {})])  # 201 but no listing_id
-    client = EtsyListingClient("token", "SHOP1", "apikey", transport=transport)
+    client = EtsyListingClient("token", "SHOP1", "keystring:sharedsecret", transport=transport)
 
     with pytest.raises(EtsyListingError) as exc:
         client.create_listing(make_product(), dry_run=False)
@@ -311,7 +311,7 @@ def test_image_upload_failure_carries_listing_id_and_does_not_activate():
         FakeResponse(201, {"listing_id": "L123"}),
         FakeResponse(500, {"error": "upload failed"}),
     ])
-    client = EtsyListingClient("token", "SHOP1", "apikey", transport=transport)
+    client = EtsyListingClient("token", "SHOP1", "keystring:sharedsecret", transport=transport)
 
     with pytest.raises(EtsyListingError) as exc:
         client.create_listing(make_product(), target_state="active", dry_run=False)
@@ -327,7 +327,7 @@ def test_activation_failure_carries_listing_id_and_reports_not_published():
         FakeResponse(201, {"image_id": "IMG1"}),
         FakeResponse(400, {"error": "missing return policy"}),
     ])
-    client = EtsyListingClient("token", "SHOP1", "apikey", transport=transport)
+    client = EtsyListingClient("token", "SHOP1", "keystring:sharedsecret", transport=transport)
 
     with pytest.raises(EtsyListingError) as exc:
         client.create_listing(make_product(), target_state="active", dry_run=False)
@@ -343,7 +343,7 @@ def test_activation_returning_non_active_state_is_an_error():
         FakeResponse(201, {"image_id": "IMG1"}),
         FakeResponse(200, {"state": "draft"}),  # accepted the PATCH but didn't flip
     ])
-    client = EtsyListingClient("token", "SHOP1", "apikey", transport=transport)
+    client = EtsyListingClient("token", "SHOP1", "keystring:sharedsecret", transport=transport)
 
     with pytest.raises(EtsyListingError) as exc:
         client.create_listing(make_product(), target_state="active", dry_run=False)
@@ -354,17 +354,37 @@ def test_activation_returning_non_active_state_is_an_error():
 
 def test_empty_access_token_is_rejected_at_construction():
     with pytest.raises(EtsyValidationError, match="access_token"):
-        EtsyListingClient("", "SHOP1", "apikey")
+        EtsyListingClient("", "SHOP1", "keystring:sharedsecret")
 
 
 def test_empty_shop_id_is_rejected_at_construction():
     with pytest.raises(EtsyValidationError, match="shop_id"):
-        EtsyListingClient("token", "", "apikey")
+        EtsyListingClient("token", "", "keystring:sharedsecret")
 
 
 def test_empty_api_key_is_rejected_at_construction():
     with pytest.raises(EtsyValidationError, match="api_key"):
         EtsyListingClient("token", "SHOP1", "")
+
+
+def test_bare_keystring_without_shared_secret_is_rejected():
+    """REGRESSION GUARD — verified against live Etsy 2026-08-20.
+
+    Etsy's x-api-key must be '<keystring>:<shared_secret>'. Probing the real
+    production /openapi-ping endpoint:
+        keystring alone            -> 403 "Shared secret is required in
+                                       x-api-key header."
+        keystring:shared_secret    -> 200 {"application_id": ...}
+
+    The sibling Node connector was once changed to send the keystring alone,
+    which broke every authenticated Etsy call. That change was "verified"
+    against a mocked fetch — a mock can only confirm the code does what its
+    author intended, never that the intent matches the remote API. This test
+    exists so the same regression fails locally instead of silently in
+    production.
+    """
+    with pytest.raises(EtsyValidationError, match="colon-joined"):
+        EtsyListingClient("token", "SHOP1", "keystringalone")
 
 
 def test_listing_id_is_url_encoded_in_image_and_activate_calls():
@@ -375,7 +395,7 @@ def test_listing_id_is_url_encoded_in_image_and_activate_calls():
         FakeResponse(201, {"image_id": "IMG1"}),
         FakeResponse(200, {"state": "active"}),
     ])
-    client = EtsyListingClient("token", "SHOP1", "apikey", transport=transport)
+    client = EtsyListingClient("token", "SHOP1", "keystring:sharedsecret", transport=transport)
 
     client.create_listing(make_product(), target_state="active", dry_run=False)
 
@@ -482,7 +502,7 @@ def test_digital_file_upload_happens_after_images_before_activation(tmp_path):
         FakeResponse(201, {"listing_file_id": "F1"}),
         FakeResponse(200, {"state": "active"}),
     ])
-    client = EtsyListingClient("token", "SHOP1", "apikey", transport=transport)
+    client = EtsyListingClient("token", "SHOP1", "keystring:sharedsecret", transport=transport)
     product = make_digital_product(
         tmp_path, listing_type="both",
         images=(EtsyImageSource(local_path="/tmp/cover.jpg"),),
@@ -502,7 +522,7 @@ def test_digital_file_upload_uses_file_and_name_fields(tmp_path):
         FakeResponse(201, {"listing_id": "L123"}),
         FakeResponse(201, {"listing_file_id": "F1"}),
     ])
-    client = EtsyListingClient("token", "SHOP1", "apikey", transport=transport)
+    client = EtsyListingClient("token", "SHOP1", "keystring:sharedsecret", transport=transport)
     product = make_digital_product(tmp_path)
 
     client.create_listing(product, dry_run=False)
@@ -518,7 +538,7 @@ def test_draft_only_still_uploads_digital_files_but_does_not_activate(tmp_path):
         FakeResponse(201, {"listing_id": "L123"}),
         FakeResponse(201, {"listing_file_id": "F1"}),
     ])
-    client = EtsyListingClient("token", "SHOP1", "apikey", transport=transport)
+    client = EtsyListingClient("token", "SHOP1", "keystring:sharedsecret", transport=transport)
     product = make_digital_product(tmp_path)
 
     result = client.create_listing(product, target_state="draft", dry_run=False)
@@ -531,7 +551,7 @@ def test_activation_without_digital_files_on_download_listing_is_refused():
     transport = make_transport([
         FakeResponse(201, {"listing_id": "L123"}),
     ])
-    client = EtsyListingClient("token", "SHOP1", "apikey", transport=transport)
+    client = EtsyListingClient("token", "SHOP1", "keystring:sharedsecret", transport=transport)
     product = make_product(listing_type="download", shipping_profile_id=None, images=())
 
     with pytest.raises(EtsyListingError) as exc:
@@ -547,7 +567,7 @@ def test_activation_with_failed_digital_file_upload_is_refused(tmp_path):
         FakeResponse(201, {"listing_id": "L123"}),
         FakeResponse(500, {"error": "upload failed"}),
     ])
-    client = EtsyListingClient("token", "SHOP1", "apikey", transport=transport)
+    client = EtsyListingClient("token", "SHOP1", "keystring:sharedsecret", transport=transport)
     product = make_digital_product(tmp_path)
 
     with pytest.raises(EtsyListingError) as exc:

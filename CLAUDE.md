@@ -2059,6 +2059,133 @@ already present before this session started — `lib/ebay_sales.py` and
    = "9.99"` and the generated fallback description are reasonable
    placeholders, not a pricing decision Josh has made.
 
+## 🚨 READ THIS FIRST — WHICH BOSSLISTER IS REAL (settled 2026-08-20)
+
+**STOP. Do not go hunting for "the real Boss Listers app." It is THIS REPO.**
+
+Five separate codebases carry the Boss Listers name. Four are mirrors, decoys, or
+dead ends. Multiple Claude sessions — including a long one on 2026-08-20 — have
+burned hours rediscovering this. The answer is below. Do not re-derive it.
+
+### ✅ THE REAL MARKETPLACE ENGINE = `video-bot-pipeline` (this repo), in Python
+
+| File | Lines | What it is |
+|---|---|---|
+| `lib/ebay_listing.py` | 407 | **Canonical** eBay listing client (3-call Sell Inventory flow) |
+| `lib/ebay_sales.py` | 194 | eBay Sell Fulfillment order/sales client |
+| `lib/etsy_listing.py` | 605 | **Canonical** Etsy client (physical + digital downloads) |
+| `storyforge2/publishing/connectors/etsy_digital.py` | 181 | Book → Etsy digital listing connector |
+| `scripts/listing_service.py` | 441 | HTTP bridge serving BOTH platforms, `127.0.0.1:8791` |
+| `tests/ebay/` (3 files) + `tests/etsy/` (2 files) | — | 62 Etsy tests passing as of 2026-08-20 |
+
+Everything else is a thin mirror of these. **Add marketplace logic HERE, not in
+any Node repo.** (Already recorded further down: `lib/ebay_listing.py` is
+canonical and `marketplace-integration/src/connectors/ebay.js` is a mirror only.)
+
+### Platform status — measured live 2026-08-20, not claimed
+
+- **eBay — WORKING, VERIFIED LIVE.** A real `refresh_token` grant against
+  production `api.ebay.com` returned a 2328-char access token; authenticated
+  `getInventoryItems` → **HTTP 200**, `getInventoryLocations` → **HTTP 200**
+  returning the real location `JJ_NEW_BEDFORD_MAIN`. This is genuine.
+  - Credentials live in `boss-listers-mvp/boss-listers-mvp/.env.local`
+    (`EBAY_CLIENT_ID`, `EBAY_CLIENT_SECRET`, `EBAY_REFRESH_TOKEN`).
+  - ⚠️ **Scope probe result — CLAUDE.md previously said this token holds
+    `sell.inventory + sell.account`. IT DOES NOT.** Verified per-scope:
+    `sell.inventory` = GRANTED; `sell.account` = `invalid_scope`;
+    `sell.fulfillment` = `invalid_scope`; `sell.fulfillment.readonly` =
+    `invalid_scope`.
+  - **Therefore `lib/ebay_sales.py` cannot fetch orders yet** — it needs
+    `sell.fulfillment`. Requires ONE human OAuth re-consent. Not automatable.
+  - `getInventoryItems` returning `total=0` is CORRECT, not a bug — Josh's ~69
+    live listings are classic-format, never created through the Inventory API,
+    so that endpoint legitimately cannot see them. Use the Browse API
+    (`sellers:{mjardin17}`) to enumerate them instead.
+- **Etsy — code complete, shop not connected.** 62 tests pass.
+  `ETSY_KEYSTRING` (24) + `ETSY_SHARED_SECRET` (10) are set in
+  `boss-listers-mvp/.env.local`. **Missing: `ETSY_SHOP_ID`,
+  `ETSY_ACCESS_TOKEN`, `ETSY_TAXONOMY_ID`** — no OAuth consent completed.
+  A ping with the keystring returns `403 {"error":"Shared secret is required in
+  x-api-key header."}` — that is a HEADER-FORMAT complaint, **not** proof the
+  app is unapproved. Do not conclude "Etsy rejected the app" from that error.
+- **Whatnot — CSV is the real path, permanently.** Whatnot's Seller API is a
+  CLOSED Developer Preview not accepting applicants. All four codebases
+  independently reach the same wall. `whatnot_import.csv` (69 real rows, in
+  `boss-listers-mvp/`) feeds Whatnot's own official bulk importer. This is not
+  a gap to engineer around — it is Whatnot's policy.
+
+### The other four codebases — what each actually is
+
+| Path | Verdict |
+|---|---|
+| `claude/boss-listers-mvp/boss-listers-mvp/` | **Real Next.js app.** Live eBay OAuth (`lib/channels/apiConnectors.js:72`), proxies listings to the Python bridge at `:279`. Legit, but a UI shell over this repo's engine. |
+| `claude/boss-listers-mvp/marketplace-integration/` | **INERT.** No `.env` at all. Its declared entry points `src/index.js` and `scripts/oauth-token.js` **were never written** — confirmed absent from all git history, not deleted. `npm run check` and `npm run token:etsy` both fail `MODULE_NOT_FOUND`. `scripts/check-products.js:4` imports a nonexistent `facebook.js`. |
+| `claude/BOSS-LISTERS/` (capital) | **DEAD — DO NOT COLLECT CREDENTIALS FOR IT.** `grep -rE "fetch\(\|axios\|https.request\|got\(" src/connectors/` → **0 matches**. All 26 connectors return `${Date.now()}`-suffixed fake IDs. eBay's `exchangeAuthorizationCode()` has a `try` with no `await` (unreachable `catch`). Etsy hardcodes `code_challenge=DSK12345`. Real AES-256-GCM vault guarding exclusively counterfeit tokens. ⚠️ Its uncommitted `server.ts` adds `POST /api/v1/products/:id/autopost` which returns **202 success claiming 26 listings while contacting nothing** — do not wire that to a button. |
+| `mjardin17/Card-sync` (GitHub only, **not cloned locally**) | **REAL and honest** — a Google AI Studio app ("OmniCard Sync & Value Vault"), hence never on disk. Real eBay `PUT /sell/inventory/v1/inventory_item` with correct `Content-Language`. Returns honest **403s** for Whatnot/TCGplayer instead of faking success. AES-256-GCM vault with a genuine tamper/auth-tag regression test. Defaults `PUBLISHING_MODE=DRY_RUN`. **This is the source of Josh's existing Discord webhook.** ⚠️ Known gap: stores a STATIC `ebayUserToken` — zero refresh logic (`grep refresh_token\|expires_in` → no matches), so eBay sync will silently die when that token expires. |
+| `mjardin17/relay` | **Not BossLister at all.** Separate product — tenant business profiles, GBP audit, Control Center. Leave it alone. |
+
+### Rules for future sessions
+
+1. **Marketplace logic goes in `video-bot-pipeline/lib/*.py`.** Node connectors
+   are mirrors — never add independent validation there or the two drift.
+2. **Never label a connector "connected" without a real authenticated 2xx.**
+   Four of five codebases here failed exactly that way.
+3. **Read the actual error text before diagnosing.** A 403 saying "Shared secret
+   is required in x-api-key header" is a header bug, not an approval rejection.
+4. **`grep -rE "fetch\(|axios|https\.request" <connector dir>` is the fastest
+   real/fake test that exists.** Zero hits = zero connectivity, regardless of
+   how sophisticated the retry logic, circuit breakers, or vault look.
+
+### ⚠️ Corrupted line in `video-bot-pipeline/.env` (found 2026-08-20, NOT fixed)
+
+`.env` contains a line parsed as a variable named `at generation. Paste after the`
+— a comment fragment that lost its leading `#`. Harmless to most parsers but it
+will confuse any strict `.env` loader. Left untouched; fix needs Josh's eyes on
+which credential the comment belonged to.
+
+## 2026-08-20 Session — Sales Tracking Integration (CURRENT)
+
+### Blocker Analysis (Architect + TDD Agents)
+
+Real eBay and Etsy code is done. Three integration blockers found for building the sales tracking agent:
+
+**BLOCKER 1 — SKU Resolution Mismatch (will hit 100% real-world failure)**
+- `products` table (from migration 0010 import): `sku = 'v1|198079646764|0'` (Browse API itemId with prefix/suffix)
+- eBay Fulfillment API sales response: `sku=""` (empty, Josh's classic listings not via Inventory API) + `legacy_item_id="198079646764"`
+- **Impact:** Every real sale returns `unknown_sku` when calling `record_sale()` RPC. Quantity never decrements. Silent failure.
+- **Fix required:** Build reconciler that maps `legacy_item_id` → full `v1|{legacy_item_id}|0` key, verify it resolves before calling RPC. Never poison event_key ledger with unresolvable sales.
+
+**BLOCKER 2 — Token Scope Mismatch**
+- Current refresh token in `boss-listers-mvp/.env.local`: consented with `sell.inventory + sell.account` only
+- `lib/ebay_sales.py` requires: `sell.fulfillment` scope (for Sell Fulfillment API)
+- **Impact:** First real `get_orders_since()` call fails with HTTP 400. Documented warning at lines 39-44.
+- **Fix required:** Josh re-runs OAuth consent flow with `sell.fulfillment` scope added. One-time, 5-minute step.
+
+**BLOCKER 3 — No Etsy Receipts Client Exists**
+- `storyforge2/publishing/connectors/etsy_digital.py` only creates listings, zero sales-fetching capability
+- No `EtsyReceiptsClient` anywhere (Etsy's Receipts API is `GET /application/shops/{shop_id}/receipts`)
+- **Impact:** Entire Etsy sales tracking test plan cannot be built until this client exists (Phase 0 work)
+- **Fix required:** Build `EtsyReceiptsClient` mirroring `EbaySalesClient` architecture (injectable transport, dataclasses, tests)
+
+### Tasks Created
+
+| Task | Status | Blocker | Priority |
+|------|--------|---------|----------|
+| Document blocker findings in CLAUDE.md | in_progress | None | 1 |
+| Fix SKU resolution in reconciler | pending | Task 1 | 2 |
+| Add missing parse fields to lib/ebay_sales.py | pending | Task 1 | 2 |
+| Build SalesTrackerAgent + SupabaseSalesWriter | pending | Tasks 2,3 | 3 |
+| Write test suite for sales tracking (TDD) | pending | Tasks 3,4 | 4 |
+| Verify against real eBay order (Josh action) | pending | Token scope fix | 5 |
+| Build EtsyReceiptsClient (Phase 0) | pending | Etsy approval | Phase 0 |
+
+### Plan
+
+**Phase 1 (Architectural fixes):** Fix blockers 1 & 2 above, extend eBay parser with missing fields
+**Phase 2 (Agent infrastructure):** Build SalesTrackerAgent, SupabaseSalesWriter, test suite
+**Phase 3 (Verification):** Test against real eBay order (Josh action: fix token scope)
+**Phase 0 (When needed):** Build EtsyReceiptsClient after Etsy app approval
+
 ## Git & GitHub (PRODUCTION RULES)
 
 **Repository:** `https://github.com/mjardin17/viral-engine` (branch: `main`)

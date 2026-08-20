@@ -1924,6 +1924,19 @@ as a standalone report for Josh to hand to the Gemini session that built
 it, pointing at the real Supabase-backed vault (migrations 0013-0015) as
 the credential storage it should have used instead.
 
+### 🔴 2026-08-20 — PUSH_NOW.bat lies about success, confirmed twice
+`PUSH_NOW.bat` printed "✅ PUSH SUCCEEDED! All files are on GitHub" on two
+separate pushes tonight while GitHub's actual API showed the branch hadn't
+moved at all — confirmed by checking `gh api repos/.../branches/...`
+directly, not trusting the script's own output. Raw `git push origin
+<branch>` worked correctly both times when the wrapper silently failed.
+Root cause not yet diagnosed (didn't dig into push_bypass.py internals).
+**Until this is fixed: after running PUSH_NOW.bat, always independently
+verify with `gh api repos/mjardin17/viral-engine/branches/<branch> --jq
+'.commit.sha'` and compare to local `git log -1 --format=%H` — do not
+trust the script's printed output alone.** This cost real trust tonight:
+work was reported as pushed and safe when it was actually still local-only.
+
 ## Git & GitHub (PRODUCTION RULES)
 
 **Repository:** `https://github.com/mjardin17/viral-engine` (branch: `main`)

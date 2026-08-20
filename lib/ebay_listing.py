@@ -35,6 +35,7 @@ import json
 from dataclasses import dataclass, field
 from decimal import ROUND_HALF_UP, Decimal, InvalidOperation
 from typing import Any, Callable, Optional
+from urllib.parse import quote
 
 EBAY_BASE_URL = "https://api.ebay.com/sell/inventory/v1"
 EBAY_SANDBOX_BASE_URL = "https://api.sandbox.ebay.com/sell/inventory/v1"
@@ -60,14 +61,23 @@ VALID_CONDITIONS = frozenset({
 
 
 class EbayListingError(RuntimeError):
-    """A listing step failed. Carries which step, so failures are diagnosable."""
+    """A listing step failed. Carries which step, so failures are diagnosable.
+
+    `offer_id` is set whenever an offer already exists on eBay's side at the
+    time of failure (i.e. any failure at or after the publishOffer call). A
+    caller that wants to safely resume — rather than blindly re-running
+    `create_listing()`, which would call `createOffer` again and can create a
+    second, duplicate offer for the same SKU — needs this as a structured
+    field, not something parsed out of the message string.
+    """
 
     def __init__(self, step: str, message: str, status: Optional[int] = None,
-                 body: Any = None) -> None:
+                 body: Any = None, offer_id: Optional[str] = None) -> None:
         super().__init__(f"[{step}] {message}")
         self.step = step
         self.status = status
         self.body = body
+        self.offer_id = offer_id
 
 
 class EbayValidationError(ValueError):
@@ -276,7 +286,8 @@ class EbayListingClient:
         return headers
 
     def _call(self, step: str, method: str, url: str, body: Any,
-              ok_statuses: tuple[int, ...], content_language: bool = False) -> Any:
+              ok_statuses: tuple[int, ...], content_language: bool = False,
+              offer_id: Optional[str] = None) -> Any:
         response = self._transport(
             method, url, self._headers(content_language=content_language), body,
         )
@@ -287,6 +298,7 @@ class EbayListingClient:
                 f"eBay returned HTTP {status}",
                 status=status,
                 body=_safe_body(response),
+                offer_id=offer_id,
             )
         return response
 
@@ -310,9 +322,12 @@ class EbayListingClient:
             return result
 
         # 1. Inventory item. 204 = replaced an existing SKU, 200/201 = created.
+        # SKU is quoted before it reaches a URL path — nothing upstream
+        # restricts its character set, and an unquoted "/" or "?" would
+        # alter the request path or append an unintended query string.
         self._call(
             "createOrReplaceInventoryItem", "PUT",
-            f"{self.base_url}/inventory_item/{product.sku}",
+            f"{self.base_url}/inventory_item/{quote(product.sku, safe='')}",
             item_payload, ok_statuses=(200, 201, 204), content_language=True,
         )
         result.steps.append("createOrReplaceInventoryItem: ok")
@@ -334,9 +349,12 @@ class EbayListingClient:
         result.steps.append(f"createOffer: ok (offerId={offer_id})")
 
         # 3. Publish — only this makes the listing live and buyer-visible.
+        # offer_id is passed to _call so a non-2xx here still tells the
+        # caller which offer is now orphaned, not just that publish failed.
         publish_response = self._call(
-            "publishOffer", "POST", f"{self.base_url}/offer/{offer_id}/publish",
-            None, ok_statuses=(200, 201),
+            "publishOffer", "POST",
+            f"{self.base_url}/offer/{quote(offer_id, safe='')}/publish",
+            None, ok_statuses=(200, 201), offer_id=offer_id,
         )
         listing_id = _extract(publish_response, "listingId")
         if not listing_id:
@@ -348,6 +366,7 @@ class EbayListingClient:
                 "NOT live. Publish it manually or retry before creating a new offer.",
                 status=getattr(publish_response, "status_code", None),
                 body=_safe_body(publish_response),
+                offer_id=offer_id,
             )
         result.listing_id = listing_id
         result.steps.append(f"publishOffer: ok (listingId={listing_id})")

@@ -1056,6 +1056,821 @@ apiConnectors.js`'s `EbayConnector` (pre-existing, wired into the `/channels`
 status page) only checks OAuth token exchange for a connection-status
 indicator — it doesn't create listings. No overlap with the above.
 
+### 2026-08-19 Session — THIRD Boss Listers codebase found: `C:\Users\jjard\claude\BOSS-LISTERS`
+
+A different session (not this repo) dropped deployment docs into an unrelated
+scratchpad claiming "26 connectors working, ready to deploy in 5 hours" for a
+codebase this file never documented: **`C:\Users\jjard\claude\BOSS-LISTERS`**
+(capital case — a THIRD distinct Boss Listers codebase, alongside
+`boss-listers-mvp` above and the original Base44 app). Express + Vite,
+Postgres/Drizzle, Firebase, AES-encrypted OAuth vault (`vault.service.ts`),
+circuit breakers, retry-with-backoff — architecturally the most sophisticated
+of the three. Read the actual connector code before trusting the claim.
+
+**Verdict: 1 of 8 candidate API keys (Gemini, Supabase, eBay, Shopify, Etsy,
+Buffer, Instagram, Walmart) is wired to real code. The other 7 would sit
+unused if collected today.**
+
+- ✅ **Gemini — real.** `ai-listing-optimizer.service.ts` and `server.ts`
+  both call `gemini-2.5-flash` via `@google/genai`, with a sane rule-based
+  fallback when no key is set.
+- ❌ **eBay, Shopify, Etsy, Pinterest, WooCommerce — fully simulated.**
+  Every connector (`src/connectors/api/*.ts`, `src/connectors/ebay/`) builds
+  a real-looking OAuth authorize URL, but `exchangeAuthorizationCode()`
+  returns a **hardcoded mock token** (`shpat_mock_access_token_${Date.now()}`,
+  `v^1.1#i^1#...${Date.now()}`, etc.) and `createListing()` never makes a
+  network call — it fabricates a fake listing ID and returns success.
+  Grepped all of `src/connectors/` for `fetch`/`axios`/real HTTP calls: zero
+  hits except one eBay OAuth scope *string literal*
+  (`https://api.ebay.com/oauth/api_scope`), not an actual call.
+  `api-connector.ts` (the shared base class) has no HTTP client at all.
+- ❌ **Walmart — same stub pattern** (`createListing` returns
+  `wm_item_${Date.now()}` unconditionally). Josh: not a priority.
+- ❌ **Buffer — not referenced anywhere in this codebase.** Zero hits outside
+  npm's unrelated `Buffer` byte-array class in `package-lock.json`.
+- ❌ **Instagram — not wired to a real API.** `workflow-orchestrator.service.ts`
+  `publishToSocialPlatforms()` posts to
+  `http://localhost:5001/instagram/publish` (and sibling imaginary ports
+  5002–5005 for tiktok/facebook/youtube/pinterest) — five local microservices
+  that don't exist anywhere in this repo or in video-bot-pipeline. This step
+  fails with connection-refused today regardless of any key.
+- ❌ **Supabase — not referenced in `BOSS-LISTERS` at all.** Real Supabase
+  infra exists, but in the *unrelated* `inventory-sync/` eBay-sync system in
+  this repo — it does not connect to `BOSS-LISTERS`.
+
+**Real infra that exists here but wasn't on the 8-key list:** Postgres/Cloud
+SQL (`SQL_HOST`/`SQL_DB_NAME`/`SQL_USER`/`SQL_PASSWORD`, real Drizzle schema +
+migration), `ENCRYPTION_KEY`/`VAULT_MASTER_KEY` (real AES-256 vault for
+storing OAuth tokens — currently only ever stores the fake ones the mock
+`exchangeAuthorizationCode()` calls produce), and Firebase Admin SDK
+(`firebase-admin.ts`) — needs its own project credentials, not the 8-key list.
+
+**Lesson:** this is the third time in three different Boss Listers codebases
+that a well-architected connector framework (retry logic, circuit breakers,
+typed interfaces) turned out to have zero real network I/O underneath. When a
+session hands off a "ready to deploy" claim from a scratchpad path outside
+the current session, verify the actual connector implementation — grep for
+`fetch`/`axios`/real API calls — before it's turned into a task for Josh.
+
+**Recommendation, not yet actioned:** get the Gemini key only for now. Don't
+spend time on eBay/Shopify/Etsy/Pinterest/WooCommerce/Buffer/Instagram/Walmart
+credentials until someone rewrites the relevant connector(s) to make real
+HTTP calls — building that out for one platform (eBay has the most sandbox
+test scaffolding already, `src/tests/real-sandbox.test.ts`) is the actual
+next engineering task, not credential collection.
+
+**Correction, same session, after Josh pushed back on staleness:** `git status`
+confirmed `server.ts` (+30 lines) and a brand-new `src/services/
+workflow-orchestrator.service.ts` (388 lines) were uncommitted from a session
+that ran today but never pushed — re-audited both directly rather than
+relying on the first pass. Two corrections to the verdict above:
+1. `connector-registry.ts`'s constructor **does register all 26 connectors**
+   (not just eBay — that was a redundant duplicate registration inside
+   `marketplace.service.ts` I mistook for the whole picture).
+2. `outbox.service.ts:154` **does** consume the queue and call
+   `connector.createListing(product, {accessToken:'demo_access_token'})` —
+   the pipeline runs genuinely end-to-end (product → outbox event →
+   background worker → connector call), it doesn't dead-end at "queued".
+
+**The verdict is unchanged in substance, just more precise about where the
+break is:** the plumbing (registry, outbox, retry, circuit breakers) is real
+and complete; the leaf-level `createListing()` in every one of the 26
+connectors is still a mock that fabricates an ID and never calls a real
+marketplace API — confirmed via a repo-wide grep for `fetch`/`axios` inside
+`src/connectors/` (zero real hits). The new orchestrator layer (uncommitted)
+adds commercial generation (`localhost:4000`) and clip extraction
+(`localhost:4001`), both silently falling back to placeholder paths since
+nothing listens on those ports; social posting (`localhost:5001-5005`) has
+no fallback and fails loudly; monitoring is `console.log` only;
+`getWorkflowStatus()` always returns `null`. Gemini is still the only one of
+the 8 candidate keys with anywhere real to go.
+
+**Root cause of "eBay credentials wouldn't save" found — it was never an
+approval-wait problem.** Josh reported trying to enter real eBay credentials
+and having them not save. Traced it to
+`BOSS-LISTERS/src/components/SettingsPanel.tsx`: the "Connect API" modal
+(`openConnectDialog()` line 77, modal at line 306+) has **no editable input
+field for credentials at all.** "Merchant Client ID" and "Auth Token" are
+`<span>`/`<div>` display elements pre-filled with auto-generated fake strings
+(`boss_listers_${platformId}_client_938a`,
+`tok_live_oauth_${platformId}_${random}`) — not `<input>` elements, unlike
+the numeric Reselling Parameters fields elsewhere in the same file which
+correctly use real `<input>`. `handleEstablishConnection()` (line 85) does a
+900ms fake delay then flips a boolean in `localStorage`
+(`boss_platform_connections: {ebay: true}`) — no credential value is stored
+anywhere, ever. There was nowhere for a real eBay key to go; that's why it
+"wouldn't save." The only real credential path in this Settings panel is
+Gemini, and that's instructions to set it in Google AI Studio's own secrets
+manager, not this app.
+
+### ✅ Real inventory pulled, Whatnot CSV built, multi-tenant "Connect eBay" started (2026-08-19/20)
+
+**Real eBay inventory confirmed and synced.** Josh corrected an assumption
+(twice — "zero inventory" was wrong both times I checked it two different
+ways). Ground truth, verified via eBay's public Browse API
+(`sellers:{mjardin17}` filter, no auth needed): **real, active listings**
+across sports cards, Pokemon TCG, Transformers/Hasbro figures, cosmetics,
+Hot Wheels/die-cast, sneakers. Pulled 69 via an 18-term category sweep
+(a lower bound, not the full count — Browse API needs a text query, can't
+list "everything") and upserted into `public.products`
+(`0010_import_real_ebay_inventory.sql`), source='ebay'.
+
+**Whatnot: native CSV bulk import is the real answer, not an API.**
+Whatnot's own Seller API is real (GraphQL) but in closed developer preview,
+not accepting new applicants. Checked GitHub for unofficial wrappers
+(`wxllow/whatnot`, `willmeyers/unofficial-whatnot-api`) — both read-only,
+no listing-creation support, minimally maintained. The `BOSS-LISTERS`
+capital `extension/` folder (real, loadable Manifest V3 Chrome extension)
+does nothing real either — content script fabricates a fake listing ID
+with zero DOM automation, background script pings a dead `bosslisters.ai`
+domain, and Whatnot isn't even in its permissions. **Real path: Whatnot's
+own official CSV bulk importer** (Seller Hub → Inventory → Import from
+CSV), confirmed via their help docs + the actual template (Google Sheet,
+`Values`/`Condition Dropdown` tabs screenshotted). Built
+`whatnot_import.csv` (69 real rows, keyword-mapped to real category values:
+Sports Cards, Trading Card Games, Action Figures→Transformers Figures,
+Beauty, etc; 28 rows flagged low-confidence for manual review) and sent it
+to Josh. Creates draft listings — nothing auto-publishes.
+
+**Multi-tenant "Connect eBay" — the actual resellable-product piece,
+in progress.** Josh's business question, paraphrased: customers won't pay
+for a tool that makes THEM do what Josh did today (developer portal,
+RuName, scope fights). Correct answer, confirmed against how Vendoo/
+Crosslist actually work: **one shared app registration (already built),
+customers just click "Connect eBay"** — a normal OAuth button, they log
+into their own existing eBay account, click Allow, done. Today's portal
+pain was the one-time app registration, not a per-customer step.
+
+**Found mid-session, should have checked first:** Josh said "there's a
+repo/saved system I built that does that" about tenant onboarding — he was
+right. `boss-listers-mvp/lib/supabaseAuth.js` (`signUp`/`signIn`/
+`resolveSession`/`createTenantForUser`) and `pages/login.js` are a
+complete, real, already-wired multi-tenant auth system — NOT abandoned
+scaffolding. This is what migrations 0005-0009 (found and partially
+reverted earlier this session, see above) actually were: a real product
+feature, undocumented, not a mystery to route around.
+
+**Built on top of it — `0013`/`0014` migrations:**
+- `tenant_marketplace_connections` — one row per tenant per marketplace,
+  `encrypted_refresh_token bytea`, `revoke all ... from anon, authenticated`
+  (zero direct client access in either direction, on purpose)
+- `store_marketplace_connection(marketplace, environment, refresh_token,
+  account_identifier)` — SECURITY DEFINER RPC, resolves tenant from the
+  caller's own `auth.uid()` via `tenant_members` (same pattern as the
+  pre-existing `create_tenant_for_user`), callable by `authenticated`
+- `get_marketplace_connection_status(marketplace)` — status only, never
+  the token, callable by `authenticated`
+- `get_decrypted_marketplace_token(tenant_id, marketplace, environment)` —
+  the only function that ever decrypts; `revoke all ... from public, anon,
+  authenticated`, `grant ... to service_role` only
+
+**Real platform limitation hit and worked around:** Supabase's hosted
+Postgres refuses custom GUC parameters entirely — confirmed directly,
+`ALTER DATABASE ... SET app.x` AND `ALTER FUNCTION ... SET app.x` both
+return `42501: permission denied to set parameter`, even via the CLI's own
+privileged connection. The usual `current_setting('app.x')` encryption-key
+pattern doesn't work on this platform. Replaced with a `_marketplace_secrets`
+single-row table, RLS enabled with zero policies granted to any role (denies
+everyone but the table owner), read only from inside the SECURITY DEFINER
+functions. **The actual key value was never written to a migration file** —
+inserted via a one-off `supabase db query --linked` command outside
+migration history, specifically so it never lands in something committed to
+git.
+
+**New app code:** `pages/api/channels/ebay/callback.js` (exchanges the
+OAuth code using the shared app credentials, then calls
+`store_marketplace_connection` with the *caller's own* bearer token — the
+tenant is never taken from anything the client sends, only resolved
+server-side from their session), `pages/api/channels/ebay/status.js`,
+`pages/channels/ebay-callback.js` (the real landing page — a page, not a
+bare API route, specifically so it can read the customer's own session
+from `localStorage` via the existing `authedFetch` pattern before eBay's
+redirect would otherwise have no way to identify which customer this is).
+"Connect eBay" button added to `channels.js`, shows real connected/
+not-connected state per tenant.
+
+**Verified so far:** tables/functions deployed; `anon` confirmed unable to
+read `_marketplace_secrets` (401, direct test). **Not yet verified:** the
+actual authenticated RPC round-trip (store → read back → decrypt) —
+blocked on a Supabase Auth email rate limit that didn't clear within this
+session. One test signup to a fake `@example.com`-style address was
+attempted and rejected by format validation before any email would have
+sent; a second test to a made-up `...@gmail.com` address DID trigger a real
+(near-certainly undeliverable, but real) confirmation email send before the
+rate limit kicked in — noted transparently to Josh rather than glossed over.
+
+**Also not yet wired:** the existing RuName's "auth accepted URL" in the
+eBay Developer Portal still points to eBay's default Thank-You page from
+earlier manual OAuth testing today, not `/channels/ebay-callback` — needs
+updating before the Connect button completes automatically instead of
+landing on eBay's generic page.
+
+### ✅ Two real bugs found by parallel review, both fixed same session
+
+Ran planner + security-reviewer in parallel on extending this pattern to
+Etsy (standard protocol). The security review caught two real problems in
+what was JUST built, not in anything pre-existing — both fixed immediately:
+
+**HIGH — the tenant credential system was decorative for actual listings.**
+`EbayConnector._getAccessToken()` was still using the shared
+`EBAY_REFRESH_TOKEN` env var unconditionally — `get_decrypted_marketplace_token`
+was never called anywhere in the codebase (confirmed by grep). Practical
+effect: the "✓ Connected" pill on the Channels page would have been true,
+but every listing actually created would have gone out under Josh's own
+shared eBay account regardless of which customer clicked the button.
+**Fixed:** `_getAccessToken(tenantId)` now takes an optional tenant ID —
+when present, resolves that tenant's own refresh token via
+`get_decrypted_marketplace_token` (using the service_role key, added to
+`.env.local` — retrieved via `npx supabase projects api-keys`, never
+displayed in chat) instead of the shared token. `create-listing.js` now
+resolves the tenant server-side from the caller's OWN session
+(`resolveSession()`, already existed in `lib/supabaseAuth.js`) — never
+from anything the client sends, so one tenant can never list under
+another's connected account by tampering with a request body. Token cache
+is now keyed per-tenant (`_accessTokenCache[tenantId]`) so different
+customers' cached tokens can't collide.
+
+**HIGH — no CSRF `state` parameter on the OAuth authorize URL.** Without
+it, an attacker could complete their own eBay consent, capture their own
+authorization code, and trick a logged-in victim into opening
+`/channels/ebay-callback?code=<attacker's code>` — linking the
+**attacker's** eBay account to the **victim's** tenant. **Fixed:**
+`startEbayConnect()` in `channels.js` generates a random `state` via
+`crypto.randomUUID()`, stores it in `sessionStorage` before redirecting;
+`ebay-callback.js` verifies the returned `state` matches before calling
+the backend at all, single-use (removed from storage immediately either
+way).
+
+Also flagged by the same review, not yet fixed: no `AbortSignal.timeout`
+on the RPC calls in `callback.js`/`status.js` (MEDIUM — apply when Etsy's
+equivalents are built, and backfill onto eBay's at the same time).
+
+### 🔴 Etsy planning surfaced a business-blocking question — needs Josh's answer before Etsy work continues
+
+The planner agent's Etsy implementation plan is thorough and ready to
+execute, but flagged something that isn't an engineering question:
+**Etsy only permits handmade, vintage (20+ years old), or craft-supply
+listings.** Against the real synced inventory (modern trading cards,
+Pokemon TCG, current-year Transformers, cosmetics) — **most of it doesn't
+qualify.** Pre-2006 cards/toys would count as vintage; the rest wouldn't
+be eligible for Etsy at all, regardless of what the API would technically
+accept. This could mean Etsy isn't a real channel for the bulk of Josh's
+inventory. **Recommendation: confirm the actually-eligible subset with
+Josh before writing any Etsy code**, not after.
+
+Also flagged: bulk economics matter here in a way they didn't for eBay —
+Etsy listing activation costs ~$0.20/item **[Verify]**, so a naive 10k-item
+run could cost ~$2,000 in fees before any sale, and Etsy's rate limits
+(~10k req/day) make a 10k-item bulk run a multi-day job requiring a
+throttled, resumable queue — not a straight loop. Full plan (phases, file
+layout, test coverage, the `who_made`/`when_made`/`is_supply` cross-field
+validation Etsy requires that eBay has no equivalent of, the 2+N-call flow
+since Etsy uploads images as binary multipart rather than pulling from
+URLs like eBay) is in the planner agent's output, ready whenever the
+eligibility question is answered.
+
+**Answered — Josh confirmed real vintage-eligible inventory exists.**
+Phase 1 built: `lib/etsy_listing.py` + `tests/etsy/test_etsy_listing.py`,
+**34 passing tests** (73 total across eBay+Etsy). Mirrors
+`lib/ebay_listing.py`'s architecture (dataclass validation, dry-run
+default, injectable transport) with Etsy's real differences implemented,
+not guessed:
+
+- Draft-first always — `createDraftListing` cannot go live; activation is
+  a separate `PATCH .../listings/{id}` with `state=active`, gated
+  independently via `target_state` (defaults to `"draft"`)
+- Images are binary multipart uploads (a separate call per image), not
+  URLs like eBay — new SSRF surface, restricted to `https://` only
+  (`EtsyImageSource`)
+- Not idempotent on create (unlike eBay's PUT-based inventory item) —
+  `EtsyListingError.listing_id` set as soon as a draft exists, so a caller
+  can resume instead of duplicating; image-upload and activation failures
+  both carry it, never auto-retried
+- The `who_made`/`when_made`/`is_supply` cross-field policy check that has
+  no eBay equivalent — a `someone_else`-made item that isn't old enough to
+  be vintage and isn't marked a supply gets rejected locally with a
+  message naming the actual Etsy policy, not just "invalid field"
+
+**Verified against real, current data before writing validation logic**
+(not guessed): fetched a community-maintained OpenAPI-derived parameter
+table (`gordonturner/etsy-open-api-client`) after Etsy's own rendered docs
+site (JS-only SPA) failed to load via both WebFetch and the browser tool
+(timed out twice). Confirmed: `who_made` enum (`i_did`/`someone_else`/
+`collective`), `when_made`'s real current bucket list (dated 2026-08-20 in
+the code comment, flagged as rolling — don't trust unchecked after a few
+months), `is_supply` is optional not required (corrects an earlier
+uncertain web-search summary), the real title character-set rule (letters/
+numbers/punctuation/™©®, at most one each of `% : & +`), and
+`shipping_profile_id`'s conditional requirement (only for `physical`
+listings). `TITLE_MAX = 140` is still `[Likely]`, not confirmed by this
+source — flagged as such in the code comment.
+
+**Phase 2 also done — the bridge service now serves both platforms.**
+`scripts/ebay_listing_service.py` renamed to `scripts/listing_service.py`
+(a file named `ebay_*` serving Etsy too was a naming lie waiting to
+mislead a reader) and extended with `/etsy/create-listing`. Old file
+deleted, not kept as a shim — no two-copies-diverging risk.
+
+**Live-publish arming is now per-platform, not global** — a real fix, not
+just an Etsy add-on: `--allow-live ebay` no longer also arms Etsy, and
+vice versa. `/health` now reports `{"ebay": bool, "etsy": bool}`. Verified
+with a dedicated test (`test_arming_etsy_does_not_arm_ebay`) that arms
+Etsy only and confirms an eBay live request still gets refused.
+
+**Etsy's live gate has a real design difference from eBay's, not a copy:**
+creating a draft is free and buyer-invisible (matches Etsy's own API
+shape), so `dry_run:false` + `target_state:"draft"` succeeds with **zero**
+arming required — only `target_state:"active"` is the money/live boundary
+and needs all three gates (armed + confirm literal + service token). eBay
+has no equivalent middle state; folding Etsy into eBay's simpler
+dry-run-is-the-only-gate model would have made every draft require
+arming for no reason, or worse, made drafting *and* activating share one
+gate.
+
+Renamed launchers/requirements to match: `START_LISTING_SERVICE.bat`,
+`START_LISTING_SERVICE_LIVE.bat` (now takes a platform argument —
+`ebay`, `etsy`, or `ebay,etsy`, refuses to start with none named),
+`requirements_listing_service.txt`. Old eBay-only versions deleted.
+
+**Tests: 85 passing** — 39 eBay (25 client + 14 service) + 34 Etsy client
++ 12 new Etsy service tests. Existing eBay service tests updated for the
+renamed import and the new `armed_platforms: frozenset` signature (was
+`live_publish_allowed: bool`) — behavior preserved, signature necessarily
+changed since arming is now per-platform.
+
+**Not yet built:** Phase 0 prerequisites (Etsy app registration, OAuth
+callback route, `ETSY_REFRESH_TOKEN`, real `taxonomy_id`/
+`shipping_profile_id`) — same category of one-time manual setup as eBay's
+today, not started since it needs Josh's input. Phase 3 (Node
+`EtsyConnector.createListing()` in `boss-listers-mvp`) also not started.
+
+**This is separate from, and does not resolve, the actual eBay approval
+status** tracked honestly in `boss-listers-mvp/lib/channels/registry.js`
+(`AWAITING_APPROVAL` — a real, external, still-pending process). Two
+different problems in two different codebases: `BOSS-LISTERS`'s Settings UI
+can't save credentials because the form is fake; `boss-listers-mvp`'s eBay
+connector is real and would work, but is blocked on eBay's own approval.
+**Fix needed, not yet done:** replace the decorative modal in
+`SettingsPanel.tsx` with a real credential form, OR point Josh at
+`boss-listers-mvp`'s `/channels` page instead, which already has honest,
+working status checks — just no full listing-creation flow yet either.
+
+### ✅ RESOLVED same session — eBay Production keyset unblocked
+
+Turned out "waiting on support for eBay" and "credentials wouldn't save"
+were the SAME root cause, and it had nothing to do with eBay Developer
+Program approval (that was a red herring from earlier CLAUDE.md history).
+Josh's screenshot of the eBay Developer Portal showed the real message:
+**Production keyset disabled pending the Marketplace Account
+Deletion/Closure Notification compliance step** — a mandatory webhook
+verification, separate from account approval. Sandbox keyset
+(`JoshuaJa-Empireos-SBX-...`, Dev ID `5de50257-826a-4192-8b32-6f6b82d95525`)
+was already fully active this whole time.
+
+The `ebay-deletion` Supabase Edge Function (built 2026-08-16) was already
+deployed correctly (`verify_jwt: false`, confirmed live via
+`npx supabase functions list`). Live-tested it directly with curl against
+`https://irslzufsqjveyibkfjtz.supabase.co/functions/v1/ebay-deletion
+?challenge_code=...` — returned a valid 200 + hash. Generated a fresh
+verification token (`EBAY_VERIFICATION_TOKEN`, 48 chars), set it via
+`npx supabase secrets set`, then verified end-to-end by independently
+computing `sha256(challenge_code + token + endpoint_url)` in Node and
+confirming it matched the live endpoint's response byte-for-byte — proved
+both the token AND `EBAY_DELETION_ENDPOINT_URL` secret were correct before
+Josh ever touched eBay's UI.
+
+Josh pasted `https://irslzufsqjveyibkfjtz.supabase.co/functions/v1/ebay-deletion`
++ the generated token into eBay's portal. **Saved successfully on the first
+try** — "Marketplace account deletion notification endpoint settings
+successfully saved." Josh then ran **"Send Test Notification" — also
+successful**, confirming both the GET verification handshake AND the POST
+account-closure path work end-to-end, live, against eBay's real
+infrastructure. Production keyset confirmed enabled (App ID
+`JoshuaJa-Empireos-PRD-ca4aa6180-fd4c7854`, screenshot showed active
+"User Tokens"/"Notifications" links, no longer grayed out).
+
+### ✅ FULLY RESOLVED — real eBay Production OAuth connection established
+
+Getting the actual `EBAY_REFRESH_TOKEN` was its own saga, worth recording
+because eBay's Developer Portal UI has several silent traps:
+
+1. **eBay's built-in "Get a User Token Here" quick-token tool kept issuing
+   the WRONG token type.** The "Auth'n'Auth" / "OAuth (new security)" radio
+   toggle defaults to Auth'n'Auth (legacy Trading API format), which is
+   incompatible with the modern REST OAuth refresh flow
+   `boss-listers-mvp`'s `EbayConnector` uses. Switching the toggle and
+   re-signing in repeatedly still produced Auth'n'Auth tokens, because —
+2. **the underlying RuName (redirect URL registration) itself is typed at
+   creation and doesn't change type when the on-screen toggle changes.**
+   The one RuName that existed (`Joshua_Jardin-JoshuaJa-Empire-dahro`) was
+   permanently labeled "(Auth'n'auth)" in eBay's own summary table,
+   regardless of what the form above it showed.
+3. **The "Test Sign-In" button on the RuName config page is a preview/demo
+   tool** — going through it produced a token that eBay rejected with
+   `invalid_grant: "issued to another client"` when redeemed against the
+   real Client ID/Secret. It's a red herring, not the real flow.
+4. **The "Review User Consent page" panel on the Developer Portal's own
+   settings screen is a `Preview`-watermarked mockup** — its "Agree and
+   Continue" button is inert. Easy to mistake for the live flow, especially
+   after already clicking through similar-looking screens several times.
+
+**The fix that actually worked:** bypass the portal UI entirely. Construct
+eBay's real OAuth authorize URL by hand and open it directly:
+```
+https://auth.ebay.com/oauth2/authorize?client_id=<CLIENT_ID>&redirect_uri=<RuName>&response_type=code&scope=<url-encoded scopes>
+```
+That lands on eBay's actual `auth2.ebay.com` sign-in (confirmed by the
+address bar, not the developer-portal preview). After sign-in + Agree, eBay
+redirects to `auth2.ebay.com/oauth2/ThirdPartyAuthSucessFailure?
+isAuthSuccessful=true&code=...&expires_in=299` — the authorization code
+lives in the URL bar, not anywhere in the page content, and is easy to miss
+since the default landing page (no custom accept URL configured) just says
+"Thank You / Authorization successfully completed" with no visible code.
+The code expires in ~5 minutes, so the exchange has to happen fast.
+
+Wrote a one-off Node script that: reads `EBAY_CLIENT_ID`/`EBAY_CLIENT_SECRET`
+from `.env.local` (never printed), POSTs `grant_type=authorization_code` +
+the decoded code + the RuName as `redirect_uri` to
+`https://api.ebay.com/identity/v1/oauth2/token`, and on success writes the
+returned `refresh_token` directly into `.env.local`'s
+`EBAY_REFRESH_TOKEN=""` line via regex replace — the token value itself
+was never displayed in chat at any point. Got a real 200 response,
+`refresh_token_expires_in: 47304000` seconds (~548 days, matching the
+Feb 10 2028 expiry eBay's UI showed).
+
+**Final verification — ran `EbayConnector.getConnectionStatus()` for real:**
+```json
+{ "status": "connected", "detail": "OAuth token exchange succeeded" }
+```
+This is genuinely live, not simulated — `boss-listers-mvp`'s eBay connector
+now has real production OAuth credentials and successfully authenticates
+against `api.ebay.com`. This is the first real (non-mocked) marketplace
+connection across every Boss Listers codebase audited this session.
+
+**Also fixed along the way, both real bugs:** (1) Josh's manually-typed
+`EBAY_CLIENT_ID`/`EBAY_CLIENT_SECRET` values landed *after* the closing
+quotes instead of inside them (`KEY=""value` instead of `KEY="value"`) —
+fixed via a generic regex, not by retyping the secrets. (2) The refresh
+token itself was pasted with NO quotes at all, and it contains a literal
+`#` character — most `.env` parsers treat `#` as a comment start, which
+would have silently truncated the token. Fixed the same way.
+
+**Next step, not yet done:** `boss-listers-mvp`'s `EbayConnector` only
+covers `testConnection()`/OAuth — it has no `createListing()` yet (unlike
+`BOSS-LISTERS` capital, which has a fake one). Wiring a real
+`createListing()` call against `api.ebay.com/sell/inventory/v1` is the
+actual next engineering task before this can list anything.
+
+### Building the real `createListing()` path — Phase 1 (planner + security-reviewer run in parallel)
+
+Before writing the internal HTTP bridge service (Python, wraps
+`lib/ebay_listing.py`, called by `boss-listers-mvp`'s `EbayConnector` over
+localhost — full design in the planner agent's output, not reproduced here),
+ran a **planner** + **security-reviewer** agent in parallel per standing
+protocol. Both independently converged on the same finding, which blocked
+starting the service until fixed:
+
+**Fixed — `EbayListingError` didn't carry `offer_id` on partial failure.**
+If `createOffer` succeeds but `publishOffer` fails, eBay is left with a
+real, unpublished offer tied to that SKU. The exception only had it buried
+in a message string (one failure path) or not at all (the other). A caller
+catching this to safely resume — rather than blindly re-running
+`create_listing()`, which calls `createOffer` again and can create a
+**second, duplicate offer** for the same SKU — needs it as a structured
+field. Fixed in `lib/ebay_listing.py`: `EbayListingError` now has an
+`offer_id: Optional[str]` attribute, set in both raise sites at the
+publishOffer step (non-2xx status, and 2xx-but-no-listingId), `None` for
+any failure before an offer exists.
+
+**Also fixed (security-reviewer only) — SKU/offer_id were interpolated
+unescaped into eBay API URL paths** (`lib/ebay_listing.py:315,338`
+pre-fix). Validation never restricted SKU's character set; an unquoted
+`/`, `?`, or space would alter the request path or append an unintended
+query string. Low real-world severity (base URL is hardcoded to
+`api.ebay.com`, so no SSRF), but cheap to fix: both now go through
+`urllib.parse.quote(..., safe="")` before hitting the URL.
+
+**Tests:** 22 → 25 passing (`tests/ebay/test_ebay_listing.py`) — added
+coverage for `offer_id` on both publish-failure paths, `offer_id is None`
+on a pre-offer failure, and URL-encoding of both SKU and offer_id (a SKU
+like `CARD 001/A?B` no longer corrupts the request path).
+
+**Design decisions from the planner agent, not yet built:**
+- The Python bridge service holds **no eBay credentials of its own** — the
+  Node caller passes a fresh `access_token` per request. Reasoning: this
+  repo has a documented history of committed secrets requiring rotation;
+  the JS-side refresh-token exchange is already production-verified in
+  `apiConnectors.js`; a credential-free service is inert unless handed a
+  token, which is a real safety property for something that spends money.
+- Going live requires **two independent gates**, not one: an explicit
+  request-body flag AND a separate service-side env var a human sets
+  deliberately (`EBAY_ALLOW_LIVE_PUBLISH`) — no single request, bug, or
+  unauthorized caller can flip both alone. Plus a shared-secret header even
+  though the service only binds to `127.0.0.1` (security-reviewer: loopback
+  binding is not an auth boundary on a shared dev machine).
+- **No auto-retry on a partial-publish failure** — quarantine for a human,
+  same pattern already used by `social_clips/auto_publisher.py`'s Instagram
+  path (`results[platform].status` marked `posting` before the attempt).
+  This was unbuildable safely until the `offer_id` fix above landed.
+- Service runs locally only (`boss-listers-mvp/next.config.js` sets
+  `output: 'export'`, so its `/api/*` routes aren't deployed by
+  `npm run deploy` — this whole feature is `npm run dev`-only for now).
+
+### ✅ Phase 1 + Phase 2 complete, verified end-to-end (still dry-run only)
+
+**Built:**
+- `scripts/ebay_listing_service.py` — FastAPI bridge, `/health` +
+  `POST /ebay/create-listing`. Three-gate live-publish safety
+  (`--allow-live` launch flag + `dry_run:false` + `confirm:"PUBLISH_LIVE"`
+  literal + `X-Listing-Service-Token` shared secret on live requests only).
+  No CORS middleware, binds `127.0.0.1` only. `StrictBool` on `dry_run` so
+  a stringified `"false"` from a JS caller can't silently coerce to a live
+  publish — it's rejected as a 422 instead.
+- `requirements_ebay_service.txt`, `START_EBAY_SERVICE.bat` (dry-run,
+  double-click safe), `START_EBAY_SERVICE_LIVE.bat` (refuses to start
+  without `EBAY_LISTING_SERVICE_TOKEN` already set in the shell, then
+  requires typing `YES` — deliberately inconvenient).
+- `tests/ebay/test_ebay_listing_service.py` — 14 new tests. Total eBay
+  suite: **25 → 39 passing.** Covers all three live-publish gates
+  independently (each one alone must block), the 409
+  `offer_created_not_published` mapping (proves it's distinguishable from
+  a plain retryable 502), and that the access token is never echoed back
+  in any response body.
+- `boss-listers-mvp/lib/channels/apiConnectors.js`: `EbayConnector` gained
+  `_getAccessToken()` (in-memory cache, 5-min safety margin before real
+  expiry, separate from `testConnection()` so that status-probe method's
+  behavior is untouched) and `createListing(product, policies, options)`,
+  plus a new exported `EbayListingError` class carrying `code`/`step`/
+  `offerId`/`ebayStatus`/`ebayBody` so callers can branch on failure type
+  without string-parsing.
+- `boss-listers-mvp/pages/api/channels/ebay/create-listing.js` — thin
+  proxy route, `dryRun` defaults to `true` here too (every layer defaults
+  the same way, on purpose — no layer can be the one that silently flips
+  it).
+
+**Verified working, not just written** — ran the actual chain, not a
+mock: started the real bridge service, called the real
+`EbayConnector.createListing()` (which did a genuine OAuth refresh
+exchange against production `api.ebay.com` using the real credentials in
+`boss-listers-mvp/.env.local`), through to the real
+`lib/ebay_listing.py` payload builders. Dry-run response came back with
+the exact `inventory_item`/`offer` JSON bodies that would be sent to eBay.
+Every layer in the stack is now proven connected end-to-end. Nothing was
+sent to eBay itself — `create_listing(dry_run=True)` returns before any
+network call, confirmed by earlier tests explicitly asserting on this.
+
+**Not done — Phase 3, deliberately not started without Josh in the loop:**
+no bulk/batch posting loop exists yet over the real card inventory (~10k
+items per [[project_real_inventory_boss_listers_priority]]). Before that
+can happen: (1) map card fields (set, card number, grading company, grade
+— already modeled as `cardAttributes` in `BOSS-LISTERS` capital's product
+schema) into eBay's `category_id`/`condition`/`aspects`, (2) fetch Josh's
+real eBay seller policy IDs (fulfillment/payment/return/location — no
+defaults exist, guessing them produces listings with wrong shipping/
+returns terms), (3) only then actually arm `--allow-live` and publish one
+item, watched, with explicit approval — per the original phased plan.
+
+### ✅ Real inventory synced from eBay + production RLS bug found/fixed (2026-08-19)
+
+Josh confirmed he actively sells on eBay daily and pushed back hard when I
+initially reported "zero inventory" — he was right to. Traced the actual
+gap: `/sell/inventory/v1/inventory_item` (the modern Inventory API) only
+shows items **created through that specific API**; it returned `total: 0`
+because none of his real listings were created that way — they exist
+under eBay's classic listing model. `GetMyeBaySelling` (Trading API) would
+give a complete list but needs an Auth'n'Auth token, and that flow hit
+enough eBay Developer Portal friction (same page confusion as the OAuth
+saga) that we dropped it rather than burn more time.
+
+**Working alternative used instead:** eBay's public Browse API
+(`/buy/browse/v1/item_summary/search?filter=sellers:{mjardin17}`), which
+only needs an app-level `client_credentials` token — no user auth at all.
+Ran an 18-term category sweep (card, pokemon, transformers, cosmetics,
+sneakers, etc.) and found **69 real, currently-live listings** — sports
+cards (2007 Bowman Chrome Adrian Peterson RC, 1986 Topps Bruce Smith RC),
+Pokemon TCG singles, Transformers/Hasbro figures, cosmetics, sneakers —
+matches exactly what Josh described selling. This is a real, verified
+lower bound (keyword search, not exhaustive), not his full count.
+
+**Pushed this real data into the shared `products` table** in Supabase
+(`irslzufsqjveyibkfjtz`, migration `0010_import_real_ebay_inventory.sql`)
+— `sku` = eBay's real `itemId` (Browse API exposes no seller SKU), real
+image URLs, real prices, `source='ebay'`. Idempotent (upsert on sku).
+
+**Found a real, pre-existing production bug while doing this, unrelated
+to today's work:** before pushing, discovered the local `inventory-sync/`
+migrations directory was 5 versions behind the live database (remote had
+0005–0009 that never existed locally — some other, undocumented session
+added a `published` boolean + full `tenant_id`/multi-tenancy system,
+`my_tenant_ids()` SECURITY DEFINER function, `products_tenant_write`
+policy). Verified the actual current schema via read-only
+`supabase db query --linked` before touching anything, rather than
+guessing or blindly running the CLI's suggested repair.
+
+That investigation surfaced the real bug: **`anon` had no `SELECT` grant
+on `public.products` at all**, and separately, no `EXECUTE` grant on
+`my_tenant_ids()` (which the tenant-write RLS policy calls even for
+SELECT, since it's `cmd=ALL`) — meaning **the live storefront's public
+inventory reads have been failing in production**, silently, with no
+indication anywhere in this repo's docs that it was broken. Two-part fix,
+both purely additive (no RLS/policy/data changes):
+- `0010`: `grant select on public.products to anon;`
+- `0011`: `grant execute on function public.my_tenant_ids() to anon;`
+  (verified safe first — function is read-only, `SECURITY DEFINER`, and
+  for an anon caller `auth.uid()` is `NULL` so it just returns an empty
+  set, no data exposure)
+
+**Verified end-to-end after both fixes** — a real anon-key REST read
+against `products` now returns real rows (Adrian Peterson RC, Bruce Smith
+RC, Pokemon cards, etc.), exactly matching what the live website's
+`/api/products` route would see.
+
+**Still open / not investigated:** what session or process added the
+tenant_id/published system and migrations 0005-0009, and whether that
+work is finished or was left mid-way. Update: partially resolved below —
+migration 0008 turned out to be intentional, documented hardening, not
+an accident.
+
+### ⚠️ CORRECTION — the "RLS bug" above was actually intentional hardening, not a bug
+
+Found while checking whether eBay could sync to the website: read
+`functions/api/products.ts`'s own header comment, which explains migration
+0008 **deliberately** revoked anon's direct `SELECT` on `public.products`
+on purpose — the raw table carries cost/sync/tenant bookkeeping that must
+never be public. The real, intended public interface is a
+`storefront_products` **VIEW** with a narrower column set and a
+`published = true and status in (...)` filter, and `anon` already had
+correct `SELECT` on that view the whole time — verified directly, not
+assumed.
+
+**So the two grants added above (0010, 0011) were both unnecessary, and
+0010 actively undid a deliberate security decision.** Reverted both in
+`0012_revert_incorrect_products_grants.sql`: `revoke select on
+public.products from anon; revoke execute on function
+public.my_tenant_ids() from anon;`. Verified after: raw table read →
+401 (correctly locked), `storefront_products` view read → 200 with real
+data (correctly open, same 69 real eBay items visible through the
+intended path).
+
+**Lesson:** "permission denied" is not automatically a bug to fix — check
+whether there's an intended alternate access path (a view, a function)
+before granting broader access to fix an error. The fact-check discipline
+installed earlier this session (verify before claiming) needs to extend to
+"verify before fixing," not just "verify before asserting."
+
+### ✅ eBay is fully complete — real policies, real end-to-end payload, ready to publish
+
+Josh asked to actually finish eBay. Got a broader OAuth token (added
+`sell.account` scope to the existing `sell.inventory` one — required a
+second consent, same fast direct-URL pattern as before, not the broken
+portal button) and used it to check what Business Policies actually
+existed on the account.
+
+**Correction to an assumption made earlier the same session:** I'd said
+"zero Business Policies exist, guessing them isn't safe." That was wrong
+in the same way "zero inventory" was wrong — his account actually has
+**2 payment policies, 7+ return policies, and 53 fulfillment policies**
+already configured from his real selling history. "Shipping is case to
+case" (his words) is literally represented as 53 different flat-rate
+tiers plus a few genuinely `CALCULATED`-cost-type ones. Lesson repeated:
+verify against the live account before asserting something doesn't exist.
+
+**Real IDs in use now** (`boss-listers-mvp/.env.local`):
+- `EBAY_FULFILLMENT_POLICY_ID=291230530014` — "Calculated: USPSParcel,
+  1 business day" — matches his stated 1-day handling + case-by-case
+  shipping preference exactly, picked from the real list, not created new
+- `EBAY_PAYMENT_POLICY_ID=290644755014` — "eBay Managed Payments"
+  (`immediatePay: true`), the modern standard already on the account
+- `EBAY_RETURN_POLICY_ID=290642401014` — "Standard Return Policy," 30
+  days, `MONEY_BACK`, matches what Josh specified
+- `EBAY_MERCHANT_LOCATION_KEY=JJ_NEW_BEDFORD_MAIN` — created fresh via
+  `POST /sell/inventory/v1/location`, from the real address Josh gave
+  (15 Holden Street, New Bedford, MA 02745)
+
+**Verified end-to-end with a real item, not synthetic test data:** pulled
+the real `category_id` (261328, Sports Trading Cards > Trading Card
+Singles) from one of his actual live listings via the Browse API's item
+detail endpoint rather than guessing a category, then ran
+`EbayConnector.createListing()` through the real bridge service with his
+real Adrian Peterson rookie card, real image URL, and the real policy IDs
+above. Dry-run response came back with the complete, exact
+`inventory_item`/`offer` JSON that would be sent to eBay — every field
+populated with real account data.
+
+**Genuinely nothing left to build.** The only remaining step is Josh's
+explicit go-ahead to flip `dry_run: false` (plus the `confirm:
+"PUBLISH_LIVE"` literal, plus starting the service with `--allow-live`
+and its shared-secret token) for a real, first, watched publish.
+
+### Facebook Marketplace — flagged, not started, needs a decision
+
+Josh asked whether eBay work extends to Facebook Marketplace too. It
+can't use the same pattern: **Facebook Marketplace has no public listing
+API for individual sellers.** Per `boss-listers-mvp/lib/channels/
+registry.js`, it's already correctly registered as `mode: "manual"` —
+generates a copy-paste listing package, no automation. The only
+alternative to that is browser automation (a `FacebookMarketplaceBrowserConnector`
+already exists in the `BOSS-LISTERS` capital / `lib/browser_connectors.py`
+codebases, previously had its credential-namespace bug fixed), which
+carries real account-ban/ToS risk Facebook has historically enforced
+against automated posting. Have not started building anything for this —
+needs Josh to pick: (a) stick with the manual package generator (safe,
+already working), or (b) accept the ToS risk and wire up real browser
+automation. Not a decision to make silently.
+
+**Lesson:** don't trust a vague status descriptor ("waiting on support") at
+face value — it conflated two unrelated eBay concepts (developer account
+approval vs. a specific compliance webhook for the Production keyset). A
+screenshot of the actual error resolved in one look what several rounds of
+inference could not. When a external-service blocker is reported secondhand,
+ask for the literal error/screen before diagnosing further.
+
+**Next real step:** with Production potentially unblocked, revisit
+`boss-listers-mvp/lib/channels/apiConnectors.js`'s `EbayConnector` — its
+`testConnection()` does a genuine OAuth token exchange and just needs
+`EBAY_CLIENT_ID`/`EBAY_CLIENT_SECRET`/`EBAY_REFRESH_TOKEN` set to actually
+succeed. That's real, working code, unlike anything in `BOSS-LISTERS`
+(capital).
+
+### 2026-08-20 — Boss Listers Discord webhook (parked, not wired yet)
+Josh has a Discord webhook already set up (from a separate "Gemini card
+posting sync app"). Instruction: **keep it for Boss Listers** — not wired
+into anything yet, no target event chosen (new listings / sync errors /
+sales). Revisit when Josh specifies what should trigger a post. Do not
+confuse this with `boss-listers-mvp`'s new `extension/background.js`
+heartbeat call — that pings a dead `bosslisters.ai` domain and is unrelated.
+
+### 2026-08-20 — Fourth fake "complete system" merge found in boss-listers-mvp
+Two commits landed on `boss-listers-mvp` `main` (pushed from a different
+session, not this one — author `massgains1731@gmail.com`, 2026-08-18):
+`2baaf28` (Card-sync vault merge) and `bc69cab` ("8-platform extension"
+merge, commit message claims "Complete system ready to deploy").
+
+**Verified by reading the actual code, not the commit message — same
+pattern as the 3 prior fake Boss Listers codebases documented above:**
+- `extension/content_script.js`'s `EXECUTE_AUTOMATION` handler does no real
+  DOM automation — fabricates `${platformId}_ext_${Date.now()}` as a fake
+  listing ID and returns success immediately.
+- `extension/background.js` pings `https://bosslisters.ai/api/v1/extension/heartbeat`
+  — dead domain, nothing behind it.
+- `lib/vault/credentialVault.js` is real code but architecturally broken
+  for its deployment target: in-memory `this.credentials = {}` inside a
+  Cloudflare Pages Function. Pages Functions are stateless/per-request, so
+  saved credentials vanish almost immediately. It also duplicates the real,
+  encrypted, tenant-scoped Supabase vault (`tenant_marketplace_connections`
+  / `store_marketplace_connection`, migrations 0013-0014) already built and
+  verified working for eBay this session.
+
+**Decision: do not wire anything into the new vault or extension.** Left
+untouched in the repo — not deleted (not this session's call to make),
+just not used. Canonical credential storage stays the Supabase vault.
+
+### 2026-08-20 — Etsy Phase 3 built: connector + per-tenant PKCE OAuth flow
+`boss-listers-mvp` commit `f7fcb54` (local only, not pushed):
+`EtsyConnector.createListing()` + `EtsyListingError` in `apiConnectors.js`
+(proxies to the existing Python bridge's `/etsy/create-listing`, no logic
+duplicated in JS — same architecture decision as eBay), plus
+`pages/api/channels/etsy/{callback,status,create-listing}.js` and
+`pages/channels/etsy-callback.js`.
+
+Real difference from eBay handled correctly: Etsy is OAuth 2.0 + **PKCE**
+(no client secret in the token exchange — `startEtsyConnect()` in
+`channels.js` generates a `code_verifier`/`code_challenge` client-side,
+round-trips the verifier through `sessionStorage` to the callback page).
+Also: Etsy is **shop-scoped**, not just account-scoped — every listing call
+needs a `shop_id` that eBay had no equivalent of. Added migration
+**0015_marketplace_connection_metadata.sql** (deployed live) — a generic
+`metadata jsonb` column on `tenant_marketplace_connections` plus a new
+`get_marketplace_connection_metadata` RPC — rather than a one-off
+`etsy_shop_id` column, so the next platform with its own required extra
+field doesn't need its own migration either. The callback route
+auto-resolves shop_id right after connecting (`GET /v3/application/users/
+{user_id}/shops`) and stores it there.
+
+Etsy's app registration was **pending Etsy's review** as of 2026-08-20
+(picked "Seller Tools" / "Just myself or colleagues" / not commercial /
+"Upload or edit listings" + "Read sales data" scopes — write scopes appear
+to trigger manual review, unlike what `CHANNEL_SETUP.md` previously and
+incorrectly said about "instant" registration, now corrected). **None of
+the OAuth token-exchange or shops-lookup code has been exercised against a
+live response yet** — written from Etsy's documented API shape, flagged
+`[Likely]` in the code comments. Verify the real response shapes the first
+time Josh completes a live Connect Etsy click.
+
+Also fixed in passing: Etsy's developer portal "Create a New App" page
+rendered completely blank in Chrome (heading with nothing below it, even
+in Incognito — ruled out extensions). Switching to Microsoft Edge worked
+immediately — looked like a Chrome-profile-specific rendering issue, not
+an account or Etsy-side problem.
+
+### 2026-08-20 — Third-party Boss Listers merge audited, bug report sent to Gemini
+See the "Fourth fake complete system" entry above (extension/vault merge).
+Wrote up the three concrete bugs (fake DOM automation, dead heartbeat
+domain, in-memory vault that can't survive on Cloudflare Pages Functions)
+as a standalone report for Josh to hand to the Gemini session that built
+it, pointing at the real Supabase-backed vault (migrations 0013-0015) as
+the credential storage it should have used instead.
+
 ## Git & GitHub (PRODUCTION RULES)
 
 **Repository:** `https://github.com/mjardin17/viral-engine` (branch: `main`)

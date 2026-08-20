@@ -1,0 +1,15 @@
+-- Second half of the anon-read fix started in 0010.
+--
+-- The products_tenant_write RLS policy (cmd=ALL, so it also applies to
+-- SELECT) calls public.my_tenant_ids(), which anon had no EXECUTE grant
+-- on. Postgres evaluates every applicable policy's USING clause even when
+-- another policy would already permit the row, so this surfaced as a hard
+-- "permission denied for function my_tenant_ids" instead of silently
+-- being skipped.
+--
+-- Verified safe before granting: my_tenant_ids() is SECURITY DEFINER,
+-- STABLE, and does `select tenant_id from tenant_members where user_id =
+-- auth.uid()`. For an anon caller, auth.uid() is NULL, so this returns an
+-- empty set — no data exposure, no side effects, correct behavior for a
+-- caller that belongs to no tenant.
+grant execute on function public.my_tenant_ids() to anon;

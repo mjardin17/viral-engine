@@ -229,6 +229,9 @@ def test_publish_without_listing_id_reports_the_unpublished_offer():
     # The message must name the orphaned offer so a human can recover it.
     assert "OFFER-7" in str(exc.value)
     assert "NOT live" in str(exc.value)
+    # And it must be a structured field, not just text in the message — a
+    # caller resuming after this failure needs to read it programmatically.
+    assert exc.value.offer_id == "OFFER-7"
 
 
 def test_publish_failure_does_not_report_a_listing():
@@ -244,6 +247,9 @@ def test_publish_failure_does_not_report_a_listing():
 
     assert exc.value.step == "publishOffer"
     assert exc.value.body == {"errors": [{"message": "missing shipping policy"}]}
+    # A non-2xx publish also orphans the offer — a caller retrying blindly
+    # from create_listing() would create a second offer for the same SKU.
+    assert exc.value.offer_id == "OFFER-7"
 
 
 def test_empty_access_token_is_rejected_at_construction():
@@ -280,3 +286,53 @@ def test_listing_with_no_images_is_rejected_locally():
     """eBay won't publish a pictureless listing; fail with a message that says so."""
     with pytest.raises(EbayValidationError, match="image"):
         make_product(image_urls=())
+
+
+def test_failure_before_an_offer_exists_leaves_offer_id_none():
+    """A step-one failure has no offer to orphan — offer_id must stay None,
+    not some stale/guessed value, so a caller can't mistake this for a
+    partial-publish state that needs manual recovery."""
+    transport = make_transport([FakeResponse(401, {"errors": ["bad token"]})])
+    client = EbayListingClient("token", transport=transport)
+
+    with pytest.raises(EbayListingError) as exc:
+        client.create_listing(make_product(), POLICIES, dry_run=False)
+
+    assert exc.value.offer_id is None
+
+
+def test_sku_with_special_characters_is_url_encoded():
+    """An unquoted '/' or '?' in a SKU would alter the request path or
+    append an unintended query string — SKU is not restricted to
+    URL-safe characters by validation, so encoding must happen here."""
+    transport = make_transport([
+        FakeResponse(204),
+        FakeResponse(201, {"offerId": "OFFER-9"}),
+        FakeResponse(200, {"listingId": "LISTING-42"}),
+    ])
+    client = EbayListingClient("token", transport=transport)
+
+    client.create_listing(
+        make_product(sku="CARD 001/A?B"), POLICIES, dry_run=False,
+    )
+
+    inventory_url = transport.calls[0]["url"]
+    assert "CARD%20001%2FA%3FB" in inventory_url
+    assert "CARD 001/A?B" not in inventory_url
+
+
+def test_offer_id_is_url_encoded_in_publish_call():
+    """offer_id comes back from eBay's own JSON response and is reused
+    unvalidated in the publish URL — it must still be quoted."""
+    transport = make_transport([
+        FakeResponse(204),
+        FakeResponse(201, {"offerId": "OFFER/9 A"}),
+        FakeResponse(200, {"listingId": "LISTING-42"}),
+    ])
+    client = EbayListingClient("token", transport=transport)
+
+    client.create_listing(make_product(), POLICIES, dry_run=False)
+
+    publish_url = transport.calls[2]["url"]
+    assert "OFFER%2F9%20A" in publish_url
+    assert "OFFER/9 A" not in publish_url

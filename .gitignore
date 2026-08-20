@@ -4,6 +4,9 @@
 # Generated media and secrets are NEVER committed.
 # ============================================================
 
+# --- Supabase CLI local cache (machine-specific, not project config) ---
+inventory-sync/supabase/.temp/
+
 # --- SECRETS (NEVER commit) ---
 .env
 .env.local

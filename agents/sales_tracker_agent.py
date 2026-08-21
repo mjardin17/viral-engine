@@ -1,192 +1,128 @@
 #!/usr/bin/env python3
-"""
-Sales Tracker Agent: Monitors platforms for sold items and updates Boss Listers inventory.
-Pulls sales data from Poshmark, Mercari, Etsy, etc. and marks items as sold.
-Prevents overselling by delisting when inventory reaches zero.
+"""SalesTrackerAgent — polls eBay orders, records sales to Supabase atomically.
+
+Runs every 5 minutes. Fetches orders since last poll, resolves SKU to products
+table, decrements inventory, logs sales. Uses Supabase RPC for atomicity.
+
+Ready to run as soon as eBay token is refreshed.
 """
 
 import os
 import json
-import time
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
-from datetime import datetime, timedelta
-import subprocess
-import sys
+from dataclasses import dataclass
 
-sys.path.insert(0, str(Path(__file__).parent.parent))
+import supabase
 
-from lib.platform_connectors import get_all_connectors
+from lib.ebay_sales import EbaySalesClient, resolve_sku_from_legacy_item_id
 
-BUZZ_RELAY_URL = os.getenv("BUZZ_RELAY_URL", "ws://localhost:3000")
-BUZZ_PRIVATE_KEY = os.getenv("BUZZ_PRIVATE_KEY")
-BOSS_LISTERS_DB = Path(__file__).parent.parent / "boss-listers-ai" / "data.json"
-SALES_LOG_FILE = Path(__file__).parent.parent / "crosslist_sales.json"
 
-def post_to_buzz(message, channel="inventory-sync"):
-    """Post status to Buzz (fallback to stdout if unavailable)."""
-    print(f"[{datetime.now().isoformat()}] #{channel}: {message}")
+@dataclass
+class SalesTrackerState:
+    last_poll: datetime
+    sales_count: int
+    error_count: int
 
-    if not BUZZ_PRIVATE_KEY:
-        return
 
-    cmd = f"""BUZZ_PRIVATE_KEY={BUZZ_PRIVATE_KEY} BUZZ_RELAY_URL={BUZZ_RELAY_URL} \
-    buzz-cli message --channel {channel} '{message}'"""
+class SalesTrackerAgent:
+    def __init__(self, ebay_token: str, supabase_url: str, supabase_key: str):
+        self.ebay = EbaySalesClient(ebay_token)
+        self.sb = supabase.create_client(supabase_url, supabase_key)
+        self.state_file = Path(".state/sales_tracker.json")
+        self.state_file.parent.mkdir(exist_ok=True)
 
-    try:
-        result = subprocess.run(cmd, shell=True, capture_output=True, text=True, timeout=10)
-        if result.returncode == 0:
-            print(f"  ✓ Buzz posted")
-    except (FileNotFoundError, OSError):
-        pass  # buzz-cli not installed
-    except:
-        pass
-
-def load_boss_listers_inventory():
-    """Load inventory."""
-    if not BOSS_LISTERS_DB.exists():
-        return []
-
-    try:
-        with open(BOSS_LISTERS_DB) as f:
-            return json.load(f).get("products", [])
-    except:
-        return []
-
-def save_boss_listers_inventory(inventory):
-    """Save updated inventory."""
-    data = {"products": inventory}
-    with open(BOSS_LISTERS_DB, 'w') as f:
-        json.dump(data, f, indent=2)
-
-def load_sales_log():
-    """Load sales tracking log."""
-    if SALES_LOG_FILE.exists():
-        try:
-            with open(SALES_LOG_FILE) as f:
-                return json.load(f)
-        except:
-            pass
-    return {"sales": []}
-
-def save_sales_log(log):
-    """Save sales log."""
-    with open(SALES_LOG_FILE, 'w') as f:
-        json.dump(log, f, indent=2)
-
-def track_sales(connectors):
-    """Poll all platforms for new sales."""
-    sales_log = load_sales_log()
-    last_check = sales_log.get("last_check", (datetime.now() - timedelta(hours=1)).isoformat())
-    since = datetime.fromisoformat(last_check)
-
-    all_sales = []
-
-    for platform_name, connector in connectors.items():
-        if not connector.authenticate():
-            continue
+    def run(self):
+        """Poll eBay for new orders, record sales to Supabase."""
+        state = self._load_state()
 
         try:
-            sales = connector.get_sales(since)
-            for sale in sales:
-                all_sales.append(sale)
-                print(f"💰 Sale on {platform_name}: {sale.id}")
+            since = state.last_poll
+            orders = self.ebay.get_orders_since(since)
+
+            for sale in orders:
+                self._record_sale(sale)
+                state.sales_count += 1
+
+            state.last_poll = datetime.now(timezone.utc)
+            self._save_state(state)
+
         except Exception as e:
-            print(f"⚠️ Error fetching {platform_name} sales: {e}")
+            state.error_count += 1
+            self._save_state(state)
+            raise
 
-    return all_sales, since
+        return state
 
-def update_inventory_for_sales(sales):
-    """Update Boss Listers inventory based on sales."""
-    inventory = load_boss_listers_inventory()
+    def _record_sale(self, sale):
+        """Atomically record a sale: resolve SKU, decrement quantity, log."""
+        for item in sale.line_items:
+            # Resolve eBay's legacy_item_id to products table SKU format
+            sku = resolve_sku_from_legacy_item_id(item.legacy_item_id)
 
-    sales_processed = []
+            # Call Supabase RPC to atomically:
+            # 1. Find product by SKU
+            # 2. Decrement quantity by item.quantity
+            # 3. Log sale to sync_logs
+            # Fails safely if SKU not found (prevents silent partial sales)
+            result = self.sb.rpc(
+                "record_sale",
+                {
+                    "p_sku": sku,
+                    "p_quantity": item.quantity,
+                    "p_order_id": sale.order_id,
+                    "p_source": "ebay",
+                    "p_total_value": float(sale.total_value),
+                    "p_currency": sale.total_currency,
+                    "p_buyer": sale.buyer_username,
+                },
+            ).execute()
 
-    for sale in sales:
-        product_id = sale.product_id
-        quantity_sold = sale.quantity
+            if not result.data:
+                raise ValueError("SKU not found in products: {}".format(sku))
 
-        # Find product
-        product = next((p for p in inventory if p.get("id") == product_id), None)
-        if not product:
-            continue
-
-        # Update inventory
-        current_qty = product.get("quantity", 0)
-        new_qty = max(0, current_qty - quantity_sold)
-        product["quantity"] = new_qty
-
-        # Mark as sold if out of stock
-        if new_qty == 0:
-            product["status"] = "sold"
-            post_to_buzz(
-                f"✅ SOLD OUT: {product.get('name')}\n"
-                f"Delisting from all platforms\n"
-                f"Sold on: {sale.platform}"
+    def _load_state(self):
+        """Load last poll time, default to 24 hours ago."""
+        if not self.state_file.exists():
+            return SalesTrackerState(
+                last_poll=datetime.now(timezone.utc) - timedelta(days=1),
+                sales_count=0,
+                error_count=0,
             )
 
-        sales_processed.append({
-            "product_id": product_id,
-            "product_name": product.get("name"),
-            "platform": sale.platform,
-            "qty_sold": quantity_sold,
-            "new_qty": new_qty,
-            "sold_at": sale.sold_at.isoformat() if hasattr(sale.sold_at, 'isoformat') else str(sale.sold_at)
-        })
+        with open(self.state_file) as f:
+            data = json.load(f)
+            return SalesTrackerState(
+                last_poll=datetime.fromisoformat(data["last_poll"]),
+                sales_count=data["sales_count"],
+                error_count=data["error_count"],
+            )
 
-    # Save updated inventory
-    save_boss_listers_inventory(inventory)
+    def _save_state(self, state):
+        """Persist state for next run."""
+        with open(self.state_file, "w") as f:
+            json.dump(
+                {
+                    "last_poll": state.last_poll.isoformat(),
+                    "sales_count": state.sales_count,
+                    "error_count": state.error_count,
+                },
+                f,
+            )
 
-    return sales_processed
-
-def main():
-    """Main agent loop."""
-    print("Sales Tracker Agent starting")
-    print(f"Relay: {BUZZ_RELAY_URL}")
-
-    post_to_buzz("🤖 Sales Tracker Agent online - monitoring for sales")
-
-    connectors = get_all_connectors()
-    print(f"Tracking sales across {len(connectors)} platforms")
-
-    while True:
-        try:
-            print(f"\n[{datetime.now().isoformat()}] Checking for sales...")
-
-            # Fetch sales from all platforms
-            sales, check_time = track_sales(connectors)
-
-            if sales:
-                print(f"Found {len(sales)} sales")
-
-                # Update inventory
-                processed = update_inventory_for_sales(sales)
-
-                for sale_record in processed:
-                    post_to_buzz(
-                        f"💸 Sale: {sale_record['product_name']}\n"
-                        f"Platform: {sale_record['platform'].capitalize()}\n"
-                        f"Qty sold: {sale_record['qty_sold']}\n"
-                        f"Remaining: {sale_record['new_qty']}"
-                    )
-
-                # Update sales log
-                log = load_sales_log()
-                log["last_check"] = check_time.isoformat()
-                log["sales"].extend(processed)
-                save_sales_log(log)
-            else:
-                print("No new sales detected")
-
-            # Poll interval
-            time.sleep(300)  # Check every 5 minutes
-
-        except KeyboardInterrupt:
-            post_to_buzz("🛑 Sales Tracker Agent stopping")
-            break
-        except Exception as e:
-            print(f"Agent error: {e}")
-            post_to_buzz(f"⚠️ Tracking error: {str(e)[:100]}")
-            time.sleep(60)
 
 if __name__ == "__main__":
-    main()
+    token = os.environ.get("EBAY_REFRESH_TOKEN")
+    if not token:
+        print("ERROR: EBAY_REFRESH_TOKEN not set")
+        exit(1)
+
+    sb_url = os.environ.get("SUPABASE_URL")
+    sb_key = os.environ.get("SUPABASE_ANON_KEY")
+    if not sb_url or not sb_key:
+        print("ERROR: SUPABASE_URL and SUPABASE_ANON_KEY required")
+        exit(1)
+
+    agent = SalesTrackerAgent(token, sb_url, sb_key)
+    state = agent.run()
+    print("Success: {} sales recorded".format(state.sales_count))

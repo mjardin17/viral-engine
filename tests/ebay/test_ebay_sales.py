@@ -14,6 +14,7 @@ import pytest
 
 from lib.ebay_sales import (
     EbaySalesClient, EbaySalesError, Sale, SaleLineItem, MAX_ORDER_AGE_DAYS,
+    resolve_sku_from_legacy_item_id,
 )
 
 
@@ -185,3 +186,33 @@ def test_multiple_line_items_in_one_order():
     assert len(sales[0].line_items) == 2
     assert sales[0].line_items[1].sku == "CARD-002"
     assert sales[0].line_items[1].quantity == 2
+
+
+class TestSkuResolution:
+    """SKU reconciliation: eBay's legacy_item_id → products table format."""
+
+    def test_resolves_legacy_item_id_to_inventory_format(self):
+        """legacy_item_id '198079646764' → 'v1|198079646764|0'"""
+        sku = resolve_sku_from_legacy_item_id("198079646764")
+        assert sku == "v1|198079646764|0"
+
+    def test_numeric_legacy_item_ids(self):
+        """Handle numeric IDs as strings."""
+        sku = resolve_sku_from_legacy_item_id("123456789")
+        assert sku == "v1|123456789|0"
+
+    def test_rejects_empty_legacy_item_id(self):
+        """Empty or None IDs must raise, not silently succeed."""
+        with pytest.raises(EbaySalesError) as exc:
+            resolve_sku_from_legacy_item_id("")
+        assert exc.value.step == "sku_resolution"
+
+    def test_rejects_none_legacy_item_id(self):
+        with pytest.raises(EbaySalesError) as exc:
+            resolve_sku_from_legacy_item_id(None)
+        assert exc.value.step == "sku_resolution"
+
+    def test_rejects_whitespace_only_legacy_item_id(self):
+        with pytest.raises(EbaySalesError) as exc:
+            resolve_sku_from_legacy_item_id("   ")
+        assert exc.value.step == "sku_resolution"

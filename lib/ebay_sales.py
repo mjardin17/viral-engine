@@ -189,6 +189,26 @@ def _safe_body(response: Any) -> Any:
         return getattr(response, "text", None)
 
 
+def resolve_sku_from_legacy_item_id(legacy_item_id: str) -> str:
+    """Resolve eBay's legacy_item_id to the products table SKU format.
+
+    eBay Browse API returns legacy_item_id (e.g., "198079646764").
+    products table stores SKU as "v1|{legacy_item_id}|0" (the Inventory API format).
+
+    This reconciler bridges the two. In real use, this will query Supabase to
+    verify the SKU actually exists before recording a sale.
+    """
+    if not legacy_item_id or not str(legacy_item_id).strip():
+        raise EbaySalesError(
+            "sku_resolution",
+            f"legacy_item_id is required, got: {legacy_item_id!r}"
+        )
+
+    # Convert to the Inventory API SKU format
+    sku = f"v1|{legacy_item_id}|0"
+    return sku
+
+
 def _requests_transport(method: str, url: str, headers: dict[str, str]) -> Any:
     import requests
     return requests.request(method, url, headers=headers, timeout=30)

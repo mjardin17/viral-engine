@@ -229,6 +229,66 @@ def load_script_meta(ep_id: str) -> dict:
     return {}
 
 
+def upload_file(
+    youtube,
+    channel_key: str,
+    path: Path,
+    title: str,
+    description: str = "",
+    tags: list[str] | None = None,
+    privacy: str = "public",
+    log_key: str | None = None,
+) -> str:
+    """
+    Upload an arbitrary local video file (not looked up by episode ID).
+    Used for YouTube Shorts clips, which live in social_clips/ output, not
+    renders/ — upload_episode()'s find_render() has no way to reach those.
+    Returns the YouTube video ID.
+    """
+    ch = CHANNELS[channel_key]
+    path = Path(path)
+    if not path.exists():
+        raise FileNotFoundError(f"File not found: {path}")
+    size_mb = path.stat().st_size / (1024 * 1024)
+    if size_mb < 0.05:
+        raise ValueError(f"{path.name}: {size_mb:.2f}MB — too small, likely broken")
+
+    title = title or f"{ch['name']} Short"
+    desc = description or ch["default_desc"]
+    all_tags = list(set((tags or []) + ch["default_tags"]))
+
+    print(f"\n[{path.stem}] {title}")
+    print(f"  File:    {path.name} ({size_mb:.1f}MB)")
+    print(f"  Channel: {ch['name']}")
+    print(f"  Privacy: {privacy}")
+
+    body = {
+        "snippet": {
+            "title": title[:100],
+            "description": desc,
+            "tags": all_tags[:30],
+            "categoryId": ch["category_id"],
+        },
+        "status": {
+            "privacyStatus": privacy,
+            "madeForKids": False,
+        },
+    }
+    media = MediaFileUpload(str(path), resumable=True, chunksize=5 * 1024 * 1024)
+    request = youtube.videos().insert(part="snippet,status", body=body, media_body=media)
+
+    response = None
+    while response is None:
+        status, response = request.next_chunk()
+        if status:
+            print(f"  Progress: {int(status.progress() * 100)}%", end="\r")
+
+    video_id = response["id"]
+    print(f"\n  [OK] https://youtu.be/{video_id}")
+    _log_upload(log_key or path.stem, video_id, ch["name"])
+    return video_id
+
+
 def upload_episode(
     youtube,
     channel_key: str,
@@ -289,18 +349,20 @@ def upload_episode(
 
     video_id = response["id"]
     print(f"\n  [OK] https://youtu.be/{video_id}")
+    _log_upload(ep_id, video_id, ch["name"])
+    return video_id
 
-    # Log to uploaded_videos.json
+
+def _log_upload(key: str, video_id: str, channel_name: str) -> None:
+    """Append/update one entry in uploaded_videos.json."""
     data: dict = {}
     if UPLOADED_LOG.exists():
         try:
             data = json.loads(UPLOADED_LOG.read_text(encoding="utf-8"))
         except Exception:
             pass
-    data[ep_id] = {"video_id": video_id, "channel": ch["name"], "url": f"https://youtu.be/{video_id}"}
+    data[key] = {"video_id": video_id, "channel": channel_name, "url": f"https://youtu.be/{video_id}"}
     UPLOADED_LOG.write_text(json.dumps(data, indent=2), encoding="utf-8")
-
-    return video_id
 
 
 # ── CLI ───────────────────────────────────────────────────────────────────────
@@ -309,6 +371,10 @@ def main() -> None:
     ap = argparse.ArgumentParser(description="Empire OS Multi-Channel YouTube Uploader")
     ap.add_argument("--channel",  required=True, choices=list(CHANNELS), help="gg | il | lo | ed")
     ap.add_argument("--episodes", default="", help="Comma-separated episode IDs e.g. GG_EP006,GG_EP007")
+    ap.add_argument("--file", default="", help="Upload this exact video file instead of an episode by ID (e.g. a Shorts clip)")
+    ap.add_argument("--title", default="", help="Title for --file uploads (ignored for --episodes, which reads the script)")
+    ap.add_argument("--description", default="", help="Description for --file uploads")
+    ap.add_argument("--tags", default="", help="Comma-separated tags for --file uploads")
     ap.add_argument("--privacy",  default="public", choices=["public", "unlisted", "private"])
     ap.add_argument("--verify",   action="store_true", help="Verify which account this token belongs to")
     ap.add_argument("--reauth",   action="store_true", help="Delete token and re-authenticate")
@@ -331,12 +397,8 @@ def main() -> None:
         verify_channel(args.channel)
         return
 
-    if not args.episodes:
-        ap.error("--episodes required (or use --verify / --reauth)")
-
-    episodes = [e.strip().upper() for e in args.episodes.split(",") if e.strip()]
-    print(f"\nEmpire OS Uploader - {ch['name']}")
-    print(f"Episodes: {', '.join(episodes)}\n")
+    if not args.episodes and not args.file:
+        ap.error("--episodes or --file required (or use --verify / --reauth)")
 
     youtube = get_service(args.channel)
 
@@ -348,6 +410,20 @@ def main() -> None:
     else:
         print("\nProceed with upload? Press Enter to continue or Ctrl+C to abort.")
         input()
+
+    if args.file:
+        tags = [t.strip() for t in args.tags.split(",") if t.strip()]
+        try:
+            upload_file(youtube, args.channel, Path(args.file), args.title,
+                       args.description, tags, args.privacy)
+        except (FileNotFoundError, ValueError) as e:
+            print(f"  [FAILED] {args.file}: {e}")
+            sys.exit(1)
+        return
+
+    episodes = [e.strip().upper() for e in args.episodes.split(",") if e.strip()]
+    print(f"\nEmpire OS Uploader - {ch['name']}")
+    print(f"Episodes: {', '.join(episodes)}\n")
 
     succeeded: list[str] = []
     skipped: list[str] = []

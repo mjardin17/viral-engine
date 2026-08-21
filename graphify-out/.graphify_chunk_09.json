@@ -1,0 +1,454 @@
+{
+  "chunk": 9,
+  "entities": {
+    "projects": {
+      "crosspost_enterprise": {
+        "id": "proj_crosspost",
+        "name": "CrossPost Enterprise / Empire OS v3.0",
+        "type": "orchestration_hub",
+        "location": "https://ais-dev-7vc3anh5ikstpsjhmaywr7-767455093414.us-east1.run.app",
+        "stack": ["Express v5", "React 19", "Vite", "Tailwind CSS v4", "TypeScript", "Node.js"],
+        "port": 3000,
+        "empire_inspector_score": "98%",
+        "purpose": "Central orchestration hub for AI ecosystem combining multi-agent content publishing, AI routing, Ollama center, project registry, analytics, automation, and documentary production",
+        "completion": "98%"
+      },
+      "documentary_factory": {
+        "id": "proj_doc_factory",
+        "name": "Documentary Factory",
+        "type": "video_generation_subsystem",
+        "location": "Inside Empire OS (Creative Console)",
+        "stack": ["Flask", "Celery", "FFmpeg bindings", "Python"],
+        "empire_inspector_score": "72%",
+        "purpose": "Automated video generation and voiceover timing synchronizer for documentary structure and choreography",
+        "completion": "72%"
+      },
+      "storyforge_engine": {
+        "id": "proj_storyforge",
+        "name": "StoryForge Engine",
+        "type": "narrative_synthesis",
+        "location": "Inside Empire OS (Creative Console)",
+        "stack": ["FastAPI", "Vue.js v3", "Tailwind CSS", "Python"],
+        "empire_inspector_score": "94%",
+        "purpose": "Long-form narrative synthesis and scene sequencing pipeline for script generation",
+        "completion": "94%",
+        "known_issues": ["3 duplicate functions flagged by Empire Inspector"]
+      },
+      "video_bot_pipeline": {
+        "id": "proj_vbp",
+        "name": "Video Bot Pipeline",
+        "type": "video_factory",
+        "location": "C:\\Users\\jjard\\claude\\video-bot-pipeline\\",
+        "stack": ["Python", "FFmpeg", "edge-tts", "Pollinations.ai"],
+        "purpose": "Fully automated AI documentary video factory: JSON script → AI images → narration → Ken Burns motion → music → MP4",
+        "core_pipeline_completion": "100%",
+        "season_3_scripts_completion": "100%",
+        "season_3_renders_completion": "0%",
+        "overall_completion": "65%"
+      },
+      "viral_engine": {
+        "id": "proj_viral",
+        "name": "Viral Engine",
+        "type": "3_channel_youtube_pipeline",
+        "stack": ["Python", "FFmpeg", "edge-tts", "Pollinations.ai"],
+        "purpose": "3-channel AI YouTube documentary pipeline auto-rendering 18-20 min episodes"
+      }
+    },
+    "systems": {
+      "empire_os": {
+        "id": "sys_empire_os",
+        "name": "Empire OS",
+        "version": "3.0",
+        "type": "central_orchestration",
+        "role": "Orchestrates all content and business operations for Josh's AI ecosystem",
+        "core_components": [
+          "Multi-agent content publishing (CrossPost)",
+          "AI routing layer",
+          "Ollama local center",
+          "Project registry (Empire Inspector)",
+          "Analytics engine",
+          "Automation/cron management",
+          "Settings hub",
+          "Content Ingress",
+          "Monetization Center"
+        ]
+      },
+      "empire_inspector": {
+        "id": "sys_inspector",
+        "name": "Empire Inspector",
+        "type": "project_audit_dashboard",
+        "role": "CTO dashboard for registering and auditing all Josh's projects",
+        "api_endpoints": [
+          "GET /api/inspector/health",
+          "POST /api/inspector/advisor"
+        ]
+      },
+      "ai_router": {
+        "id": "sys_router",
+        "name": "AI Router",
+        "type": "model_routing_layer",
+        "role": "Routes every AI request to optimal model automatically",
+        "routing_rules": {
+          "sql_database": "Ollama (llama3)",
+          "real_time_search": "Gemini 3.5 Flash",
+          "multi_file_systems": "Claude 3.5 Sonnet",
+          "long_form_writing": "Claude 3.5 Sonnet"
+        }
+      }
+    },
+    "channels": {
+      "gods_glory": {
+        "id": "ch_gg",
+        "name": "Gods & Glory (GG)",
+        "type": "history_documentary",
+        "style": "Dark cinematic, gold/black palette",
+        "duration": "~18-20 min",
+        "youtube_handle": "@godsandgloryai",
+        "tiktok_handle": "@godsgloryai",
+        "instagram_handle": "@godsandgloryai",
+        "facebook_handle": "@godsandgloryai"
+      },
+      "little_olympus": {
+        "id": "ch_lo",
+        "name": "Little Olympus (LO)",
+        "type": "kids_mythology",
+        "subtitle": "Little Zeus",
+        "youtube_handle": "@littleolympusai",
+        "instagram_handle": "@littleolympusai",
+        "tiktok_handle": "@little.olympusai",
+        "facebook_handle": "@littleolympusai"
+      },
+      "machine_learning": {
+        "id": "ch_ml",
+        "name": "Machine Learning / Empire Decoded",
+        "type": "ai_tech_content",
+        "topic": "TBD from scripts"
+      },
+      "iron_legends": {
+        "id": "ch_il",
+        "name": "Iron Legends",
+        "type": "scifi_mech_anime",
+        "youtube_handle": "@ironlegendsai"
+      },
+      "echoes_of_eternity": {
+        "id": "ch_eoe",
+        "name": "Echoes of Eternity",
+        "type": "narrative_channel",
+        "youtube_handle": "@echosofeternitiai"
+      }
+    },
+    "episodes": {
+      "season_1": {
+        "channel": "gods_glory",
+        "episodes": ["EP001-EP005"],
+        "status": "✅ Finals in renders/",
+        "sizes": "187–260MB each"
+      },
+      "season_2": {
+        "channel": "gods_glory",
+        "episodes": ["EP006-EP011"],
+        "status": "Uploaded",
+        "notes": "EP006 (Pearl Harbor 41min), EP007 (D-Day 39min) uploaded; EP008–EP011 rendering"
+      },
+      "season_3": {
+        "channel": "gods_glory",
+        "episodes": [
+          "EP012: The Last Emperor (Fall of Rome, 476 AD)",
+          "EP013: The Crusader Kingdoms",
+          "EP014: Waterloo: The Day Napoleon's Genius Ran Out of Miracles",
+          "EP015: Marathon: The 26-Mile Run That Saved Western Civilization",
+          "EP016: Agincourt: How Mud and Arrows Beat French Chivalry",
+          "EP017: Battle of Tours: The Hammer That Stopped Islam's Conquest",
+          "EP018: Hastings 1066: The Arrow That Forged a Nation",
+          "EP019: Kamikaze: How Two Typhoons Drowned the Mongol Fleet",
+          "EP020: Vienna 1683: The Winged Hussars",
+          "EP021: Midway: Four Minutes That Turned the Pacific War",
+          "EP022: Battle of the Bulge: Hitler's Last Gamble",
+          "EP023: Operation Market Garden: A Bridge Too Far",
+          "EP024: Inchon: MacArthur's Impossible Landing",
+          "EP025: Yorktown: The Battle That Ended an Empire"
+        ],
+        "status": "✅ ALL 14 SCRIPTS WRITTEN",
+        "completion": "0% rendered",
+        "next_action": "run render_season3.bat"
+      },
+      "little_olympus_s1": {
+        "channel": "little_olympus",
+        "episodes": ["EP001-EP004"],
+        "status": "EP001 rendered (broken quality), EP002-EP004 scripted",
+        "notes": "EP001 has placeholder visuals and inconsistent audio; needs re-render with working Higgsfield"
+      }
+    },
+    "council_system": {
+      "id": "sys_council",
+      "name": "Council Bot System",
+      "type": "self_healing_pipeline_monitor",
+      "bot_count": 9,
+      "bots": [
+        "bot_01 through bot_09",
+        "bot_10_frame_inspector",
+        "bot_14_credit_guardian",
+        "bot_19_wiring_inspector"
+      ],
+      "purpose": "Self-healing pipeline with 9+ specialized councils for quality assurance"
+    },
+    "core_files": {
+      "auto_render": {
+        "path": "auto_render.py",
+        "size": "76KB",
+        "role": "Core rendering engine - DO NOT TOUCH",
+        "warning": "Critical production code"
+      },
+      "pipeline_mcp": {
+        "path": "pipeline_mcp.py",
+        "size": "7KB",
+        "role": "MCP integration layer - THE entry point",
+        "transport": "FastMCP, stdio"
+      },
+      "render_season3": {
+        "path": "render_season3.bat",
+        "role": "Render EP012–EP025 sequentially"
+      },
+      "council_run": {
+        "path": "council_run.bat",
+        "role": "Launch all 9 council bots"
+      }
+    },
+    "ai_models": {
+      "gemini_2_0_flash": {
+        "id": "model_gemini",
+        "name": "Gemini 2.0 Flash",
+        "used_for": "Multi-agent content generation (primary)",
+        "status": "SET in .env (GEMINI_API_KEY)",
+        "config": "Via process.env.GEMINI_API_KEY"
+      },
+      "ollama_local": {
+        "id": "model_ollama",
+        "name": "Ollama (local)",
+        "used_for": "Local reasoning, code, SQL tasks",
+        "endpoint": "http://localhost:11434"
+      },
+      "claude_3_5_sonnet": {
+        "id": "model_claude",
+        "name": "Claude 3.5 Sonnet",
+        "used_for": "Deep reasoning, multi-file architecture",
+        "routing": "Via AI Router routing rule"
+      },
+      "github_goose": {
+        "id": "model_goose",
+        "name": "GitHub Goose",
+        "used_for": "Competitive scraping / niche research",
+        "status": "Simulated in current build"
+      },
+      "edge_tts": {
+        "id": "model_edge_tts",
+        "name": "Edge TTS (Microsoft)",
+        "used_for": "Narration synthesis",
+        "cost": "FREE"
+      },
+      "pollinations_flux": {
+        "id": "model_pollinations",
+        "name": "Pollinations.ai (Flux)",
+        "used_for": "Image generation (4 per scene)",
+        "cost": "FREE"
+      }
+    },
+    "dependencies": {
+      "storyforge2_core": [
+        "Pillow>=10",
+        "ebooklib>=0.18",
+        "reportlab>=4.0",
+        "pypdf>=4.0",
+        "requests>=2.31"
+      ],
+      "storyforge2_merch_rasterizer": [
+        "svglib>=1.5",
+        "rlPyCairo>=0.3"
+      ],
+      "listing_service": [
+        "fastapi>=0.111.0",
+        "uvicorn[standard]>=0.29.0",
+        "requests>=2.31.0"
+      ]
+    }
+  },
+  "relationships": [
+    {
+      "source": "crosspost_enterprise",
+      "target": "video_bot_pipeline",
+      "type": "can_connect_to",
+      "direction": "via Event Bus: render triggers and completion reporting"
+    },
+    {
+      "source": "crosspost_enterprise",
+      "target": "storyforge_engine",
+      "type": "integrates",
+      "direction": "script output feeds into Content Ingress"
+    },
+    {
+      "source": "storyforge_engine",
+      "target": "documentary_factory",
+      "type": "feeds_into",
+      "direction": "StoryForge script → Documentary Factory for voiceover timing"
+    },
+    {
+      "source": "documentary_factory",
+      "target": "video_bot_pipeline",
+      "type": "feeds_into",
+      "direction": "act structure + voiceover → Video Bot Pipeline renders video"
+    },
+    {
+      "source": "video_bot_pipeline",
+      "target": "gods_glory",
+      "type": "produces_content_for",
+      "direction": "Renders episodes for GG channel"
+    },
+    {
+      "source": "video_bot_pipeline",
+      "target": "little_olympus",
+      "type": "produces_content_for",
+      "direction": "Renders episodes for LO channel"
+    },
+    {
+      "source": "video_bot_pipeline",
+      "target": "iron_legends",
+      "type": "produces_content_for",
+      "direction": "Renders episodes for IL channel"
+    },
+    {
+      "source": "ai_router",
+      "target": "gemini_2_0_flash",
+      "type": "routes_to",
+      "condition": "real-time search or grounding"
+    },
+    {
+      "source": "ai_router",
+      "target": "claude_3_5_sonnet",
+      "type": "routes_to",
+      "condition": "multi-file systems or deep reasoning"
+    },
+    {
+      "source": "ai_router",
+      "target": "ollama_local",
+      "type": "routes_to",
+      "condition": "SQL/database structure"
+    },
+    {
+      "source": "video_bot_pipeline",
+      "target": "pollinations_flux",
+      "type": "uses_for",
+      "purpose": "Image generation (4 per scene, FREE)"
+    },
+    {
+      "source": "video_bot_pipeline",
+      "target": "edge_tts",
+      "type": "uses_for",
+      "purpose": "Narration TTS (FREE)"
+    },
+    {
+      "source": "council_system",
+      "target": "video_bot_pipeline",
+      "type": "monitors_and_heals",
+      "purpose": "Self-healing quality assurance"
+    },
+    {
+      "source": "empire_os",
+      "target": "crosspost_enterprise",
+      "type": "contains",
+      "note": "CrossPost is the publishing layer of Empire OS"
+    },
+    {
+      "source": "empire_os",
+      "target": "documentary_factory",
+      "type": "contains",
+      "location": "Creative Console"
+    },
+    {
+      "source": "empire_os",
+      "target": "storyforge_engine",
+      "type": "contains",
+      "location": "Creative Console"
+    }
+  ],
+  "statuses": {
+    "empire_os": "98% complete",
+    "storyforge_engine": "94% complete",
+    "documentary_factory": "72% complete",
+    "video_bot_pipeline": "65% overall (core 100%, S3 scripts 100%, S3 renders 0%)",
+    "gods_glory_s1": "✅ Complete",
+    "gods_glory_s2": "Partial (EP006-007 uploaded, EP008-011 rendering)",
+    "gods_glory_s3": "Scripts 100%, renders 0%",
+    "little_olympus_s1": "EP001 broken, EP002-004 scripted",
+    "empire_inspector": "Live with 6 project audits"
+  },
+  "missing_features": {
+    "crosspost_enterprise": [
+      "Live platform API credentials (SIMULATED SANDBOX)",
+      "Real GitHub OAuth",
+      "Live Gemini API connection",
+      "Video Bot Pipeline not registered in Empire Inspector",
+      "Webhook receivers for external project events"
+    ],
+    "video_bot_pipeline": [
+      "render_start, render_progress, list_renders tools",
+      "Ollama path in chatgpt_bot.py (currently OpenAI only)",
+      "Empire OS Event Bus listener",
+      "Content Ingress handoff after render",
+      "ML S1 EP002–EP012 scripts",
+      "LO S1 EP002–EP012 scripts",
+      "YouTube Data API v3 upload (currently manual)",
+      "ElevenLabs TTS not wired (key exists)"
+    ],
+    "storyforge_engine": [
+      "3 duplicate functions need refactoring",
+      "Unknown: script output format match with Video Bot Pipeline",
+      "Unknown: archive persistence",
+      "Direct export to Video Bot Pipeline episode JSON"
+    ],
+    "documentary_factory": [
+      "Full FFmpeg rendering pipeline (avoid duplication)",
+      "Unknown: voiceover timing export format",
+      "Director Timeline persistence",
+      "Integration with Video Bot Pipeline or LTX Video Engine",
+      "Celery task queue broker configuration"
+    ]
+  },
+  "errors_and_issues": {
+    "gods_glory_ep006": {
+      "episode": "EP006 (Pearl Harbor)",
+      "status": "21 of 24 clips are 0KB",
+      "script_location": "prompts/gods_glory/scene_prompts.gg_ep006.final.json",
+      "fix_command": "render_ep006.bat"
+    },
+    "little_olympus_ep001": {
+      "episode": "EP001",
+      "status": "Quality broken",
+      "issues": [
+        "Visuals are placeholders",
+        "Audio too slow and inconsistent volume"
+      ],
+      "cause": "Higgsfield routing failed",
+      "requires_rerender": true
+    }
+  },
+  "locations": {
+    "main_repo": "C:\\Users\\jjard\\claude\\video-bot-pipeline\\",
+    "prompts": "C:\\Users\\jjard\\claude\\video-bot-pipeline\\prompts\\",
+    "renders": "C:\\Users\\jjard\\claude\\video-bot-pipeline\\renders\\",
+    "council": "C:\\Users\\jjard\\claude\\video-bot-pipeline\\council\\",
+    "boss_listers_mvp": "C:\\Users\\jjard\\claude\\boss-listers-mvp\\",
+    "empire_os_hub": "localhost:5173 (Vite React+Vite app)"
+  },
+  "owner": {
+    "name": "Josh Jardin",
+    "email": "justifiedmagnificent@gmail.com",
+    "role": "CTO, Empire OS"
+  },
+  "metadata": {
+    "extraction_date": "2026-08-21",
+    "chunk_number": 9,
+    "total_chunks": 11,
+    "files_processed": 22,
+    "graph_completeness": "comprehensive - covers all major projects, systems, channels, and their relationships"
+  }
+}

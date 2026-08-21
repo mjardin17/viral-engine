@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Pipeline Knowledge Graph</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" rel="stylesheet" type="text/css" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: #0f1419;
+            color: #e0e0e0;
+            overflow: hidden;
+        }
+        #header {
+            background: linear-gradient(135deg, #1a1f2e 0%, #16192b 100%);
+            padding: 20px;
+            border-bottom: 1px solid #2a3a5a;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+        }
+        #header h1 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            background: linear-gradient(135deg, #60a5fa 0%, #34d399 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        #header p {
+            font-size: 13px;
+            color: #999;
+        }
+        .container {
+            display: flex;
+            height: calc(100vh - 80px);
+        }
+        #graph {
+            flex: 1;
+            border-right: 1px solid #2a3a5a;
+            background: #0f1419;
+        }
+        #sidebar {
+            width: 320px;
+            background: #151b28;
+            border-left: 1px solid #2a3a5a;
+            overflow-y: auto;
+            padding: 20px;
+        }
+        .stat {
+            margin-bottom: 20px;
+            padding: 12px;
+            background: #1a2436;
+            border-radius: 6px;
+            border-left: 3px solid #60a5fa;
+        }
+        .stat-label {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #999;
+            margin-bottom: 4px;
+        }
+        .stat-value {
+            font-size: 20px;
+            font-weight: 600;
+            color: #e0e0e0;
+        }
+        .community {
+            margin-top: 20px;
+            padding: 16px;
+            background: #1a2436;
+            border-radius: 6px;
+            border-top: 2px solid #34d399;
+        }
+        .community-title {
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #34d399;
+            margin-bottom: 8px;
+        }
+        .community-node {
+            font-size: 12px;
+            padding: 4px 0;
+            color: #ccc;
+        }
+        .confidence {
+            display: inline-block;
+            font-size: 10px;
+            padding: 2px 6px;
+            border-radius: 3px;
+            margin-left: 6px;
+            font-weight: 600;
+        }
+        .confidence.extracted {
+            background: #10b981;
+            color: white;
+        }
+        .confidence.inferred {
+            background: #f59e0b;
+            color: white;
+        }
+        .confidence.ambiguous {
+            background: #ef4444;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h1>Knowledge Graph: Video Bot Pipeline</h1>
+        <p>Interactive graph with 20 nodes, 15 edges, 3 communities • Extracted 2026-08-21</p>
+    </div>
+    <div class="container">
+        <div id="graph"></div>
+        <div id="sidebar">
+            <div class="stat">
+                <div class="stat-label">Nodes</div>
+                <div class="stat-value">20</div>
+            </div>
+            <div class="stat">
+                <div class="stat-label">Edges</div>
+                <div class="stat-value">15</div>
+            </div>
+            <div class="stat">
+                <div class="stat-label">Communities</div>
+                <div class="stat-value">3</div>
+            </div>
+
+            <div class="community">
+                <div class="community-title">🎬 Video Production</div>
+                <div class="community-node">• video_pipeline_agent</div>
+                <div class="community-node">• render_commercial.py</div>
+                <div class="community-node">• auto_publisher.py</div>
+                <div class="community-node">• Council Bot System</div>
+                <div class="community-node">• 4 YouTube Channels</div>
+            </div>
+
+            <div class="community">
+                <div class="community-title">🛒 Commerce & Inventory</div>
+                <div class="community-node">• boss-listers-mvp</div>
+                <div class="community-node">• eBay Listing Client</div>
+                <div class="community-node">• Etsy Listing Client</div>
+                <div class="community-node">• Supabase Products</div>
+                <div class="community-node">• eBay Sync Function</div>
+            </div>
+
+            <div class="community">
+                <div class="community-title">📚 Book Publishing</div>
+                <div class="community-node">• Book Factory</div>
+                <div class="community-node">• StoryForge 2 Pipeline</div>
+                <div class="community-node">• Etsy Digital Connector</div>
+                <div class="community-node">• TrendScanner</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const data = {
+            nodes: [
+                { id: 1, label: 'Empire OS', color: '#60a5fa', size: 40, group: 'system' },
+                { id: 2, label: 'Video Pipeline\nAgent', color: '#34d399', size: 35, group: 'video' },
+                { id: 3, label: 'Render\nCommercial', color: '#34d399', size: 28, group: 'video' },
+                { id: 4, label: 'eBay Listing\nClient', color: '#f59e0b', size: 32, group: 'commerce' },
+                { id: 5, label: 'Etsy Listing\nClient', color: '#f59e0b', size: 32, group: 'commerce' },
+                { id: 6, label: 'Etsy Digital\nConnector', color: '#a78bfa', size: 28, group: 'books' },
+                { id: 7, label: 'Supabase\nProducts', color: '#f59e0b', size: 32, group: 'commerce' },
+                { id: 8, label: 'eBay Sync\nEdge Fn', color: '#f59e0b', size: 28, group: 'commerce' },
+                { id: 9, label: 'Boss Listers\nMVP', color: '#f59e0b', size: 32, group: 'commerce' },
+                { id: 10, label: 'Council\nBots', color: '#ec4899', size: 30, group: 'video' },
+                { id: 11, label: 'Auto\nPublisher', color: '#34d399', size: 28, group: 'video' },
+                { id: 12, label: 'Crosspost\nBridge', color: '#34d399', size: 26, group: 'video' },
+                { id: 13, label: 'Book\nFactory', color: '#a78bfa', size: 30, group: 'books' },
+                { id: 14, label: 'StoryForge 2\nPipeline', color: '#a78bfa', size: 30, group: 'books' },
+                { id: 15, label: 'Gods & Glory\nYouTube', color: '#ef4444', size: 24, group: 'channels' },
+                { id: 16, label: 'Little Olympus\nYouTube', color: '#ef4444', size: 24, group: 'channels' },
+                { id: 17, label: 'Iron Legends\nYouTube', color: '#ef4444', size: 24, group: 'channels' },
+                { id: 18, label: 'Channel\nUploader', color: '#34d399', size: 26, group: 'video' },
+                { id: 19, label: 'MISSION_\nBOARD.json', color: '#60a5fa', size: 26, group: 'system' },
+                { id: 20, label: 'BOSS-LISTERS\n(Capital)', color: '#666', size: 24, group: 'commerce' }
+            ],
+            edges: [
+                { from: 2, to: 3, label: 'calls', color: { color: '#34d399', opacity: 0.6 }, width: 2 },
+                { from: 4, to: 7, label: 'writes_to', color: { color: '#f59e0b', opacity: 0.5 }, width: 2 },
+                { from: 8, to: 7, label: 'upserts', color: { color: '#f59e0b', opacity: 0.5 }, width: 2 },
+                { from: 9, to: 4, label: 'calls', color: { color: '#f59e0b', opacity: 0.5 }, width: 2 },
+                { from: 5, to: 6, label: 'used_by', color: { color: '#a78bfa', opacity: 0.5 }, width: 2 },
+                { from: 14, to: 6, label: 'calls', color: { color: '#a78bfa', opacity: 0.5 }, width: 2 },
+                { from: 11, to: 12, label: 'uses', color: { color: '#34d399', opacity: 0.5 }, width: 2 },
+                { from: 13, to: 14, label: 'orchestrates', color: { color: '#a78bfa', opacity: 0.5 }, width: 2 },
+                { from: 2, to: 19, label: 'reads', color: { color: '#60a5fa', opacity: 0.5 }, width: 2 },
+                { from: 1, to: 2, label: 'orchestrates', color: { color: '#60a5fa', opacity: 0.5 }, width: 2 },
+                { from: 1, to: 10, label: 'monitors_via', color: { color: '#60a5fa', opacity: 0.5 }, width: 2 },
+                { from: 18, to: 15, label: 'publishes_to', color: { color: '#ef4444', opacity: 0.5 }, width: 2 },
+                { from: 18, to: 16, label: 'publishes_to', color: { color: '#ef4444', opacity: 0.5 }, width: 2 },
+                { from: 18, to: 17, label: 'publishes_to', color: { color: '#ef4444', opacity: 0.5 }, width: 2 },
+                { from: 3, to: 11, label: 'produces', color: { color: '#34d399', opacity: 0.5 }, width: 1.5 }
+            ]
+        };
+
+        const options = {
+            physics: {
+                enabled: true,
+                stabilization: { iterations: 200 },
+                barnesHut: {
+                    gravitationalConstant: -26000,
+                    centralGravity: 0.3,
+                    springLength: 200,
+                    springConstant: 0.04
+                }
+            },
+            interaction: {
+                navigationButtons: true,
+                keyboard: true,
+                hover: true
+            },
+            nodes: {
+                font: {
+                    size: 13,
+                    face: 'Arial',
+                    color: '#fff',
+                    multi: true,
+                    bold: { color: '#fff', size: 14 }
+                },
+                borderWidth: 2,
+                borderWidthSelected: 3
+            },
+            edges: {
+                font: {
+                    size: 10,
+                    color: '#999'
+                },
+                arrows: 'to',
+                arrowStrikethrough: false,
+                smooth: {
+                    type: 'continuous'
+                }
+            }
+        };
+
+        const network = new vis.Network(
+            document.getElementById('graph'),
+            data,
+            options
+        );
+
+        network.on('stabilizationProgress', (params) => {
+            const widthFactor = params.iterations / params.total;
+        });
+
+        network.once('stabilizationIterationsDone', () => {
+            network.setOptions({ physics: false });
+        });
+    </script>
+</body>
+</html>

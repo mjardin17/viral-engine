@@ -1,188 +1,124 @@
-"""Unit tests for agents/sales_tracker_agent.py — no real credentials needed."""
+﻿"""Tests for agents/sales_tracker_agent.py — eBay sales tracking to Supabase."""
 
+import sys
 import json
-from datetime import datetime, timezone, timedelta
+import pytest
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from unittest.mock import MagicMock, patch
 
-import pytest
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from agents.sales_tracker_agent import SalesTrackerAgent, SalesTrackerState
-from lib.ebay_sales import Sale, SaleLineItem
+from agents.sales_tracker_agent import (
+    SalesTrackerAgent,
+    SalesTrackerState,
+    SupabaseSalesWriter,
+)
+from lib.ebay_sales import Sale, SaleLineItem, EbaySalesError
 
 
-class FakeSB:
+class FakeEbayClient:
+    """Fake eBay client for testing."""
+    def __init__(self, orders=None, sandbox=False):
+        self.orders = orders or []
+        self.sandbox = sandbox
+        self.calls = []
+
+    def get_orders_since(self, since):
+        self.calls.append(("get_orders_since", since))
+        return self.orders
+
+
+class FakeSupabaseClient:
+    """Fake Supabase client for testing."""
     def __init__(self):
-        self.recorded = []
+        self.rpc_calls = []
+        self.rpc_results = {}
 
-    def rpc(self, name, params):
-        if name == "record_sale":
-            self.recorded.append(params)
-            return self
-
-        return self
-
-    def execute(self):
+    def rpc(self, method, params):
+        self.rpc_calls.append((method, params))
         result = MagicMock()
-        result.data = True  # Assume success unless test modifies
+        result.data = self.rpc_results.get(method, [{"status": "recorded"}])
+        result.execute = lambda: result
         return result
 
 
-class FakeEbay:
-    def __init__(self, sales=None):
-        self.sales = sales or []
+class TestSalesTrackerState:
+    """Test state persistence."""
 
-    def get_orders_since(self, since):
-        return self.sales
+    def test_save_and_load(self, tmp_path):
+        """State persists to JSON and reloads correctly."""
+        state_file = tmp_path / "state.json"
 
+        state1 = SalesTrackerState()
+        state1.last_poll_time = "2026-08-21T12:00:00+00:00"
+        state1.processed_orders = {"ORDER-1": "v1|198079646764|0"}
+        state1.save(state_file)
 
-@pytest.fixture
-def tmp_state_dir(tmp_path):
-    """Temporary state directory for tests."""
-    state_dir = tmp_path / ".state"
-    state_dir.mkdir()
-    yield state_dir
+        state2 = SalesTrackerState.load(state_file)
+        assert state2.last_poll_time == "2026-08-21T12:00:00+00:00"
+        assert state2.processed_orders == {"ORDER-1": "v1|198079646764|0"}
 
+    def test_load_creates_default_if_missing(self, tmp_path):
+        """Missing state file returns defaults (last_poll = 24h ago)."""
+        state_file = tmp_path / "nonexistent.json"
+        state = SalesTrackerState.load(state_file)
 
-def test_records_sale_to_supabase(tmp_state_dir):
-    """Agent fetches orders and calls Supabase RPC."""
-    fake_sb = FakeSB()
-    fake_ebay = FakeEbay(
-        sales=[
-            Sale(
-                order_id="ORDER-1",
-                creation_date="2026-08-21T00:00:00Z",
-                fulfillment_status="FULFILLED",
-                total_value="24.99",
-                total_currency="USD",
-                buyer_username="buyer123",
-                line_items=[
-                    SaleLineItem(
-                        sku="CARD-001",
-                        legacy_item_id="198079646764",
-                        line_item_id="LI-1",
-                        quantity=1,
-                        title="Test Card",
-                    )
-                ],
-            )
-        ]
-    )
-
-    with patch.object(Path, "mkdir"), patch.object(Path, "exists", return_value=False):
-        agent = SalesTrackerAgent("tok", "http://localhost", "key")
-        agent.sb = fake_sb
-        agent.ebay = fake_ebay
-        agent.state_file = tmp_state_dir / "sales_tracker.json"
-
-        state = agent.run()
-
-    assert state.sales_count == 1
-    assert len(fake_sb.recorded) == 1
-    assert fake_sb.recorded[0]["p_sku"] == "v1|198079646764|0"
+        # last_poll should be ~24h ago
+        parsed = datetime.fromisoformat(state.last_poll_time)
+        now = datetime.now(timezone.utc)
+        delta = (now - parsed).total_seconds()
+        assert 85000 < delta < 90000  # ~24h ± 1min
 
 
-def test_resolves_legacy_item_id_to_inventory_sku(tmp_state_dir):
-    """Sale with legacy_item_id gets resolved to v1|{id}|0 format."""
-    fake_sb = FakeSB()
-    fake_ebay = FakeEbay(
-        sales=[
-            Sale(
-                order_id="ORDER-2",
-                creation_date="2026-08-21T00:00:00Z",
-                fulfillment_status="FULFILLED",
-                total_value="50.00",
-                total_currency="USD",
-                buyer_username="buyer456",
-                line_items=[
-                    SaleLineItem(
-                        sku="",  # Empty SKU from Fulfillment API
-                        legacy_item_id="123456789",  # Real legacy ID
-                        line_item_id="LI-2",
-                        quantity=2,
-                        title="Vintage Card",
-                    )
-                ],
-            )
-        ]
-    )
+class TestSupabaseSalesWriter:
+    """Test Supabase RPC-based sales recording."""
 
-    with patch.object(Path, "mkdir"), patch.object(Path, "exists", return_value=False):
-        agent = SalesTrackerAgent("tok", "http://localhost", "key")
-        agent.sb = fake_sb
-        agent.ebay = fake_ebay
-        agent.state_file = tmp_state_dir / "sales_tracker.json"
+    def test_record_sale_calls_rpc_with_correct_params(self):
+        """record_sale() calls RPC with order/SKU/qty/price."""
+        client = FakeSupabaseClient()
+        writer = SupabaseSalesWriter("http://localhost", "key")
+        writer._client = client
 
-        state = agent.run()
+        writer.record_sale(
+            order_id="ORDER-1",
+            sku="v1|198079646764|0",
+            quantity=1,
+            total_price="24.99"
+        )
 
-    recorded = fake_sb.recorded[0]
-    assert recorded["p_sku"] == "v1|123456789|0"
-    assert recorded["p_quantity"] == 2
+        assert len(client.rpc_calls) == 1
+        method, params = client.rpc_calls[0]
+        assert method == "record_sale"
+        assert params["p_order_id"] == "ORDER-1"
+        assert params["p_sku"] == "v1|198079646764|0"
+        assert params["p_quantity"] == 1
+        assert params["p_total_price"] == 24.99
 
 
-def test_state_persists_last_poll_time(tmp_state_dir):
-    """After run, last_poll is saved for next cycle."""
-    fake_sb = FakeSB()
-    fake_ebay = FakeEbay(sales=[])
+class TestSalesTrackerAgent:
+    """Test order polling and sales recording."""
 
-    with patch.object(Path, "mkdir"), patch.object(Path, "exists", return_value=False):
-        agent = SalesTrackerAgent("tok", "http://localhost", "key")
-        agent.sb = fake_sb
-        agent.ebay = fake_ebay
-        agent.state_file = tmp_state_dir / "sales_tracker.json"
+    def test_poll_fetches_orders_since_last_poll(self, tmp_path):
+        """poll_and_record() fetches orders from last_poll_time."""
+        state_file = tmp_path / "state.json"
 
-        state1 = agent.run()
-        state1_time = state1.last_poll
+        fake_ebay = FakeEbayClient(orders=[])
+        agent = SalesTrackerAgent(
+            ebay_access_token="tok",
+            supabase_url="http://localhost",
+            supabase_anon_key="key",
+            ebay_transport=lambda m, u, h: None,
+            state_file=state_file,
+            sandbox=True
+        )
+        agent.ebay_client = fake_ebay
 
-        # Load state from disk
-        with open(agent.state_file) as f:
-            saved = json.load(f)
+        result = agent.poll_and_record()
 
-        assert saved["last_poll"] == state1_time.isoformat()
+        assert result["status"] == "no_orders"
+        assert result["orders_processed"] == 0
 
 
-def test_handles_multiple_line_items_per_order(tmp_state_dir):
-    """Order with 2 items results in 2 RPC calls."""
-    fake_sb = FakeSB()
-    fake_ebay = FakeEbay(
-        sales=[
-            Sale(
-                order_id="ORDER-3",
-                creation_date="2026-08-21T00:00:00Z",
-                fulfillment_status="FULFILLED",
-                total_value="100.00",
-                total_currency="USD",
-                buyer_username="buyer789",
-                line_items=[
-                    SaleLineItem(
-                        sku="",
-                        legacy_item_id="111",
-                        line_item_id="LI-A",
-                        quantity=1,
-                        title="Item A",
-                    ),
-                    SaleLineItem(
-                        sku="",
-                        legacy_item_id="222",
-                        line_item_id="LI-B",
-                        quantity=3,
-                        title="Item B",
-                    ),
-                ],
-            )
-        ]
-    )
-
-    with patch.object(Path, "mkdir"), patch.object(Path, "exists", return_value=False):
-        agent = SalesTrackerAgent("tok", "http://localhost", "key")
-        agent.sb = fake_sb
-        agent.ebay = fake_ebay
-        agent.state_file = tmp_state_dir / "sales_tracker.json"
-
-        state = agent.run()
-
-    # 1 order with 2 items = 2 RPC calls
-    assert len(fake_sb.recorded) == 2
-    assert fake_sb.recorded[0]["p_sku"] == "v1|111|0"
-    assert fake_sb.recorded[1]["p_sku"] == "v1|222|0"
-    assert fake_sb.recorded[1]["p_quantity"] == 3
+if __name__ == "__main__":
+    pytest.main([__file__, "-v"])

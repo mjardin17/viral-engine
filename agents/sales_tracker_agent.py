@@ -9,109 +9,162 @@ Ready to run as soon as eBay token is refreshed.
 
 import os
 import json
+import logging
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
-from dataclasses import dataclass
+from dataclasses import dataclass, field
+from typing import Any, Callable, Optional
 
-import supabase
+from lib.ebay_sales import EbaySalesClient, EbaySalesError, resolve_sku_from_legacy_item_id
 
-from lib.ebay_sales import EbaySalesClient, resolve_sku_from_legacy_item_id
+logger = logging.getLogger(__name__)
 
 
 @dataclass
 class SalesTrackerState:
-    last_poll: datetime
-    sales_count: int
-    error_count: int
+    last_poll_time: str = field(default_factory=lambda: (
+        datetime.now(timezone.utc) - timedelta(days=1)
+    ).isoformat())
+    processed_orders: dict[str, str] = field(default_factory=dict)
+
+    def save(self, path: Path) -> None:
+        path.write_text(json.dumps(self.__dict__, indent=2), encoding="utf-8")
+
+    @classmethod
+    def load(cls, path: Path) -> "SalesTrackerState":
+        if not path.exists():
+            return cls()
+        data = json.loads(path.read_text(encoding="utf-8"))
+        return cls(**data)
+
+
+class SupabaseSalesWriter:
+    """Writes sales to Supabase via RPC call with atomic dedup and SKU resolution."""
+
+    def __init__(self, supabase_url: str, anon_key: str,
+                 service_role_key: Optional[str] = None):
+        self.supabase_url = supabase_url
+        self.anon_key = anon_key
+        self.service_role_key = service_role_key or anon_key
+        self._client = None
+
+    def _get_client(self):
+        """Lazy-load Supabase client."""
+        if self._client is None:
+            try:
+                import supabase
+                self._client = supabase.create_client(self.supabase_url, self.service_role_key)
+            except ImportError:
+                raise ImportError("supabase-py required: pip install supabase")
+        return self._client
+
+    def record_sale(self, order_id: str, sku: str, quantity: int,
+                   total_price: str) -> dict[str, Any]:
+        """Record a sale atomically via Supabase RPC."""
+        client = self._get_client()
+        try:
+            response = client.rpc(
+                "record_sale",
+                {
+                    "p_order_id": order_id,
+                    "p_sku": sku,
+                    "p_quantity": quantity,
+                    "p_total_price": float(total_price),
+                }
+            ).execute()
+            return response.data[0] if response.data else {"status": "recorded"}
+        except Exception as e:
+            raise EbaySalesError(
+                "supabase_write",
+                f"Failed to record sale {order_id}: {e}"
+            )
 
 
 class SalesTrackerAgent:
-    def __init__(self, ebay_token: str, supabase_url: str, supabase_key: str):
-        self.ebay = EbaySalesClient(ebay_token)
-        self.sb = supabase.create_client(supabase_url, supabase_key)
-        self.state_file = Path(".state/sales_tracker.json")
-        self.state_file.parent.mkdir(exist_ok=True)
+    def __init__(self, ebay_access_token: str,
+                 supabase_url: str, supabase_anon_key: str,
+                 ebay_transport: Optional[Callable] = None,
+                 state_file: Path = None,
+                 sandbox: bool = False):
+        self.ebay_client = EbaySalesClient(
+            access_token=ebay_access_token,
+            transport=ebay_transport,
+            sandbox=sandbox
+        )
+        self.sales_writer = SupabaseSalesWriter(supabase_url, supabase_anon_key)
+        self.state_file = state_file or Path("sales_tracker_state.json")
+        self.state = SalesTrackerState.load(self.state_file)
 
-    def run(self):
-        """Poll eBay for new orders, record sales to Supabase."""
-        state = self._load_state()
+    def poll_and_record(self) -> dict[str, Any]:
+        """Fetch orders since last poll and record sales."""
+        try:
+            since = datetime.fromisoformat(self.state.last_poll_time)
+        except (ValueError, AttributeError):
+            since = datetime.now(timezone.utc) - timedelta(days=1)
+
+        logger.info(f"Polling eBay orders since {since.isoformat()}")
 
         try:
-            since = state.last_poll
-            orders = self.ebay.get_orders_since(since)
+            orders = self.ebay_client.get_orders_since(since)
+        except EbaySalesError as e:
+            return {
+                "status": "failed",
+                "error": str(e),
+                "orders_processed": 0,
+                "orders_skipped": 0,
+            }
 
-            for sale in orders:
-                self._record_sale(sale)
-                state.sales_count += 1
+        processed = 0
+        skipped = 0
+        errors = []
 
-            state.last_poll = datetime.now(timezone.utc)
-            self._save_state(state)
+        for order in orders:
+            for line_item in order.line_items:
+                order_key = f"{order.order_id}:{line_item.line_item_id}"
 
-        except Exception as e:
-            state.error_count += 1
-            self._save_state(state)
-            raise
+                if order_key in self.state.processed_orders:
+                    logger.debug(f"Order {order_key} already processed, skipping")
+                    skipped += 1
+                    continue
 
-        return state
+                try:
+                    sku = resolve_sku_from_legacy_item_id(line_item.legacy_item_id)
+                except EbaySalesError as e:
+                    logger.error(f"SKU resolution failed for {order_key}: {e}")
+                    errors.append({"order_key": order_key, "error": str(e)})
+                    skipped += 1
+                    continue
 
-    def _record_sale(self, sale):
-        """Atomically record a sale: resolve SKU, decrement quantity, log."""
-        for item in sale.line_items:
-            # Resolve eBay's legacy_item_id to products table SKU format
-            sku = resolve_sku_from_legacy_item_id(item.legacy_item_id)
+                try:
+                    self.sales_writer.record_sale(
+                        order_id=order.order_id,
+                        sku=sku,
+                        quantity=line_item.quantity,
+                        total_price=order.total_value,
+                    )
+                    self.state.processed_orders[order_key] = sku
+                    processed += 1
+                    logger.info(f"✅ Recorded sale {order_key}: {sku} x{line_item.quantity}")
+                except EbaySalesError as e:
+                    logger.error(f"Failed to record sale {order_key}: {e}")
+                    errors.append({"order_key": order_key, "error": str(e)})
+                    skipped += 1
 
-            # Call Supabase RPC to atomically:
-            # 1. Find product by SKU
-            # 2. Decrement quantity by item.quantity
-            # 3. Log sale to sync_logs
-            # Fails safely if SKU not found (prevents silent partial sales)
-            result = self.sb.rpc(
-                "record_sale",
-                {
-                    "p_sku": sku,
-                    "p_quantity": item.quantity,
-                    "p_order_id": sale.order_id,
-                    "p_source": "ebay",
-                    "p_total_value": float(sale.total_value),
-                    "p_currency": sale.total_currency,
-                    "p_buyer": sale.buyer_username,
-                },
-            ).execute()
+        self.state.last_poll_time = datetime.now(timezone.utc).isoformat()
+        self.state.save(self.state_file)
 
-            if not result.data:
-                raise ValueError("SKU not found in products: {}".format(sku))
-
-    def _load_state(self):
-        """Load last poll time, default to 24 hours ago."""
-        if not self.state_file.exists():
-            return SalesTrackerState(
-                last_poll=datetime.now(timezone.utc) - timedelta(days=1),
-                sales_count=0,
-                error_count=0,
-            )
-
-        with open(self.state_file) as f:
-            data = json.load(f)
-            return SalesTrackerState(
-                last_poll=datetime.fromisoformat(data["last_poll"]),
-                sales_count=data["sales_count"],
-                error_count=data["error_count"],
-            )
-
-    def _save_state(self, state):
-        """Persist state for next run."""
-        with open(self.state_file, "w") as f:
-            json.dump(
-                {
-                    "last_poll": state.last_poll.isoformat(),
-                    "sales_count": state.sales_count,
-                    "error_count": state.error_count,
-                },
-                f,
-            )
+        return {
+            "status": "success" if processed > 0 else "no_orders",
+            "orders_processed": processed,
+            "orders_skipped": skipped,
+            "errors": errors if errors else None,
+            "next_poll": self.state.last_poll_time,
+        }
 
 
 if __name__ == "__main__":
+    logging.basicConfig(level=logging.INFO)
+
     token = os.environ.get("EBAY_REFRESH_TOKEN")
     if not token:
         print("ERROR: EBAY_REFRESH_TOKEN not set")
@@ -124,5 +177,6 @@ if __name__ == "__main__":
         exit(1)
 
     agent = SalesTrackerAgent(token, sb_url, sb_key)
-    state = agent.run()
-    print("Success: {} sales recorded".format(state.sales_count))
+    result = agent.poll_and_record()
+    print(f"Status: {result['status']}")
+    print(f"Processed: {result['orders_processed']}, Skipped: {result['orders_skipped']}")

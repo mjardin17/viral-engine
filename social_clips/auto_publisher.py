@@ -127,23 +127,45 @@ def _skip(platform: str, token_name: str) -> dict:
     return {"status": "skipped", "detail": msg}
 
 
+def _bat_safe(text: str) -> str:
+    """
+    Strip characters unsafe to embed in a Windows .bat double-quoted
+    argument. Applied to any AI-generated text (title/description/caption)
+    before it's written into a staged .bat — a stray '"' would close the
+    quote early and let trailing text be parsed as new shell content.
+    """
+    for ch in '"%^&|<>':
+        text = text.replace(ch, "")
+    return text
+
+
 def publish_youtube_short(clip_path: Path, title: str, description: str,
                           channel: str = "gg", episode_id: str = "") -> dict:
     """
     YouTube Shorts — STANDING RULE: YouTube uploads require Josh's manual
     approval. We stage a ready-to-run .bat instead of auto-posting.
-    TODO: extend channel_uploader.py with a --file/--shorts mode so this bat
-    uploads the vertical clip (not the full episode) once Josh approves.
+
+    Uses channel_uploader.py's --file mode (added 2026-08-20) so this
+    uploads the actual vertical clip, not the full episode — the previous
+    version called --episodes {episode_id}, which resolves through
+    find_render()/EP_FILE_MAP to the full-length renders/ file, so every
+    "Short" ever staged this way would have silently uploaded the entire
+    episode instead. Never triggered because Josh never ran a staged .bat
+    yet — caught before the first real run, not after.
     """
     if not clip_path or not Path(clip_path).exists():
         return {"status": "failed", "detail": "clip missing"}
-    bat = BASE_DIR / f"UPLOAD_SHORT_{episode_id or Path(clip_path).stem}.bat"
+    clip_path = Path(clip_path).resolve()
+    safe_title = _bat_safe(title)[:90] + " #Shorts" if title else "#Shorts"
+    safe_desc = _bat_safe(description)
+    bat = BASE_DIR / f"UPLOAD_SHORT_{episode_id or clip_path.stem}.bat"
     bat.write_text(
         "@echo off\r\n"
         f"cd /d {BASE_DIR}\r\n"
         f"echo Uploading YouTube Short: {clip_path}\r\n"
         f"\"{PYTHON}\" channel_uploader.py --channel {channel} "
-        f"--episodes {episode_id} --yes\r\n"
+        f"--file \"{clip_path}\" --title \"{safe_title}\" "
+        f"--description \"{safe_desc}\" --yes\r\n"
         "pause\r\n",
         encoding="utf-8",
     )

@@ -1,0 +1,48 @@
+{
+  "nodes": [
+    {"id": "empire_os_system", "label": "Empire OS", "file_type": "concept", "source_file": "CLAUDE.md", "source_location": null, "source_url": null, "captured_at": null, "author": "Josh Jardin", "contributor": null},
+    {"id": "video_pipeline_agent", "label": "Video Pipeline Agent", "file_type": "code", "source_file": "agents/video_pipeline_agent.py", "source_location": null, "source_url": null, "captured_at": null, "author": null, "contributor": null},
+    {"id": "render_commercial", "label": "render_commercial.py", "file_type": "code", "source_file": "render_commercial.py", "source_location": null, "source_url": null, "captured_at": null, "author": null, "contributor": null},
+    {"id": "lib_ebay_listing", "label": "eBay Listing Client", "file_type": "code", "source_file": "lib/ebay_listing.py", "source_location": null, "source_url": null, "captured_at": null, "author": null, "contributor": null},
+    {"id": "lib_etsy_listing", "label": "Etsy Listing Client", "file_type": "code", "source_file": "lib/etsy_listing.py", "source_location": null, "source_url": null, "captured_at": null, "author": null, "contributor": null},
+    {"id": "storyforge2_publishing_etsy_digital", "label": "Etsy Digital Books Connector", "file_type": "code", "source_file": "storyforge2/publishing/connectors/etsy_digital.py", "source_location": null, "source_url": null, "captured_at": null, "author": null, "contributor": null},
+    {"id": "supabase_products_table", "label": "Supabase Products Table", "file_type": "concept", "source_file": "inventory-sync/supabase/migrations/0001_init_inventory.sql", "source_location": null, "source_url": null, "captured_at": null, "author": null, "contributor": null},
+    {"id": "ebay_sync_edge_function", "label": "eBay Sync Edge Function", "file_type": "code", "source_file": "inventory-sync/supabase/functions/ebay-sync/", "source_location": null, "source_url": null, "captured_at": null, "author": null, "contributor": null},
+    {"id": "boss_listers_mvp_repo", "label": "Boss Listers MVP (Next.js)", "file_type": "concept", "source_file": "boss-listers-mvp/", "source_location": null, "source_url": null, "captured_at": null, "author": null, "contributor": null},
+    {"id": "boss_listers_capital_repo", "label": "BOSS-LISTERS Capital (TypeScript)", "file_type": "concept", "source_file": "BOSS-LISTERS/", "source_location": null, "source_url": null, "captured_at": null, "author": null, "contributor": null},
+    {"id": "council_bot_system", "label": "Council Bot System", "file_type": "concept", "source_file": "council/", "source_location": null, "source_url": null, "captured_at": null, "author": null, "contributor": null},
+    {"id": "auto_publisher", "label": "auto_publisher.py", "file_type": "code", "source_file": "social_clips/auto_publisher.py", "source_location": null, "source_url": null, "captured_at": null, "author": null, "contributor": null},
+    {"id": "crosspost_bridge", "label": "Crosspost Bridge", "file_type": "code", "source_file": "lib/crosspost_bridge.py", "source_location": null, "source_url": null, "captured_at": null, "author": null, "contributor": null},
+    {"id": "book_factory", "label": "Book Factory", "file_type": "concept", "source_file": "books/", "source_location": null, "source_url": null, "captured_at": null, "author": null, "contributor": null},
+    {"id": "storyforge2_pipeline", "label": "StoryForge 2 Pipeline", "file_type": "code", "source_file": "storyforge2/pipeline.py", "source_location": null, "source_url": null, "captured_at": null, "author": null, "contributor": null},
+    {"id": "gods_glory_channel", "label": "Gods & Glory YouTube", "file_type": "concept", "source_file": "CLAUDE.md", "source_location": null, "source_url": null, "captured_at": null, "author": null, "contributor": null},
+    {"id": "little_olympus_channel", "label": "Little Olympus YouTube", "file_type": "concept", "source_file": "CLAUDE.md", "source_location": null, "source_url": null, "captured_at": null, "author": null, "contributor": null},
+    {"id": "iron_legends_channel", "label": "Iron Legends YouTube", "file_type": "concept", "source_file": "CLAUDE.md", "source_location": null, "source_url": null, "captured_at": null, "author": null, "contributor": null},
+    {"id": "mission_board_json", "label": "MISSION_BOARD.json", "file_type": "concept", "source_file": "MISSION_BOARD.json", "source_location": null, "source_url": null, "captured_at": null, "author": null, "contributor": null},
+    {"id": "channel_uploader", "label": "channel_uploader.py", "file_type": "code", "source_file": "channel_uploader.py", "source_location": null, "source_url": null, "captured_at": null, "author": null, "contributor": null}
+  ],
+  "edges": [
+    {"source": "video_pipeline_agent", "target": "render_commercial", "relation": "calls", "confidence": "EXTRACTED", "confidence_score": 1.0, "source_file": "agents/video_pipeline_agent.py", "source_location": null, "weight": 1.0},
+    {"source": "render_commercial", "target": "social_clips", "relation": "produces", "confidence": "INFERRED", "confidence_score": 0.85, "source_file": "render_commercial.py", "source_location": null, "weight": 1.0},
+    {"source": "lib_ebay_listing", "target": "supabase_products_table", "relation": "writes_to", "confidence": "INFERRED", "confidence_score": 0.75, "source_file": "lib/ebay_listing.py", "source_location": null, "weight": 1.0},
+    {"source": "ebay_sync_edge_function", "target": "supabase_products_table", "relation": "upserts", "confidence": "EXTRACTED", "confidence_score": 1.0, "source_file": "inventory-sync/supabase/functions/ebay-sync/", "source_location": null, "weight": 1.0},
+    {"source": "boss_listers_mvp_repo", "target": "lib_ebay_listing", "relation": "calls", "confidence": "INFERRED", "confidence_score": 0.85, "source_file": "boss-listers-mvp/lib/channels/apiConnectors.js", "source_location": null, "weight": 1.0},
+    {"source": "lib_etsy_listing", "target": "storyforge2_publishing_etsy_digital", "relation": "used_by", "confidence": "EXTRACTED", "confidence_score": 1.0, "source_file": "storyforge2/publishing/connectors/etsy_digital.py", "source_location": null, "weight": 1.0},
+    {"source": "storyforge2_pipeline", "target": "storyforge2_publishing_etsy_digital", "relation": "calls", "confidence": "EXTRACTED", "confidence_score": 1.0, "source_file": "storyforge2/pipeline.py", "source_location": null, "weight": 1.0},
+    {"source": "auto_publisher", "target": "crosspost_bridge", "relation": "uses", "confidence": "EXTRACTED", "confidence_score": 1.0, "source_file": "social_clips/auto_publisher.py", "source_location": null, "weight": 1.0},
+    {"source": "book_factory", "target": "storyforge2_pipeline", "relation": "orchestrates", "confidence": "INFERRED", "confidence_score": 0.85, "source_file": "books/factory.py", "source_location": null, "weight": 1.0},
+    {"source": "video_pipeline_agent", "target": "mission_board_json", "relation": "reads", "confidence": "EXTRACTED", "confidence_score": 1.0, "source_file": "agents/video_pipeline_agent.py", "source_location": null, "weight": 1.0},
+    {"source": "empire_os_system", "target": "video_pipeline_agent", "relation": "orchestrates", "confidence": "INFERRED", "confidence_score": 0.95, "source_file": "CLAUDE.md", "source_location": null, "weight": 1.0},
+    {"source": "empire_os_system", "target": "council_bot_system", "relation": "monitors_via", "confidence": "INFERRED", "confidence_score": 0.85, "source_file": "CLAUDE.md", "source_location": null, "weight": 1.0},
+    {"source": "channel_uploader", "target": "gods_glory_channel", "relation": "publishes_to", "confidence": "EXTRACTED", "confidence_score": 1.0, "source_file": "channel_uploader.py", "source_location": null, "weight": 1.0},
+    {"source": "channel_uploader", "target": "little_olympus_channel", "relation": "publishes_to", "confidence": "EXTRACTED", "confidence_score": 1.0, "source_file": "channel_uploader.py", "source_location": null, "weight": 1.0},
+    {"source": "channel_uploader", "target": "iron_legends_channel", "relation": "publishes_to", "confidence": "EXTRACTED", "confidence_score": 1.0, "source_file": "channel_uploader.py", "source_location": null, "weight": 1.0}
+  ],
+  "hyperedges": [
+    {"id": "render_pipeline", "label": "Video Rendering Pipeline", "nodes": ["video_pipeline_agent", "render_commercial", "council_bot_system"], "relation": "form", "confidence": "INFERRED", "confidence_score": 0.85, "source_file": "CLAUDE.md"},
+    {"id": "commerce_pipeline", "label": "Commerce Integration", "nodes": ["boss_listers_mvp_repo", "lib_ebay_listing", "lib_etsy_listing", "supabase_products_table"], "relation": "implement", "confidence": "INFERRED", "confidence_score": 0.8, "source_file": "boss-listers-mvp/"},
+    {"id": "book_publishing", "label": "Book Publishing Pipeline", "nodes": ["book_factory", "storyforge2_pipeline", "lib_etsy_listing", "storyforge2_publishing_etsy_digital"], "relation": "participate_in", "confidence": "INFERRED", "confidence_score": 0.8, "source_file": "books/"}
+  ],
+  "input_tokens": 150000,
+  "output_tokens": 75000
+}

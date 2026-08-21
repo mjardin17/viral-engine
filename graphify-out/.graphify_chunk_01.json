@@ -1,0 +1,634 @@
+{
+  "nodes": [
+    {
+      "id": "empire_os",
+      "label": "Empire OS",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\jjard\\claude\\video-bot-pipeline\\CLAUDE.md",
+      "source_location": "line 7",
+      "source_url": null,
+      "captured_at": "2026-08-21",
+      "author": "Josh Jardin",
+      "contributor": null
+    },
+    {
+      "id": "gods_glory_channel",
+      "label": "Gods & Glory (GG)",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\jjard\\claude\\video-bot-pipeline\\CLAUDE.md",
+      "source_location": "line 42",
+      "source_url": null,
+      "captured_at": "2026-08-21",
+      "author": "Josh Jardin",
+      "contributor": null
+    },
+    {
+      "id": "little_olympus_channel",
+      "label": "Little Olympus (LO)",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\jjard\\claude\\video-bot-pipeline\\CLAUDE.md",
+      "source_location": "line 45",
+      "source_url": null,
+      "captured_at": "2026-08-21",
+      "author": "Josh Jardin",
+      "contributor": null
+    },
+    {
+      "id": "iron_legends_channel",
+      "label": "Iron Legends (IL)",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\jjard\\claude\\video-bot-pipeline\\CLAUDE.md",
+      "source_location": "line 46",
+      "source_url": null,
+      "captured_at": "2026-08-21",
+      "author": "Josh Jardin",
+      "contributor": null
+    },
+    {
+      "id": "empire_render_py",
+      "label": "empire_render.py",
+      "file_type": "code",
+      "source_file": "C:\\Users\\jjard\\claude\\video-bot-pipeline\\CLAUDE.md",
+      "source_location": "line 66",
+      "source_url": null,
+      "captured_at": "2026-08-21",
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "auto_publisher_py",
+      "label": "auto_publisher.py",
+      "file_type": "code",
+      "source_file": "C:\\Users\\jjard\\claude\\video-bot-pipeline\\CLAUDE.md",
+      "source_location": "line 80",
+      "source_url": null,
+      "captured_at": "2026-08-21",
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "council_run_bat",
+      "label": "council_run.bat",
+      "file_type": "code",
+      "source_file": "C:\\Users\\jjard\\claude\\video-bot-pipeline\\CLAUDE.md",
+      "source_location": "line 69",
+      "source_url": null,
+      "captured_at": "2026-08-21",
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "mission_board_json",
+      "label": "MISSION_BOARD.json",
+      "file_type": "document",
+      "source_file": "C:\\Users\\jjard\\claude\\video-bot-pipeline\\AGENT_COORDINATION.md",
+      "source_location": "line 14",
+      "source_url": null,
+      "captured_at": "2026-08-21",
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "crosspost_queue_json",
+      "label": "crosspost_queue.json",
+      "file_type": "document",
+      "source_file": "C:\\Users\\jjard\\claude\\video-bot-pipeline\\AGENT_COORDINATION.md",
+      "source_location": "line 22",
+      "source_url": null,
+      "captured_at": "2026-08-21",
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "video_pipeline_agent",
+      "label": "Video Pipeline Agent",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\jjard\\claude\\video-bot-pipeline\\AGENT_ECOSYSTEM.md",
+      "source_location": "line 55-72",
+      "source_url": null,
+      "captured_at": "2026-08-21",
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "crosslister_agent",
+      "label": "Crosslister Agent",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\jjard\\claude\\video-bot-pipeline\\AGENT_ECOSYSTEM.md",
+      "source_location": "line 75-93",
+      "source_url": null,
+      "captured_at": "2026-08-21",
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "platform_sync_agent",
+      "label": "Platform Sync Agent",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\jjard\\claude\\video-bot-pipeline\\AGENT_ECOSYSTEM.md",
+      "source_location": "line 96-101",
+      "source_url": null,
+      "captured_at": "2026-08-21",
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "sales_tracker_agent",
+      "label": "Sales Tracker Agent",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\jjard\\claude\\video-bot-pipeline\\AGENT_ECOSYSTEM.md",
+      "source_location": "line 37",
+      "source_url": null,
+      "captured_at": "2026-08-21",
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "boss_listers_inventory",
+      "label": "Boss Listers Inventory",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\jjard\\claude\\video-bot-pipeline\\AGENT_COORDINATION.md",
+      "source_location": "line 8",
+      "source_url": null,
+      "captured_at": "2026-08-21",
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "buzz_relay",
+      "label": "Buzz Relay",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\jjard\\claude\\video-bot-pipeline\\AGENT_ECOSYSTEM.md",
+      "source_location": "line 45-50",
+      "source_url": null,
+      "captured_at": "2026-08-21",
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "supabase_products_table",
+      "label": "products table (Supabase)",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\jjard\\claude\\video-bot-pipeline\\CLAUDE.md",
+      "source_location": "line 92",
+      "source_url": null,
+      "captured_at": "2026-08-21",
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "ebay_sync_edge_function",
+      "label": "ebay-sync Edge Function",
+      "file_type": "code",
+      "source_file": "C:\\Users\\jjard\\claude\\video-bot-pipeline\\CLAUDE.md",
+      "source_location": "line 91",
+      "source_url": null,
+      "captured_at": "2026-08-21",
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "book_factory",
+      "label": "Book Factory",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\jjard\\claude\\video-bot-pipeline\\CLAUDE.md",
+      "source_location": "line 50",
+      "source_url": null,
+      "captured_at": "2026-08-21",
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "storyforge2",
+      "label": "StoryForge 2",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\jjard\\claude\\video-bot-pipeline\\CLAUDE.md",
+      "source_location": "line 72",
+      "source_url": null,
+      "captured_at": "2026-08-21",
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "omniroute_router",
+      "label": "OmniRoute",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\jjard\\claude\\video-bot-pipeline\\CLAUDE.md",
+      "source_location": "line 85",
+      "source_url": null,
+      "captured_at": "2026-08-21",
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "ai_router",
+      "label": "ai_router",
+      "file_type": "code",
+      "source_file": "C:\\Users\\jjard\\claude\\video-bot-pipeline\\AGENT_HANDOFF_BRIEF.md",
+      "source_location": "line 40",
+      "source_url": null,
+      "captured_at": "2026-08-21",
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "boss_listers_mvp",
+      "label": "boss-listers-mvp",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\jjard\\claude\\video-bot-pipeline\\BOSSLISTERS_HANDOFF.md",
+      "source_location": "line 5",
+      "source_url": null,
+      "captured_at": "2026-08-21",
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "council_bots",
+      "label": "Council Bots",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\jjard\\claude\\video-bot-pipeline\\CLAUDE.md",
+      "source_location": "line 17",
+      "source_url": null,
+      "captured_at": "2026-08-21",
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "eBay_Sell_Inventory_API",
+      "label": "eBay Sell Inventory API",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\jjard\\claude\\video-bot-pipeline\\CLAUDE.md",
+      "source_location": "line 91",
+      "source_url": null,
+      "captured_at": "2026-08-21",
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "instagram_tiktok_facebook_pinterest",
+      "label": "Social platforms (Instagram, TikTok, Facebook, Pinterest)",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\jjard\\claude\\video-bot-pipeline\\AGENT_COORDINATION.md",
+      "source_location": "line 26",
+      "source_url": null,
+      "captured_at": "2026-08-21",
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "cloudflare_pages",
+      "label": "Cloudflare Pages",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\jjard\\claude\\video-bot-pipeline\\BOSSLISTERS_HANDOFF.md",
+      "source_location": "line 12",
+      "source_url": null,
+      "captured_at": "2026-08-21",
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "trend_scanner",
+      "label": "TrendScanner",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\jjard\\claude\\video-bot-pipeline\\CLAUDE.md",
+      "source_location": "line 95",
+      "source_url": null,
+      "captured_at": "2026-08-21",
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "merch_factory",
+      "label": "Merch Factory",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\jjard\\claude\\video-bot-pipeline\\CLAUDE.md",
+      "source_location": "line 51",
+      "source_url": null,
+      "captured_at": "2026-08-21",
+      "author": null,
+      "contributor": null
+    }
+  ],
+  "edges": [
+    {
+      "source": "empire_os",
+      "target": "gods_glory_channel",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\jjard\\claude\\video-bot-pipeline\\CLAUDE.md",
+      "source_location": "line 39-42",
+      "weight": 1.0
+    },
+    {
+      "source": "empire_os",
+      "target": "little_olympus_channel",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\jjard\\claude\\video-bot-pipeline\\CLAUDE.md",
+      "source_location": "line 39-45",
+      "weight": 1.0
+    },
+    {
+      "source": "empire_os",
+      "target": "iron_legends_channel",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\jjard\\claude\\video-bot-pipeline\\CLAUDE.md",
+      "source_location": "line 39-46",
+      "weight": 1.0
+    },
+    {
+      "source": "empire_render_py",
+      "target": "mission_board_json",
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "C:\\Users\\jjard\\claude\\video-bot-pipeline\\AGENT_ECOSYSTEM.md",
+      "source_location": "line 60-61",
+      "weight": 1.0
+    },
+    {
+      "source": "video_pipeline_agent",
+      "target": "mission_board_json",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\jjard\\claude\\video-bot-pipeline\\AGENT_ECOSYSTEM.md",
+      "source_location": "line 60-62",
+      "weight": 1.0
+    },
+    {
+      "source": "video_pipeline_agent",
+      "target": "empire_render_py",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\jjard\\claude\\video-bot-pipeline\\AGENT_ECOSYSTEM.md",
+      "source_location": "line 65",
+      "weight": 1.0
+    },
+    {
+      "source": "crosslister_agent",
+      "target": "boss_listers_inventory",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\jjard\\claude\\video-bot-pipeline\\AGENT_ECOSYSTEM.md",
+      "source_location": "line 82-83",
+      "weight": 1.0
+    },
+    {
+      "source": "crosslister_agent",
+      "target": "mission_board_json",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\jjard\\claude\\video-bot-pipeline\\AGENT_ECOSYSTEM.md",
+      "source_location": "line 87",
+      "weight": 1.0
+    },
+    {
+      "source": "auto_publisher_py",
+      "target": "instagram_tiktok_facebook_pinterest",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\jjard\\claude\\video-bot-pipeline\\CLAUDE.md",
+      "source_location": "line 80-81",
+      "weight": 1.0
+    },
+    {
+      "source": "crosspost_queue_json",
+      "target": "instagram_tiktok_facebook_pinterest",
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "C:\\Users\\jjard\\claude\\video-bot-pipeline\\AGENT_COORDINATION.md",
+      "source_location": "line 22-26",
+      "weight": 1.0
+    },
+    {
+      "source": "ebay_sync_edge_function",
+      "target": "supabase_products_table",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\jjard\\claude\\video-bot-pipeline\\CLAUDE.md",
+      "source_location": "line 91",
+      "weight": 1.0
+    },
+    {
+      "source": "ebay_sync_edge_function",
+      "target": "eBay_Sell_Inventory_API",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\jjard\\claude\\video-bot-pipeline\\CLAUDE.md",
+      "source_location": "line 91",
+      "weight": 1.0
+    },
+    {
+      "source": "boss_listers_inventory",
+      "target": "supabase_products_table",
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\jjard\\claude\\video-bot-pipeline\\AGENT_ECOSYSTEM.md",
+      "source_location": "line 8-9",
+      "weight": 1.0
+    },
+    {
+      "source": "boss_listers_mvp",
+      "target": "cloudflare_pages",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\jjard\\claude\\video-bot-pipeline\\BOSSLISTERS_HANDOFF.md",
+      "source_location": "line 12",
+      "weight": 1.0
+    },
+    {
+      "source": "book_factory",
+      "target": "storyforge2",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\jjard\\claude\\video-bot-pipeline\\CLAUDE.md",
+      "source_location": "line 50",
+      "weight": 1.0
+    },
+    {
+      "source": "book_factory",
+      "target": "trend_scanner",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\jjard\\claude\\video-bot-pipeline\\CLAUDE.md",
+      "source_location": "line 94-95",
+      "weight": 1.0
+    },
+    {
+      "source": "omniroute_router",
+      "target": "ai_router",
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "C:\\Users\\jjard\\claude\\video-bot-pipeline\\AGENT_HANDOFF_BRIEF.md",
+      "source_location": "line 40-47",
+      "weight": 1.0
+    },
+    {
+      "source": "video_pipeline_agent",
+      "target": "council_bots",
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": "C:\\Users\\jjard\\claude\\video-bot-pipeline\\CLAUDE.md",
+      "source_location": "line 30",
+      "weight": 1.0
+    },
+    {
+      "source": "video_pipeline_agent",
+      "target": "buzz_relay",
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "C:\\Users\\jjard\\claude\\video-bot-pipeline\\AGENT_ECOSYSTEM.md",
+      "source_location": "line 67",
+      "weight": 1.0
+    },
+    {
+      "source": "crosslister_agent",
+      "target": "buzz_relay",
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "C:\\Users\\jjard\\claude\\video-bot-pipeline\\AGENT_ECOSYSTEM.md",
+      "source_location": "line 88",
+      "weight": 1.0
+    },
+    {
+      "source": "sales_tracker_agent",
+      "target": "boss_listers_inventory",
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "C:\\Users\\jjard\\claude\\video-bot-pipeline\\AGENT_ECOSYSTEM.md",
+      "source_location": "line 37-43",
+      "weight": 1.0
+    },
+    {
+      "source": "platform_sync_agent",
+      "target": "boss_listers_inventory",
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "C:\\Users\\jjard\\claude\\video-bot-pipeline\\AGENT_ECOSYSTEM.md",
+      "source_location": "line 15",
+      "weight": 1.0
+    },
+    {
+      "source": "merch_factory",
+      "target": "book_factory",
+      "relation": "semantically_similar_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\jjard\\claude\\video-bot-pipeline\\CLAUDE.md",
+      "source_location": "line 50-51",
+      "weight": 1.0
+    },
+    {
+      "source": "council_run_bat",
+      "target": "council_bots",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\jjard\\claude\\video-bot-pipeline\\CLAUDE.md",
+      "source_location": "line 69",
+      "weight": 1.0
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "agent_ecosystem",
+      "label": "Agent Ecosystem",
+      "nodes": [
+        "video_pipeline_agent",
+        "crosslister_agent",
+        "platform_sync_agent",
+        "sales_tracker_agent",
+        "buzz_relay"
+      ],
+      "relation": "participate_in",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\jjard\\claude\\video-bot-pipeline\\AGENT_ECOSYSTEM.md",
+      "source_location": "line 1-50"
+    },
+    {
+      "id": "rendering_pipeline",
+      "label": "Rendering Pipeline",
+      "nodes": [
+        "empire_render_py",
+        "mission_board_json",
+        "video_pipeline_agent",
+        "council_bots"
+      ],
+      "relation": "implement",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\jjard\\claude\\video-bot-pipeline\\AGENT_ECOSYSTEM.md",
+      "source_location": "line 55-72"
+    },
+    {
+      "id": "inventory_to_commercials",
+      "label": "Inventory to Commercials Flow",
+      "nodes": [
+        "boss_listers_inventory",
+        "crosslister_agent",
+        "mission_board_json",
+        "video_pipeline_agent",
+        "crosspost_queue_json"
+      ],
+      "relation": "participate_in",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\jjard\\claude\\video-bot-pipeline\\AGENT_COORDINATION.md",
+      "source_location": "line 7-27"
+    },
+    {
+      "id": "social_publishing",
+      "label": "Social Publishing Pipeline",
+      "nodes": [
+        "auto_publisher_py",
+        "crosspost_queue_json",
+        "instagram_tiktok_facebook_pinterest"
+      ],
+      "relation": "implement",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\jjard\\claude\\video-bot-pipeline\\AGENT_COORDINATION.md",
+      "source_location": "line 19-26"
+    },
+    {
+      "id": "content_channels",
+      "label": "Content Channels",
+      "nodes": [
+        "empire_os",
+        "gods_glory_channel",
+        "little_olympus_channel",
+        "iron_legends_channel"
+      ],
+      "relation": "form",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\jjard\\claude\\video-bot-pipeline\\CLAUDE.md",
+      "source_location": "line 39-47"
+    }
+  ],
+  "input_tokens": 0,
+  "output_tokens": 0
+}

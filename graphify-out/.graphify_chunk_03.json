@@ -1,0 +1,634 @@
+{
+  "metadata": {
+    "chunk": 3,
+    "total_chunks": 11,
+    "files_processed": 22,
+    "generated_at": "2026-08-21T00:00:00Z",
+    "extraction_tool": "graphify-subagent"
+  },
+  "entities": {
+    "organizations": [
+      {
+        "id": "ORG_VIRAL_ENGINE",
+        "name": "Viral Engine",
+        "type": "content_empire",
+        "description": "Multi-channel AI YouTube documentary and kids content factory",
+        "status": "active",
+        "location": "local",
+        "owner": "Josh Jardin"
+      },
+      {
+        "id": "ORG_EMPIRE_OS",
+        "name": "Empire OS",
+        "type": "orchestration_platform",
+        "description": "v3.0 Enterprise orchestration system with AI Router, Ollama Center, Content Ingress (CrossPost)",
+        "status": "active",
+        "url": "localhost:3000"
+      },
+      {
+        "id": "ORG_BOSS_LISTERS",
+        "name": "Boss Listers",
+        "type": "commerce_platform",
+        "description": "Cross-platform inventory management and resale automation",
+        "status": "partial",
+        "focus": ["eBay", "Etsy", "Poshmark", "Mercari"]
+      }
+    ],
+    "projects": [
+      {
+        "id": "PROJ_VIDEO_BOT_PIPELINE",
+        "name": "Video Bot Pipeline",
+        "type": "render_engine",
+        "description": "Local Windows production engine for video rendering",
+        "location": "C:\\Users\\jjard\\claude\\video-bot-pipeline",
+        "status": "active",
+        "core_files": ["auto_render.py", "empire_render.py", "channel_uploader.py"]
+      },
+      {
+        "id": "PROJ_STORYFORGE2",
+        "name": "StoryForge 2 / Book Factory",
+        "type": "book_generation",
+        "description": "Autonomous book generation: trends → manuscript → cover → publish",
+        "status": "mvp_built",
+        "location": "storyforge2/",
+        "blockers": ["pipeline.py broken imports", "no Claude API integration", "KDP policy"]
+      },
+      {
+        "id": "PROJ_COUNCIL",
+        "name": "Council System",
+        "type": "self_healing",
+        "description": "9 specialized guardian bots monitoring pipeline health",
+        "status": "operational",
+        "bots": 9
+      }
+    ],
+    "channels": [
+      {
+        "id": "CH_GG",
+        "name": "Gods & Glory",
+        "handle": "@GodsAndGloryAI",
+        "platform": "YouTube",
+        "category": "documentary",
+        "target_audience": "18-45",
+        "episodes_rendered": 11,
+        "episodes_scripted": 25,
+        "status": "uploading"
+      },
+      {
+        "id": "CH_LO",
+        "name": "Little Olympus",
+        "handle": "@LittleOlympusAI",
+        "platform": "YouTube",
+        "category": "kids_mythology",
+        "target_audience": "3-10",
+        "episodes_rendered": 1,
+        "episodes_scripted": 40,
+        "status": "active"
+      },
+      {
+        "id": "CH_IL",
+        "name": "Iron Legends",
+        "handle": "@IronLegendsAI",
+        "platform": "YouTube",
+        "category": "kids_mech_anime",
+        "target_audience": "4-12",
+        "episodes_rendered": 0,
+        "episodes_scripted": 1,
+        "status": "queued"
+      },
+      {
+        "id": "CH_ED",
+        "name": "Empire Decoded",
+        "handle": "TBD",
+        "platform": "YouTube",
+        "category": "tech_ai",
+        "target_audience": "18-45",
+        "episodes_rendered": 0,
+        "episodes_scripted": 1,
+        "status": "planning"
+      }
+    ],
+    "systems": [
+      {
+        "id": "SYS_RENDER_PIPELINE",
+        "name": "Video Render Pipeline",
+        "type": "core_production",
+        "stages": 20,
+        "stages_list": [
+          "Idea",
+          "Research",
+          "Outline",
+          "Script",
+          "Storyboard",
+          "Character Bible",
+          "Environment Bible",
+          "Shot List",
+          "Image Prompts",
+          "Video Prompts",
+          "Narration",
+          "Voice",
+          "Music",
+          "Sound FX",
+          "Editing Instructions",
+          "Thumbnail",
+          "SEO Package",
+          "Metadata",
+          "Publishing Package",
+          "Analytics Tracking"
+        ],
+        "status": "operational"
+      },
+      {
+        "id": "SYS_COUNCIL_HEALING",
+        "name": "Council Self-Healing Loop",
+        "type": "quality_assurance",
+        "flow": "Guardian → Healer → Rebuilder → Assembler → QA",
+        "status": "operational"
+      },
+      {
+        "id": "SYS_INVENTORY_SYNC",
+        "name": "eBay Inventory Sync",
+        "type": "commerce_integration",
+        "frequency": "every 15 minutes",
+        "infrastructure": "Supabase Edge Function + pg_cron",
+        "status": "waiting_credentials"
+      },
+      {
+        "id": "SYS_SCANNER_INTEGRATION",
+        "name": "Epson Scanner Integration",
+        "type": "hardware_bridge",
+        "hardware": "Epson WorkForce ES-400 II",
+        "output": "multi_platform_listings",
+        "status": "production_ready"
+      }
+    ],
+    "platforms": [
+      {
+        "id": "PLAT_YOUTUBE",
+        "name": "YouTube",
+        "integration": "channel_uploader.py",
+        "status": "active",
+        "channels": 4
+      },
+      {
+        "id": "PLAT_TIKTOK",
+        "name": "TikTok",
+        "integration": "auto_publisher.py (tiktok_publish)",
+        "status": "implemented"
+      },
+      {
+        "id": "PLAT_INSTAGRAM",
+        "name": "Instagram",
+        "integration": "lib/instagram_publisher.py (real Reels API)",
+        "status": "implemented_2026_08_12"
+      },
+      {
+        "id": "PLAT_FACEBOOK",
+        "name": "Facebook",
+        "integration": "browser_connector (manual path)",
+        "status": "manual_only"
+      },
+      {
+        "id": "PLAT_EBAY",
+        "name": "eBay",
+        "integration": "lib/ebay_listing.py + scripts/listing_service.py",
+        "status": "live_production",
+        "environment": "sandbox_and_production",
+        "capabilities": ["create_inventory_items", "publish_offers", "track_sales"]
+      },
+      {
+        "id": "PLAT_ETSY",
+        "name": "Etsy",
+        "integration": "lib/etsy_listing.py + storyforge2/publishing/connectors/etsy_digital.py",
+        "status": "physical_ready_digital_ready",
+        "capabilities": ["physical_listings", "digital_downloads"]
+      }
+    ],
+    "ai_services": [
+      {
+        "id": "AI_GEMINI",
+        "name": "Google Gemini",
+        "models": ["gemini-2.5-flash", "gemini-3.5-flash"],
+        "role": "research, script generation, content analysis",
+        "integration": "GEMINI_API_KEY",
+        "status": "active"
+      },
+      {
+        "id": "AI_CLAUDE",
+        "name": "Anthropic Claude",
+        "models": ["claude-opus-4", "claude-sonnet-4", "claude-haiku-4"],
+        "role": "architecture, code, complex reasoning",
+        "integration": "ANTHROPIC_API_KEY (partial)",
+        "status": "partial"
+      },
+      {
+        "id": "AI_HIGGSFIELD",
+        "name": "Higgsfield",
+        "role": "character animation, mech design for IL/LO",
+        "type": "paid_image_generation",
+        "cost_model": "credits",
+        "status": "in_use"
+      },
+      {
+        "id": "AI_POLLINATIONS",
+        "name": "Pollinations",
+        "role": "free unlimited image generation",
+        "integration": "no_key_required",
+        "status": "active_fallback"
+      },
+      {
+        "id": "AI_OMNIROUTE",
+        "name": "OmniRoute",
+        "role": "multi_provider_ai_router",
+        "providers": 20,
+        "location": "localhost:20128",
+        "status": "live"
+      }
+    ],
+    "infrastructure": [
+      {
+        "id": "INF_SUPABASE",
+        "name": "Supabase",
+        "role": "inventory, commerce, realtime sync",
+        "project": "irslzufsqjveyibkfjtz (Boss listers prod)",
+        "status": "live",
+        "tables": ["products", "sync_logs", "sync_state", "marketplace_accounts", "marketplace_listings"]
+      },
+      {
+        "id": "INF_CLOUDFLARE_PAGES",
+        "name": "Cloudflare Pages",
+        "role": "website hosting, API functions",
+        "url": "jardins-outpost.pages.dev",
+        "status": "live",
+        "functions": ["/api/products", "/api/storefront/*"]
+      },
+      {
+        "id": "INF_GITHUB",
+        "name": "GitHub",
+        "url": "github.com/mjardin17/viral-engine",
+        "status": "production_repo",
+        "branch": "main"
+      }
+    ],
+    "data_structures": [
+      {
+        "id": "DATA_MISSION_BOARD",
+        "name": "MISSION_BOARD.json",
+        "type": "task_queue",
+        "purpose": "immediate action queue for agent dispatch",
+        "location": "repo_root"
+      },
+      {
+        "id": "DATA_RENDER_LOG",
+        "name": "render_log.json",
+        "type": "production_log",
+        "tracks": ["finished episodes", "file sizes", "timestamps", "status"]
+      },
+      {
+        "id": "DATA_SYNC_STATE",
+        "name": "sync_state.json",
+        "type": "circuit_breaker",
+        "purpose": "track eBay sync health, cooldowns"
+      }
+    ]
+  },
+  "relationships": {
+    "contains": [
+      {
+        "source": "ORG_VIRAL_ENGINE",
+        "target": "CH_GG",
+        "type": "channel_ownership"
+      },
+      {
+        "source": "ORG_VIRAL_ENGINE",
+        "target": "CH_LO",
+        "type": "channel_ownership"
+      },
+      {
+        "source": "ORG_VIRAL_ENGINE",
+        "target": "CH_IL",
+        "type": "channel_ownership"
+      },
+      {
+        "source": "ORG_VIRAL_ENGINE",
+        "target": "CH_ED",
+        "type": "channel_ownership"
+      }
+    ],
+    "uses": [
+      {
+        "source": "PROJ_VIDEO_BOT_PIPELINE",
+        "target": "SYS_RENDER_PIPELINE",
+        "type": "orchestrates"
+      },
+      {
+        "source": "PROJ_VIDEO_BOT_PIPELINE",
+        "target": "PROJ_COUNCIL",
+        "type": "monitors_via"
+      },
+      {
+        "source": "PROJ_VIDEO_BOT_PIPELINE",
+        "target": "AI_GEMINI",
+        "type": "uses_for_research_scripts"
+      },
+      {
+        "source": "PROJ_VIDEO_BOT_PIPELINE",
+        "target": "AI_HIGGSFIELD",
+        "type": "uses_for_animation"
+      },
+      {
+        "source": "PROJ_STORYFORGE2",
+        "target": "AI_GEMINI",
+        "type": "manuscript_generation"
+      },
+      {
+        "source": "PROJ_STORYFORGE2",
+        "target": "PLAT_ETSY",
+        "type": "publishes_to_etsy_digital"
+      }
+    ],
+    "publishes_to": [
+      {
+        "source": "CH_GG",
+        "target": "PLAT_YOUTUBE",
+        "type": "primary"
+      },
+      {
+        "source": "CH_GG",
+        "target": "PLAT_TIKTOK",
+        "type": "clips"
+      },
+      {
+        "source": "CH_GG",
+        "target": "PLAT_INSTAGRAM",
+        "type": "clips"
+      },
+      {
+        "source": "CH_LO",
+        "target": "PLAT_YOUTUBE",
+        "type": "primary"
+      },
+      {
+        "source": "PROJ_STORYFORGE2",
+        "target": "PLAT_EBAY",
+        "type": "etsy_digital_books"
+      }
+    ],
+    "integrates_with": [
+      {
+        "source": "ORG_BOSS_LISTERS",
+        "target": "INF_SUPABASE",
+        "type": "inventory_backend"
+      },
+      {
+        "source": "ORG_BOSS_LISTERS",
+        "target": "PLAT_EBAY",
+        "type": "sync_platform"
+      },
+      {
+        "source": "ORG_BOSS_LISTERS",
+        "target": "PLAT_ETSY",
+        "type": "sync_platform"
+      },
+      {
+        "source": "SYS_INVENTORY_SYNC",
+        "target": "INF_SUPABASE",
+        "type": "writes_to"
+      },
+      {
+        "source": "SYS_INVENTORY_SYNC",
+        "target": "PLAT_EBAY",
+        "type": "reads_from"
+      }
+    ],
+    "depends_on": [
+      {
+        "source": "PROJ_STORYFORGE2",
+        "target": "AI_CLAUDE",
+        "status": "blocked_no_anthropic_key",
+        "workaround": "use Gemini instead"
+      },
+      {
+        "source": "PROJ_VIDEO_BOT_PIPELINE",
+        "target": "SYS_COUNCIL_HEALING",
+        "type": "requires_health_checks"
+      }
+    ]
+  },
+  "clusters": {
+    "production_stack": {
+      "name": "Video Production Stack",
+      "entities": [
+        "PROJ_VIDEO_BOT_PIPELINE",
+        "SYS_RENDER_PIPELINE",
+        "PROJ_COUNCIL",
+        "CH_GG",
+        "CH_LO",
+        "CH_IL",
+        "CH_ED"
+      ],
+      "status": "operational",
+      "description": "End-to-end video production from concept to upload"
+    },
+    "commerce_stack": {
+      "name": "Commerce & Inventory Stack",
+      "entities": [
+        "ORG_BOSS_LISTERS",
+        "SYS_INVENTORY_SYNC",
+        "SYS_SCANNER_INTEGRATION",
+        "INF_SUPABASE",
+        "PLAT_EBAY",
+        "PLAT_ETSY"
+      ],
+      "status": "partial_live",
+      "description": "Multi-platform inventory management and resale"
+    },
+    "book_publishing_stack": {
+      "name": "Book Publishing Stack",
+      "entities": [
+        "PROJ_STORYFORGE2",
+        "AI_GEMINI",
+        "AI_CLAUDE",
+        "PLAT_ETSY"
+      ],
+      "status": "mvp_with_blockers",
+      "description": "Autonomous book generation and publishing pipeline"
+    },
+    "orchestration_layer": {
+      "name": "Orchestration & AI Routing",
+      "entities": [
+        "ORG_EMPIRE_OS",
+        "AI_OMNIROUTE",
+        "AI_GEMINI",
+        "AI_CLAUDE"
+      ],
+      "status": "operational",
+      "description": "Central coordination of all AI services and task routing"
+    }
+  },
+  "workflows": [
+    {
+      "id": "WF_VIDEO_PRODUCTION",
+      "name": "Video Production Workflow",
+      "steps": [
+        "Research (Gemini)",
+        "Script Generation",
+        "Image Generation (Pollinations/Higgsfield)",
+        "Audio (TTS + Music)",
+        "Video Composition (FFmpeg)",
+        "Council QA (9 bots)",
+        "Upload to YouTube",
+        "Crosspost to TikTok/IG/FB"
+      ],
+      "orchestrator": "PROJ_VIDEO_BOT_PIPELINE"
+    },
+    {
+      "id": "WF_BOOK_GENERATION",
+      "name": "Book Factory Workflow",
+      "steps": [
+        "Trend Scanning",
+        "Opportunity Detection",
+        "Manuscript Generation (Gemini/Claude)",
+        "Cover Design",
+        "Metadata Enrichment",
+        "Dry-Run Publication",
+        "Live Publication (Etsy Digital)"
+      ],
+      "orchestrator": "PROJ_STORYFORGE2",
+      "status": "blocked_phase_0"
+    },
+    {
+      "id": "WF_INVENTORY_SYNC",
+      "name": "Inventory Sync Workflow",
+      "steps": [
+        "Poll eBay Inventory API",
+        "Check for price/quantity changes",
+        "Upsert to Supabase",
+        "Trigger marketplace updates",
+        "Emit realtime events"
+      ],
+      "frequency": "every 15 minutes",
+      "orchestrator": "SYS_INVENTORY_SYNC"
+    },
+    {
+      "id": "WF_SCANNER_LISTING",
+      "name": "Scanner to Multi-Platform Listing",
+      "steps": [
+        "Scan product (Epson ES-400 II)",
+        "Detect folder in ~/Scans/BossListers/",
+        "Extract product info",
+        "Generate platform-specific listings",
+        "Auto-price suggestions",
+        "Josh reviews + sets price",
+        "Auto-publish to 8 platforms"
+      ],
+      "time_to_publish": "5-10 minutes"
+    }
+  ],
+  "critical_paths": [
+    {
+      "name": "Get GG Live (PRIMARY)",
+      "blockers": [],
+      "status": "in_progress",
+      "tasks": [
+        "Upload EP001-011 to YouTube",
+        "Make EP008-011 private (stubs)",
+        "Render EP012-025",
+        "Upload full season 3"
+      ]
+    },
+    {
+      "name": "Fix Book Factory",
+      "blockers": [
+        "storyforge2/pipeline.py broken imports",
+        "no Claude API key",
+        "Draft2Digital verification needed"
+      ],
+      "status": "blocked_phase_0",
+      "priority": "secondary"
+    },
+    {
+      "name": "Complete eBay Integration",
+      "blockers": [
+        "token refresh scope (need sell.fulfillment)",
+        "boss-listers-mvp deployment needed"
+      ],
+      "status": "in_progress",
+      "tasks": [
+        "Re-consent eBay OAuth with sell.fulfillment scope",
+        "Deploy boss-listers-mvp to Vercel",
+        "Test real inventory sync"
+      ]
+    },
+    {
+      "name": "Launch Etsy Digital Books",
+      "blockers": [
+        "Etsy app approval pending",
+        "real ETSY_ACCESS_TOKEN needed",
+        "real ETSY_SHOP_ID needed"
+      ],
+      "status": "code_ready_credentials_pending",
+      "tasks": [
+        "wait for Etsy app approval",
+        "obtain real credentials",
+        "verify taxonomy_id",
+        "live test with real account"
+      ]
+    }
+  ],
+  "key_metrics": {
+    "production": {
+      "episodes_rendered": 5,
+      "episodes_scripted": 68,
+      "scripts_ready_to_render": 14,
+      "channels_active": 4,
+      "total_runtime": "~9 minutes (uploaded only)"
+    },
+    "commerce": {
+      "inventory_synced": 69,
+      "platforms_connected": 2,
+      "platforms_manual": 1,
+      "platforms_planned": 5
+    },
+    "infrastructure": {
+      "supabase_projects": 1,
+      "edge_functions": 2,
+      "ai_providers": 6,
+      "platforms": 8
+    }
+  },
+  "status_summary": {
+    "overall": "operational_with_blockers",
+    "video_production": "active_uploading",
+    "book_factory": "mvp_built_phase0_blocked",
+    "commerce": "partial_live",
+    "etsy_integration": "ready_credentials_pending",
+    "ebay_integration": "live_oauth_scope_incomplete"
+  },
+  "next_actions": [
+    {
+      "priority": 1,
+      "task": "Upload GG EP001-025 to YouTube",
+      "owner": "Josh",
+      "blocker": false
+    },
+    {
+      "priority": 2,
+      "task": "Fix Book Factory phase 0 (pipeline.py imports)",
+      "owner": "Claude",
+      "blocker": true
+    },
+    {
+      "priority": 3,
+      "task": "Re-consent eBay OAuth with sell.fulfillment scope",
+      "owner": "Josh",
+      "blocker": true
+    },
+    {
+      "priority": 4,
+      "task": "Deploy boss-listers-mvp to Vercel",
+      "owner": "Claude",
+      "blocker": false
+    }
+  ]
+}

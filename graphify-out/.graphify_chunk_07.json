@@ -1,0 +1,573 @@
+{
+  "metadata": {
+    "chunk": 7,
+    "total_files": 22,
+    "extraction_date": "2026-08-21",
+    "source_paths": [
+      "empire-os-patch/apps/crosspost-enterprise/",
+      "empire-os-patch/apps/storyforge/",
+      "empire-os-patch/apps/video-pipeline/",
+      "extension/",
+      "gemini-empire-agent/"
+    ]
+  },
+  "entities": {
+    "systems": [
+      {
+        "id": "empire_os",
+        "name": "Empire OS",
+        "type": "operating_system",
+        "description": "Comprehensive, full-stack, local-first automation workstation and media production suite",
+        "version": "3.0.0",
+        "architecture": "TypeScript/Express frontend + Python backends",
+        "port": 3000,
+        "is_sovereign": true,
+        "layers": [
+          "Operating Command (Empire OS)",
+          "Content Syndicate (CrossPost)",
+          "Local Inference Cluster (Ollama)",
+          "Media Forge Pipelines",
+          "Agentic Core"
+        ]
+      },
+      {
+        "id": "ollama_inference",
+        "name": "Ollama Local Inference",
+        "type": "inference_engine",
+        "description": "Local GPU/CPU-based models executing private reasoning, drafting, and scripting tasks",
+        "port": 11434,
+        "capabilities": ["text_generation", "code_completion", "analysis"],
+        "hardware": ["VRAM", "RAM", "GPU", "CPU"]
+      },
+      {
+        "id": "event_bus",
+        "name": "Empire Event Bus",
+        "type": "pub_sub_messaging",
+        "description": "Centralized pub-sub messaging model broadcasting state triggers",
+        "endpoint": "/api/empire/event-bus",
+        "message_types": ["video_creator.step.completed", "script.created", "render.completed"]
+      },
+      {
+        "id": "ai_router",
+        "name": "AI Router",
+        "type": "intelligent_gateway",
+        "description": "Localized intelligent gateway mapping cognitive prompts to best-suited model",
+        "endpoint": "/api/empire/ai-router",
+        "features": ["auto_model_selection", "context_aware_routing", "fallback_handling"]
+      },
+      {
+        "id": "module_gateway",
+        "name": "Module Gateway",
+        "type": "service_registry",
+        "description": "Registers and manages lifecycle of external modules and plugins",
+        "health_check_pattern": "GET /empire/health",
+        "registration_fields": ["module_id", "base_url", "health", "priority", "capabilities"]
+      }
+    ],
+    "modules": [
+      {
+        "id": "mission_control",
+        "name": "Mission Control",
+        "type": "dashboard_module",
+        "file": "src/components/MissionControl.tsx",
+        "status": "ACTIVE",
+        "features": ["live_status_indicators", "system_terminal", "telemetry_aggregation"],
+        "endpoints": ["/api/empire/event-bus", "/api/empire/telemetry"]
+      },
+      {
+        "id": "video_creator",
+        "name": "Video Creator Pipeline",
+        "type": "content_pipeline",
+        "file": "src/components/VideoCreator.tsx",
+        "status": "ACTIVE",
+        "stages": 13,
+        "features": ["research", "scripting", "voiceover", "rendering", "publishing"],
+        "api_endpoint": "/api/video-pipeline/create"
+      },
+      {
+        "id": "empire_inspector",
+        "name": "Empire Inspector",
+        "type": "audit_module",
+        "file": "src/components/EmpireInspector.tsx",
+        "status": "ACTIVE",
+        "features": ["codebase_audit", "dependency_analysis", "health_scoring", "alternate_models"],
+        "rating_vectors": 8
+      },
+      {
+        "id": "ollama_command_center",
+        "name": "Ollama Command Center",
+        "type": "control_module",
+        "file": "src/components/OllamaCommandCenter.tsx",
+        "status": "ACTIVE",
+        "features": ["connection_monitoring", "download_metrics", "token_generation_testing", "vram_management"]
+      },
+      {
+        "id": "performance_dashboard",
+        "name": "Performance Dashboard",
+        "type": "monitoring_module",
+        "file": "src/components/PerformanceDashboard.tsx",
+        "status": "ACTIVE",
+        "metrics": ["cpu", "ram", "gpu_temperature", "vram_utilization", "api_requests"]
+      },
+      {
+        "id": "storyforge_module",
+        "name": "StoryForge Module",
+        "type": "creative_planning_module",
+        "file": "apps/storyforge/empire-module/storyforge.module.ts",
+        "status": "ACTIVE",
+        "features": ["scene_planning", "visual_prompting", "storyboard_generation"],
+        "external_service": "http://localhost:8001"
+      },
+      {
+        "id": "video_pipeline_module",
+        "name": "Video Pipeline Module",
+        "type": "rendering_module",
+        "file": "apps/video-pipeline/empire-module/video-pipeline.module.ts",
+        "status": "ACTIVE",
+        "external_service": "http://localhost:8002",
+        "api_bridge": "python_fastapi"
+      }
+    ],
+    "services": [
+      {
+        "id": "crosspost",
+        "name": "CrossPost",
+        "type": "content_syndicate",
+        "description": "Multi-channel publishing, compliance, sentiment scoring, and social-arbitrage engine",
+        "capabilities": ["platform_optimization", "compliance_checking", "sentiment_analysis"]
+      },
+      {
+        "id": "documentary_factory",
+        "name": "Documentary Factory",
+        "type": "document_processor",
+        "description": "Translates folder trees and code files into elegant markdown manuals and system architectures"
+      },
+      {
+        "id": "book_pipeline",
+        "name": "Book Pipeline (KDP)",
+        "type": "publishing_pipeline",
+        "description": "Curates manuscripts, designs table of contents, packages print-ready PDF and Kindle formats",
+        "schedule": "Q3 2026",
+        "priority": "high"
+      },
+      {
+        "id": "merch_pipeline",
+        "name": "Merch Pipeline",
+        "type": "product_pipeline",
+        "description": "Automates graphic rendering, vector overlays, and print-on-demand listings",
+        "schedule": "Q4 2026",
+        "priority": "medium"
+      }
+    ],
+    "local_models": [
+      {
+        "id": "deepseek_coder",
+        "name": "DeepSeek-Coder",
+        "model_type": "code_generation",
+        "versions": ["8B", "33B"],
+        "endpoint": "localhost:11434/api/generate",
+        "hardware": "GPU-bound (VRAM)",
+        "tasks": ["shell_command_composition", "code_auditing", "syntax_repair"]
+      },
+      {
+        "id": "qwen2_5",
+        "name": "Qwen-2.5-Instruct",
+        "model_type": "text_generation",
+        "versions": ["14B", "32B"],
+        "endpoint": "localhost:11434/api/generate",
+        "hardware": "GPU-bound (VRAM)",
+        "tasks": ["narrative_writing", "script_writing", "translation"]
+      },
+      {
+        "id": "llama3_1",
+        "name": "Llama-3.1-Instruct",
+        "model_type": "reasoning",
+        "versions": ["8B"],
+        "endpoint": "localhost:11434/api/generate",
+        "hardware": "Hybrid (VRAM/RAM)",
+        "tasks": ["multi_agent_debate", "log_summarization", "email_drafting"]
+      }
+    ],
+    "plugins": [
+      {
+        "id": "higgsfield_plugin",
+        "name": "Higgsfield Image Generation",
+        "type": "connector",
+        "capabilities": ["video_generate", "image_generate", "audio_generate", "voice_clone", "motion_control"],
+        "status": "active",
+        "activation": "HIGGSFIELD_API_KEY env var"
+      }
+    ],
+    "workflows": [
+      {
+        "id": "story_to_render",
+        "name": "Story to Render Workflow",
+        "type": "content_pipeline",
+        "stages": [
+          "premise",
+          "science_analyze",
+          "character_matrix",
+          "world_build",
+          "council_review",
+          "image_generate",
+          "book_export",
+          "human_approval_publish"
+        ],
+        "module": "storyforge"
+      },
+      {
+        "id": "video_creation_workflow",
+        "name": "Video Creation Workflow",
+        "type": "media_pipeline",
+        "stages": 13,
+        "inputs": ["topic_seed"],
+        "outputs": ["final_mp4"],
+        "module": "video_creator"
+      }
+    ]
+  },
+  "apis": {
+    "empire_endpoints": [
+      {
+        "path": "/api/video-pipeline/create",
+        "method": "POST",
+        "description": "Initializes a new video project directory",
+        "input": {
+          "topic": "string"
+        },
+        "output": {
+          "project_id": "string",
+          "status": "idle",
+          "steps": "array",
+          "assets": "object"
+        }
+      },
+      {
+        "path": "/api/video-pipeline/execute-step",
+        "method": "POST",
+        "description": "Executes a specific stage-gate of the video creator pipeline",
+        "input": {
+          "projectId": "string",
+          "stepId": "string"
+        }
+      },
+      {
+        "path": "/api/empire/ai-router",
+        "method": "POST",
+        "description": "Routes prompt payloads to local Ollama or Cloud Gemini",
+        "input": {
+          "prompt": "string",
+          "systemInstruction": "string",
+          "platformId": "string",
+          "useModel": "auto|string"
+        }
+      },
+      {
+        "path": "/api/empire/event-bus",
+        "method": "GET",
+        "description": "Stream or pull active events from background pipelines"
+      },
+      {
+        "path": "/api/empire/telemetry",
+        "method": "GET",
+        "description": "Pull system hardware metrics and model loads"
+      }
+    ],
+    "ollama_endpoints": [
+      {
+        "path": "/api/generate",
+        "method": "POST",
+        "description": "Generates text completion based on specified local model",
+        "parameters": {
+          "model": "string",
+          "prompt": "string",
+          "stream": "boolean"
+        }
+      },
+      {
+        "path": "/api/tags",
+        "method": "GET",
+        "description": "Returns all models currently downloaded and available"
+      }
+    ],
+    "storyforge_endpoints": [
+      {
+        "path": "/science/analyze",
+        "method": "POST",
+        "capability": "story-science"
+      },
+      {
+        "path": "/characters",
+        "method": "POST",
+        "capability": "character-memory"
+      },
+      {
+        "path": "/characters/{id}",
+        "method": "GET",
+        "capability": "character-get"
+      },
+      {
+        "path": "/worlds",
+        "method": "POST",
+        "capability": "world-engine"
+      },
+      {
+        "path": "/worlds/{id}/encyclopedia/search",
+        "method": "GET",
+        "capability": "world-search"
+      },
+      {
+        "path": "/images/generate",
+        "method": "POST",
+        "capability": "image-generate"
+      },
+      {
+        "path": "/book/export/epub",
+        "method": "POST",
+        "capability": "book-export"
+      },
+      {
+        "path": "/council/review",
+        "method": "POST",
+        "capability": "council-review"
+      },
+      {
+        "path": "/empire/health",
+        "method": "GET",
+        "capability": "health_check"
+      }
+    ],
+    "video_pipeline_endpoints": [
+      {
+        "path": "/empire/health",
+        "method": "GET",
+        "description": "Health + active render count"
+      },
+      {
+        "path": "/empire/status",
+        "method": "GET",
+        "description": "Full module descriptor + episode stats"
+      },
+      {
+        "path": "/empire/event",
+        "method": "POST",
+        "description": "Receive Empire OS events (script.created → queues render)"
+      },
+      {
+        "path": "/api/episodes",
+        "method": "GET",
+        "description": "All episodes with render status"
+      },
+      {
+        "path": "/api/render",
+        "method": "POST",
+        "description": "Trigger auto_render.py --episode"
+      }
+    ]
+  },
+  "file_structure": {
+    "root_files": [
+      ".env.example",
+      ".gitignore",
+      "index.html",
+      "metadata.json",
+      "package.json",
+      "tsconfig.json",
+      "vite.config.ts",
+      "server.ts",
+      "pnpm-workspace.yaml"
+    ],
+    "documentation": [
+      "EMPIRE_SYSTEM_MANUAL.md",
+      "SYSTEM_MAP.json",
+      "AI_RESPONSIBILITIES.md",
+      "PIPELINE_REFERENCE.md",
+      "LOCAL_MODELS.md",
+      "FOLDER_STRUCTURE.md",
+      "API_REFERENCE.md",
+      "AUTOMATION_RULES.md",
+      "PROJECT_INDEX.md",
+      "MEMORY_PROTOCOL.md"
+    ],
+    "directories": {
+      "src": {
+        "App.tsx": "Primary UI dashboard coordinator",
+        "main.tsx": "React rendering entrypoint",
+        "index.css": "Tailwind CSS imports",
+        "types.ts": "TypeScript shared interfaces",
+        "components": [
+          "MissionControl.tsx",
+          "DocumentaryFactory.tsx",
+          "VideoCreator.tsx",
+          "AIRouter.tsx",
+          "EmpireInspector.tsx",
+          "OllamaCommandCenter.tsx",
+          "PerformanceDashboard.tsx",
+          "AutomationCenter.tsx"
+        ]
+      },
+      "assets": {
+        "media": "Rendered video and audio assets",
+        "projects": "Independent project folders",
+        "templates": "Audio soundscapes, video overlays"
+      },
+      "apps": {
+        "crosspost-enterprise": "Multi-channel publishing system",
+        "storyforge": "Creative content production engine",
+        "video-pipeline": "Video rendering and orchestration"
+      },
+      "extension": "Boss Listers browser extension (scaffold)"
+    }
+  },
+  "integrations": {
+    "storyforge_integration": {
+      "status": "Active",
+      "phase": "2A",
+      "external_service_port": 8001,
+      "memory_sync": {
+        "file": "empire_hooks/memory_sync.py",
+        "type": "WorldMemorySync",
+        "description": "Forwards World Engine writes to Empire OS Memory Bus"
+      },
+      "event_emitter": {
+        "file": "empire_hooks/event_emitter.py",
+        "description": "Emits to Empire OS Event Bus on writes"
+      },
+      "health_endpoint": "/empire/health"
+    },
+    "video_pipeline_integration": {
+      "status": "Active",
+      "external_service_port": 8002,
+      "bridge_type": "python_fastapi",
+      "event_flow": "StoryForge → script.created → EventBus → VideoPipelineModule → empire_server.py → auto_render.py",
+      "health_endpoint": "/empire/health"
+    }
+  },
+  "automation_rules": [
+    {
+      "rule_id": "never_duplicate_code",
+      "description": "Before writing helper script, search workspace. Reuse existing implementations.",
+      "enforcement": "Mandatory"
+    },
+    {
+      "rule_id": "respect_folder_boundaries",
+      "description": "All outputs must be placed inside standard paths defined in FOLDER_STRUCTURE.md",
+      "enforcement": "Mandatory"
+    },
+    {
+      "rule_id": "maintain_code_safety",
+      "description": "When modifying Node/Express backend, preserve existing routes. Never hardcode credentials.",
+      "enforcement": "Mandatory"
+    },
+    {
+      "rule_id": "stage_gate_autonomy",
+      "description": "Every step of pipeline must work independently. If Step 5 fails, only Step 5 retries.",
+      "enforcement": "Joshua Directive"
+    },
+    {
+      "rule_id": "no_overlapping_scraping",
+      "description": "Reuse headless browser proxies and central caching to prevent IP bans",
+      "enforcement": "Mandatory"
+    },
+    {
+      "rule_id": "documentation_compliance",
+      "description": "Any code changes must update PROJECT_INDEX.md and EMPIRE_SYSTEM_MANUAL.md",
+      "enforcement": "Mandatory"
+    }
+  ],
+  "environment_variables": {
+    "storyforge": [
+      "STORYFORGE_BASE_URL=http://localhost:8001",
+      "EMPIRE_OS_MEMORY_URL=http://localhost:3100/memory",
+      "EMPIRE_OS_EVENT_URL=http://localhost:3100/events",
+      "OPENROUTER_API_KEY",
+      "ANTHROPIC_API_KEY",
+      "OLLAMA_BASE_URL=http://localhost:11434",
+      "HIGGSFIELD_API_KEY",
+      "HIGGSFIELD_API_URL=https://api.higgsfield.ai",
+      "OPENAI_API_KEY",
+      "COMFYUI_BASE_URL=http://localhost:8188"
+    ],
+    "video_pipeline": [
+      "EMPIRE_OS_EVENT_URL=http://localhost:5000/api/events",
+      "PIPELINE_BASE_URL=http://localhost:8002"
+    ]
+  },
+  "relationships": {
+    "module_registrations": [
+      {
+        "module_id": "storyforge",
+        "base_url": "http://localhost:8001",
+        "priority": 20,
+        "capabilities": [
+          "story-science",
+          "character-memory",
+          "character-get",
+          "world-engine",
+          "world-search",
+          "image-generate",
+          "publishing-studio",
+          "book-export",
+          "council-review"
+        ]
+      },
+      {
+        "module_id": "video-pipeline",
+        "base_url": "http://localhost:8002",
+        "priority": 15,
+        "capabilities": ["render", "episode-status", "council-status"]
+      }
+    ],
+    "ai_model_allocation": [
+      {
+        "model": "deepseek-coder",
+        "allocated_to": ["shell_scripting", "code_auditing"],
+        "priority": "high"
+      },
+      {
+        "model": "qwen2.5",
+        "allocated_to": ["scriptwriting", "copywriting"],
+        "priority": "high"
+      },
+      {
+        "model": "llama3.1",
+        "allocated_to": ["debate", "summarization"],
+        "priority": "medium"
+      }
+    ],
+    "event_subscriptions": [
+      {
+        "source": "StoryForge",
+        "event_type": "script.created",
+        "subscriber": "VideoPipelineModule",
+        "action": "queue_render"
+      },
+      {
+        "source": "VideoPipelineModule",
+        "event_type": "render.completed",
+        "subscriber": "EventBus",
+        "action": "broadcast"
+      }
+    ]
+  },
+  "project_status": {
+    "active_initiatives": [
+      "Mission Control Deck",
+      "Video Creator Pipeline",
+      "Empire Inspector",
+      "StoryForge Planner"
+    ],
+    "future_roadmap": [
+      {
+        "name": "KDP Automated Book Publisher",
+        "schedule": "Q3 2026",
+        "priority": "High"
+      },
+      {
+        "name": "Merch Vector Engine",
+        "schedule": "Q4 2026",
+        "priority": "Medium"
+      }
+    ]
+  }
+}

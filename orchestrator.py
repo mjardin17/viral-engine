@@ -113,7 +113,7 @@ def process_item(item, state):
         results["etsy"] = "[OK]" if etsy_result else "[FAIL]"
         print(f"  {results['etsy']} Etsy")
     except Exception as e:
-        results["etsy"] = f"✗ ({str(e)[:50]})"
+        results["etsy"] = f"[FAIL] ({str(e)[:50]})"
         print(f"  {results['etsy']}")
 
     # 3. FACEBOOK MARKETPLACE
@@ -136,7 +136,7 @@ def process_item(item, state):
         results["facebook"] = "[OK]" if fb_result else "[FAIL]"
         print(f"  {results['facebook']} Facebook")
     except Exception as e:
-        results["facebook"] = f"✗ ({str(e)[:50]})"
+        results["facebook"] = f"[FAIL] ({str(e)[:50]})"
         print(f"  {results['facebook']}")
 
     # 4. INSTAGRAM
@@ -144,10 +144,10 @@ def process_item(item, state):
     try:
         from social_clips.auto_publisher import queue_for_instagram
         # Will be auto-posted after commercial render + clip extraction
-        results["instagram"] = "✓ (clips pending)"
+        results["instagram"] = "[OK] (clips pending)"
         print(f"  {results['instagram']}")
     except Exception as e:
-        results["instagram"] = f"✗ ({str(e)[:50]})"
+        results["instagram"] = f"[FAIL] ({str(e)[:50]})"
         print(f"  {results['instagram']}")
 
     # 5. WHATNOT
@@ -156,10 +156,10 @@ def process_item(item, state):
         from lib.whatnot_orchestrator import WhatnotAuctionManager
         manager = WhatnotAuctionManager()
         # Queue for next livestream
-        results["whatnot"] = "✓ (auction pending)"
+        results["whatnot"] = "[OK] (auction pending)"
         print(f"  {results['whatnot']}")
     except Exception as e:
-        results["whatnot"] = f"✗ ({str(e)[:50]})"
+        results["whatnot"] = f"[FAIL] ({str(e)[:50]})"
         print(f"  {results['whatnot']}")
 
     # 6. POSHMARK
@@ -168,10 +168,10 @@ def process_item(item, state):
         from lib.browser_connectors import PoshmarkConnector
         connector = PoshmarkConnector()
         # Authenticate and list
-        results["poshmark"] = "✓ (listing pending)"
+        results["poshmark"] = "[OK] (listing pending)"
         print(f"  {results['poshmark']}")
     except Exception as e:
-        results["poshmark"] = f"✗ ({str(e)[:50]})"
+        results["poshmark"] = f"[FAIL] ({str(e)[:50]})"
         print(f"  {results['poshmark']}")
 
     # Summary

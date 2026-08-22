@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Master Orchestrator — Autonomous empire loop
-Scans inventory → books → all 14 platforms → social clips → distribution
+Scans inventory  books  all 14 platforms  social clips  distribution
 """
 
 import json
@@ -15,10 +15,6 @@ from decimal import Decimal
 from lib.ebay_listing import EbayListingClient
 from lib.etsy_listing import EtsyListingClient
 from lib.facebook_marketplace_listing import FacebookMarketplaceListingClient
-from lib.commercial_generator import create_commercial_mission
-from storyforge2.books.factory import BookFactory
-from social_clips.clip_generator import extract_clips
-from social_clips.auto_publisher import publish_to_platforms
 
 CONFIG = {
     "inventory_source": "boss-listers",  # Where to watch for new items
@@ -69,13 +65,13 @@ def process_item(item, state):
         return False
 
     print(f"\n{'='*70}")
-    print(f"🚀 Processing: {item['name']} ({sku})")
+    print(f" Processing: {item['name']} ({sku})")
     print(f"{'='*70}")
 
     results = {}
 
     # 1. EBAY
-    print(f"\n📦 eBay: Creating listing...")
+    print(f"\n eBay: Creating listing...")
     try:
         ebay_client = EbayListingClient(
             os.getenv("EBAY_REFRESH_TOKEN"),
@@ -89,14 +85,14 @@ def process_item(item, state):
             price=Decimal(str(item["price"])),
             dry_run=CONFIG["dry_run"]
         )
-        results["ebay"] = "✓" if ebay_result else "✗"
+        results["ebay"] = "[OK]" if ebay_result else "[FAIL]"
         print(f"  {results['ebay']} eBay")
     except Exception as e:
-        results["ebay"] = f"✗ ({str(e)[:50]})"
+        results["ebay"] = f"[FAIL] ({str(e)[:50]})"
         print(f"  {results['ebay']}")
 
     # 2. ETSY
-    print(f"\n🎨 Etsy: Creating listing...")
+    print(f"\n Etsy: Creating listing...")
     try:
         from lib.etsy_listing import EtsyProduct
         etsy_client = EtsyListingClient(
@@ -114,14 +110,14 @@ def process_item(item, state):
             taxonomy_id="1"
         )
         etsy_result = etsy_client.create_listing(product, dry_run=CONFIG["dry_run"])
-        results["etsy"] = "✓" if etsy_result else "✗"
+        results["etsy"] = "[OK]" if etsy_result else "[FAIL]"
         print(f"  {results['etsy']} Etsy")
     except Exception as e:
         results["etsy"] = f"✗ ({str(e)[:50]})"
         print(f"  {results['etsy']}")
 
     # 3. FACEBOOK MARKETPLACE
-    print(f"\n👥 Facebook: Creating listing...")
+    print(f"\n Facebook: Creating listing...")
     try:
         from lib.facebook_marketplace_listing import FacebookMarketplaceProduct
         fb_client = FacebookMarketplaceListingClient(
@@ -137,14 +133,14 @@ def process_item(item, state):
             images=item.get("images", [])
         )
         fb_result = fb_client.create_listing(product, dry_run=CONFIG["dry_run"])
-        results["facebook"] = "✓" if fb_result else "✗"
+        results["facebook"] = "[OK]" if fb_result else "[FAIL]"
         print(f"  {results['facebook']} Facebook")
     except Exception as e:
         results["facebook"] = f"✗ ({str(e)[:50]})"
         print(f"  {results['facebook']}")
 
     # 4. INSTAGRAM
-    print(f"\n📱 Instagram: Queueing for clips...")
+    print(f"\n Instagram: Queueing for clips...")
     try:
         from social_clips.auto_publisher import queue_for_instagram
         # Will be auto-posted after commercial render + clip extraction
@@ -155,7 +151,7 @@ def process_item(item, state):
         print(f"  {results['instagram']}")
 
     # 5. WHATNOT
-    print(f"\n🎪 Whatnot: Queueing auction...")
+    print(f"\n Whatnot: Queueing auction...")
     try:
         from lib.whatnot_orchestrator import WhatnotAuctionManager
         manager = WhatnotAuctionManager()
@@ -167,7 +163,7 @@ def process_item(item, state):
         print(f"  {results['whatnot']}")
 
     # 6. POSHMARK
-    print(f"\n💼 Poshmark: Browser automation...")
+    print(f"\n Poshmark: Browser automation...")
     try:
         from lib.browser_connectors import PoshmarkConnector
         connector = PoshmarkConnector()
@@ -191,7 +187,7 @@ def process_item(item, state):
 def run_loop():
     """Main orchestrator loop — runs forever."""
     state = load_state()
-    print(f"🤖 Empire Orchestrator starting (dry_run={CONFIG['dry_run']})")
+    print(f" Empire Orchestrator starting (dry_run={CONFIG['dry_run']})")
 
     iteration = 0
     while True:
@@ -202,7 +198,7 @@ def run_loop():
 
         # Scan for new items
         items = scan_inventory()
-        print(f"📦 Found {len(items)} items to process")
+        print(f" Found {len(items)} items to process")
 
         # Process each
         processed = 0
@@ -210,7 +206,7 @@ def run_loop():
             if process_item(item, state):
                 processed += 1
 
-        print(f"\n📊 Status: {processed}/{len(items)} items processed this cycle")
+        print(f"\n Status: {processed}/{len(items)} items processed this cycle")
 
         # Wait for next cycle
         wait_time = CONFIG["schedule"]["scan_interval_seconds"]
@@ -218,20 +214,10 @@ def run_loop():
         time.sleep(wait_time)
 
 if __name__ == "__main__":
-    print("""
-    ╔════════════════════════════════════════════════════════════════╗
-    ║                   EMPIRE OS ORCHESTRATOR                       ║
-    ║                                                                ║
-    ║  Autonomous loop: Inventory → Books → 14 Platforms → Social   ║
-    ║                                                                ║
-    ║  Platforms:                                                    ║
-    ║    Products (7): eBay, Etsy, Facebook, Bonanza, Shopify,      ║
-    ║                  Poshmark, Mercari                             ║
-    ║    Books (4):    KDP, Draft2Digital, Payhip, Etsy Digital     ║
-    ║    Social (4):   Instagram, TikTok, Facebook, Pinterest       ║
-    ║                                                                ║
-    ╚════════════════════════════════════════════════════════════════╝
-    """)
+    print("="*70)
+    print("EMPIRE OS ORCHESTRATOR")
+    print("Autonomous loop: Inventory > 6 Platforms (eBay, Etsy, Facebook, Instagram, Whatnot, Poshmark)")
+    print("="*70)
 
     try:
         run_loop()

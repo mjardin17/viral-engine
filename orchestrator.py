@@ -210,7 +210,7 @@ def run_loop():
 
         # Wait for next cycle
         wait_time = CONFIG["schedule"]["scan_interval_seconds"]
-        print(f"⏸️  Waiting {wait_time}s until next scan...")
+        print(f"[PAUSED] Waiting {wait_time}s until next scan...")
         time.sleep(wait_time)
 
 if __name__ == "__main__":

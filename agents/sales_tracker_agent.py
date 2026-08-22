@@ -15,7 +15,10 @@ from pathlib import Path
 from dataclasses import dataclass, field
 from typing import Any, Callable, Optional
 
+from dotenv import load_dotenv
 from lib.ebay_sales import EbaySalesClient, EbaySalesError, resolve_sku_from_legacy_item_id
+
+load_dotenv()
 
 logger = logging.getLogger(__name__)
 
@@ -179,4 +182,6 @@ if __name__ == "__main__":
     agent = SalesTrackerAgent(token, sb_url, sb_key)
     result = agent.poll_and_record()
     print(f"Status: {result['status']}")
+    if result.get('error'):
+        print(f"Error: {result['error']}")
     print(f"Processed: {result['orders_processed']}, Skipped: {result['orders_skipped']}")

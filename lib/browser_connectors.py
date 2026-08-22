@@ -10,7 +10,7 @@ from dataclasses import dataclass
 try:
     from playwright.sync_api import sync_playwright, Browser, Page
 except ImportError:
-    print("⚠️ Playwright not installed. Run: pip install playwright")
+    print("[!] Playwright not installed. Run: pip install playwright")
     print("   Then run: playwright install")
 
 from lib.platform_connectors import (
@@ -52,7 +52,7 @@ class BrowserConnector(PlatformConnector):
         """Start Playwright browser."""
         if not self.browser:
             playwright = sync_playwright().start()
-            self.browser = playwright.chromium.launch(headless=True)
+            self.browser = playwright.chromium.launch(headless=False)
             self.page = self.browser.new_page()
 
     def _stop_browser(self):
@@ -66,14 +66,25 @@ class BrowserConnector(PlatformConnector):
         """Generic login method."""
         try:
             self._start_browser()
-            self.page.goto(login_url, wait_until="networkidle")
+            self.page.goto(login_url, wait_until="domcontentloaded", timeout=60000)
+            self.page.wait_for_load_state("domcontentloaded", timeout=60000)
+
+            # Debug: print what's on the page
+            inputs = self.page.query_selector_all("input")
+            print(f"[DEBUG] Found {len(inputs)} input fields on page")
+            for i, inp in enumerate(inputs[:5]):
+                input_type = inp.get_attribute("type") or "text"
+                input_name = inp.get_attribute("name") or "unnamed"
+                print(f"  Input {i}: type={input_type}, name={input_name}")
+
+            self.page.wait_for_selector(username_selector, timeout=15000)
             self.page.fill(username_selector, username)
             self.page.fill(password_selector, password)
             self.page.click(submit_selector)
-            self.page.wait_for_load_state("networkidle")
+            self.page.wait_for_load_state("networkidle", timeout=60000)
             return True
         except Exception as e:
-            print(f"❌ Login failed: {e}")
+            print(f"[ERROR] Login failed: {e}")
             return False
 
 
@@ -85,15 +96,15 @@ class PoshmarkConnector(BrowserConnector):
 
     def authenticate(self) -> bool:
         if not self.auth_token:
-            print("⚠️ Poshmark: No credentials configured (POSHMARK_USERNAME, POSHMARK_PASSWORD)")
+            print("[!] Poshmark: No credentials configured (POSHMARK_USERNAME, POSHMARK_PASSWORD)")
             return False
         try:
             username, password = self.auth_token.split(":", 1)
             return self._login(
                 username, password,
                 "https://poshmark.com/login",
-                "input[name='username']",
-                "input[name='password']",
+                "input[type='text']:nth-of-type(1)",
+                "input[type='text']:nth-of-type(2)",
                 "button[type='submit']"
             )
         except:
@@ -114,10 +125,10 @@ class PoshmarkConnector(BrowserConnector):
             self.page.wait_for_load_state("networkidle")
 
             listing_id = self.page.url.split("/")[-1]
-            print(f"✓ Poshmark: Created {listing_id}")
+            print(f"[OK] Poshmark: Created {listing_id}")
             return Listing(listing_id, "poshmark", title, description, price, 1, images, "active", self.page.url, datetime.now(), datetime.now())
         except Exception as e:
-            print(f"❌ Poshmark error: {e}")
+            print(f"[ERROR] Poshmark error: {e}")
             return None
 
     def update_listing(self, listing_id: str, **kwargs) -> bool:
@@ -161,7 +172,7 @@ class PoshmarkConnector(BrowserConnector):
                     "poshmark_buyer",
                     datetime.now()
                 ))
-            print(f"📊 Poshmark: Found {len(sales)} sales")
+            print(f"[STAT] Poshmark: Found {len(sales)} sales")
             return sales
         except:
             return []
@@ -187,7 +198,7 @@ class PoshmarkConnector(BrowserConnector):
                     datetime.now(),
                     datetime.now()
                 ))
-            print(f"📋 Poshmark: Found {len(listings)} listings")
+            print(f"[LIST] Poshmark: Found {len(listings)} listings")
             return listings
         except:
             return []
@@ -201,7 +212,7 @@ class MercariConnector(BrowserConnector):
 
     def authenticate(self) -> bool:
         if not self.auth_token:
-            print("⚠️ Mercari: No credentials configured (MERCARI_USERNAME, MERCARI_PASSWORD)")
+            print("[!] Mercari: No credentials configured (MERCARI_USERNAME, MERCARI_PASSWORD)")
             return False
         try:
             username, password = self.auth_token.split(":", 1)
@@ -228,10 +239,10 @@ class MercariConnector(BrowserConnector):
             self.page.wait_for_load_state("networkidle")
 
             listing_id = self.page.url.split("/")[-1]
-            print(f"✓ Mercari: Created {listing_id}")
+            print(f"[OK] Mercari: Created {listing_id}")
             return Listing(listing_id, "mercari", title, description, price, 1, images, "active", self.page.url, datetime.now(), datetime.now())
         except Exception as e:
-            print(f"❌ Mercari error: {e}")
+            print(f"[ERROR] Mercari error: {e}")
             return None
 
     def update_listing(self, listing_id: str, **kwargs) -> bool:
@@ -280,7 +291,7 @@ class MercariConnector(BrowserConnector):
                     datetime.now(),
                     datetime.now()
                 ))
-            print(f"📋 Mercari: Found {len(listings)} listings")
+            print(f"[LIST] Mercari: Found {len(listings)} listings")
             return listings
         except:
             return []
@@ -294,7 +305,7 @@ class DepopConnector(BrowserConnector):
 
     def authenticate(self) -> bool:
         if not self.auth_token:
-            print("⚠️ Depop: No credentials configured (DEPOP_USERNAME, DEPOP_PASSWORD)")
+            print("[!] Depop: No credentials configured (DEPOP_USERNAME, DEPOP_PASSWORD)")
             return False
         try:
             username, password = self.auth_token.split(":", 1)
@@ -321,10 +332,10 @@ class DepopConnector(BrowserConnector):
             self.page.wait_for_load_state("networkidle")
 
             listing_id = self.page.url.split("/")[-1]
-            print(f"✓ Depop: Created {listing_id}")
+            print(f"[OK] Depop: Created {listing_id}")
             return Listing(listing_id, "depop", title, description, price, 1, images, "active", self.page.url, datetime.now(), datetime.now())
         except Exception as e:
-            print(f"❌ Depop error: {e}")
+            print(f"[ERROR] Depop error: {e}")
             return None
 
     def update_listing(self, listing_id: str, **kwargs) -> bool:
@@ -373,7 +384,7 @@ class DepopConnector(BrowserConnector):
                     datetime.now(),
                     datetime.now()
                 ))
-            print(f"📋 Depop: Found {len(listings)} listings")
+            print(f"[LIST] Depop: Found {len(listings)} listings")
             return listings
         except:
             return []
@@ -391,7 +402,7 @@ class FacebookMarketplaceBrowserConnector(BrowserConnector):
 
     def authenticate(self) -> bool:
         if not self.auth_token:
-            print("⚠️ Facebook Marketplace: No credentials configured (FACEBOOK_EMAIL, FACEBOOK_PASSWORD)")
+            print("[!] Facebook Marketplace: No credentials configured (FACEBOOK_EMAIL, FACEBOOK_PASSWORD)")
             return False
         try:
             email, password = self.auth_token.split(":", 1)
@@ -420,10 +431,10 @@ class FacebookMarketplaceBrowserConnector(BrowserConnector):
             self.page.wait_for_load_state("networkidle")
 
             listing_id = self.page.url.split("/")[-1]
-            print(f"✓ Facebook Marketplace: Created {listing_id}")
+            print(f"[OK] Facebook Marketplace: Created {listing_id}")
             return Listing(listing_id, "facebook_web", title, description, price, 1, images, "active", self.page.url, datetime.now(), datetime.now())
         except Exception as e:
-            print(f"❌ Facebook Marketplace error: {e}")
+            print(f"[ERROR] Facebook Marketplace error: {e}")
             return None
 
     def update_listing(self, listing_id: str, **kwargs) -> bool:
@@ -463,7 +474,7 @@ class WhatnotConnector(BrowserConnector):
 
     def authenticate(self) -> bool:
         if not self.auth_token:
-            print("⚠️ Whatnot: No credentials configured (WHATNOT_USERNAME, WHATNOT_PASSWORD)")
+            print("[!] Whatnot: No credentials configured (WHATNOT_USERNAME, WHATNOT_PASSWORD)")
             return False
         try:
             username, password = self.auth_token.split(":", 1)
@@ -492,10 +503,10 @@ class WhatnotConnector(BrowserConnector):
             self.page.wait_for_load_state("networkidle")
 
             listing_id = self.page.url.split("/")[-1]
-            print(f"✓ Whatnot: Created {listing_id}")
+            print(f"[OK] Whatnot: Created {listing_id}")
             return Listing(listing_id, "whatnot", title, description, price, 1, images, "active", self.page.url, datetime.now(), datetime.now())
         except Exception as e:
-            print(f"❌ Whatnot error: {e}")
+            print(f"[ERROR] Whatnot error: {e}")
             return None
 
     def update_listing(self, listing_id: str, **kwargs) -> bool:
@@ -538,7 +549,7 @@ class WhatnotConnector(BrowserConnector):
                     "whatnot_buyer",
                     datetime.now()
                 ))
-            print(f"📊 Whatnot: Found {len(sales)} sales")
+            print(f"[STAT] Whatnot: Found {len(sales)} sales")
             return sales
         except:
             return []
@@ -564,7 +575,7 @@ class WhatnotConnector(BrowserConnector):
                     datetime.now(),
                     datetime.now()
                 ))
-            print(f"📋 Whatnot: Found {len(listings)} listings")
+            print(f"[LIST] Whatnot: Found {len(listings)} listings")
             return listings
         except:
             return []
@@ -576,7 +587,7 @@ class EtsyBrowserConnector(BrowserConnector):
         super().__init__("etsy")
     def authenticate(self) -> bool:
         if not self.auth_token:
-            print("⚠️ Etsy: No credentials configured")
+            print("[!] Etsy: No credentials configured")
             return False
         try:
             username, password = self.auth_token.split(":", 1)
@@ -592,10 +603,10 @@ class EtsyBrowserConnector(BrowserConnector):
             self.page.click("button[type='submit']")
             self.page.wait_for_load_state("networkidle")
             listing_id = self.page.url.split("/")[-1]
-            print(f"✓ Etsy: Created {listing_id}")
+            print(f"[OK] Etsy: Created {listing_id}")
             return Listing(listing_id, "etsy", title, description, price, 1, images, "active", self.page.url, datetime.now(), datetime.now())
         except Exception as e:
-            print(f"❌ Etsy error: {e}")
+            print(f"[ERROR] Etsy error: {e}")
             return None
     def update_listing(self, listing_id: str, **kwargs) -> bool:
         try:
@@ -621,7 +632,7 @@ class EtsyBrowserConnector(BrowserConnector):
             listings = []
             for item in self.page.query_selector_all(".listing-card"):
                 listings.append(Listing(str(item.get_attribute("data-id")), "etsy", item.query_selector(".title").text_content(), "", 0.0, 1, [], "active", "", datetime.now(), datetime.now()))
-            print(f"📋 Etsy: Found {len(listings)} listings")
+            print(f"[LIST] Etsy: Found {len(listings)} listings")
             return listings
         except: return []
 
@@ -632,7 +643,7 @@ class PinterestBrowserConnector(BrowserConnector):
         super().__init__("pinterest")
     def authenticate(self) -> bool:
         if not self.auth_token:
-            print("⚠️ Pinterest: No credentials configured")
+            print("[!] Pinterest: No credentials configured")
             return False
         try:
             username, password = self.auth_token.split(":", 1)
@@ -647,10 +658,10 @@ class PinterestBrowserConnector(BrowserConnector):
             self.page.click("button[type='submit']")
             self.page.wait_for_load_state("networkidle")
             pin_id = self.page.url.split("/")[-1]
-            print(f"✓ Pinterest: Created {pin_id}")
+            print(f"[OK] Pinterest: Created {pin_id}")
             return Listing(pin_id, "pinterest", title, description, price, 1, images, "active", self.page.url, datetime.now(), datetime.now())
         except Exception as e:
-            print(f"❌ Pinterest error: {e}")
+            print(f"[ERROR] Pinterest error: {e}")
             return None
     def update_listing(self, listing_id: str, **kwargs) -> bool: return True
     def delist(self, listing_id: str) -> bool:
@@ -666,7 +677,7 @@ class PinterestBrowserConnector(BrowserConnector):
             self._start_browser()
             self.page.goto("https://www.pinterest.com/me/pins/", wait_until="networkidle")
             listings = [Listing(str(item.get_attribute("data-id")), "pinterest", item.query_selector(".title").text_content(), "", 0.0, 1, [], "active", "", datetime.now(), datetime.now()) for item in self.page.query_selector_all(".pin")]
-            print(f"📋 Pinterest: Found {len(listings)} pins")
+            print(f"[LIST] Pinterest: Found {len(listings)} pins")
             return listings
         except: return []
 
@@ -679,7 +690,7 @@ class RedditConnector(BrowserConnector):
 
     def authenticate(self) -> bool:
         if not self.auth_token:
-            print("⚠️ Reddit: No credentials (REDDIT_USERNAME, REDDIT_PASSWORD)")
+            print("[!] Reddit: No credentials (REDDIT_USERNAME, REDDIT_PASSWORD)")
             return False
         try:
             username, password = self.auth_token.split(":", 1)
@@ -700,10 +711,10 @@ class RedditConnector(BrowserConnector):
             self.page.fill("input[placeholder='Post title']", f"[H] {title} [W] ${price}")
             self.page.fill("textarea", description)
             self.page.click("button:has-text('Post')")
-            print(f"✓ Reddit: Posted {title}")
+            print(f"[OK] Reddit: Posted {title}")
             return Listing("reddit_post", "reddit", title, description, price, 1, images, "active", self.page.url, datetime.now(), datetime.now())
         except Exception as e:
-            print(f"❌ Reddit error: {e}")
+            print(f"[ERROR] Reddit error: {e}")
             return None
 
     def update_listing(self, listing_id: str, **kwargs) -> bool:
@@ -751,7 +762,7 @@ class RedditConnector(BrowserConnector):
                     datetime.now(),
                     datetime.now()
                 ))
-            print(f"📋 Reddit: Found {len(listings)} posts")
+            print(f"[LIST] Reddit: Found {len(listings)} posts")
             return listings
         except:
             return []
@@ -765,7 +776,7 @@ class LinkedInConnector(BrowserConnector):
 
     def authenticate(self) -> bool:
         if not self.auth_token:
-            print("⚠️ LinkedIn: No credentials (LINKEDIN_EMAIL, LINKEDIN_PASSWORD)")
+            print("[!] LinkedIn: No credentials (LINKEDIN_EMAIL, LINKEDIN_PASSWORD)")
             return False
         try:
             email, password = self.auth_token.split(":", 1)
@@ -787,10 +798,10 @@ class LinkedInConnector(BrowserConnector):
             self.page.fill("input[placeholder='Item title']", title[:100])
             self.page.fill("textarea", f"{description}\n\nPrice: ${price}")
             self.page.click("button:has-text('Publish')")
-            print(f"✓ LinkedIn: Posted {title}")
+            print(f"[OK] LinkedIn: Posted {title}")
             return Listing("linkedin_post", "linkedin", title, description, price, 1, images, "active", self.page.url, datetime.now(), datetime.now())
         except Exception as e:
-            print(f"❌ LinkedIn error: {e}")
+            print(f"[ERROR] LinkedIn error: {e}")
             return None
 
     def update_listing(self, listing_id: str, **kwargs) -> bool:
@@ -828,7 +839,7 @@ class LinkedInConnector(BrowserConnector):
                     datetime.now(),
                     datetime.now()
                 ))
-            print(f"📋 LinkedIn: Found {len(listings)} listings")
+            print(f"[LIST] LinkedIn: Found {len(listings)} listings")
             return listings
         except:
             return []
@@ -842,7 +853,7 @@ class TwitchConnector(BrowserConnector):
 
     def authenticate(self) -> bool:
         if not self.auth_token:
-            print("⚠️ Twitch: No credentials (TWITCH_USERNAME, TWITCH_PASSWORD)")
+            print("[!] Twitch: No credentials (TWITCH_USERNAME, TWITCH_PASSWORD)")
             return False
         try:
             username, password = self.auth_token.split(":", 1)
@@ -864,10 +875,10 @@ class TwitchConnector(BrowserConnector):
             self.page.fill("input[placeholder='Post title']", title)
             self.page.fill("textarea", f"{description}\n💰 Price: ${price}\n✨ DM for details!")
             self.page.click("button:has-text('Publish')")
-            print(f"✓ Twitch: Posted {title}")
+            print(f"[OK] Twitch: Posted {title}")
             return Listing("twitch_post", "twitch", title, description, price, 1, images, "active", self.page.url, datetime.now(), datetime.now())
         except Exception as e:
-            print(f"❌ Twitch error: {e}")
+            print(f"[ERROR] Twitch error: {e}")
             return None
 
     def update_listing(self, listing_id: str, **kwargs) -> bool:
@@ -905,7 +916,7 @@ class TwitchConnector(BrowserConnector):
                     datetime.now(),
                     datetime.now()
                 ))
-            print(f"📋 Twitch: Found {len(listings)} posts")
+            print(f"[LIST] Twitch: Found {len(listings)} posts")
             return listings
         except:
             return []
@@ -919,7 +930,7 @@ class DiscordConnector(BrowserConnector):
 
     def authenticate(self) -> bool:
         if not self.auth_token:
-            print("⚠️ Discord: No bot token (DISCORD_BOT_TOKEN)")
+            print("[!] Discord: No bot token (DISCORD_BOT_TOKEN)")
             return False
         # Discord uses bot token auth, not browser login
         return True
@@ -935,10 +946,10 @@ class DiscordConnector(BrowserConnector):
             embed = f"```\n{title} - ${price}\n{description}\n```"
             self.page.fill("input[placeholder='Say something...']", embed)
             self.page.press("input[placeholder='Say something...']", "Enter")
-            print(f"✓ Discord: Posted {title}")
+            print(f"[OK] Discord: Posted {title}")
             return Listing("discord_msg", "discord", title, description, price, 1, images, "active", "discord://marketplace", datetime.now(), datetime.now())
         except Exception as e:
-            print(f"❌ Discord error: {e}")
+            print(f"[ERROR] Discord error: {e}")
             return None
 
     def update_listing(self, listing_id: str, **kwargs) -> bool:
@@ -972,7 +983,7 @@ class DiscordConnector(BrowserConnector):
                     datetime.now(),
                     datetime.now()
                 ))
-            print(f"📋 Discord: Found {len(listings)} messages")
+            print(f"[LIST] Discord: Found {len(listings)} messages")
             return listings
         except:
             return []

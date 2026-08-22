@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Whatnot Bulk Importer",
+  "version": "1.0",
+  "description": "Auto-upload CSV to Whatnot Seller Hub",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "host_permissions": ["https://www.whatnot.com/*"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Whatnot Bulk Importer"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.whatnot.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}

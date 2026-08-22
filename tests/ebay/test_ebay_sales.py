@@ -216,3 +216,93 @@ class TestSkuResolution:
         with pytest.raises(EbaySalesError) as exc:
             resolve_sku_from_legacy_item_id("   ")
         assert exc.value.step == "sku_resolution"
+
+    def test_parse_order_reconciles_empty_sku_from_legacy_item_id(self):
+        """Classic eBay listings (non-Inventory API) have empty sku + legacy_item_id.
+        The parser must reconcile them into the products table format."""
+        order_with_empty_sku = {
+            "orderId": "ORDER-CLASSIC",
+            "creationDate": "2026-08-20T00:00:00.000Z",
+            "orderFulfillmentStatus": "FULFILLED",
+            "pricingSummary": {"total": {"value": "49.99", "currency": "USD"}},
+            "buyer": {"username": "collector456"},
+            "lineItems": [{
+                "sku": "",  # Empty for classic listings
+                "legacyItemId": "198079646764",  # Real legacy ID
+                "lineItemId": "LI-CLASSIC",
+                "quantity": 1,
+                "title": "Vintage Trading Card",
+            }],
+        }
+        transport = make_fake_transport([FakeResponse(200, {"total": 1, "orders": [order_with_empty_sku]})])
+        client = EbaySalesClient(access_token="tok", transport=transport)
+
+        sales = client.get_orders_since(datetime.now(timezone.utc) - timedelta(days=1))
+
+        assert len(sales) == 1
+        li = sales[0].line_items[0]
+        # SKU must be resolved to Inventory API format, not left empty
+        assert li.sku == "v1|198079646764|0"
+        assert li.legacy_item_id == "198079646764"
+
+    def test_parses_shipping_and_payment_details(self):
+        """Shipping address and payment status are captured at order level."""
+        order_with_shipping = {
+            "orderId": "ORDER-SHIPPED",
+            "creationDate": "2026-08-15T00:00:00.000Z",
+            "orderFulfillmentStatus": "FULFILLED",
+            "orderPaymentStatus": "PAIDFUL",
+            "shippingAddress": {
+                "city": "Portland",
+                "stateOrProvince": "OR",
+                "countryCode": "US",
+            },
+            "pricingSummary": {"total": {"value": "99.99", "currency": "USD"}},
+            "buyer": {"username": "buyer789"},
+            "lineItems": [{
+                "sku": "CARD-GRADED",
+                "legacyItemId": "999888777",
+                "lineItemId": "LI-GRADED",
+                "quantity": 1,
+                "title": "PSA 10 Card",
+            }],
+        }
+        transport = make_fake_transport([FakeResponse(200, {"total": 1, "orders": [order_with_shipping]})])
+        client = EbaySalesClient(access_token="tok", transport=transport)
+
+        sales = client.get_orders_since(datetime.now(timezone.utc) - timedelta(days=1))
+
+        assert len(sales) == 1
+        sale = sales[0]
+        assert sale.payment_status == "PAIDFUL"
+        assert sale.ship_to_city == "Portland"
+        assert sale.ship_to_state == "OR"
+        assert sale.ship_to_country_code == "US"
+
+    def test_parses_line_item_condition_and_fulfillment(self):
+        """Per-item condition and fulfillment status are captured."""
+        order_with_details = {
+            "orderId": "ORDER-DETAILED",
+            "creationDate": "2026-08-14T00:00:00.000Z",
+            "orderFulfillmentStatus": "FULFILLED",
+            "pricingSummary": {"total": {"value": "50.00", "currency": "USD"}},
+            "buyer": {"username": "collector999"},
+            "lineItems": [{
+                "sku": "ITEM-USED",
+                "legacyItemId": "555444333",
+                "lineItemId": "LI-USED",
+                "quantity": 1,
+                "title": "Used Item",
+                "itemUnitPrice": {"condition": "USED"},
+                "lineItemFulfillmentStatus": "SHIPPED",
+            }],
+        }
+        transport = make_fake_transport([FakeResponse(200, {"total": 1, "orders": [order_with_details]})])
+        client = EbaySalesClient(access_token="tok", transport=transport)
+
+        sales = client.get_orders_since(datetime.now(timezone.utc) - timedelta(days=1))
+
+        assert len(sales) == 1
+        li = sales[0].line_items[0]
+        assert li.condition == "USED"
+        assert li.fulfillment_status == "SHIPPED"

@@ -68,6 +68,8 @@ class SaleLineItem:
     line_item_id: str
     quantity: int
     title: str
+    condition: str = ""  # e.g., "NEW", "USED"
+    fulfillment_status: str = ""  # per-item status, not just order-level
 
 
 @dataclass(frozen=True)
@@ -81,6 +83,10 @@ class Sale:
     total_currency: str
     buyer_username: str
     line_items: list[SaleLineItem] = field(default_factory=list)
+    payment_status: str = ""  # "PAIDFUL", "PARTIALLY_PAID", etc.
+    ship_to_city: str = ""
+    ship_to_state: str = ""
+    ship_to_country_code: str = ""  # "US", "GB", etc.
 
 
 def _iso(dt: datetime) -> str:
@@ -161,16 +167,24 @@ class EbaySalesClient:
 
 def _parse_order(order: dict) -> Sale:
     pricing = order.get("pricingSummary", {}).get("total", {})
-    line_items = [
-        SaleLineItem(
-            sku=li.get("sku", ""),
-            legacy_item_id=li.get("legacyItemId", ""),
+    shipping = order.get("shippingAddress", {})
+    line_items = []
+    for li in order.get("lineItems", []):
+        sku = li.get("sku", "")
+        legacy_item_id = li.get("legacyItemId", "")
+        # Reconcile: classic listings have empty sku, resolve from legacy_item_id
+        if not sku and legacy_item_id:
+            sku = resolve_sku_from_legacy_item_id(legacy_item_id)
+        line_items.append(SaleLineItem(
+            sku=sku,
+            legacy_item_id=legacy_item_id,
             line_item_id=li.get("lineItemId", ""),
             quantity=int(li.get("quantity", 1)),
             title=li.get("title", ""),
-        )
-        for li in order.get("lineItems", [])
-    ]
+            condition=li.get("itemUnitPrice", {}).get("condition", ""),
+            fulfillment_status=li.get("lineItemFulfillmentStatus", ""),
+        ))
+
     return Sale(
         order_id=order.get("orderId", ""),
         creation_date=order.get("creationDate", ""),
@@ -178,6 +192,10 @@ def _parse_order(order: dict) -> Sale:
         total_value=str(pricing.get("value", "")),
         total_currency=pricing.get("currency", ""),
         buyer_username=order.get("buyer", {}).get("username", ""),
+        payment_status=order.get("orderPaymentStatus", ""),
+        ship_to_city=shipping.get("city", ""),
+        ship_to_state=shipping.get("stateOrProvince", ""),
+        ship_to_country_code=shipping.get("countryCode", ""),
         line_items=line_items,
     )
 

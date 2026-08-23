@@ -248,13 +248,17 @@ def create_app(armed_platforms: frozenset[str]) -> FastAPI:
                 return_policy_id=req.policies.return_policy_id,
                 merchant_location_key=req.policies.merchant_location_key,
             )
+            # Constructed inside this try block deliberately: EbayListingClient
+            # also raises EbayValidationError (empty access_token) in __init__.
+            # Previously this line sat AFTER the try/except below it, so that
+            # validation error propagated as an unhandled 500 instead of the
+            # clean 400 every other validation failure gets.
+            client = EbayListingClient(req.access_token, sandbox=req.sandbox)
         except EbayValidationError as exc:
             raise HTTPException(
                 status_code=400,
                 detail={"ok": False, "code": "validation_error", "message": str(exc)},
             ) from exc
-
-        client = EbayListingClient(req.access_token, sandbox=req.sandbox)
 
         try:
             result = client.create_listing(product, policies, dry_run=req.dry_run)
@@ -337,13 +341,18 @@ def create_app(armed_platforms: frozenset[str]) -> FastAPI:
                 shipping_profile_id=req.product.shipping_profile_id,
                 return_policy_id=req.product.return_policy_id,
             )
+            # Constructed inside this try block deliberately: EtsyListingClient
+            # also raises EtsyValidationError — for an empty access_token/
+            # shop_id, AND for an api_key with no colon (Etsy's x-api-key must
+            # be "<keystring>:<shared_secret>"; see lib/etsy_listing.py). This
+            # line previously sat AFTER the try/except below it, so any of
+            # those raised an unhandled 500 instead of a clean 400.
+            client = EtsyListingClient(req.access_token, req.shop_id, req.api_key)
         except EtsyValidationError as exc:
             raise HTTPException(
                 status_code=400,
                 detail={"ok": False, "code": "validation_error", "message": str(exc)},
             ) from exc
-
-        client = EtsyListingClient(req.access_token, req.shop_id, req.api_key)
 
         try:
             result = client.create_listing(

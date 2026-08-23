@@ -11,7 +11,7 @@ load_dotenv()
 
 CLIENT_ID = os.getenv("EBAY_CLIENT_ID")
 CLIENT_SECRET = os.getenv("EBAY_CLIENT_SECRET")
-REDIRECT_URI = "Joshua_Jardin-JoshuaJa-Empire-dahro"
+REDIRECT_URI = "https://auth.ebay.com/oauth2/ThirdPartyAuthSucessFailure"
 SCOPES = [
     "https://api.ebay.com/oauth/api_scope/sell.inventory",
     "https://api.ebay.com/oauth/api_scope/sell.account",

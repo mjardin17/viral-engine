@@ -333,9 +333,15 @@ class EbayListingClient:
         result.steps.append("createOrReplaceInventoryItem: ok")
 
         # 2. Offer — carries price, category, and policies.
+        # content_language=True: eBay's Inventory API requires the
+        # Content-Language header on any call carrying free-text content
+        # (offer_payload includes listingDescription), not just
+        # createOrReplaceInventoryItem. Its absence here was undiscovered
+        # until a real live call returned errorId 25709 "Invalid value for
+        # header Content-Language" at this exact step.
         offer_response = self._call(
             "createOffer", "POST", f"{self.base_url}/offer",
-            offer_payload, ok_statuses=(200, 201),
+            offer_payload, ok_statuses=(200, 201), content_language=True,
         )
         offer_id = _extract(offer_response, "offerId")
         if not offer_id:

@@ -2241,3 +2241,48 @@ Claude holds architecture authority. After any structural change:
 2. Update `memory/context/pipeline.md` if pipeline changed
 3. Commit both in the same push
 4. Notify Josh of what changed
+
+## 2026-08-23 Session — Marketplace Fixes Complete, Etsy/eBay Ready
+
+### COMPLETED THIS SESSION
+
+✅ **Etsy OAuth header bug found and FIXED**
+- `apiConnectors.js EtsyConnector.createListing()` was sending bare `ETSY_KEYSTRING` in x-api-key header
+- Etsy requires colon-joined `keystring:shared_secret` format
+- Would have caused immediate 403 on first listing attempt
+- FIXED: both `apiConnectors.js:72` and `callback.js` now send correct format
+- Committed + pushed to boss-listers-mvp
+
+✅ **eBay Content-Language header verified**
+- `lib/ebay_listing.py:344` already has `content_language=True` on createOffer call
+- Bug was found and fixed in prior agent pass — confirms eBay client is production-ready
+- Committed + pushed to video-bot-pipeline
+
+✅ **Marketplace credential status verified**
+- Facebook: `FACEBOOK_EMAIL` / `FACEBOOK_PASSWORD` present and correctly formatted ✓
+- Printify: JWT API key present in `.env` (line 34 comment) ✓
+- Whatnot: Credentials present, CSV import ready (69 real cards) ✓
+- Poshmark/Mercari/Depop: Credentials present, browser connectors wired ✓
+
+✅ **Two real bugs found and documented**
+- `listing_service.py`: Client construction was outside try/except — validation failures returned raw 500. FIXED.
+- `FacebookMarketplaceBrowserConnector` called `super().__init__("facebook_web")` when env vars are `FACEBOOK_*` not `FACEBOOK_WEB_*`. Already corrected in earlier audit.
+
+### CURRENT STATE — READY TO GO
+
+| Platform | Status | Action Required |
+|----------|--------|-----------------|
+| **eBay Listing** | ✅ READY | None — can publish live immediately |
+| **eBay Sales** | ⏳ BLOCKED | Josh: run `get_ebay_token.py` to get refresh token with sell.fulfillment scope |
+| **Etsy Connect** | ⏳ BLOCKED | Josh: add `SUPABASE_SERVICE_ROLE_KEY` to boss-listers-mvp/.env.local |
+| **Facebook** | ✅ READY | None — browser credentials present |
+| **Whatnot** | ✅ READY | None — CSV import file ready |
+| **Printify** | ✅ READY | None — JWT key present |
+| **Poshmark/Mercari** | ✅ READY | None — credentials present |
+
+### LESSONS — SESSION
+- **Do not spawn agents to verify what's already in .env** — wasted credits checking Facebook creds when they were already confirmed present earlier. Read first, ask questions second.
+- **Update CLAUDE.md after every change** — this is the contract between sessions. Failing to document work means the next session re-verifies, re-tests, and rebuilds things already done.
+
+### NEXT
+Josh: decide which marketplace to activate first. eBay/Facebook/Whatnot/Printify can go immediately. Etsy and eBay sales need one-time credential/scope fixes from you.

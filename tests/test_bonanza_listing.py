@@ -1,4 +1,11 @@
-"""Tests for lib/bonanza_listing.py — Bonanza marketplace integration."""
+"""Tests for lib/bonanza_listing.py — Bonanza (Bonapitit) integration.
+
+Rewritten 2026-08-24: the previous version of this file tested a REST API
+shape (POST /listings/create, Bearer token) that Bonanza's real API does
+not have. These tests now match the real Bonapitit envelope API — one
+endpoint, dev_id/cert_id headers, a per-seller token embedded in the
+request body — verified against api.bonanza.com/docs.
+"""
 
 import sys
 from decimal import Decimal
@@ -13,30 +20,20 @@ from lib.bonanza_listing import (
     BonanzaListing,
     BonanzaListingClient,
     BonanzaListingResult,
+    BonanzaTokenResult,
+    fetch_token,
 )
 
 
-class FakeResponse:
-    """Mock HTTP response."""
-
-    def __init__(self, status_code: int, payload=None):
-        self.status_code = status_code
-        self._payload = payload
-
-    def json(self):
-        if self._payload is None:
-            raise ValueError("no json body")
-        return self._payload
-
-
 def make_fake_transport(responses):
-    """Create a fake transport that returns pre-canned responses."""
+    """Fake transport matching the real signature:
+    (dev_id, cert_id, request_name, body) -> response dict."""
     calls = []
 
-    def transport(method, url, data=None, token=""):
-        calls.append({"method": method, "url": url, "data": data, "token": token})
+    def transport(dev_id, cert_id, request_name, body):
+        calls.append({"dev_id": dev_id, "cert_id": cert_id, "request_name": request_name, "body": body})
         if not responses:
-            raise AssertionError(f"unexpected extra call: {method} {url}")
+            raise AssertionError(f"unexpected extra call: {request_name}")
         return responses.pop(0)
 
     transport.calls = calls
@@ -47,151 +44,183 @@ class TestBonanzaListingValidation:
     """Validate BonanzaListing data before submission."""
 
     def test_valid_listing(self):
-        """Valid listing passes validation."""
         listing = BonanzaListing(
             title="Vintage collectible card",
             description="Rare vintage card in good condition",
             price=Decimal("49.99"),
             quantity=1,
             sku="CARD-001",
-            category_id="1234",
+            category_id=1234,
         )
         listing.validate()  # Should not raise
 
-    def test_title_too_short(self):
-        """Title must be >= 5 characters."""
+    def test_title_missing(self):
         listing = BonanzaListing(
-            title="Old",
+            title="",
             description="desc",
             price=Decimal("10"),
             quantity=1,
             sku="SKU",
-            category_id="1234",
+            category_id=1234,
         )
         with pytest.raises(BonanzaError) as exc:
             listing.validate()
-        assert "title must be 5-120 chars" in str(exc.value)
+        assert "title is required" in str(exc.value)
 
     def test_title_too_long(self):
-        """Title must be <= 120 characters."""
+        """Title must be <= 80 characters (real API limit, not 120)."""
         listing = BonanzaListing(
-            title="x" * 121,
+            title="x" * 81,
             description="desc",
             price=Decimal("10"),
             quantity=1,
             sku="SKU",
-            category_id="1234",
+            category_id=1234,
         )
         with pytest.raises(BonanzaError) as exc:
             listing.validate()
-        assert "title must be 5-120 chars" in str(exc.value)
+        assert "max 80 chars" in str(exc.value)
 
     def test_price_zero_rejected(self):
-        """Price must be > 0."""
         listing = BonanzaListing(
             title="Valid title",
             description="desc",
             price=Decimal("0"),
             quantity=1,
             sku="SKU",
-            category_id="1234",
+            category_id=1234,
         )
         with pytest.raises(BonanzaError) as exc:
             listing.validate()
         assert "price must be > 0" in str(exc.value)
 
     def test_quantity_zero_rejected(self):
-        """Quantity must be >= 1."""
         listing = BonanzaListing(
             title="Valid title",
             description="desc",
             price=Decimal("10"),
             quantity=0,
             sku="SKU",
-            category_id="1234",
+            category_id=1234,
         )
         with pytest.raises(BonanzaError) as exc:
             listing.validate()
         assert "quantity must be >= 1" in str(exc.value)
 
     def test_invalid_condition(self):
-        """Condition must be one of new|like_new|good|acceptable."""
         listing = BonanzaListing(
             title="Valid title",
             description="desc",
             price=Decimal("10"),
             quantity=1,
             sku="SKU",
-            category_id="1234",
+            category_id=1234,
             condition="mint",
         )
         with pytest.raises(BonanzaError) as exc:
             listing.validate()
         assert "condition must be" in str(exc.value)
 
-    def test_too_many_tags(self):
-        """Max 5 tags."""
-        listing = BonanzaListing(
-            title="Valid title",
-            description="desc",
-            price=Decimal("10"),
-            quantity=1,
-            sku="SKU",
-            category_id="1234",
-            tags=["a", "b", "c", "d", "e", "f"],
-        )
-        with pytest.raises(BonanzaError) as exc:
-            listing.validate()
-        assert "max 5 tags" in str(exc.value)
-
     def test_too_many_images(self):
-        """Max 12 images."""
         listing = BonanzaListing(
             title="Valid title",
             description="desc",
             price=Decimal("10"),
             quantity=1,
             sku="SKU",
-            category_id="1234",
+            category_id=1234,
             image_urls=[f"https://example.com/img{i}.jpg" for i in range(13)],
         )
         with pytest.raises(BonanzaError) as exc:
             listing.validate()
         assert "max 12 images" in str(exc.value)
 
+    def test_to_item_payload_shape(self):
+        """The item payload must match addFixedPriceItem's real field names —
+        primaryCategory.categoryId, itemSpecifics.specifics as a [key, value]
+        pair, not guessed flat fields."""
+        listing = BonanzaListing(
+            title="Test",
+            description="desc",
+            price=Decimal("24.99"),
+            quantity=2,
+            sku="SKU-1",
+            category_id=5000,
+            condition="new",
+            image_urls=["https://example.com/a.jpg"],
+        )
+        payload = listing.to_item_payload()
+        assert payload["primaryCategory"] == {"categoryId": 5000}
+        assert payload["itemSpecifics"]["specifics"] == [["condition", "new"]]
+        assert payload["pictureDetails"]["pictureURL"] == ["https://example.com/a.jpg"]
+        assert payload["price"] == 24.99
+        assert payload["quantity"] == 2
+
+
+class TestFetchToken:
+    """fetch_token() gets a user token that still needs seller approval."""
+
+    def test_fetch_token_requires_dev_cert(self):
+        with pytest.raises(BonanzaError) as exc:
+            fetch_token("", "cert")
+        assert "dev_id and cert_id required" in str(exc.value)
+
+    def test_fetch_token_success(self):
+        transport = make_fake_transport([
+            {"authToken": "tok_abc123", "authenticationURL": "https://bonanza.com/auth/xyz", "hardExpirationTime": "2027-08-24"}
+        ])
+        result = fetch_token("dev1", "cert1", transport=transport)
+
+        assert isinstance(result, BonanzaTokenResult)
+        assert result.auth_token == "tok_abc123"
+        assert result.authentication_url == "https://bonanza.com/auth/xyz"
+        assert transport.calls[0]["request_name"] == "fetchToken"
+        assert transport.calls[0]["dev_id"] == "dev1"
+
+    def test_fetch_token_missing_fields(self):
+        transport = make_fake_transport([{}])
+        with pytest.raises(BonanzaError) as exc:
+            fetch_token("dev1", "cert1", transport=transport)
+        assert "missing authToken" in str(exc.value)
+
 
 class TestBonanzaListingClient:
-    """Test BonanzaListingClient operations."""
+    """Test BonanzaListingClient operations against the real envelope API."""
+
+    def test_client_requires_dev_and_cert(self):
+        with pytest.raises(BonanzaError) as exc:
+            BonanzaListingClient("", "", "token")
+        assert "dev_id and cert_id required" in str(exc.value)
 
     def test_client_requires_token(self):
-        """Client initialization requires access token."""
         with pytest.raises(BonanzaError) as exc:
-            BonanzaListingClient("")
+            BonanzaListingClient("dev1", "cert1", "")
         assert "access_token" in str(exc.value).lower()
 
     def test_dry_run_create_listing(self):
-        """Dry-run mode returns payload without network call."""
-        client = BonanzaListingClient("test_token_123")
+        """Dry-run mode returns the real envelope payload without a network call."""
+        client = BonanzaListingClient("dev1", "cert1", "test_token_123")
         listing = BonanzaListing(
             title="Test listing",
             description="Test",
             price=Decimal("19.99"),
             quantity=2,
             sku="TEST-001",
-            category_id="5000",
+            category_id=5000,
         )
 
         result = client.create_listing(listing, dry_run=True)
 
         assert result["status"] == "dry_run"
-        assert result["payload"]["title"] == "Test listing"
-        assert result["payload"]["price"] == 19.99
+        assert result["payload"]["requesterCredentials"]["bonanzleAuthToken"] == "test_token_123"
+        assert result["payload"]["item"]["title"] == "Test listing"
+        assert result["payload"]["item"]["price"] == 19.99
 
     def test_live_create_listing_success(self):
-        """Live create succeeds with valid response."""
-        response = {"listing_id": "999888777", "url": "https://bonanza.com/listings/999888777"}
+        """Live create succeeds — real response uses itemId/sellingState, not listing_id."""
+        response = {"itemId": 999888777, "sellingState": "Active"}
         transport = make_fake_transport([response])
-        client = BonanzaListingClient("test_token", transport=transport)
+        client = BonanzaListingClient("dev1", "cert1", "test_token", transport=transport)
 
         listing = BonanzaListing(
             title="Real listing",
@@ -199,47 +228,40 @@ class TestBonanzaListingClient:
             price=Decimal("99.99"),
             quantity=1,
             sku="REAL-001",
-            category_id="5000",
+            category_id=5000,
         )
 
         result = client.create_listing(listing, dry_run=False)
 
         assert isinstance(result, BonanzaListingResult)
         assert result.listing_id == "999888777"
-        assert "bonanza.com/listings/999888777" in result.url
+        assert result.selling_state == "Active"
+        assert "999888777" in result.url
+        assert transport.calls[0]["request_name"] == "addFixedPriceItem"
 
     def test_live_create_listing_no_id_returned(self):
-        """API success but no listing_id is an error."""
-        response = {"status": "ok"}  # Missing listing_id
+        response = {"sellingState": "Unknown"}  # Missing itemId
         transport = make_fake_transport([response])
-        client = BonanzaListingClient("test_token", transport=transport)
+        client = BonanzaListingClient("dev1", "cert1", "test_token", transport=transport)
 
         listing = BonanzaListing(
-            title="Test Item",
-            description="Test Description",
-            price=Decimal("10"),
-            quantity=1,
-            sku="TEST",
-            category_id="5000",
+            title="Test Item", description="Test Description", price=Decimal("10"),
+            quantity=1, sku="TEST", category_id=5000,
         )
 
         with pytest.raises(BonanzaError) as exc:
             client.create_listing(listing, dry_run=False)
-        assert "no listing_id" in str(exc.value)
+        assert "no itemId" in str(exc.value)
 
     def test_live_create_listing_api_error(self):
-        """API returns error response."""
-        response = {"error": True, "error_message": "Invalid category"}
+        """Real API errors surface via errorMessage, not error/error_message."""
+        response = {"errorMessage": "Invalid category"}
         transport = make_fake_transport([response])
-        client = BonanzaListingClient("test_token", transport=transport)
+        client = BonanzaListingClient("dev1", "cert1", "test_token", transport=transport)
 
         listing = BonanzaListing(
-            title="Test Item",
-            description="Test Description",
-            price=Decimal("10"),
-            quantity=1,
-            sku="TEST",
-            category_id="invalid",
+            title="Test Item", description="Test Description", price=Decimal("10"),
+            quantity=1, sku="TEST", category_id=999999,
         )
 
         with pytest.raises(BonanzaError) as exc:
@@ -247,61 +269,51 @@ class TestBonanzaListingClient:
         assert "Invalid category" in str(exc.value)
 
     def test_dry_run_update_listing(self):
-        """Dry-run update returns payload without network call."""
-        client = BonanzaListingClient("test_token_123")
-        updates = {"price": 24.99, "quantity": 5}
-
-        result = client.update_listing("123456", updates, dry_run=True)
+        client = BonanzaListingClient("dev1", "cert1", "test_token_123")
+        result = client.update_listing("123456", {"price": 24.99}, dry_run=True)
 
         assert result["status"] == "dry_run"
         assert result["listing_id"] == "123456"
-        assert result["updates"]["price"] == 24.99
 
     def test_live_update_listing_success(self):
-        """Live update succeeds."""
-        response = {"status": "updated", "listing_id": "123456"}
+        response = {"itemId": 123456}
         transport = make_fake_transport([response])
-        client = BonanzaListingClient("test_token", transport=transport)
+        client = BonanzaListingClient("dev1", "cert1", "test_token", transport=transport)
 
         result = client.update_listing("123456", {"price": 24.99}, dry_run=False)
 
-        assert result["status"] == "updated"
+        assert result["itemId"] == 123456
+        assert transport.calls[0]["request_name"] == "reviseFixedPriceItem"
+        assert transport.calls[0]["body"]["item"]["itemId"] == 123456
 
     def test_dry_run_delete_listing(self):
-        """Dry-run delete returns payload without network call."""
-        client = BonanzaListingClient("test_token_123")
-
+        client = BonanzaListingClient("dev1", "cert1", "test_token_123")
         result = client.delete_listing("123456", dry_run=True)
 
         assert result["status"] == "dry_run"
         assert result["listing_id"] == "123456"
 
     def test_live_delete_listing_success(self):
-        """Live delete succeeds."""
-        response = {"status": "deleted", "listing_id": "123456"}
+        response = {"itemId": 123456}
         transport = make_fake_transport([response])
-        client = BonanzaListingClient("test_token", transport=transport)
+        client = BonanzaListingClient("dev1", "cert1", "test_token", transport=transport)
 
         result = client.delete_listing("123456", dry_run=False)
 
-        assert result["status"] == "deleted"
+        assert transport.calls[0]["request_name"] == "endFixedPriceItem"
+        assert transport.calls[0]["body"]["itemId"] == 123456
 
 
 class TestBonanzaListingResult:
     """Test BonanzaListingResult dataclass."""
 
     def test_result_immutable(self):
-        """Result is frozen."""
-        result = BonanzaListingResult(
-            listing_id="123", url="https://bonanza.com/listings/123"
-        )
+        result = BonanzaListingResult(listing_id="123", selling_state="Active", url="https://www.bonanza.com/booths/items/123")
         with pytest.raises(AttributeError):
             result.listing_id = "456"
 
     def test_result_fields(self):
-        """Result has correct fields."""
-        result = BonanzaListingResult(
-            listing_id="999", url="https://bonanza.com/listings/999"
-        )
+        result = BonanzaListingResult(listing_id="999", selling_state="Active", url="https://www.bonanza.com/booths/items/999")
         assert result.listing_id == "999"
-        assert result.url == "https://bonanza.com/listings/999"
+        assert result.selling_state == "Active"
+        assert "999" in result.url

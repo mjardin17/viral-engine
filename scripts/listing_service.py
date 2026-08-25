@@ -51,6 +51,7 @@ from __future__ import annotations
 import argparse
 import os
 import sys
+from decimal import Decimal
 from pathlib import Path
 from typing import Any, Optional
 
@@ -75,9 +76,19 @@ from lib.etsy_listing import (  # noqa: E402
     EtsyProduct,
     EtsyValidationError,
 )
+from lib.facebook_marketplace_listing import (  # noqa: E402
+    FacebookMarketplaceError,
+    FacebookMarketplaceListingClient,
+    FacebookMarketplaceProduct,
+)
+from lib.bonanza_listing import (  # noqa: E402
+    BonanzaError,
+    BonanzaListing,
+    BonanzaListingClient,
+)
 
 CONFIRM_LITERAL = "PUBLISH_LIVE"
-PLATFORMS = ("ebay", "etsy")
+PLATFORMS = ("ebay", "etsy", "facebook", "bonanza")
 
 
 # ── eBay request/response models (unchanged from ebay_listing_service.py) ──
@@ -156,6 +167,58 @@ class EtsyCreateListingRequest(BaseModel):
     # _etsy_is_live_request() below.
     target_state: str = "draft"
     confirm: Optional[str] = None
+
+
+# ── Facebook Marketplace request/response models ──
+
+class FacebookProductIn(BaseModel):
+    """Presence/type checks only. Business-rule validation lives in
+    FacebookMarketplaceProduct.validate() and must not be duplicated here."""
+
+    title: str
+    description: str
+    price: str | float
+    sku: str
+    category: str
+    images: list[str] = Field(default_factory=list)
+    condition: str = "new"
+    tags: list[str] = Field(default_factory=list)
+
+
+class FacebookCreateListingRequest(BaseModel):
+    access_token: str
+    page_id: str
+    product: FacebookProductIn
+    dry_run: StrictBool = True
+    confirm: Optional[str] = None
+    sandbox: bool = False
+
+
+# ── Bonanza request/response models ──
+
+class BonanzaListingIn(BaseModel):
+    """Presence/type checks only. Business-rule validation lives in
+    BonanzaListing.validate() and must not be duplicated here."""
+
+    title: str
+    description: str
+    price: str | float
+    quantity: int = 1
+    sku: str
+    category_id: str
+    condition: str = "new"
+    tags: list[str] = Field(default_factory=list)
+    image_urls: list[str] = Field(default_factory=list)
+    shipping_weight_lbs: str | float | None = None
+    returns_accepted: bool = True
+
+
+class BonanzaCreateListingRequest(BaseModel):
+    access_token: str
+    listing: BonanzaListingIn
+    dry_run: StrictBool = True
+    confirm: Optional[str] = None
+    sandbox: bool = False
 
 
 def _parse_armed_platforms(raw: Optional[str]) -> frozenset[str]:
@@ -394,6 +457,141 @@ def create_app(armed_platforms: frozenset[str]) -> FastAPI:
             "images_uploaded": result.images_uploaded,
             "steps": result.steps,
             "payloads": result.payloads,
+        }
+
+    @app.post("/facebook/create-listing")
+    def create_facebook_listing(
+        req: FacebookCreateListingRequest,
+        x_listing_service_token: Optional[str] = Header(default=None),
+    ) -> dict[str, Any]:
+        if req.dry_run is False:
+            check_live_gates("facebook", req.confirm, x_listing_service_token)
+
+        try:
+            client = FacebookMarketplaceListingClient(
+                req.access_token, req.page_id, sandbox=req.sandbox,
+            )
+            product = FacebookMarketplaceProduct(
+                title=req.product.title,
+                description=req.product.description,
+                price=Decimal(str(req.product.price)),
+                sku=req.product.sku,
+                category=req.product.category,
+                images=list(req.product.images),
+                condition=req.product.condition,
+                tags=list(req.product.tags),
+            )
+        except FacebookMarketplaceError as exc:
+            raise HTTPException(
+                status_code=400,
+                detail={"ok": False, "code": "validation_error", "message": str(exc)},
+            ) from exc
+
+        try:
+            result = client.create_listing(product, dry_run=req.dry_run)
+        except FacebookMarketplaceError as exc:
+            if exc.step == "validation":
+                status_code, code = 400, "validation_error"
+            elif exc.permanent:
+                status_code, code = 401, "facebook_auth_failed"
+            else:
+                status_code, code = 502, "facebook_error"
+            raise HTTPException(
+                status_code=status_code,
+                detail={
+                    "ok": False,
+                    "code": code,
+                    "step": exc.step,
+                    "message": str(exc),
+                    "facebook_status": exc.code,
+                    "listing_id": exc.listing_id,
+                },
+            ) from exc
+        except ConnectionError as exc:
+            raise HTTPException(
+                status_code=504,
+                detail={"ok": False, "code": "transport_error", "message": str(exc)},
+            ) from exc
+
+        if isinstance(result, dict):
+            # dry_run path returns a plain dict (status/payload/note), not
+            # a FacebookMarketplaceListingResult — surface it as-is.
+            return {"ok": True, "dry_run": True, **result}
+
+        return {
+            "ok": True,
+            "dry_run": False,
+            "listing_id": result.listing_id,
+            "product_id": result.product_id,
+            "url": result.url,
+        }
+
+    @app.post("/bonanza/create-listing")
+    def create_bonanza_listing(
+        req: BonanzaCreateListingRequest,
+        x_listing_service_token: Optional[str] = Header(default=None),
+    ) -> dict[str, Any]:
+        if req.dry_run is False:
+            check_live_gates("bonanza", req.confirm, x_listing_service_token)
+
+        try:
+            client = BonanzaListingClient(req.access_token, sandbox=req.sandbox)
+            listing = BonanzaListing(
+                title=req.listing.title,
+                description=req.listing.description,
+                price=Decimal(str(req.listing.price)),
+                quantity=req.listing.quantity,
+                sku=req.listing.sku,
+                category_id=req.listing.category_id,
+                condition=req.listing.condition,
+                tags=list(req.listing.tags),
+                image_urls=list(req.listing.image_urls),
+                shipping_weight_lbs=(
+                    Decimal(str(req.listing.shipping_weight_lbs))
+                    if req.listing.shipping_weight_lbs is not None
+                    else None
+                ),
+                returns_accepted=req.listing.returns_accepted,
+            )
+        except BonanzaError as exc:
+            raise HTTPException(
+                status_code=400,
+                detail={"ok": False, "code": "validation_error", "message": str(exc)},
+            ) from exc
+
+        try:
+            result = client.create_listing(listing, dry_run=req.dry_run)
+        except BonanzaError as exc:
+            if exc.step == "validation":
+                status_code, code = 400, "validation_error"
+            elif exc.permanent:
+                status_code, code = 401, "bonanza_auth_failed"
+            else:
+                status_code, code = 502, "bonanza_error"
+            raise HTTPException(
+                status_code=status_code,
+                detail={
+                    "ok": False,
+                    "code": code,
+                    "step": exc.step,
+                    "message": str(exc),
+                    "bonanza_status": exc.code,
+                },
+            ) from exc
+        except ConnectionError as exc:
+            raise HTTPException(
+                status_code=504,
+                detail={"ok": False, "code": "transport_error", "message": str(exc)},
+            ) from exc
+
+        if isinstance(result, dict):
+            return {"ok": True, "dry_run": True, **result}
+
+        return {
+            "ok": True,
+            "dry_run": False,
+            "listing_id": result.listing_id,
+            "url": result.url,
         }
 
     return app

@@ -1,29 +1,51 @@
 #!/usr/bin/env python3
 """
-bonanza_listing.py — Bonanza marketplace listing integration via REST API
+bonanza_listing.py — Bonanza marketplace listing integration via Bonapitit
 ==========================================================================
-Bonanza is a marketplace alternative to eBay supporting both vintage and modern
-goods. Uses their official REST API with OAuth 2.0.
+Bonanza is a marketplace alternative to eBay. Its API ("Bonapitit") is
+NOT a modern per-resource REST API — it's a single-endpoint, envelope-style
+API closer in shape to eBay's legacy Trading API. Confirmed against the
+real docs at api.bonanza.com/docs 2026-08-24, replacing an earlier version
+of this file that assumed a REST shape (`/listings/create`, Bearer token)
+which does not match the real API at all and would have failed on first
+live use — the earlier version was only ever verified against a dry-run
+payload, never against Bonanza's own documentation.
 
-API Surface: Bonanza REST API v2
-- https://api.bonanza.com/api_ref/
+API Surface: Bonapitit (https://api.bonanza.com/docs)
+- Single endpoint for everything: POST /api_requests/secure_request
+- Every request body has ONE root key named "{methodName}Request"
+  (e.g. "addFixedPriceItemRequest")
+- Every response body has ONE root key named "{methodName}Response"
+
+Auth model (three credentials, not one):
+    1. devID + certID — issued once per developer account, sent as HTTP
+       headers on every request (X-BONANZLE-API-DEV-NAME / -CERT-NAME).
+       Get these at https://api.bonanza.com/accounts/new.
+    2. A per-seller user token (bonanzleAuthToken) — obtained by calling
+       fetchToken, then sending the seller to `authenticationURL` to
+       approve access. The token is NOT a header — it goes inside the
+       request body under `requesterCredentials.bonanzleAuthToken`.
+       fetchToken itself does not need requesterCredentials.
 
 Flow:
-    1. Authenticate via OAuth 2.0 (client credentials or user login)
-    2. Create listings via POST /listings/create
-    3. Update listings via POST /listings/update
-    4. Delete listings via POST /listings/delete
-    5. Fetch inventory via GET /listings
+    1. fetchToken() -> {authToken, authenticationURL}
+    2. Seller visits authenticationURL, approves access
+    3. authToken is now usable as bonanzleAuthToken on every other call
+    4. addFixedPriceItem() to create a listing
+    5. reviseFixedPriceItem() to update, endFixedPriceItem() to remove
 
 Required environment (.env):
-    BONANZA_APP_ID        OAuth app ID (client_id)
-    BONANZA_APP_SECRET    OAuth app secret
-    BONANZA_ACCESS_TOKEN  OAuth access token (long-lived or refresh token flow)
-    BONANZA_USER_ID       Optional - seller account ID for multi-account setups
+    BONANZA_DEV_ID         Dev ID from api.bonanza.com/accounts/new
+    BONANZA_CERT_ID        Cert ID from the same page
+    BONANZA_ACCESS_TOKEN   The verified bonanzleAuthToken (from fetchToken,
+                            after the seller approves via authenticationURL)
 
 Bonanza API docs:
-    https://api.bonanza.com/api_ref/
-    https://bonanza.com/sell
+    https://api.bonanza.com/docs
+    https://api.bonanza.com/docs/reference/fetch_token
+    https://api.bonanza.com/docs/reference/add_fixed_price_item
+    https://api.bonanza.com/docs/basics/secure_requests
+    https://api.bonanza.com/docs/basics/user_tokens
 """
 
 from __future__ import annotations
@@ -31,18 +53,15 @@ from __future__ import annotations
 import json
 import os
 import urllib.error
-import urllib.parse
 import urllib.request
 from dataclasses import dataclass, field
-from pathlib import Path
-from typing import Any, Optional
 from decimal import Decimal
+from typing import Any, Optional
 
 # ── Constants ─────────────────────────────────────────────────────────────────
 
 BONANZA_API_HOST = "https://api.bonanza.com"
-BONANZA_API_VERSION = "v2"
-BONANZA_API_BASE = f"{BONANZA_API_HOST}/api_ref/{BONANZA_API_VERSION}"
+BONANZA_REQUEST_URL = f"{BONANZA_API_HOST}/api_requests/secure_request"
 
 HTTP_TIMEOUT_SEC = 60
 
@@ -73,18 +92,25 @@ class BonanzaListing:
     price: Decimal
     quantity: int
     sku: str
-    category_id: str  # Bonanza category ID
+    category_id: int
     condition: str = "new"  # new | like_new | good | acceptable
-    tags: list[str] = field(default_factory=list)  # max 5 tags
+    tags: list[str] = field(default_factory=list)  # not sent to Bonanza directly (no tags field in addFixedPriceItem); kept for callers, unused in payload
     image_urls: list[str] = field(default_factory=list)  # primary image first
-    shipping_weight_lbs: Optional[Decimal] = None
+    ships_within_days: int = 3
+    shipping_cost: Optional[Decimal] = None
+    free_shipping: bool = False
     returns_accepted: bool = True
 
     def validate(self) -> None:
-        """Pre-flight validation before creating on Bonanza."""
-        if len(self.title) < 5 or len(self.title) > 120:
+        """Pre-flight validation before calling addFixedPriceItem."""
+        if not self.title or len(self.title) > 80:
             raise BonanzaError(
-                f"title must be 5-120 chars, got {len(self.title)}", step="validation"
+                f"title is required, max 80 chars, got {len(self.title)}", step="validation"
+            )
+
+        if self.description and len(self.description) > 60000:
+            raise BonanzaError(
+                f"description max 60000 chars, got {len(self.description)}", step="validation"
             )
 
         if self.price <= 0:
@@ -103,52 +129,92 @@ class BonanzaListing:
                 step="validation",
             )
 
-        if len(self.tags) > 5:
-            raise BonanzaError(
-                f"max 5 tags, got {len(self.tags)}", step="validation"
-            )
-
         if len(self.image_urls) > 12:
             raise BonanzaError(
                 f"max 12 images, got {len(self.image_urls)}", step="validation"
             )
 
+    def to_item_payload(self) -> dict[str, Any]:
+        """Build the `item` object addFixedPriceItem expects — field names
+        and nesting come directly from api.bonanza.com/docs/reference/add_fixed_price_item,
+        not guessed."""
+        item: dict[str, Any] = {
+            "title": self.title,
+            "description": self.description,
+            "price": float(self.price),
+            "quantity": self.quantity,
+            "sku": self.sku,
+            "primaryCategory": {"categoryId": self.category_id},
+            "itemSpecifics": {
+                "specifics": [["condition", self.condition]],
+            },
+            "shippingDetails": {
+                "shipsWithinDays": self.ships_within_days,
+                "shippingServiceOptions": [
+                    {
+                        "shippingType": "Free" if self.free_shipping else "Fixed",
+                        "shippingServiceCost": float(self.shipping_cost) if self.shipping_cost else 0.0,
+                        "freeShipping": self.free_shipping,
+                    }
+                ],
+            },
+            "returnPolicy": {
+                "returnsAcceptedOption": "ReturnsAccepted" if self.returns_accepted else "ReturnsNotAccepted",
+            },
+        }
+        if self.image_urls:
+            item["pictureDetails"] = {"pictureURL": list(self.image_urls)}
+        return item
+
 
 @dataclass(frozen=True)
 class BonanzaListingResult:
-    """Outcome of a successful listing creation."""
+    """Outcome of a successful addFixedPriceItem call."""
 
     listing_id: str
+    selling_state: str
     url: str
+
+
+@dataclass(frozen=True)
+class BonanzaTokenResult:
+    """Outcome of a successful fetchToken call — the seller must visit
+    authentication_url and approve before auth_token is usable."""
+
+    auth_token: str
+    authentication_url: str
+    hard_expiration_time: Optional[str] = None
 
 
 # ── HTTP plumbing ─────────────────────────────────────────────────────────────
 
 
 def _request(
-    method: str,
-    path: str,
+    dev_id: str,
+    cert_id: str,
+    request_name: str,
+    body: dict[str, Any],
     *,
-    data: dict[str, Any] | None = None,
-    token: str = "",
     timeout: int = HTTP_TIMEOUT_SEC,
 ) -> dict[str, Any]:
-    """Make an authenticated request to Bonanza API."""
-    url = f"{BONANZA_API_BASE}{path}"
+    """POST one envelope call to Bonapitit's single endpoint.
 
+    `request_name` is the bare method name (e.g. "addFixedPriceItem") —
+    this wraps it as {request_name}Request / unwraps {request_name}Response
+    per the envelope convention documented at
+    api.bonanza.com/docs/basics/secure_requests.
+    """
+    payload = {f"{request_name}Request": body}
     headers = {
         "Content-Type": "application/json",
-        "Authorization": f"Bearer {token}" if token else "",
+        "X-BONANZLE-API-DEV-NAME": dev_id,
+        "X-BONANZLE-API-CERT-NAME": cert_id,
     }
-
-    body = json.dumps(data).encode() if data else None
+    data = json.dumps(payload).encode()
 
     try:
         req = urllib.request.Request(
-            url,
-            data=body,
-            method=method,
-            headers={k: v for k, v in headers.items() if v},
+            BONANZA_REQUEST_URL, data=data, method="POST", headers=headers
         )
         with urllib.request.urlopen(req, timeout=timeout) as resp:
             response_body = resp.read().decode("utf-8")
@@ -156,205 +222,195 @@ def _request(
         raw = e.read().decode("utf-8", errors="replace")
         try:
             error_data = json.loads(raw)
-            message = error_data.get("error_message", raw[:300])
+            response_key = f"{request_name}Response"
+            message = (
+                error_data.get(response_key, {}).get("errorMessage")
+                or error_data.get("errorMessage")
+                or raw[:300]
+            )
         except json.JSONDecodeError:
             message = raw[:300]
-        permanent = e.code in (401, 403, 400)  # auth/permission/invalid request
+        permanent = e.code in (401, 403, 400)
         raise BonanzaError(
-            f"HTTP {e.code}: {message}",
-            code=e.code,
-            step="api_call",
-            permanent=permanent,
+            f"HTTP {e.code}: {message}", code=e.code, step="api_call", permanent=permanent
         ) from e
     except urllib.error.URLError as e:
-        raise BonanzaError(
-            f"network error: {e.reason}", step="api_call", permanent=False
-        ) from e
+        raise BonanzaError(f"network error: {e.reason}", step="api_call", permanent=False) from e
 
     if not response_body.strip():
         return {}
 
     try:
-        return json.loads(response_body)
+        parsed = json.loads(response_body)
     except json.JSONDecodeError as e:
-        raise BonanzaError(
-            f"non-JSON response: {response_body[:300]}", step="api_call"
-        ) from e
+        raise BonanzaError(f"non-JSON response: {response_body[:300]}", step="api_call") from e
+
+    response_key = f"{request_name}Response"
+    return parsed.get(response_key, parsed)
 
 
 # ── Configuration ─────────────────────────────────────────────────────────────
 
 
-def _get_token() -> str:
-    """Retrieve Bonanza access token from environment."""
+def _config() -> tuple[str, str, str]:
+    """Return (dev_id, cert_id, access_token). Raises if unconfigured."""
+    dev_id = os.environ.get("BONANZA_DEV_ID", "").strip()
+    cert_id = os.environ.get("BONANZA_CERT_ID", "").strip()
     token = os.environ.get("BONANZA_ACCESS_TOKEN", "").strip()
+
+    if not dev_id or not cert_id:
+        raise BonanzaError(
+            "BONANZA_DEV_ID and BONANZA_CERT_ID not set — get these at "
+            "https://api.bonanza.com/accounts/new",
+            step="config",
+            permanent=True,
+        )
     if not token:
         raise BonanzaError(
-            "BONANZA_ACCESS_TOKEN not set", step="config", permanent=True
+            "BONANZA_ACCESS_TOKEN not set — call fetch_token() first, have the "
+            "seller approve via the returned authentication_url, then set this",
+            step="config",
+            permanent=True,
         )
-    return token
+    return dev_id, cert_id, token
+
+
+def fetch_token(dev_id: str, cert_id: str, transport=None) -> BonanzaTokenResult:
+    """Get a new user token. The returned auth_token is NOT usable until the
+    seller visits authentication_url and approves access — this call alone
+    does not grant permission to act on their behalf."""
+    if not dev_id or not cert_id:
+        raise BonanzaError("dev_id and cert_id required", step="config", permanent=True)
+
+    transport = transport or _request
+    response = transport(dev_id, cert_id, "fetchToken", {})
+
+    auth_token = response.get("authToken")
+    auth_url = response.get("authenticationURL")
+    if not auth_token or not auth_url:
+        raise BonanzaError("fetchToken response missing authToken/authenticationURL", step="fetch_token")
+
+    return BonanzaTokenResult(
+        auth_token=auth_token,
+        authentication_url=auth_url,
+        hard_expiration_time=response.get("hardExpirationTime"),
+    )
 
 
 # ── Listing operations ────────────────────────────────────────────────────────
 
 
 class BonanzaListingClient:
-    """Client for creating and managing Bonanza listings."""
+    """Client for creating and managing Bonanza listings via Bonapitit."""
 
     def __init__(
-        self, access_token: str, transport=None, sandbox: bool = False
+        self, dev_id: str, cert_id: str, access_token: str, transport=None
     ) -> None:
+        if not dev_id or not cert_id:
+            raise BonanzaError("dev_id and cert_id required", step="config", permanent=True)
         if not access_token:
-            raise BonanzaError(
-                "access_token required", step="config", permanent=True
-            )
+            raise BonanzaError("access_token (bonanzleAuthToken) required", step="config", permanent=True)
+        self.dev_id = dev_id
+        self.cert_id = cert_id
         self.token = access_token
         self.transport = transport or _request
-        self.sandbox = sandbox
-        self.base_url = (
-            f"{BONANZA_API_HOST}/api_ref/sandbox" if sandbox else BONANZA_API_BASE
-        )
 
     def create_listing(
-        self,
-        listing: BonanzaListing,
-        *,
-        dry_run: bool = True,
+        self, listing: BonanzaListing, *, dry_run: bool = True
     ) -> BonanzaListingResult | dict[str, Any]:
-        """Create a listing on Bonanza."""
+        """Create a listing on Bonanza via addFixedPriceItem."""
         listing.validate()
 
-        payload = {
-            "title": listing.title,
-            "description": listing.description,
-            "price": float(listing.price),
-            "quantity": listing.quantity,
-            "sku": listing.sku,
-            "category_id": listing.category_id,
-            "condition": listing.condition,
-            "tags": listing.tags,
-            "shipping_weight_lbs": (
-                float(listing.shipping_weight_lbs)
-                if listing.shipping_weight_lbs
-                else None
-            ),
-            "returns_accepted": listing.returns_accepted,
-            "images": listing.image_urls,
+        body = {
+            "requesterCredentials": {"bonanzleAuthToken": self.token},
+            "item": listing.to_item_payload(),
         }
 
         if dry_run:
             return {
                 "status": "dry_run",
-                "payload": payload,
-                "note": "would create listing on Bonanza",
+                "payload": body,
+                "note": "would call addFixedPriceItem on Bonanza",
             }
 
         try:
-            response = self.transport(
-                "POST",
-                "/listings/create",
-                data=payload,
-                token=self.token,
-            )
+            response = self.transport(self.dev_id, self.cert_id, "addFixedPriceItem", body)
 
-            if "error" in response:
+            if response.get("errorMessage"):
                 raise BonanzaError(
-                    response.get("error_message", "unknown error"),
-                    code=400,
-                    step="create_listing",
+                    str(response.get("errorMessage")), code=400, step="create_listing"
                 )
 
-            listing_id = response.get("listing_id")
-            if not listing_id:
-                raise BonanzaError(
-                    "no listing_id in response", step="create_listing"
-                )
+            item_id = response.get("itemId")
+            if not item_id:
+                raise BonanzaError("no itemId in response", step="create_listing")
 
             return BonanzaListingResult(
-                listing_id=listing_id,
-                url=f"https://bonanza.com/listings/{listing_id}",
+                listing_id=str(item_id),
+                selling_state=response.get("sellingState", "Unknown"),
+                url=f"https://www.bonanza.com/booths/items/{item_id}",
             )
         except BonanzaError:
             raise
         except Exception as e:
-            raise BonanzaError(
-                f"listing creation failed: {e}", step="create_listing"
-            ) from e
+            raise BonanzaError(f"listing creation failed: {e}", step="create_listing") from e
 
     def update_listing(
-        self, listing_id: str, updates: dict[str, Any], *, dry_run: bool = True
+        self, listing_id: str, item_updates: dict[str, Any], *, dry_run: bool = True
     ) -> dict[str, Any]:
-        """Update an existing Bonanza listing."""
+        """Update an existing listing via reviseFixedPriceItem."""
+        body = {
+            "requesterCredentials": {"bonanzleAuthToken": self.token},
+            "item": {"itemId": int(listing_id), **item_updates},
+        }
+
         if dry_run:
             return {
                 "status": "dry_run",
                 "listing_id": listing_id,
-                "updates": updates,
-                "note": "would update listing on Bonanza",
+                "payload": body,
+                "note": "would call reviseFixedPriceItem on Bonanza",
             }
 
         try:
-            response = self.transport(
-                "POST",
-                f"/listings/{listing_id}/update",
-                data=updates,
-                token=self.token,
-            )
-
-            if "error" in response:
-                raise BonanzaError(
-                    response.get("error_message", "unknown error"),
-                    code=400,
-                    step="update_listing",
-                )
-
+            response = self.transport(self.dev_id, self.cert_id, "reviseFixedPriceItem", body)
+            if response.get("errorMessage"):
+                raise BonanzaError(str(response.get("errorMessage")), code=400, step="update_listing")
             return response
         except BonanzaError:
             raise
         except Exception as e:
-            raise BonanzaError(
-                f"listing update failed: {e}", step="update_listing"
-            ) from e
+            raise BonanzaError(f"listing update failed: {e}", step="update_listing") from e
 
     def delete_listing(self, listing_id: str, *, dry_run: bool = True) -> dict[str, Any]:
-        """Delete a Bonanza listing."""
+        """Remove a listing via endFixedPriceItem."""
+        body = {
+            "requesterCredentials": {"bonanzleAuthToken": self.token},
+            "itemId": int(listing_id),
+        }
+
         if dry_run:
             return {
                 "status": "dry_run",
                 "listing_id": listing_id,
-                "note": "would delete listing on Bonanza",
+                "payload": body,
+                "note": "would call endFixedPriceItem on Bonanza",
             }
 
         try:
-            response = self.transport(
-                "POST",
-                f"/listings/{listing_id}/delete",
-                token=self.token,
-            )
-
-            if "error" in response:
-                raise BonanzaError(
-                    response.get("error_message", "unknown error"),
-                    code=400,
-                    step="delete_listing",
-                )
-
+            response = self.transport(self.dev_id, self.cert_id, "endFixedPriceItem", body)
+            if response.get("errorMessage"):
+                raise BonanzaError(str(response.get("errorMessage")), code=400, step="delete_listing")
             return response
         except BonanzaError:
             raise
         except Exception as e:
-            raise BonanzaError(
-                f"listing deletion failed: {e}", step="delete_listing"
-            ) from e
+            raise BonanzaError(f"listing deletion failed: {e}", step="delete_listing") from e
 
 
 if __name__ == "__main__":
     import sys
 
-    token = os.environ.get("BONANZA_ACCESS_TOKEN")
-    if not token:
-        print("ERROR: BONANZA_ACCESS_TOKEN not set")
-        sys.exit(1)
-
-    client = BonanzaListingClient(token)
-    print("Bonanza client initialized successfully")
+    dev_id, cert_id, token = _config()
+    client = BonanzaListingClient(dev_id, cert_id, token)
+    print("Bonanza client configured (dev_id/cert_id/token present). Real listing calls need --live and real item data.", file=sys.stderr)

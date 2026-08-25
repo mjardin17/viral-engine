@@ -205,20 +205,26 @@ class BonanzaListingIn(BaseModel):
     price: str | float
     quantity: int = 1
     sku: str
-    category_id: str
+    category_id: int
     condition: str = "new"
-    tags: list[str] = Field(default_factory=list)
+    tags: list[str] = Field(default_factory=list)  # not sent to Bonanza — see BonanzaListing docstring
     image_urls: list[str] = Field(default_factory=list)
-    shipping_weight_lbs: str | float | None = None
+    ships_within_days: int = 3
+    shipping_cost: str | float | None = None
+    free_shipping: bool = False
     returns_accepted: bool = True
 
 
 class BonanzaCreateListingRequest(BaseModel):
+    # Bonapitit auth is three credentials, not one — dev_id/cert_id are
+    # per-developer-account, access_token is the per-seller bonanzleAuthToken
+    # obtained via fetchToken + the seller approving authenticationURL.
+    dev_id: str
+    cert_id: str
     access_token: str
     listing: BonanzaListingIn
     dry_run: StrictBool = True
     confirm: Optional[str] = None
-    sandbox: bool = False
 
 
 def _parse_armed_platforms(raw: Optional[str]) -> frozenset[str]:
@@ -535,7 +541,7 @@ def create_app(armed_platforms: frozenset[str]) -> FastAPI:
             check_live_gates("bonanza", req.confirm, x_listing_service_token)
 
         try:
-            client = BonanzaListingClient(req.access_token, sandbox=req.sandbox)
+            client = BonanzaListingClient(req.dev_id, req.cert_id, req.access_token)
             listing = BonanzaListing(
                 title=req.listing.title,
                 description=req.listing.description,
@@ -546,11 +552,13 @@ def create_app(armed_platforms: frozenset[str]) -> FastAPI:
                 condition=req.listing.condition,
                 tags=list(req.listing.tags),
                 image_urls=list(req.listing.image_urls),
-                shipping_weight_lbs=(
-                    Decimal(str(req.listing.shipping_weight_lbs))
-                    if req.listing.shipping_weight_lbs is not None
+                ships_within_days=req.listing.ships_within_days,
+                shipping_cost=(
+                    Decimal(str(req.listing.shipping_cost))
+                    if req.listing.shipping_cost is not None
                     else None
                 ),
+                free_shipping=req.listing.free_shipping,
                 returns_accepted=req.listing.returns_accepted,
             )
         except BonanzaError as exc:
@@ -591,6 +599,7 @@ def create_app(armed_platforms: frozenset[str]) -> FastAPI:
             "ok": True,
             "dry_run": False,
             "listing_id": result.listing_id,
+            "selling_state": result.selling_state,
             "url": result.url,
         }
 

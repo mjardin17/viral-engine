@@ -43,29 +43,31 @@ Josh Jardin (justifiedmagnificent@gmail.com). Building a multi-channel AI conten
 | `mjardin17/empire-os` (GitHub) | Last touched July 2026, one UI stub file mentioning Boss Listers, no real backend. |
 | `mjardin17/Card-sync` (GitHub) | Real, but a genuinely separate/different tool — not part of this project. |
 
-**Platform status, live-tested tonight, not assumed:**
+**Platform status, live-tested 2026-08-25, not assumed:**
 | Platform | Real code? | Credentials? | Actually works right now? |
 |---|---|---|---|
-| **eBay** | ✅ Complete (3-step listing flow) | ✅ Set | ✅live — OAuth token exchange succeeded against production `api.ebay.com` tonight |
-| **Etsy** | ✅ Complete | ✅ App-level keys set | App-level ping works; no shop connected yet (`ETSY_SHOP_ID`/`ETSY_ACCESS_TOKEN` unset) — needs one OAuth click via "Connect Etsy" |
-| **Instagram** | N/A (no connector built in this project) | ✅live token, tested tonight — real account `@godsandgloryai` | Token works; nothing in this project calls it |
-| **Facebook (Marketplace Catalog API)** | ✅ Built + wired tonight, dry-run verified end-to-end through the real Python bridge | ✅ App creds valid (Meta issued a real app token tonight); missing `FB_ACCESS_TOKEN`/`FB_PAGE_ID` (a real Page token) | Not live yet. **Also uncertain even with a token**: Meta's Commerce/Catalog API for creating listings is restricted to an approved-partner program, not open by default — confirm partner approval before assuming a Page token alone unlocks this. |
-| **Bonanza** | ✅ Rebuilt tonight against the real Bonapitit API docs (api.bonanza.com/docs) — the first version assumed a REST shape that was wrong and would have failed live; dry-run verified end-to-end through the corrected bridge. **19 old tests are now stale** (they tested the wrong API shape) — need rewriting, not yet done. | Josh has a bonanza.com seller account (created tonight); still needs `BONANZA_DEV_ID`/`BONANZA_CERT_ID` from api.bonanza.com/accounts/new, then `fetchToken` + seller approval for `BONANZA_ACCESS_TOKEN` — three credentials, not one | Not live — needs those 3 credentials, but the code now actually matches Bonanza's real API |
-| **Facebook (browser extension automation)** | Fake stub — `extension/content_script.js` fabricates a fake ID, does zero real DOM automation. `background.js` pings a dead domain. | N/A | Not real, never was. Real DOM automation on Facebook specifically also can't be built/tested via the Claude-in-Chrome tool — it's blocked from accessing facebook.com's page content entirely. |
+| **eBay** | ✅ Complete (3-step listing flow) | ✅ Set | ✅live — OAuth confirmed live again 2026-08-25. A real offer already exists on the account (`243763349011`, Adrian Peterson card, $19.99) sitting `UNPUBLISHED` — one API call from being a live listing. |
+| **Etsy** | ✅ Complete | ✅ App-level keys set | App-level ping works; no shop connected yet — needs one OAuth click via "Connect Etsy" |
+| **Instagram** | N/A in this repo (publisher code lives in video-bot-pipeline, for posting clips — not a Boss Listers marketplace connector) | ✅live token, real account `@godsandgloryai` | Token works; not something Boss Listers itself calls |
+| **Facebook (Marketplace Catalog API)** | ✅ Built and fixed 2026-08-25 — matches the real API | App creds valid; still missing `FB_ACCESS_TOKEN`/`FB_PAGE_ID` (a real Page token for the new **Jardin's Outpost** Page) | Not live yet — needs that Page token. Meta partner approval for the Catalog API still unconfirmed. |
+| **Bonanza** | ✅ Rebuilt against the real Bonapitit API (envelope-style, not REST) — 23 corrected tests, all passing | Josh has a seller account; still needs `BONANZA_DEV_ID`/`BONANZA_CERT_ID` from api.bonanza.com/accounts/new, then `fetchToken` + approval for `BONANZA_ACCESS_TOKEN` | Not live — needs those 3 credentials |
+| **Video Studio** (new 2026-08-25) | ✅ Real Remotion+FFmpeg render pipeline — proven with a real acceptance render (1080x1920 h264+aac, verified via ffprobe, using real inventory photos). Create Video button wired into inventory. Auth required on every route. | Supabase migration `0011_video_studio_projects.sql` written but **not yet applied** — local Supabase CLI is blocked by a real Application Control policy on this machine, apply it via the SQL Editor at supabase.com/dashboard instead | Render pipeline works; Save/Render will fail until that migration is run |
+| **Facebook (browser extension automation)** | Fake stub — fabricates a fake ID, zero real DOM automation | N/A | Not real, never was. Not fixable via Claude-in-Chrome either — that tool is blocked from facebook.com's page content entirely. |
 | **Shopify, WooCommerce** | ✅ Real code | Not configured | Not used — no store on either platform |
-| **Facebook Marketplace, OfferUp, Craigslist, Mercari, Poshmark** (manual mode) | ✅ Real — generates a copy-paste listing package per item | N/A, no automation attempted (platform policy) | ✅ Working today — 69 real items already have generated packages in `MANUAL_LISTING_PACKAGES.txt` |
+| **Facebook Marketplace, OfferUp, Craigslist, Mercari, Poshmark** (manual mode) | ✅ Real — generates a copy-paste listing package per item | N/A | ✅ Working — 69+ real items already have generated packages in `MANUAL_LISTING_PACKAGES.txt` |
 
-**Today's real events, in order (2026-08-24):**
-1. `01:37` — real bug fixed: login/scan kept bouncing to login because `middleware.js` used Node's `crypto.timingSafeEqual`, which throws on Next.js Edge Runtime on every call, silently mapped to "Unauthorized." Fixed with Web Crypto's `crypto.subtle`. This is why scanning was broken two days prior — nothing to do with credentials.
-2. `10:45` — a separate, unrelated 299-file/37K-line rewrite (`codex/integrate-hot-wheels` branch) got merged on top of that fix, without review against it. Deleted the old `functions/` directory (Cloudflare Pages Functions: card ID, pricing, billing, commercials) and replaced card-scanning with an equivalent (checked: genuinely more built-out, not gutted) implementation under `app/api/`. **One real, unreplaced loss from this merge:** the Stripe billing (`functions/api/billing.js`) and commercial-video-generation (`functions/api/commercials.js`) endpoints were deleted with no replacement anywhere in the new `app/` structure — the underlying library code (`lib/commercialGenerator.js`, `lib/edgeAuth.js`) still exists, nothing calls it.
-3. Login fix + merge + cleanup are **5 commits ahead of GitHub's `main`**, none pushed yet. GitHub's `main` reflects yesterday (Aug 23) — real, solid, but doesn't include today.
+**Jardin's Outpost — the new store identity (created 2026-08-25):** Facebook Page "Jardin's Outpost", Instagram `@jardinoutpost`, Pinterest "Jardin's Outpost", email `jardinsoutpost@gmail.com`. Deliberately separate from Gods & Glory (`@godsandgloryai`) — different audience, don't mix credentials or accounts between them. Only the Facebook Page + email currently matter to Boss Listers (Facebook connector credentials); Instagram/Pinterest aren't wired into any Boss Listers connector.
+
+**Password vault:** Bitwarden (free tier) is set up. `scripts/bitwarden-setup.js` (in BossListers repo) pre-creates folders + empty login templates for every platform above — run it with `BW_SESSION` set, then just fill in username/password per item.
+
+**Full handoff doc:** `BossListers/HANDOFF_2026-08-25.md` — exact file paths, exact next steps, more detail than fits here.
 
 **What's actually needed to move forward, in priority order:**
-1. Decide: keep the hot-wheels merge (it looks like a real upgrade to card-scanning) or revert to just the login fix — asked, not yet decided.
-2. Rebuild the billing/commercials endpoints in the new `app/api/` structure, or confirm they're not needed anymore.
-3. Push to GitHub — nothing from today is backed up anywhere but this machine.
+1. Run the Video Studio migration (`0011_video_studio_projects.sql`) via Supabase's SQL Editor — the one manual step blocking full Video Studio functionality.
+2. Get a real Facebook Page access token for Jardin's Outpost (developers.facebook.com/tools/explorer) — needed for the Facebook connector.
+3. Get Bonanza's 3 credentials (dev ID, cert ID, access token via fetchToken + approval).
 4. Complete Etsy's shop OAuth (one click on the Channels page).
-5. Get a real Facebook Page access token, and confirm Meta partner approval before assuming the Catalog API path will actually work.
+5. Decide whether to merge `merge-codex-rewrite` into `main` on GitHub — still a separate branch, not merged.
 
 **Real inventory:** 69 real items (cards, Transformers, cosmetics, Hot Wheels lots) confirmed and synced via the eBay Browse API, upserted into the shared Supabase `products` table. This is a lower bound — Browse API needs a search term, can't enumerate "everything."
 

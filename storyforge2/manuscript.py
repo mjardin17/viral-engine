@@ -57,6 +57,23 @@ class GeminiTextProvider(TextProvider):
         return call_gemini(full_prompt, use_router=True)
 
 
+class ClaudeTextProvider(TextProvider):
+    """Calls ai_router's ClaudeAdapter directly — NOT through the router's
+    fallback chain. A book's prose should come from one consistent model;
+    silently falling back to chatgpt/gemini mid-manuscript on a transient
+    Claude error would mix voices within one book without anyone noticing."""
+    name = "claude"
+
+    def complete(self, system: str, prompt: str) -> str:
+        from ai_router.adapters.claude_adapter import ClaudeAdapter
+        result = ClaudeAdapter().execute({
+            "task_type": "WRITING", "prompt": prompt, "system": system,
+        })
+        if not result.success:
+            raise ManuscriptError(f"Claude generation failed: {result.error}")
+        return result.output
+
+
 class MockTextProvider(TextProvider):
     """Deterministic, offline, zero-cost. Produces real
     Patterson-formula-passing prose (not just placeholder text) so
@@ -132,7 +149,9 @@ class MockTextProvider(TextProvider):
 
 
 def get_text_provider(name: str) -> TextProvider:
-    providers: dict[str, type[TextProvider]] = {"gemini": GeminiTextProvider, "mock": MockTextProvider}
+    providers: dict[str, type[TextProvider]] = {
+        "gemini": GeminiTextProvider, "mock": MockTextProvider, "claude": ClaudeTextProvider,
+    }
     if name not in providers:
         raise ManuscriptError(f"Unknown text provider '{name}'. Available: {list(providers)}")
     return providers[name]()

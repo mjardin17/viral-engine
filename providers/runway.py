@@ -69,7 +69,10 @@ class RunwayProvider(ProviderBase):
         return bool(self.api_key)
 
     def generate_video(self, prompt: str, reference_image_path: str | None = None,
-                       aspect_ratio: str = "16:9", duration_sec: int = 8) -> dict:
+                       aspect_ratio: str = "16:9", duration_sec: int = 8,
+                       model: str | None = None) -> dict:
+        # Runway has one fixed underlying model — `model` accepted for
+        # interface parity with HiggssfieldProvider (see base.py), ignored.
         if not self.is_connected():
             return self.not_connected_response("generate_video")
         # Runway duration must be 5 or 10 seconds

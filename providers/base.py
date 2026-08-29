@@ -31,8 +31,15 @@ class ProviderBase(ABC):
 
     @abstractmethod
     def generate_video(self, prompt: str, reference_image_path: str | None = None,
-                       aspect_ratio: str = "16:9", duration_sec: int = 8) -> dict:
-        """Submit a video generation job. Returns job info dict."""
+                       aspect_ratio: str = "16:9", duration_sec: int = 8,
+                       model: str | None = None) -> dict:
+        """Submit a video generation job. Returns job info dict.
+
+        model: provider-specific model override (e.g. Higgsfield's
+        "seedance_2_5"/"wan2_7"). Providers with a single fixed underlying
+        model (Kling, Runway, Veo) accept and ignore it — kept on every
+        provider's signature so callers can pass it uniformly without
+        knowing which node is live."""
         ...
 
     @abstractmethod

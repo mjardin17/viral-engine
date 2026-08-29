@@ -7,10 +7,17 @@ API key: set HIGGSFIELD_API_KEY in .env or environment.
 
 Models used:
   - nano_banana_2       → character reference images
-  - grok_video          → scene video clips
+  - grok_video          → scene video clips (default when no model override given)
   - inworld_text_to_speech → narration (Hades voice)
   - sonilo_music        → background music score
   - mirelo_text_to_audio → sound effects
+
+Video model IDs verified against the live Higgsfield MCP catalog
+(models_explore) on 2026-08-28 — not guessed:
+  - seedance_2_5  → Bytedance Seedance 2.5, top-tier, up to 1080p/30s,
+                    reference-driven (t2v/omni_reference/edit/extension)
+  - wan2_7        → Wan 2.7, character-consistent + synced audio (LO/IL)
+  - wan3_0        → Wan 3.0, top-tier, up to 1080p/30s, reference-driven
 
 Higgsfield REST API base: https://api.higgsfield.ai
 """
@@ -26,10 +33,17 @@ HIGGSFIELD_API_BASE = "https://api.higgsfield.ai/v1"
 
 # Model IDs
 MODEL_IMAGE = "nano_banana_2"
-MODEL_VIDEO = "grok_video"
+MODEL_VIDEO = "grok_video"  # default video model when no override is passed
 MODEL_TTS   = "inworld_text_to_speech"
 MODEL_MUSIC = "sonilo_music"
 MODEL_SFX   = "mirelo_text_to_audio"
+
+# Verified real model IDs (see module docstring) — callers pass these as
+# generate_video(..., model=...) rather than hardcoding string literals
+# elsewhere in the codebase.
+MODEL_SEEDANCE_2_5 = "seedance_2_5"
+MODEL_WAN_2_7 = "wan2_7"
+MODEL_WAN_3_0 = "wan3_0"
 
 # Voice for narration
 NARRATION_VOICE = "Hades"
@@ -107,11 +121,13 @@ class HiggssfieldProvider(ProviderBase):
         }
 
     def generate_video(self, prompt: str, reference_image_path: str | None = None,
-                       aspect_ratio: str = "16:9", duration_sec: int = 8) -> dict:
+                       aspect_ratio: str = "16:9", duration_sec: int = 8,
+                       model: str | None = None) -> dict:
         if not self.is_connected():
             return self.not_connected_response("generate_video")
+        chosen_model = model or MODEL_VIDEO
         payload = {
-            "model": MODEL_VIDEO,
+            "model": chosen_model,
             "prompt": prompt,
             "aspect_ratio": aspect_ratio,
             "duration": duration_sec,
@@ -123,7 +139,7 @@ class HiggssfieldProvider(ProviderBase):
             "status": "submitted" if "error" not in result else "error",
             "job_id": result.get("job_id") or result.get("id"),
             "provider": "higgsfield",
-            "model": MODEL_VIDEO,
+            "model": chosen_model,
             "raw": result,
         }
 

@@ -118,6 +118,23 @@ CHANNEL_LABELS: dict[str, str] = {
     "EO": "ECHOES OF ETERNITY",
     "IL": "IRON LEGENDS",
 }
+
+# Per-channel Higgsfield video model override, passed to
+# generate_clip_via_premium_provider() -> provider.generate_video(model=...).
+# Cartoon/animation channels (LO/IL/ML) get Wan 2.7 for character-consistent
+# animation; cinematic/documentary channels (GG/EO) get Seedance 2.5 for
+# reference-consistent detail. Model IDs verified against the live
+# Higgsfield MCP catalog on 2026-08-28 (models_explore) — see
+# providers/higgsfield.py's MODEL_WAN_2_7 / MODEL_SEEDANCE_2_5. Only takes
+# effect when the Higgsfield node is the one actually connected/selected —
+# Kling/Runway/Veo ignore this value (see providers/base.py).
+PREMIUM_VIDEO_MODEL: dict[str, str] = {
+    "LO": "wan2_7",
+    "IL": "wan2_7",
+    "ML": "wan2_7",
+    "GG": "seedance_2_5",
+    "EO": "seedance_2_5",
+}
 # ── TTS Engine: Kokoro (replaces edge-tts) ───────────────────────────────────
 # Kokoro voices — run voice-music-factory/run_factory.py to preview
 # am_* = American male  |  af_* = American female
@@ -774,20 +791,27 @@ def generate_clip_via_premium_provider(
     ref_image: Optional[Path] = None,
     poll_attempts: int = 30,
     poll_interval: int = 10,
+    model: Optional[str] = None,
 ) -> bool:
     """Try each connected premium video-generation node, in priority order,
-    before the caller falls back to the free Ken Burns pipeline."""
+    before the caller falls back to the free Ken Burns pipeline.
+
+    model: passed through to provider.generate_video(model=...) — only
+    acted on by HiggssfieldProvider today (see PREMIUM_VIDEO_MODEL above);
+    other nodes accept and ignore it."""
     nodes = [n for n in _load_provider_nodes() if n.is_connected()]
     if not nodes:
         return False
     for provider in nodes:
         name = provider.__class__.__name__.replace("Provider", "").replace("Higgssfield", "Higgsfield")
-        print(f"   [VID]  {name} node connected — requesting AI video clip…")
+        model_note = f" (model={model})" if model else ""
+        print(f"   [VID]  {name} node connected — requesting AI video clip{model_note}…")
         submission = provider.generate_video(
             prompt,
             reference_image_path=str(ref_image) if ref_image else None,
             aspect_ratio="16:9",
             duration_sec=max(1, int(round(duration_sec))),
+            model=model,
         )
         if submission.get("status") != "submitted" or not submission.get("job_id"):
             print(f"   [VID]  {name} submission failed: {submission.get('raw', submission)}")
@@ -1419,6 +1443,7 @@ def main() -> None:
             f"{prompt}, {STYLE_SUFFIX.get(channel, DEFAULT_STYLE)}",
             clip_path, dur, ffmpeg,
             ref_image=img_paths[0] if img_paths and img_paths[0].exists() else None,
+            model=PREMIUM_VIDEO_MODEL.get(channel),
         ):
             scene_files.append(clip_path)
             continue

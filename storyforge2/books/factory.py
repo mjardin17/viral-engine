@@ -24,16 +24,12 @@ from dataclasses import dataclass
 from storyforge2.brief import ProjectBrief
 from storyforge2.books.trends import TrendScanner, TrendOpportunity
 from storyforge2.books.metadata import MetadataBuilder, BookMetadata
+from storyforge2.pipeline import BookPipeline
 
 __all__ = ["BookFactory", "BookFactoryError"]
 
 
 class BookFactoryError(RuntimeError):
-    pass
-
-
-class MockPipelineError(RuntimeError):
-    """Simplified error for mock pipeline."""
     pass
 
 
@@ -50,6 +46,8 @@ class BookCycle:
     started_at: Optional[datetime] = None
     completed_at: Optional[datetime] = None
     error: Optional[str] = None
+    manuscript_path: Optional[Path] = None
+    epub_path: Optional[Path] = None
 
     def is_complete(self) -> bool:
         return self.status == "published"
@@ -120,13 +118,18 @@ class BookFactory:
         finally:
             conn.close()
 
-    def run_cycle(self, dry_run: bool = True) -> Optional[BookCycle]:
+    def run_cycle(self, dry_run: bool = True, provider_name: str = "mock") -> Optional[BookCycle]:
         """Execute one full book generation cycle.
+
+        provider_name selects the manuscript text provider ("mock", "gemini",
+        "claude" — see storyforge2/manuscript.py). Defaults to "mock" so the
+        autonomous loop never spends real API credit unless a caller
+        explicitly opts in.
 
         Returns:
             BookCycle if a book was generated, None if no opportunity was due.
         """
-        print(f"\n[BOOK FACTORY] Running cycle (dry_run={dry_run})")
+        print(f"\n[BOOK FACTORY] Running cycle (dry_run={dry_run}, provider={provider_name})")
 
         # 1. Scan for opportunity
         opportunity = self.trend_scanner.scan(dry_run=dry_run)
@@ -157,28 +160,29 @@ class BookFactory:
             self._save_cycle(cycle)
             return cycle
 
-        # 3. Run manuscript generation pipeline (mock for MVP)
+        # 3. Run the real book pipeline: manuscript → layout → illustrations
+        #    (stub) → cover → export (epub/pdf). See storyforge2/pipeline.py —
+        #    this used to be a separate, disconnected mock manuscript writer
+        #    that never touched layout/cover/epub at all.
         try:
             cycle.work_dir.mkdir(parents=True, exist_ok=True)
 
-            # Mock pipeline: create placeholder manuscript files
-            # In production, this would call BookPipeline.run()
-            manuscript_path = cycle.work_dir / "manuscript.txt"
-            manuscript_path.write_text(
-                f"# {cycle.brief.title}\n\n"
-                f"## Premise\n{cycle.brief.premise}\n\n"
-                f"## Audience\n{cycle.brief.audience}\n\n"
-                f"(Mock manuscript - {len(cycle.brief.premise)} words)\n"
-            )
+            pipeline = BookPipeline(cycle.brief, work_dir=str(cycle.work_dir))
+            ok = pipeline.run(provider_name=provider_name, dry_run=dry_run)
+            if not ok:
+                raise BookFactoryError("Book pipeline failed — see pipeline_state.db for the failed stage")
 
-            if not manuscript_path.exists():
-                raise MockPipelineError("Manuscript file not created")
-
+            cycle.manuscript_path = pipeline.manuscript_path
+            cycle.epub_path = pipeline.epub_path
             cycle.status = "manuscript"
-            print(f"[BOOK FACTORY] ✓ Manuscript generated (mock)")
+            print(
+                f"[BOOK FACTORY] ✓ Manuscript generated "
+                f"({pipeline.manuscript.word_count} words, "
+                f"formula_clean={pipeline.manuscript.formula_clean})"
+            )
         except Exception as e:
             cycle.status = "failed"
-            cycle.error = f"Manuscript generation failed: {e}"
+            cycle.error = f"Book pipeline failed: {e}"
             print(f"[BOOK FACTORY] ✗ {cycle.error}")
             self._save_cycle(cycle)
             return cycle

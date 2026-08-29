@@ -60,7 +60,10 @@ class VeoProvider(ProviderBase):
             return {"error": str(e)}
 
     def generate_video(self, prompt: str, reference_image_path: str | None = None,
-                       aspect_ratio: str = "16:9", duration_sec: int = 8) -> dict:
+                       aspect_ratio: str = "16:9", duration_sec: int = 8,
+                       model: str | None = None) -> dict:
+        # Veo has one fixed underlying model — `model` accepted for
+        # interface parity with HiggssfieldProvider (see base.py), ignored.
         if not self.is_connected():
             return self.not_connected_response("generate_video")
         endpoint = f"/projects/{self.project_id}/locations/us-central1/publishers/google/models/veo-2:generateVideo"

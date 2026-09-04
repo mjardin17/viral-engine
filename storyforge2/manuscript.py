@@ -57,6 +57,33 @@ class GeminiTextProvider(TextProvider):
         return call_gemini(full_prompt, use_router=True)
 
 
+class AnthropicTextProvider(TextProvider):
+    """Real text generation via Claude API (Anthropic).
+    Requires ANTHROPIC_API_KEY environment variable.
+    Uses the claude-haiku model for cost efficiency."""
+    name = "anthropic"
+
+    def complete(self, system: str, prompt: str) -> str:
+        import os
+        import anthropic
+
+        api_key = os.getenv("ANTHROPIC_API_KEY")
+        if not api_key:
+            raise ManuscriptError("ANTHROPIC_API_KEY environment variable not set. Cannot use Anthropic provider.")
+
+        client = anthropic.Anthropic(api_key=api_key)
+        messages = [{"role": "user", "content": prompt}]
+
+        response = client.messages.create(
+            model="claude-haiku-4-5-20251001",  # Efficient model for text generation
+            max_tokens=2000,
+            system=system if system else None,
+            messages=messages,
+        )
+
+        return response.content[0].text
+
+
 class MockTextProvider(TextProvider):
     """Deterministic, offline, zero-cost. Produces real
     Patterson-formula-passing prose (not just placeholder text) so
@@ -132,7 +159,12 @@ class MockTextProvider(TextProvider):
 
 
 def get_text_provider(name: str) -> TextProvider:
-    providers: dict[str, type[TextProvider]] = {"gemini": GeminiTextProvider, "mock": MockTextProvider}
+    providers: dict[str, type[TextProvider]] = {
+        "gemini": GeminiTextProvider,
+        "anthropic": AnthropicTextProvider,
+        "claude": AnthropicTextProvider,  # alias
+        "mock": MockTextProvider,
+    }
     if name not in providers:
         raise ManuscriptError(f"Unknown text provider '{name}'. Available: {list(providers)}")
     return providers[name]()

@@ -286,8 +286,25 @@ def add_lower_third(
 
 
 def _esc(s: str) -> str:
-    """Escape text for FFmpeg drawtext (shared by every card function below)."""
-    return s.replace("\\", "\\\\").replace("'", "\\'").replace(":", "\\:").replace(",", "\\,")
+    """Escape text for FFmpeg drawtext (shared by every card function below).
+
+    FIXED 2026-09-04: the previous `\\'` escape for a literal apostrophe
+    does NOT work inside an ffmpeg filtergraph value that's itself wrapped
+    in single quotes (as every caller here does: text='...') — it produced
+    "No such filter: '0.0'" and aborted the whole render the moment any
+    title/price/CTA string contained an apostrophe (e.g. "Founder's",
+    "Don't Wait"). Verified by direct reproduction: the exact same vf string
+    fails with the old escape and succeeds with this one. FFmpeg's own
+    filtergraph parser requires the shell-style close-quote / escaped-quote
+    / reopen-quote sequence ('\'') to embed a literal quote inside a
+    quoted value — a single backslash-quote is not sufficient here.
+    Book titles and blurbs contain apostrophes constantly, so this bug
+    would have silently broken commercial rendering for a large fraction
+    of real books, not just an edge case.
+    """
+    s = s.replace("\\", "\\\\").replace(":", "\\:").replace(",", "\\,")
+    s = s.replace("'", "'\\''")
+    return s
 
 
 def add_title_card(

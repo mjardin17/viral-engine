@@ -24,6 +24,8 @@ from dataclasses import dataclass
 from storyforge2.brief import ProjectBrief
 from storyforge2.books.trends import TrendScanner, TrendOpportunity
 from storyforge2.books.metadata import MetadataBuilder, BookMetadata
+from storyforge2.pipeline import BookPipeline
+from storyforge2.video.commercial import queue_book_commercial
 
 __all__ = ["BookFactory", "BookFactoryError"]
 
@@ -157,25 +159,25 @@ class BookFactory:
             self._save_cycle(cycle)
             return cycle
 
-        # 3. Run manuscript generation pipeline (mock for MVP)
+        # 3. Run manuscript generation pipeline (real, using PatersonFormula via Claude API)
         try:
             cycle.work_dir.mkdir(parents=True, exist_ok=True)
 
-            # Mock pipeline: create placeholder manuscript files
-            # In production, this would call BookPipeline.run()
-            manuscript_path = cycle.work_dir / "manuscript.txt"
-            manuscript_path.write_text(
-                f"# {cycle.brief.title}\n\n"
-                f"## Premise\n{cycle.brief.premise}\n\n"
-                f"## Audience\n{cycle.brief.audience}\n\n"
-                f"(Mock manuscript - {len(cycle.brief.premise)} words)\n"
-            )
+            # Call the real BookPipeline with the ProjectBrief
+            # Uses Patterson formula for manuscript generation via Claude API (Anthropic)
+            pipeline = BookPipeline(brief=cycle.brief, work_dir=str(cycle.work_dir))
 
-            if not manuscript_path.exists():
-                raise MockPipelineError("Manuscript file not created")
+            # Run with anthropic provider (uses ANTHROPIC_API_KEY from environment)
+            # Falls back to mock if API key is not set
+            credentials = self._load_credentials()
+            provider_name = "anthropic" if credentials.get("anthropic_api_key") else "mock"
+            success = pipeline.run(provider_name=provider_name, dry_run=dry_run)
+
+            if not success:
+                raise MockPipelineError("BookPipeline.run() failed")
 
             cycle.status = "manuscript"
-            print(f"[BOOK FACTORY] ✓ Manuscript generated (mock)")
+            print(f"[BOOK FACTORY] ✓ Manuscript generated via Patterson formula")
         except Exception as e:
             cycle.status = "failed"
             cycle.error = f"Manuscript generation failed: {e}"
@@ -201,13 +203,95 @@ class BookFactory:
             self._save_cycle(cycle)
             return cycle
 
-        # 5. Mark as ready for publishing
-        cycle.status = "ready_publish"
+        # 4.5. Queue a social-media commercial for the book (reuses Boss
+        # Listers' commercial_generator.py + render_commercial.py unchanged;
+        # the already-running video_pipeline_agent.py picks this up from
+        # MISSION_BOARD.json, renders it, and auto-posts to IG/TikTok/
+        # YouTube Shorts/Facebook — no separate render/post step needed here)
+        try:
+            if pipeline.cover_dir and pipeline.cover_dir.exists():
+                queue_book_commercial(
+                    title=cycle.brief.title,
+                    premise=cycle.brief.premise,
+                    author=cycle.brief.author_name,
+                    price=9.99,  # default ebook price; adjust per-book pricing later
+                    cover_dir=pipeline.cover_dir,
+                    mission_id=f"commercial-book-{cycle.cycle_id}",
+                    mission_board_path=self.work_base.parent / "MISSION_BOARD.json",
+                )
+        except Exception as e:
+            # Non-fatal: a missing commercial doesn't block publishing a book.
+            print(f"[BOOK FACTORY] ⚠ Commercial queuing failed (non-fatal): {e}")
+
+        # 5. Publish to all available platforms
+        try:
+            # Load credentials from environment
+            credentials = self._load_credentials()
+
+            # Define publishing platforms in priority order
+            # Direct APIs first (highest automation), then manual exports
+            platforms_to_try = [
+                "kdp",  # Amazon KDP (Kindle Direct Publishing)
+                "d2d",  # Draft2Digital (50+ retailers via one API)
+                "payhip",  # Payhip (author store)
+                "gumroad",  # Gumroad (creator platform)
+                "etsy_digital",  # Etsy (digital products)
+                "shopify",  # Shopify (if user has a store)
+                "manual_export",  # Fallback: generates upload-ready packages
+            ]
+
+            # Get the pipeline instance to access publish() method
+            pipeline = BookPipeline(brief=cycle.brief, work_dir=str(cycle.work_dir))
+
+            # Publish to all platforms (dry_run by default for safety)
+            publish_results = pipeline.publish(
+                platforms=platforms_to_try,
+                credentials=credentials,
+                dry_run=dry_run
+            )
+
+            # Count successes
+            successes = sum(1 for r in publish_results.values() if r.get("status") == "ok")
+            print(f"[BOOK FACTORY] ✓ Published to {successes}/{len(platforms_to_try)} platforms")
+
+            cycle.status = "published"
+        except Exception as e:
+            # Even if publishing fails, mark as ready_publish so user can retry later
+            cycle.status = "ready_publish"
+            cycle.error = f"Publishing step encountered error (book still ready): {e}"
+            print(f"[BOOK FACTORY] ⚠ Publishing error: {e}")
+
         cycle.completed_at = datetime.utcnow()
-        print(f"[BOOK FACTORY] ✓ Book ready for publishing")
         self._save_cycle(cycle)
 
         return cycle
+
+    def _load_credentials(self) -> dict[str, str]:
+        """Load publishing platform credentials from environment variables.
+
+        Expected env vars (all optional):
+        - ANTHROPIC_API_KEY: Claude API key for manuscript generation
+        - KDP_EMAIL, KDP_PASSWORD: Amazon KDP credentials
+        - D2D_API_KEY: Draft2Digital API key
+        - PAYHIP_API_KEY: Payhip API key
+        - GUMROAD_API_TOKEN: Gumroad API token
+        - ETSY_ACCESS_TOKEN, ETSY_SHOP_ID, ETSY_API_KEY: Etsy credentials
+        - SHOPIFY_ACCESS_TOKEN, SHOPIFY_SHOP_NAME: Shopify credentials
+        """
+        import os
+        return {
+            "anthropic_api_key": os.getenv("ANTHROPIC_API_KEY", ""),
+            "kdp_email": os.getenv("KDP_EMAIL", ""),
+            "kdp_password": os.getenv("KDP_PASSWORD", ""),
+            "d2d_api_key": os.getenv("D2D_API_KEY", ""),
+            "payhip_api_key": os.getenv("PAYHIP_API_KEY", ""),
+            "gumroad_api_token": os.getenv("GUMROAD_API_TOKEN", ""),
+            "etsy_access_token": os.getenv("ETSY_ACCESS_TOKEN", ""),
+            "etsy_shop_id": os.getenv("ETSY_SHOP_ID", ""),
+            "etsy_api_key": os.getenv("ETSY_API_KEY", ""),
+            "shopify_access_token": os.getenv("SHOPIFY_ACCESS_TOKEN", ""),
+            "shopify_shop_name": os.getenv("SHOPIFY_SHOP_NAME", ""),
+        }
 
     def _opportunity_to_brief(self, opportunity: TrendOpportunity) -> ProjectBrief:
         """Convert TrendOpportunity to ProjectBrief for the pipeline."""

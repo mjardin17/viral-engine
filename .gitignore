@@ -116,6 +116,10 @@ dist/
 .turbo/
 *.tsbuildinfo
 
+# --- RENDER ORCHESTRATOR RUNTIME STATE ---
+render_logs/          # per-episode child stdout logs (can be large)
+*.attempt*.log
+
 # --- AI ROUTER RUNTIME STATE (never commit) ---
 model_health.json
 DRY_RUN_REPORT.md

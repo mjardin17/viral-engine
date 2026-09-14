@@ -80,8 +80,11 @@ Everything below is for the public launch. Still need info from Josh (marked ⚠
 
 ## 🛠️ TOOLING
 
-- [ ] **Build `render_orchestrator.py`** — parallel multi-worker renderer (Gemini mission m004)
+- [x] **Build `render_orchestrator.py`** — parallel multi-worker renderer (Gemini mission m004) — **DONE 2026-09-14**
   - Runs N episodes simultaneously, live status, auto-retries, logs to render_log.json
+  - Shipped: `render_orchestrator.py` + `RENDER_ORCHESTRATOR.bat` + `test_render_orchestrator.py` (33 passing) + `RENDER_ORCHESTRATOR.md`
+  - Interfaces: `--episodes A,B,C`, `--season 3 --channel gg`, `--pending`, `--dry-run`, `--self-test`
+  - Hard cap 3 workers; never marks an episode passed unless `renders/<EP>_final.mp4` exists
 - [ ] **Wire crosspost_bridge.py** — fill in `crosspost_config.json` → auto-publish to Instagram/TikTok/Facebook after upload
 - [ ] **bot_10_frame_inspector** — already in council; make sure it runs before every upload (visual QC mandatory)
 
@@ -200,5 +203,5 @@ Pipeline is NOT fully working yet — needs to be debugged and connected step by
 4. 🎬 Run ASSEMBLE_LO_HIGGSFIELD.bat + compare LO outputs
 5. 🚀 Get launch info from Josh (website URL, store, apps) → build launch assets
 6. 🔊 Upgrade ViralVox to ElevenLabs
-7. 🛠️ Build render_orchestrator.py (parallel rendering)
+7. 🛠️ ~~Build render_orchestrator.py (parallel rendering)~~ ✅ DONE 2026-09-14 — see RENDER_ORCHESTRATOR.md
 8. 📋 Stub backlog + WW Channel

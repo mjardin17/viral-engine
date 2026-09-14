@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-11T17:44:18.940679+00:00",
+  "updated_at": "2026-09-14T23:06:14+00:00",
   "fleet_status": "12 agents active, parallel dispatch enabled",
   "missions": [
     {
@@ -13,7 +13,7 @@
       "channel": "lo",
       "target": "LO_EP001",
       "priority": 1,
-      "notes": "Little Zeus Gets His Thunderbolt â€” 24 scenes, full script. Claude Code: empire_render.py. Council: quality checks after render.",
+      "notes": "Little Zeus Gets His Thunderbolt \u00e2\u20ac\u201d 24 scenes, full script. Claude Code: empire_render.py. Council: quality checks after render.",
       "result": "",
       "error": ""
     },
@@ -422,7 +422,7 @@
         "commerce_council",
         "infrastructure_council"
       ],
-      "title": "Full eBay → Supabase → Website + Boss Listers Integration",
+      "title": "Full eBay \u2192 Supabase \u2192 Website + Boss Listers Integration",
       "notes": "Parallel multi-step build: (1) Deploy Boss Listers to Vercel, (2) Create Supabase project + migrations, (3) Wire eBay API sync, (4) Connect website store to live inventory, (5) Verify end-to-end sync.",
       "subtasks": [
         {
@@ -448,7 +448,7 @@
         },
         {
           "id": "wire_website_supabase",
-          "title": "Wire Website Store → Supabase",
+          "title": "Wire Website Store \u2192 Supabase",
           "status": "pending",
           "notes": "Fill SUPABASE_URL + ANON_KEY in index.html. Verify loadInventory() pulls live data. Git push.",
           "assigned_to": "orchestration_council"
@@ -464,6 +464,21 @@
       "result": "",
       "error": "",
       "created_at": "2026-08-11T20:15:00.000000"
+    },
+    {
+      "id": "m004",
+      "title": "Build render_orchestrator.py (parallel multi-worker renderer)",
+      "type": "build",
+      "status": "complete",
+      "assigned_to": [
+        "arena_agent"
+      ],
+      "priority": 3,
+      "notes": "MISSION m004 (GEMINI_MISSION.md) / GAME_PLAN.md Tooling #7. Parallel episode render pool: N concurrent auto_render.py subprocesses (max 3), live status with % done + ETA, per-episode logging to render_log.json, retries, and a passed/failed/skipped summary. auto_render.py untouched. Docs: RENDER_ORCHESTRATOR.md \u00b7 Tests: test_render_orchestrator.py (33 passing).",
+      "result": "render_orchestrator.py",
+      "error": "",
+      "created_at": "2026-09-14T23:06:14+00:00",
+      "updated_at": "2026-09-14T23:06:14+00:00"
     }
   ]
 }

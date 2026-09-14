@@ -15,6 +15,10 @@
 ## Phase 2 — Render Season 3 (IMMEDIATE)
 - [ ] Run `render_ep006.bat` — fix Pearl Harbor
 - [ ] Run `render_season3.bat` — render all 14 S3 episodes (14–28 hours)
+  - **Better:** `RENDER_ORCHESTRATOR.bat --season 3 --channel gg --workers 2 --skip-existing`
+    renders the same 14 episodes in parallel with live status, ETA, retries and
+    resumable logging (`render_log.json`). Any worker failure is isolated — the
+    other episodes keep going. See `RENDER_ORCHESTRATOR.md`.
 - [ ] Verify all finals in renders/ via bot_09_quality_checker
 
 ## Phase 3 — Empire OS Integration (AFTER BLUEPRINT APPROVAL)
